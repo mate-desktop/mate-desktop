@@ -1,0 +1,386 @@
+# Translation of oc.po to Occitan
+# Occitan translation of mate-desktop.
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mate-desktop package.
+#
+#
+# Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: oc\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-07-02 08:58+0200\n"
+"PO-Revision-Date: 2008-02-26 22:13+0100\n"
+"Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
+"Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../mate-about/mate-about.desktop.in.in.h:1
+#: ../mate-about/mate-about.in:61
+msgid "About MATE"
+msgstr "A prepaus de MATE"
+
+#: ../mate-about/mate-about.desktop.in.in.h:2
+msgid "Learn more about MATE"
+msgstr "Aprene mai de MATE"
+
+#: ../mate-about/mate-about.in:62
+msgid "News"
+msgstr "Novetats"
+
+#: ../mate-about/mate-about.in:63
+msgid "MATE Library"
+msgstr "Bibliotèca MATE"
+
+#: ../mate-about/mate-about.in:64
+msgid "Friends of MATE"
+msgstr "Los amics de MATE"
+
+#: ../mate-about/mate-about.in:65
+msgid "Contact"
+msgstr "Contacte"
+
+#: ../mate-about/mate-about.in:69
+msgid "The Mysterious GEGL"
+msgstr "Lo misteriós GEGL"
+
+# Voir bug #402587
+#: ../mate-about/mate-about.in:70
+msgid "The Squeaky Rubber MATE"
+msgstr "Lo cruissiment d'elastic MATE"
+
+#: ../mate-about/mate-about.in:71
+msgid "Wanda The MATE Fish"
+msgstr "Vandà, lo peis MATE"
+
+#: ../mate-about/mate-about.in:568
+msgid "_Open URL"
+msgstr "_Dobrir l'URL"
+
+#: ../mate-about/mate-about.in:575
+msgid "_Copy URL"
+msgstr "_Copiar l'URL"
+
+#: ../mate-about/mate-about.in:830
+msgid "About the MATE Desktop"
+msgstr "A prepaus del burèu MATE"
+
+#: ../mate-about/mate-about.in:866
+msgid "%(name)s: %(value)s"
+msgstr ""
+
+#: ../mate-about/mate-about.in:880
+msgid "Welcome to the MATE Desktop"
+msgstr "Benvenguda al burèu MATE"
+
+#: ../mate-about/mate-about.in:897
+msgid "Brought to you by:"
+msgstr "Presentat per :"
+
+#: ../mate-about/mate-about.in:921
+msgid "<b>%(name)s:</b> %(value)s"
+msgstr ""
+
+#: ../mate-about/mate-about.in:977
+msgid "Version"
+msgstr "Version"
+
+#: ../mate-about/mate-about.in:978
+msgid "Distributor"
+msgstr "Distributor"
+
+#: ../mate-about/mate-about.in:979
+msgid "Build Date"
+msgstr "Data de construccion"
+
+#: ../mate-about/mate-about.in:1023
+msgid "Display information on this MATE version"
+msgstr "Visualizar las entresenhas sus aquesta version de MATE"
+
+#: ../mate-version.xml.in.in.h:1
+msgid ""
+"MATE also includes a complete development platform for applications "
+"programmers, allowing the creation of powerful and complex applications."
+msgstr ""
+"MATE conten tanben una plataforma completa de desvolopament pels "
+"programaires de logicials, çò que permet de crear de programas potents e "
+"complèxes."
+
+#: ../mate-version.xml.in.in.h:2
+msgid ""
+"MATE includes most of what you see on your computer, including the file "
+"manager, web browser, menus, and many applications."
+msgstr ""
+"MATE conten la màger part de çò que vesètz sus vòstre ordenador, enclaus lo "
+"gestionari de fichièrs, lo navigador internet, los menuts e fòrça logicials."
+
+#. NOTE TO AUTHORS: Do not put anything in the following paragraphs that
+#. will be substituted by the configure script. Otherwise you will break
+#. the translations.
+#: ../mate-version.xml.in.in.h:6
+msgid ""
+"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"like family of operating systems."
+msgstr ""
+"MATE es un entorn de burèu liure, utilisable, estable e accessible per la "
+"familha dels sistèmas d'esplech del tipe Unix."
+
+#: ../mate-version.xml.in.in.h:7
+msgid ""
+"MATE's focus on usability and accessibility, regular release cycle, and "
+"strong corporate backing make it unique among Free Software desktops."
+msgstr ""
+"L'atencion de MATE sus l'utilisabilitat e l'accessibilitat, un cicle de "
+"distribucion regulièr e lo sosten de grandas entrepresas fan d'el un "
+"environament de burèu liure unenc."
+
+#: ../mate-version.xml.in.in.h:8
+msgid ""
+"MATE's greatest strength is our strong community. Virtually anyone, with or "
+"without coding skills, can contribute to making MATE better."
+msgstr ""
+"La fòrça màger de MATE es nòstra comunitat potenta. Gaireben totes, amb o "
+"sens competéncias de programacion, pòdon ajudar a melhorar MATE."
+
+#: ../mate-version.xml.in.in.h:9
+msgid ""
+"Hundreds of people have contributed code to MATE since it was started in "
+"1997; many more have contributed in other important ways, including "
+"translations, documentation, and quality assurance."
+msgstr ""
+"Centenats de personas participèron al còde del projècte MATE dempuèi sa "
+"creacion en 1997 ; encara mai participèron d'autres biaisses  importants, "
+"coma las reviradas, la documentacion e l'assegurança qualitat."
+
+#: ../libmate-desktop/mate-desktop-item.c:219
+#, c-format
+msgid "Error reading file '%s': %s"
+msgstr "Error de lectura del fichièr '%s' : %s"
+
+#: ../libmate-desktop/mate-desktop-item.c:287
+#, c-format
+msgid "Error rewinding file '%s': %s"
+msgstr "Error en rebobinar lo fichièr '%s': %s"
+
+#: ../libmate-desktop/mate-desktop-item.c:389
+#: ../libmate-desktop/mate-desktop-item.c:3756
+msgid "No name"
+msgstr "Pas de nom"
+
+#: ../libmate-desktop/mate-desktop-item.c:616
+#, c-format
+msgid "File '%s' is not a regular file or directory."
+msgstr "Lo fichièr '%s' es pas un fichièr normal o un repertòri."
+
+#: ../libmate-desktop/mate-desktop-item.c:796
+#, c-format
+msgid "Error cannot find file id '%s'"
+msgstr "Error : impossible de trobar l'id del fichièr '%s'"
+
+#: ../libmate-desktop/mate-desktop-item.c:842
+#, c-format
+msgid "No filename to save to"
+msgstr "I a pas de nom de fichièr ont enregistrar"
+
+#: ../libmate-desktop/mate-desktop-item.c:1827
+#, c-format
+msgid "Starting %s"
+msgstr "Aviada de %s"
+
+#: ../libmate-desktop/mate-desktop-item.c:2063
+#, c-format
+msgid "No URL to launch"
+msgstr "Pas cap d'URL de dobrir"
+
+#: ../libmate-desktop/mate-desktop-item.c:2076
+#, c-format
+msgid "Not a launchable item"
+msgstr "Se pòt pas aviar"
+
+#: ../libmate-desktop/mate-desktop-item.c:2086
+#, c-format
+msgid "No command (Exec) to launch"
+msgstr "Pas cap de comanda (Exec) d'executar"
+
+#: ../libmate-desktop/mate-desktop-item.c:2099
+#, c-format
+msgid "Bad command (Exec) to launch"
+msgstr "Comanda incorrecta (Exec) d'aviar"
+
+#: ../libmate-desktop/mate-desktop-item.c:3812
+#, c-format
+msgid "Unknown encoding of: %s"
+msgstr "Codatge inconegut de : %s"
+
+#: ../libmate-desktop/mate-ditem-edit.c:209
+#: ../libmate-desktop/mate-ditem-edit.c:217
+msgid "Directory"
+msgstr "Repertòri"
+
+#: ../libmate-desktop/mate-ditem-edit.c:213
+msgid "Application"
+msgstr "Aplicacion"
+
+#: ../libmate-desktop/mate-ditem-edit.c:220
+msgid "Link"
+msgstr "Ligam"
+
+#: ../libmate-desktop/mate-ditem-edit.c:222
+msgid "FSDevice"
+msgstr "Periferic del sistèma de fichièrs"
+
+#: ../libmate-desktop/mate-ditem-edit.c:224
+msgid "MIME Type"
+msgstr "Tipe MIME"
+
+#: ../libmate-desktop/mate-ditem-edit.c:226
+msgid "Service"
+msgstr "Servici"
+
+#: ../libmate-desktop/mate-ditem-edit.c:228
+msgid "ServiceType"
+msgstr "ServiceType"
+
+#: ../libmate-desktop/mate-ditem-edit.c:314
+msgid "_URL:"
+msgstr "_URL :"
+
+#: ../libmate-desktop/mate-ditem-edit.c:317
+#: ../libmate-desktop/mate-ditem-edit.c:384
+msgid "Comm_and:"
+msgstr "Com_anda :"
+
+#. Name
+#: ../libmate-desktop/mate-ditem-edit.c:338
+msgid "_Name:"
+msgstr "_Nom :"
+
+#. Generic Name
+#: ../libmate-desktop/mate-ditem-edit.c:355
+msgid "_Generic name:"
+msgstr "Nom _generic :"
+
+#. Comment
+#: ../libmate-desktop/mate-ditem-edit.c:372
+msgid "Co_mment:"
+msgstr "Co_mentari :"
+
+#: ../libmate-desktop/mate-ditem-edit.c:388
+msgid "Browse"
+msgstr "Navigar"
+
+#: ../libmate-desktop/mate-ditem-edit.c:399
+msgid "_Type:"
+msgstr "_Tipe :"
+
+#: ../libmate-desktop/mate-ditem-edit.c:416
+msgid "_Icon:"
+msgstr "_Icòna :"
+
+#: ../libmate-desktop/mate-ditem-edit.c:426
+msgid "Browse icons"
+msgstr "Examinar las icònas"
+
+#: ../libmate-desktop/mate-ditem-edit.c:440
+msgid "Run in t_erminal"
+msgstr "Executar dins un t_erminal"
+
+#: ../libmate-desktop/mate-ditem-edit.c:621
+#: ../libmate-desktop/mate-ditem-edit.c:721
+msgid "Language"
+msgstr "Lenga"
+
+#: ../libmate-desktop/mate-ditem-edit.c:626
+#: ../libmate-desktop/mate-ditem-edit.c:727
+msgid "Name"
+msgstr "Nom"
+
+#: ../libmate-desktop/mate-ditem-edit.c:631
+#: ../libmate-desktop/mate-ditem-edit.c:733
+msgid "Generic name"
+msgstr "Nom generic"
+
+#: ../libmate-desktop/mate-ditem-edit.c:636
+#: ../libmate-desktop/mate-ditem-edit.c:741
+msgid "Comment"
+msgstr "Comentari"
+
+#: ../libmate-desktop/mate-ditem-edit.c:674
+msgid "_Try this before using:"
+msgstr "_Ensajar aquò abans d'utilizar :"
+
+#: ../libmate-desktop/mate-ditem-edit.c:685
+msgid "_Documentation:"
+msgstr "_Documentacion :"
+
+#: ../libmate-desktop/mate-ditem-edit.c:696
+msgid "_Name/Comment translations:"
+msgstr "_Reviradas del nom e del comentari :"
+
+#: ../libmate-desktop/mate-ditem-edit.c:743
+msgid "_Add/Set"
+msgstr "_Apondre/modificar"
+
+#: ../libmate-desktop/mate-ditem-edit.c:748
+msgid "Add or Set Name/Comment Translations"
+msgstr "Apondre o modificar las reviradas de nom e de comentari"
+
+#: ../libmate-desktop/mate-ditem-edit.c:750
+msgid "Re_move"
+msgstr "_Suprimir"
+
+#: ../libmate-desktop/mate-ditem-edit.c:755
+msgid "Remove Name/Comment Translation"
+msgstr "Suprimir la revirada del nom e del comentari"
+
+#: ../libmate-desktop/mate-ditem-edit.c:771
+msgid "Basic"
+msgstr "Basic"
+
+#: ../libmate-desktop/mate-ditem-edit.c:779
+msgid "Advanced"
+msgstr "Avançat"
+
+#: ../libmate-desktop/mate-hint.c:201
+msgid "_Show Hints at Startup"
+msgstr "_Visualizar las astúcias a l'aviada"
+
+#~ msgid "Error writing file '%s': %s"
+#~ msgstr "Error al moment d'escriure lo fichièr '%s' : %s"
+
+#~ msgid "Could not locate the directory with header images."
+#~ msgstr ""
+#~ "Impossible de localizar lo repertòri que conten los imatges d'encap."
+
+#~ msgid "Failed to open directory with header images: %s"
+#~ msgstr "Impossible de dobrir lo repertòri que cap los imatges d'encap : %s"
+
+#~ msgid "Unable to load header image: %s"
+#~ msgstr "Impossible de cargar l'imatge d'encap : %s"
+
+#~ msgid "Could not locate the MATE logo."
+#~ msgstr "Impossible de localizar lo logò MATE."
+
+#~ msgid "Unable to load '%s': %s"
+#~ msgstr "Impossible de cargar '%s' : '%s'"
+
+#~ msgid "Could not open the address \"%s\": %s"
+#~ msgstr "Impossible de dobrir l'adreça \"%s\" : %s"
+
+#~ msgid "Could not get information about MATE version."
+#~ msgstr "Impossible d'obténer las entresenhas sus aquesta version de MATE."
+
+#~ msgid "%s: %s\n"
+#~ msgstr "%s : %s\n"
+
+#~ msgid "%s: "
+#~ msgstr "%s : "
+
+#~ msgid "Software"
+#~ msgstr "Logicial"
+
+#~ msgid "Developers"
+#~ msgstr "Desvolopaires"

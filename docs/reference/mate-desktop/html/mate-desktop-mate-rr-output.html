@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>mate-rr-output</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="MATE Desktop Library Reference Manual">
+<link rel="up" href="randr.html" title="Part III. Monitor Configuration">
+<link rel="prev" href="mate-desktop-mate-rr-screen.html" title="mate-rr-screen">
+<link rel="next" href="mate-desktop-mate-rr-crtc.html" title="mate-rr-crtc">
+<meta name="generator" content="GTK-Doc V1.15.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mate-desktop-mate-rr-screen.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="randr.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">MATE Desktop Library Reference Manual</th>
+<td><a accesskey="n" href="mate-desktop-mate-rr-crtc.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mate-desktop-mate-rr-output.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mate-desktop-mate-rr-output.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mate-desktop-mate-rr-output"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mate-desktop-mate-rr-output.top_of_page"></a>mate-rr-output</span></h2>
+<p>mate-rr-output</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mate-desktop-mate-rr-output.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;libmateui/mate-rr.h&gt;
+
+typedef             <a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput">MateRROutput</a>;
+<span class="returnvalue">guint32</span>             <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-get-id" title="mate_rr_output_get_id ()">mate_rr_output_get_id</a>              (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);
+const <span class="returnvalue">char</span> *        <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-get-name" title="mate_rr_output_get_name ()">mate_rr_output_get_name</a>            (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-is-connected" title="mate_rr_output_is_connected ()">mate_rr_output_is_connected</a>        (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);
+<span class="returnvalue">int</span>                 <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-get-size-inches" title="mate_rr_output_get_size_inches ()">mate_rr_output_get_size_inches</a>     (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);
+<span class="returnvalue">int</span>                 <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-get-width-mm" title="mate_rr_output_get_width_mm ()">mate_rr_output_get_width_mm</a>        (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *outout</code></em>);
+<span class="returnvalue">int</span>                 <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-get-height-mm" title="mate_rr_output_get_height_mm ()">mate_rr_output_get_height_mm</a>       (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);
+const <span class="returnvalue">guint8</span> *      <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-get-edid-data" title="mate_rr_output_get_edid_data ()">mate_rr_output_get_edid_data</a>       (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);
+<a class="link" href="mate-desktop-mate-rr-crtc.html#MateRRCrtc" title="MateRRCrtc"><span class="returnvalue">MateRRCrtc</span></a> **      <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-get-possible-crtcs" title="mate_rr_output_get_possible_crtcs ()">mate_rr_output_get_possible_crtcs</a>  (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);
+<a class="link" href="mate-desktop-mate-rr-mode.html#MateRRMode" title="MateRRMode"><span class="returnvalue">MateRRMode</span></a> **      <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-list-modes" title="mate_rr_output_list_modes ()">mate_rr_output_list_modes</a>          (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);
+<a class="link" href="mate-desktop-mate-rr-mode.html#MateRRMode" title="MateRRMode"><span class="returnvalue">MateRRMode</span></a> *       <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-get-current-mode" title="mate_rr_output_get_current_mode ()">mate_rr_output_get_current_mode</a>    (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);
+<a class="link" href="mate-desktop-mate-rr-mode.html#MateRRMode" title="MateRRMode"><span class="returnvalue">MateRRMode</span></a> *       <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-get-preferred-mode" title="mate_rr_output_get_preferred_mode ()">mate_rr_output_get_preferred_mode</a>  (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-supports-mode" title="mate_rr_output_supports_mode ()">mate_rr_output_supports_mode</a>       (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-mode.html#MateRRMode" title="MateRRMode"><span class="type">MateRRMode</span></a> *mode</code></em>);
+<a class="link" href="mate-desktop-mate-rr-crtc.html#MateRRCrtc" title="MateRRCrtc"><span class="returnvalue">MateRRCrtc</span></a> *       <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-get-crtc" title="mate_rr_output_get_crtc ()">mate_rr_output_get_crtc</a>            (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-get-position" title="mate_rr_output_get_position ()">mate_rr_output_get_position</a>        (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *x</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *y</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="mate-desktop-mate-rr-output.html#mate-rr-output-can-clone" title="mate_rr_output_can_clone ()">mate_rr_output_can_clone</a>           (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *clone</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="mate-desktop-mate-rr-output.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="mate-desktop-mate-rr-output.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MateRROutput"></a><h3>MateRROutput</h3>
+<pre class="programlisting">typedef struct MateRROutput MateRROutput;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-get-id"></a><h3>mate_rr_output_get_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint32</span>             mate_rr_output_get_id              (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-get-name"></a><h3>mate_rr_output_get_name ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *        mate_rr_output_get_name            (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-is-connected"></a><h3>mate_rr_output_is_connected ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mate_rr_output_is_connected        (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-get-size-inches"></a><h3>mate_rr_output_get_size_inches ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>                 mate_rr_output_get_size_inches     (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-get-width-mm"></a><h3>mate_rr_output_get_width_mm ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>                 mate_rr_output_get_width_mm        (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *outout</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>outout</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-get-height-mm"></a><h3>mate_rr_output_get_height_mm ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>                 mate_rr_output_get_height_mm       (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-get-edid-data"></a><h3>mate_rr_output_get_edid_data ()</h3>
+<pre class="programlisting">const <span class="returnvalue">guint8</span> *      mate_rr_output_get_edid_data       (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-get-possible-crtcs"></a><h3>mate_rr_output_get_possible_crtcs ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-crtc.html#MateRRCrtc" title="MateRRCrtc"><span class="returnvalue">MateRRCrtc</span></a> **      mate_rr_output_get_possible_crtcs  (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-list-modes"></a><h3>mate_rr_output_list_modes ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-mode.html#MateRRMode" title="MateRRMode"><span class="returnvalue">MateRRMode</span></a> **      mate_rr_output_list_modes          (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-get-current-mode"></a><h3>mate_rr_output_get_current_mode ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-mode.html#MateRRMode" title="MateRRMode"><span class="returnvalue">MateRRMode</span></a> *       mate_rr_output_get_current_mode    (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-get-preferred-mode"></a><h3>mate_rr_output_get_preferred_mode ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-mode.html#MateRRMode" title="MateRRMode"><span class="returnvalue">MateRRMode</span></a> *       mate_rr_output_get_preferred_mode  (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-supports-mode"></a><h3>mate_rr_output_supports_mode ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mate_rr_output_supports_mode       (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-mode.html#MateRRMode" title="MateRRMode"><span class="type">MateRRMode</span></a> *mode</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mode</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-get-crtc"></a><h3>mate_rr_output_get_crtc ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-crtc.html#MateRRCrtc" title="MateRRCrtc"><span class="returnvalue">MateRRCrtc</span></a> *       mate_rr_output_get_crtc            (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-get-position"></a><h3>mate_rr_output_get_position ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mate_rr_output_get_position        (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *x</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *y</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-output-can-clone"></a><h3>mate_rr_output_can_clone ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mate_rr_output_can_clone           (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *output</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="type">MateRROutput</span></a> *clone</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>output</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>clone</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.15.1</div>
+</body>
+</html>

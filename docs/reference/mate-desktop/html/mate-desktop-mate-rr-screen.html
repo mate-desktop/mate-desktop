@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>mate-rr-screen</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="MATE Desktop Library Reference Manual">
+<link rel="up" href="randr.html" title="Part III. Monitor Configuration">
+<link rel="prev" href="randr.html" title="Part III. Monitor Configuration">
+<link rel="next" href="mate-desktop-mate-rr-output.html" title="mate-rr-output">
+<meta name="generator" content="GTK-Doc V1.15.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="randr.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="randr.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">MATE Desktop Library Reference Manual</th>
+<td><a accesskey="n" href="mate-desktop-mate-rr-output.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mate-desktop-mate-rr-screen.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mate-desktop-mate-rr-screen.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mate-desktop-mate-rr-screen"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mate-desktop-mate-rr-screen.top_of_page"></a>mate-rr-screen</span></h2>
+<p>mate-rr-screen</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mate-desktop-mate-rr-screen.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;libmateui/mate-rr.h&gt;
+
+typedef             <a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen">MateRRScreen</a>;
+<span class="returnvalue">void</span>                (<a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreenChanged" title="MateRRScreenChanged ()">*MateRRScreenChanged</a>)             (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> data</code></em>);
+<a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="returnvalue">MateRRScreen</span></a> *     <a class="link" href="mate-desktop-mate-rr-screen.html#mate-rr-screen-new" title="mate_rr_screen_new ()">mate_rr_screen_new</a>                 (<em class="parameter"><code><span class="type">GdkScreen</span> *screen</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreenChanged" title="MateRRScreenChanged ()"><span class="type">MateRRScreenChanged</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> data</code></em>,
+                                                         <em class="parameter"><code><span class="type">GError</span> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mate-desktop-mate-rr-screen.html#mate-rr-screen-destroy" title="mate_rr_screen_destroy ()">mate_rr_screen_destroy</a>             (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="mate-desktop-mate-rr-screen.html#mate-rr-screen-refresh" title="mate_rr_screen_refresh ()">mate_rr_screen_refresh</a>             (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code><span class="type">GError</span> **error</code></em>);
+<a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="returnvalue">MateRROutput</span></a> **    <a class="link" href="mate-desktop-mate-rr-screen.html#mate-rr-screen-list-outputs" title="mate_rr_screen_list_outputs ()">mate_rr_screen_list_outputs</a>        (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>);
+<a class="link" href="mate-desktop-mate-rr-crtc.html#MateRRCrtc" title="MateRRCrtc"><span class="returnvalue">MateRRCrtc</span></a> **      <a class="link" href="mate-desktop-mate-rr-screen.html#mate-rr-screen-list-crtcs" title="mate_rr_screen_list_crtcs ()">mate_rr_screen_list_crtcs</a>          (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>);
+<a class="link" href="mate-desktop-mate-rr-mode.html#MateRRMode" title="MateRRMode"><span class="returnvalue">MateRRMode</span></a> **      <a class="link" href="mate-desktop-mate-rr-screen.html#mate-rr-screen-list-modes" title="mate_rr_screen_list_modes ()">mate_rr_screen_list_modes</a>          (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>);
+<a class="link" href="mate-desktop-mate-rr-mode.html#MateRRMode" title="MateRRMode"><span class="returnvalue">MateRRMode</span></a> **      <a class="link" href="mate-desktop-mate-rr-screen.html#mate-rr-screen-list-clone-modes" title="mate_rr_screen_list_clone_modes ()">mate_rr_screen_list_clone_modes</a>    (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mate-desktop-mate-rr-screen.html#mate-rr-screen-set-size" title="mate_rr_screen_set_size ()">mate_rr_screen_set_size</a>            (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> width</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> height</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> mm_width</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> mm_height</code></em>);
+<a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="returnvalue">MateRROutput</span></a> *     <a class="link" href="mate-desktop-mate-rr-screen.html#mate-rr-screen-get-output-by-id" title="mate_rr_screen_get_output_by_id ()">mate_rr_screen_get_output_by_id</a>    (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint32</span> id</code></em>);
+<a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="returnvalue">MateRROutput</span></a> *     <a class="link" href="mate-desktop-mate-rr-screen.html#mate-rr-screen-get-output-by-name" title="mate_rr_screen_get_output_by_name ()">mate_rr_screen_get_output_by_name</a>  (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *name</code></em>);
+<a class="link" href="mate-desktop-mate-rr-crtc.html#MateRRCrtc" title="MateRRCrtc"><span class="returnvalue">MateRRCrtc</span></a> *       <a class="link" href="mate-desktop-mate-rr-screen.html#mate-rr-screen-get-crtc-by-id" title="mate_rr_screen_get_crtc_by_id ()">mate_rr_screen_get_crtc_by_id</a>      (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint32</span> id</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mate-desktop-mate-rr-screen.html#mate-rr-screen-get-ranges" title="mate_rr_screen_get_ranges ()">mate_rr_screen_get_ranges</a>          (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *min_width</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *max_width</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *min_height</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *max_height</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="mate-desktop-mate-rr-screen.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="mate-desktop-mate-rr-screen.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MateRRScreen"></a><h3>MateRRScreen</h3>
+<pre class="programlisting">typedef struct MateRRScreen MateRRScreen;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MateRRScreenChanged"></a><h3>MateRRScreenChanged ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*MateRRScreenChanged)             (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> data</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-screen-new"></a><h3>mate_rr_screen_new ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="returnvalue">MateRRScreen</span></a> *     mate_rr_screen_new                 (<em class="parameter"><code><span class="type">GdkScreen</span> *screen</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreenChanged" title="MateRRScreenChanged ()"><span class="type">MateRRScreenChanged</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> data</code></em>,
+                                                         <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>callback</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-screen-destroy"></a><h3>mate_rr_screen_destroy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mate_rr_screen_destroy             (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-screen-refresh"></a><h3>mate_rr_screen_refresh ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mate_rr_screen_refresh             (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>
+Refreshes the screen configuration, and calls the screen's callback if it
+exists and if the screen's configuration changed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>a <a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store error, or <a href="/mate/usr/share/gtk-doc/html/liboil/liboil-liboiljunk.html#NULL--CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> TRUE if the screen's configuration changed; otherwise, the
+function returns FALSE and a NULL error if the configuration didn't change,
+or FALSE and a non-NULL error if there was an error while refreshing the
+configuration.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-screen-list-outputs"></a><h3>mate_rr_screen_list_outputs ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="returnvalue">MateRROutput</span></a> **    mate_rr_screen_list_outputs        (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-screen-list-crtcs"></a><h3>mate_rr_screen_list_crtcs ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-crtc.html#MateRRCrtc" title="MateRRCrtc"><span class="returnvalue">MateRRCrtc</span></a> **      mate_rr_screen_list_crtcs          (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-screen-list-modes"></a><h3>mate_rr_screen_list_modes ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-mode.html#MateRRMode" title="MateRRMode"><span class="returnvalue">MateRRMode</span></a> **      mate_rr_screen_list_modes          (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-screen-list-clone-modes"></a><h3>mate_rr_screen_list_clone_modes ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-mode.html#MateRRMode" title="MateRRMode"><span class="returnvalue">MateRRMode</span></a> **      mate_rr_screen_list_clone_modes    (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-screen-set-size"></a><h3>mate_rr_screen_set_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mate_rr_screen_set_size            (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> width</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> height</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> mm_width</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> mm_height</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mm_width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mm_height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-screen-get-output-by-id"></a><h3>mate_rr_screen_get_output_by_id ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="returnvalue">MateRROutput</span></a> *     mate_rr_screen_get_output_by_id    (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint32</span> id</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-screen-get-output-by-name"></a><h3>mate_rr_screen_get_output_by_name ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-output.html#MateRROutput" title="MateRROutput"><span class="returnvalue">MateRROutput</span></a> *     mate_rr_screen_get_output_by_name  (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *name</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-screen-get-crtc-by-id"></a><h3>mate_rr_screen_get_crtc_by_id ()</h3>
+<pre class="programlisting"><a class="link" href="mate-desktop-mate-rr-crtc.html#MateRRCrtc" title="MateRRCrtc"><span class="returnvalue">MateRRCrtc</span></a> *       mate_rr_screen_get_crtc_by_id      (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint32</span> id</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-rr-screen-get-ranges"></a><h3>mate_rr_screen_get_ranges ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mate_rr_screen_get_ranges          (<em class="parameter"><code><a class="link" href="mate-desktop-mate-rr-screen.html#MateRRScreen" title="MateRRScreen"><span class="type">MateRRScreen</span></a> *screen</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *min_width</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *max_width</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *min_height</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *max_height</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screen</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>min_width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>min_height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.15.1</div>
+</body>
+</html>

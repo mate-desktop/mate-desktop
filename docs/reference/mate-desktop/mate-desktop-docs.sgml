@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<book id="index" xmlns:xi="http://www.w3.org/2003/XInclude">
+  <bookinfo>
+    <title>MATE Desktop Library Reference Manual</title>
+  </bookinfo>
+
+  <part id="intro">
+   <title>MATE Desktop Library Overview</title>
+   <partintro>
+    <para>
+The libmate-desktop library contains APIs that can be useful for a few applications, but which do not belong to GTK+ because of the limited use case. There is no guarantee of API or ABI stability, so it's recommended to not depend on it if you do not follow the same development cycle as MATE. Use at your own risk.
+    </para>
+   </partintro>
+  </part>
+
+  <part id="background">
+    <title>Desktop Background</title>
+    <xi:include href="xml/mate-bg.xml"/>
+  </part>
+
+  <part id="randr">
+    <title>Monitor Configuration</title>
+    <xi:include href="xml/mate-rr-screen.xml"/>
+    <xi:include href="xml/mate-rr-output.xml"/>
+    <xi:include href="xml/mate-rr-crtc.xml"/>
+    <xi:include href="xml/mate-rr-mode.xml"/>
+    <xi:include href="xml/mate-rr-config.xml"/>
+    <xi:include href="xml/mate-rr-labeler.xml"/>
+  </part>
+
+  <part id="thumbnail">
+    <title>Thumbnails</title>
+    <xi:include href="xml/mate-desktop-thumbnail-factory.xml"/>
+    <xi:include href="xml/mate-desktop-thumbnail.xml"/>
+  </part>
+
+  <part id="libmate">
+    <title>Miscellaneous</title>
+    <xi:include href="xml/mate-desktop-item.xml"/>
+    <xi:include href="xml/mate-desktop-utils.xml"/>
+  </part>
+
+</book>

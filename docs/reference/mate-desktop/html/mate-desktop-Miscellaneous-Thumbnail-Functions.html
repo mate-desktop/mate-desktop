@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Miscellaneous Thumbnail Functions</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="MATE Desktop Library Reference Manual">
+<link rel="up" href="thumbnail.html" title="Part IV. Thumbnails">
+<link rel="prev" href="MateDesktopThumbnailFactory.html" title="MateDesktopThumbnailFactory">
+<link rel="next" href="libmate.html" title="Part V. Miscellaneous">
+<meta name="generator" content="GTK-Doc V1.15.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MateDesktopThumbnailFactory.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="thumbnail.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">MATE Desktop Library Reference Manual</th>
+<td><a accesskey="n" href="libmate.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mate-desktop-Miscellaneous-Thumbnail-Functions.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mate-desktop-Miscellaneous-Thumbnail-Functions.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mate-desktop-Miscellaneous-Thumbnail-Functions"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mate-desktop-Miscellaneous-Thumbnail-Functions.top_of_page"></a>Miscellaneous Thumbnail Functions</span></h2>
+<p>Miscellaneous Thumbnail Functions</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mate-desktop-Miscellaneous-Thumbnail-Functions.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;libmateui/mate-thumbnail.h&gt;
+
+<span class="returnvalue">gboolean</span>            <a class="link" href="mate-desktop-Miscellaneous-Thumbnail-Functions.html#mate-desktop-thumbnail-has-uri" title="mate_desktop_thumbnail_has_uri ()">mate_desktop_thumbnail_has_uri</a>     (<em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="mate-desktop-Miscellaneous-Thumbnail-Functions.html#mate-desktop-thumbnail-is-valid" title="mate_desktop_thumbnail_is_valid ()">mate_desktop_thumbnail_is_valid</a>    (<em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+                                                         <em class="parameter"><code><span class="type">time_t</span> mtime</code></em>);
+<span class="returnvalue">char</span> *              <a class="link" href="mate-desktop-Miscellaneous-Thumbnail-Functions.html#mate-desktop-thumbnail-md5" title="mate_desktop_thumbnail_md5 ()">mate_desktop_thumbnail_md5</a>         (<em class="parameter"><code>const <span class="type">char</span> *uri</code></em>);
+<span class="returnvalue">char</span> *              <a class="link" href="mate-desktop-Miscellaneous-Thumbnail-Functions.html#mate-desktop-thumbnail-path-for-uri" title="mate_desktop_thumbnail_path_for_uri ()">mate_desktop_thumbnail_path_for_uri</a>
+                                                        (<em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MateDesktopThumbnailFactory.html#MateDesktopThumbnailSize" title="enum MateDesktopThumbnailSize"><span class="type">MateDesktopThumbnailSize</span></a> size</code></em>);
+<span class="returnvalue">GdkPixbuf</span> *         <a class="link" href="mate-desktop-Miscellaneous-Thumbnail-Functions.html#mate-desktop-thumbnail-scale-down-pixbuf" title="mate_desktop_thumbnail_scale_down_pixbuf ()">mate_desktop_thumbnail_scale_down_pixbuf</a>
+                                                        (<em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> dest_width</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> dest_height</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="mate-desktop-Miscellaneous-Thumbnail-Functions.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="mate-desktop-Miscellaneous-Thumbnail-Functions.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="mate-desktop-thumbnail-has-uri"></a><h3>mate_desktop_thumbnail_has_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mate_desktop_thumbnail_has_uri     (<em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>);</pre>
+<p>
+Returns whether the thumbnail has the correct uri embedded in the
+Thumb::URI option in the png.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pixbuf</code></em> :</span></p></td>
+<td>an loaded thumbnail pixbuf
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>a uri
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> TRUE if the thumbnail is for <em class="parameter"><code>uri</code></em>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-desktop-thumbnail-is-valid"></a><h3>mate_desktop_thumbnail_is_valid ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mate_desktop_thumbnail_is_valid    (<em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+                                                         <em class="parameter"><code><span class="type">time_t</span> mtime</code></em>);</pre>
+<p>
+Returns whether the thumbnail has the correct uri and mtime embedded in the
+png options.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pixbuf</code></em> :</span></p></td>
+<td>an loaded thumbnail <span class="type">GdkPixbuf</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>a uri
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mtime</code></em> :</span></p></td>
+<td>the mtime
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> TRUE if the thumbnail has the right <em class="parameter"><code>uri</code></em> and <em class="parameter"><code>mtime</code></em>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-desktop-thumbnail-md5"></a><h3>mate_desktop_thumbnail_md5 ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *              mate_desktop_thumbnail_md5         (<em class="parameter"><code>const <span class="type">char</span> *uri</code></em>);</pre>
+<p>
+Calculates the MD5 checksum of the uri. This can be useful
+if you want to manually handle thumbnail files.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>an uri
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A string with the MD5 digest of the uri string.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-desktop-thumbnail-path-for-uri"></a><h3>mate_desktop_thumbnail_path_for_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *              mate_desktop_thumbnail_path_for_uri
+                                                        (<em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MateDesktopThumbnailFactory.html#MateDesktopThumbnailSize" title="enum MateDesktopThumbnailSize"><span class="type">MateDesktopThumbnailSize</span></a> size</code></em>);</pre>
+<p>
+Returns the filename that a thumbnail of size <em class="parameter"><code>size</code></em> for <em class="parameter"><code>uri</code></em> would have.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>an uri
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size</code></em> :</span></p></td>
+<td>a thumbnail size
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an absolute filename
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mate-desktop-thumbnail-scale-down-pixbuf"></a><h3>mate_desktop_thumbnail_scale_down_pixbuf ()</h3>
+<pre class="programlisting"><span class="returnvalue">GdkPixbuf</span> *         mate_desktop_thumbnail_scale_down_pixbuf
+                                                        (<em class="parameter"><code><span class="type">GdkPixbuf</span> *pixbuf</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> dest_width</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> dest_height</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pixbuf</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dest_width</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dest_height</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.15.1</div>
+</body>
+</html>

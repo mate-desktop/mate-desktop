@@ -1,0 +1,505 @@
+# English (British) translation of mate-core
+# Copyright (C) 1999-2000 Free Software Foundation, Inc.
+# Robert Brady <robert@susu.org.uk>, 1999-2000.
+# Philip Withnall <philip@tecnocode.co.uk>, 2009.
+# Bruce Cowan <bruce@bcowan.me.uk>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: mate-desktop\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=mate-"
+"desktop&component=general\n"
+"POT-Creation-Date: 2010-08-31 15:31+0100\n"
+"PO-Revision-Date: 2010-08-31 15:32+0100\n"
+"Last-Translator: Bruce Cowan <bruce@bcowan.me.uk>\n"
+"Language-Team: British English <en@li.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.6.1\n"
+
+#: ../mate-about/mate-about.desktop.in.in.h:1
+#: ../mate-about/mate-about.in:60
+msgid "About MATE"
+msgstr "About MATE"
+
+#: ../mate-about/mate-about.desktop.in.in.h:2
+msgid "Learn more about MATE"
+msgstr "Learn more about MATE"
+
+#: ../mate-about/mate-about.in:61
+msgid "News"
+msgstr "News"
+
+#: ../mate-about/mate-about.in:62
+msgid "MATE Library"
+msgstr "MATE Library"
+
+#: ../mate-about/mate-about.in:63
+msgid "Friends of MATE"
+msgstr "Friends of MATE"
+
+#: ../mate-about/mate-about.in:64
+msgid "Contact"
+msgstr "Contact"
+
+#: ../mate-about/mate-about.in:68
+msgid "The Mysterious GEGL"
+msgstr "The Mysterious GEGL"
+
+#: ../mate-about/mate-about.in:69
+msgid "The Squeaky Rubber MATE"
+msgstr "The Squeaky Rubber MATE"
+
+#: ../mate-about/mate-about.in:70
+msgid "Wanda The MATE Fish"
+msgstr "Wanda The MATE Fish"
+
+#: ../mate-about/mate-about.in:567
+msgid "_Open URL"
+msgstr "_Open URL"
+
+#: ../mate-about/mate-about.in:574
+msgid "_Copy URL"
+msgstr "_Copy URL"
+
+#: ../mate-about/mate-about.in:826
+msgid "About the MATE Desktop"
+msgstr "About the MATE Desktop"
+
+#: ../mate-about/mate-about.in:859
+msgid "%(name)s: %(value)s"
+msgstr "%(name)s: %(value)s"
+
+#: ../mate-about/mate-about.in:873
+msgid "Welcome to the MATE Desktop"
+msgstr "Welcome to the MATE Desktop"
+
+#: ../mate-about/mate-about.in:890
+msgid "Brought to you by:"
+msgstr "Brought to you by:"
+
+#: ../mate-about/mate-about.in:914
+msgid "<b>%(name)s:</b> %(value)s"
+msgstr "<b>%(name)s:</b> %(value)s"
+
+#: ../mate-about/mate-about.in:975
+msgid "Version"
+msgstr "Version"
+
+#: ../mate-about/mate-about.in:977
+msgid "Distributor"
+msgstr "Distributor"
+
+#: ../mate-about/mate-about.in:979
+msgid "Build Date"
+msgstr "Build Date"
+
+#: ../mate-about/mate-about.in:1024
+msgid "Display information on this MATE version"
+msgstr "Display information on this MATE version"
+
+#: ../mate-version.xml.in.in.h:1
+msgid ""
+"MATE also includes a complete development platform for applications "
+"programmers, allowing the creation of powerful and complex applications."
+msgstr ""
+"MATE also includes a complete development platform for applications "
+"programmers, allowing the creation of powerful and complex applications."
+
+#: ../mate-version.xml.in.in.h:2
+msgid ""
+"MATE includes most of what you see on your computer, including the file "
+"manager, web browser, menus, and many applications."
+msgstr ""
+"MATE includes most of what you see on your computer, including the file "
+"manager, web browser, menus, and many applications."
+
+#. NOTE TO AUTHORS: Do not put anything in the following paragraphs that
+#. will be substituted by the configure script. Otherwise you will break
+#. the translations.
+#: ../mate-version.xml.in.in.h:6
+msgid ""
+"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"like family of operating systems."
+msgstr ""
+"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+"like family of operating systems."
+
+#: ../mate-version.xml.in.in.h:7
+msgid ""
+"MATE's focus on usability and accessibility, regular release cycle, and "
+"strong corporate backing make it unique among Free Software desktops."
+msgstr ""
+"MATE's focus on usability and accessibility, regular release cycle, and "
+"strong corporate backing make it unique among Free Software desktops."
+
+#: ../mate-version.xml.in.in.h:8
+msgid ""
+"MATE's greatest strength is our strong community. Virtually anyone, with or "
+"without coding skills, can contribute to making MATE better."
+msgstr ""
+"MATE's greatest strength is our strong community. Virtually anyone, with or "
+"without coding skills, can contribute to making MATE better."
+
+#: ../mate-version.xml.in.in.h:9
+msgid ""
+"Hundreds of people have contributed code to MATE since it was started in "
+"1997; many more have contributed in other important ways, including "
+"translations, documentation, and quality assurance."
+msgstr ""
+"Hundreds of people have contributed code to MATE since it was started in "
+"1997; many more have contributed in other important ways, including "
+"translations, documentation, and quality assurance."
+
+#. Translators: "Unknown" here is used to identify a monitor for which
+#. * we don't know the vendor. When a vendor is known, the name of the
+#. * vendor is used.
+#: ../libmate-desktop/display-name.c:265
+msgctxt "Monitor vendor"
+msgid "Unknown"
+msgstr "Unknown"
+
+#: ../libmate-desktop/mate-desktop-item.c:220
+#, c-format
+msgid "Error reading file '%s': %s"
+msgstr "Error reading file '%s': %s"
+
+#: ../libmate-desktop/mate-desktop-item.c:288
+#, c-format
+msgid "Error rewinding file '%s': %s"
+msgstr "Error rewinding file '%s': %s"
+
+#. Translators: the "name" mentioned
+#. * here is the name of an application or
+#. * a document
+#. Translators: the "name" mentioned here is the name of
+#. * an application or a document
+#: ../libmate-desktop/mate-desktop-item.c:380
+#: ../libmate-desktop/mate-desktop-item.c:3524
+msgid "No name"
+msgstr "No name"
+
+#: ../libmate-desktop/mate-desktop-item.c:607
+#, c-format
+msgid "File '%s' is not a regular file or directory."
+msgstr "File '%s' is not a regular file or directory."
+
+#: ../libmate-desktop/mate-desktop-item.c:791
+#, c-format
+msgid "Cannot find file '%s'"
+msgstr "Cannot find file '%s'"
+
+#: ../libmate-desktop/mate-desktop-item.c:837
+#, c-format
+msgid "No filename to save to"
+msgstr "No filename to save to"
+
+#: ../libmate-desktop/mate-desktop-item.c:1822
+#, c-format
+msgid "Starting %s"
+msgstr "Starting %s"
+
+#: ../libmate-desktop/mate-desktop-item.c:2058
+#, c-format
+msgid "No URL to launch"
+msgstr "No URL to launch"
+
+#: ../libmate-desktop/mate-desktop-item.c:2074
+#, c-format
+msgid "Not a launchable item"
+msgstr "Not a launchable item"
+
+#: ../libmate-desktop/mate-desktop-item.c:2084
+#, c-format
+msgid "No command (Exec) to launch"
+msgstr "No command (Exec) to launch"
+
+#: ../libmate-desktop/mate-desktop-item.c:2097
+#, c-format
+msgid "Bad command (Exec) to launch"
+msgstr "Bad command (Exec) to launch"
+
+#: ../libmate-desktop/mate-desktop-item.c:3581
+#, c-format
+msgid "Unknown encoding of: %s"
+msgstr "Unknown encoding of: %s"
+
+#: ../libmate-desktop/mate-desktop-utils.c:133
+msgid "Cannot find a terminal, using xterm, even if it may not work"
+msgstr "Cannot find a terminal; using xterm, even if it may not work"
+
+#. Translators: a CRTC is a CRT Controller (this is X terminology).
+#: ../libmate-desktop/mate-rr.c:444
+#, c-format
+msgid "could not get the screen resources (CRTCs, outputs, modes)"
+msgstr "could not get the screen resources (CRTCs, outputs, modes)"
+
+#: ../libmate-desktop/mate-rr.c:464
+#, c-format
+msgid "unhandled X error while getting the range of screen sizes"
+msgstr "unhandled X error while getting the range of screen sizes"
+
+#: ../libmate-desktop/mate-rr.c:470
+#, c-format
+msgid "could not get the range of screen sizes"
+msgstr "could not get the range of screen sizes"
+
+#: ../libmate-desktop/mate-rr.c:715
+#, c-format
+msgid "RANDR extension is not present"
+msgstr "RandR extension is not present"
+
+#: ../libmate-desktop/mate-rr.c:1037
+#, c-format
+msgid "could not get information about output %d"
+msgstr "could not get information about output %d"
+
+#. Translators: the "position", "size", and "maximum"
+#. * words here are not keywords; please translate them
+#. * as usual.  A CRTC is a CRT Controller (this is X terminology)
+#: ../libmate-desktop/mate-rr.c:1424
+#, c-format
+msgid ""
+"requested position/size for CRTC %d is outside the allowed limit: position="
+"(%d, %d), size=(%d, %d), maximum=(%d, %d)"
+msgstr ""
+"requested position/size for CRTC %d is outside the allowed limit: position="
+"(%d, %d), size=(%d, %d), maximum=(%d, %d)"
+
+#: ../libmate-desktop/mate-rr.c:1460
+#, c-format
+msgid "could not set the configuration for CRTC %d"
+msgstr "could not set the configuration for CRTC %d"
+
+#: ../libmate-desktop/mate-rr.c:1576
+#, c-format
+msgid "could not get information about CRTC %d"
+msgstr "could not get information about CRTC %d"
+
+#: ../libmate-desktop/mate-rr-config.c:501
+msgid "Laptop"
+msgstr "Laptop"
+
+#: ../libmate-desktop/mate-rr-config.c:1162
+#, c-format
+msgid ""
+"none of the saved display configurations matched the active configuration"
+msgstr ""
+"none of the saved display configurations matched the active configuration"
+
+#: ../libmate-desktop/mate-rr-config.c:1423
+#, c-format
+msgid "CRTC %d cannot drive output %s"
+msgstr "CRTC %d cannot drive output %s"
+
+#: ../libmate-desktop/mate-rr-config.c:1430
+#, c-format
+msgid "output %s does not support mode %dx%d@%dHz"
+msgstr "output %s does not support mode %dx%d@%dHz"
+
+#: ../libmate-desktop/mate-rr-config.c:1441
+#, c-format
+msgid "CRTC %d does not support rotation=%s"
+msgstr "CRTC %d does not support rotation=%s"
+
+#: ../libmate-desktop/mate-rr-config.c:1455
+#, c-format
+msgid ""
+"output %s does not have the same parameters as another cloned output:\n"
+"existing mode = %d, new mode = %d\n"
+"existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
+"existing rotation = %s, new rotation = %s"
+msgstr ""
+"output %s does not have the same parameters as another cloned output:\n"
+"existing mode = %d, new mode = %d\n"
+"existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
+"existing rotation = %s, new rotation = %s"
+
+#: ../libmate-desktop/mate-rr-config.c:1470
+#, c-format
+msgid "cannot clone to output %s"
+msgstr "cannot clone to output %s"
+
+#: ../libmate-desktop/mate-rr-config.c:1639
+#, c-format
+msgid "Trying modes for CRTC %d\n"
+msgstr "Trying modes for CRTC %d\n"
+
+#: ../libmate-desktop/mate-rr-config.c:1663
+#, c-format
+msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
+msgstr "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
+
+#: ../libmate-desktop/mate-rr-config.c:1710
+#, c-format
+msgid ""
+"could not assign CRTCs to outputs:\n"
+"%s"
+msgstr ""
+"could not assign CRTCs to outputs:\n"
+"%s"
+
+#: ../libmate-desktop/mate-rr-config.c:1714
+#, c-format
+msgid ""
+"none of the selected modes were compatible with the possible modes:\n"
+"%s"
+msgstr ""
+"none of the selected modes were compatible with the possible modes:\n"
+"%s"
+
+#. Translators: the "requested", "minimum", and
+#. * "maximum" words here are not keywords; please
+#. * translate them as usual.
+#: ../libmate-desktop/mate-rr-config.c:1796
+#, c-format
+msgid ""
+"required virtual size does not fit available size: requested=(%d, %d), "
+"minimum=(%d, %d), maximum=(%d, %d)"
+msgstr ""
+"required virtual size does not fit available size: requested=(%d, %d), "
+"minimum=(%d, %d), maximum=(%d, %d)"
+
+#. Keep this string in sync with mate-control-center/capplets/display/xrandr-capplet.c:get_display_name()
+#. Translators:  this is the feature where what you see on your laptop's
+#. * screen is the same as your external monitor.  Here, "Mirror" is being
+#. * used as an adjective, not as a verb.  For example, the Spanish
+#. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#.
+#: ../libmate-desktop/mate-rr-labeler.c:212
+msgid "Mirror Screens"
+msgstr "Mirror Screens"
+
+#~ msgid "could not find a suitable configuration of screens"
+#~ msgstr "could not find a suitable configuration of screens"
+
+#~ msgid "Directory"
+#~ msgstr "Directory"
+
+#~ msgid "Application"
+#~ msgstr "Application"
+
+#~ msgid "Link"
+#~ msgstr "Link"
+
+#~ msgid "FSDevice"
+#~ msgstr "FSDevice"
+
+#~ msgid "MIME Type"
+#~ msgstr "MIME Type"
+
+#~ msgid "Service"
+#~ msgstr "Service"
+
+#~ msgid "ServiceType"
+#~ msgstr "ServiceType"
+
+#~ msgid "_URL:"
+#~ msgstr "_URL:"
+
+#~ msgid "Comm_and:"
+#~ msgstr "Comm_and:"
+
+#~ msgid "_Name:"
+#~ msgstr "_Name:"
+
+#~ msgid "_Generic name:"
+#~ msgstr "_Generic name:"
+
+#~ msgid "Co_mment:"
+#~ msgstr "Co_mment:"
+
+#~ msgid "Browse"
+#~ msgstr "Browse"
+
+#~ msgid "_Type:"
+#~ msgstr "_Type:"
+
+#~ msgid "_Icon:"
+#~ msgstr "_Icon:"
+
+#~ msgid "Browse icons"
+#~ msgstr "Browse icons"
+
+#~ msgid "Run in t_erminal"
+#~ msgstr "Run in t_erminal"
+
+#~ msgid "Language"
+#~ msgstr "Language"
+
+#~ msgid "Name"
+#~ msgstr "Name"
+
+#~ msgid "Generic name"
+#~ msgstr "Generic name"
+
+#~ msgid "Comment"
+#~ msgstr "Comment"
+
+#~ msgid "_Try this before using:"
+#~ msgstr "_Try this before using:"
+
+#~ msgid "_Documentation:"
+#~ msgstr "_Documentation:"
+
+#~ msgid "_Name/Comment translations:"
+#~ msgstr "_Name/Comment translations:"
+
+#~ msgid "_Add/Set"
+#~ msgstr "_Add/Set"
+
+#~ msgid "Add or Set Name/Comment Translations"
+#~ msgstr "Add or Set Name/Comment Translations"
+
+#~ msgid "Re_move"
+#~ msgstr "Re_move"
+
+#~ msgid "Remove Name/Comment Translation"
+#~ msgstr "Remove Name/Comment Translation"
+
+#~ msgid "Basic"
+#~ msgstr "Basic"
+
+#~ msgid "Advanced"
+#~ msgstr "Advanced"
+
+#~ msgid "_Show Hints at Startup"
+#~ msgstr "_Show Hints at Startup"
+
+#~ msgid "Could not locate the directory with header images."
+#~ msgstr "Could not locate the directory with header images."
+
+#~ msgid "Failed to open directory with header images: %s"
+#~ msgstr "Failed to open directory with header images: %s"
+
+#~ msgid "Unable to load header image: %s"
+#~ msgstr "Unable to load header image: %s"
+
+#~ msgid "Could not locate the MATE logo."
+#~ msgstr "Could not locate the MATE logo."
+
+#~ msgid "Unable to load '%s': %s"
+#~ msgstr "Unable to load '%s': %s"
+
+#~ msgid "Could not open the address \"%s\": %s"
+#~ msgstr "Could not open the address \"%s\": %s"
+
+#~ msgid "%s: %s\n"
+#~ msgstr "%s: %s\n"
+
+#~ msgid "%s: "
+#~ msgstr "%s: "
+
+#~ msgid "Software"
+#~ msgstr "Software"
+
+#~ msgid "Developers"
+#~ msgstr "Developers"
+
+#~ msgid "Error writing file '%s': %s"
+#~ msgstr "Error writing file '%s': %s"
+
+#~ msgid "The End!"
+#~ msgstr "The End!"

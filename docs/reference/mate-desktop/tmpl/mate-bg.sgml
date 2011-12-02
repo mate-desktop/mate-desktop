@@ -1,0 +1,226 @@
+<!-- ##### SECTION Title ##### -->
+MateBG
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT MateBG ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL MateBG::changed ##### -->
+<para>
+
+</para>
+
+@bg: the object which received the signal.
+
+<!-- ##### SIGNAL MateBG::transitioned ##### -->
+<para>
+
+</para>
+
+@bg: the object which received the signal.
+
+<!-- ##### ENUM MateBGColorType ##### -->
+<para>
+
+</para>
+
+@MATE_BG_COLOR_SOLID: 
+@MATE_BG_COLOR_H_GRADIENT: 
+@MATE_BG_COLOR_V_GRADIENT: 
+
+<!-- ##### ENUM MateBGPlacement ##### -->
+<para>
+
+</para>
+
+@MATE_BG_PLACEMENT_TILED: 
+@MATE_BG_PLACEMENT_ZOOMED: 
+@MATE_BG_PLACEMENT_CENTERED: 
+@MATE_BG_PLACEMENT_SCALED: 
+@MATE_BG_PLACEMENT_FILL_SCREEN: 
+@MATE_BG_PLACEMENT_SPANNED: 
+
+<!-- ##### MACRO MATE_BG_KEY_DIR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION mate_bg_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_bg_load_from_preferences ##### -->
+<para>
+
+</para>
+
+@bg: 
+@client: 
+
+
+<!-- ##### FUNCTION mate_bg_save_to_preferences ##### -->
+<para>
+
+</para>
+
+@bg: 
+@client: 
+
+
+<!-- ##### FUNCTION mate_bg_set_filename ##### -->
+<para>
+
+</para>
+
+@bg: 
+@filename: 
+
+
+<!-- ##### FUNCTION mate_bg_set_placement ##### -->
+<para>
+
+</para>
+
+@bg: 
+@placement: 
+
+
+<!-- ##### FUNCTION mate_bg_set_color ##### -->
+<para>
+
+</para>
+
+@bg: 
+@type: 
+@primary: 
+@secondary: 
+
+
+<!-- ##### FUNCTION mate_bg_get_filename ##### -->
+<para>
+
+</para>
+
+@bg: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_bg_get_placement ##### -->
+<para>
+
+</para>
+
+@bg: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_bg_get_color ##### -->
+<para>
+
+</para>
+
+@bg: 
+@type: 
+@primary: 
+@secondary: 
+
+
+<!-- ##### FUNCTION mate_bg_draw ##### -->
+<para>
+
+</para>
+
+@bg: 
+@dest: 
+@screen: 
+@is_root: 
+
+
+<!-- ##### FUNCTION mate_bg_create_pixmap ##### -->
+<para>
+
+</para>
+
+@bg: 
+@window: 
+@width: 
+@height: 
+@root: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_bg_get_image_size ##### -->
+<para>
+
+</para>
+
+@bg: 
+@factory: 
+@best_width: 
+@best_height: 
+@width: 
+@height: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_bg_create_thumbnail ##### -->
+<para>
+
+</para>
+
+@bg: 
+@factory: 
+@screen: 
+@dest_width: 
+@dest_height: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_bg_is_dark ##### -->
+<para>
+
+</para>
+
+@bg: 
+@dest_width: 
+@dest_height: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_bg_set_pixmap_as_root ##### -->
+<para>
+
+</para>
+
+@screen: 
+@pixmap: 
+
+

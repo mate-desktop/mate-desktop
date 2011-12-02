@@ -1,0 +1,733 @@
+<!-- ##### SECTION Title ##### -->
+MateDesktopItem
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### ENUM MateDesktopItemType ##### -->
+<para>
+
+</para>
+
+@MATE_DESKTOP_ITEM_TYPE_NULL: 
+@MATE_DESKTOP_ITEM_TYPE_OTHER: 
+@MATE_DESKTOP_ITEM_TYPE_APPLICATION: 
+@MATE_DESKTOP_ITEM_TYPE_LINK: 
+@MATE_DESKTOP_ITEM_TYPE_FSDEVICE: 
+@MATE_DESKTOP_ITEM_TYPE_MIME_TYPE: 
+@MATE_DESKTOP_ITEM_TYPE_DIRECTORY: 
+@MATE_DESKTOP_ITEM_TYPE_SERVICE: 
+@MATE_DESKTOP_ITEM_TYPE_SERVICE_TYPE: 
+
+<!-- ##### ENUM MateDesktopItemStatus ##### -->
+<para>
+
+</para>
+
+@MATE_DESKTOP_ITEM_UNCHANGED: 
+@MATE_DESKTOP_ITEM_CHANGED: 
+@MATE_DESKTOP_ITEM_DISAPPEARED: 
+
+<!-- ##### STRUCT MateDesktopItem ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_ENCODING ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_VERSION ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_NAME ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_GENERIC_NAME ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_TYPE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_FILE_PATTERN ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_TRY_EXEC ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_NO_DISPLAY ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_COMMENT ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_EXEC ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_ACTIONS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_ICON ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_MINI_ICON ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_HIDDEN ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_PATH ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_TERMINAL ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_TERMINAL_OPTIONS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_SWALLOW_TITLE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_SWALLOW_EXEC ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_MIME_TYPE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_PATTERNS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_DEFAULT_APP ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_DEV ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_FS_TYPE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_MOUNT_POINT ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_READ_ONLY ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_UNMOUNT_ICON ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_SORT_ORDER ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_URL ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_DOC_PATH ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_CATEGORIES ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_ONLY_SHOW_IN ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### ENUM MateDesktopItemLoadFlags ##### -->
+<para>
+
+</para>
+
+@MATE_DESKTOP_ITEM_LOAD_ONLY_IF_EXISTS: 
+@MATE_DESKTOP_ITEM_LOAD_NO_TRANSLATIONS: 
+
+<!-- ##### ENUM MateDesktopItemLaunchFlags ##### -->
+<para>
+
+</para>
+
+@MATE_DESKTOP_ITEM_LAUNCH_ONLY_ONE: 
+@MATE_DESKTOP_ITEM_LAUNCH_USE_CURRENT_DIR: 
+@MATE_DESKTOP_ITEM_LAUNCH_APPEND_URIS: 
+@MATE_DESKTOP_ITEM_LAUNCH_APPEND_PATHS: 
+@MATE_DESKTOP_ITEM_LAUNCH_DO_NOT_REAP_CHILD: 
+
+<!-- ##### ENUM MateDesktopItemIconFlags ##### -->
+<para>
+
+</para>
+
+@MATE_DESKTOP_ITEM_ICON_NO_KDE: 
+
+<!-- ##### ENUM MateDesktopItemError ##### -->
+<para>
+
+</para>
+
+@MATE_DESKTOP_ITEM_ERROR_NO_FILENAME: 
+@MATE_DESKTOP_ITEM_ERROR_UNKNOWN_ENCODING: 
+@MATE_DESKTOP_ITEM_ERROR_CANNOT_OPEN: 
+@MATE_DESKTOP_ITEM_ERROR_NO_EXEC_STRING: 
+@MATE_DESKTOP_ITEM_ERROR_BAD_EXEC_STRING: 
+@MATE_DESKTOP_ITEM_ERROR_NO_URL: 
+@MATE_DESKTOP_ITEM_ERROR_NOT_LAUNCHABLE: 
+@MATE_DESKTOP_ITEM_ERROR_INVALID_TYPE: 
+
+<!-- ##### MACRO MATE_DESKTOP_ITEM_ERROR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION mate_desktop_item_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_new_from_file ##### -->
+<para>
+
+</para>
+
+@file: 
+@flags: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_new_from_uri ##### -->
+<para>
+
+</para>
+
+@uri: 
+@flags: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_new_from_string ##### -->
+<para>
+
+</para>
+
+@uri: 
+@string: 
+@length: 
+@flags: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_new_from_basename ##### -->
+<para>
+
+</para>
+
+@basename: 
+@flags: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_copy ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_save ##### -->
+<para>
+
+</para>
+
+@item: 
+@under: 
+@force: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_ref ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_unref ##### -->
+<para>
+
+</para>
+
+@item: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_launch ##### -->
+<para>
+
+</para>
+
+@item: 
+@file_list: 
+@flags: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_launch_with_env ##### -->
+<para>
+
+</para>
+
+@item: 
+@file_list: 
+@flags: 
+@envp: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_launch_on_screen ##### -->
+<para>
+
+</para>
+
+@item: 
+@file_list: 
+@flags: 
+@screen: 
+@workspace: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_drop_uri_list ##### -->
+<para>
+
+</para>
+
+@item: 
+@uri_list: 
+@flags: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_drop_uri_list_with_env ##### -->
+<para>
+
+</para>
+
+@item: 
+@uri_list: 
+@flags: 
+@envp: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_exists ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_get_entry_type ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_set_entry_type ##### -->
+<para>
+
+</para>
+
+@item: 
+@type: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_get_location ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_set_location ##### -->
+<para>
+
+</para>
+
+@item: 
+@location: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_set_location_file ##### -->
+<para>
+
+</para>
+
+@item: 
+@file: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_get_file_status ##### -->
+<para>
+
+</para>
+
+@item: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_get_icon ##### -->
+<para>
+
+</para>
+
+@item: 
+@icon_theme: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_find_icon ##### -->
+<para>
+
+</para>
+
+@icon_theme: 
+@icon: 
+@desired_size: 
+@flags: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_attr_exists ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_get_string ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_set_string ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@value: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_get_attr_locale ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_get_localestring ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_get_localestring_lang ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@language: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_get_languages ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_set_localestring ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@value: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_set_localestring_lang ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@language: 
+@value: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_clear_localestring ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_get_strings ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_set_strings ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@strings: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_get_boolean ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@Returns: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_set_boolean ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+@value: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_set_launch_time ##### -->
+<para>
+
+</para>
+
+@item: 
+@timestamp: 
+
+
+<!-- ##### MACRO mate_desktop_item_clear_attr ##### -->
+<para>
+
+</para>
+
+@item: 
+@attr: 
+
+
+<!-- ##### FUNCTION mate_desktop_item_clear_section ##### -->
+<para>
+
+</para>
+
+@item: 
+@section: 
+
+
