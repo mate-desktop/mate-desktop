@@ -23,6 +23,15 @@
 
 #include "mate-about.h"
 
+/* get text macro, this should be on the common macros. or not?
+ */
+#ifndef mate_gettext
+#define mate_gettext(package, locale, codeset) \
+	bindtextdomain(package, locale); \
+	bind_textdomain_codeset(package, codeset); \
+	textdomain(package);
+#endif
+
 // what a mess!
 #ifndef DISABLE_NYANCAT
 
@@ -155,13 +164,13 @@ void mate_about_run(void)
 	 * This generate a random message.
 	 * The comments index must not be more than comments_count - 1
 	 */
-	gtk_about_dialog_set_comments(GTK_ABOUT_DIALOG(mate_about_dialog), gettext(comments[g_random_int_range(0, comments_count - 1)]));
+	gtk_about_dialog_set_comments(GTK_ABOUT_DIALOG(mate_about_dialog), gettext(comments_array[g_random_int_range(0, comments_count - 1)]));
 
 	// autores
 	gtk_about_dialog_set_authors(GTK_ABOUT_DIALOG(mate_about_dialog), authors);
 	// I comment this because the list is empty
-	//gtk_about_dialog_set_artists(GTK_ABOUT_DIALOG(mate_about_dialog), artists);
-	//gtk_about_dialog_set_documenters(GTK_ABOUT_DIALOG(mate_about_dialog), documenters);
+	gtk_about_dialog_set_artists(GTK_ABOUT_DIALOG(mate_about_dialog), artists);
+	gtk_about_dialog_set_documenters(GTK_ABOUT_DIALOG(mate_about_dialog), documenters);
 
 	#if GTK_CHECK_VERSION(3, 0, 0)
 		gtk_about_dialog_set_license_type(GTK_ABOUT_DIALOG(mate_about_dialog), GTK_LICENSE_GPL_3_0);
@@ -193,18 +202,18 @@ gint main(gint argc, gchar** argv)
 	 */
 	GError* error = NULL;
 
-	/**
-	 * Con esto se inicia gettext
-	 */
-	bindtextdomain(gettext_package, locale_dir);
-	bind_textdomain_codeset(gettext_package, "UTF-8");
-	textdomain(gettext_package);
+	/* Con esto se inicia gettext
+	 * GETTEXT_PACKAGE = mate-desktop-2.0
+	 * LOCALE_DIR = /usr/local/share/locale
+	 **/
+	mate_gettext(GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
 
+	g_type_init();
 	/**
 	 * http://www.gtk.org/api/2.6/glib/glib-Commandline-option-parser.html
 	 */
 	GOptionContext* context = g_option_context_new(NULL);
-	g_option_context_add_main_entries(context, command_entries, gettext_package);
+	g_option_context_add_main_entries(context, command_entries, GETTEXT_PACKAGE);
 	g_option_context_add_group(context, gtk_get_option_group(TRUE));
 	g_option_context_parse(context, &argc, &argv, &error);
 
@@ -244,9 +253,9 @@ gint main(gint argc, gchar** argv)
 				mate_about_run();
 			}
 
-			g_object_unref(mate_about_application);
+			//g_object_unref(mate_about_application);
 
-		#elif GTK_CHECK_VERSION(3, 0, 0)
+		#elif GTK_CHECK_VERSION(3, 0, 0) && !defined(USE_UNIQUE)
 
 			mate_about_application = gtk_application_new("org.mate.about", 0);
 			g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
@@ -255,7 +264,7 @@ gint main(gint argc, gchar** argv)
 
 			g_object_unref(mate_about_application);
 
-		#elif GLIB_CHECK_VERSION(2, 26, 0)
+		#elif GLIB_CHECK_VERSION(2, 26, 0) && !defined(USE_UNIQUE)
 
 			mate_about_application = g_application_new("org.mate.about", G_APPLICATION_FLAGS_NONE);
 			g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
