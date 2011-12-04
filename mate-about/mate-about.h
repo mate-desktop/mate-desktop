@@ -604,6 +604,7 @@
 		// MATE start here
 		"Perberos <perberos@gmail.com>",
 		"Stefano Karapetsas <stefano@karapetsas.com>",
+		"Steve Zesch <stevezesch2@gmail.com>",
 		NULL
 	};
 
