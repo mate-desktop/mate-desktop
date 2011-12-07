@@ -12,7 +12,7 @@ INCLUDES = \
 @INTLTOOL_DESKTOP_RULE@
 
 pixmapdir  = $(datadir)/pixmaps
-pixmap_DATA = nyan-cat.gif
+pixmap_DATA = nyan-cat_navideno_v3.png nyan-cat.gif
 
 desktopdir = $(datadir)/applications
 desktop_in_files = mate-about.desktop.in
