@@ -201,6 +201,7 @@
 		// I comment this because the list is empty
 		gtk_about_dialog_set_artists(mate_about_dialog, artists);
 		gtk_about_dialog_set_documenters(mate_about_dialog, documenters);
+		gtk_about_dialog_set_translator_credits(mate_about_dialog, translators);
 
 		#if GTK_CHECK_VERSION(3, 0, 0)
 			gtk_about_dialog_set_license_type(mate_about_dialog, GTK_LICENSE_GPL_3_0);

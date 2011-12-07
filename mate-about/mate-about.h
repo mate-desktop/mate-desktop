@@ -614,6 +614,9 @@
 		"...", // TODO: fillme
 		NULL
 	};
+	// traductores
+	const char translators[] = "" \
+		"..."; // TODO: fillme
 
 	// widget de la unica ventana
 	GtkAboutDialog* mate_about_dialog = FALSE;
