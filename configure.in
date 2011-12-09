@@ -1,6 +1,6 @@
-m4_define([mate_platform], [2011])
-m4_define([mate_minor], [12])
-m4_define([mate_micro], [06])
+m4_define([mate_platform], [1])
+m4_define([mate_minor], [1])
+m4_define([mate_micro], [0])
 
 m4_define(mate_version, [mate_platform.mate_minor.mate_micro]),
 
@@ -128,7 +128,7 @@ esac
 
 GDK_PIXBUF_REQUIRED=2.4.0
 GLIB_REQUIRED=2.19.1
-MATECONF_REQUIRED=2.0.0
+MATECONF_REQUIRED=1.1.0
 XRANDR_REQUIRED=1.2
 
 #AC_SUBST(GTK_REQUIRED)
