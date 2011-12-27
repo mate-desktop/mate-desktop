@@ -34,7 +34,7 @@
 	const char* program_name = "MATE Desktop Environment";
 	const char* version = PACKAGE_VERSION;
 	const char* icon = "desktop";
-	const char* website = "http://www.matsusoft.com.ar/projects/mate/";
+	const char* website = "http://www.mate-desktop.org/";
 
 	const char* copyright =  ""
 		"Copyright © 1997-2011 GNOME developers\n"
