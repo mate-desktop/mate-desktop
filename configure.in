@@ -1,10 +1,10 @@
 m4_define([mate_platform], [1])
 m4_define([mate_minor], [1])
-m4_define([mate_micro], [0])
+m4_define([mate_micro], [1])
 
 m4_define(mate_version, [mate_platform.mate_minor.mate_micro]),
 
-AC_INIT([mate-desktop], mate_version, [https://github.com/perberos/mate-desktop-environment])
+AC_INIT([mate-desktop], mate_version, [https://github.com/mate-desktop/mate-desktop/])
 AC_CONFIG_SRCDIR([libmate-desktop])
 
 AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-bzip2 tar-ustar])
