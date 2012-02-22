@@ -19,7 +19,6 @@
  *
  * Author: Ray Strode <rstrode@redhat.com>
 */
-
 #include <string.h>
 #include <math.h>
 #include <stdarg.h>
@@ -44,8 +43,15 @@ struct _MateBGCrossfadePrivate
 	GdkWindow *window;
 	int        width;
 	int        height;
-	GdkPixmap *fading_pixmap;
-	GdkPixmap *end_pixmap;
+
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		cairo_surface_t* fading_pixmap;
+		cairo_surface_t* end_pixmap;
+	#else
+		GdkPixmap* fading_pixmap;
+		GdkPixmap* end_pixmap;
+	#endif
+
 	gdouble    start_time;
 	gdouble    total_duration;
 	guint      timeout_id;
@@ -219,49 +225,59 @@ mate_bg_crossfade_init (MateBGCrossfade *fade)
  *
  * Return value: the new #MateBGCrossfade
  **/
-MateBGCrossfade *
-mate_bg_crossfade_new (int width,
-			int height)
+MateBGCrossfade* mate_bg_crossfade_new(int width, int height)
 {
-	GObject *object;
+	GObject* object;
 
-	object = g_object_new (MATE_TYPE_BG_CROSSFADE,
-			       "width", width,
-			       "height", height, NULL);
+	object = g_object_new(MATE_TYPE_BG_CROSSFADE,
+		"width", width,
+		"height", height,
+		NULL);
 
-	return (MateBGCrossfade *) object;
+	return (MateBGCrossfade*) object;
 }
 
-static GdkPixmap *
-tile_pixmap (GdkPixmap *pixmap,
-	     int        width,
-	     int        height)
+#if GTK_CHECK_VERSION(3, 0, 0)
+	static cairo_surface_t* tile_pixmap(cairo_surface_t* pixmap, int width, int height)
+#else
+	static GdkPixmap* tile_pixmap(GdkPixmap* pixmap, int width, int height)
+#endif
 {
-	GdkPixmap *copy;
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		cairo_surface_t* copy;
+	#else
+		GdkPixmap* copy;
+	#endif
+
 	cairo_t *cr;
 
-	copy = gdk_pixmap_new (pixmap, width, height, pixmap == NULL? 24 : -1);
+	copy = gdk_pixmap_new(pixmap, width, height, pixmap == NULL? 24 : -1);
 
-	cr = gdk_cairo_create (copy);
+	cr = gdk_cairo_create(copy);
 
-	if (pixmap != NULL) {
+	if (pixmap != NULL)
+	{
 		cairo_pattern_t *pattern;
 		gdk_cairo_set_source_pixmap (cr, pixmap, 0.0, 0.0);
 		pattern = cairo_get_source (cr);
 		cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
-	} else {
+	}
+	else
+	{
 		GtkStyle *style;
 		style = gtk_widget_get_default_style ();
-		gdk_cairo_set_source_color (cr, &style->bg[GTK_STATE_NORMAL]);
+		gdk_cairo_set_source_color(cr, &style->bg[GTK_STATE_NORMAL]);
 	}
 
 	cairo_paint (cr);
 
-	if (cairo_status (cr) != CAIRO_STATUS_SUCCESS) {
+	if (cairo_status (cr) != CAIRO_STATUS_SUCCESS)
+	{
 		g_object_unref (copy);
 		copy = NULL;
 	}
-	cairo_destroy (cr);
+
+	cairo_destroy(cr);
 
 	return copy;
 }
@@ -278,9 +294,11 @@ tile_pixmap (GdkPixmap *pixmap,
  * Return value: %TRUE if successful, or %FALSE if the pixmap
  * could not be copied.
  **/
-gboolean
-mate_bg_crossfade_set_start_pixmap (MateBGCrossfade *fade,
-				     GdkPixmap        *pixmap)
+#if GTK_CHECK_VERSION(3, 0, 0)
+	gboolean mate_bg_crossfade_set_start_pixmap(MateBGCrossfade* fade, cairo_surface_t* pixmap)
+#else
+	gboolean mate_bg_crossfade_set_start_pixmap(MateBGCrossfade* fade, GdkPixmap* pixmap)
+#endif
 {
 /* I am disabling this because background fade break the mate-file-manager
  * Estoy deshabilitando esto por que el efecto de desvanecimiento del fondo de pantalla, hace
@@ -331,9 +349,11 @@ get_current_time (void)
  * Return value: %TRUE if successful, or %FALSE if the pixmap
  * could not be copied.
  **/
-gboolean
-mate_bg_crossfade_set_end_pixmap (MateBGCrossfade *fade,
-				   GdkPixmap        *pixmap)
+#if GTK_CHECK_VERSION(3, 0, 0)
+	gboolean mate_bg_crossfade_set_end_pixmap(MateBGCrossfade* fade, cairo_surface_t* pixmap)
+#else
+	gboolean mate_bg_crossfade_set_end_pixmap(MateBGCrossfade* fade, GdkPixmap* pixmap)
+#endif
 {
 	g_return_val_if_fail (MATE_IS_BG_CROSSFADE (fade), FALSE);
 
@@ -361,7 +381,11 @@ animations_are_disabled (MateBGCrossfade *fade)
 
 	g_assert (fade->priv->window != NULL);
 
-	screen = gdk_drawable_get_screen (fade->priv->window);
+	#if GTK_CHECK_VERSION(2, 24, 0)
+		screen = gdk_window_get_screen(fade->priv->window);
+	#else // since 2.2
+		screen = gdk_drawable_get_screen(GDK_DRAWABLE(fade->priv->window));
+	#endif
 
 	settings = gtk_settings_get_for_screen (screen);
 

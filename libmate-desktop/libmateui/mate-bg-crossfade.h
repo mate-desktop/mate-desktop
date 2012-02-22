@@ -30,6 +30,7 @@
 #endif
 
 #include <gdk/gdk.h>
+#include <gtk/gtk.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -62,10 +63,16 @@ struct _MateBGCrossfadeClass
 
 GType             mate_bg_crossfade_get_type              (void);
 MateBGCrossfade *mate_bg_crossfade_new (int width, int height);
-gboolean          mate_bg_crossfade_set_start_pixmap (MateBGCrossfade *fade,
-                                                      GdkPixmap *pixmap);
-gboolean          mate_bg_crossfade_set_end_pixmap (MateBGCrossfade *fade,
-                                                    GdkPixmap *pixmap);
+
+
+#if GTK_CHECK_VERSION(3, 0, 0)
+	gboolean mate_bg_crossfade_set_start_pixmap(MateBGCrossfade* fade, cairo_surface_t* pixmap);
+	gboolean mate_bg_crossfade_set_end_pixmap(MateBGCrossfade* fade, cairo_surface_t* pixmap);
+#else
+	gboolean mate_bg_crossfade_set_start_pixmap(MateBGCrossfade* fade, GdkPixmap* pixmap);
+	gboolean mate_bg_crossfade_set_end_pixmap(MateBGCrossfade* fade, GdkPixmap* pixmap);
+#endif
+
 void              mate_bg_crossfade_start (MateBGCrossfade *fade,
                                             GdkWindow        *window);
 gboolean          mate_bg_crossfade_is_started (MateBGCrossfade *fade);

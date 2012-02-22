@@ -34,6 +34,7 @@ Author: Soren Sandmann <sandmann@redhat.com>
 
 #include <gio/gio.h>
 
+#include <gdk/gdk.h>
 #include <gdk/gdkx.h>
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
@@ -128,7 +129,11 @@ static guint signals[N_SIGNALS] = {0};
 
 G_DEFINE_TYPE(MateBG, mate_bg, G_TYPE_OBJECT)
 
-static GdkPixmap* make_root_pixmap(GdkScreen* screen, gint width, gint height);
+#if GTK_CHECK_VERSION(3, 0, 0)
+	static cairo_surface_t* make_root_pixmap(GdkScreen* screen, gint width, gint height);
+#else
+	static GdkPixmap* make_root_pixmap(GdkScreen* screen, gint width, gint height);
+#endif
 
 /* Pixbuf utils */
 static guint32    pixbuf_average_value (GdkPixbuf  *pixbuf);
@@ -138,11 +143,14 @@ static GdkPixbuf *pixbuf_scale_to_fit  (GdkPixbuf  *src,
 static GdkPixbuf *pixbuf_scale_to_min  (GdkPixbuf  *src,
 					int         min_width,
 					int         min_height);
-static void       pixbuf_draw_gradient (GdkPixbuf    *pixbuf,
-					gboolean      horizontal,
-					GdkColor     *c1,
-					GdkColor     *c2,
-					GdkRectangle *rect);
+
+#if GTK_CHECK_VERSION(3, 0, 0)
+	static void pixbuf_draw_gradient(GdkPixbuf* pixbuf, gboolean horizontal, GdkColor* c1, GdkColor* c2, cairo_rectangle_int_t* rect);
+#else
+	static void pixbuf_draw_gradient(GdkPixbuf* pixbuf, gboolean horizontal, GdkColor* c1, GdkColor* c2, GdkRectangle* rect);
+#endif
+
+
 static void       pixbuf_tile          (GdkPixbuf  *src,
 					GdkPixbuf  *dest);
 static void       pixbuf_blend         (GdkPixbuf  *src,
@@ -635,20 +643,27 @@ mate_bg_set_filename (MateBG     *bg,
 	}
 }
 
-static void
-draw_color_area (MateBG *bg,
-		 GdkPixbuf *dest,
-		 GdkRectangle *rect)
+#if GTK_CHECK_VERSION(3, 0, 0)
+	static void draw_color_area(MateBG* bg, GdkPixbuf* dest, cairo_rectangle_int_t* rect)
+#else
+	static void draw_color_area(MateBG* bg, GdkPixbuf* dest, GdkRectangle* rect)
+#endif
 {
 	guint32 pixel;
-        GdkRectangle extent;
+
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		cairo_rectangle_int_t extent;
+	#else
+		GdkRectangle extent;
+	#endif
+
 
         extent.x = 0;
         extent.y = 0;
         extent.width = gdk_pixbuf_get_width (dest);
         extent.height = gdk_pixbuf_get_height (dest);
 
-        gdk_rectangle_intersect (rect, &extent, rect);
+	gdk_rectangle_intersect(rect, &extent, rect);
 
 	switch (bg->color_type) {
 	case MATE_BG_COLOR_SOLID:
@@ -679,7 +694,12 @@ draw_color (MateBG *bg,
 	    GdkPixbuf *dest,
 	    GdkScreen *screen)
 {
-	GdkRectangle rect;
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		cairo_rectangle_int_t rect;
+	#else
+		GdkRectangle rect;
+	#endif
+
 	rect.x = 0;
 	rect.y = 0;
 	rect.width = gdk_pixbuf_get_width (dest);
@@ -692,7 +712,11 @@ draw_color_each_monitor (MateBG *bg,
 			 GdkPixbuf *dest,
 			 GdkScreen *screen)
 {
-	GdkRectangle rect;
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		cairo_rectangle_int_t rect;
+	#else
+		GdkRectangle rect;
+	#endif
 	gint num_monitors;
 	int monitor;
 
@@ -783,11 +807,12 @@ get_scaled_pixbuf (MateBGPlacement placement,
 	return new;
 }
 
-static void
-draw_image_area (MateBGPlacement  placement,
-		 GdkPixbuf        *pixbuf,
-		 GdkPixbuf        *dest,
-		 GdkRectangle     *area)
+
+#if GTK_CHECK_VERSION(3, 0, 0)
+	static void draw_image_area(MateBGPlacement placement, GdkPixbuf* pixbuf, GdkPixbuf* dest, cairo_rectangle_int_t* area)
+#else
+	static void draw_image_area(MateBGPlacement placement, GdkPixbuf* pixbuf, GdkPixbuf* dest, GdkRectangle* area)
+#endif
 {
 	int dest_width = area->width;
 	int dest_height = area->height;
@@ -825,7 +850,11 @@ draw_image (MateBGPlacement  placement,
 	    GdkPixbuf        *pixbuf,
 	    GdkPixbuf        *dest)
 {
-	GdkRectangle rect;
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		cairo_rectangle_int_t rect;
+	#else
+		GdkRectangle rect;
+	#endif
 
 	rect.x = 0;
 	rect.y = 0;
@@ -840,7 +869,12 @@ draw_once (MateBG   *bg,
 	   GdkPixbuf *dest,
 	   GdkScreen *screen)
 {
-	GdkRectangle rect;
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		cairo_rectangle_int_t rect;
+	#else
+		GdkRectangle rect;
+	#endif
+
 	GdkPixbuf   *pixbuf;
 
 	rect.x = 0;
@@ -863,7 +897,11 @@ draw_each_monitor (MateBG   *bg,
 		   GdkPixbuf *dest,
 		   GdkScreen *screen)
 {
-	GdkRectangle rect;
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		cairo_rectangle_int_t rect;
+	#else
+		GdkRectangle rect;
+	#endif
 	gint num_monitors;
 	int monitor;
 
@@ -965,15 +1003,19 @@ mate_bg_get_pixmap_size (MateBG   *bg,
  *
  * Since: 2.20
  **/
-GdkPixmap *
-mate_bg_create_pixmap (MateBG	    *bg,
-			GdkWindow   *window,
-			int	     width,
-			int	     height,
-			gboolean     is_root)
+#if GTK_CHECK_VERSION(3, 0, 0)
+	cairo_surface_t* mate_bg_create_pixmap(MateBG* bg, GdkWindow* window, int width, int height, gboolean is_root)
+#else
+	GdkPixmap* mate_bg_create_pixmap(MateBG* bg, GdkWindow* window, int width, int height, gboolean is_root)
+#endif
 {
 	int pm_width, pm_height;
-	GdkPixmap *pixmap;
+
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		cairo_surface_t* pixmap;
+	#else
+		GdkPixmap* pixmap;
+	#endif
 	cairo_t *cr;
 
 	g_return_val_if_fail (bg != NULL, NULL);
@@ -993,8 +1035,13 @@ mate_bg_create_pixmap (MateBG	    *bg,
 	mate_bg_get_pixmap_size (bg, width, height, &pm_width, &pm_height);
 
 	if (is_root) {
-		pixmap = make_root_pixmap (gdk_drawable_get_screen (window),
-					   pm_width, pm_height);
+
+		#if GTK_CHECK_VERSION(2, 24, 0)
+			pixmap = make_root_pixmap(gdk_window_get_screen(window), pm_width, pm_height);
+		#else // since 2.2
+			pixmap = make_root_pixmap(gdk_drawable_get_screen(GDK_DRAWABLE(window)), pm_width, pm_height);
+		#endif
+
 	}
 	else {
 		pixmap = gdk_pixmap_new (window, pm_width, pm_height, -1);
@@ -1007,9 +1054,14 @@ mate_bg_create_pixmap (MateBG	    *bg,
 	else {
 		GdkPixbuf *pixbuf;
 
-		pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8,
-					 width, height);
-		mate_bg_draw (bg, pixbuf, gdk_drawable_get_screen (GDK_DRAWABLE (window)), is_root);
+		pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, width, height);
+
+		#if GTK_CHECK_VERSION(2, 24, 0)
+			mate_bg_draw(bg, pixbuf, gdk_window_get_screen(window), is_root);
+		#else // since 2.2
+			mate_bg_draw(bg, pixbuf, gdk_drawable_get_screen(GDK_DRAWABLE(window)), is_root);
+		#endif
+
 		gdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
 		g_object_unref (pixbuf);
 	}
@@ -1068,13 +1120,23 @@ mate_bg_is_dark (MateBG *bg,
  * Create a persistent pixmap. We create a separate display
  * and set the closedown mode on it to RetainPermanent.
  */
-static GdkPixmap *
-make_root_pixmap (GdkScreen *screen, gint width, gint height)
+
+#if GTK_CHECK_VERSION(3, 0, 0)
+	static cairo_surface_t* make_root_pixmap(GdkScreen* screen, gint width, gint height)
+#else
+	static GdkPixmap* make_root_pixmap(GdkScreen* screen, gint width, gint height)
+#endif
 {
-	Display *display;
-        const char *display_name;
+	Display* display;
+	const char* display_name;
 	Pixmap result;
-	GdkPixmap *gdk_pixmap;
+
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		cairo_surface_t* gdk_pixmap;
+	#else
+		GdkPixmap* gdk_pixmap;
+	#endif
+
 	int screen_num;
 	int depth;
 
@@ -1233,8 +1295,11 @@ mate_bg_create_thumbnail (MateBG               *bg,
  *
  * Return value: a #GdkPixmap if successful or %NULL
  **/
-GdkPixmap *
-mate_bg_get_pixmap_from_root (GdkScreen *screen)
+#if GTK_CHECK_VERSION(3, 0, 0)
+	cairo_surface_t* mate_bg_get_pixmap_from_root(GdkScreen* screen)
+#else
+	GdkPixmap* mate_bg_get_pixmap_from_root(GdkScreen* screen)
+#endif
 {
 	int result;
 	gint format;
@@ -1244,8 +1309,14 @@ mate_bg_get_pixmap_from_root (GdkScreen *screen)
 	Atom type;
 	Display *display;
 	int screen_num;
-	GdkPixmap *pixmap;
-	GdkPixmap *source_pixmap;
+
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		cairo_surface_t* pixmap;
+		cairo_surface_t* source_pixmap;
+	#else
+		GdkPixmap* pixmap;
+		GdkPixmap* source_pixmap;
+	#endif
 	int width, height;
 	cairo_t *cr;
 	cairo_pattern_t *pattern;
@@ -1311,9 +1382,11 @@ mate_bg_get_pixmap_from_root (GdkScreen *screen)
 	return pixmap;
 }
 
-static void
-mate_bg_set_root_pixmap_id (GdkScreen *screen,
-			     GdkPixmap *pixmap)
+#if GTK_CHECK_VERSION(3, 0, 0)
+	static void mate_bg_set_root_pixmap_id(GdkScreen* screen, cairo_surface_t* pixmap)
+#else
+	static void mate_bg_set_root_pixmap_id(GdkScreen* screen, GdkPixmap* pixmap)
+#endif
 {
 	int      result;
 	gint     format;
@@ -1374,8 +1447,11 @@ mate_bg_set_root_pixmap_id (GdkScreen *screen,
  * same conventions we do).  @pixmap should come from a call
  * to mate_bg_create_pixmap().
  **/
-void
-mate_bg_set_pixmap_as_root (GdkScreen *screen, GdkPixmap *pixmap)
+#if GTK_CHECK_VERSION(3, 0, 0)
+	void mate_bg_set_pixmap_as_root(GdkScreen* screen, cairo_surface_t* pixmap)
+#else
+	void mate_bg_set_pixmap_as_root(GdkScreen* screen, GdkPixmap* pixmap)
+#endif
 {
 	Display *display;
 	int      screen_num;
@@ -1413,13 +1489,21 @@ mate_bg_set_pixmap_as_root (GdkScreen *screen, GdkPixmap *pixmap)
  *
  * Return value: a #MateBGCrossfade object
  **/
-MateBGCrossfade *
-mate_bg_set_pixmap_as_root_with_crossfade (GdkScreen    *screen,
-					    GdkPixmap    *pixmap)
+#if GTK_CHECK_VERSION(3, 0, 0)
+	MateBGCrossfade* mate_bg_set_pixmap_as_root_with_crossfade(GdkScreen* screen, cairo_surface_t* pixmap)
+#else
+	MateBGCrossfade* mate_bg_set_pixmap_as_root_with_crossfade(GdkScreen* screen, GdkPixmap* pixmap)
+#endif
 {
 	GdkDisplay *display;
 	GdkWindow *root_window;
-	GdkPixmap *old_pixmap;
+
+	#if GTK_CHECK_VERSION(3, 0, 0)
+		cairo_surface_t* old_pixmap;
+	#else
+		GdkPixmap* old_pixmap;
+	#endif
+
 	int      width, height;
 	MateBGCrossfade *fade;
 
@@ -2305,12 +2389,11 @@ create_gradient (const GdkColor *primary,
 	return result;
 }
 
-static void
-pixbuf_draw_gradient (GdkPixbuf    *pixbuf,
-		      gboolean      horizontal,
-		      GdkColor     *primary,
-		      GdkColor     *secondary,
-		      GdkRectangle *rect)
+#if GTK_CHECK_VERSION(3, 0, 0)
+	static void pixbuf_draw_gradient(GdkPixbuf* pixbuf, gboolean horizontal, GdkColor* primary, GdkColor* secondary, cairo_rectangle_int_t* rect)
+#else
+	static void pixbuf_draw_gradient(GdkPixbuf* pixbuf, gboolean horizontal, GdkColor* primary, GdkColor* secondary, GdkRectangle* rect)
+#endif
 {
 	int width;
 	int height;

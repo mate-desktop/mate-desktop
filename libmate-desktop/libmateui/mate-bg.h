@@ -93,11 +93,13 @@ void             mate_bg_draw                  (MateBG               *bg,
 						 GdkPixbuf             *dest,
 						 GdkScreen	       *screen,
                                                  gboolean               is_root);
-GdkPixmap *      mate_bg_create_pixmap         (MateBG               *bg,
-						 GdkWindow             *window,
-						 int                    width,
-						 int                    height,
-						 gboolean               root);
+
+#if GTK_CHECK_VERSION(3, 0, 0)
+	cairo_surface_t* mate_bg_create_pixmap(MateBG* bg, GdkWindow* window, int width, int height, gboolean root);
+#else
+	GdkPixmap* mate_bg_create_pixmap(MateBG* bg, GdkWindow* window, int width, int height, gboolean root);
+#endif
+
 gboolean         mate_bg_get_image_size        (MateBG               *bg,
 						 MateDesktopThumbnailFactory *factory,
                                                  int                    best_width,
@@ -125,12 +127,16 @@ GdkPixbuf *      mate_bg_create_frame_thumbnail (MateBG              *bg,
  * if we decide to stabilize the API then we may want to make
  * these object methods, drop mate_bg_create_pixmap, etc.
  */
-void             mate_bg_set_pixmap_as_root    (GdkScreen             *screen,
-						 GdkPixmap             *pixmap);
 
-MateBGCrossfade *mate_bg_set_pixmap_as_root_with_crossfade (GdkScreen *screen,
-                                                              GdkPixmap *pixmap);
-GdkPixmap *mate_bg_get_pixmap_from_root (GdkScreen *screen);
+#if GTK_CHECK_VERSION(3, 0, 0)
+	void mate_bg_set_pixmap_as_root(GdkScreen* screen, cairo_surface_t* pixmap);
+	MateBGCrossfade* mate_bg_set_pixmap_as_root_with_crossfade(GdkScreen* screen, cairo_surface_t* pixmap);
+	cairo_surface_t* mate_bg_get_pixmap_from_root(GdkScreen* screen);
+#else
+	void mate_bg_set_pixmap_as_root(GdkScreen* screen, GdkPixmap* pixmap);
+	MateBGCrossfade* mate_bg_set_pixmap_as_root_with_crossfade(GdkScreen* screen, GdkPixmap* pixmap);
+	GdkPixmap* mate_bg_get_pixmap_from_root(GdkScreen* screen);
+#endif
 
 #ifdef __cplusplus
 }
