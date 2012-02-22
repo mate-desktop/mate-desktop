@@ -229,15 +229,38 @@
 		mate_gettext(GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
 
 		g_type_init();
-		/* http://www.gtk.org/api/2.6/glib/glib-Commandline-option-parser.html */
-		GOptionContext* context = g_option_context_new(NULL);
-		g_option_context_add_main_entries(context, command_entries, GETTEXT_PACKAGE);
-		g_option_context_add_group(context, gtk_get_option_group(TRUE));
-		g_option_context_parse(context, &argc, &argv, NULL);
+		
+		
+		#ifdef G_OPTIONS_ENTRY_USE
+			/* http://www.gtk.org/api/2.6/glib/glib-Commandline-option-parser.html */
+			GOptionContext* context = g_option_context_new(NULL);
+			g_option_context_add_main_entries(context, command_entries, GETTEXT_PACKAGE);
+			g_option_context_add_group(context, gtk_get_option_group(TRUE));
+			g_option_context_parse(context, &argc, &argv, NULL);
 
-		/* Not necesary at all, program just run and die.
-		 * But it free a little memory. */
-		g_option_context_free(context);
+			/* Not necesary at all, program just run and die.
+			 * But it free a little memory. */
+			g_option_context_free(context);
+		#else
+			int opt; /* este valor entrega el tipo de argumento */
+			
+			while ((opt = getopt_long(argc, argv, "+", command_entries, NULL)) != -1)
+			{
+				switch (opt)
+				{
+					case '?':
+						return 1;
+					case OPTION_VERSION:
+						mate_about_nogui = TRUE;
+						break;
+					#ifdef CMDLINE_PROCESS
+						CMDLINE_PROCESS
+					#endif
+				}
+			}
+		#endif
+		
+		
 
 		if (mate_about_nogui == TRUE)
 		{

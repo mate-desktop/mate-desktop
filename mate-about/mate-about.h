@@ -29,6 +29,20 @@
 	#include <unique/unique.h>
 #endif
 
+/* "Commandline option parser" fue introducida a la GLIB a partir de la
+ * version 2.6, esta definicion es para la compatibilidad GTK1.2 */
+#if GLIB_CHECK_VERSION(2, 6, 0)
+	#define G_OPTIONS_ENTRY_USE
+#endif
+
+/* Debido a que GOptions no está disponible en GLIB versiones inferiores a 2.6
+ * voy a utilizar la alternativa de GNU C, */
+#ifdef G_OPTIONS_ENTRY_USE
+	/* No hay nesecidad de incluir nada, viene por defecto en <glib/glib.h> */
+#else
+	#include <getopt.h>
+#endif
+
 //class mate_about
 //{
 	const char* program_name = "MATE Desktop Environment";
@@ -649,10 +663,31 @@
 	#endif
 
 	// for command line
-	static GOptionEntry command_entries[] = {
-		{"version", 'v', 0, G_OPTION_ARG_NONE, &mate_about_nogui, "Show release version", NULL},
-		{NULL}
-	};
+	#ifdef G_OPTIONS_ENTRY_USE
+		/* GOptionEntry ofrese la posibilidad de acceder a las opciones extras
+		 * de GTK desde la linea de comandos. Tambien muestra automaticamente
+		 * las opciones al llamar --help o -h */
+		static GOptionEntry command_entries[] = {
+			{"version", 'v', 0, G_OPTION_ARG_NONE, &mate_about_nogui, "Show release version", NULL},
+			{NULL}
+		};
+	#else
+	
+		
+		/* Quizás hay que agregar una opcion para --help
+		 */
+		static struct option command_entries[] = {
+			#ifdef CMDLINE_OPTIONS
+			CMDLINE_OPTIONS
+			#endif
+			
+			#define OPTION_VERSION 1000
+			{"version", no_argument, NULL, OPTION_VERSION},
+			
+			{NULL, 0, NULL, 0}
+		};
+	#endif
+	
 //}
 
 #endif /* __MATE_ABOUT_H__ */
