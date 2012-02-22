@@ -9,26 +9,27 @@ makedepends=('mate-doc-utils' 'intltool')
 options=('!emptydirs' '!libtool')
 url="http://matsusoft.com.ar/projects/mate/"
 groups=('mate')
-source=(http://sourceforge.net/projects/matede/files/${pkgver}/${pkgname}.tar.gz/download)
-sha256sums=('33640476894500a291bc60c421028e31a3a952f26ea08f35fe989fc8355ba590')
+source=()
+sha256sums=()
 
 build() {
-    cd "$srcdir/$pkgname"
+	cd "${srcdir}/../../../"
 
-    PYTHON=/usr/bin/python2 ./autogen.sh \
+    ./autogen.sh \
         --prefix=/usr \
         --sysconfdir=/etc \
         --localstatedir=/var \
         --disable-static \
         --disable-scrollkeeper \
         --disable-startup-notification \
-        --enable-unique || return 1
-    # --disable-nyancat
+        --enable-unique \
+        --disable-nyancat || return 1
+    # --with-gtk=3.0
     make || return 1
 }
 
 package() {
-    cd "$srcdir/$pkgname"
+	cd "${srcdir}/../../../"
     make DESTDIR="$pkgdir" install
 
     # prevent conflicts errors
