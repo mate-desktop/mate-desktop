@@ -1,3 +1,47 @@
+commit bc53751054ab3b2e693620311e6cd80bccb8b831
+Author: Perberos <perberos@gmail.com>
+Date:   Wed Feb 22 01:58:42 2012 -0300
+
+    some ugly gtk3 porting
+
+ libmate-desktop/libmateui/mate-bg-crossfade.h |   15 ++-
+ libmate-desktop/libmateui/mate-bg.h           |   26 ++--
+ libmate-desktop/mate-bg-crossfade.c           |   84 +++++++----
+ libmate-desktop/mate-bg.c                     |  199 +++++++++++++++++-------
+ 4 files changed, 222 insertions(+), 102 deletions(-)
+
+commit 23d4ca43c7d3659ad619c0534424ef16b94be6ca
+Author: Perberos <perberos@gmail.com>
+Date:   Wed Feb 22 01:57:43 2012 -0300
+
+        set patch on archlinux script
+
+ distro/archlinux/PKGBUILD |   15 ++++++++-------
+ 1 files changed, 8 insertions(+), 7 deletions(-)
+
+commit 341fc293a5edc0dda25c4a8d465d19bd293fb6da
+Author: Perberos <perberos@gmail.com>
+Date:   Wed Feb 22 01:57:06 2012 -0300
+
+    GOptionEntry was added on glib 2.6
+
+ mate-about/mate-about.c |   41 ++++++++++++++++++++++++++++++++---------
+ mate-about/mate-about.h |   43 +++++++++++++++++++++++++++++++++++++++----
+ 2 files changed, 71 insertions(+), 13 deletions(-)
+
+commit c72d30463c6def093499fac8b4b55885975e799d
+Author: stefano <stefano@aspire5633.(none)>
+Date:   Sun Jan 29 16:12:00 2012 +0100
+
+    fix some things for MATE
+
+ AUTHORS      |   13 ++-
+ ChangeLog    |  364 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ MAINTAINERS  |    4 +-
+ README       |   19 +---
+ configure.in |    4 +-
+ 5 files changed, 383 insertions(+), 21 deletions(-)
+
 commit 63feb69a05a25164862e1cc05b75f5c995ba112c
 Author: Steve Zesch <stevezesch2@gmail.com>
 Date:   Mon Jan 9 22:15:23 2012 -0500
