@@ -42,6 +42,7 @@ PKG_PROG_PKG_CONFIG
 MATE_PLATFORM=mate_platform
 MATE_MINOR=mate_minor
 MATE_MICRO=mate_micro
+MATE_DISTRIBUTOR="mate-desktop.org"
 MATE_DATE=`date +"%Y-%m-%d"`
 
 MATE_DATE=
@@ -51,6 +52,7 @@ MATE_DATE_COMMENT_END="-->"
 AC_SUBST(MATE_PLATFORM)
 AC_SUBST(MATE_MINOR)
 AC_SUBST(MATE_MICRO)
+AC_SUBST(MATE_DISTRIBUTOR)
 AC_SUBST(MATE_DATE)
 AC_SUBST(MATE_DATE_COMMENT_START)
 AC_SUBST(MATE_DATE_COMMENT_END)
@@ -59,6 +61,11 @@ MATE_COMMON_INIT
 MATE_DEBUG_CHECK
 MATE_COMPILE_WARNINGS([maximum])
 MATE_MAINTAINER_MODE_DEFINES
+
+AC_ARG_WITH(mate_distributor, [  --with-mate-distributor=DISTRIBUTOR  Specify name of MATE distributor])
+if test "x$with_mate_distributor" != x ; then
+  MATE_DISTRIBUTOR=$with_mate_distributor
+fi
 
 # As a special favour for vuntz, support --disable-deprecations
 
@@ -339,6 +346,7 @@ mate-desktop $VERSION `echo mate-desktop $VERSION | sed "s/./=/g"`
     Warn about deprecations:      ${enable_deprecations}
 
     Gtk+ version:                 ${GTK_API_VERSION}
+    MATE Distributor:             ${MATE_DISTRIBUTOR}
     Build mate-about:             ${enable_mate_about}
     Use libunique:                ${enable_libunique}
     Build desktop-wide docs:      ${enable_desktop_docs}
