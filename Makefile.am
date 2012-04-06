@@ -15,6 +15,7 @@ ACLOCAL_AMFLAGS = -I m4
 
 if MATE_ABOUT_ENABLED
 versiondir=$(datadir)/mate-about
+version_DATA=mate-version.xml
 endif
 @INTLTOOL_XML_RULE@
 
@@ -22,6 +23,7 @@ EXTRA_DIST =			\
 	COPYING-DOCS		\
 	HACKING			\
 	MAINTAINERS		\
+	mate-version.xml.in.in  \
 	mate-doc-utils.make
 
 DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc --disable-scrollkeeper
