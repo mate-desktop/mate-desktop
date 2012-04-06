@@ -59,24 +59,25 @@
 	 * indice de la cadena. */
 	const int comments_count = 6;
 	const char* comments_array[] = {
-		"MATE also includes a complete development platform for applications "
-		"programmers, allowing the creation of powerful and complex applications.",
+		N_("MATE provides an intuitive and attractive desktop to Linux users "
+		"using traditional metaphors."),
 
-		"MATE includes most of what you see on your computer, including the file "
-		"manager, web browser, menus, and many applications.",
+		N_("MATE includes most of what you see on your computer, including the file "
+		"manager, document viewer, image viewer, menus, and many applications."),
 
-		"MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
-		"like family of operating systems.",
+		N_("MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
+		"like family of operating systems."),
 
-		"MATE's focus on usability and accessibility, regular release cycle, and "
-		"strong corporate backing make it unique among Free Software desktops.",
+		N_("MATE is a fork of GNOME 2. Hundreds of people have contributed code to "
+		"GNOME since it was started in 1997; many more have contributed in other "
+		"important ways, including translations, documentation, and quality assurance."),
 
-		"MATE's greatest strength is our strong community. Virtually anyone, with or "
-		"without coding skills, can contribute to making MATE better.",
-		// Must be GNOME, not MATE! or not...?
-		"Hundreds of people have contributed code to MATE since it was started in "
-		"1997; many more have contributed in other important ways, including "
-		"translations, documentation, and quality assurance.",
+		N_("GNOME 2 was the most popular Linux desktop but it’s no longer available... "
+		"MATE is here to provide that same desktop to you!"),
+
+		N_("The name “MATE” comes from yerba maté, a species of holly native "
+		"to subtropical South America. Its leaves contain caffeine and are "
+		"used to make infusions and a beverage called mate.")
 	};
 
 	const char* authors[] = {
