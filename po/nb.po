@@ -1,22 +1,23 @@
-# Norwegian translation of mate-desktop (bokmål dialect).
-# Copyright (C) 1998-2004 Free Software Foundation, Inc.
-# Kjartan Maraas <kmaraas@gnome.org>, 1998-2010.
-# Åsmund Skjæveland <aasmunds@fys.uio.no>, 2003.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 2.31.x\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-20 13:11+0200\n"
-"PO-Revision-Date: 2010-06-20 13:13+0200\n"
-"Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
-"Language-Team: Norwegian (bokmål) <i18n-nb@lister.ping.uio.no>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2012-04-06 11:17+0200\n"
+"PO-Revision-Date: 2012-04-06 09:18+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nb\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
-#: ../mate-about/mate-about.in:60
 msgid "About MATE"
 msgstr "Om MATE"
 
@@ -24,136 +25,48 @@ msgstr "Om MATE"
 msgid "Learn more about MATE"
 msgstr "Lær mer om MATE"
 
-#: ../mate-about/mate-about.in:61
-msgid "News"
-msgstr "Nyheter"
-
-#: ../mate-about/mate-about.in:62
-msgid "MATE Library"
-msgstr "MATE bibliotek"
-
-#: ../mate-about/mate-about.in:63
-msgid "Friends of MATE"
-msgstr "Venner av MATE"
-
-#: ../mate-about/mate-about.in:64
-msgid "Contact"
-msgstr "Kontakt"
-
-#: ../mate-about/mate-about.in:68
-msgid "The Mysterious GEGL"
-msgstr "Den mysteriske GEGL"
-
-#: ../mate-about/mate-about.in:69
-msgid "The Squeaky Rubber MATE"
-msgstr "Den knirkende gummimaten"
-
-#: ../mate-about/mate-about.in:70
-msgid "Wanda The MATE Fish"
-msgstr "MATE-fisken Wanda"
-
-#: ../mate-about/mate-about.in:567
-msgid "_Open URL"
-msgstr "_Åpne URL"
-
-#: ../mate-about/mate-about.in:574
-msgid "_Copy URL"
-msgstr "_Kopier URL"
-
-#: ../mate-about/mate-about.in:826
-msgid "About the MATE Desktop"
-msgstr "Om MATE skrivebordet"
-
-#: ../mate-about/mate-about.in:859
-msgid "%(name)s: %(value)s"
-msgstr "%(name)s: %(values)s"
-
-#: ../mate-about/mate-about.in:873
-msgid "Welcome to the MATE Desktop"
-msgstr "Velkommen til MATE-skrivebordet"
-
-#: ../mate-about/mate-about.in:890
-msgid "Brought to you by:"
-msgstr "Brakt til deg av:"
-
-#: ../mate-about/mate-about.in:914
-msgid "<b>%(name)s:</b> %(value)s"
-msgstr "<b>%(name)s:</b> %(value)s"
-
-#: ../mate-about/mate-about.in:975
-msgid "Version"
-msgstr "Versjon"
-
-#: ../mate-about/mate-about.in:977
-msgid "Distributor"
-msgstr "Distributør"
-
-#: ../mate-about/mate-about.in:979
-msgid "Build Date"
-msgstr "Byggdato"
-
-#: ../mate-about/mate-about.in:1024
-msgid "Display information on this MATE version"
-msgstr "Vis informasjon om versjon av MATE"
-
-#: ../mate-version.xml.in.in.h:1
+#: ../mate-about/mate-about.h:62
 msgid ""
-"MATE also includes a complete development platform for applications "
-"programmers, allowing the creation of powerful and complex applications."
+"MATE provides an intuitive and attractive desktop to Linux users using "
+"traditional metaphors."
 msgstr ""
-"MATE inkluderer også en komplett utviklingsplattform for programutviklere "
-"som gjør det mulig å lage kraftige og komplekse programmer."
 
-#: ../mate-version.xml.in.in.h:2
+#: ../mate-about/mate-about.h:65
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
-"manager, web browser, menus, and many applications."
+"manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"MATE tilbyr det meste av det du vanligvis finner på en datamaskin; "
-"filhåndterer, nettleser, menyer og mange programmer."
 
-#. NOTE TO AUTHORS: Do not put anything in the following paragraphs that
-#. will be substituted by the configure script. Otherwise you will break
-#. the translations.
-#: ../mate-version.xml.in.in.h:6
+#: ../mate-about/mate-about.h:68
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE er et fritt, brukervennlig, tilgjengelig og stabilt skrivebordsmiljø "
-"for UNIX-lignende operativsystemer."
 
-#: ../mate-version.xml.in.in.h:7
+#: ../mate-about/mate-about.h:71
 msgid ""
-"MATE's focus on usability and accessibility, regular release cycle, and "
-"strong corporate backing make it unique among Free Software desktops."
+"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
+" since it was started in 1997; many more have contributed in other important"
+" ways, including translations, documentation, and quality assurance."
 msgstr ""
-"MATE fokuserer på brukervennlighet og tilgjengelighet, tidsbasert "
-"utviklingssyklus og hjelp fra sterke bedrifter for å bli unikt blant "
-"skrivebordsmiljøene i fri programvare."
 
-#: ../mate-version.xml.in.in.h:8
+#: ../mate-about/mate-about.h:75
 msgid ""
-"MATE's greatest strength is our strong community. Virtually anyone, with or "
-"without coding skills, can contribute to making MATE better."
+"GNOME 2 was the most popular Linux desktop but it’s no longer available... "
+"MATE is here to provide that same desktop to you!"
 msgstr ""
-"MATE's største styrke er det sterke miljøet rundt det. Hvem som helst, med "
-"og uten programmeringskunnskap kan bidra til å gjøre MATE bedre."
 
-#: ../mate-version.xml.in.in.h:9
+#: ../mate-about/mate-about.h:78
 msgid ""
-"Hundreds of people have contributed code to MATE since it was started in "
-"1997; many more have contributed in other important ways, including "
-"translations, documentation, and quality assurance."
+"The name “MATE” comes from yerba maté, a species of holly native to "
+"subtropical South America. Its leaves contain caffeine and are used to make "
+"infusions and a beverage called mate."
 msgstr ""
-"Hundrevis av mennesker har bidratt kode til MATE siden prosjektet ble "
-"startet i 1997. Mange flere har bidratt på andre viktige måter som "
-"oversettelse, dokumentasjon og kvalitetssikring."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: ../libmate-desktop/display-name.c:265
+#: ../libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Ukjent"
@@ -174,7 +87,7 @@ msgstr "Feil under tilbakespoling av fil «%s»: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3524
+#: ../libmate-desktop/mate-desktop-item.c:3523
 msgid "No name"
 msgstr "Uten navn"
 
@@ -193,40 +106,39 @@ msgstr "Kan ikke finne fil «%s»"
 msgid "No filename to save to"
 msgstr "Ingen filnavn å lagre til"
 
-#: ../libmate-desktop/mate-desktop-item.c:1822
+#: ../libmate-desktop/mate-desktop-item.c:1828
 #, c-format
 msgid "Starting %s"
 msgstr "Starter %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2058
+#: ../libmate-desktop/mate-desktop-item.c:2062
 #, c-format
 msgid "No URL to launch"
 msgstr "Ingen URL å starte"
 
-#: ../libmate-desktop/mate-desktop-item.c:2074
+#: ../libmate-desktop/mate-desktop-item.c:2078
 #, c-format
 msgid "Not a launchable item"
 msgstr "Oppføringen kan ikke startes"
 
-#: ../libmate-desktop/mate-desktop-item.c:2084
+#: ../libmate-desktop/mate-desktop-item.c:2088
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Ingen kommando (Exec) å starte"
 
-#: ../libmate-desktop/mate-desktop-item.c:2097
+#: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Forsøk på å starte ugyldig kommando (Exec)"
 
-#: ../libmate-desktop/mate-desktop-item.c:3581
+#: ../libmate-desktop/mate-desktop-item.c:3580
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Ukjent koding for: %s"
 
 #: ../libmate-desktop/mate-desktop-utils.c:133
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr ""
-"Kan ikke finne en terminal. Buker xterm selv om den kanskje ikke virker"
+msgstr "Kan ikke finne en terminal. Buker xterm selv om den kanskje ikke virker"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:444
@@ -249,7 +161,7 @@ msgstr "kunne ikke hente område med skjermstørrelser"
 msgid "RANDR extension is not present"
 msgstr "RANDR-tillegget er ikke tilstede"
 
-#: ../libmate-desktop/mate-rr.c:1037
+#: ../libmate-desktop/mate-rr.c:1092
 #, c-format
 msgid "could not get information about output %d"
 msgstr "kunne ikke hente informasjon om utdata %d"
@@ -257,21 +169,19 @@ msgstr "kunne ikke hente informasjon om utdata %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1424
+#: ../libmate-desktop/mate-rr.c:1479
 #, c-format
 msgid ""
-"requested position/size for CRTC %d is outside the allowed limit: position=(%"
-"d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr ""
-"forespurt posisjon/størrelse for CRTC %d er utenfor tillatt område: posisjon="
-"(%d, %d), størrelse=(%d, %d), maksimum=(%d, %d)"
+"requested position/size for CRTC %d is outside the allowed limit: "
+"position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
+msgstr "forespurt posisjon/størrelse for CRTC %d er utenfor tillatt område: posisjon=(%d, %d), størrelse=(%d, %d), maksimum=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1460
+#: ../libmate-desktop/mate-rr.c:1515
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "kunne ikke sette konfigurasjon for CRTC %d"
 
-#: ../libmate-desktop/mate-rr.c:1576
+#: ../libmate-desktop/mate-rr.c:1631
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "kunne ikke hente informasjon om CRTC %d"
@@ -308,11 +218,7 @@ msgid ""
 "existing mode = %d, new mode = %d\n"
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
-msgstr ""
-"utdata %s har ikke samme parametere som en annen klonet utdata:\n"
-"eksisterende modus = %d, ny modus = %d\n"
-"eksisterende koordinater = (%d, %d), nye koordinater = (%d, %d)\n"
-"eksisterende rotasjon = %s, ny rotasjon = %s"
+msgstr "utdata %s har ikke samme parametere som en annen klonet utdata:\neksisterende modus = %d, ny modus = %d\neksisterende koordinater = (%d, %d), nye koordinater = (%d, %d)\neksisterende rotasjon = %s, ny rotasjon = %s"
 
 #: ../libmate-desktop/mate-rr-config.c:1470
 #, c-format
@@ -334,18 +240,14 @@ msgstr "CRTC %d: prøver modus %dx%d@%dHz med utdata %dx%d@%dHz (forsøk %d)\n"
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
-msgstr ""
-"kunne ikke tilegne CRTCer til utdata:\n"
-"%s"
+msgstr "kunne ikke tilegne CRTCer til utdata:\n%s"
 
 #: ../libmate-desktop/mate-rr-config.c:1714
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
 "%s"
-msgstr ""
-"ingen av de valgte modusene var kompatibel med mulige modus:\n"
-"%s"
+msgstr "ingen av de valgte modusene var kompatibel med mulige modus:\n%s"
 
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
@@ -355,16 +257,15 @@ msgstr ""
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
-msgstr ""
-"nødvendig virtuell størrelse passer ikke med tilgjengelig størrelse: "
-"forespurt=(%d, %d), minimum=(%d, %d), maksimum=(%d, %d)"
+msgstr "nødvendig virtuell størrelse passer ikke med tilgjengelig størrelse: forespurt=(%d, %d), minimum=(%d, %d), maksimum=(%d, %d)"
 
-#. Keep this string in sync with mate-control-center/capplets/display/xrandr-capplet.c:get_display_name()
+#. Keep this string in sync with mate-control-center/capplets/display/xrandr-
+#. capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#.
+#. 
 #: ../libmate-desktop/mate-rr-labeler.c:212
 msgid "Mirror Screens"
 msgstr "Speil skjermer"

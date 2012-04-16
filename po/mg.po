@@ -1,22 +1,23 @@
-# Malagasy translation of Mate-desktop.
-# Copyright (C) 2006-2008 THE mate-desktop'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the mate-desktop package.
-# Thierry Randrianiriana <randrianiriana@gmail.com>, 2006-2008.
-# Fano Rajaonarisoa <fano@isvtec.com>, 2006.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-09 09:15+0000\n"
-"PO-Revision-Date: 2008-08-19 22:25+0300\n"
-"Last-Translator: Thierry Randrianiriana <randrianiriana@gmail.com>\n"
-"Language-Team: Malagasy <i18n-malagasy-mate@gna.org>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2012-04-06 11:17+0200\n"
+"PO-Revision-Date: 2012-04-06 09:18+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: mg\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
-#: ../mate-about/mate-about.in:61
 msgid "About MATE"
 msgstr "Momba ny Mate"
 
@@ -24,372 +25,247 @@ msgstr "Momba ny Mate"
 msgid "Learn more about MATE"
 msgstr "Hamantatra bebe kokoa momba ny MATE"
 
-#: ../mate-about/mate-about.in:62
-msgid "News"
-msgstr "Vaovao"
-
-#: ../mate-about/mate-about.in:63
-msgid "MATE Library"
-msgstr "Tahirim-boky ny MATE"
-
-#: ../mate-about/mate-about.in:64
-msgid "Friends of MATE"
-msgstr "Ireo naman'ny Mate"
-
-#: ../mate-about/mate-about.in:65
-msgid "Contact"
-msgstr "Fifandraisana"
-
-#: ../mate-about/mate-about.in:69
-msgid "The Mysterious GEGL"
-msgstr "Ilay GEGL mahagaga"
-
-#: ../mate-about/mate-about.in:70
-#, fuzzy
-msgid "The Squeaky Rubber MATE"
-msgstr "Ilay Mate fingotra mikiakiaka"
-
-#: ../mate-about/mate-about.in:71
-msgid "Wanda The MATE Fish"
-msgstr "Wanda ilay Trondron'ny MATE"
-
-#: ../mate-about/mate-about.in:568
-msgid "_Open URL"
-msgstr "S_okafy ny URL"
-
-#: ../mate-about/mate-about.in:575
-msgid "_Copy URL"
-msgstr "Mandi_ka URL"
-
-#: ../mate-about/mate-about.in:830
-msgid "About the MATE Desktop"
-msgstr "Momba ny Mate Desktop"
-
-#: ../mate-about/mate-about.in:866
-msgid "%(name)s: %(value)s"
-msgstr "%(name)s: %(value)s"
-
-#: ../mate-about/mate-about.in:880
-msgid "Welcome to the MATE Desktop"
-msgstr "Tongasoa eto amin'ny desktop Mate"
-
-#: ../mate-about/mate-about.in:897
-msgid "Brought to you by:"
-msgstr "Atolotr'i:"
-
-#: ../mate-about/mate-about.in:921
-msgid "<b>%(name)s:</b> %(value)s"
-msgstr "<b>%(name)s:</b> %(value)s"
-
-#: ../mate-about/mate-about.in:977
-msgid "Version"
-msgstr "Kinova"
-
-#: ../mate-about/mate-about.in:978
-msgid "Distributor"
-msgstr "Ny mpizara"
-
-#: ../mate-about/mate-about.in:979
-msgid "Build Date"
-msgstr "Datin'ny famolavolana"
-
-#: ../mate-about/mate-about.in:1023
-msgid "Display information on this MATE version"
-msgstr "Asehoy ny rakitra momban'io kinovan'ny MATE io"
-
-#: ../mate-version.xml.in.in.h:1
+#: ../mate-about/mate-about.h:62
 msgid ""
-"MATE also includes a complete development platform for applications "
-"programmers, allowing the creation of powerful and complex applications."
+"MATE provides an intuitive and attractive desktop to Linux users using "
+"traditional metaphors."
 msgstr ""
-"MATE dia manana sehatra famolavolana feno ho an'ireo mpamolavola "
-"rindran'asa, entina hamoronana rindran'asa matanjaka ary maro sosona."
 
-#: ../mate-version.xml.in.in.h:2
+#: ../mate-about/mate-about.h:65
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
-"manager, web browser, menus, and many applications."
+"manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"Misy ao amin'ny MATE ny ankabiazan'ireo zavatra hitanao amin'ny solosainao, "
-"toy ny mpandrindra rakitra, ny mpizaha tranonkala, ny karazan-tsafidy, ary "
-"rindran'asa maro samihafa."
 
-#. NOTE TO AUTHORS: Do not put anything in the following paragraphs that
-#. will be substituted by the configure script. Otherwise you will break
-#. the translations.
-#: ../mate-version.xml.in.in.h:6
+#: ../mate-about/mate-about.h:68
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE dia sehatr'asa maimaimpoana, azo ampiasaina tsara, marim-pototra ary "
-"mora ampiasaina amin'ny karazan-drafitra mitovy amin'ny Unix."
 
-#: ../mate-version.xml.in.in.h:7
+#: ../mate-about/mate-about.h:71
 msgid ""
-"MATE's focus on usability and accessibility, regular release cycle, and "
-"strong corporate backing make it unique among Free Software desktops."
+"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
+" since it was started in 1997; many more have contributed in other important"
+" ways, including translations, documentation, and quality assurance."
 msgstr ""
-"Ny fimasoan'ny MATE amin'ny fahafahana mampiasa tsara sy ny fanamorana ny "
-"fampiasana ny rindran'asa, ny fisesen'ny famoahana kinova, ary ny fanohanana "
-"mafonja avy amin'ny orinasa vaventy no tena mampiavaka azy amin'ireo "
-"rindran'asa desktop maimaimpoana misy."
 
-#: ../mate-version.xml.in.in.h:8
+#: ../mate-about/mate-about.h:75
 msgid ""
-"MATE's greatest strength is our strong community. Virtually anyone, with or "
-"without coding skills, can contribute to making MATE better."
+"GNOME 2 was the most popular Linux desktop but it’s no longer available... "
+"MATE is here to provide that same desktop to you!"
 msgstr ""
-"Ny tena herin'ny MATE dia ny tanjaky ny fivondronan'ireo mpankafy azy. Azo "
-"lazaina hoe ny rehetrarehetra mihitsy no afaka mandray anjara amin'ny "
-"fanatsarana ny MATE, na mahafehy ny fanafangoana izy na tsia."
 
-#: ../mate-version.xml.in.in.h:9
+#: ../mate-about/mate-about.h:78
 msgid ""
-"Hundreds of people have contributed code to MATE since it was started in "
-"1997; many more have contributed in other important ways, including "
-"translations, documentation, and quality assurance."
+"The name “MATE” comes from yerba maté, a species of holly native to "
+"subtropical South America. Its leaves contain caffeine and are used to make "
+"infusions and a beverage called mate."
 msgstr ""
-" Olona aman-jatony no efa nanome fango an'ny MATE hatramin'ny namoronana "
-"azy tamin'ny 1997. Maro toraka izany koa ireo olona nitondra fanampiana isan-"
-"karazany, toy ny fandikan-teny, ny loharanon-kevitra, ary ny fiantohana "
-"kalitao."
 
-#: ../libmate-desktop/display-name.c:212
-msgid "Laptop"
-msgstr "Solosaina maivana"
-
-#: ../libmate-desktop/display-name.c:220
+#. Translators: "Unknown" here is used to identify a monitor for which
+#. * we don't know the vendor. When a vendor is known, the name of the
+#. * vendor is used.
+#: ../libmate-desktop/display-name.c:264
+msgctxt "Monitor vendor"
 msgid "Unknown"
-msgstr "Tsy fantatra"
+msgstr ""
 
-#: ../libmate-desktop/mate-desktop-item.c:219
+#: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
 msgstr "Nisy olana teo am-pamakiana ny rakitra  '%s': %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:287
+#: ../libmate-desktop/mate-desktop-item.c:288
 #, c-format
 msgid "Error rewinding file '%s': %s"
 msgstr "Nisy olana teo am-pampihoronana ny rakitra '%s': %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:389
-#: ../libmate-desktop/mate-desktop-item.c:3756
+#. Translators: the "name" mentioned
+#. * here is the name of an application or
+#. * a document
+#. Translators: the "name" mentioned here is the name of
+#. * an application or a document
+#: ../libmate-desktop/mate-desktop-item.c:380
+#: ../libmate-desktop/mate-desktop-item.c:3523
 msgid "No name"
 msgstr "Tsy misy anarana"
 
-#: ../libmate-desktop/mate-desktop-item.c:616
+#: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
 msgstr "Ny rakitra '%s' dia rakitra na laha-tahiry tsy mahazatra."
 
-#: ../libmate-desktop/mate-desktop-item.c:796
+#: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
-msgid "Error cannot find file id '%s'"
-msgstr "Olana: tsy afaka.hita ny rakitra.id.'%s'"
+msgid "Cannot find file '%s'"
+msgstr ""
 
-#: ../libmate-desktop/mate-desktop-item.c:842
+#: ../libmate-desktop/mate-desktop-item.c:837
 #, c-format
 msgid "No filename to save to"
 msgstr "Tsy misy anaran-drakitra ho raiketina anatin'ny"
 
-#: ../libmate-desktop/mate-desktop-item.c:1827
+#: ../libmate-desktop/mate-desktop-item.c:1828
 #, c-format
 msgid "Starting %s"
 msgstr "Mandefa ny %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2063
+#: ../libmate-desktop/mate-desktop-item.c:2062
 #, c-format
 msgid "No URL to launch"
 msgstr "Tsy misy URL alefa"
 
-#: ../libmate-desktop/mate-desktop-item.c:2076
+#: ../libmate-desktop/mate-desktop-item.c:2078
 #, c-format
 msgid "Not a launchable item"
 msgstr "Zavatra tsy mety alefa"
 
-#: ../libmate-desktop/mate-desktop-item.c:2086
+#: ../libmate-desktop/mate-desktop-item.c:2088
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Tsy misy baiko (Exec) ho tanterahina"
 
-#: ../libmate-desktop/mate-desktop-item.c:2099
+#: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Baiko (Exec) tsy mety"
 
-#: ../libmate-desktop/mate-desktop-item.c:3812
+#: ../libmate-desktop/mate-desktop-item.c:3580
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Fanafangoana tsy fantatra ny: %s"
 
-#: ../libmate-desktop/mate-ditem-edit.c:209
-#: ../libmate-desktop/mate-ditem-edit.c:217
-msgid "Directory"
-msgstr "Laha-tahiry"
+#: ../libmate-desktop/mate-desktop-utils.c:133
+msgid "Cannot find a terminal, using xterm, even if it may not work"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:213
-msgid "Application"
-msgstr "Rindran'asa"
+#. Translators: a CRTC is a CRT Controller (this is X terminology).
+#: ../libmate-desktop/mate-rr.c:444
+#, c-format
+msgid "could not get the screen resources (CRTCs, outputs, modes)"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:220
-msgid "Link"
-msgstr "Rohy"
+#: ../libmate-desktop/mate-rr.c:464
+#, c-format
+msgid "unhandled X error while getting the range of screen sizes"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:222
-msgid "FSDevice"
-msgstr "PeriferikaFS"
+#: ../libmate-desktop/mate-rr.c:470
+#, c-format
+msgid "could not get the range of screen sizes"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:224
-msgid "MIME Type"
-msgstr "Kararazana MIME"
+#: ../libmate-desktop/mate-rr.c:715
+#, c-format
+msgid "RANDR extension is not present"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:226
-msgid "Service"
-msgstr "Raharaha"
+#: ../libmate-desktop/mate-rr.c:1092
+#, c-format
+msgid "could not get information about output %d"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:228
-msgid "ServiceType"
-msgstr "Karazan-draharaha"
+#. Translators: the "position", "size", and "maximum"
+#. * words here are not keywords; please translate them
+#. * as usual.  A CRTC is a CRT Controller (this is X terminology)
+#: ../libmate-desktop/mate-rr.c:1479
+#, c-format
+msgid ""
+"requested position/size for CRTC %d is outside the allowed limit: "
+"position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:314
-msgid "_URL:"
-msgstr "_URL:"
+#: ../libmate-desktop/mate-rr.c:1515
+#, c-format
+msgid "could not set the configuration for CRTC %d"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:317
-#: ../libmate-desktop/mate-ditem-edit.c:384
-msgid "Comm_and:"
-msgstr "B_aiko:"
+#: ../libmate-desktop/mate-rr.c:1631
+#, c-format
+msgid "could not get information about CRTC %d"
+msgstr ""
 
-#. Name
-#: ../libmate-desktop/mate-ditem-edit.c:338
-msgid "_Name:"
-msgstr "_Anarana:"
+#: ../libmate-desktop/mate-rr-config.c:501
+msgid "Laptop"
+msgstr "Solosaina maivana"
 
-#. Generic Name
-#: ../libmate-desktop/mate-ditem-edit.c:355
-msgid "_Generic name:"
-msgstr "_Anarana ankapobe:"
+#: ../libmate-desktop/mate-rr-config.c:1162
+#, c-format
+msgid ""
+"none of the saved display configurations matched the active configuration"
+msgstr ""
 
-#. Comment
-#: ../libmate-desktop/mate-ditem-edit.c:372
-msgid "Co_mment:"
-msgstr "Fa_nazavana"
+#: ../libmate-desktop/mate-rr-config.c:1423
+#, c-format
+msgid "CRTC %d cannot drive output %s"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:388
-msgid "Browse"
-msgstr "Zahavo"
+#: ../libmate-desktop/mate-rr-config.c:1430
+#, c-format
+msgid "output %s does not support mode %dx%d@%dHz"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:399
-msgid "_Type:"
-msgstr "_Karazana:"
+#: ../libmate-desktop/mate-rr-config.c:1441
+#, c-format
+msgid "CRTC %d does not support rotation=%s"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:416
-msgid "_Icon:"
-msgstr "_Kisary:"
+#: ../libmate-desktop/mate-rr-config.c:1455
+#, c-format
+msgid ""
+"output %s does not have the same parameters as another cloned output:\n"
+"existing mode = %d, new mode = %d\n"
+"existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
+"existing rotation = %s, new rotation = %s"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:426
-msgid "Browse icons"
-msgstr "Hizaha kisary"
+#: ../libmate-desktop/mate-rr-config.c:1470
+#, c-format
+msgid "cannot clone to output %s"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:440
-msgid "Run in t_erminal"
-msgstr "Alefaso amin'ny alalan'ny T_erminal"
+#: ../libmate-desktop/mate-rr-config.c:1639
+#, c-format
+msgid "Trying modes for CRTC %d\n"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:621
-#: ../libmate-desktop/mate-ditem-edit.c:721
-msgid "Language"
-msgstr "Teny"
+#: ../libmate-desktop/mate-rr-config.c:1663
+#, c-format
+msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:626
-#: ../libmate-desktop/mate-ditem-edit.c:727
-msgid "Name"
-msgstr "Anarana"
+#: ../libmate-desktop/mate-rr-config.c:1710
+#, c-format
+msgid ""
+"could not assign CRTCs to outputs:\n"
+"%s"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:631
-#: ../libmate-desktop/mate-ditem-edit.c:733
-msgid "Generic name"
-msgstr "Anarana ankapobe"
+#: ../libmate-desktop/mate-rr-config.c:1714
+#, c-format
+msgid ""
+"none of the selected modes were compatible with the possible modes:\n"
+"%s"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:636
-#: ../libmate-desktop/mate-ditem-edit.c:741
-msgid "Comment"
-msgstr "Fanazavana"
+#. Translators: the "requested", "minimum", and
+#. * "maximum" words here are not keywords; please
+#. * translate them as usual.
+#: ../libmate-desktop/mate-rr-config.c:1796
+#, c-format
+msgid ""
+"required virtual size does not fit available size: requested=(%d, %d), "
+"minimum=(%d, %d), maximum=(%d, %d)"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:674
-msgid "_Try this before using:"
-msgstr "_Andramo aloha ity alohan'ny ampiasana ny:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:685
-msgid "_Documentation:"
-msgstr "_Loharanon-kevitra:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:696
-msgid "_Name/Comment translations:"
-msgstr "_dikan'anarana/fanazavana"
-
-#: ../libmate-desktop/mate-ditem-edit.c:743
-msgid "_Add/Set"
-msgstr "H_anampy/Hanoratra"
-
-#: ../libmate-desktop/mate-ditem-edit.c:748
-msgid "Add or Set Name/Comment Translations"
-msgstr "Hanampy na hanoratra dikan'ny Anarana/Fanazavana"
-
-#: ../libmate-desktop/mate-ditem-edit.c:750
-msgid "Re_move"
-msgstr "E_sory"
-
-#: ../libmate-desktop/mate-ditem-edit.c:755
-msgid "Remove Name/Comment Translation"
-msgstr "Esory ny dikan'ny anarana/fanazavana "
-
-#: ../libmate-desktop/mate-ditem-edit.c:771
-msgid "Basic"
-msgstr "Fototra"
-
-#: ../libmate-desktop/mate-ditem-edit.c:779
-msgid "Advanced"
-msgstr "Avo lenta"
-
-#: ../libmate-desktop/mate-hint.c:201
-msgid "_Show Hints at Startup"
-msgstr "_Asehoy ireo toro-hevitra madinidinika eny am-piantombohana"
-
-#~ msgid "Error writing file '%s': %s"
-#~ msgstr "Nisy olana teo am-panoratana ny rakitra '%s': %s"
-
-#~ msgid "Could not locate the directory with header images."
-#~ msgstr "Tsy hita ny laha-tahiry misy ireo sary lohasoratra."
-
-#~ msgid "Failed to open directory with header images: %s"
-#~ msgstr ""
-#~ "Tsy nety ny fanokafana ny laha-tahiry misy ireo sary lohasoratra: %s"
-
-#~ msgid "Unable to load header image: %s"
-#~ msgstr "Tsy mety azo ny sary lohasoratra: %s"
-
-#~ msgid "Could not locate the MATE logo."
-#~ msgstr "Tsy hita ny toerana misy ny fangon'ny MATE."
-
-#~ msgid "Unable to load '%s': %s"
-#~ msgstr "Tsy afaka naka ny '%s': %s"
-
-#~ msgid "Could not open the address \"%s\": %s"
-#~ msgstr "Tsy afaka nanokatra ny adiresy \"%s\": %s"
-
-#, fuzzy
-#~ msgid "Could not get information about MATE version."
-#~ msgstr "Tsy hita ny toerana misy ny rakitra milaza ny kinovan'ny MATE."
-
-#~ msgid "%s: %s\n"
-#~ msgstr "%s: %s\n"
-
-#~ msgid "%s: "
-#~ msgstr "%s: "
-
-#~ msgid "Software"
-#~ msgstr "Rindran'asa"
-
-#~ msgid "Developers"
-#~ msgstr "Mpamolavola"
+#. Keep this string in sync with mate-control-center/capplets/display/xrandr-
+#. capplet.c:get_display_name()
+#. Translators:  this is the feature where what you see on your laptop's
+#. * screen is the same as your external monitor.  Here, "Mirror" is being
+#. * used as an adjective, not as a verb.  For example, the Spanish
+#. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#. 
+#: ../libmate-desktop/mate-rr-labeler.c:212
+msgid "Mirror Screens"
+msgstr ""

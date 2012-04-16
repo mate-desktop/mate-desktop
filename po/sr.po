@@ -1,28 +1,23 @@
-# Serbian translation of mate-desktop
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2003, 2004, 2005, 2006, 2007.
-#
-# This file is distributed under the same license as the mate-desktop package.
-#
-# Maintainer: Данило Шеган <dsegan@gmx.net>
-# Милош Поповић <gpopac@gmail.com>, 2010.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=mate-"
-"desktop&component=general\n"
-"POT-Creation-Date: 2010-08-16 11:33+0000\n"
-"PO-Revision-Date: 2010-08-23 01:21+0200\n"
-"Last-Translator: Милош Поповић <gpopac@gmail.com>\n"
-"Language-Team: Serbian <gnom@prevod.org>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2012-04-06 11:17+0200\n"
+"PO-Revision-Date: 2012-04-06 09:18+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4;    plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 :    n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
-#: ../mate-about/mate-about.in:60
 msgid "About MATE"
 msgstr "О Гному"
 
@@ -30,136 +25,48 @@ msgstr "О Гному"
 msgid "Learn more about MATE"
 msgstr "Сазнајте више о Гному"
 
-#: ../mate-about/mate-about.in:61
-msgid "News"
-msgstr "Вести"
-
-#: ../mate-about/mate-about.in:62
-msgid "MATE Library"
-msgstr "Библиотека Гнома"
-
-#: ../mate-about/mate-about.in:63
-msgid "Friends of MATE"
-msgstr "Пријатељи Гнома"
-
-#: ../mate-about/mate-about.in:64
-msgid "Contact"
-msgstr "Контакт"
-
-#: ../mate-about/mate-about.in:68
-msgid "The Mysterious GEGL"
-msgstr "Мистериозни ГЕГЛ"
-
-#: ../mate-about/mate-about.in:69
-msgid "The Squeaky Rubber MATE"
-msgstr "Крештећи гумени Mate"
-
-#: ../mate-about/mate-about.in:70
-msgid "Wanda The MATE Fish"
-msgstr "Гном риба звана Ванда"
-
-#: ../mate-about/mate-about.in:567
-msgid "_Open URL"
-msgstr "_Отвори УРЛ"
-
-#: ../mate-about/mate-about.in:574
-msgid "_Copy URL"
-msgstr "_Умножи УРЛ"
-
-#: ../mate-about/mate-about.in:826
-msgid "About the MATE Desktop"
-msgstr "О радном окружењу Гном"
-
-#: ../mate-about/mate-about.in:859
-msgid "%(name)s: %(value)s"
-msgstr "%(name)s: %(value)s"
-
-#: ../mate-about/mate-about.in:873
-msgid "Welcome to the MATE Desktop"
-msgstr "Добродошли на Гномову радну површину"
-
-#: ../mate-about/mate-about.in:890
-msgid "Brought to you by:"
-msgstr "Омогућили су вам:"
-
-#: ../mate-about/mate-about.in:914
-msgid "<b>%(name)s:</b> %(value)s"
-msgstr "<b>%(name)s:</b> %(value)s"
-
-#: ../mate-about/mate-about.in:975
-msgid "Version"
-msgstr "Издање"
-
-#: ../mate-about/mate-about.in:977
-msgid "Distributor"
-msgstr "Добављач"
-
-#: ../mate-about/mate-about.in:979
-msgid "Build Date"
-msgstr "Датум припреме"
-
-#: ../mate-about/mate-about.in:1024
-msgid "Display information on this MATE version"
-msgstr "Прикажи информације о овом издању Гнома"
-
-#: ../mate-version.xml.in.in.h:1
+#: ../mate-about/mate-about.h:62
 msgid ""
-"MATE also includes a complete development platform for applications "
-"programmers, allowing the creation of powerful and complex applications."
+"MATE provides an intuitive and attractive desktop to Linux users using "
+"traditional metaphors."
 msgstr ""
-"Гном такође садржи и развојну платформу која омогућава програмерима да праве "
-"нове сложене и моћне програме."
 
-#: ../mate-version.xml.in.in.h:2
+#: ../mate-about/mate-about.h:65
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
-"manager, web browser, menus, and many applications."
+"manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"Гном садржи већину онога што видите на вашем рачунару, укључујући и "
-"управљача датотекама, читач веба, меније, и многе програме."
 
-#. NOTE TO AUTHORS: Do not put anything in the following paragraphs that
-#. will be substituted by the configure script. Otherwise you will break
-#. the translations.
-#: ../mate-version.xml.in.in.h:6
+#: ../mate-about/mate-about.h:68
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"Гном је слободно, употребљиво, моћно и приступачно радно окружење за "
-"оперативне системе налик Униксу."
 
-#: ../mate-version.xml.in.in.h:7
+#: ../mate-about/mate-about.h:71
 msgid ""
-"MATE's focus on usability and accessibility, regular release cycle, and "
-"strong corporate backing make it unique among Free Software desktops."
+"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
+" since it was started in 1997; many more have contributed in other important"
+" ways, including translations, documentation, and quality assurance."
 msgstr ""
-"Гномове тежње ка употребљивости и приступачности, редовном поступку издавања "
-"и снажна подршка предузећа га издвајају међу радним окружењима слободног "
-"софтвера."
 
-#: ../mate-version.xml.in.in.h:8
+#: ../mate-about/mate-about.h:75
 msgid ""
-"MATE's greatest strength is our strong community. Virtually anyone, with or "
-"without coding skills, can contribute to making MATE better."
+"GNOME 2 was the most popular Linux desktop but it’s no longer available... "
+"MATE is here to provide that same desktop to you!"
 msgstr ""
-"Највећа снага Гнома је наша чврста заједница. Готово свако, са или без "
-"програмерских способности, може допринети да Гном буде још бољи."
 
-#: ../mate-version.xml.in.in.h:9
+#: ../mate-about/mate-about.h:78
 msgid ""
-"Hundreds of people have contributed code to MATE since it was started in "
-"1997; many more have contributed in other important ways, including "
-"translations, documentation, and quality assurance."
+"The name “MATE” comes from yerba maté, a species of holly native to "
+"subtropical South America. Its leaves contain caffeine and are used to make "
+"infusions and a beverage called mate."
 msgstr ""
-"Стотине људи су написали понешто кода за Гном од његовог зачећа 1997. "
-"године; многи су допринели и на друге значајне начине, као што су преводи, "
-"документација, и контрола квалитета."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: ../libmate-desktop/display-name.c:265
+#: ../libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Непознато"
@@ -180,7 +87,7 @@ msgstr "Грешка при премотавању датотеке „%s“: %s
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3524
+#: ../libmate-desktop/mate-desktop-item.c:3523
 msgid "No name"
 msgstr "Без имена"
 
@@ -189,7 +96,6 @@ msgstr "Без имена"
 msgid "File '%s' is not a regular file or directory."
 msgstr "Датотека „%s“ није обична датотека или директоријум."
 
-# bug: w00t?
 #: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
 msgid "Cannot find file '%s'"
@@ -200,32 +106,32 @@ msgstr "Не могу да нађем датотеку „%s“"
 msgid "No filename to save to"
 msgstr "Име датотеке није дато"
 
-#: ../libmate-desktop/mate-desktop-item.c:1822
+#: ../libmate-desktop/mate-desktop-item.c:1828
 #, c-format
 msgid "Starting %s"
 msgstr "Покрећем %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2058
+#: ../libmate-desktop/mate-desktop-item.c:2062
 #, c-format
 msgid "No URL to launch"
 msgstr "Нема адресе за покретање"
 
-#: ../libmate-desktop/mate-desktop-item.c:2074
+#: ../libmate-desktop/mate-desktop-item.c:2078
 #, c-format
 msgid "Not a launchable item"
 msgstr "Није могуће покренути"
 
-#: ../libmate-desktop/mate-desktop-item.c:2084
+#: ../libmate-desktop/mate-desktop-item.c:2088
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Нема наредбе (Exec) за покретање"
 
-#: ../libmate-desktop/mate-desktop-item.c:2097
+#: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Лоша наредба (Exec) за покретање"
 
-#: ../libmate-desktop/mate-desktop-item.c:3581
+#: ../libmate-desktop/mate-desktop-item.c:3580
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Непознато кодирање за: %s"
@@ -255,7 +161,7 @@ msgstr "не могу да добијем опсег величина за ек�
 msgid "RANDR extension is not present"
 msgstr "Није присутно RANDR проширење"
 
-#: ../libmate-desktop/mate-rr.c:1037
+#: ../libmate-desktop/mate-rr.c:1092
 #, c-format
 msgid "could not get information about output %d"
 msgstr "не могу да добијем податке о излазу %d"
@@ -263,21 +169,19 @@ msgstr "не могу да добијем податке о излазу %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1424
+#: ../libmate-desktop/mate-rr.c:1479
 #, c-format
 msgid ""
-"requested position/size for CRTC %d is outside the allowed limit: position="
-"(%d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr ""
-"захтеван положај/величина за CRTC %d је изван дозвољеног ограничења: положај="
-"(%d, %d), величина=(%d, %d), највише=(%d, %d)"
+"requested position/size for CRTC %d is outside the allowed limit: "
+"position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
+msgstr "захтеван положај/величина за CRTC %d је изван дозвољеног ограничења: положај=(%d, %d), величина=(%d, %d), највише=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1460
+#: ../libmate-desktop/mate-rr.c:1515
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "не могу да пставим подешавања за CRTC %d екран"
 
-#: ../libmate-desktop/mate-rr.c:1576
+#: ../libmate-desktop/mate-rr.c:1631
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "не могу да добијем податке о CRTC %d екрану"
@@ -290,8 +194,7 @@ msgstr "Лаптоп"
 #, c-format
 msgid ""
 "none of the saved display configurations matched the active configuration"
-msgstr ""
-"ни једно од сачуваних подешавања екрана се не поклапа са текућим подешавањем"
+msgstr "ни једно од сачуваних подешавања екрана се не поклапа са текућим подешавањем"
 
 #: ../libmate-desktop/mate-rr-config.c:1423
 #, c-format
@@ -315,11 +218,7 @@ msgid ""
 "existing mode = %d, new mode = %d\n"
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
-msgstr ""
-"излаз %s нема исте параметре као други клонирани уређај:\n"
-"постојећи режим = %d, нови режим = %d\n"
-"постојеће координате = (%d, %d), нове координате = (%d, %d)\n"
-"постојећа ротација = %s, нова ротација = %s"
+msgstr "излаз %s нема исте параметре као други клонирани уређај:\nпостојећи режим = %d, нови режим = %d\nпостојеће координате = (%d, %d), нове координате = (%d, %d)\nпостојећа ротација = %s, нова ротација = %s"
 
 #: ../libmate-desktop/mate-rr-config.c:1470
 #, c-format
@@ -334,26 +233,21 @@ msgstr "Испробавам режиме за ЦРТЦ %d\n"
 #: ../libmate-desktop/mate-rr-config.c:1663
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
-msgstr ""
-"ЦРТЦ %d: испробавам режим %dx%d@%dHz без излаза на %dx%d@%dHz (%d. покушај)\n"
+msgstr "ЦРТЦ %d: испробавам режим %dx%d@%dHz без излаза на %dx%d@%dHz (%d. покушај)\n"
 
 #: ../libmate-desktop/mate-rr-config.c:1710
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
-msgstr ""
-"не могу да придружим ЦРТЦ-е излазима:\n"
-"%s"
+msgstr "не могу да придружим ЦРТЦ-е излазима:\n%s"
 
 #: ../libmate-desktop/mate-rr-config.c:1714
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
 "%s"
-msgstr ""
-"ни један од изабраних режима није сагласан са могућим режимима:\n"
-"%s"
+msgstr "ни један од изабраних режима није сагласан са могућим режимима:\n%s"
 
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
@@ -363,238 +257,15 @@ msgstr ""
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
-msgstr ""
-"захтевана виртуелна величина је изван доступне: захтевана=(%d, %d), најмања="
-"(%d, %d), највећа=(%d, %d)"
+msgstr "захтевана виртуелна величина је изван доступне: захтевана=(%d, %d), најмања=(%d, %d), највећа=(%d, %d)"
 
-#. Keep this string in sync with mate-control-center/capplets/display/xrandr-capplet.c:get_display_name()
+#. Keep this string in sync with mate-control-center/capplets/display/xrandr-
+#. capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#.
+#. 
 #: ../libmate-desktop/mate-rr-labeler.c:212
 msgid "Mirror Screens"
 msgstr "Клонирани екрани"
-
-#~ msgid "could not find a suitable configuration of screens"
-#~ msgstr "не могу да нађем одговарајућа подешавања за екране"
-
-#~ msgid "Directory"
-#~ msgstr "Директоријум"
-
-#~ msgid "Application"
-#~ msgstr "Програм"
-
-#~ msgid "Link"
-#~ msgstr "Веза"
-
-# СД = Систем Датотека
-#~ msgid "FSDevice"
-#~ msgstr "СДУређај"
-
-#~ msgid "MIME Type"
-#~ msgstr "МИМЕ врста"
-
-#~ msgid "Service"
-#~ msgstr "Услуга"
-
-#~ msgid "ServiceType"
-#~ msgstr "ВрстаУслуге"
-
-#~ msgid "_URL:"
-#~ msgstr "_Адреса:"
-
-#~ msgid "Comm_and:"
-#~ msgstr "Н_аредба:"
-
-#~ msgid "_Name:"
-#~ msgstr "_Име:"
-
-#~ msgid "_Generic name:"
-#~ msgstr "_Основно име:"
-
-#~ msgid "Co_mment:"
-#~ msgstr "При_медба:"
-
-#~ msgid "Browse"
-#~ msgstr "Разгледај"
-
-#~ msgid "_Type:"
-#~ msgstr "Врс_та:"
-
-#~ msgid "_Icon:"
-#~ msgstr "_Иконa:"
-
-#~ msgid "Browse icons"
-#~ msgstr "Разгледај иконе"
-
-#~ msgid "Run in t_erminal"
-#~ msgstr "Покрени у т_ерминалу"
-
-#~ msgid "Language"
-#~ msgstr "Језик"
-
-#~ msgid "Name"
-#~ msgstr "Име"
-
-#~ msgid "Generic name"
-#~ msgstr "Основно име"
-
-#~ msgid "Comment"
-#~ msgstr "Примедба"
-
-#~ msgid "_Try this before using:"
-#~ msgstr "Покушај ово пре упо_требе:"
-
-#~ msgid "_Documentation:"
-#~ msgstr "_Упутства:"
-
-#~ msgid "_Name/Comment translations:"
-#~ msgstr "Преводи име_на и примедбе:"
-
-#~ msgid "_Add/Set"
-#~ msgstr "Дод_ај/постави"
-
-#~ msgid "Add or Set Name/Comment Translations"
-#~ msgstr "Додај или постави преводе имена и примедбе"
-
-#~ msgid "Re_move"
-#~ msgstr "_Уклони"
-
-#~ msgid "Remove Name/Comment Translation"
-#~ msgstr "Уклони превод имена и примедбе"
-
-#~ msgid "Basic"
-#~ msgstr "Основно"
-
-#~ msgid "Advanced"
-#~ msgstr "Напредно"
-
-#~ msgid "_Show Hints at Startup"
-#~ msgstr "Прикажи _савете при покретању"
-
-#~ msgid "Could not locate the directory with header images."
-#~ msgstr "Не могу да пронађем директоријум са сликама за заглавље."
-
-#~ msgid "Failed to open directory with header images: %s"
-#~ msgstr "Нисам успео да приступим директоријуму са сликама за заглавље: %s"
-
-#~ msgid "Unable to load header image: %s"
-#~ msgstr "Не могу да учитам слику за заглавље: %s"
-
-#~ msgid "Could not locate the MATE logo."
-#~ msgstr "Не могу да пронађем логотип Гнома."
-
-#~ msgid "Unable to load '%s': %s"
-#~ msgstr "Не могу да учитам „%s“: %s"
-
-#~ msgid "Could not open the address \"%s\": %s"
-#~ msgstr "Не могу да приступим адреси „%s“: %s"
-
-#~ msgid "%s: %s\n"
-#~ msgstr "%s: %s\n"
-
-#~ msgid "%s: "
-#~ msgstr "%s: "
-
-#~ msgid "Software"
-#~ msgstr "Софтвер"
-
-#~ msgid "Developers"
-#~ msgstr "Програмери"
-
-#~ msgid "Error writing file '%s': %s"
-#~ msgstr "Грешка при писању датотеке „%s“: %s"
-
-#~ msgid "The End!"
-#~ msgstr "Крај!"
-
-#~ msgid "Accessories"
-#~ msgstr "Алатке"
-
-#~ msgid "Accessories menu"
-#~ msgstr "Мени са алаткама"
-
-#~ msgid "Applications"
-#~ msgstr "Програми"
-
-#~ msgid "Programming"
-#~ msgstr "Програмирање"
-
-#~ msgid "Tools for software development"
-#~ msgstr "Алати за развој софтвера"
-
-#~ msgid "Games"
-#~ msgstr "Игре"
-
-#~ msgid "Games menu"
-#~ msgstr "Мени за игрице"
-
-#~ msgid "Graphics"
-#~ msgstr "Графика"
-
-#~ msgid "Graphics menu"
-#~ msgstr "Мени за графичке програме"
-
-#~ msgid "Internet"
-#~ msgstr "Интернет"
-
-#~ msgid "Programs for Internet and networks"
-#~ msgstr "Програми за Интернет и мреже"
-
-#~ msgid "Multimedia"
-#~ msgstr "Мултимедија"
-
-#~ msgid "Multimedia menu"
-#~ msgstr "Мени за мултимедију"
-
-#~ msgid "Office"
-#~ msgstr "Канцеларија"
-
-#~ msgid "Office Applications"
-#~ msgstr "Програми за канцеларију"
-
-#~ msgid "Applications without a category"
-#~ msgstr "Програми без одређене категорије"
-
-#~ msgid "Other"
-#~ msgstr "Остало"
-
-#~ msgid "Programs"
-#~ msgstr "Програми"
-
-#~ msgid "Programs menu"
-#~ msgstr "Мени за програме"
-
-#~ msgid "Desktop Preferences"
-#~ msgstr "Поставкe окружења"
-
-#~ msgid "Preferences that affect the whole MATE desktop"
-#~ msgstr "Поставке које утичу на цело радно окружење Гном"
-
-#~ msgid "System Tools"
-#~ msgstr "Системски алати"
-
-#~ msgid "System menu"
-#~ msgstr "Системски мени"
-
-#~ msgid ""
-#~ "MATE is developed by an active community of volunteers who want to "
-#~ "provide a desktop and a suite of user friendly applications. Because "
-#~ "MATE needs documentors, translators, and many other types of people, "
-#~ "virtually anyone, with or without coding skills, can contribute to MATE."
-#~ msgstr ""
-#~ "Гнома развија активна заједница добровољаца који желе да направе радно "
-#~ "окружење и скуп програма лаких за употребу. Како Гному увек треба допуна "
-#~ "документације, превода, и још много шта, готово свако, са или без "
-#~ "програмерског умећа, може да допринесе Гному."
-
-#~ msgid "Download"
-#~ msgstr "Преузми"
-
-#~ msgid "Users"
-#~ msgstr "Корисници"
-
-#~ msgid "Foundation"
-#~ msgstr "Задужбина"

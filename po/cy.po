@@ -1,577 +1,271 @@
-# mate-desktop yn Gymraeg.
-# Copyright (C) 2003-2005 www.kyfieithu.co.uk, Dafydd Harries, Gareth Bowker
-# www.kyfieithu.co.uk <gyfieithu@kyfieithu.co.uk>, 2003.
-# and contributors.
-# Dafydd Harries <daf@parnassus.ath.cx>, 2003.
-# Gareth Bowker <tgb@tgb.org.uk>, 2005.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-28 13:38+0100\n"
-"PO-Revision-Date: 2006-03-28 13:36+0100\n"
-"Last-Translator: Gareth Bowker <tgb@tgb.org.uk>\n"
-"Language-Team: Cymraeg <mate-cy@pengwyn.linux.org.uk>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2012-04-06 11:17+0200\n"
+"PO-Revision-Date: 2012-04-06 09:18+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cy\n"
+"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : (n != 8 && n != 11) ? 2 : 3\n"
 
-#: ../mate-about/contributors.h:109
-msgid "The Mysterious GEGL"
-msgstr "Y GEGL Rhyfeddol"
-
-#: ../mate-about/contributors.h:301
-msgid "The Squeaky Rubber Mate"
-msgstr "Y Corrach Rwber sy'n Gwichio"
-
-#: ../mate-about/contributors.h:335
-msgid "Wanda The MATE Fish"
-msgstr "Wanda pysgodyn MATE"
-
-#: ../mate-about/mate-about.c:405
-msgid "Could not locate the directory with header images."
-msgstr "Methwyd canfod y cyfeiriadur gyda'r delweddau pennawd."
-
-#: ../mate-about/mate-about.c:414
-#, c-format
-msgid "Failed to open directory with header images: %s"
-msgstr "Methwyd agor y cyfeiriadur gyda'r delweddau pennawd: %s"
-
-#: ../mate-about/mate-about.c:447
-#, c-format
-msgid "Unable to load header image: %s"
-msgstr "Methu llwytho delwedd pennawd: %s"
-
-#: ../mate-about/mate-about.c:472
-msgid "Could not locate the MATE logo."
-msgstr "Methwyd lleoli y logo MATE."
-
-#: ../mate-about/mate-about.c:481
-#, c-format
-msgid "Unable to load '%s': %s"
-msgstr "Methu llwytho '%s': %s"
-
-#: ../mate-about/mate-about.c:534
-#, c-format
-msgid "Could not open the address \"%s\": %s"
-msgstr "Methwyd agor y cyfeiriad \"%s\": %s"
-
-#: ../mate-about/mate-about.c:786
-msgid "Could not locate the file with MATE version information."
-msgstr "Methwyd lleoli'r ffeil gyda gwybodaeth fersiwn MATE."
-
-#: ../mate-about/mate-about.c:855
-msgid "Version"
-msgstr "Fersiwn"
-
-#: ../mate-about/mate-about.c:874
-msgid "Distributor"
-msgstr "Dosbarthwr"
-
-#: ../mate-about/mate-about.c:893
-msgid "Build Date"
-msgstr "Dyddiad Adeiladu"
-
-#: ../mate-about/mate-about.c:975
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
 msgstr "Ynghylch MATE"
-
-#: ../mate-about/mate-about.c:989
-msgid "News"
-msgstr "Newyddion"
-
-#: ../mate-about/mate-about.c:999
-msgid "Software"
-msgstr "Meddalwedd"
-
-#: ../mate-about/mate-about.c:1005
-msgid "Developers"
-msgstr "Datblygwyr"
-
-#: ../mate-about/mate-about.c:1011
-msgid "Friends of MATE"
-msgstr "Cyfeillion MATE"
-
-#: ../mate-about/mate-about.c:1017
-msgid "Contact"
-msgstr "Cyswllt"
-
-#: ../mate-about/mate-about.c:1054
-msgid "Welcome to the MATE Desktop"
-msgstr "Croeso i'r penbwrdd MATE"
-
-#: ../mate-about/mate-about.c:1071
-msgid "Brought to you by:"
-msgstr "Daethpwyd atoch gan:"
-
-#: ../mate-about/mate-about.c:1119
-msgid "About the MATE Desktop"
-msgstr "Ynghylch y Penbwrdd MATE"
 
 #: ../mate-about/mate-about.desktop.in.in.h:2
 msgid "Learn more about MATE"
 msgstr "Dysgu mwy am MATE"
 
-#: ../mate-version.xml.in.in.h:1
+#: ../mate-about/mate-about.h:62
 msgid ""
-"MATE also includes a complete development platform for applications "
-"programmers, allowing the creation of powerful and complex applications."
+"MATE provides an intuitive and attractive desktop to Linux users using "
+"traditional metaphors."
 msgstr ""
-"Mae MATE hefyd yn cynnwys llwyfan datblygaeth cyflawn ar gyfer rhaglennwyr "
-"rhaglennu, sy'n caniatau creu rhaglenni pwerus a chymleth."
 
-#: ../mate-version.xml.in.in.h:2
+#: ../mate-about/mate-about.h:65
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
-"manager, web browser, menus, and many applications."
+"manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"Mae MATE yn cynnwys y rhan fwyaf o beth rydych chi'n ei weld ar eich "
-"cyfrifiadur, yn cynnwys y rhelolydd ffeiliau, dewislenni, a llawer o "
-"rhaglenni."
 
-#. NOTE TO AUTHORS: Do not put anything in the following paragraphs that
-#. will be substituted by the configure script. Otherwise you will break
-#. the translations.
-#: ../mate-version.xml.in.in.h:6
+#: ../mate-about/mate-about.h:68
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"Mae MATE yn amgylchedd penbwrdd Rhydd, defnyddiadwy, pwerus, sefydlog, "
-"hygyrch ar gyfer y teulu systemau gweithredu sy'n debyg i Unix."
 
-#: ../mate-version.xml.in.in.h:7
+#: ../mate-about/mate-about.h:71
 msgid ""
-"MATE's focus on usability and accessibility, regular release cycle, and "
-"strong corporate backing make it unique among Free Software desktops."
+"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
+" since it was started in 1997; many more have contributed in other important"
+" ways, including translations, documentation, and quality assurance."
 msgstr ""
-"Mae canolbwyntiad MATE ar ddefnyddioldeb a hygyrchedd, cylchdro rhyddhau "
-"rheolaidd, a chefnogaeth corffforaethol gref yn ei wneud e'n unigryw ymysg "
-"penbyrddau Meddalwedd Rhydd."
 
-#: ../mate-version.xml.in.in.h:8
+#: ../mate-about/mate-about.h:75
 msgid ""
-"MATE's greatest strength is our strong community. Virtually anyone, with or "
-"without coding skills, can contribute to making MATE better."
+"GNOME 2 was the most popular Linux desktop but it’s no longer available... "
+"MATE is here to provide that same desktop to you!"
 msgstr ""
-"Cryfder mwyaf MATE yw ein cymuned gref. Gall bron unrhywun, gyda neu heb "
-"sgiliau rhaglennu, gyfrannu at wella MATE."
 
-#: ../mate-version.xml.in.in.h:9
+#: ../mate-about/mate-about.h:78
 msgid ""
-"Hundreds of people have contributed code to MATE since it was started in "
-"1997; many more have contributed in other important ways, including "
-"translations, documentation, and quality assurance."
+"The name “MATE” comes from yerba maté, a species of holly native to "
+"subtropical South America. Its leaves contain caffeine and are used to make "
+"infusions and a beverage called mate."
 msgstr ""
-"Mae cannoedd o bobl wedi cyfrannu côd i MATE ers iddo gychwyn yn 1997; mae "
-"llawer eraill wedi cyfrannu mewn ffyrdd pwysig eraill, yn cynnwys "
-"cyfieithiadau, dogfenniaeth, a sicrhau ansawdd."
 
-#: ../libmate-desktop/mate-desktop-item.c:209
-#: ../libmate-desktop/mate-desktop-item.c:597
+#. Translators: "Unknown" here is used to identify a monitor for which
+#. * we don't know the vendor. When a vendor is known, the name of the
+#. * vendor is used.
+#: ../libmate-desktop/display-name.c:264
+msgctxt "Monitor vendor"
+msgid "Unknown"
+msgstr ""
+
+#: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
 msgstr "Gwall tra'n darllen y ffeil '%s': %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:277
+#: ../libmate-desktop/mate-desktop-item.c:288
 #, c-format
 msgid "Error rewinding file '%s': %s"
 msgstr "Gwall tra'n ailddirwyn y ffeil '%s': %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:376
-#: ../libmate-desktop/mate-desktop-item.c:3743
+#. Translators: the "name" mentioned
+#. * here is the name of an application or
+#. * a document
+#. Translators: the "name" mentioned here is the name of
+#. * an application or a document
+#: ../libmate-desktop/mate-desktop-item.c:380
+#: ../libmate-desktop/mate-desktop-item.c:3523
 msgid "No name"
 msgstr "Dim enw"
 
-#: ../libmate-desktop/mate-desktop-item.c:612
+#: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
 msgstr "Nid yw'r ffeil '%s' yn ffeil rheolaidd neu gyfeiriadur."
 
-#: ../libmate-desktop/mate-desktop-item.c:788
+#: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
-msgid "Error cannot find file id '%s'"
-msgstr "Methwyd canfod y ffeil '%s'"
+msgid "Cannot find file '%s'"
+msgstr ""
 
-#: ../libmate-desktop/mate-desktop-item.c:834
+#: ../libmate-desktop/mate-desktop-item.c:837
+#, c-format
 msgid "No filename to save to"
 msgstr "Dim enw ffeil i gadw ato."
 
-#: ../libmate-desktop/mate-desktop-item.c:1820
+#: ../libmate-desktop/mate-desktop-item.c:1828
 #, c-format
 msgid "Starting %s"
 msgstr "Dechrau %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2056
+#: ../libmate-desktop/mate-desktop-item.c:2062
+#, c-format
 msgid "No URL to launch"
 msgstr "Dim LAU i'w lansio"
 
-#: ../libmate-desktop/mate-desktop-item.c:2070
+#: ../libmate-desktop/mate-desktop-item.c:2078
+#, c-format
 msgid "Not a launchable item"
 msgstr "Nid yw'n eitem y gellir lansio"
 
-#: ../libmate-desktop/mate-desktop-item.c:2080
+#: ../libmate-desktop/mate-desktop-item.c:2088
+#, c-format
 msgid "No command (Exec) to launch"
 msgstr "Dim gorchymyn (Exec) i'w lansio"
 
-#: ../libmate-desktop/mate-desktop-item.c:2093
+#: ../libmate-desktop/mate-desktop-item.c:2101
+#, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Gorchymyn annilys (Exec) i'w lansio"
 
-#: ../libmate-desktop/mate-desktop-item.c:3800
+#: ../libmate-desktop/mate-desktop-item.c:3580
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Amgodiad anhysbys o: '%s'"
 
-#: ../libmate-desktop/mate-desktop-item.c:4031
+#: ../libmate-desktop/mate-desktop-utils.c:133
+msgid "Cannot find a terminal, using xterm, even if it may not work"
+msgstr ""
+
+#. Translators: a CRTC is a CRT Controller (this is X terminology).
+#: ../libmate-desktop/mate-rr.c:444
 #, c-format
-msgid "Error writing file '%s': %s"
-msgstr "Gwall tra'n ysgrifennu i'r ffeil '%s': %s"
-
-#: ../libmate-desktop/mate-ditem-edit.c:212
-#: ../libmate-desktop/mate-ditem-edit.c:220
-msgid "Directory"
-msgstr "Cyfeiriadur"
-
-#: ../libmate-desktop/mate-ditem-edit.c:216
-msgid "Application"
-msgstr "Rhaglen"
-
-#: ../libmate-desktop/mate-ditem-edit.c:223
-msgid "Link"
-msgstr "Cyswllt"
-
-#: ../libmate-desktop/mate-ditem-edit.c:225
-msgid "FSDevice"
-msgstr "DyfaisFS"
-
-#: ../libmate-desktop/mate-ditem-edit.c:227
-msgid "MIME Type"
-msgstr "Math MIME"
-
-#: ../libmate-desktop/mate-ditem-edit.c:229
-msgid "Service"
-msgstr "Gwasanaeth"
-
-#: ../libmate-desktop/mate-ditem-edit.c:231
-msgid "ServiceType"
-msgstr "MathGwasanaeth"
-
-#: ../libmate-desktop/mate-ditem-edit.c:317
-msgid "_URL:"
-msgstr "_LAU:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:320
-#: ../libmate-desktop/mate-ditem-edit.c:387
-msgid "Comm_and:"
-msgstr "_Gorchymyn:"
-
-#. Name
-#: ../libmate-desktop/mate-ditem-edit.c:341
-msgid "_Name:"
-msgstr "_Enw:"
-
-#. Generic Name
-#: ../libmate-desktop/mate-ditem-edit.c:358
-msgid "_Generic name:"
-msgstr "Enw _generig:"
-
-#. Comment
-#: ../libmate-desktop/mate-ditem-edit.c:375
-msgid "Co_mment:"
-msgstr "_Sylw:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:391
-msgid "Browse"
-msgstr "Pori"
-
-#: ../libmate-desktop/mate-ditem-edit.c:402
-msgid "_Type:"
-msgstr "_Math:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:419
-msgid "_Icon:"
-msgstr "_Eicon:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:429
-msgid "Browse icons"
-msgstr "Pori eiconau:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:443
-msgid "Run in t_erminal"
-msgstr "Gweithredu mewn _terfynell"
-
-#: ../libmate-desktop/mate-ditem-edit.c:660
-#: ../libmate-desktop/mate-ditem-edit.c:761
-msgid "Language"
-msgstr "Iaith"
-
-#: ../libmate-desktop/mate-ditem-edit.c:665
-#: ../libmate-desktop/mate-ditem-edit.c:768
-msgid "Name"
-msgstr "Enw"
-
-#: ../libmate-desktop/mate-ditem-edit.c:670
-#: ../libmate-desktop/mate-ditem-edit.c:775
-msgid "Generic name"
-msgstr "Enw generig"
-
-#: ../libmate-desktop/mate-ditem-edit.c:675
-#: ../libmate-desktop/mate-ditem-edit.c:784
-msgid "Comment"
-msgstr "Sylw"
-
-#: ../libmate-desktop/mate-ditem-edit.c:713
-msgid "_Try this before using:"
-msgstr "_Ceisio hyn cyn ddefnyddio:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:724
-msgid "_Documentation:"
-msgstr "_Dogfennaeth:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:735
-msgid "_Name/Comment translations:"
-msgstr "_Cyfieithiadau enw/sylw:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:786
-msgid "_Add/Set"
-msgstr "_Ychwanegu/Gosod"
-
-#: ../libmate-desktop/mate-ditem-edit.c:792
-msgid "Add or Set Name/Comment Translations"
-msgstr "Ychwanegu neu Osod Cyfieithiadau Enw/Sylw"
-
-#: ../libmate-desktop/mate-ditem-edit.c:794
-msgid "Re_move"
-msgstr "_Tynnu"
-
-#: ../libmate-desktop/mate-ditem-edit.c:799
-msgid "Remove Name/Comment Translation"
-msgstr "Gwaredu Cyfieithiad Enw/Sylw"
-
-#: ../libmate-desktop/mate-ditem-edit.c:815
-msgid "Basic"
-msgstr "Sylfaenol"
-
-#: ../libmate-desktop/mate-ditem-edit.c:823
-msgid "Advanced"
-msgstr "Pellach"
-
-#: ../libmate-desktop/mate-hint.c:175
-msgid "_Show Hints at Startup"
-msgstr "_Dangos Awgrymiadau wrth Ddechrau"
-
-#~ msgid "The End!"
-#~ msgstr "Y Diwedd!"
-
-#~ msgid "Accessories"
-#~ msgstr "Ategolion"
-
-#~ msgid "Accessories menu"
-#~ msgstr "Dewislen ategolion"
-
-#~ msgid "Applications"
-#~ msgstr "Rhaglenni"
-
-#~ msgid "Programming"
-#~ msgstr "Rhaglennu"
-
-#~ msgid "Tools for software development"
-#~ msgstr "Offer datblygu meddalwedd"
-
-#~ msgid "Games"
-#~ msgstr "Gêmau"
-
-#~ msgid "Games menu"
-#~ msgstr "Dewislen gêmau"
-
-#~ msgid "Graphics"
-#~ msgstr "Graffeg"
-
-#~ msgid "Graphics menu"
-#~ msgstr "Dewislen graffeg"
-
-#~ msgid "Internet"
-#~ msgstr "Rhyngrwyd"
-
-#~ msgid "Programs for Internet and networks"
-#~ msgstr "Rhaglenni i'r Rhyngrwyd a rhwydweithiau eraill"
-
-#~ msgid "Multimedia"
-#~ msgstr "Amlgyfrwng"
-
-#~ msgid "Multimedia menu"
-#~ msgstr "Dewislen amlgyfrwng"
-
-#~ msgid "Office"
-#~ msgstr "Swyddfa"
-
-#~ msgid "Office Applications"
-#~ msgstr "Rhaglenni Swyddfa"
-
-#~ msgid "Applications without a category"
-#~ msgstr "Rhaglenni heb gategori"
-
-#~ msgid "Other"
-#~ msgstr "Eraill"
-
-#~ msgid "Programs"
-#~ msgstr "Rhaglenni"
-
-#~ msgid "Programs menu"
-#~ msgstr "Dewislen rhaglenni"
-
-#~ msgid "Desktop Preferences"
-#~ msgstr "Hoffterau'r Penbwrdd"
-
-#~ msgid "Preferences that affect the whole MATE desktop"
-#~ msgstr "Hoffterau sy'n effeithio â chyfan y penbwrdd MATE"
-
-#~ msgid "System Tools"
-#~ msgstr "Offer System"
-
-#~ msgid "System menu"
-#~ msgstr "Dewislen system"
-
-#~ msgid ""
-#~ "MATE is developed by an active community of volunteers who want to "
-#~ "provide a desktop and a suite of user friendly applications. Because "
-#~ "MATE needs documentors, translators, and many other types of people, "
-#~ "virtually anyone, with or without coding skills, can contribute to MATE."
-#~ msgstr ""
-#~ "Mae MATE yn cael ei ddatblygu gan gymuned gweithgar o wirfoddolwyr sydd "
-#~ "eisiau darparu penbwrdd a nifer o rhaglenni sy'n gyfeillgar i "
-#~ "ddefnyddwyr. Gan fod angen dogfennwyr, cyfieithwyr a sawl math arall o "
-#~ "bobl, gall bron unrhywun, gyda neu heb sgiliau rhaglennu, gyfrannu at "
-#~ "MATE."
-
-#~ msgid "Download"
-#~ msgstr "Lawrlwytho"
-
-#~ msgid "Users"
-#~ msgstr "Defnyddwyr"
-
-#~ msgid "Foundation"
-#~ msgstr "Sefydliad"
-
-#~ msgid "Sound & Video"
-#~ msgstr "Sain a Fideo"
-
-#~ msgid "Click here to visit the site : "
-#~ msgstr "Cliciwch yma i ymweld a'r safle : "
-
-#~ msgid "List of MATE Contributors"
-#~ msgstr "Rhestr Cyfrannwyr MATE"
-
-#~ msgid "MATE Logo Image"
-#~ msgstr "Graffeg Logo MATE"
-
-#~ msgid "Contributors' Names"
-#~ msgstr "Enwau'r Cyfrannwyr"
-
-#~ msgid "MATE Logo"
-#~ msgstr "Logo MATE"
-
-#~ msgid "MATE %s Was Brought To You By"
-#~ msgstr "Fe Ddaethwyd MATE %s Atoch Gan"
-
-#~ msgid "And Many More ..."
-#~ msgstr "A Llawer Eraill..."
-
-#~ msgid "MATE News Site"
-#~ msgstr "Safle We Newyddion MATE"
-
-#~ msgid "http://www.gnome.org/"
-#~ msgstr "http://www.gnome.org/"
-
-#~ msgid "MATE Main Site"
-#~ msgstr "Prif Safle We MATE"
-
-#~ msgid "MATE is a part of the GNU Project"
-#~ msgstr "Mae MATE yn rhan o'r Prosiect GNU"
-
-#~ msgid "Timur I. Bakeyev"
-#~ msgstr "Timur I. Bakeyev"
-
-#~ msgid "Szabolcs 'Shooby' Ban"
-#~ msgstr "Szabolcs 'Shooby' BÃ¡n"
-
-#~ msgid "Jerome Bolliet"
-#~ msgstr "Jerome Bolliet"
-
-#~ msgid "Erwann Chenede"
-#~ msgstr "Erwann ChenedÃ©"
-
-#~ msgid "Abel Cheung"
-#~ msgstr "Abel Cheung"
-
-#~ msgid "Frederic Crozat"
-#~ msgstr "FrÃ©dÃ©ric Crozat"
-
-#~ msgid "Frederic Devernay"
-#~ msgstr "FrÃ©dÃ©ric Devernay"
-
-#~ msgid "Gergo Erdi"
-#~ msgstr "GergÃ¶ Ãrdi"
-
-#~ msgid "Raul Perusquia Flores"
-#~ msgstr "Raul Perusquia Flores"
-
-#~ msgid "Bjoern Giesler"
-#~ msgstr "Bjoern Giesler"
-
-#~ msgid "Dov Grobgeld"
-#~ msgstr "Dov Grobgeld"
-
-#~ msgid "Wang Jian"
-#~ msgstr "Wang Jian"
-
-#~ msgid "Helmut Koeberle"
-#~ msgstr "Helmut Koeberle"
-
-#~ msgid "Matthew Marjanovic"
-#~ msgstr "Matthew Marjanovic"
-
-#~ msgid "Alexandre Muniz"
-#~ msgstr "Alexandre MuÃ±iz"
-
-#~ msgid "Sung-Hyun Nam"
-#~ msgstr "Sung-Hyun Nam"
-
-#~ msgid "Martin Norbaeck"
-#~ msgstr "Martin NorbÃ¦ck"
-
-#~ msgid "Tomas Oegren"
-#~ msgstr "Tomas Ågren"
-
-#~ msgid "Carlos Perello Marin"
-#~ msgstr "Carlos PerellÃ³ MarÃ­n"
-
-#~ msgid "German Poo-Caamano"
-#~ msgstr "GermÃ¡n Poo-CaamaÃ±o"
-
-#~ msgid "Kazuhiro Sasayama"
-#~ msgstr "Kazuhiro Sasayama"
-
-#~ msgid "Inigo Serna"
-#~ msgstr "IÃ±igo Serna"
-
-#~ msgid "Miroslav Silovic"
-#~ msgstr "Miroslav Silovic"
-
-#~ msgid "Istvan Szekeres"
-#~ msgstr "Istvan Szekeres"
-
-#~ msgid "Manish Vachharajani"
-#~ msgstr "Manish Vachharajani"
-
-#~ msgid "Neil Vachharajani"
-#~ msgstr "Neil Vachharajani"
-
-#~ msgid "MATE"
-#~ msgstr "MATE"
-
-#~ msgid "File '%s' has invalid MIME type: %s"
-#~ msgstr "Mae gan y ffeil '%s' fath MIME annilys."
+msgid "could not get the screen resources (CRTCs, outputs, modes)"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr.c:464
+#, c-format
+msgid "unhandled X error while getting the range of screen sizes"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr.c:470
+#, c-format
+msgid "could not get the range of screen sizes"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr.c:715
+#, c-format
+msgid "RANDR extension is not present"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr.c:1092
+#, c-format
+msgid "could not get information about output %d"
+msgstr ""
+
+#. Translators: the "position", "size", and "maximum"
+#. * words here are not keywords; please translate them
+#. * as usual.  A CRTC is a CRT Controller (this is X terminology)
+#: ../libmate-desktop/mate-rr.c:1479
+#, c-format
+msgid ""
+"requested position/size for CRTC %d is outside the allowed limit: "
+"position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr.c:1515
+#, c-format
+msgid "could not set the configuration for CRTC %d"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr.c:1631
+#, c-format
+msgid "could not get information about CRTC %d"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:501
+msgid "Laptop"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1162
+#, c-format
+msgid ""
+"none of the saved display configurations matched the active configuration"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1423
+#, c-format
+msgid "CRTC %d cannot drive output %s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1430
+#, c-format
+msgid "output %s does not support mode %dx%d@%dHz"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1441
+#, c-format
+msgid "CRTC %d does not support rotation=%s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1455
+#, c-format
+msgid ""
+"output %s does not have the same parameters as another cloned output:\n"
+"existing mode = %d, new mode = %d\n"
+"existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
+"existing rotation = %s, new rotation = %s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1470
+#, c-format
+msgid "cannot clone to output %s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1639
+#, c-format
+msgid "Trying modes for CRTC %d\n"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1663
+#, c-format
+msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1710
+#, c-format
+msgid ""
+"could not assign CRTCs to outputs:\n"
+"%s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1714
+#, c-format
+msgid ""
+"none of the selected modes were compatible with the possible modes:\n"
+"%s"
+msgstr ""
+
+#. Translators: the "requested", "minimum", and
+#. * "maximum" words here are not keywords; please
+#. * translate them as usual.
+#: ../libmate-desktop/mate-rr-config.c:1796
+#, c-format
+msgid ""
+"required virtual size does not fit available size: requested=(%d, %d), "
+"minimum=(%d, %d), maximum=(%d, %d)"
+msgstr ""
+
+#. Keep this string in sync with mate-control-center/capplets/display/xrandr-
+#. capplet.c:get_display_name()
+#. Translators:  this is the feature where what you see on your laptop's
+#. * screen is the same as your external monitor.  Here, "Mirror" is being
+#. * used as an adjective, not as a verb.  For example, the Spanish
+#. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#. 
+#: ../libmate-desktop/mate-rr-labeler.c:212
+msgid "Mirror Screens"
+msgstr ""

@@ -1,27 +1,23 @@
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Aviary.pl
-# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
-# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
-# matepl@aviary.pl
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-14 19:03+0200\n"
-"PO-Revision-Date: 2010-09-13 16:55+0200\n"
-"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
-"Language-Team: Polish <matepl@aviary.pl>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2012-04-06 11:17+0200\n"
+"PO-Revision-Date: 2012-04-06 09:18+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: Polish (http://www.transifex.net/projects/p/MATE/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
-"X-Poedit-Language: Polish\n"
-"X-Poedit-Country: Poland\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
-#: ../mate-about/mate-about.in:60
 msgid "About MATE"
 msgstr "Informacje o MATE"
 
@@ -29,136 +25,48 @@ msgstr "Informacje o MATE"
 msgid "Learn more about MATE"
 msgstr "Więcej informacji o środowisku MATE"
 
-#: ../mate-about/mate-about.in:61
-msgid "News"
-msgstr "Nowości"
-
-#: ../mate-about/mate-about.in:62
-msgid "MATE Library"
-msgstr "Biblioteka MATE"
-
-#: ../mate-about/mate-about.in:63
-msgid "Friends of MATE"
-msgstr "Przyjaciele MATE"
-
-#: ../mate-about/mate-about.in:64
-msgid "Contact"
-msgstr "Kontakt"
-
-#: ../mate-about/mate-about.in:68
-msgid "The Mysterious GEGL"
-msgstr "Tajemniczy GEGL"
-
-#: ../mate-about/mate-about.in:69
-msgid "The Squeaky Rubber MATE"
-msgstr "Piszczący gumowy MATE"
-
-#: ../mate-about/mate-about.in:70
-msgid "Wanda The MATE Fish"
-msgstr "Wanda, rybka MATE"
-
-#: ../mate-about/mate-about.in:567
-msgid "_Open URL"
-msgstr "_Otwórz adres URL"
-
-#: ../mate-about/mate-about.in:574
-msgid "_Copy URL"
-msgstr "_Skopiuj adres URL"
-
-#: ../mate-about/mate-about.in:826
-msgid "About the MATE Desktop"
-msgstr "Informacje o środowisku MATE"
-
-#: ../mate-about/mate-about.in:859
-msgid "%(name)s: %(value)s"
-msgstr "%(name)s: %(value)s"
-
-#: ../mate-about/mate-about.in:873
-msgid "Welcome to the MATE Desktop"
-msgstr "Witamy w środowisku MATE"
-
-#: ../mate-about/mate-about.in:890
-msgid "Brought to you by:"
-msgstr "Do rozwoju MATE przyczynili się:"
-
-#: ../mate-about/mate-about.in:914
-msgid "<b>%(name)s:</b> %(value)s"
-msgstr "<b>%(name)s:</b> %(value)s"
-
-#: ../mate-about/mate-about.in:975
-msgid "Version"
-msgstr "Wersja"
-
-#: ../mate-about/mate-about.in:977
-msgid "Distributor"
-msgstr "Dostawca"
-
-#: ../mate-about/mate-about.in:979
-msgid "Build Date"
-msgstr "Data zbudowania"
-
-#: ../mate-about/mate-about.in:1024
-msgid "Display information on this MATE version"
-msgstr "Wyświetla informacje o tej wersji środowiska MATE"
-
-#: ../mate-version.xml.in.in.h:1
+#: ../mate-about/mate-about.h:62
 msgid ""
-"MATE also includes a complete development platform for applications "
-"programmers, allowing the creation of powerful and complex applications."
+"MATE provides an intuitive and attractive desktop to Linux users using "
+"traditional metaphors."
 msgstr ""
-"Środowisko MATE zawiera także platformę programistyczną umożliwiającą "
-"programistom tworzenie złożonych i wydajnych programów."
 
-#: ../mate-version.xml.in.in.h:2
+#: ../mate-about/mate-about.h:65
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
-"manager, web browser, menus, and many applications."
+"manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"Środowisko MATE zawiera większość tego, co widać na ekranie komputera, w "
-"tym menedżera plików, przeglądarkę internetową, menu i wiele programów."
 
-#. NOTE TO AUTHORS: Do not put anything in the following paragraphs that
-#. will be substituted by the configure script. Otherwise you will break
-#. the translations.
-#: ../mate-version.xml.in.in.h:6
+#: ../mate-about/mate-about.h:68
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE jest wolnym, użytecznym, stabilnym, dostępnym środowiskiem graficznym "
-"dla systemów operacyjnych z rodziny Unix."
 
-#: ../mate-version.xml.in.in.h:7
+#: ../mate-about/mate-about.h:71
 msgid ""
-"MATE's focus on usability and accessibility, regular release cycle, and "
-"strong corporate backing make it unique among Free Software desktops."
+"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
+" since it was started in 1997; many more have contributed in other important"
+" ways, including translations, documentation, and quality assurance."
 msgstr ""
-"Koncentracja środowiska MATE na użyteczności i dostępności, regularnym "
-"cyklu wydawniczym i silnym wsparciu korporacyjnym, czyni je unikalnym pośród "
-"innych wolnodostępnych środowisk."
 
-#: ../mate-version.xml.in.in.h:8
+#: ../mate-about/mate-about.h:75
 msgid ""
-"MATE's greatest strength is our strong community. Virtually anyone, with or "
-"without coding skills, can contribute to making MATE better."
+"GNOME 2 was the most popular Linux desktop but it’s no longer available... "
+"MATE is here to provide that same desktop to you!"
 msgstr ""
-"Największą siłą środowiska MATE jest nasza energiczna społeczność. Prawie "
-"każdy, potrafiący programować lub nie, może przyczynić się do rozwoju MATE."
 
-#: ../mate-version.xml.in.in.h:9
+#: ../mate-about/mate-about.h:78
 msgid ""
-"Hundreds of people have contributed code to MATE since it was started in "
-"1997; many more have contributed in other important ways, including "
-"translations, documentation, and quality assurance."
+"The name “MATE” comes from yerba maté, a species of holly native to "
+"subtropical South America. Its leaves contain caffeine and are used to make "
+"infusions and a beverage called mate."
 msgstr ""
-"Od rozpoczęcia projektu MATE w 1997 roku, współudział w tworzeniu kodu "
-"miało setki osób; dużo więcej brało udział na inne ważne sposoby, włączając "
-"tłumaczenia, dokumentację oraz zapewnienie jakości."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: ../libmate-desktop/display-name.c:265
+#: ../libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Nieznany"
@@ -179,7 +87,7 @@ msgstr "Błąd podczas przewijania pliku \"%s\": %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3528
+#: ../libmate-desktop/mate-desktop-item.c:3523
 msgid "No name"
 msgstr "Brak nazwy"
 
@@ -223,16 +131,14 @@ msgstr "Brak polecenia uruchamiającego (Exec)"
 msgid "Bad command (Exec) to launch"
 msgstr "Błędne polecenie uruchamiające (Exec)"
 
-#: ../libmate-desktop/mate-desktop-item.c:3585
+#: ../libmate-desktop/mate-desktop-item.c:3580
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Nieznane kodowanie elementu: %s"
 
 #: ../libmate-desktop/mate-desktop-utils.c:133
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr ""
-"Nie można odnaleźć terminala, używanie xterm, nawet jeśli może to nie "
-"zadziałać"
+msgstr "Nie można odnaleźć terminala, używanie xterm, nawet jeśli może to nie zadziałać"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:444
@@ -266,11 +172,9 @@ msgstr "nie można uzyskać informacji o wyjściu %d"
 #: ../libmate-desktop/mate-rr.c:1479
 #, c-format
 msgid ""
-"requested position/size for CRTC %d is outside the allowed limit: position=(%"
-"d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr ""
-"żądane położenie/rozmiar dla CRTC %d znajduje się poza dozwolonym "
-"ograniczeniem: położenie=(%d, %d), rozmiar=(%d, %d), maksymalny=(%d, %d)"
+"requested position/size for CRTC %d is outside the allowed limit: "
+"position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
+msgstr "żądane położenie/rozmiar dla CRTC %d znajduje się poza dozwolonym ograniczeniem: położenie=(%d, %d), rozmiar=(%d, %d), maksymalny=(%d, %d)"
 
 #: ../libmate-desktop/mate-rr.c:1515
 #, c-format
@@ -290,9 +194,7 @@ msgstr "Laptop"
 #, c-format
 msgid ""
 "none of the saved display configurations matched the active configuration"
-msgstr ""
-"żadna z zapisanych konfiguracji wyświetlania nie pasuje do aktywnej "
-"konfiguracji"
+msgstr "żadna z zapisanych konfiguracji wyświetlania nie pasuje do aktywnej konfiguracji"
 
 #: ../libmate-desktop/mate-rr-config.c:1423
 #, c-format
@@ -316,12 +218,7 @@ msgid ""
 "existing mode = %d, new mode = %d\n"
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
-msgstr ""
-"wyjście %s nie posiada takich samych parametrów, co inne sklonowane "
-"wyjście:\n"
-"istniejący tryb = %d, nowy tryb = %d\n"
-"istniejące współrzędne = (%d, %d), nowe współrzędne = (%d, %d)\n"
-"istniejący obrót = %s, nowy obrót = %s"
+msgstr "wyjście %s nie posiada takich samych parametrów, co inne sklonowane wyjście:\nistniejący tryb = %d, nowy tryb = %d\nistniejące współrzędne = (%d, %d), nowe współrzędne = (%d, %d)\nistniejący obrót = %s, nowy obrót = %s"
 
 #: ../libmate-desktop/mate-rr-config.c:1470
 #, c-format
@@ -336,27 +233,21 @@ msgstr "Próbowanie trybów dla CRTC %d\n"
 #: ../libmate-desktop/mate-rr-config.c:1663
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
-msgstr ""
-"CRTC %d: próbowanie trybu %dx%d@%dHz za pomocą wyjścia w %dx%d@%dHz "
-"(przeszło %d)\n"
+msgstr "CRTC %d: próbowanie trybu %dx%d@%dHz za pomocą wyjścia w %dx%d@%dHz (przeszło %d)\n"
 
 #: ../libmate-desktop/mate-rr-config.c:1710
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
-msgstr ""
-"nie można przydzielić CRTC do wyjść:\n"
-"%s"
+msgstr "nie można przydzielić CRTC do wyjść:\n%s"
 
 #: ../libmate-desktop/mate-rr-config.c:1714
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
 "%s"
-msgstr ""
-"żaden z wybranych trybów nie jest zgodny z możliwymi trybami:\n"
-"%s"
+msgstr "żaden z wybranych trybów nie jest zgodny z możliwymi trybami:\n%s"
 
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
@@ -366,16 +257,15 @@ msgstr ""
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
-msgstr ""
-"wymagany rozmiar wirtualny nie pasuje do dostępnego rozmiaru: żądany=(%d, %"
-"d), minimalny=(%d, %d), maksymalny=(%d, %d)"
+msgstr "wymagany rozmiar wirtualny nie pasuje do dostępnego rozmiaru: żądany=(%d, %d), minimalny=(%d, %d), maksymalny=(%d, %d)"
 
-#. Keep this string in sync with mate-control-center/capplets/display/xrandr-capplet.c:get_display_name()
+#. Keep this string in sync with mate-control-center/capplets/display/xrandr-
+#. capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#.
+#. 
 #: ../libmate-desktop/mate-rr-labeler.c:212
 msgid "Mirror Screens"
 msgstr "Powielenie ekranów"

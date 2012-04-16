@@ -1,349 +1,271 @@
-# Translation of mate-desktop to Kirghiz
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) 2003, 2004, 2005.
-# Timur Jamakeev <ztimur@gmail.com>, 2005.
-#
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 2.13.2\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-28 22:44+0200\n"
-"PO-Revision-Date: 2005-10-31 16:51+0500\n"
-"Last-Translator: Timur Jamakeev <ztimur@gmail.com>\n"
-"Language-Team: Kirghiz\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2012-04-06 11:17+0200\n"
+"PO-Revision-Date: 2012-04-06 09:18+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"Language: ky\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
-#: ../mate-about/contributors.h:108
-msgid "The Mysterious GEGL"
-msgstr "Сырдуу GEGL"
-
-#: ../mate-about/contributors.h:296
-msgid "The Squeaky Rubber Mate"
-msgstr "Чыйылдаган резина гном"
-
-#: ../mate-about/contributors.h:329
-msgid "Wanda The MATE Fish"
-msgstr "Ванда -- MATE балыгы"
-
-#: ../mate-about/mate-about.c:423
-msgid "Could not locate the directory with header images."
-msgstr "Башсап сүрөттөлүштөрүн камтыган каталог табылбады."
-
-#: ../mate-about/mate-about.c:432
-#, c-format
-msgid "Failed to open directory with header images: %s"
-msgstr "Башсап сүрөттөлүштөрүн камтыган бул каталогду ачууда ката пайда болду: %s"
-
-#: ../mate-about/mate-about.c:465
-#, c-format
-msgid "Unable to load header image: %s"
-msgstr "Башсап сүрөттөлүшүн жүктөөгө болбоду: %s"
-
-#: ../mate-about/mate-about.c:490
-msgid "Could not locate the MATE logo."
-msgstr "MATE логотиби табылбады."
-
-#: ../mate-about/mate-about.c:499
-#, c-format
-msgid "Unable to load '%s': %s"
-msgstr "\"%s\" жүктөөгө болбоду: %s"
-
-#: ../mate-about/mate-about.c:552
-#, c-format
-msgid "Could not open the address \"%s\": %s"
-msgstr "\"%s\" дарегин ачууга болбоду: %s"
-
-#: ../mate-about/mate-about.c:804
-msgid "Could not locate the file with MATE version information."
-msgstr "MATE чөйрөсүнүн версиясы жөнүндөгү маалыматты камтыган файл табылбады."
-
-#: ../mate-about/mate-about.c:873
-msgid "Version"
-msgstr "Версиясы"
-
-#: ../mate-about/mate-about.c:892
-msgid "Distributor"
-msgstr "Дистрибьютор"
-
-#: ../mate-about/mate-about.c:911
-msgid "Build Date"
-msgstr "Курулуу датасы"
-
-#: ../mate-about/mate-about.c:993
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
 msgstr "MATE чөйрөсү жөнүндө"
 
-#: ../mate-about/mate-about.c:1007
-msgid "News"
-msgstr "Жаңылыктар"
-
-#: ../mate-about/mate-about.c:1017
-msgid "Software"
-msgstr "Программалык жабдуу"
-
-#: ../mate-about/mate-about.c:1023
-msgid "Developers"
-msgstr "Иштеп чыгуучулар"
-
-#: ../mate-about/mate-about.c:1029
-msgid "Friends of MATE"
-msgstr "MATE достору"
-
-#: ../mate-about/mate-about.c:1035
-msgid "Contact"
-msgstr "Контакт"
-
-#: ../mate-about/mate-about.c:1072
-msgid "Welcome to the MATE Desktop"
-msgstr "MATE чөйрөсүнө кош келиңиз"
-
-#: ../mate-about/mate-about.c:1089
-msgid "Brought to you by:"
-msgstr "MATE чөйрөсүн сиз үчүн булар түздү:"
-
-#: ../mate-about/mate-about.c:1137
-msgid "About the MATE Desktop"
-msgstr "MATE чөйрөсү жөнүндө"
-
 #: ../mate-about/mate-about.desktop.in.in.h:2
-msgid "Know more about MATE"
-msgstr "MATE жөнүндө көбүрөөк билүү"
+msgid "Learn more about MATE"
+msgstr ""
 
-#: ../mate-version.xml.in.in.h:1
+#: ../mate-about/mate-about.h:62
 msgid ""
-"MATE also includes a complete development platform for applications "
-"programmers, allowing the creation of powerful and complex applications."
-msgstr "Ошондой эле MATE чөйрөсү кубаттуу жана татаал иштемелерди түзүүгө жол берүүчү даяр платформаны камтыйт."
+"MATE provides an intuitive and attractive desktop to Linux users using "
+"traditional metaphors."
+msgstr ""
 
-#: ../mate-version.xml.in.in.h:2
+#: ../mate-about/mate-about.h:65
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
-"manager, web browser, menus, and many applications."
-msgstr "MATE чөйрөсү файл менеджери, веб-барактарды аралагыч, меню панели ж.б.у.с. эң керектүү иштемелерди көпчүлүгүн камтыйт."
+"manager, document viewer, image viewer, menus, and many applications."
+msgstr ""
 
-#. NOTE TO AUTHORS: Do not put anything in the following paragraphs that
-#. will be substituted by the configure script. Otherwise you will break
-#. the translations.
-#: ../mate-version.xml.in.in.h:6
+#: ../mate-about/mate-about.h:68
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
-msgstr "MATE чөйрөсү UNIX-сыяктуу аракеттер системасы тутуму үчүн эркин, стабилдүү, колдонууда ыңгайлуу (анын ичинде мүмкүнчүлүктөрү чектелген адамдар үчүн да) иш чөйрөсү болуп эсептелет."
+msgstr ""
 
-#: ../mate-version.xml.in.in.h:7
+#: ../mate-about/mate-about.h:71
 msgid ""
-"MATE's focus on usability and accessibility, regular release cycle, and "
-"strong corporate backing make it unique among Free Software desktops."
-msgstr "MATE чөйрөсү колдонуудагы ыңгайлуулукка өзгөчө көңүл бурат (анын ичинде мүкүнчүлүгү чектелген адамдар үчүн да) жана анын жаңы версияларынын регулярдуу чыгуусу, күчтүү корпоративдик колдоосу башка эркин иш стол чөйрөлөрүнөн айырмалап турат."
+"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
+" since it was started in 1997; many more have contributed in other important"
+" ways, including translations, documentation, and quality assurance."
+msgstr ""
 
-#: ../mate-version.xml.in.in.h:8
+#: ../mate-about/mate-about.h:75
 msgid ""
-"MATE's greatest strength is our strong community. Virtually anyone, with or "
-"without coding skills, can contribute to making MATE better."
-msgstr "MATE чөйрөсүнүн артыкчылык жагы анын күчтүү колдонуучулар коомчулугунда. Ар бир адам программалоодо тажрыйбасы бар болсо да, тажрыйбасы жок болсо да, чөйрөнү жакшыртууга өз салымын кошо алат."
+"GNOME 2 was the most popular Linux desktop but it’s no longer available... "
+"MATE is here to provide that same desktop to you!"
+msgstr ""
 
-#: ../mate-version.xml.in.in.h:9
+#: ../mate-about/mate-about.h:78
 msgid ""
-"Hundreds of people have contributed code to MATE since it was started in "
-"1997; many more have contributed in other important ways, including "
-"translations, documentation, and quality assurance."
-msgstr "MATE проекти 1997-жылы башталгандан тартып анын башат кодун жүздөгөн адамдар жазды, бирок андан да көп адамдар башка маанилүү жолдор менен б.а. которуу, документациялоо жана сапатын текшерүү аркылуу өз салымдарын кошушту."
+"The name “MATE” comes from yerba maté, a species of holly native to "
+"subtropical South America. Its leaves contain caffeine and are used to make "
+"infusions and a beverage called mate."
+msgstr ""
 
-#: ../libmate-desktop/mate-desktop-item.c:211
-#: ../libmate-desktop/mate-desktop-item.c:599
+#. Translators: "Unknown" here is used to identify a monitor for which
+#. * we don't know the vendor. When a vendor is known, the name of the
+#. * vendor is used.
+#: ../libmate-desktop/display-name.c:264
+msgctxt "Monitor vendor"
+msgid "Unknown"
+msgstr ""
+
+#: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
 msgstr "\"%s\" файлын окуудагы ката: %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:279
+#: ../libmate-desktop/mate-desktop-item.c:288
 #, c-format
 msgid "Error rewinding file '%s': %s"
 msgstr "\"%s\" файлын түрүү катасы: %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:378
-#: ../libmate-desktop/mate-desktop-item.c:3717
+#. Translators: the "name" mentioned
+#. * here is the name of an application or
+#. * a document
+#. Translators: the "name" mentioned here is the name of
+#. * an application or a document
+#: ../libmate-desktop/mate-desktop-item.c:380
+#: ../libmate-desktop/mate-desktop-item.c:3523
 msgid "No name"
 msgstr "Аты жок"
 
-#: ../libmate-desktop/mate-desktop-item.c:614
+#: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
 msgstr "\"%s\" файлы кадимки файл же каталог эмес."
 
-#: ../libmate-desktop/mate-desktop-item.c:790
+#: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
-msgid "Error cannot find file id '%s'"
-msgstr "'%s' файлынын идентификаторун табууга болбоду"
+msgid "Cannot find file '%s'"
+msgstr ""
 
-#: ../libmate-desktop/mate-desktop-item.c:836
+#: ../libmate-desktop/mate-desktop-item.c:837
+#, c-format
 msgid "No filename to save to"
 msgstr "Сактоо үчүн файл аты берилген эмес"
 
-#: ../libmate-desktop/mate-desktop-item.c:1791
+#: ../libmate-desktop/mate-desktop-item.c:1828
 #, c-format
 msgid "Starting %s"
 msgstr "%s башталууда"
 
-#: ../libmate-desktop/mate-desktop-item.c:2030
+#: ../libmate-desktop/mate-desktop-item.c:2062
+#, c-format
 msgid "No URL to launch"
 msgstr "Иштетүү үчүн URL көрсөтүлбөгөн"
 
-#: ../libmate-desktop/mate-desktop-item.c:2040
+#: ../libmate-desktop/mate-desktop-item.c:2078
+#, c-format
 msgid "Not a launchable item"
 msgstr "Элемент иштетилүүчү эмес"
 
-#: ../libmate-desktop/mate-desktop-item.c:2050
+#: ../libmate-desktop/mate-desktop-item.c:2088
+#, c-format
 msgid "No command (Exec) to launch"
 msgstr "Иштетүү үчүн команда (Exec) жок"
 
-#: ../libmate-desktop/mate-desktop-item.c:2063
+#: ../libmate-desktop/mate-desktop-item.c:2101
+#, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Иштетүү үчүн команда (Exec) туура эмес"
 
-#: ../libmate-desktop/mate-desktop-item.c:3774
+#: ../libmate-desktop/mate-desktop-item.c:3580
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "\"%s\" кодировкасы белгисиз"
 
-#: ../libmate-desktop/mate-desktop-item.c:4005
+#: ../libmate-desktop/mate-desktop-utils.c:133
+msgid "Cannot find a terminal, using xterm, even if it may not work"
+msgstr ""
+
+#. Translators: a CRTC is a CRT Controller (this is X terminology).
+#: ../libmate-desktop/mate-rr.c:444
 #, c-format
-msgid "Error writing file '%s': %s"
-msgstr "\"%s\" файлына жазуудагы ката: %s"
+msgid "could not get the screen resources (CRTCs, outputs, modes)"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:210
-#: ../libmate-desktop/mate-ditem-edit.c:218
-msgid "Directory"
-msgstr "Каталог"
+#: ../libmate-desktop/mate-rr.c:464
+#, c-format
+msgid "unhandled X error while getting the range of screen sizes"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:214
-msgid "Application"
-msgstr "Иштеме"
+#: ../libmate-desktop/mate-rr.c:470
+#, c-format
+msgid "could not get the range of screen sizes"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:221
-msgid "Link"
-msgstr "Шилтеме"
+#: ../libmate-desktop/mate-rr.c:715
+#, c-format
+msgid "RANDR extension is not present"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:223
-msgid "FSDevice"
-msgstr "FSDevice"
+#: ../libmate-desktop/mate-rr.c:1092
+#, c-format
+msgid "could not get information about output %d"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:225
-msgid "MIME Type"
-msgstr "MIME тиби"
+#. Translators: the "position", "size", and "maximum"
+#. * words here are not keywords; please translate them
+#. * as usual.  A CRTC is a CRT Controller (this is X terminology)
+#: ../libmate-desktop/mate-rr.c:1479
+#, c-format
+msgid ""
+"requested position/size for CRTC %d is outside the allowed limit: "
+"position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:227
-msgid "Service"
-msgstr "Сервис"
+#: ../libmate-desktop/mate-rr.c:1515
+#, c-format
+msgid "could not set the configuration for CRTC %d"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:229
-msgid "ServiceType"
-msgstr "Сервис тиби"
+#: ../libmate-desktop/mate-rr.c:1631
+#, c-format
+msgid "could not get information about CRTC %d"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:315
-msgid "_URL:"
-msgstr "_URL:"
+#: ../libmate-desktop/mate-rr-config.c:501
+msgid "Laptop"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:318
-#: ../libmate-desktop/mate-ditem-edit.c:385
-msgid "Comm_and:"
-msgstr "Ком_анда:"
+#: ../libmate-desktop/mate-rr-config.c:1162
+#, c-format
+msgid ""
+"none of the saved display configurations matched the active configuration"
+msgstr ""
 
-#. Name
-#: ../libmate-desktop/mate-ditem-edit.c:339
-msgid "_Name:"
-msgstr "_Аты:"
+#: ../libmate-desktop/mate-rr-config.c:1423
+#, c-format
+msgid "CRTC %d cannot drive output %s"
+msgstr ""
 
-#. Generic Name
-#: ../libmate-desktop/mate-ditem-edit.c:356
-msgid "_Generic name:"
-msgstr "_Жалпы аты:"
+#: ../libmate-desktop/mate-rr-config.c:1430
+#, c-format
+msgid "output %s does not support mode %dx%d@%dHz"
+msgstr ""
 
-#. Comment
-#: ../libmate-desktop/mate-ditem-edit.c:373
-msgid "Co_mment:"
-msgstr "Ко_мментарий:"
+#: ../libmate-desktop/mate-rr-config.c:1441
+#, c-format
+msgid "CRTC %d does not support rotation=%s"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:389
-msgid "Browse"
-msgstr "Аралоо"
+#: ../libmate-desktop/mate-rr-config.c:1455
+#, c-format
+msgid ""
+"output %s does not have the same parameters as another cloned output:\n"
+"existing mode = %d, new mode = %d\n"
+"existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
+"existing rotation = %s, new rotation = %s"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:400
-msgid "_Type:"
-msgstr "_Тип:"
+#: ../libmate-desktop/mate-rr-config.c:1470
+#, c-format
+msgid "cannot clone to output %s"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:417
-msgid "_Icon:"
-msgstr "_Сүрөтбелги:"
+#: ../libmate-desktop/mate-rr-config.c:1639
+#, c-format
+msgid "Trying modes for CRTC %d\n"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:427
-msgid "Browse icons"
-msgstr "Сүрөтбелгилерди аралоо"
+#: ../libmate-desktop/mate-rr-config.c:1663
+#, c-format
+msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:441
-msgid "Run in t_erminal"
-msgstr "_Терминалда иштетүү"
+#: ../libmate-desktop/mate-rr-config.c:1710
+#, c-format
+msgid ""
+"could not assign CRTCs to outputs:\n"
+"%s"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:658
-#: ../libmate-desktop/mate-ditem-edit.c:756
-msgid "Language"
-msgstr "Тил"
+#: ../libmate-desktop/mate-rr-config.c:1714
+#, c-format
+msgid ""
+"none of the selected modes were compatible with the possible modes:\n"
+"%s"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:663
-#: ../libmate-desktop/mate-ditem-edit.c:763
-msgid "Name"
-msgstr "Аты"
+#. Translators: the "requested", "minimum", and
+#. * "maximum" words here are not keywords; please
+#. * translate them as usual.
+#: ../libmate-desktop/mate-rr-config.c:1796
+#, c-format
+msgid ""
+"required virtual size does not fit available size: requested=(%d, %d), "
+"minimum=(%d, %d), maximum=(%d, %d)"
+msgstr ""
 
-#: ../libmate-desktop/mate-ditem-edit.c:668
-#: ../libmate-desktop/mate-ditem-edit.c:770
-msgid "Generic name"
-msgstr "Жалпы аты"
-
-#: ../libmate-desktop/mate-ditem-edit.c:673
-#: ../libmate-desktop/mate-ditem-edit.c:779
-msgid "Comment"
-msgstr "Комментарий"
-
-#: ../libmate-desktop/mate-ditem-edit.c:708
-msgid "_Try this before using:"
-msgstr "_Колдонуу алдында текшерүү:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:719
-msgid "_Documentation:"
-msgstr "_Документация:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:730
-msgid "_Name/Comment translations:"
-msgstr "_Атынын/комментарийлердин котормосу:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:781
-msgid "_Add/Set"
-msgstr "_Кошуу/Орнотуу"
-
-#: ../libmate-desktop/mate-ditem-edit.c:787
-msgid "Add or Set Name/Comment Translations"
-msgstr "Атынын/комантарийдин котормосун кошуу же орнотуу"
-
-#: ../libmate-desktop/mate-ditem-edit.c:789
-msgid "Re_move"
-msgstr "_Жоготуу"
-
-#: ../libmate-desktop/mate-ditem-edit.c:794
-msgid "Remove Name/Comment Translation"
-msgstr "Атынын/комментарийдин котормосун жоготуу"
-
-#: ../libmate-desktop/mate-ditem-edit.c:810
-msgid "Basic"
-msgstr "Негизги"
-
-#: ../libmate-desktop/mate-ditem-edit.c:818
-msgid "Advanced"
-msgstr "Кошумча"
-
-#: ../libmate-desktop/mate-hint.c:175
-msgid "_Show Hints at Startup"
-msgstr "Баштоо учурунда _жардам саптарын көрсөтүү"
-
+#. Keep this string in sync with mate-control-center/capplets/display/xrandr-
+#. capplet.c:get_display_name()
+#. Translators:  this is the feature where what you see on your laptop's
+#. * screen is the same as your external monitor.  Here, "Mirror" is being
+#. * used as an adjective, not as a verb.  For example, the Spanish
+#. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#. 
+#: ../libmate-desktop/mate-rr-labeler.c:212
+msgid "Mirror Screens"
+msgstr ""

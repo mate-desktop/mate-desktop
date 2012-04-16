@@ -1,23 +1,23 @@
-# Afrikaans translation of mate-desktop.
-# Copyright (C) 2004, 2007 Zuza Software Foundation
-# This file is distributed under the same license as the mate-desktop package.
-# Zuza Software Foundation <info@translate.org.za>, 2004, 2007
-# F Wolff <friedel@translate.org.za>, 2008
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 2.6-branch\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-09 09:15+0000\n"
-"PO-Revision-Date: 2008-09-21 15:21+0200\n"
-"Last-Translator: F Wolff <friedel@translate.org.za>\n"
-"Language-Team: translate-discuss-af@lists.sourceforge.net\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2012-04-06 11:17+0200\n"
+"PO-Revision-Date: 2012-04-06 09:18+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: Afrikaans (http://www.transifex.net/projects/p/MATE/language/af/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: VirTaal 0.1\n"
+"Language: af\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
-#: ../mate-about/mate-about.in:61
 msgid "About MATE"
 msgstr "Aangaande MATE"
 
@@ -25,438 +25,247 @@ msgstr "Aangaande MATE"
 msgid "Learn more about MATE"
 msgstr "Vind meer uit oor MATE"
 
-#: ../mate-about/mate-about.in:62
-msgid "News"
-msgstr "Nuus"
-
-#: ../mate-about/mate-about.in:63
-msgid "MATE Library"
-msgstr "MATE-biblioteek"
-
-#: ../mate-about/mate-about.in:64
-msgid "Friends of MATE"
-msgstr "Vriende van MATE"
-
-#: ../mate-about/mate-about.in:65
-msgid "Contact"
-msgstr "Kontak"
-
-#: ../mate-about/mate-about.in:69
-msgid "The Mysterious GEGL"
-msgstr "Die Misterieuse GEGL"
-
-#: ../mate-about/mate-about.in:70
-msgid "The Squeaky Rubber MATE"
-msgstr "Die Piepende Rubber MATE"
-
-#: ../mate-about/mate-about.in:71
-msgid "Wanda The MATE Fish"
-msgstr "Wanda die MATE-vis"
-
-#: ../mate-about/mate-about.in:568
-msgid "_Open URL"
-msgstr "_Open URL"
-
-#: ../mate-about/mate-about.in:575
-msgid "_Copy URL"
-msgstr "_Kopieer URL"
-
-#: ../mate-about/mate-about.in:830
-msgid "About the MATE Desktop"
-msgstr "Aangaande die MATE-werkarea"
-
-#: ../mate-about/mate-about.in:866
-msgid "%(name)s: %(value)s"
-msgstr "%(name)s: %(value)s"
-
-#: ../mate-about/mate-about.in:880
-msgid "Welcome to the MATE Desktop"
-msgstr "Welkom by die MATE-werkarea"
-
-#: ../mate-about/mate-about.in:897
-msgid "Brought to you by:"
-msgstr "Aangebied deur:"
-
-#: ../mate-about/mate-about.in:921
-msgid "<b>%(name)s:</b> %(value)s"
-msgstr "<b>%(name)s:</b> %(value)s"
-
-#: ../mate-about/mate-about.in:977
-msgid "Version"
-msgstr "Weergawe"
-
-#: ../mate-about/mate-about.in:978
-msgid "Distributor"
-msgstr "Verspreider"
-
-#: ../mate-about/mate-about.in:979
-msgid "Build Date"
-msgstr "Boudatum"
-
-#: ../mate-about/mate-about.in:1023
-msgid "Display information on this MATE version"
-msgstr "Wys inligting oor hierdie MATE-weergawe"
-
-#: ../mate-version.xml.in.in.h:1
+#: ../mate-about/mate-about.h:62
 msgid ""
-"MATE also includes a complete development platform for applications "
-"programmers, allowing the creation of powerful and complex applications."
+"MATE provides an intuitive and attractive desktop to Linux users using "
+"traditional metaphors."
 msgstr ""
-"MATE bevat ook 'n volledige ontwikkelingsplatform vir toepassings-"
-"programmeerders, wat die skep van kragtige en komplekse toepassings toelaat."
 
-#: ../mate-version.xml.in.in.h:2
+#: ../mate-about/mate-about.h:65
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
-"manager, web browser, menus, and many applications."
+"manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"MATE sluit meeste van dit wat jy op jou rekenaar sien in, insluitend die "
-"lêerbestuurder, webblaaier, kieslyste en vele toepassings."
 
-#. NOTE TO AUTHORS: Do not put anything in the following paragraphs that
-#. will be substituted by the configure script. Otherwise you will break
-#. the translations.
-#: ../mate-version.xml.in.in.h:6
+#: ../mate-about/mate-about.h:68
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"MATE is 'n Vrye, bruikbare, stabiele, toeganklike werkareaomgewing vir die "
-"Unix-agtige familie van bedryfstelsels."
 
-#: ../mate-version.xml.in.in.h:7
+#: ../mate-about/mate-about.h:71
 msgid ""
-"MATE's focus on usability and accessibility, regular release cycle, and "
-"strong corporate backing make it unique among Free Software desktops."
+"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
+" since it was started in 1997; many more have contributed in other important"
+" ways, including translations, documentation, and quality assurance."
 msgstr ""
-"MATE se fokus op bruikbaarheid en toeganklikheid, gereelde "
-"vrystellingsiklusse, en sterk korporatiewe ondersteuning maak dit uniek "
-"onder Vrye Sagteware-werkareas."
 
-#: ../mate-version.xml.in.in.h:8
+#: ../mate-about/mate-about.h:75
 msgid ""
-"MATE's greatest strength is our strong community. Virtually anyone, with or "
-"without coding skills, can contribute to making MATE better."
+"GNOME 2 was the most popular Linux desktop but it’s no longer available... "
+"MATE is here to provide that same desktop to you!"
 msgstr ""
-"MATE se sterkste punt is ons sterk gemeenskap. Feitlik elkeen, met of "
-"sonder programmeervaardighede, kan 'n bydrae lewer tot die verbetering van "
-"MATE."
 
-#: ../mate-version.xml.in.in.h:9
+#: ../mate-about/mate-about.h:78
 msgid ""
-"Hundreds of people have contributed code to MATE since it was started in "
-"1997; many more have contributed in other important ways, including "
-"translations, documentation, and quality assurance."
+"The name “MATE” comes from yerba maté, a species of holly native to "
+"subtropical South America. Its leaves contain caffeine and are used to make "
+"infusions and a beverage called mate."
 msgstr ""
-"Honderde mense het kode tot MATE bygedra sedert dit in 1997 ontstaan het; "
-"nog meer het op ander belangrike maniere bydraes gelewer, insluitend "
-"vertalings, dokumentasie en kwaliteitsversekering."
 
-#: ../libmate-desktop/display-name.c:212
-msgid "Laptop"
-msgstr "Skootrekenaar"
-
-#: ../libmate-desktop/display-name.c:220
+#. Translators: "Unknown" here is used to identify a monitor for which
+#. * we don't know the vendor. When a vendor is known, the name of the
+#. * vendor is used.
+#: ../libmate-desktop/display-name.c:264
+msgctxt "Monitor vendor"
 msgid "Unknown"
-msgstr "Onbekend"
+msgstr ""
 
-#: ../libmate-desktop/mate-desktop-item.c:219
+#: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
 msgstr "Fout met lees van lêer '%s': %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:287
+#: ../libmate-desktop/mate-desktop-item.c:288
 #, c-format
 msgid "Error rewinding file '%s': %s"
 msgstr "Fout met terugdraai van lêer '%s': %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:389
-#: ../libmate-desktop/mate-desktop-item.c:3756
+#. Translators: the "name" mentioned
+#. * here is the name of an application or
+#. * a document
+#. Translators: the "name" mentioned here is the name of
+#. * an application or a document
+#: ../libmate-desktop/mate-desktop-item.c:380
+#: ../libmate-desktop/mate-desktop-item.c:3523
 msgid "No name"
 msgstr "Geen naam"
 
-#: ../libmate-desktop/mate-desktop-item.c:616
+#: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
 msgstr "Lêer '%s' is nie 'n gewone lêer of gids nie."
 
-#: ../libmate-desktop/mate-desktop-item.c:796
+#: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
-msgid "Error cannot find file id '%s'"
-msgstr "Fout! Kon nie lêer-id '%s' vind nie"
+msgid "Cannot find file '%s'"
+msgstr ""
 
-#: ../libmate-desktop/mate-desktop-item.c:842
+#: ../libmate-desktop/mate-desktop-item.c:837
 #, c-format
 msgid "No filename to save to"
 msgstr "Geen lêernaam om na te stoor nie"
 
-#: ../libmate-desktop/mate-desktop-item.c:1827
+#: ../libmate-desktop/mate-desktop-item.c:1828
 #, c-format
 msgid "Starting %s"
 msgstr "Begin tans %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2063
+#: ../libmate-desktop/mate-desktop-item.c:2062
 #, c-format
 msgid "No URL to launch"
 msgstr "Geen URL om te laat loop nie"
 
-#: ../libmate-desktop/mate-desktop-item.c:2076
+#: ../libmate-desktop/mate-desktop-item.c:2078
 #, c-format
 msgid "Not a launchable item"
 msgstr "Geen laat loopbare item nie"
 
-#: ../libmate-desktop/mate-desktop-item.c:2086
+#: ../libmate-desktop/mate-desktop-item.c:2088
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Geen opdrag (Uitvoerend) om te laat loop nie"
 
-#: ../libmate-desktop/mate-desktop-item.c:2099
+#: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Slegte opdrag (Uitvoerend) om te laat loop"
 
-#: ../libmate-desktop/mate-desktop-item.c:3812
+#: ../libmate-desktop/mate-desktop-item.c:3580
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Onbekende enkodering van: %s"
 
-#: ../libmate-desktop/mate-ditem-edit.c:209
-#: ../libmate-desktop/mate-ditem-edit.c:217
-msgid "Directory"
-msgstr "Gids"
-
-#: ../libmate-desktop/mate-ditem-edit.c:213
-msgid "Application"
-msgstr "Toepassing"
-
-#: ../libmate-desktop/mate-ditem-edit.c:220
-msgid "Link"
-msgstr "Skakel"
-
-#: ../libmate-desktop/mate-ditem-edit.c:222
-msgid "FSDevice"
-msgstr "FSToestel"
-
-#: ../libmate-desktop/mate-ditem-edit.c:224
-msgid "MIME Type"
-msgstr "MIME-tipe"
-
-#: ../libmate-desktop/mate-ditem-edit.c:226
-msgid "Service"
-msgstr "Diens"
-
-#: ../libmate-desktop/mate-ditem-edit.c:228
-msgid "ServiceType"
-msgstr "Dienstipe"
-
-#: ../libmate-desktop/mate-ditem-edit.c:314
-msgid "_URL:"
-msgstr "_URL:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:317
-#: ../libmate-desktop/mate-ditem-edit.c:384
-msgid "Comm_and:"
-msgstr "Opdr_ag:"
-
-#. Name
-#: ../libmate-desktop/mate-ditem-edit.c:338
-msgid "_Name:"
-msgstr "_Naam:"
-
-#. Generic Name
-#: ../libmate-desktop/mate-ditem-edit.c:355
-msgid "_Generic name:"
-msgstr "_Generiese naam:"
-
-#. Comment
-#: ../libmate-desktop/mate-ditem-edit.c:372
-msgid "Co_mment:"
-msgstr "Ko_mmentaar:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:388
-msgid "Browse"
-msgstr "Blaai"
-
-#: ../libmate-desktop/mate-ditem-edit.c:399
-msgid "_Type:"
-msgstr "_Tipe:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:416
-msgid "_Icon:"
-msgstr "_Ikoon:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:426
-msgid "Browse icons"
-msgstr "Blaai ikone"
-
-#: ../libmate-desktop/mate-ditem-edit.c:440
-msgid "Run in t_erminal"
-msgstr "Laat loop in t_erminaal"
-
-#: ../libmate-desktop/mate-ditem-edit.c:621
-#: ../libmate-desktop/mate-ditem-edit.c:721
-msgid "Language"
-msgstr "Taal"
-
-#: ../libmate-desktop/mate-ditem-edit.c:626
-#: ../libmate-desktop/mate-ditem-edit.c:727
-msgid "Name"
-msgstr "Naam"
-
-#: ../libmate-desktop/mate-ditem-edit.c:631
-#: ../libmate-desktop/mate-ditem-edit.c:733
-msgid "Generic name"
-msgstr "Generiese naam"
-
-#: ../libmate-desktop/mate-ditem-edit.c:636
-#: ../libmate-desktop/mate-ditem-edit.c:741
-msgid "Comment"
-msgstr "Kommentaar"
-
-#: ../libmate-desktop/mate-ditem-edit.c:674
-msgid "_Try this before using:"
-msgstr "_Probeer dit voor gebruik van:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:685
-msgid "_Documentation:"
-msgstr "_Dokumentasie:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:696
-msgid "_Name/Comment translations:"
-msgstr "_Naam/Kommentaarvertalings:"
-
-#: ../libmate-desktop/mate-ditem-edit.c:743
-msgid "_Add/Set"
-msgstr "_Voeg by/stel"
-
-#: ../libmate-desktop/mate-ditem-edit.c:748
-msgid "Add or Set Name/Comment Translations"
-msgstr "Voeg by of stel naam/kommentaarvertalings"
-
-#: ../libmate-desktop/mate-ditem-edit.c:750
-msgid "Re_move"
-msgstr "Ver_wyder"
-
-#: ../libmate-desktop/mate-ditem-edit.c:755
-msgid "Remove Name/Comment Translation"
-msgstr "Verwyder naam/kommentaarvertaling"
-
-#: ../libmate-desktop/mate-ditem-edit.c:771
-msgid "Basic"
-msgstr "Basies"
-
-#: ../libmate-desktop/mate-ditem-edit.c:779
-msgid "Advanced"
-msgstr "Gevorderd"
-
-#: ../libmate-desktop/mate-hint.c:201
-msgid "_Show Hints at Startup"
-msgstr "_Wys wenke tydens laai"
-
-#~ msgid "Could not locate the directory with header images."
-#~ msgstr "Kon nie die gids met die kopteksbeelde lokaliseer nie."
-
-#~ msgid "Failed to open directory with header images: %s"
-#~ msgstr "Kon nie gids met die kopteksbeelde open nie: %s"
-
-#~ msgid "Unable to load header image: %s"
-#~ msgstr "Kan nie kopteksbeelde laai nie: %s"
-
-#~ msgid "Could not locate the MATE logo."
-#~ msgstr "Kon nie die MATE-embleem vind nie."
-
-#~ msgid "Unable to load '%s': %s"
-#~ msgstr "Kon nie '%s' laai nie: %s"
-
-#~ msgid "Could not open the address \"%s\": %s"
-#~ msgstr "Kon nie die adres \"%s\" open nie: %s"
-
-#~ msgid "Could not get information about MATE version."
-#~ msgstr "Kon nie inligting oor MATE-weergawe vind nie."
-
-#~ msgid "%s: %s\n"
-#~ msgstr "%s: %s\n"
-
-#~ msgid "%s: "
-#~ msgstr "%s: "
-
-#~ msgid "Software"
-#~ msgstr "Sagteware"
-
-#~ msgid "Developers"
-#~ msgstr "Ontwikkelaars"
-
-#~ msgid "Error writing file '%s': %s"
-#~ msgstr "Fout met skryf van lêer '%s': %s"
-
-#~ msgid "The End!"
-#~ msgstr "Die Einde!"
-
-#~ msgid "Accessories"
-#~ msgstr "Bykomstighede"
-
-#~ msgid "Accessories menu"
-#~ msgstr "Bykomstighede-kieslys"
-
-#~ msgid "Applications"
-#~ msgstr "Toepassings"
-
-#~ msgid "Programming"
-#~ msgstr "Programmering"
-
-#~ msgid "Tools for software development"
-#~ msgstr "Nutsgoed vir sagteware-ontwikkeling"
-
-#~ msgid "Games"
-#~ msgstr "Speletjies"
-
-#~ msgid "Games menu"
-#~ msgstr "Speletjies-kieslys"
-
-#~ msgid "Graphics"
-#~ msgstr "Grafika"
-
-#~ msgid "Graphics menu"
-#~ msgstr "Grafika-kieslys"
-
-#~ msgid "Internet"
-#~ msgstr "Internet"
-
-#~ msgid "Programs for Internet and networks"
-#~ msgstr "Programme vir Internet en netwerke"
-
-#~ msgid "Multimedia"
-#~ msgstr "Multimedia"
-
-#~ msgid "Multimedia menu"
-#~ msgstr "Multimedia-kieslys"
-
-#~ msgid "Office"
-#~ msgstr "Kantoor"
-
-#~ msgid "Office Applications"
-#~ msgstr "Kantoortoepassings"
-
-#~ msgid "Applications without a category"
-#~ msgstr "Toepassings sonder 'n kategorie"
-
-#~ msgid "Other"
-#~ msgstr "Ander"
-
-#~ msgid "Programs"
-#~ msgstr "Programme"
-
-#~ msgid "Programs menu"
-#~ msgstr "Programme-kieslys"
-
-#~ msgid "Desktop Preferences"
-#~ msgstr "Werkareavoorkeure"
-
-#~ msgid "Preferences that affect the whole MATE desktop"
-#~ msgstr "Voorkeure wat die hele MATE-werkarea sal affekteer"
-
-#~ msgid "System Tools"
-#~ msgstr "Stelselnutsgoed"
-
-#~ msgid "System menu"
-#~ msgstr "Stelselkieslys"
+#: ../libmate-desktop/mate-desktop-utils.c:133
+msgid "Cannot find a terminal, using xterm, even if it may not work"
+msgstr ""
+
+#. Translators: a CRTC is a CRT Controller (this is X terminology).
+#: ../libmate-desktop/mate-rr.c:444
+#, c-format
+msgid "could not get the screen resources (CRTCs, outputs, modes)"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr.c:464
+#, c-format
+msgid "unhandled X error while getting the range of screen sizes"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr.c:470
+#, c-format
+msgid "could not get the range of screen sizes"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr.c:715
+#, c-format
+msgid "RANDR extension is not present"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr.c:1092
+#, c-format
+msgid "could not get information about output %d"
+msgstr ""
+
+#. Translators: the "position", "size", and "maximum"
+#. * words here are not keywords; please translate them
+#. * as usual.  A CRTC is a CRT Controller (this is X terminology)
+#: ../libmate-desktop/mate-rr.c:1479
+#, c-format
+msgid ""
+"requested position/size for CRTC %d is outside the allowed limit: "
+"position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr.c:1515
+#, c-format
+msgid "could not set the configuration for CRTC %d"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr.c:1631
+#, c-format
+msgid "could not get information about CRTC %d"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:501
+msgid "Laptop"
+msgstr "Skootrekenaar"
+
+#: ../libmate-desktop/mate-rr-config.c:1162
+#, c-format
+msgid ""
+"none of the saved display configurations matched the active configuration"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1423
+#, c-format
+msgid "CRTC %d cannot drive output %s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1430
+#, c-format
+msgid "output %s does not support mode %dx%d@%dHz"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1441
+#, c-format
+msgid "CRTC %d does not support rotation=%s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1455
+#, c-format
+msgid ""
+"output %s does not have the same parameters as another cloned output:\n"
+"existing mode = %d, new mode = %d\n"
+"existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
+"existing rotation = %s, new rotation = %s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1470
+#, c-format
+msgid "cannot clone to output %s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1639
+#, c-format
+msgid "Trying modes for CRTC %d\n"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1663
+#, c-format
+msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1710
+#, c-format
+msgid ""
+"could not assign CRTCs to outputs:\n"
+"%s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1714
+#, c-format
+msgid ""
+"none of the selected modes were compatible with the possible modes:\n"
+"%s"
+msgstr ""
+
+#. Translators: the "requested", "minimum", and
+#. * "maximum" words here are not keywords; please
+#. * translate them as usual.
+#: ../libmate-desktop/mate-rr-config.c:1796
+#, c-format
+msgid ""
+"required virtual size does not fit available size: requested=(%d, %d), "
+"minimum=(%d, %d), maximum=(%d, %d)"
+msgstr ""
+
+#. Keep this string in sync with mate-control-center/capplets/display/xrandr-
+#. capplet.c:get_display_name()
+#. Translators:  this is the feature where what you see on your laptop's
+#. * screen is the same as your external monitor.  Here, "Mirror" is being
+#. * used as an adjective, not as a verb.  For example, the Spanish
+#. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
+#. 
+#: ../libmate-desktop/mate-rr-labeler.c:212
+msgid "Mirror Screens"
+msgstr ""

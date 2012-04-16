@@ -1,27 +1,23 @@
-# mate-desktop Finnish translation
-# Suomennos: http://mate-fi.sourceforge.net/
-# Copyright (C) 2002-2008 Free Software Foundation, Inc.
-#
-# Ville Hautamäki <villeh@cs.joensuu.fi>, 1998, 2000
-# Mikko Rauhala <mjr@iki.fi>, 1999
-# Pauli Virtanen <pauli.virtanen@hut.fi>, 2000-2005
-# Ilkka Tuohela <hile@iki.fi>, 2005-2009
-# Tommi Vainikainen <thv@iki.fi>, 2009-2010
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-18 15:05+0200\n"
-"PO-Revision-Date: 2010-03-18 15:04+0200\n"
-"Last-Translator: Tommi Vainikainen <thv@iki.fi>\n"
-"Language-Team: Finnish <mate-fi-laatu@lists.sourceforge.net>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2012-04-06 11:17+0200\n"
+"PO-Revision-Date: 2012-04-06 09:18+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
-#: ../mate-about/mate-about.in:60
 msgid "About MATE"
 msgstr "Tietoja Matesta"
 
@@ -29,137 +25,48 @@ msgstr "Tietoja Matesta"
 msgid "Learn more about MATE"
 msgstr "Opi lisää Matesta"
 
-#: ../mate-about/mate-about.in:61
-msgid "News"
-msgstr "Uutiset"
-
-#: ../mate-about/mate-about.in:62
-msgid "MATE Library"
-msgstr "Mate-kirjasto"
-
-#: ../mate-about/mate-about.in:63
-msgid "Friends of MATE"
-msgstr "Maten ystävät"
-
-#: ../mate-about/mate-about.in:64
-msgid "Contact"
-msgstr "Yhteystiedot"
-
-#: ../mate-about/mate-about.in:68
-msgid "The Mysterious GEGL"
-msgstr "Salaperäinen GEGL"
-
-#: ../mate-about/mate-about.in:69
-msgid "The Squeaky Rubber MATE"
-msgstr "Vinkuva kumitonttu"
-
-#: ../mate-about/mate-about.in:70
-msgid "Wanda The MATE Fish"
-msgstr "Wanda, Mate-kala"
-
-#: ../mate-about/mate-about.in:567
-msgid "_Open URL"
-msgstr "_Avaa URL"
-
-#: ../mate-about/mate-about.in:574
-msgid "_Copy URL"
-msgstr "_Kopioi URL"
-
-#: ../mate-about/mate-about.in:826
-msgid "About the MATE Desktop"
-msgstr "Tietoja Matesta"
-
-#: ../mate-about/mate-about.in:859
-msgid "%(name)s: %(value)s"
-msgstr "%(name)s: %(value)s"
-
-#: ../mate-about/mate-about.in:873
-msgid "Welcome to the MATE Desktop"
-msgstr "Tervetuloa käyttämään Mate-työpöytäympäristöä"
-
-#: ../mate-about/mate-about.in:890
-msgid "Brought to you by:"
-msgstr "Työn ovat tehneet:"
-
-#: ../mate-about/mate-about.in:914
-msgid "<b>%(name)s:</b> %(value)s"
-msgstr "<b>%(name)s:</b> %(value)s"
-
-#: ../mate-about/mate-about.in:975
-msgid "Version"
-msgstr "Versio"
-
-#: ../mate-about/mate-about.in:977
-msgid "Distributor"
-msgstr "Jakelija"
-
-#: ../mate-about/mate-about.in:979
-msgid "Build Date"
-msgstr "Kääntöpäivä"
-
-#: ../mate-about/mate-about.in:1024
-msgid "Display information on this MATE version"
-msgstr "Näytä tietoja tästä Maten versiosta"
-
-#: ../mate-version.xml.in.in.h:1
+#: ../mate-about/mate-about.h:62
 msgid ""
-"MATE also includes a complete development platform for applications "
-"programmers, allowing the creation of powerful and complex applications."
+"MATE provides an intuitive and attractive desktop to Linux users using "
+"traditional metaphors."
 msgstr ""
-"Matessa on myös täydellinen ohjelmistokehitysympäristö, jolla voi luoda "
-"tehokkaita ja mutkikkaita ohjelmia."
 
-#: ../mate-version.xml.in.in.h:2
+#: ../mate-about/mate-about.h:65
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
-"manager, web browser, menus, and many applications."
+"manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"Mateen kuuluu suurin osa siitä, mitä tietokoneen ruudulla yleensä näkyy, "
-"kuten tiedostonhallinta, WWW-selain, valikot ja monet sovellukset."
 
-#. NOTE TO AUTHORS: Do not put anything in the following paragraphs that
-#. will be substituted by the configure script. Otherwise you will break
-#. the translations.
-#: ../mate-version.xml.in.in.h:6
+#: ../mate-about/mate-about.h:68
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
-"Mate on Vapaa, käytettävä, vakaa ja esteetön työpöytäympäristö Unix-"
-"tyyppisille käyttöjärjestelmille."
 
-#: ../mate-version.xml.in.in.h:7
+#: ../mate-about/mate-about.h:71
 msgid ""
-"MATE's focus on usability and accessibility, regular release cycle, and "
-"strong corporate backing make it unique among Free Software desktops."
+"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
+" since it was started in 1997; many more have contributed in other important"
+" ways, including translations, documentation, and quality assurance."
 msgstr ""
-"Maten keskittyminen käytettävyyteen ja esteettömyyteen, säännöllinen "
-"julkaisutahti ja yhtiöiden tuki tekee Matesta ainutlaatuisen "
-"vapaaohjelmistoihin perustuvien työpöytien joukossa."
 
-#: ../mate-version.xml.in.in.h:8
+#: ../mate-about/mate-about.h:75
 msgid ""
-"MATE's greatest strength is our strong community. Virtually anyone, with or "
-"without coding skills, can contribute to making MATE better."
+"GNOME 2 was the most popular Linux desktop but it’s no longer available... "
+"MATE is here to provide that same desktop to you!"
 msgstr ""
-"Maten suurin vahvuus on vahva yhteisö. Käytännössä kuka tahansa, "
-"ohjelmointitaitoinen tai ei, voi osallistua Maten kehittämiseen."
 
-#: ../mate-version.xml.in.in.h:9
+#: ../mate-about/mate-about.h:78
 msgid ""
-"Hundreds of people have contributed code to MATE since it was started in "
-"1997; many more have contributed in other important ways, including "
-"translations, documentation, and quality assurance."
+"The name “MATE” comes from yerba maté, a species of holly native to "
+"subtropical South America. Its leaves contain caffeine and are used to make "
+"infusions and a beverage called mate."
 msgstr ""
-"Sadat ihmiset ovat ohjelmoineet Maten hyväksi projektin käynnistyttyä "
-"vuonna 1997, ja monet muut ovat osallistuneet muilla tärkeillä tavoin, kuten "
-"kääntämällä sitä toisille kielille, kirjoittamalla ohjeita ja tarkkailemalla "
-"laatua."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: ../libmate-desktop/display-name.c:265
+#: ../libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Tuntematon"
@@ -180,7 +87,7 @@ msgstr "Tiedoston ”%s” kelaus epäonnistui: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3524
+#: ../libmate-desktop/mate-desktop-item.c:3523
 msgid "No name"
 msgstr "Ei nimeä"
 
@@ -199,32 +106,32 @@ msgstr "Tiedostoa ”%s” ei löytynyt"
 msgid "No filename to save to"
 msgstr "Ei tiedostonimeä, johon tallentaa"
 
-#: ../libmate-desktop/mate-desktop-item.c:1822
+#: ../libmate-desktop/mate-desktop-item.c:1828
 #, c-format
 msgid "Starting %s"
 msgstr "%s käynnistyy"
 
-#: ../libmate-desktop/mate-desktop-item.c:2058
+#: ../libmate-desktop/mate-desktop-item.c:2062
 #, c-format
 msgid "No URL to launch"
 msgstr "Ei käynnistettävää URL:ia"
 
-#: ../libmate-desktop/mate-desktop-item.c:2074
+#: ../libmate-desktop/mate-desktop-item.c:2078
 #, c-format
 msgid "Not a launchable item"
 msgstr "Ei käynnistettävää kohdetta"
 
-#: ../libmate-desktop/mate-desktop-item.c:2084
+#: ../libmate-desktop/mate-desktop-item.c:2088
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Ei käynnistettävää komentoa (exec)"
 
-#: ../libmate-desktop/mate-desktop-item.c:2097
+#: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Virheellinen käynnistettävä komento (exec)"
 
-#: ../libmate-desktop/mate-desktop-item.c:3581
+#: ../libmate-desktop/mate-desktop-item.c:3580
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Tuntematon merkistö: %s"
@@ -233,6 +140,7 @@ msgstr "Tuntematon merkistö: %s"
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "Päätettä ei löytynyt, käytetään xtermiä vaikka se ei ehkä toimi"
 
+#. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:444
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
@@ -253,7 +161,7 @@ msgstr "näytön kokoluetteloa ei saatu noudettua"
 msgid "RANDR extension is not present"
 msgstr "RANDR-laajennos ei ole saatavilla"
 
-#: ../libmate-desktop/mate-rr.c:1034
+#: ../libmate-desktop/mate-rr.c:1092
 #, c-format
 msgid "could not get information about output %d"
 msgstr "Tietoja ulostulosta %d ei saatu."
@@ -261,21 +169,19 @@ msgstr "Tietoja ulostulosta %d ei saatu."
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1421
+#: ../libmate-desktop/mate-rr.c:1479
 #, c-format
 msgid ""
-"requested position/size for CRTC %d is outside the allowed limit: position=(%"
-"d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr ""
-"pyydetty sijainti tai koko CRTC:lle %d ei ole sallituissa rajoissa: sijainti="
-"(%d,%d), koko=(%d,%d), maksimi=(%d,%d)"
+"requested position/size for CRTC %d is outside the allowed limit: "
+"position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
+msgstr "pyydetty sijainti tai koko CRTC:lle %d ei ole sallituissa rajoissa: sijainti=(%d,%d), koko=(%d,%d), maksimi=(%d,%d)"
 
-#: ../libmate-desktop/mate-rr.c:1457
+#: ../libmate-desktop/mate-rr.c:1515
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "Asetuksia CRTC:lle %d ei voitu asettaa"
 
-#: ../libmate-desktop/mate-rr.c:1573
+#: ../libmate-desktop/mate-rr.c:1631
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "Tietoja CRTC:stä %d ei saatu."
@@ -288,152 +194,78 @@ msgstr "Kannettava"
 #, c-format
 msgid ""
 "none of the saved display configurations matched the active configuration"
+msgstr "yksikään tallennetuista näyttöasetuksista ei vastaa aktiivista määrittelyä"
+
+#: ../libmate-desktop/mate-rr-config.c:1423
+#, c-format
+msgid "CRTC %d cannot drive output %s"
 msgstr ""
-"yksikään tallennetuista näyttöasetuksista ei vastaa aktiivista määrittelyä"
+
+#: ../libmate-desktop/mate-rr-config.c:1430
+#, c-format
+msgid "output %s does not support mode %dx%d@%dHz"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1441
+#, c-format
+msgid "CRTC %d does not support rotation=%s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1455
+#, c-format
+msgid ""
+"output %s does not have the same parameters as another cloned output:\n"
+"existing mode = %d, new mode = %d\n"
+"existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
+"existing rotation = %s, new rotation = %s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1470
+#, c-format
+msgid "cannot clone to output %s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1639
+#, c-format
+msgid "Trying modes for CRTC %d\n"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1663
+#, c-format
+msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1710
+#, c-format
+msgid ""
+"could not assign CRTCs to outputs:\n"
+"%s"
+msgstr ""
+
+#: ../libmate-desktop/mate-rr-config.c:1714
+#, c-format
+msgid ""
+"none of the selected modes were compatible with the possible modes:\n"
+"%s"
+msgstr ""
 
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1689
+#: ../libmate-desktop/mate-rr-config.c:1796
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
-msgstr ""
-"vaadittu virtuaalinen koko ei mahdu saatavilla olevaan kokoon: pyydetty=(%d,%"
-"d), minimi=(%d,%d), maksimi=(%d,%d)"
+msgstr "vaadittu virtuaalinen koko ei mahdu saatavilla olevaan kokoon: pyydetty=(%d,%d), minimi=(%d,%d), maksimi=(%d,%d)"
 
-#: ../libmate-desktop/mate-rr-config.c:1703
-#, c-format
-msgid "could not find a suitable configuration of screens"
-msgstr "sopivaa näyttöasetusten määrittelyä ei löytynyt"
-
-#. Keep this string in sync with mate-control-center/capplets/display/xrandr-capplet.c:get_display_name()
+#. Keep this string in sync with mate-control-center/capplets/display/xrandr-
+#. capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#.
+#. 
 #: ../libmate-desktop/mate-rr-labeler.c:212
 msgid "Mirror Screens"
 msgstr "Peilatut näytöt"
-
-#~ msgid "Directory"
-#~ msgstr "Kansio"
-
-#~ msgid "Application"
-#~ msgstr "Sovellus"
-
-#~ msgid "Link"
-#~ msgstr "Linkki"
-
-#~ msgid "FSDevice"
-#~ msgstr "Levyjärjestelmä"
-
-#~ msgid "MIME Type"
-#~ msgstr "MIME-tyyppi"
-
-#~ msgid "Service"
-#~ msgstr "Palvelu"
-
-#~ msgid "ServiceType"
-#~ msgstr "Palvelutyyppi"
-
-#~ msgid "_URL:"
-#~ msgstr "_URL:"
-
-#~ msgid "Comm_and:"
-#~ msgstr "_Komento:"
-
-#~ msgid "_Name:"
-#~ msgstr "_Nimi:"
-
-#~ msgid "_Generic name:"
-#~ msgstr "_Yleinen nimi:"
-
-#~ msgid "Co_mment:"
-#~ msgstr "Ko_mmentti:"
-
-#~ msgid "Browse"
-#~ msgstr "Selaa"
-
-#~ msgid "_Type:"
-#~ msgstr "_Tyyppi:"
-
-#~ msgid "_Icon:"
-#~ msgstr "Ku_vake:"
-
-#~ msgid "Browse icons"
-#~ msgstr "Selaa kuvakkeita"
-
-#~ msgid "Run in t_erminal"
-#~ msgstr "Suorita _päätteessä"
-
-#~ msgid "Language"
-#~ msgstr "Kieli"
-
-#~ msgid "Name"
-#~ msgstr "Nimi"
-
-#~ msgid "Generic name"
-#~ msgstr "Yleinen nimi"
-
-#~ msgid "Comment"
-#~ msgstr "Kommentti"
-
-#~ msgid "_Try this before using:"
-#~ msgstr "_Yritä tätä ennen käyttöä:"
-
-#~ msgid "_Documentation:"
-#~ msgstr "O_hjeet:"
-
-#~ msgid "_Name/Comment translations:"
-#~ msgstr "_Nimen ja kommentin käännökset:"
-
-#~ msgid "_Add/Set"
-#~ msgstr "_Lisää tai aseta"
-
-#~ msgid "Add or Set Name/Comment Translations"
-#~ msgstr "Lisää tai aseta nimen tai kommentin käännökset"
-
-#~ msgid "Re_move"
-#~ msgstr "Po_ista"
-
-#~ msgid "Remove Name/Comment Translation"
-#~ msgstr "Poista nimen tai kommentin käännökset"
-
-#~ msgid "Basic"
-#~ msgstr "Perusasetukset"
-
-#~ msgid "Advanced"
-#~ msgstr "Lisäasetukset"
-
-#~ msgid "_Show Hints at Startup"
-#~ msgstr "_Näytä vihjeet käynnistyksen yhteydessä"
-
-#~ msgid "Could not locate the directory with header images."
-#~ msgstr "Kansiota, jossa otsakekuvat ovat, ei löytynyt."
-
-#~ msgid "Failed to open directory with header images: %s"
-#~ msgstr "Otsakekuvat sisältävän kansion avaaminen ei onnistunut: %s"
-
-#~ msgid "Unable to load header image: %s"
-#~ msgstr "Otsakekuvan lataaminen ei onnistunut: %s"
-
-#~ msgid "Could not locate the MATE logo."
-#~ msgstr "Maten logoa ei löytynyt."
-
-#~ msgid "%s: %s\n"
-#~ msgstr "%s: %s\n"
-
-#~ msgid "%s: "
-#~ msgstr "%s: "
-
-#~ msgid "Software"
-#~ msgstr "Ohjelmistot"
-
-#~ msgid "Developers"
-#~ msgstr "Kehittäjät"
-
-#~ msgid "The End!"
-#~ msgstr "Loppu!"
