@@ -43,6 +43,10 @@
 	#include <getopt.h>
 #endif
 
+#if !defined(N_)
+	#define N_(s) s
+#endif
+
 //class mate_about
 //{
 	const char* program_name = "MATE Desktop Environment";
