@@ -300,14 +300,6 @@ MateBGCrossfade* mate_bg_crossfade_new(int width, int height)
 	gboolean mate_bg_crossfade_set_start_pixmap(MateBGCrossfade* fade, GdkPixmap* pixmap)
 #endif
 {
-/* I am disabling this because background fade break the mate-file-manager
- * Estoy deshabilitando esto por que el efecto de desvanecimiento del fondo de pantalla, hace
- * el mate-file-manager se cierre por un evento de BadDrawing enviado por Xorg.
- * Y hasta que no sea solucionado, no es tan indispensable esta funcion.
- * Pero sospecho que la funcion tile_pixmap tiene algo que ver...
- */
-return FALSE;
-
 	g_return_val_if_fail (MATE_IS_BG_CROSSFADE (fade), FALSE);
 
 	if (fade->priv->fading_pixmap != NULL) {
