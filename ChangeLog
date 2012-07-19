@@ -1,3 +1,54 @@
+commit 42af5e81f79d8da0b92fa31071824c5b19da3a93
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Jul 19 19:05:50 2012 -0400
+
+    Removed the --disable-nyancat configure flag.
+
+ configure.in |   13 -------------
+ 1 file changed, 13 deletions(-)
+
+commit 6bb8b0f914704056460fdf7716d92c0a2ff923cc
+Merge: 568a092 003aa8f
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Jul 19 15:23:42 2012 -0700
+
+    Merge pull request #17 from perberos/master
+    
+    my first pull
+
+commit 003aa8f9465d4a05c54bf8017ecfa630f90c5bec
+Author: Perberos <perberos@gmail.com>
+Date:   Thu Jul 19 17:35:10 2012 -0300
+
+    removing nyancat due copyleft incompatible
+
+ distro/archlinux/PKGBUILD           |    3 +-
+ mate-about/Makefile.am              |    3 --
+ mate-about/mate-about.c             |   84 +----------------------------------
+ mate-about/nyan-cat.gif             |  Bin 24975 -> 0 bytes
+ mate-about/nyan-cat_navideno_v3.png |  Bin 1110 -> 0 bytes
+ 5 files changed, 2 insertions(+), 88 deletions(-)
+
+commit 78f1e23185a2853a41e536caf07f9c6dc1208ecd
+Merge: d42fb23 568a092
+Author: Perberos <perberos@gmail.com>
+Date:   Thu Jul 19 14:17:16 2012 -0700
+
+    Merge pull request #1 from mate-desktop/master
+    
+    up
+
+commit 568a0926c1c8c3798f931add5e71edf480ebf3cd
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Jul 5 13:55:50 2012 -0400
+
+    Preparing for 1.4.0 release.
+
+ ChangeLog           |  279 ++++++++++++++++++++++++++++++++++++++++++++++++---
+ configure.in        |    2 +-
+ distro/ubuntu/build |   29 ------
+ 3 files changed, 266 insertions(+), 44 deletions(-)
+
 commit d42fb230451217ce424a7d58147ad0b90da93480
 Author: Stefano Karapetsas <stefano@karapetsas.com>
 Date:   Fri Jun 29 14:38:45 2012 +0200
