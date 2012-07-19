@@ -233,19 +233,6 @@ AC_SUBST(GETTEXT_PACKAGE)
 
 AM_GLIB_GNU_GETTEXT
 
-
-dnl ============================================================================
-dnl | にゃあ にゃあ にゃあ - Pop Tart Cat
-dnl | More info on <http://en.wikipedia.org/wiki/Nyan_Cat>
-dnl ============================================================================
-AC_ARG_ENABLE([nyancat],
-	[AS_HELP_STRING([--disable-nyancat], [disable the use of nyan cat as logo])],
-	[], [enable_nyancat=yes])
-
-if test "x$enable_nyancat" = "xno"; then
-	MATE_ABOUT_CFLAGS="$MATE_ABOUT_CFLAGS -DDISABLE_NYANCAT=1"
-fi
-
 dnl ============================================================================
 dnl | se comprueba unique
 dnl | de lo contrario, se intenta utilizar libunique
