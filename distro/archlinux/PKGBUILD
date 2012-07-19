@@ -22,8 +22,7 @@ build() {
         --disable-static \
         --disable-scrollkeeper \
         --disable-startup-notification \
-        --enable-unique \
-        --disable-nyancat || return 1
+        --enable-unique || return 1
     # --with-gtk=3.0
     make || return 1
 }
