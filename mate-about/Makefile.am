@@ -11,6 +11,9 @@ INCLUDES = \
 
 @INTLTOOL_DESKTOP_RULE@
 
+pixmapdir  = $(datadir)/pixmaps
+pixmap_DATA = gnu-cat_navideno_v3.png gnu-cat.gif
+
 desktopdir = $(datadir)/applications
 desktop_in_files = mate-about.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
