@@ -78,6 +78,7 @@ struct _FileSize {
  * bad dithering when tiling the gradient
  */
 #define GRADIENT_PIXMAP_TILE_SIZE 128
+#define THUMBNAIL_SIZE 256
 
 typedef struct FileCacheEntry FileCacheEntry;
 #define CACHE_SIZE 4
@@ -3121,7 +3122,8 @@ create_thumbnail_for_filename (MateDesktopThumbnailFactory *factory,
 			int orig_width = gdk_pixbuf_get_width (orig);
 			int orig_height = gdk_pixbuf_get_height (orig);
 
-			result = pixbuf_scale_to_fit (orig, 128, 128);
+			result = pixbuf_scale_to_fit (orig, THUMBNAIL_SIZE, THUMBNAIL_SIZE);
+
 
 			g_object_set_data_full (G_OBJECT (result), "mate-thumbnail-height",
 						g_strdup_printf ("%d", orig_height), g_free);
