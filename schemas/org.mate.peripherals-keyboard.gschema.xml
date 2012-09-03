@@ -1,0 +1,39 @@
+<schemalist>
+  <schema id="org.mate.peripherals-keyboard" path="/desktop/mate/peripherals/keyboard/">
+    <key name="repeat" type="b">
+      <default>true</default>
+    </key>
+    <key name="click" type="b">
+      <default>true</default>
+    </key>
+    <key name="rate" type="i">
+      <default>30</default>
+    </key>
+    <key name="delay" type="i">
+      <default>500</default>
+    </key>
+    <key name="click-volume" type="i">
+      <default>0</default>
+    </key>
+    <key name="bell-mode" type="s">
+      <default>'on'</default>
+      <description>possible values are "on", "off", and "custom".</description>
+    </key>
+    <key name="bell-pitch" type="i">
+      <default>400</default>
+    </key>
+    <key name="bell-duration" type="i">
+      <default>100</default>
+    </key>
+    <key name="bell-custom-file" type="s">
+      <default>''</default>
+      <summary>Keyboard Bell Custom Filename</summary>
+      <description>File name of the bell sound to be played.</description>
+    </key>
+    <key name="remember-numlock-state" type="b">
+      <default>true</default>
+      <summary>Remember NumLock state</summary>
+      <description>When set to true, MATE will remember the state of the NumLock LED between sessions.</description>
+    </key>
+  </schema>
+</schemalist>
