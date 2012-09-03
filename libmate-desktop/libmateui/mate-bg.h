@@ -30,7 +30,7 @@
 #endif
 
 #include <gdk/gdk.h>
-#include <mateconf/mateconf-client.h>
+#include <gio/gio.h>
 #include <libmateui/mate-desktop-thumbnail.h>
 #include <libmateui/mate-bg-crossfade.h>
 
@@ -45,7 +45,7 @@ extern "C" {
 #define MATE_IS_BG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  MATE_TYPE_BG))
 #define MATE_BG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  MATE_TYPE_BG, MateBGClass))
 
-#define MATE_BG_KEY_DIR "/desktop/mate/background"
+#define MATE_BG_SCHEMA "org.mate.background"
 
 typedef struct _MateBG MateBG;
 typedef struct _MateBGClass MateBGClass;
@@ -67,10 +67,8 @@ typedef enum {
 
 GType            mate_bg_get_type              (void);
 MateBG *        mate_bg_new                   (void);
-void             mate_bg_load_from_preferences (MateBG               *bg,
-						 MateConfClient           *client);
-void             mate_bg_save_to_preferences   (MateBG               *bg,
-						 MateConfClient           *client);
+void             mate_bg_load_from_preferences (MateBG               *bg);
+void             mate_bg_save_to_preferences   (MateBG               *bg);
 /* Setters */
 void             mate_bg_set_filename          (MateBG               *bg,
 						 const char            *filename);

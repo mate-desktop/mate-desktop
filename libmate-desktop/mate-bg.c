@@ -41,19 +41,19 @@ Author: Soren Sandmann <sandmann@redhat.com>
 
 #include <cairo.h>
 
-#include <mateconf/mateconf-client.h>
+#include <gio/gio.h>
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
 #include <libmateui/mate-bg.h>
 #include <libmateui/mate-bg-crossfade.h>
 
-#define BG_KEY_DRAW_BACKGROUND    MATE_BG_KEY_DIR "/draw_background"
-#define BG_KEY_PRIMARY_COLOR      MATE_BG_KEY_DIR "/primary_color"
-#define BG_KEY_SECONDARY_COLOR    MATE_BG_KEY_DIR "/secondary_color"
-#define BG_KEY_COLOR_TYPE         MATE_BG_KEY_DIR "/color_shading_type"
-#define BG_KEY_PICTURE_PLACEMENT  MATE_BG_KEY_DIR "/picture_options"
-#define BG_KEY_PICTURE_OPACITY    MATE_BG_KEY_DIR "/picture_opacity"
-#define BG_KEY_PICTURE_FILENAME   MATE_BG_KEY_DIR "/picture_filename"
+#define BG_KEY_DRAW_BACKGROUND    "draw-background"
+#define BG_KEY_PRIMARY_COLOR      "primary-color"
+#define BG_KEY_SECONDARY_COLOR    "secondary-color"
+#define BG_KEY_COLOR_TYPE         "color-shading-type"
+#define BG_KEY_PICTURE_PLACEMENT  "picture-options"
+#define BG_KEY_PICTURE_OPACITY    "picture-opacity"
+#define BG_KEY_PICTURE_FILENAME   "picture-filename"
 
 /* We keep the large pixbufs around if the next update
    in the slideshow is less than 60 seconds away */
@@ -221,59 +221,6 @@ color_to_string (const GdkColor *color)
 				color->blue >> 8);
 }
 
-static MateConfEnumStringPair placement_lookup[] = {
-	{ MATE_BG_PLACEMENT_CENTERED,    "centered" },
-	{ MATE_BG_PLACEMENT_FILL_SCREEN, "stretched" },
-	{ MATE_BG_PLACEMENT_SCALED,      "scaled" },
-	{ MATE_BG_PLACEMENT_ZOOMED,      "zoom" },
-	{ MATE_BG_PLACEMENT_TILED,       "wallpaper" },
-	{ MATE_BG_PLACEMENT_SPANNED,       "spanned" },
-	{ 0, NULL }
-};
-
-static MateConfEnumStringPair color_type_lookup[] = {
-	{ MATE_BG_COLOR_SOLID,      "solid" },
-	{ MATE_BG_COLOR_H_GRADIENT, "horizontal-gradient" },
-	{ MATE_BG_COLOR_V_GRADIENT, "vertical-gradient" },
-	{ 0, NULL }
-};
-
-static void
-color_type_from_string (const char       *string,
-			MateBGColorType *color_type)
-{
-	*color_type = MATE_BG_COLOR_SOLID;
-
-	if (string) {
-		mateconf_string_to_enum (color_type_lookup,
-				      string, (int *)color_type);
-	}
-}
-
-static const char *
-color_type_to_string (MateBGColorType color_type)
-{
-	return mateconf_enum_to_string (color_type_lookup, color_type);
-}
-
-static void
-placement_from_string (const char       *string,
-		       MateBGPlacement *placement)
-{
-	*placement = MATE_BG_PLACEMENT_ZOOMED;
-
-	if (string) {
-		mateconf_string_to_enum (placement_lookup,
-				      string, (int *)placement);
-	}
-}
-
-static const char *
-placement_to_string (MateBGPlacement placement)
-{
-	return mateconf_enum_to_string (placement_lookup, placement);
-}
-
 static gboolean
 do_changed (MateBG *bg)
 {
@@ -343,21 +290,22 @@ queue_transitioned (MateBG *bg)
 }
 
 void
-mate_bg_load_from_preferences (MateBG     *bg,
-				MateConfClient *client)
+mate_bg_load_from_preferences (MateBG *bg)
 {
 	char    *tmp;
 	char    *filename;
 	MateBGColorType ctype;
 	GdkColor c1, c2;
 	MateBGPlacement placement;
+	GSettings *settings;
 
 	g_return_if_fail (MATE_IS_BG (bg));
-	g_return_if_fail (client != NULL);
+	
+	settings = g_settings_new (MATE_BG_SCHEMA);
 
 	/* Filename */
 	filename = NULL;
-	tmp = mateconf_client_get_string (client, BG_KEY_PICTURE_FILENAME, NULL);
+	tmp = g_settings_get_string(settings, BG_KEY_PICTURE_FILENAME);
 	if (tmp != NULL && *tmp != '\0') {
 		if (g_utf8_validate (tmp, -1, NULL) &&
 		    g_file_test (tmp, G_FILE_TEST_EXISTS)) {
@@ -369,41 +317,32 @@ mate_bg_load_from_preferences (MateBG     *bg,
 		/* Fall back to default background if filename was set
 		   but no longer exists */
 		if (!g_file_test (filename, G_FILE_TEST_EXISTS)) {
-			MateConfValue *default_value;
 
 			g_free (filename);
 			filename = NULL;
+			
+			/* FIXME: default value? */
 
-			default_value =
-				mateconf_client_get_default_from_schema (client,
-								      BG_KEY_PICTURE_FILENAME,
-								      NULL);
-			if (default_value != NULL) {
-				filename = g_strdup (mateconf_value_get_string (default_value));
-				mateconf_value_free (default_value);
-			}
 		}
 	}
 	g_free (tmp);
 
 	/* Colors */
-	tmp = mateconf_client_get_string (client, BG_KEY_PRIMARY_COLOR, NULL);
+	tmp = g_settings_get_string (settings, BG_KEY_PRIMARY_COLOR);
 	color_from_string (tmp, &c1);
 	g_free (tmp);
 
-	tmp = mateconf_client_get_string (client, BG_KEY_SECONDARY_COLOR, NULL);
+	tmp = g_settings_get_string (settings, BG_KEY_SECONDARY_COLOR);
 	color_from_string (tmp, &c2);
 	g_free (tmp);
 
 	/* Color type */
-	tmp = mateconf_client_get_string (client, BG_KEY_COLOR_TYPE, NULL);
-	color_type_from_string (tmp, &ctype);
-	g_free (tmp);
+	ctype = g_settings_get_enum (settings, BG_KEY_COLOR_TYPE);
 
 	/* Placement */
-	tmp = mateconf_client_get_string (client, BG_KEY_PICTURE_PLACEMENT, NULL);
-	placement_from_string (tmp, &placement);
-	g_free (tmp);
+	placement = g_settings_get_enum (settings, BG_KEY_PICTURE_PLACEMENT);
+
+	g_object_unref (settings);
 
 	mate_bg_set_color (bg, ctype, &c1, &c2);
 	mate_bg_set_placement (bg, placement);
@@ -413,34 +352,38 @@ mate_bg_load_from_preferences (MateBG     *bg,
 }
 
 void
-mate_bg_save_to_preferences (MateBG     *bg,
-			      MateConfClient *client)
+mate_bg_save_to_preferences (MateBG     *bg)
 {
-	const char *color_type;
-	const char *placement;
-        const gchar *filename;
-        gchar *primary;
-        gchar *secondary;
+	MateBGColorType color_type;
+	MateBGPlacement placement;
+	const gchar *filename;
+	gchar *primary;
+	gchar *secondary;
+    GSettings *settings;
+
+	settings = g_settings_new (MATE_BG_SCHEMA);
 
 	primary = color_to_string (&bg->primary);
 	secondary = color_to_string (&bg->secondary);
 
-	color_type = color_type_to_string (bg->color_type);
+	color_type = bg->color_type;
 
-        if (bg->filename) {
+    if (bg->filename) {
 		filename = bg->filename;
-		placement = placement_to_string (bg->placement);
-        }
-        else {
-                filename = "(none)";
-                placement = "none";
-        }
+		placement = bg->placement;
+    }
+    else {
+		filename = "(none)";
+		placement = MATE_BG_PLACEMENT_ZOOMED;
+    }
 
-	mateconf_client_set_string (client, BG_KEY_PICTURE_FILENAME, filename, NULL);
-        mateconf_client_set_string (client, BG_KEY_PRIMARY_COLOR, primary, NULL);
-        mateconf_client_set_string (client, BG_KEY_SECONDARY_COLOR, secondary, NULL);
-        mateconf_client_set_string (client, BG_KEY_COLOR_TYPE, color_type, NULL);
-	mateconf_client_set_string (client, BG_KEY_PICTURE_PLACEMENT, placement, NULL);
+	g_settings_set_string (settings, BG_KEY_PICTURE_FILENAME, filename);
+    g_settings_set_string (settings, BG_KEY_PRIMARY_COLOR, primary);
+    g_settings_set_string (settings, BG_KEY_SECONDARY_COLOR, secondary);
+    g_settings_set_enum (settings, BG_KEY_COLOR_TYPE, color_type);
+	g_settings_set_enum (settings, BG_KEY_PICTURE_PLACEMENT, placement);
+
+	g_object_unref (settings);
 
 	g_free (primary);
 	g_free (secondary);

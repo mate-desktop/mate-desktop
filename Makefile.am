@@ -1,8 +1,9 @@
-SUBDIRS =			\
-	po 			\
-	libmate-desktop 	\
-	docs			\
-	man
+SUBDIRS = \
+	po \
+	libmate-desktop \
+	docs \
+	man \
+	schemas
 
 if MATE_ABOUT_ENABLED
 SUBDIRS += mate-about

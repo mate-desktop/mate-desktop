@@ -1,6 +1,6 @@
 m4_define([mate_platform], [1])
-m4_define([mate_minor], [4])
-m4_define([mate_micro], [1])
+m4_define([mate_minor], [5])
+m4_define([mate_micro], [0])
 
 m4_define(mate_version, [mate_platform.mate_minor.mate_micro]),
 
@@ -128,13 +128,13 @@ esac
 
 GDK_PIXBUF_REQUIRED=2.4.0
 GLIB_REQUIRED=2.19.1
-MATECONF_REQUIRED=1.1.0
+GIO_REQUIRED=2.25.0
 XRANDR_REQUIRED=1.2
 
 #AC_SUBST(GTK_REQUIRED)
 AC_SUBST(GLIB_REQUIRED)
 AC_SUBST(GDK_PIXBUF_REQUIRED)
-AC_SUBST(MATECONF_REQUIRED)
+AC_SUBST(GIO_REQUIRED)
 AC_SUBST(XRANDR_REQUIRED)
 
 dnl ----------------------------------------------------------------------------
@@ -211,10 +211,7 @@ AC_SUBST(RANDR_PACKAGE)
 
 dnl pkg-config dependency checks
 
-PKG_CHECK_MODULES(MATE_DESKTOP, gdk-pixbuf-2.0 >= $GDK_PIXBUF_REQUIRED gtk+-$GTK_API_VERSION >= $GTK_REQUIRED glib-2.0 >= $GLIB_REQUIRED gio-2.0 >= $GLIB_REQUIRED mateconf-2.0 >= $MATECONF_REQUIRED $STARTUP_NOTIFICATION_PACKAGE $RANDR_PACKAGE)
-
-dnl for mate-about
-AM_PATH_PYTHON
+PKG_CHECK_MODULES(MATE_DESKTOP, gdk-pixbuf-2.0 >= $GDK_PIXBUF_REQUIRED gtk+-$GTK_API_VERSION >= $GTK_REQUIRED glib-2.0 >= $GLIB_REQUIRED gio-2.0 >= $GLIB_REQUIRED gio-2.0 >= $GIO_REQUIRED $STARTUP_NOTIFICATION_PACKAGE $RANDR_PACKAGE)
 
 PKG_CHECK_MODULES(MATE_ABOUT, gtk+-$GTK_API_VERSION >= $GTK_REQUIRED)
 AC_SUBST(MATE_ABOUT_CFLAGS)
@@ -261,6 +258,7 @@ if test "x$enable_libunique" = "xyes"; then
 	fi
 fi
 
+GLIB_GSETTINGS
 
 dnl Do not use AC_PROG_AWK since we need the full pathname.
 AC_PATH_PROGS(AWK, mawk gawk nawk awk, )
@@ -299,6 +297,8 @@ desktop-docs/Makefile
 desktop-docs/fdl/Makefile
 desktop-docs/gpl/Makefile
 desktop-docs/lgpl/Makefile
+schemas/Makefile
+schemas/org.mate.interface.gschema.xml
 man/Makefile
 ])
 

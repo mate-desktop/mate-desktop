@@ -26,7 +26,7 @@
 
 #include <config.h>
 #include <glib.h>
-#include <mateconf/mateconf-client.h>
+#include <gio/gio.h>
 #include <glib/gi18n-lib.h>
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
@@ -57,7 +57,7 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
         int i, j;
 	char **term_argv = NULL;
 	int term_argc = 0;
-	MateConfClient *client;
+	GSettings *settings;
 
 	gchar *terminal = NULL;
 
@@ -81,14 +81,13 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 		*argc = i;
 	}
 
-	client = mateconf_client_get_default ();
-	terminal = mateconf_client_get_string (client, "/desktop/mate/applications/terminal/exec", NULL);
-	g_object_unref (client);
+	settings = g_settings_new ("org.mate.applications-terminal");
+	terminal = g_settings_get_string (settings, "exec");
 	
 	if (terminal) {
 		gchar *command_line;
 		gchar *exec_flag;
-		exec_flag = mateconf_client_get_string (client, "/desktop/mate/applications/terminal/exec_arg", NULL);
+		exec_flag = g_settings_get_string (settings, "exec-arg");
 
 		if (exec_flag == NULL)
 			command_line = g_strdup (terminal);
@@ -105,6 +104,7 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 		g_free (exec_flag);
 		g_free (terminal);
 	}
+	g_object_unref (settings);
 
 	if (term_argv == NULL) {
 		char *check;
