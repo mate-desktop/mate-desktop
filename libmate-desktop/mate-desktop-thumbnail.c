@@ -2,6 +2,7 @@
  * mate-thumbnail.c: Utilities for handling thumbnails
  *
  * Copyright (C) 2002 Red Hat, Inc.
+ * Copyright (C) 2010 Carlos Garcia Campos <carlosgc@gnome.org>
  *
  * This file is part of the Mate Library.
  *
@@ -17,8 +18,8 @@
  *
  * You should have received a copy of the GNU Library General Public
  * License along with the Mate Library; see the file COPYING.LIB.  If not,
- * write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301, USA.
  *
  * Author: Alexander Larsson <alexl@redhat.com>
  */
@@ -41,60 +42,234 @@
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
 #include "libmateui/mate-desktop-thumbnail.h"
-#include <mateconf/mateconf.h>
-#include <mateconf/mateconf-client.h>
 #include <glib/gstdio.h>
+#include <gio/gunixinputstream.h>
+#include <glib-unix.h>
 
 #define SECONDS_BETWEEN_STATS 10
 
 struct _MateDesktopThumbnailFactoryPrivate {
-	MateDesktopThumbnailSize size;
+  MateDesktopThumbnailSize size;
 
-	GMutex* lock;
+  GMutex lock;
 
-	GHashTable *scripts_hash;
-	guint thumbnailers_notify;
-	guint reread_scheduled;
+  GList *thumbnailers;
+  GHashTable *mime_types_map;
+  GList *monitors;
+
+  GSettings *settings;
+  gboolean loaded : 1;
+  gboolean disabled : 1;
+  gchar **disabled_types;
 };
 
-static const char* appname = "mate-thumbnail-factory";
+static const char *appname = "mate-thumbnail-factory";
 
-static void mate_desktop_thumbnail_factory_init(MateDesktopThumbnailFactory* factory);
-static void mate_desktop_thumbnail_factory_class_init(MateDesktopThumbnailFactoryClass* class);
+static void mate_desktop_thumbnail_factory_init          (MateDesktopThumbnailFactory      *factory);
+static void mate_desktop_thumbnail_factory_class_init    (MateDesktopThumbnailFactoryClass *class);
 
-G_DEFINE_TYPE (MateDesktopThumbnailFactory, mate_desktop_thumbnail_factory, G_TYPE_OBJECT)
-
+G_DEFINE_TYPE (MateDesktopThumbnailFactory,
+	       mate_desktop_thumbnail_factory,
+	       G_TYPE_OBJECT)
 #define parent_class mate_desktop_thumbnail_factory_parent_class
 
 #define MATE_DESKTOP_THUMBNAIL_FACTORY_GET_PRIVATE(object) \
-  (G_TYPE_INSTANCE_GET_PRIVATE((object), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactoryPrivate))
+  (G_TYPE_INSTANCE_GET_PRIVATE ((object), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactoryPrivate))
 
 typedef struct {
-	gint width;
-	gint height;
-	gint input_width;
-	gint input_height;
-	gboolean preserve_aspect_ratio;
+    gint width;
+    gint height;
+    gint input_width;
+    gint input_height;
+    gboolean preserve_aspect_ratio;
 } SizePrepareContext;
 
 #define LOAD_BUFFER_SIZE 4096
 
+#define THUMBNAILER_ENTRY_GROUP "Thumbnailer Entry"
+#define THUMBNAILER_EXTENSION   ".thumbnailer"
+
+typedef struct {
+    volatile gint ref_count;
+
+    gchar *path;
+
+    gchar  *try_exec;
+    gchar  *command;
+    gchar **mime_types;
+} Thumbnailer;
+
+static Thumbnailer *
+thumbnailer_ref (Thumbnailer *thumb)
+{
+  g_return_val_if_fail (thumb != NULL, NULL);
+  g_return_val_if_fail (thumb->ref_count > 0, NULL);
+
+  g_atomic_int_inc (&thumb->ref_count);
+  return thumb;
+}
+
 static void
-size_prepared_cb (GdkPixbufLoader *loader,
+thumbnailer_unref (Thumbnailer *thumb)
+{
+  g_return_if_fail (thumb != NULL);
+  g_return_if_fail (thumb->ref_count > 0);
+
+  if (g_atomic_int_dec_and_test (&thumb->ref_count))
+    {
+      g_free (thumb->path);
+      g_free (thumb->try_exec);
+      g_free (thumb->command);
+      g_strfreev (thumb->mime_types);
+
+      g_slice_free (Thumbnailer, thumb);
+    }
+}
+
+static Thumbnailer *
+thumbnailer_load (Thumbnailer *thumb)
+{
+  GKeyFile *key_file;
+  GError *error = NULL;
+
+  key_file = g_key_file_new ();
+  if (!g_key_file_load_from_file (key_file, thumb->path, 0, &error))
+    {
+      g_warning ("Failed to load thumbnailer from \"%s\": %s\n", thumb->path, error->message);
+      g_error_free (error);
+      thumbnailer_unref (thumb);
+      g_key_file_free (key_file);
+
+      return NULL;
+    }
+
+  if (!g_key_file_has_group (key_file, THUMBNAILER_ENTRY_GROUP))
+    {
+      g_warning ("Invalid thumbnailer: missing group \"%s\"\n", THUMBNAILER_ENTRY_GROUP);
+      thumbnailer_unref (thumb);
+      g_key_file_free (key_file);
+
+      return NULL;
+    }
+
+  thumb->command = g_key_file_get_string (key_file, THUMBNAILER_ENTRY_GROUP, "Exec", NULL);
+  if (!thumb->command)
+    {
+      g_warning ("Invalid thumbnailer: missing Exec key\n");
+      thumbnailer_unref (thumb);
+      g_key_file_free (key_file);
+
+      return NULL;
+    }
+
+  thumb->mime_types = g_key_file_get_string_list (key_file, THUMBNAILER_ENTRY_GROUP, "MimeType", NULL, NULL);
+  if (!thumb->mime_types)
+    {
+      g_warning ("Invalid thumbnailer: missing MimeType key\n");
+      thumbnailer_unref (thumb);
+      g_key_file_free (key_file);
+
+      return NULL;
+    }
+
+  thumb->try_exec = g_key_file_get_string (key_file, THUMBNAILER_ENTRY_GROUP, "TryExec", NULL);
+
+  g_key_file_free (key_file);
+
+  return thumb;
+}
+
+static Thumbnailer *
+thumbnailer_reload (Thumbnailer *thumb)
+{
+  g_return_val_if_fail (thumb != NULL, NULL);
+
+  g_free (thumb->command);
+  thumb->command = NULL;
+  g_strfreev (thumb->mime_types);
+  thumb->mime_types = NULL;
+  g_free (thumb->try_exec);
+  thumb->try_exec = NULL;
+
+  return thumbnailer_load (thumb);
+}
+
+static Thumbnailer *
+thumbnailer_new (const gchar *path)
+{
+  Thumbnailer *thumb;
+
+  thumb = g_slice_new0 (Thumbnailer);
+  thumb->ref_count = 1;
+  thumb->path = g_strdup (path);
+
+  return thumbnailer_load (thumb);
+}
+
+static gboolean
+thumbnailer_try_exec (Thumbnailer *thumb)
+{
+  gchar *path;
+  gboolean retval;
+
+  if (G_UNLIKELY (!thumb))
+    return FALSE;
+
+  /* TryExec is optinal, but Exec isn't, so we assume
+   * the thumbnailer can be run when TryExec is not present
+   */
+  if (!thumb->try_exec)
+    return TRUE;
+
+  path = g_find_program_in_path (thumb->try_exec);
+  retval = path != NULL;
+  g_free (path);
+
+  return retval;
+}
+
+static gpointer
+init_thumbnailers_dirs (gpointer data)
+{
+  const gchar * const *data_dirs;
+  gchar **thumbs_dirs;
+  guint i, length;
+
+  data_dirs = g_get_system_data_dirs ();
+  length = g_strv_length ((char **) data_dirs);
+
+  thumbs_dirs = g_new (gchar *, length + 2);
+  thumbs_dirs[0] = g_build_filename (g_get_user_data_dir (), "thumbnailers", NULL);
+  for (i = 0; i < length; i++)
+    thumbs_dirs[i + 1] = g_build_filename (data_dirs[i], "thumbnailers", NULL);
+  thumbs_dirs[length + 1] = NULL;
+
+  return thumbs_dirs;
+}
+
+static const gchar * const *
+get_thumbnailers_dirs (void)
+{
+  static GOnce once_init = G_ONCE_INIT;
+  return g_once (&once_init, init_thumbnailers_dirs, NULL);
+}
+
+static void
+size_prepared_cb (GdkPixbufLoader *loader, 
 		  int              width,
 		  int              height,
 		  gpointer         data)
 {
   SizePrepareContext *info = data;
-
+  
   g_return_if_fail (width > 0 && height > 0);
-
+  
   info->input_width = width;
   info->input_height = height;
-
+  
   if (width < info->width && height < info->height) return;
-
-  if (info->preserve_aspect_ratio &&
+  
+  if (info->preserve_aspect_ratio && 
       (info->width > 0 || info->height > 0)) {
     if (info->width < 0)
       {
@@ -120,8 +295,41 @@ size_prepared_cb (GdkPixbufLoader *loader,
     if (info->height > 0)
       height = info->height;
   }
-
+  
   gdk_pixbuf_loader_set_size (loader, width, height);
+}
+
+static GdkPixbufLoader *
+create_loader (GFile        *file,
+               const guchar *data,
+               gsize         size)
+{
+  GdkPixbufLoader *loader;
+  GError *error = NULL;
+  char *mime_type;
+  char *filename;
+
+  loader = NULL;
+
+  /* need to specify the type here because the gdk_pixbuf_loader_write
+     doesn't have access to the filename in order to correct detect
+     the image type. */
+  filename = g_file_get_basename (file);
+  mime_type = g_content_type_guess (filename, data, size, NULL);
+  g_free (filename);
+
+  if (mime_type != NULL) {
+    loader = gdk_pixbuf_loader_new_with_mime_type (mime_type, &error);
+  }
+
+  if (loader == NULL) {
+    g_warning ("Unable to create loader for mime type %s: %s", mime_type, error->message);
+    g_clear_error (&error);
+    loader = gdk_pixbuf_loader_new ();
+  }
+  g_free (mime_type);
+
+  return loader;
 }
 
 static GdkPixbuf *
@@ -131,10 +339,10 @@ _gdk_pixbuf_new_from_uri_at_scale (const char *uri,
 				   gboolean    preserve_aspect_ratio)
 {
     gboolean result;
-    char buffer[LOAD_BUFFER_SIZE];
+    guchar buffer[LOAD_BUFFER_SIZE];
     gsize bytes_read;
-    GdkPixbufLoader *loader;
-    GdkPixbuf *pixbuf;
+    GdkPixbufLoader *loader = NULL;
+    GdkPixbuf *pixbuf;	
     GdkPixbufAnimation *animation;
     GdkPixbufAnimationIter *iter;
     gboolean has_frame;
@@ -142,6 +350,7 @@ _gdk_pixbuf_new_from_uri_at_scale (const char *uri,
     GFile *file;
     GFileInfo *file_info;
     GInputStream *input_stream;
+    GError *error = NULL;
 
     g_return_val_if_fail (uri != NULL, NULL);
 
@@ -171,20 +380,28 @@ _gdk_pixbuf_new_from_uri_at_scale (const char *uri,
     }
 
     if (input_stream == NULL) {
-        input_stream = G_INPUT_STREAM (g_file_read (file, NULL, NULL));
-        if (input_stream == NULL) {
-	    g_object_unref (file);
-            return NULL;
+        /* part of this code is taken from libgsystem */
+        int fd;
+        char *path = g_file_get_path (file);
+        #ifdef O_NOATIME
+            fd = g_open (path, O_RDONLY | O_NOATIME, 0);
+            /* Only the owner or superuser may use O_NOATIME; so we may get
+            * EPERM.  EINVAL may happen if the kernel is really old...
+            */
+            if (fd == -1 && (errno == EPERM || errno == EINVAL))
+        #endif
+            fd = g_open (path, O_RDONLY, 0);
+        if (fd >= 0) {
+            input_stream = g_unix_input_stream_new (fd, TRUE);
+            if (input_stream == NULL) {
+                if (error != NULL) {
+                    g_warning ("Unable to create an input stream for %s: %s", uri, error->message);
+                    g_clear_error (&error);
+                }
+                g_object_unref (file);
+                return NULL;
+            }
         }
-    }
-
-    loader = gdk_pixbuf_loader_new ();
-    if (1 <= width || 1 <= height) {
-        info.width = width;
-        info.height = height;
-	info.input_width = info.input_height = 0;
-        info.preserve_aspect_ratio = preserve_aspect_ratio;
-        g_signal_connect (loader, "size-prepared", G_CALLBACK (size_prepared_cb), &info);
     }
 
     has_frame = FALSE;
@@ -196,7 +413,11 @@ _gdk_pixbuf_new_from_uri_at_scale (const char *uri,
 					  buffer,
 					  sizeof (buffer),
 					  NULL,
-					  NULL);
+					  &error);
+        if (error != NULL) {
+            g_warning ("Error reading from %s: %s", uri, error->message);
+            g_clear_error (&error);
+        }
 	if (bytes_read == -1) {
 	    break;
 	}
@@ -205,10 +426,24 @@ _gdk_pixbuf_new_from_uri_at_scale (const char *uri,
 	    break;
 	}
 
+        if (loader == NULL) {
+            loader = create_loader (file, buffer, bytes_read);
+            if (1 <= width || 1 <= height) {
+              info.width = width;
+              info.height = height;
+              info.input_width = info.input_height = 0;
+              info.preserve_aspect_ratio = preserve_aspect_ratio;
+              g_signal_connect (loader, "size-prepared", G_CALLBACK (size_prepared_cb), &info);
+            }
+            g_assert (loader != NULL);
+        }
+
 	if (!gdk_pixbuf_loader_write (loader,
 				      (unsigned char *)buffer,
 				      bytes_read,
-				      NULL)) {
+				      &error)) {
+            g_warning ("Error creating thumbnail for %s: %s", uri, error->message);
+            g_clear_error (&error);
 	    result = FALSE;
 	    break;
 	}
@@ -255,199 +490,338 @@ mate_desktop_thumbnail_factory_finalize (GObject *object)
 {
   MateDesktopThumbnailFactory *factory;
   MateDesktopThumbnailFactoryPrivate *priv;
-  MateConfClient *client;
-
+  
   factory = MATE_DESKTOP_THUMBNAIL_FACTORY (object);
 
   priv = factory->priv;
 
-  if (priv->reread_scheduled != 0) {
-    g_source_remove (priv->reread_scheduled);
-    priv->reread_scheduled = 0;
-  }
-
-  if (priv->thumbnailers_notify != 0) {
-    client = mateconf_client_get_default ();
-    mateconf_client_notify_remove (client, priv->thumbnailers_notify);
-    priv->thumbnailers_notify = 0;
-    g_object_unref (client);
-  }
-
-  if (priv->scripts_hash)
+  if (priv->thumbnailers)
     {
-      g_hash_table_destroy (priv->scripts_hash);
-      priv->scripts_hash = NULL;
+      g_list_free_full (priv->thumbnailers, (GDestroyNotify)thumbnailer_unref);
+      priv->thumbnailers = NULL;
     }
 
-  if (priv->lock)
+  if (priv->mime_types_map)
     {
-      g_mutex_free (priv->lock);
-      priv->lock = NULL;
+      g_hash_table_destroy (priv->mime_types_map);
+      priv->mime_types_map = NULL;
+    }
+
+  if (priv->monitors)
+    {
+      g_list_free_full (priv->monitors, (GDestroyNotify)g_object_unref);
+      priv->monitors = NULL;
+    }
+
+  g_mutex_clear (&priv->lock);
+
+  if (priv->disabled_types)
+    {
+      g_strfreev (priv->disabled_types);
+      priv->disabled_types = NULL;
+    }
+
+  if (priv->settings)
+    {
+      g_object_unref (priv->settings);
+      priv->settings = NULL;
     }
 
   if (G_OBJECT_CLASS (parent_class)->finalize)
     (* G_OBJECT_CLASS (parent_class)->finalize) (object);
 }
 
-/* Must be called on main thread */
-static GHashTable *
-read_scripts (void)
-{
-  GHashTable *scripts_hash;
-  MateConfClient *client;
-  GSList *subdirs, *l;
-  char *subdir, *enable, *escape, *commandkey, *command, *mimetype;
-
-  client = mateconf_client_get_default ();
-
-  if (mateconf_client_get_bool (client,
-			     "/desktop/mate/thumbnailers/disable_all",
-			     NULL))
-    {
-      g_object_unref (G_OBJECT (client));
-      return NULL;
-    }
-
-  scripts_hash = g_hash_table_new_full (g_str_hash,
-					g_str_equal,
-					g_free, g_free);
-
-
-  subdirs = mateconf_client_all_dirs (client, "/desktop/mate/thumbnailers", NULL);
-
-  for (l = subdirs; l != NULL; l = l->next)
-    {
-      subdir = l->data;
-
-      enable = g_strdup_printf ("%s/enable", subdir);
-      if (mateconf_client_get_bool (client,
-				 enable,
-				 NULL))
-	{
-	  commandkey = g_strdup_printf ("%s/command", subdir);
-	  command = mateconf_client_get_string (client, commandkey, NULL);
-	  g_free (commandkey);
-
-	  if (command != NULL) {
-	    mimetype = strrchr (subdir, '/');
-	    if (mimetype != NULL)
-	      {
-		mimetype++; /* skip past slash */
-
-		/* Convert '@' to slash in mimetype */
-		escape = strchr (mimetype, '@');
-		if (escape != NULL)
-		  *escape = '/';
-
-		/* Convert any remaining '@' to '+' in mimetype */
-		while ((escape = strchr (mimetype, '@')) != NULL)
-                  *escape = '+';
-
-		g_hash_table_insert (scripts_hash,
-				     g_strdup (mimetype), command);
-	      }
-	    else
-	      {
-		g_free (command);
-	      }
-	  }
-	}
-      g_free (enable);
-
-      g_free (subdir);
-    }
-
-  g_slist_free(subdirs);
-
-  g_object_unref (G_OBJECT (client));
-
-  return scripts_hash;
-}
-
-
-/* Must be called on main thread */
+/* These should be called with the lock held */
 static void
-mate_desktop_thumbnail_factory_reread_scripts (MateDesktopThumbnailFactory *factory)
+mate_desktop_thumbnail_factory_register_mime_types (MateDesktopThumbnailFactory *factory,
+                                                     Thumbnailer                  *thumb)
 {
   MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
-  GHashTable *scripts_hash;
+  gint i;
 
-  scripts_hash = read_scripts ();
+  for (i = 0; thumb->mime_types[i]; i++)
+    {
+      if (!g_hash_table_lookup (priv->mime_types_map, thumb->mime_types[i]))
+        g_hash_table_insert (priv->mime_types_map,
+                             g_strdup (thumb->mime_types[i]),
+                             thumbnailer_ref (thumb));
+    }
+}
 
-  g_mutex_lock (priv->lock);
+static void
+mate_desktop_thumbnail_factory_add_thumbnailer (MateDesktopThumbnailFactory *factory,
+                                                 Thumbnailer                  *thumb)
+{
+  MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
 
-  if (priv->scripts_hash != NULL)
-    g_hash_table_destroy (priv->scripts_hash);
-
-  priv->scripts_hash = scripts_hash;
-
-  g_mutex_unlock (priv->lock);
+  mate_desktop_thumbnail_factory_register_mime_types (factory, thumb);
+  priv->thumbnailers = g_list_prepend (priv->thumbnailers, thumb);
 }
 
 static gboolean
-reread_idle_callback (gpointer user_data)
+mate_desktop_thumbnail_factory_is_disabled (MateDesktopThumbnailFactory *factory,
+                                             const gchar                  *mime_type)
 {
-  MateDesktopThumbnailFactory *factory = user_data;
   MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
+  guint i;
 
-  mate_desktop_thumbnail_factory_reread_scripts (factory);
+  if (priv->disabled)
+    return TRUE;
 
-  g_mutex_lock (priv->lock);
-  priv->reread_scheduled = 0;
-  g_mutex_unlock (priv->lock);
+  if (!priv->disabled_types)
+    return FALSE;
+
+  for (i = 0; priv->disabled_types[i]; i++)
+    {
+      if (g_strcmp0 (priv->disabled_types[i], mime_type) == 0)
+        return TRUE;
+    }
 
   return FALSE;
 }
 
-static void
-schedule_reread (MateConfClient* client,
-		 guint cnxn_id,
-		 MateConfEntry *entry,
-		 gpointer user_data)
+static gboolean
+remove_thumbnailer_from_mime_type_map (gchar       *key,
+                                       Thumbnailer *value,
+                                       gchar       *path)
 {
-  MateDesktopThumbnailFactory *factory = user_data;
-  MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
-
-  g_mutex_lock (priv->lock);
-
-  if (priv->reread_scheduled == 0)
-    {
-      priv->reread_scheduled = g_idle_add (reread_idle_callback,
-					   factory);
-    }
-
-  g_mutex_unlock (priv->lock);
+  return (strcmp (value->path, path) == 0);
 }
 
 
 static void
+update_or_create_thumbnailer (MateDesktopThumbnailFactory *factory,
+                              const gchar                  *path)
+{
+  MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
+  GList *l;
+  Thumbnailer *thumb;
+  gboolean found = FALSE;
+
+  g_mutex_lock (&priv->lock);
+
+  for (l = priv->thumbnailers; l && !found; l = g_list_next (l))
+    {
+      thumb = (Thumbnailer *)l->data;
+
+      if (strcmp (thumb->path, path) == 0)
+        {
+          found = TRUE;
+
+          /* First remove the mime_types associated to this thumbnailer */
+          g_hash_table_foreach_remove (priv->mime_types_map,
+                                       (GHRFunc)remove_thumbnailer_from_mime_type_map,
+                                       (gpointer)path);
+          if (!thumbnailer_reload (thumb))
+              priv->thumbnailers = g_list_delete_link (priv->thumbnailers, l);
+          else
+              mate_desktop_thumbnail_factory_register_mime_types (factory, thumb);
+        }
+    }
+
+  if (!found)
+    {
+      thumb = thumbnailer_new (path);
+      if (thumb)
+        mate_desktop_thumbnail_factory_add_thumbnailer (factory, thumb);
+    }
+
+  g_mutex_unlock (&priv->lock);
+}
+
+static void
+remove_thumbnailer (MateDesktopThumbnailFactory *factory,
+                    const gchar                  *path)
+{
+  MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
+  GList *l;
+  Thumbnailer *thumb;
+
+  g_mutex_lock (&priv->lock);
+
+  for (l = priv->thumbnailers; l; l = g_list_next (l))
+    {
+      thumb = (Thumbnailer *)l->data;
+
+      if (strcmp (thumb->path, path) == 0)
+        {
+          priv->thumbnailers = g_list_delete_link (priv->thumbnailers, l);
+          g_hash_table_foreach_remove (priv->mime_types_map,
+                                       (GHRFunc)remove_thumbnailer_from_mime_type_map,
+                                       (gpointer)path);
+          thumbnailer_unref (thumb);
+
+          break;
+        }
+    }
+
+  g_mutex_unlock (&priv->lock);
+}
+
+static void
+thumbnailers_directory_changed (GFileMonitor                 *monitor,
+                                GFile                        *file,
+                                GFile                        *other_file,
+                                GFileMonitorEvent             event_type,
+                                MateDesktopThumbnailFactory *factory)
+{
+  gchar *path;
+
+  switch (event_type)
+    {
+    case G_FILE_MONITOR_EVENT_CREATED:
+    case G_FILE_MONITOR_EVENT_CHANGED:
+    case G_FILE_MONITOR_EVENT_DELETED:
+      path = g_file_get_path (file);
+      if (!g_str_has_suffix (path, THUMBNAILER_EXTENSION))
+        {
+          g_free (path);
+          return;
+        }
+
+      if (event_type == G_FILE_MONITOR_EVENT_DELETED)
+        remove_thumbnailer (factory, path);
+      else
+        update_or_create_thumbnailer (factory, path);
+
+      g_free (path);
+      break;
+    default:
+      break;
+    }
+}
+
+static void
+mate_desktop_thumbnail_factory_load_thumbnailers (MateDesktopThumbnailFactory *factory)
+{
+  MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
+  const gchar * const *dirs;
+  guint i;
+
+  if (priv->loaded)
+    return;
+
+  dirs = get_thumbnailers_dirs ();
+  for (i = 0; dirs[i]; i++)
+    {
+      const gchar *path = dirs[i];
+      GDir *dir;
+      GFile *dir_file;
+      GFileMonitor *monitor;
+      const gchar *dirent;
+
+      dir = g_dir_open (path, 0, NULL);
+      if (!dir)
+        continue;
+
+      /* Monitor dir */
+      dir_file = g_file_new_for_path (path);
+      monitor = g_file_monitor_directory (dir_file,
+                                          G_FILE_MONITOR_NONE,
+                                          NULL, NULL);
+      if (monitor)
+        {
+          g_signal_connect (monitor, "changed",
+                            G_CALLBACK (thumbnailers_directory_changed),
+                            factory);
+          priv->monitors = g_list_prepend (priv->monitors, monitor);
+        }
+      g_object_unref (dir_file);
+
+      while ((dirent = g_dir_read_name (dir)))
+        {
+          Thumbnailer *thumb;
+          gchar       *filename;
+
+          if (!g_str_has_suffix (dirent, THUMBNAILER_EXTENSION))
+            continue;
+
+          filename = g_build_filename (path, dirent, NULL);
+          thumb = thumbnailer_new (filename);
+          g_free (filename);
+
+          if (thumb)
+            mate_desktop_thumbnail_factory_add_thumbnailer (factory, thumb);
+        }
+
+      g_dir_close (dir);
+    }
+
+  priv->loaded = TRUE;
+}
+
+static void
+external_thumbnailers_disabled_all_changed_cb (GSettings                    *settings,
+                                               const gchar                  *key,
+                                               MateDesktopThumbnailFactory *factory)
+{
+  MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
+
+  g_mutex_lock (&priv->lock);
+
+  priv->disabled = g_settings_get_boolean (priv->settings, "disable-all");
+  if (priv->disabled)
+    {
+      g_strfreev (priv->disabled_types);
+      priv->disabled_types = NULL;
+    }
+  else
+    {
+      priv->disabled_types = g_settings_get_strv (priv->settings, "disable");
+      mate_desktop_thumbnail_factory_load_thumbnailers (factory);
+    }
+
+  g_mutex_unlock (&priv->lock);
+}
+
+static void
+external_thumbnailers_disabled_changed_cb (GSettings                    *settings,
+                                           const gchar                  *key,
+                                           MateDesktopThumbnailFactory *factory)
+{
+  MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
+
+  g_mutex_lock (&priv->lock);
+
+  if (priv->disabled)
+    return;
+  g_strfreev (priv->disabled_types);
+  priv->disabled_types = g_settings_get_strv (priv->settings, "disable");
+
+  g_mutex_unlock (&priv->lock);
+}
+
+static void
 mate_desktop_thumbnail_factory_init (MateDesktopThumbnailFactory *factory)
 {
-  MateConfClient *client;
   MateDesktopThumbnailFactoryPrivate *priv;
-
+  
   factory->priv = MATE_DESKTOP_THUMBNAIL_FACTORY_GET_PRIVATE (factory);
 
   priv = factory->priv;
 
   priv->size = MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL;
+  
+  priv->mime_types_map = g_hash_table_new_full (g_str_hash,
+                                                g_str_equal,
+                                                (GDestroyNotify)g_free,
+                                                (GDestroyNotify)thumbnailer_unref);
+  
+  g_mutex_init (&priv->lock);
 
-  priv->scripts_hash = NULL;
+  priv->settings = g_settings_new ("org.mate.desktop.thumbnailers");
+  priv->disabled = g_settings_get_boolean (priv->settings, "disable-all");
+  if (!priv->disabled)
+    priv->disabled_types = g_settings_get_strv (priv->settings, "disable");
+  g_signal_connect (priv->settings, "changed::disable-all",
+                    G_CALLBACK (external_thumbnailers_disabled_all_changed_cb),
+                    factory);
+  g_signal_connect (priv->settings, "changed::disable",
+                    G_CALLBACK (external_thumbnailers_disabled_changed_cb),
+                    factory);
 
-  priv->lock = g_mutex_new ();
-
-  client = mateconf_client_get_default ();
-  mateconf_client_add_dir (client,
-			"/desktop/mate/thumbnailers",
-			MATECONF_CLIENT_PRELOAD_RECURSIVE, NULL);
-
-  mate_desktop_thumbnail_factory_reread_scripts (factory);
-
-  priv->thumbnailers_notify = mateconf_client_notify_add (client, "/desktop/mate/thumbnailers",
-						       schedule_reread, factory, NULL,
-						       NULL);
-
-  g_object_unref (G_OBJECT (client));
+  if (!priv->disabled)
+    mate_desktop_thumbnail_factory_load_thumbnailers (factory);
 }
 
 static void
@@ -456,7 +830,7 @@ mate_desktop_thumbnail_factory_class_init (MateDesktopThumbnailFactoryClass *cla
   GObjectClass *gobject_class;
 
   gobject_class = G_OBJECT_CLASS (class);
-
+	
   gobject_class->finalize = mate_desktop_thumbnail_factory_finalize;
 
   g_type_class_add_private (class, sizeof (MateDesktopThumbnailFactoryPrivate));
@@ -469,7 +843,7 @@ mate_desktop_thumbnail_factory_class_init (MateDesktopThumbnailFactoryClass *cla
  * Creates a new #MateDesktopThumbnailFactory.
  *
  * This function must be called on the main thread.
- *
+ * 
  * Return value: a new #MateDesktopThumbnailFactory
  *
  * Since: 2.2
@@ -478,11 +852,11 @@ MateDesktopThumbnailFactory *
 mate_desktop_thumbnail_factory_new (MateDesktopThumbnailSize size)
 {
   MateDesktopThumbnailFactory *factory;
-
+  
   factory = g_object_new (MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY, NULL);
-
+  
   factory->priv->size = size;
-
+  
   return factory;
 }
 
@@ -524,9 +898,9 @@ mate_desktop_thumbnail_factory_lookup (MateDesktopThumbnailFactory *factory,
   g_assert (digest_len == 16);
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
-
-  path = g_build_filename (g_get_home_dir (),
-			   ".thumbnails",
+  
+  path = g_build_filename (g_get_user_cache_dir (),
+			   "thumbnails",
 			   (priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
 			   file,
 			   NULL);
@@ -586,8 +960,8 @@ mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailF
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
-  path = g_build_filename (g_get_home_dir (),
-			   ".thumbnails/fail",
+  path = g_build_filename (g_get_user_cache_dir (),
+			   "thumbnails/fail",
 			   appname,
 			   file,
 			   NULL);
@@ -607,55 +981,52 @@ mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailF
   return res;
 }
 
-static gboolean mimetype_supported_by_gdk_pixbuf(const char* mime_type)
+static gboolean
+mimetype_supported_by_gdk_pixbuf (const char *mime_type)
 {
-	guint i;
-	static GHashTable* formats_hash = NULL;
-	gchar* key;
-	gboolean result;
+        guint i;
+        static gsize formats_hash = 0;
+        gchar *key;
+        gboolean result;
 
-	if (!formats_hash)
-	{
-		GSList* formats;
-		GSList* list;
+	if (g_once_init_enter (&formats_hash)) {
+                GSList *formats, *list;
+		GHashTable *hash;
 
-		formats_hash = g_hash_table_new_full(g_str_hash, g_content_type_equals, g_free, NULL);
+                hash = g_hash_table_new_full (g_str_hash,
+					      (GEqualFunc) g_content_type_equals,
+					      g_free, NULL);
 
-		formats = gdk_pixbuf_get_formats();
-		list = formats;
+                formats = gdk_pixbuf_get_formats ();
+                list = formats;
 
-		while (list)
-		{
-			GdkPixbufFormat* format = list->data;
-			gchar** mime_types = gdk_pixbuf_format_get_mime_types(format);
+                while (list) {
+                        GdkPixbufFormat *format = list->data;
+                        gchar **mime_types;
 
-			for (i = 0; mime_types[i] != NULL; i++)
-			{
-				g_hash_table_insert(formats_hash, (gpointer) g_content_type_from_mime_type(mime_types[i]), GUINT_TO_POINTER(1));
-			}
+                        mime_types = gdk_pixbuf_format_get_mime_types (format);
 
-			g_strfreev(mime_types);
+                        for (i = 0; mime_types[i] != NULL; i++)
+                                g_hash_table_insert (hash,
+                                                     (gpointer) g_content_type_from_mime_type (mime_types[i]),
+                                                     GUINT_TO_POINTER (1));	
 
-			list = list->next;
-		}
+                        g_strfreev (mime_types);
+                        list = list->next;
+                }
+                g_slist_free (formats);
 
-		g_slist_free(formats);
-	}
+		g_once_init_leave (&formats_hash, (gsize) hash);
+        }
 
-	key = g_content_type_from_mime_type(mime_type);
+        key = g_content_type_from_mime_type (mime_type);
+        if (g_hash_table_lookup ((void*)formats_hash, key))
+                result = TRUE;
+        else
+                result = FALSE;
+        g_free (key);
 
-	if (g_hash_table_lookup(formats_hash, key))
-	{
-		result = TRUE;
-	}
-	else
-	{
-		result = FALSE;
-	}
-
-	g_free(key);
-
-	return result;
+        return result;
 }
 
 /**
@@ -680,21 +1051,26 @@ mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *facto
 					       const char            *mime_type,
 					       time_t                 mtime)
 {
-  gboolean have_script;
+  gboolean have_script = FALSE;
 
   /* Don't thumbnail thumbnails */
   if (uri &&
       strncmp (uri, "file:/", 6) == 0 &&
-      strstr (uri, "/.thumbnails/") != NULL)
+      strstr (uri, "/thumbnails/") != NULL)
     return FALSE;
-
+  
   if (!mime_type)
     return FALSE;
 
-  g_mutex_lock (factory->priv->lock);
-  have_script = (factory->priv->scripts_hash != NULL &&
-                 g_hash_table_lookup (factory->priv->scripts_hash, mime_type));
-  g_mutex_unlock (factory->priv->lock);
+  g_mutex_lock (&factory->priv->lock);
+  if (!mate_desktop_thumbnail_factory_is_disabled (factory, mime_type))
+    {
+      Thumbnailer *thumb;
+
+      thumb = g_hash_table_lookup (factory->priv->mime_types_map, mime_type);
+      have_script = thumbnailer_try_exec (thumb);
+    }
+  g_mutex_unlock (&factory->priv->lock);
 
   if (have_script || mimetype_supported_by_gdk_pixbuf (mime_type))
     {
@@ -702,13 +1078,13 @@ mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *facto
                                                                           uri,
                                                                           mtime);
     }
-
+  
   return FALSE;
 }
 
 static char *
 expand_thumbnailing_script (const char *script,
-			    const int   size,
+			    const int   size, 
 			    const char *inuri,
 			    const char *outfile)
 {
@@ -718,7 +1094,7 @@ expand_thumbnailing_script (const char *script,
   gboolean got_in;
 
   str = g_string_new (NULL);
-
+  
   got_in = FALSE;
   last = script;
   while ((p = strchr (last, '%')) != NULL)
@@ -786,7 +1162,7 @@ expand_thumbnailing_script (const char *script,
  *
  * Usage of this function is threadsafe.
  *
- * Return value: thumbnail pixbuf if thumbnailing succeeded, %NULL otherwise.
+ * Return value: (transfer full): thumbnail pixbuf if thumbnailing succeeded, %NULL otherwise.
  *
  * Since: 2.2
  **/
@@ -809,7 +1185,7 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
   g_return_val_if_fail (mime_type != NULL, NULL);
 
   /* Doesn't access any volatile fields in factory, so it's threadsafe */
-
+  
   size = 128;
   if (factory->priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_LARGE)
     size = 256;
@@ -817,15 +1193,17 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
   pixbuf = NULL;
 
   script = NULL;
-  g_mutex_lock (factory->priv->lock);
-  if (factory->priv->scripts_hash != NULL)
+  g_mutex_lock (&factory->priv->lock);
+  if (!mate_desktop_thumbnail_factory_is_disabled (factory, mime_type))
     {
-      script = g_hash_table_lookup (factory->priv->scripts_hash, mime_type);
-      if (script)
-	script = g_strdup (script);
-    }
-  g_mutex_unlock (factory->priv->lock);
+      Thumbnailer *thumb;
 
+      thumb = g_hash_table_lookup (factory->priv->mime_types_map, mime_type);
+      if (thumb)
+        script = g_strdup (thumb->command);
+    }
+  g_mutex_unlock (&factory->priv->lock);
+  
   if (script)
     {
       int fd;
@@ -846,7 +1224,7 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
 	    }
 
 	  g_free (expanded_script);
-	  g_unlink(tmpname);
+	  g_unlink (tmpname);
 	  g_free (tmpname);
 	}
 
@@ -866,7 +1244,7 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
                                                                 "mate-original-height"));
         }
     }
-
+      
   if (pixbuf == NULL)
     return NULL;
 
@@ -879,7 +1257,7 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
 
   width = gdk_pixbuf_get_width (pixbuf);
   height = gdk_pixbuf_get_height (pixbuf);
-
+  
   if (width > size || height > size)
     {
       const gchar *orig_width, *orig_height;
@@ -898,11 +1276,11 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
       if (orig_height != NULL) {
 	      gdk_pixbuf_set_option (scaled, "tEXt::Thumb::Image::Height", orig_height);
       }
-
+      
       g_object_unref (pixbuf);
       pixbuf = scaled;
     }
-
+  
   if (original_width > 0) {
 	  g_snprintf (dimension, sizeof (dimension), "%i", original_width);
 	  gdk_pixbuf_set_option (pixbuf, "tEXt::Thumb::Image::Width", dimension);
@@ -924,8 +1302,8 @@ make_thumbnail_dirs (MateDesktopThumbnailFactory *factory)
 
   res = FALSE;
 
-  thumbnail_dir = g_build_filename (g_get_home_dir (),
-				    ".thumbnails",
+  thumbnail_dir = g_build_filename (g_get_user_cache_dir (),
+				    "thumbnails",
 				    NULL);
   if (!g_file_test (thumbnail_dir, G_FILE_TEST_IS_DIR))
     {
@@ -944,7 +1322,7 @@ make_thumbnail_dirs (MateDesktopThumbnailFactory *factory)
 
   g_free (thumbnail_dir);
   g_free (image_dir);
-
+  
   return res;
 }
 
@@ -958,8 +1336,8 @@ make_thumbnail_fail_dirs (MateDesktopThumbnailFactory *factory)
 
   res = FALSE;
 
-  thumbnail_dir = g_build_filename (g_get_home_dir (),
-				    ".thumbnails",
+  thumbnail_dir = g_build_filename (g_get_user_cache_dir (),
+				    "thumbnails",
 				    NULL);
   if (!g_file_test (thumbnail_dir, G_FILE_TEST_IS_DIR))
     {
@@ -988,7 +1366,7 @@ make_thumbnail_fail_dirs (MateDesktopThumbnailFactory *factory)
   g_free (thumbnail_dir);
   g_free (fail_dir);
   g_free (app_dir);
-
+  
   return res;
 }
 
@@ -996,9 +1374,9 @@ make_thumbnail_fail_dirs (MateDesktopThumbnailFactory *factory)
 /**
  * mate_desktop_thumbnail_factory_save_thumbnail:
  * @factory: a #MateDesktopThumbnailFactory
- * @thumbnail: the thumbnail as a pixbuf
+ * @thumbnail: the thumbnail as a pixbuf 
  * @uri: the uri of a file
- * @original_mtime: the modification time of the original file
+ * @original_mtime: the modification time of the original file 
  *
  * Saves @thumbnail at the right place. If the save fails a
  * failed thumbnail is written.
@@ -1023,6 +1401,7 @@ mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *fact
   GChecksum *checksum;
   guint8 digest[16];
   gsize digest_len = sizeof (digest);
+  GError *error;
 
   checksum = g_checksum_new (G_CHECKSUM_MD5);
   g_checksum_update (checksum, (const guchar *) uri, strlen (uri));
@@ -1032,8 +1411,8 @@ mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *fact
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
-  path = g_build_filename (g_get_home_dir (),
-			   ".thumbnails",
+  path = g_build_filename (g_get_user_cache_dir (),
+			   "thumbnails",
 			   (priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
 			   file,
 			   NULL);
@@ -1061,15 +1440,16 @@ mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *fact
       return;
     }
   close (tmp_fd);
-
+  
   g_snprintf (mtime_str, 21, "%ld",  original_mtime);
   width = gdk_pixbuf_get_option (thumbnail, "tEXt::Thumb::Image::Width");
   height = gdk_pixbuf_get_option (thumbnail, "tEXt::Thumb::Image::Height");
 
-  if (width != NULL && height != NULL)
+  error = NULL;
+  if (width != NULL && height != NULL) 
     saved_ok  = gdk_pixbuf_save (thumbnail,
 				 tmp_path,
-				 "png", NULL,
+				 "png", &error,
 				 "tEXt::Thumb::Image::Width", width,
 				 "tEXt::Thumb::Image::Height", height,
 				 "tEXt::Thumb::URI", uri,
@@ -1079,21 +1459,24 @@ mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *fact
   else
     saved_ok  = gdk_pixbuf_save (thumbnail,
 				 tmp_path,
-				 "png", NULL,
+				 "png", &error,
 				 "tEXt::Thumb::URI", uri,
 				 "tEXt::Thumb::MTime", mtime_str,
 				 "tEXt::Software", "MATE::ThumbnailFactory",
 				 NULL);
-
+    
 
   if (saved_ok)
     {
       g_chmod (tmp_path, 0600);
-      g_rename(tmp_path, path);
+      g_rename (tmp_path, path);
     }
   else
     {
+      g_warning ("Failed to create thumbnail %s: %s", tmp_path, error->message);
       mate_desktop_thumbnail_factory_create_failed_thumbnail (factory, uri, original_mtime);
+      g_unlink (tmp_path);
+      g_clear_error (&error);
     }
 
   g_free (path);
@@ -1136,8 +1519,8 @@ mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFact
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
-  path = g_build_filename (g_get_home_dir (),
-			   ".thumbnails/fail",
+  path = g_build_filename (g_get_user_cache_dir (),
+			   "thumbnails/fail",
 			   appname,
 			   file,
 			   NULL);
@@ -1163,12 +1546,12 @@ mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFact
       return;
     }
   close (tmp_fd);
-
+  
   g_snprintf (mtime_str, 21, "%ld",  mtime);
   pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, 1, 1);
   saved_ok  = gdk_pixbuf_save (pixbuf,
 			       tmp_path,
-			       "png", NULL,
+			       "png", NULL, 
 			       "tEXt::Thumb::URI", uri,
 			       "tEXt::Thumb::MTime", mtime_str,
 			       "tEXt::Software", "MATE::ThumbnailFactory",
@@ -1194,8 +1577,7 @@ mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFact
  * Return value: A string with the MD5 digest of the uri string.
  *
  * Since: 2.2
- *
- * @Deprecated: 2.22: Use #GChecksum instead
+ * Deprecated: 2.22: Use #GChecksum instead
  **/
 char *
 mate_desktop_thumbnail_md5 (const char *uri)
@@ -1227,13 +1609,13 @@ mate_desktop_thumbnail_path_for_uri (const char         *uri,
   md5 = mate_desktop_thumbnail_md5 (uri);
   file = g_strconcat (md5, ".png", NULL);
   g_free (md5);
-
-  path = g_build_filename (g_get_home_dir (),
-			   ".thumbnails",
+  
+  path = g_build_filename (g_get_user_cache_dir (),
+			   "thumbnails",
 			   (size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
 			   file,
 			   NULL);
-
+    
   g_free (file);
 
   return path;
@@ -1256,7 +1638,7 @@ mate_desktop_thumbnail_has_uri (GdkPixbuf          *pixbuf,
 				 const char         *uri)
 {
   const char *thumb_uri;
-
+  
   thumb_uri = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::URI");
   if (!thumb_uri)
     return FALSE;
@@ -1284,19 +1666,19 @@ mate_desktop_thumbnail_is_valid (GdkPixbuf          *pixbuf,
 {
   const char *thumb_uri, *thumb_mtime_str;
   time_t thumb_mtime;
-
+  
   thumb_uri = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::URI");
   if (!thumb_uri)
     return FALSE;
   if (strcmp (uri, thumb_uri) != 0)
     return FALSE;
-
+  
   thumb_mtime_str = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::MTime");
   if (!thumb_mtime_str)
     return FALSE;
   thumb_mtime = atol (thumb_mtime_str);
   if (mtime != thumb_mtime)
     return FALSE;
-
+  
   return TRUE;
 }
