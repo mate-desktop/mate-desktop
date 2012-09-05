@@ -899,6 +899,60 @@ mate_desktop_thumbnail_factory_new (MateDesktopThumbnailSize size)
   return factory;
 }
 
+static char *
+thumbnail_filename (const char *uri)
+{
+  GChecksum *checksum;
+  guint8 digest[16];
+  gsize digest_len = sizeof (digest);
+  char *file;
+
+  checksum = g_checksum_new (G_CHECKSUM_MD5);
+  g_checksum_update (checksum, (const guchar *) uri, strlen (uri));
+
+  g_checksum_get_digest (checksum, digest, &digest_len);
+  g_assert (digest_len == 16);
+
+  file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
+
+  g_checksum_free (checksum);
+
+  return file;
+}
+
+static char *
+thumbnail_path (const char                *uri,
+                MateDesktopThumbnailSize  size)
+{
+  char *path, *file;
+
+  file = thumbnail_filename (uri);
+  path = g_build_filename (g_get_user_cache_dir (),
+                           "thumbnails",
+                           size == MATE_DESKTOP_THUMBNAIL_SIZE_LARGE ? "large" : "normal",
+                           file,
+                           NULL);
+  g_free (file);
+  return path;
+}
+
+static char *
+thumbnail_failed_path (const char *uri)
+{
+  char *path, *file;
+
+  file = thumbnail_filename (uri);
+  /* XXX: appname is only used for failed thumbnails. Is this a mistake? */
+  path = g_build_filename (g_get_user_cache_dir (),
+                           "thumbnails",
+                           "fail",
+                           appname,
+                           file,
+                           NULL);
+  g_free (file);
+  return path;
+}
+
 /**
  * mate_desktop_thumbnail_factory_lookup:
  * @factory: a #MateDesktopThumbnailFactory
@@ -919,31 +973,15 @@ mate_desktop_thumbnail_factory_lookup (MateDesktopThumbnailFactory *factory,
 					time_t                 mtime)
 {
   MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
-  char *path, *file;
-  GChecksum *checksum;
-  guint8 digest[16];
-  gsize digest_len = sizeof (digest);
   GdkPixbuf *pixbuf;
   gboolean res;
+  char *path;
 
   g_return_val_if_fail (uri != NULL, NULL);
 
   res = FALSE;
 
-  checksum = g_checksum_new (G_CHECKSUM_MD5);
-  g_checksum_update (checksum, (const guchar *) uri, strlen (uri));
-
-  g_checksum_get_digest (checksum, digest, &digest_len);
-  g_assert (digest_len == 16);
-
-  file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
-
-  path = g_build_filename (g_get_user_cache_dir (),
-                           "thumbnails",
-                           (priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
-                           file,
-                           NULL);
-  g_free (file);
+  path = thumbnail_path (uri, priv->size);
 
   pixbuf = gdk_pixbuf_new_from_file (path, NULL);
   if (pixbuf != NULL)
@@ -952,13 +990,11 @@ mate_desktop_thumbnail_factory_lookup (MateDesktopThumbnailFactory *factory,
       g_object_unref (pixbuf);
     }
 
-  g_checksum_free (checksum);
-
   if (res)
     return path;
 
   g_free (path);
-  return FALSE;
+  return NULL;
 }
 
 /**
@@ -982,29 +1018,13 @@ mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailF
 							    const char            *uri,
 							    time_t                 mtime)
 {
-  char *path, *file;
+  char *path;
   GdkPixbuf *pixbuf;
   gboolean res;
-  GChecksum *checksum;
-  guint8 digest[16];
-  gsize digest_len = sizeof (digest);
-
-  checksum = g_checksum_new (G_CHECKSUM_MD5);
-  g_checksum_update (checksum, (const guchar *) uri, strlen (uri));
-
-  g_checksum_get_digest (checksum, digest, &digest_len);
-  g_assert (digest_len == 16);
 
   res = FALSE;
 
-  file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
-
-  path = g_build_filename (g_get_user_cache_dir (),
-                           "thumbnails/fail",
-                           appname,
-                           file,
-                           NULL);
-  g_free (file);
+  path = thumbnail_failed_path (uri);
 
   pixbuf = gdk_pixbuf_new_from_file (path, NULL);
   g_free (path);
@@ -1014,8 +1034,6 @@ mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailF
       res = mate_desktop_thumbnail_is_valid (pixbuf, uri, mtime);
       g_object_unref (pixbuf);
     }
-
-  g_checksum_free (checksum);
 
   return res;
 }
@@ -1454,34 +1472,15 @@ mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *fact
 						time_t                 original_mtime)
 {
   MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
-  char *path, *file;
+  char *path;
   char *tmp_path;
   const char *width, *height;
   int tmp_fd;
   gchar *mtime_str;
   gboolean saved_ok;
-  GChecksum *checksum;
-  guint8 digest[16];
-  gsize digest_len = sizeof (digest);
   GError *error;
 
-  checksum = g_checksum_new (G_CHECKSUM_MD5);
-  g_checksum_update (checksum, (const guchar *) uri, strlen (uri));
-
-  g_checksum_get_digest (checksum, digest, &digest_len);
-  g_assert (digest_len == 16);
-
-  file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
-
-  path = g_build_filename (g_get_user_cache_dir (),
-                           "thumbnails",
-                           (priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
-                           file,
-                           NULL);
-
-  g_free (file);
-
-  g_checksum_free (checksum);
+  path = thumbnail_failed_path (uri);
 
   tmp_path = g_strconcat (path, ".XXXXXX", NULL);
 
@@ -1564,31 +1563,13 @@ mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFact
 							 const char            *uri,
 							 time_t                 mtime)
 {
-  char *path, *file;
+  char *path;
   char *tmp_path;
   int tmp_fd;
   gchar *mtime_str;
   GdkPixbuf *pixbuf;
-  GChecksum *checksum;
-  guint8 digest[16];
-  gsize digest_len = sizeof (digest);
 
-  checksum = g_checksum_new (G_CHECKSUM_MD5);
-  g_checksum_update (checksum, (const guchar *) uri, strlen (uri));
-
-  g_checksum_get_digest (checksum, digest, &digest_len);
-  g_assert (digest_len == 16);
-
-  file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
-
-  path = g_build_filename (g_get_user_cache_dir (),
-                           "thumbnails/fail",
-                           appname,
-                           file,
-                           NULL);
-  g_free (file);
-
-  g_checksum_free (checksum);
+  path = thumbnail_failed_path (uri);
 
   tmp_path = g_strconcat (path, ".XXXXXX", NULL);
 
@@ -1659,25 +1640,10 @@ mate_desktop_thumbnail_md5 (const char *uri)
  * Since: 2.2
  **/
 char *
-mate_desktop_thumbnail_path_for_uri (const char         *uri,
-				      MateDesktopThumbnailSize  size)
+mate_desktop_thumbnail_path_for_uri (const char               *uri,
+                                     MateDesktopThumbnailSize  size)
 {
-  char *md5;
-  char *file;
-  char *path;
-
-  md5 = mate_desktop_thumbnail_md5 (uri);
-  file = g_strconcat (md5, ".png", NULL);
-  g_free (md5);
-
-  path = g_build_filename (g_get_user_cache_dir (),
-                           "thumbnails",
-                           (size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
-                           file,
-                           NULL);
-  g_free (file);
-
-  return path;
+  return thumbnail_path (uri, size);
 }
 
 /**
