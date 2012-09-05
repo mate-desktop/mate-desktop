@@ -953,6 +953,44 @@ thumbnail_failed_path (const char *uri)
   return path;
 }
 
+static char *
+validate_thumbnail_path (char                     *path,
+                         const char               *uri,
+                         time_t                    mtime,
+                         MateDesktopThumbnailSize  size)
+{
+  GdkPixbuf *pixbuf;
+
+  pixbuf = gdk_pixbuf_new_from_file (path, NULL);
+  if (pixbuf == NULL ||
+      !mate_desktop_thumbnail_is_valid (pixbuf, uri, mtime)) {
+      g_free (path);
+      return NULL;
+  }
+
+  g_clear_object (&pixbuf);
+
+  return path;
+}
+
+static char *
+lookup_thumbnail_path (const char                *uri,
+                       time_t                     mtime,
+                       MateDesktopThumbnailSize  size)
+{
+  char *path = thumbnail_path (uri, size);
+  return validate_thumbnail_path (path, uri, mtime, size);
+}
+
+static char *
+lookup_failed_thumbnail_path (const char                *uri,
+                              time_t                     mtime,
+                              MateDesktopThumbnailSize  size)
+{
+  char *path = thumbnail_failed_path (uri);
+  return validate_thumbnail_path (path, uri, mtime, size);
+}
+
 /**
  * mate_desktop_thumbnail_factory_lookup:
  * @factory: a #MateDesktopThumbnailFactory
@@ -969,32 +1007,14 @@ thumbnail_failed_path (const char *uri)
  **/
 char *
 mate_desktop_thumbnail_factory_lookup (MateDesktopThumbnailFactory *factory,
-					const char            *uri,
-					time_t                 mtime)
+                                       const char                  *uri,
+                                       time_t                       mtime)
 {
   MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
-  GdkPixbuf *pixbuf;
-  gboolean res;
-  char *path;
 
   g_return_val_if_fail (uri != NULL, NULL);
 
-  res = FALSE;
-
-  path = thumbnail_path (uri, priv->size);
-
-  pixbuf = gdk_pixbuf_new_from_file (path, NULL);
-  if (pixbuf != NULL)
-    {
-      res = mate_desktop_thumbnail_is_valid (pixbuf, uri, mtime);
-      g_object_unref (pixbuf);
-    }
-
-  if (res)
-    return path;
-
-  g_free (path);
-  return NULL;
+  return lookup_thumbnail_path (uri, mtime, priv->size);
 }
 
 /**
@@ -1015,27 +1035,20 @@ mate_desktop_thumbnail_factory_lookup (MateDesktopThumbnailFactory *factory,
  **/
 gboolean
 mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailFactory *factory,
-							    const char            *uri,
-							    time_t                 mtime)
+                                                           const char                  *uri,
+                                                           time_t                       mtime)
 {
   char *path;
-  GdkPixbuf *pixbuf;
-  gboolean res;
 
-  res = FALSE;
+  g_return_val_if_fail (uri != NULL, FALSE);
 
-  path = thumbnail_failed_path (uri);
+  path = lookup_failed_thumbnail_path (uri, mtime, factory->priv->size);
+  if (path == NULL)
+    return FALSE;
 
-  pixbuf = gdk_pixbuf_new_from_file (path, NULL);
   g_free (path);
 
-  if (pixbuf)
-    {
-      res = mate_desktop_thumbnail_is_valid (pixbuf, uri, mtime);
-      g_object_unref (pixbuf);
-    }
-
-  return res;
+  return TRUE;
 }
 
 /* forbidden/buggy GdkPixbufFormat names */
@@ -1374,82 +1387,87 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
 }
 
 static gboolean
-make_thumbnail_dirs (MateDesktopThumbnailFactory *factory)
+save_thumbnail (GdkPixbuf  *pixbuf,
+                char       *path,
+                const char *uri,
+                time_t      mtime)
 {
-  char *thumbnail_dir;
-  char *image_dir;
-  gboolean res;
+  char *dirname;
+  char *tmp_path = NULL;
+  int tmp_fd;
+  gchar *mtime_str;
+  gboolean ret = FALSE;
+  GError *error = NULL;
+  const char *width, *height;
 
-  res = FALSE;
+  if (pixbuf == NULL)
+    return FALSE;
 
-  thumbnail_dir = g_build_filename (g_get_user_cache_dir (),
-                                    "thumbnails",
-                                    NULL);
-  if (!g_file_test (thumbnail_dir, G_FILE_TEST_IS_DIR))
+  dirname = g_path_get_dirname (path);
+
+  if (g_mkdir_with_parents (dirname, 0700) != 0)
+
+    goto out;
+
+  tmp_path = g_strconcat (path, ".XXXXXX", NULL);
+  tmp_fd = g_mkstemp (tmp_path);
+
+  if (tmp_fd == -1)
+    goto out;
+  close (tmp_fd);
+
+  mtime_str = g_strdup_printf ("%" G_GINT64_FORMAT,  (gint64) mtime);
+  width = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::Image::Width");
+  height = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::Image::Height");
+
+  error = NULL;
+  if (width != NULL && height != NULL)
+    ret = gdk_pixbuf_save (pixbuf,
+                           tmp_path,
+                           "png", &error,
+                           "tEXt::Thumb::Image::Width", width,
+                           "tEXt::Thumb::Image::Height", height,
+                           "tEXt::Thumb::URI", uri,
+                           "tEXt::Thumb::MTime", mtime_str,
+                           "tEXt::Software", "MATE::ThumbnailFactory",
+                           NULL);
+  else
+    ret = gdk_pixbuf_save (pixbuf,
+                           tmp_path,
+                           "png", &error,
+                           "tEXt::Thumb::URI", uri,
+                           "tEXt::Thumb::MTime", mtime_str,
+                           "tEXt::Software", "MATE::ThumbnailFactory",
+                           NULL);
+  g_free (mtime_str);
+
+  if (!ret)
+    goto out;
+
+  g_chmod (tmp_path, 0600);
+  g_rename (tmp_path, path);
+
+ out:
+  if (error != NULL)
     {
-      g_mkdir (thumbnail_dir, 0700);
-      res = TRUE;
+      g_warning ("Failed to create thumbnail %s: %s", tmp_path, error->message);
+      g_error_free (error);
     }
-
-  image_dir = g_build_filename (thumbnail_dir,
-				(factory->priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
-				NULL);
-  if (!g_file_test (image_dir, G_FILE_TEST_IS_DIR))
-    {
-      g_mkdir (image_dir, 0700);
-      res = TRUE;
-    }
-
-  g_free (thumbnail_dir);
-  g_free (image_dir);
-
-  return res;
+  g_unlink (tmp_path);
+  g_free (tmp_path);
+  g_free (dirname);
+  return ret;
 }
 
-static gboolean
-make_thumbnail_fail_dirs (MateDesktopThumbnailFactory *factory)
+static GdkPixbuf *
+make_failed_thumbnail (void)
 {
-  char *thumbnail_dir;
-  char *fail_dir;
-  char *app_dir;
-  gboolean res;
+  GdkPixbuf *pixbuf;
 
-  res = FALSE;
-
-  thumbnail_dir = g_build_filename (g_get_user_cache_dir (),
-                                    "thumbnails",
-                                    NULL);
-  if (!g_file_test (thumbnail_dir, G_FILE_TEST_IS_DIR))
-    {
-      g_mkdir (thumbnail_dir, 0700);
-      res = TRUE;
-    }
-
-  fail_dir = g_build_filename (thumbnail_dir,
-			       "fail",
-			       NULL);
-  if (!g_file_test (fail_dir, G_FILE_TEST_IS_DIR))
-    {
-      g_mkdir (fail_dir, 0700);
-      res = TRUE;
-    }
-
-  app_dir = g_build_filename (fail_dir,
-			      appname,
-			      NULL);
-  if (!g_file_test (app_dir, G_FILE_TEST_IS_DIR))
-    {
-      g_mkdir (app_dir, 0700);
-      res = TRUE;
-    }
-
-  g_free (thumbnail_dir);
-  g_free (fail_dir);
-  g_free (app_dir);
-
-  return res;
+  pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, 1, 1);
+  gdk_pixbuf_fill (pixbuf, 0x00000000);
+  return pixbuf;
 }
-
 
 /**
  * mate_desktop_thumbnail_factory_save_thumbnail:
@@ -1467,82 +1485,22 @@ make_thumbnail_fail_dirs (MateDesktopThumbnailFactory *factory)
  **/
 void
 mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *factory,
-						GdkPixbuf             *thumbnail,
-						const char            *uri,
-						time_t                 original_mtime)
+                                               GdkPixbuf                   *thumbnail,
+                                               const char                  *uri,
+                                               time_t                       original_mtime)
 {
-  MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
   char *path;
-  char *tmp_path;
-  const char *width, *height;
-  int tmp_fd;
-  gchar *mtime_str;
-  gboolean saved_ok;
-  GError *error;
 
-  path = thumbnail_failed_path (uri);
-
-  tmp_path = g_strconcat (path, ".XXXXXX", NULL);
-
-  tmp_fd = g_mkstemp (tmp_path);
-  if (tmp_fd == -1 &&
-      make_thumbnail_dirs (factory))
+  path = thumbnail_path (uri, factory->priv->size);
+  if (!save_thumbnail (thumbnail, path, uri, original_mtime))
     {
-      g_free (tmp_path);
-      tmp_path = g_strconcat (path, ".XXXXXX", NULL);
-      tmp_fd = g_mkstemp (tmp_path);
-    }
-
-  if (tmp_fd == -1)
-    {
-      mate_desktop_thumbnail_factory_create_failed_thumbnail (factory, uri, original_mtime);
-      g_free (tmp_path);
+      thumbnail = make_failed_thumbnail ();
       g_free (path);
-      return;
+      path = thumbnail_failed_path (uri);
+      save_thumbnail (thumbnail, path, uri, original_mtime);
+      g_object_unref (thumbnail);
     }
-  close (tmp_fd);
-
-  mtime_str = g_strdup_printf ("%" G_GINT64_FORMAT,  (gint64)original_mtime);
-  width = gdk_pixbuf_get_option (thumbnail, "tEXt::Thumb::Image::Width");
-  height = gdk_pixbuf_get_option (thumbnail, "tEXt::Thumb::Image::Height");
-
-  error = NULL;
-  if (width != NULL && height != NULL)
-    saved_ok  = gdk_pixbuf_save (thumbnail,
-				 tmp_path,
-				 "png", &error,
-				 "tEXt::Thumb::Image::Width", width,
-				 "tEXt::Thumb::Image::Height", height,
-				 "tEXt::Thumb::URI", uri,
-				 "tEXt::Thumb::MTime", mtime_str,
-				 "tEXt::Software", "MATE::ThumbnailFactory",
-				 NULL);
-  else
-    saved_ok  = gdk_pixbuf_save (thumbnail,
-				 tmp_path,
-				 "png", &error,
-				 "tEXt::Thumb::URI", uri,
-				 "tEXt::Thumb::MTime", mtime_str,
-				 "tEXt::Software", "MATE::ThumbnailFactory",
-				 NULL);
-
-
-  if (saved_ok)
-    {
-      g_chmod (tmp_path, 0600);
-      g_rename (tmp_path, path);
-    }
-  else
-    {
-      g_warning ("Failed to create thumbnail %s: %s", tmp_path, error->message);
-      mate_desktop_thumbnail_factory_create_failed_thumbnail (factory, uri, original_mtime);
-      g_unlink (tmp_path);
-      g_clear_error (&error);
-    }
-
-  g_free (mtime_str);
   g_free (path);
-  g_free (tmp_path);
 }
 
 /**
@@ -1560,52 +1518,18 @@ mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *fact
  **/
 void
 mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFactory *factory,
-							 const char            *uri,
-							 time_t                 mtime)
+                                                        const char                  *uri,
+                                                        time_t                      mtime)
 {
   char *path;
-  char *tmp_path;
-  int tmp_fd;
-  gchar *mtime_str;
   GdkPixbuf *pixbuf;
 
   path = thumbnail_failed_path (uri);
-
-  tmp_path = g_strconcat (path, ".XXXXXX", NULL);
-
-  tmp_fd = g_mkstemp (tmp_path);
-  if (tmp_fd == -1 &&
-      make_thumbnail_fail_dirs (factory))
-    {
-      g_free (tmp_path);
-      tmp_path = g_strconcat (path, ".XXXXXX", NULL);
-      tmp_fd = g_mkstemp (tmp_path);
-    }
-
-  if (tmp_fd == -1)
-    {
-      g_free (tmp_path);
-      g_free (path);
-      return;
-    }
-  close (tmp_fd);
-
-  mtime_str = g_strdup_printf ("%" G_GINT64_FORMAT,  (gint64)mtime);
-  pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, 1, 1);
-  gdk_pixbuf_save (pixbuf,
-                   tmp_path,
-                   "png", NULL,
-                   "tEXt::Thumb::URI", uri,
-                   "tEXt::Thumb::MTime", mtime_str,
-                   "tEXt::Software", "MATE::ThumbnailFactory",
-                   NULL);
-  g_object_unref (pixbuf);
-  g_free (mtime_str);
-  g_chmod (tmp_path, 0600);
-  g_rename (tmp_path, path);
+  pixbuf = make_failed_thumbnail ();
+  save_thumbnail (pixbuf, path, uri, mtime);
 
   g_free (path);
-  g_free (tmp_path);
+  g_object_unref (pixbuf);
 }
 
 /**
