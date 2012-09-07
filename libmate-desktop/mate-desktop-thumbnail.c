@@ -380,27 +380,10 @@ _gdk_pixbuf_new_from_uri_at_scale (const char *uri,
     }
 
     if (input_stream == NULL) {
-        /* part of this code is taken from libgsystem */
-        int fd;
-        char *path = g_file_get_path (file);
-        #ifdef O_NOATIME
-            fd = g_open (path, O_RDONLY | O_NOATIME, 0);
-            /* Only the owner or superuser may use O_NOATIME; so we may get
-            * EPERM.  EINVAL may happen if the kernel is really old...
-            */
-            if (fd == -1 && (errno == EPERM || errno == EINVAL))
-        #endif
-            fd = g_open (path, O_RDONLY, 0);
-        if (fd >= 0) {
-            input_stream = g_unix_input_stream_new (fd, TRUE);
-            if (input_stream == NULL) {
-                if (error != NULL) {
-                    g_warning ("Unable to create an input stream for %s: %s", uri, error->message);
-                    g_clear_error (&error);
-                }
-                g_object_unref (file);
-                return NULL;
-            }
+        input_stream = G_INPUT_STREAM (g_file_read (file, NULL, NULL));
+        if (input_stream == NULL) {
+            g_object_unref (file);
+            return NULL;
         }
     }
 
@@ -899,11 +882,14 @@ mate_desktop_thumbnail_factory_lookup (MateDesktopThumbnailFactory *factory,
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
   
+  /*
   path = g_build_filename (g_get_user_cache_dir (),
-			   "thumbnails",
-			   (priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
-			   file,
-			   NULL);
+                           "thumbnails", */
+  path = g_build_filename (g_get_home_dir (),
+                           ".thumbnails",
+                           (priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
+                           file,
+                           NULL);
   g_free (file);
 
   pixbuf = gdk_pixbuf_new_from_file (path, NULL);
@@ -960,11 +946,14 @@ mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailF
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
+  /*
   path = g_build_filename (g_get_user_cache_dir (),
-			   "thumbnails/fail",
-			   appname,
-			   file,
-			   NULL);
+                           "thumbnails/fail", */
+  path = g_build_filename (g_get_home_dir (),
+                           ".thumbnails/fail",
+                           appname,
+                           file,
+                           NULL);
   g_free (file);
 
   pixbuf = gdk_pixbuf_new_from_file (path, NULL);
@@ -1056,7 +1045,7 @@ mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *facto
   /* Don't thumbnail thumbnails */
   if (uri &&
       strncmp (uri, "file:/", 6) == 0 &&
-      strstr (uri, "/thumbnails/") != NULL)
+      strstr (uri, "/.thumbnails/") != NULL)
     return FALSE;
   
   if (!mime_type)
@@ -1302,9 +1291,12 @@ make_thumbnail_dirs (MateDesktopThumbnailFactory *factory)
 
   res = FALSE;
 
+  /*
   thumbnail_dir = g_build_filename (g_get_user_cache_dir (),
-				    "thumbnails",
-				    NULL);
+                                    "thumbnails", */
+  thumbnail_dir = g_build_filename (g_get_home_dir (),
+                                    ".thumbnails",
+                                    NULL);
   if (!g_file_test (thumbnail_dir, G_FILE_TEST_IS_DIR))
     {
       g_mkdir (thumbnail_dir, 0700);
@@ -1336,9 +1328,12 @@ make_thumbnail_fail_dirs (MateDesktopThumbnailFactory *factory)
 
   res = FALSE;
 
+  /*
   thumbnail_dir = g_build_filename (g_get_user_cache_dir (),
-				    "thumbnails",
-				    NULL);
+                                    "thumbnails", */
+  thumbnail_dir = g_build_filename (g_get_home_dir (),
+                                    ".thumbnails",
+                                    NULL);
   if (!g_file_test (thumbnail_dir, G_FILE_TEST_IS_DIR))
     {
       g_mkdir (thumbnail_dir, 0700);
@@ -1411,11 +1406,14 @@ mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *fact
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
+  /*
   path = g_build_filename (g_get_user_cache_dir (),
-			   "thumbnails",
-			   (priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
-			   file,
-			   NULL);
+                           "thumbnails", */
+  path = g_build_filename (g_get_home_dir (),
+                           ".thumbnails",
+                           (priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
+                           file,
+                           NULL);
 
   g_free (file);
 
@@ -1519,11 +1517,14 @@ mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFact
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
+  /*
   path = g_build_filename (g_get_user_cache_dir (),
-			   "thumbnails/fail",
-			   appname,
-			   file,
-			   NULL);
+                           "thumbnails/fail", */
+  path = g_build_filename (g_get_home_dir (),
+                           ".thumbnails/fail",
+                           appname,
+                           file,
+                           NULL);
   g_free (file);
 
   g_checksum_free (checksum);
@@ -1610,12 +1611,14 @@ mate_desktop_thumbnail_path_for_uri (const char         *uri,
   file = g_strconcat (md5, ".png", NULL);
   g_free (md5);
   
+  /*
   path = g_build_filename (g_get_user_cache_dir (),
-			   "thumbnails",
-			   (size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
-			   file,
-			   NULL);
-    
+                           "thumbnails", */
+  path = g_build_filename (g_get_home_dir (),
+                           ".thumbnails",
+                           (size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
+                           file,
+                           NULL);
   g_free (file);
 
   return path;
