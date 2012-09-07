@@ -1693,7 +1693,8 @@ get_as_pixbuf_for_size (MateBG    *bg,
 
 		/* If scalable choose maximum size */
 		format = gdk_pixbuf_get_file_info (filename, NULL, NULL);
-                tmp = gdk_pixbuf_format_get_name (format);
+		if (format != NULL)
+            tmp = gdk_pixbuf_format_get_name (format);
 		if (format != NULL &&
 		    strcmp (tmp, "svg") == 0 &&
 		    (best_width > 0 && best_height > 0) &&
