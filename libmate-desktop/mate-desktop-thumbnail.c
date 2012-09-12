@@ -43,7 +43,6 @@
 #define MATE_DESKTOP_USE_UNSTABLE_API
 #include "libmateui/mate-desktop-thumbnail.h"
 #include <glib/gstdio.h>
-#include <gio/gunixinputstream.h>
 #include <glib-unix.h>
 
 #define SECONDS_BETWEEN_STATS 10
