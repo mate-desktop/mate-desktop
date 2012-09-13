@@ -1,4 +1,9 @@
 <schemalist>
+  <enum id="org.mate.peripherals-keyboard.NumLockState">
+    <value nick="off" value="0"/>
+    <value nick="on" value="1"/>
+    <value nick="unknown" value="2"/>
+  </enum>
   <schema id="org.mate.peripherals-keyboard" path="/desktop/mate/peripherals/keyboard/">
     <key name="repeat" type="b">
       <default>true</default>
@@ -34,6 +39,11 @@
       <default>true</default>
       <summary>Remember NumLock state</summary>
       <description>When set to true, MATE will remember the state of the NumLock LED between sessions.</description>
+    </key>
+    <key name="numlock-state" enum="org.mate.peripherals-keyboard.NumLockState">
+      <default>'unknown'</default>
+      <summary>NumLock state</summary>
+      <description>The remembered state of the NumLock LED.</description>
     </key>
   </schema>
 </schemalist>
