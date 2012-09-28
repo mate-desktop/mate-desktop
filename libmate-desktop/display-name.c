@@ -209,7 +209,7 @@ static void read_pnp_ids(void)
 		{
 			 line = lines[i];
 
-			 if (line[3] == '\t')
+			 if (line[0] && line[1] && line[2] && line[3] == '\t' && line[4])
 			 {
 				 code = line;
 				 line[3] = '\0';
