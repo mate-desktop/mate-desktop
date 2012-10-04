@@ -75,6 +75,11 @@
       <summary>Gtk+ Theme</summary>
       <description>Basename of the default theme used by gtk+.</description>
     </key>
+    <key name="gtk-color-scheme" type="s">
+      <default>''</default>
+      <summary>List of symbolic names and color equivalents</summary>
+      <description>A '\n' separated list of "name:color" as defined by the 'gtk-color-scheme' setting</description>
+    </key>
     <key name="font-name" type="s">
       <default>'Sans 10'</default>
       <summary>Default font</summary>
@@ -118,7 +123,7 @@
     <key name="file-chooser-backend" type="s">
       <default>'gio'</default>
       <summary>Module for GtkFileChooser</summary>
-      <description>Module to use as the filesystem model for the GtkFileChooser widget.  Possible values are "gio", "mate-vfs" and "gtk+".</description>
+      <description>Module to use as the filesystem model for the GtkFileChooser widget.  Possible values are "gio" and "gtk+".</description>
     </key>
     <key name="menubar-accel" type="s">
       <default>'F10'</default>
