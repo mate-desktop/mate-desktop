@@ -1,0 +1,144 @@
+<schemalist gettext-domain="@GETTEXT_PACKAGE@">
+  <schema id="org.mate.interface" path="/desktop/mate/interface/">
+    <key name="accessibility" type="b">
+      <default>false</default>
+      <_summary>Enable Accessibility</_summary>
+      <_description>Whether Applications should have accessibility support.</_description>
+    </key>
+    <key name="enable-animations" type="b">
+      <default>true</default>
+      <_summary>Enable Animations</_summary>
+      <_description>Whether animations should be displayed. Note: This is a global key, it changes the behaviour of the window manager, the panel etc.</_description>
+    </key>
+    <key name="menus-have-tearoff" type="b">
+      <default>false</default>
+      <_summary>Menus Have Tearoff</_summary>
+      <_description>Whether menus should have a tearoff.</_description>
+    </key>
+    <key name="can-change-accels" type="b">
+      <default>false</default>
+      <_summary>Can Change Accels</_summary>
+      <_description>Whether the user can dynamically type a new accelerator when  positioned over an active menuitem.</_description>
+    </key>
+    <key name="toolbar-style" type="s">
+      <default>'both-horiz'</default>
+      <_summary>Toolbar Style</_summary>
+      <_description>Toolbar Style. Valid values are "both", "both-horiz", "icons", and "text".</_description>
+    </key>
+    <key name="menus-have-icons" type="b">
+      <default>true</default>
+      <_summary>Menus Have Icons</_summary>
+      <_description>Whether menus may display an icon next to a menu entry.</_description>
+    </key>
+    <key name="buttons-have-icons" type="b">
+      <default>true</default>
+      <_summary>Buttons Have Icons</_summary>
+      <_description>Whether buttons may display an icon in addition to the button text.</_description>
+    </key>
+    <key name="menubar-detachable" type="b">
+      <default>false</default>
+      <_summary>Menubar Detachable</_summary>
+      <_description>Whether the user can detach menubars and move them around.</_description>
+    </key>
+    <key name="toolbar-detachable" type="b">
+      <default>false</default>
+      <_summary>Toolbar Detachable</_summary>
+      <_description>Whether the user can detach toolbars and move them around.</_description>
+    </key>
+    <key name="toolbar-icons-size" type="s">
+      <default>'large-toolbar'</default>
+      <_summary>Toolbar Icon Size</_summary>
+      <_description>Size of icons in toolbars, either "small-toolbar" or "large-toolbar".</_description>
+    </key>
+    <key name="cursor-blink" type="b">
+      <default>true</default>
+      <_summary>Cursor Blink</_summary>
+      <_description>Whether the cursor should blink.</_description>
+    </key>
+    <key name="cursor-blink-time" type="i">
+      <default>1200</default>
+      <_summary>Cursor Blink Time</_summary>
+      <_description>Length of the cursor blink cycle, in milliseconds.</_description>
+    </key>
+    <key name="icon-theme" type="s">
+      <default>'mate'</default>
+      <_summary>Icon Theme</_summary>
+      <_description>Icon theme to use for the panel, caja etc.</_description>
+    </key>
+    <key name="gtk-theme" type="s">
+      <default>'Clearlooks'</default>
+      <_summary>Gtk+ Theme</_summary>
+      <_description>Basename of the default theme used by gtk+.</_description>
+    </key>
+    <key name="gtk-key-theme" type="s">
+      <default>'Default'</default>
+      <_summary>Gtk+ Theme</_summary>
+      <_description>Basename of the default theme used by gtk+.</_description>
+    </key>
+    <key name="gtk-color-scheme" type="s">
+      <default>''</default>
+      <_summary>List of symbolic names and color equivalents</_summary>
+      <_description>A '\n' separated list of "name:color" as defined by the 'gtk-color-scheme' setting</_description>
+    </key>
+    <key name="font-name" type="s">
+      <default>'Sans 10'</default>
+      <_summary>Default font</_summary>
+      <_description>Name of the default font used by gtk+.</_description>
+    </key>
+    <key name="gtk-im-preedit-style" type="s">
+      <default>'callback'</default>
+      <_summary>GTK IM Preedit Style</_summary>
+      <_description>Name of the GTK+ input method Preedit Style used by gtk+.</_description>
+    </key>
+    <key name="gtk-im-status-style" type="s">
+      <default>'callback'</default>
+      <_summary>GTK IM Status Style</_summary>
+      <_description>Name of the GTK+ input method Status Style used by gtk+.</_description>
+    </key>
+    <key name="gtk-im-module" type="s">
+      <default>''</default>
+      <_summary>GTK IM Module</_summary>
+      <_description>Name of the input method module used by GTK+.</_description>
+    </key>
+    <key name="document-font-name" type="s">
+      <default>'Sans 10'</default>
+      <_summary>Document font</_summary>
+      <_description>Name of the default font used for reading documents.</_description>
+    </key>
+    <key name="monospace-font-name" type="s">
+      <default>'Monospace 10'</default>
+      <_summary>Monospace font</_summary>
+      <_description>Name of a monospaced (fixed-width) font for use in locations like terminals.</_description>
+    </key>
+    <key name="use-custom-font" type="b">
+      <default>false</default>
+      <_summary>Use Custom Font</_summary>
+      <_description>Whether to use a custom font in gtk+ applications.</_description>
+    </key>
+    <key name="status-bar-meter-on-right" type="b">
+      <default>false</default>
+      <_summary>Status Bar on Right</_summary>
+      <_description>Whether to display a status bar meter on the right.</_description>
+    </key>
+    <key name="file-chooser-backend" type="s">
+      <default>'gio'</default>
+      <_summary>Module for GtkFileChooser</_summary>
+      <_description>Module to use as the filesystem model for the GtkFileChooser widget.  Possible values are "gio" and "gtk+".</_description>
+    </key>
+    <key name="menubar-accel" type="s">
+      <default>'F10'</default>
+      <_summary>Menubar accelerator</_summary>
+      <_description>Keyboard shortcut to open the menu bars.</_description>
+    </key>
+    <key name="show-input-method-menu" type="b">
+      <default>true</default>
+      <_summary>Show the 'Input Methods' menu</_summary>
+      <_description>Whether the context menus of entries and text views  should offer to change the input method.</_description>
+    </key>
+    <key name="show-unicode-menu" type="b">
+      <default>true</default>
+      <_summary>Show the 'Unicode Control Character' menu</_summary>
+      <_description>Whether the context menus of entries and text views  should offer to insert control characters.</_description>
+    </key>
+  </schema>
+</schemalist>

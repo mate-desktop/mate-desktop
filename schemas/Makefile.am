@@ -1,3 +1,4 @@
+@INTLTOOL_XML_NOMERGE_RULE@
 gsettings_SCHEMAS = \
 	org.mate.accessibility-keyboard.gschema.xml \
 	org.mate.accessibility-startup.gschema.xml \
@@ -18,11 +19,11 @@ gsettings_SCHEMAS = \
 	org.mate.typing-break.gschema.xml
 @GSETTINGS_RULES@
 
-org.mate.background.gschema.xml: org.mate.background.gschema.xml.in Makefile
-	$(AM_V_GEN) $(SED) -e 's^\@datadir\@^$(datadir)^g' < $(srcdir)/org.mate.background.gschema.xml.in > org.mate.background.gschema.xml
+org.mate.background.gschema.xml.in: org.mate.background.gschema.xml.in.in Makefile
+	$(AM_V_GEN) $(SED) -e 's^\@datadir\@^$(datadir)^g' < $(srcdir)/org.mate.background.gschema.xml.in.in > org.mate.background.gschema.xml.in
 
 EXTRA_DIST = \
 	$(gsettings_SCHEMAS)
 
 CLEANFILES = \
-	org.mate.background.gschema.xml
+	org.mate.background.gschema.xml.in
