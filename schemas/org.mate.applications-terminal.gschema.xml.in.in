@@ -1,0 +1,14 @@
+<schemalist gettext-domain="@GETTEXT_PACKAGE@">
+  <schema id="org.mate.applications-terminal" path="/desktop/mate/applications/terminal/">
+    <key name="exec" type="s">
+      <default>'mate-terminal'</default>
+      <_summary>Terminal application</_summary>
+      <_description>Terminal program to use when starting applications that require one.</_description>
+    </key>
+    <key name="exec-arg" type="s">
+      <default>'-x'</default>
+      <_summary>Exec Arguments</_summary>
+      <_description>Argument used to execute programs in the terminal defined by the 'exec' key.</_description>
+    </key>
+  </schema>
+</schemalist>

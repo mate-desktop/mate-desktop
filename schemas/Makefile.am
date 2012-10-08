@@ -19,11 +19,13 @@ gsettings_SCHEMAS = \
 	org.mate.typing-break.gschema.xml
 @GSETTINGS_RULES@
 
-org.mate.background.gschema.xml.in: org.mate.background.gschema.xml.in.in Makefile
-	$(AM_V_GEN) $(SED) -e 's^\@datadir\@^$(datadir)^g' < $(srcdir)/org.mate.background.gschema.xml.in.in > org.mate.background.gschema.xml.in
+%.gschema.xml.in: %.gschema.xml.in.in Makefile
+	$(AM_V_GEN) $(SED) -e 's^\@datadir\@^$(datadir)^g' -e 's^\@GETTEXT_PACKAGE\@^$(GETTEXT_PACKAGE)^g' < $< > $@
 
 EXTRA_DIST = \
 	$(gsettings_SCHEMAS)
 
 CLEANFILES = \
-	org.mate.background.gschema.xml.in
+	$(gsettings_SCHEMAS_in) \
+	$(gsettings_SCHEMAS) \
+	*.gschema.valid

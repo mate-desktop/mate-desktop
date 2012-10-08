@@ -1,0 +1,19 @@
+<schemalist gettext-domain="@GETTEXT_PACKAGE@">
+  <schema id="org.mate.applications-browsser" path="/desktop/mate/applications/browser/">
+    <key name="exec" type="s">
+      <default>'mozilla'</default>
+      <_summary>Default browser</_summary>
+      <_description>Default browser for all URLs.</_description>
+    </key>
+    <key name="needs-term" type="b">
+      <default>false</default>
+      <_summary>Browser needs terminal</_summary>
+      <_description>Whether the default browser needs a terminal to run.</_description>
+    </key>
+    <key name="nremote" type="b">
+      <default>true</default>
+      <_summary>Browser understands remote</_summary>
+      <_description>Whether the default browser understands netscape remote.</_description>
+    </key>
+  </schema>
+</schemalist>
