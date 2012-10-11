@@ -82,6 +82,11 @@
 	};
 
 	const char* authors[] = {
+		// MATE start here
+		"Perberos <perberos@gmail.com>",
+		"Stefano Karapetsas <stefano@karapetsas.com>",
+		"Steve Zesch <stevezesch2@gmail.com>",
+		// GNOME start here
 		"Jérôme Abela",
 		"Rob Adams",
 		"Djihed Afifi",
@@ -613,10 +618,6 @@
 		"Sascha Ziemann",
 		"Michael Zucchi",
 		"Jason van Zyl",
-		// MATE start here
-		"Perberos <perberos@gmail.com>",
-		"Stefano Karapetsas <stefano@karapetsas.com>",
-		"Steve Zesch <stevezesch2@gmail.com>",
 		NULL
 	};
 
@@ -627,7 +628,7 @@
 	};
 	// artistas
 	const char* artists[] = {
-		"...", // TODO: fillme
+		"Rowen Stipe <rowen.stipe@gmail.com>",
 		NULL
 	};
 	// traductores
