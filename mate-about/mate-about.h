@@ -86,6 +86,8 @@
 		"Perberos <perberos@gmail.com>",
 		"Stefano Karapetsas <stefano@karapetsas.com>",
 		"Steve Zesch <stevezesch2@gmail.com>",
+		"Clement Lefebvre <root@linuxmint.com>",
+		"Nelson Marques <nmo.marques@gmail.com>",
 		// GNOME start here
 		"Jérôme Abela",
 		"Rob Adams",
