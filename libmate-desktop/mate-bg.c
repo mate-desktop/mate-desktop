@@ -1689,14 +1689,14 @@ get_as_pixbuf_for_size (MateBG    *bg,
 	else {
 		GdkPixbufFormat *format;
 		GdkPixbuf *pixbuf;
-                gchar *tmp;
+		gchar *tmp = NULL;
 
 		/* If scalable choose maximum size */
 		format = gdk_pixbuf_get_file_info (filename, NULL, NULL);
 		if (format != NULL)
             tmp = gdk_pixbuf_format_get_name (format);
 		if (format != NULL &&
-		    strcmp (tmp, "svg") == 0 &&
+		    g_strcmp0 (tmp, "svg") == 0 &&
 		    (best_width > 0 && best_height > 0) &&
 		    (bg->placement == MATE_BG_PLACEMENT_FILL_SCREEN ||
 		     bg->placement == MATE_BG_PLACEMENT_SCALED ||
@@ -1704,7 +1704,8 @@ get_as_pixbuf_for_size (MateBG    *bg,
 			pixbuf = gdk_pixbuf_new_from_file_at_size (filename, best_width, best_height, NULL);
 		else
 			pixbuf = gdk_pixbuf_new_from_file (filename, NULL);
-                g_free (tmp);
+		if (tmp != NULL)
+			g_free (tmp);
 
 		if (pixbuf)
 			file_cache_add_pixbuf (bg, filename, pixbuf);
