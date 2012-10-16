@@ -631,6 +631,7 @@
 	// artistas
 	const char* artists[] = {
 		"Rowen Stipe <rowen.stipe@gmail.com>",
+		"/g/entoomen <https://boards.4chan.org/g/>"
 		NULL
 	};
 	// traductores
