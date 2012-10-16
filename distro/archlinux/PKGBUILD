@@ -1,16 +1,17 @@
 pkgname=mate-desktop
-pkgver=1.1.0
+pkgver=1.5.0
 pkgrel=1
 pkgdesc="Library with common API for various MATE modules"
 arch=(i686 x86_64)
 license=(GPL LGPL)
-depends=('libunique' 'libmatenotify' 'hicolor-icon-theme' 'gvfs-obexftp' 'obexd-client' 'mate-conf')
+depends=('libunique' 'libmatenotify' 'hicolor-icon-theme' 'gvfs-obexftp' 'obexd-client')
 makedepends=('mate-doc-utils' 'intltool')
 options=('!emptydirs' '!libtool')
-url="http://matsusoft.com.ar/projects/mate/"
+url="http://mate-desktop.org/"
 groups=('mate')
 source=()
 sha256sums=()
+install=mate-desktop.install
 
 build() {
 	cd "${srcdir}/../../../"
@@ -22,7 +23,7 @@ build() {
         --disable-static \
         --disable-scrollkeeper \
         --disable-startup-notification \
-        --enable-unique --disable-gnucat || return 1
+        --enable-unique || return 1
     #  --with-gtk=3.0
     make || return 1
 }
