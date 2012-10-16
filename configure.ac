@@ -232,9 +232,9 @@ AM_GLIB_GNU_GETTEXT
 
 AC_ARG_ENABLE([gnucat],
               [AS_HELP_STRING([--disable-gnucat], [disable the use of gnu cat as logo])],
-              [], [enable_gnucat=yes])
+              [disable_gnucat=yes], [disable_gnucat=no])
 
-if test "x$enable_gnucat" = "xno"; then
+if test "x$disable_gnucat" = "xyes"; then
     MATE_ABOUT_CFLAGS="$MATE_ABOUT_CFLAGS -DDISABLE_GNUCAT=1"
 fi
 
@@ -342,5 +342,5 @@ mate-desktop $VERSION `echo mate-desktop $VERSION | sed "s/./=/g"`
     Startup notification support: ${have_startup_notification}
     XRandr support:               ${have_randr}
     Build gtk-doc documentation:  ${enable_gtk_doc}
-
+    Disable gnucat:               ${disable_gnucat}
 "
