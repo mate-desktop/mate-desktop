@@ -3,7 +3,7 @@ mate_about_SOURCES = mate-about.c mate-about.h
 mate_about_CFLAGS = $(MATE_ABOUT_CFLAGS) $(UNIQUE_CFLAGS)
 mate_about_LDADD = $(MATE_ABOUT_LIBS) $(UNIQUE_LIBS)
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	-I$(top_srcdir) \
 	$(MATE_ABOUT_CFLAGS) \
 	-DLOCALE_DIR=\"$(datadir)/locale\" \
