@@ -63,7 +63,7 @@ MATE_MAINTAINER_MODE_DEFINES
 # As a special favour for vuntz, support --disable-deprecations
 
 AC_ARG_ENABLE([deprecations],
-	[AS_HELP_STRING([--disable-deprecations],[don't warn about deprecated usages])],
+	[AS_HELP_STRING([--disable-deprecations],[dont warn about deprecated usages])],
 	[],[enable_deprecations=yes])
 if test "$enable_deprecations" = "no"; then
 	DISABLE_DEPRECATED=""
@@ -73,7 +73,7 @@ fi
 # Should we build mate-about or the shared desktop docs? Useful for people who
 # need to build two mate-desktop using two different versions of GTK+
 AC_ARG_ENABLE([mate-about],
-	[AS_HELP_STRING([--disable-mate-about],[don't build mate-about])],
+	[AS_HELP_STRING([--disable-mate-about],[dont build mate-about])],
 	[],[enable_mate_about=yes])
 AM_CONDITIONAL(MATE_ABOUT_ENABLED, test "x$enable_mate_about" = "xyes")
 AC_ARG_ENABLE([desktop-docs],
@@ -231,12 +231,13 @@ AC_SUBST(GETTEXT_PACKAGE)
 AM_GLIB_GNU_GETTEXT
 
 AC_ARG_ENABLE([gnucat],
-              [AS_HELP_STRING([--disable-gnucat], [disable the use of gnu cat as logo])],
-              [disable_gnucat=yes], [disable_gnucat=no])
+              [AS_HELP_STRING([--enable-gnucat], [enable the use of gnu cat as logo in mate-about])],
+              [enable_gnucat=yes], [enable_gnucat=no])
 
-if test "x$disable_gnucat" = "xyes"; then
-    MATE_ABOUT_CFLAGS="$MATE_ABOUT_CFLAGS -DDISABLE_GNUCAT=1"
+if test "x$enable_gnucat" = "xyes"; then
+    MATE_ABOUT_CFLAGS="$MATE_ABOUT_CFLAGS -DENABLE_GNUCAT=1"
 fi
+AM_CONDITIONAL(GNUCAT_ENABLED, test "x$enable_gnucat" = "xyes")
 
 dnl ============================================================================
 dnl | se comprueba unique
@@ -342,5 +343,5 @@ mate-desktop $VERSION `echo mate-desktop $VERSION | sed "s/./=/g"`
     Startup notification support: ${have_startup_notification}
     XRandr support:               ${have_randr}
     Build gtk-doc documentation:  ${enable_gtk_doc}
-    Disable gnucat:               ${disable_gnucat}
+    Enable gnucat:                ${enable_gnucat}
 "

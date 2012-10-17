@@ -32,10 +32,8 @@
 	textdomain(package);
 #endif
 
-//class mate_about
-//{
 	// what a mess!
-	#ifndef DISABLE_GNUCAT
+	#ifdef ENABLE_GNUCAT
 
 	// Thanks! http://www.gtkforums.com/viewtopic.php?t=1639
 	typedef struct _iter_arg {
@@ -85,7 +83,8 @@
 	}
 
 	#elif GLIB_CHECK_VERSION(2, 26, 0) && !defined(UNIQUE)
-	// es un callback
+
+	// callback
 	static void mate_about_on_activate(GApplication* app)
 	{
 		if (!mate_about_dialog)
@@ -102,16 +101,14 @@
 
 	void mate_about_run(void)
 	{
-		/* Es importante llamar gtk_init, si no, no se puede iniciar bien el dialogo */
 		mate_about_dialog = (GtkAboutDialog*) gtk_about_dialog_new();
 
 		gtk_window_set_default_icon_name(icon);
 
-		#ifndef DISABLE_GNUCAT
+		#ifdef ENABLE_GNUCAT
 
-			/* hacemos una comprovacion de la fecha, para mostrar el gnucat
-			 * version navideña. */
-			gboolean christmas_is = FALSE;
+			/* check if it's christmas, to show a different image */
+			gboolean is_christmas = FALSE;
 
 			GDate* d = g_date_new();
 			g_date_set_time_t(d, (time_t) time(NULL));
@@ -122,14 +119,13 @@
 
 				if (day >= 24 && day <=25)
 				{
-					christmas_is = TRUE;
+					is_christmas = TRUE;
 				}
 			}
 
 			g_date_free(d);
 
-
-			if (christmas_is == TRUE)
+			if (is_christmas == TRUE)
 			{
 				GdkPixbuf* pixbuf = gdk_pixbuf_new_from_file(PIXMAPS_DIR "gnu-cat_navideno_v3.png", NULL);
 				gtk_about_dialog_set_logo(mate_about_dialog, pixbuf);
@@ -175,7 +171,7 @@
 
 		#endif
 
-		//name
+		// name
 		#if GTK_CHECK_VERSION(3, 0, 0) || GTK_CHECK_VERSION(2, 12, 0)
 			gtk_about_dialog_set_program_name(mate_about_dialog, gettext(program_name));
 		#else
@@ -185,7 +181,7 @@
 		// version
 		gtk_about_dialog_set_version(mate_about_dialog, version);
 
-		// creditos y pagina web
+		// credits and website
 		gtk_about_dialog_set_copyright(mate_about_dialog, copyright);
 		gtk_about_dialog_set_website(mate_about_dialog, website);
 
@@ -195,12 +191,12 @@
 		 */
 		gtk_about_dialog_set_comments(mate_about_dialog, gettext(comments_array[g_random_int_range(0, comments_count - 1)]));
 
-		// autores
 		gtk_about_dialog_set_authors(mate_about_dialog, authors);
-		// I comment this because the list is empty
 		gtk_about_dialog_set_artists(mate_about_dialog, artists);
 		gtk_about_dialog_set_documenters(mate_about_dialog, documenters);
-		gtk_about_dialog_set_translator_credits(mate_about_dialog, translators);
+		/* Translators should localize the following string which will be
+		 * displayed in the about box to give credit to the translator(s). */
+		gtk_about_dialog_set_translator_credits(mate_about_dialog, _("translator-credits"));
 
 		#if GTK_CHECK_VERSION(3, 0, 0)
 			gtk_about_dialog_set_license_type(mate_about_dialog, GTK_LICENSE_GPL_3_0);
@@ -222,44 +218,19 @@
 	{
 		int status = 0;
 
-		/* Con esto se inicia gettext
-		 * GETTEXT_PACKAGE = mate-desktop-2.0
-		 * LOCALE_DIR = /usr/local/share/locale */
 		mate_gettext(GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
 
 		g_type_init();
-		
-		
-		#ifdef G_OPTIONS_ENTRY_USE
-			/* http://www.gtk.org/api/2.6/glib/glib-Commandline-option-parser.html */
-			GOptionContext* context = g_option_context_new(NULL);
-			g_option_context_add_main_entries(context, command_entries, GETTEXT_PACKAGE);
-			g_option_context_add_group(context, gtk_get_option_group(TRUE));
-			g_option_context_parse(context, &argc, &argv, NULL);
 
-			/* Not necesary at all, program just run and die.
-			 * But it free a little memory. */
-			g_option_context_free(context);
-		#else
-			int opt; /* este valor entrega el tipo de argumento */
-			
-			while ((opt = getopt_long(argc, argv, "+", command_entries, NULL)) != -1)
-			{
-				switch (opt)
-				{
-					case '?':
-						return 1;
-					case OPTION_VERSION:
-						mate_about_nogui = TRUE;
-						break;
-					#ifdef CMDLINE_PROCESS
-						CMDLINE_PROCESS
-					#endif
-				}
-			}
-		#endif
-		
-		
+		/* http://www.gtk.org/api/2.6/glib/glib-Commandline-option-parser.html */
+		GOptionContext* context = g_option_context_new(NULL);
+		g_option_context_add_main_entries(context, command_entries, GETTEXT_PACKAGE);
+		g_option_context_add_group(context, gtk_get_option_group(TRUE));
+		g_option_context_parse(context, &argc, &argv, NULL);
+
+		/* Not necesary at all, program just run and die.
+		 * But it free a little memory. */
+		g_option_context_free(context);
 
 		if (mate_about_nogui == TRUE)
 		{
@@ -270,7 +241,7 @@
 			gtk_init(&argc, &argv);
 
 			/**
-			 * Ejemplos tomados de:
+			 * Examples taken from:
 			 * http://developer.gnome.org/gtk3/3.0/gtk-migrating-GtkApplication.html
 			 */
 			#ifdef USE_UNIQUE
@@ -310,12 +281,13 @@
 				g_object_unref(mate_about_application);
 
 			#else
+
 				mate_about_run();
+
 			#endif
 		}
 
 		return status;
 	}
-//}
 
 #endif

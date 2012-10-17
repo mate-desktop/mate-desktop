@@ -30,22 +30,6 @@
 	#include <unique/unique.h>
 #endif
 
-/* "Commandline option parser" fue introducida a la GLIB a partir de la
- * version 2.6, esta definicion es para la compatibilidad GTK1.2 */
-#if GLIB_CHECK_VERSION(2, 6, 0)
-	#define G_OPTIONS_ENTRY_USE
-#endif
-
-/* Debido a que GOptions no está disponible en GLIB versiones inferiores a 2.6
- * voy a utilizar la alternativa de GNU C, */
-#ifdef G_OPTIONS_ENTRY_USE
-	/* No hay nesecidad de incluir nada, viene por defecto en <glib/glib.h> */
-#else
-	#include <getopt.h>
-#endif
-
-//class mate_about
-//{
 	const char* program_name = "MATE Desktop Environment";
 	const char* version = PACKAGE_VERSION;
 	const char* icon = "desktop";
@@ -55,9 +39,8 @@
 		"Copyright © 1997-2011 GNOME developers\n"
 		"Copyright © 2011 Perberos"; // egoista!
 
-	/* Incrementar el valor de comments_count si se desea agregar nuevos valores
-	 * en comments[]. Porque, este valor es usado en un random para obtener el
-	 * indice de la cadena. */
+	/* Increment comments_count if you add other comments. This will be
+	 * used to choose a random comment. */
 	const int comments_count = 6;
 	const char* comments_array[] = {
 		N_("MATE provides an intuitive and attractive desktop to Linux users "
@@ -82,13 +65,13 @@
 	};
 
 	const char* authors[] = {
-		// MATE start here
+		// MATE developers
 		"Perberos <perberos@gmail.com>",
 		"Stefano Karapetsas <stefano@karapetsas.com>",
 		"Steve Zesch <stevezesch2@gmail.com>",
 		"Clement Lefebvre <root@linuxmint.com>",
 		"Nelson Marques <nmo.marques@gmail.com>",
-		// GNOME start here
+		// GNOME developers
 		"Jérôme Abela",
 		"Rob Adams",
 		"Djihed Afifi",
@@ -623,28 +606,23 @@
 		NULL
 	};
 
-	// documentacion
+	// documentation
 	const char* documenters[] = {
 		"...", // TODO: fillme
 		NULL
 	};
-	// artistas
+	// artists
 	const char* artists[] = {
 		"Rowen Stipe <rowen.stipe@gmail.com>",
 		"/g/entoomen <https://boards.4chan.org/g/>",
 		NULL
 	};
-	// traductores
-	const char translators[] = "" \
-		"..."; // TODO: fillme
 
-	// widget de la unica ventana
+	// widget for mate-about window
 	GtkAboutDialog* mate_about_dialog = FALSE;
 
 	// libunique thing
 	#ifdef USE_UNIQUE
-		//extern UniqueApp* unique;
-		//UniqueApp* unique = NULL;
 		extern UniqueApp* mate_about_application;
 		UniqueApp* mate_about_application = NULL;
 	#elif GTK_CHECK_VERSION(3, 0, 0)
@@ -668,32 +646,10 @@
 		static void mate_about_on_activate(GApplication* app);
 	#endif
 
-	// for command line
-	#ifdef G_OPTIONS_ENTRY_USE
-		/* GOptionEntry ofrese la posibilidad de acceder a las opciones extras
-		 * de GTK desde la linea de comandos. Tambien muestra automaticamente
-		 * las opciones al llamar --help o -h */
-		static GOptionEntry command_entries[] = {
-			{"version", 'v', 0, G_OPTION_ARG_NONE, &mate_about_nogui, "Show release version", NULL},
-			{NULL}
-		};
-	#else
-	
-		
-		/* Quizás hay que agregar una opcion para --help
-		 */
-		static struct option command_entries[] = {
-			#ifdef CMDLINE_OPTIONS
-			CMDLINE_OPTIONS
-			#endif
-			
-			#define OPTION_VERSION 1000
-			{"version", no_argument, NULL, OPTION_VERSION},
-			
-			{NULL, 0, NULL, 0}
-		};
-	#endif
-	
-//}
+	// arguments definitions
+	static GOptionEntry command_entries[] = {
+		{"version", 'v', 0, G_OPTION_ARG_NONE, &mate_about_nogui, "Show MATE version", NULL},
+		{NULL}
+	};
 
 #endif /* __MATE_ABOUT_H__ */
