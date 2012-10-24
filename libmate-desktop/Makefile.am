@@ -31,7 +31,7 @@ AM_CPPFLAGS =							\
 
 AM_CFLAGS = $(WARN_CFLAGS)
 
-noinst_PROGRAMS = test-ditem test test-languages
+noinst_PROGRAMS = test-desktop-thumbnail test-ditem test test-languages
 
 CLEANFILES =
 
@@ -78,6 +78,12 @@ test_SOURCES = \
 test_LDADD = \
 	libmate-desktop-2.la		\
 	$(MATE_DESKTOP_LIBS)
+
+test_desktop_thumbnail_LDADD = \
+	$(lib_LTLIBRARIES) \
+	$(MATE_DESKTOP_LIBS) \
+	$(XLIB_LIBS)
+
 
 test_ditem_SOURCES = \
 	test-ditem.c
