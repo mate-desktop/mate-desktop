@@ -525,8 +525,13 @@ mate_desktop_thumbnail_factory_lookup (MateDesktopThumbnailFactory *factory,
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
+#if GLIB_CHECK_VERSION (2, 34, 0)
+  path = g_build_filename (g_get_user_cache_dir (),
+			   "thumbnails",
+#else
   path = g_build_filename (g_get_home_dir (),
 			   ".thumbnails",
+#endif
 			   (priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
 			   file,
 			   NULL);
@@ -586,8 +591,13 @@ mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailF
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
+#if GLIB_CHECK_VERSION (2, 34, 0)
+  path = g_build_filename (g_get_user_cache_dir (),
+			   "thumbnails/fail",
+#else
   path = g_build_filename (g_get_home_dir (),
 			   ".thumbnails/fail",
+#endif
 			   appname,
 			   file,
 			   NULL);
@@ -924,12 +934,17 @@ make_thumbnail_dirs (MateDesktopThumbnailFactory *factory)
 
   res = FALSE;
 
+#if GLIB_CHECK_VERSION (2, 34, 0)
+  thumbnail_dir = g_build_filename (g_get_user_cache_dir (),
+				    "thumbnails",
+#else
   thumbnail_dir = g_build_filename (g_get_home_dir (),
 				    ".thumbnails",
+#endif
 				    NULL);
   if (!g_file_test (thumbnail_dir, G_FILE_TEST_IS_DIR))
     {
-      g_mkdir (thumbnail_dir, 0700);
+      g_mkdir_with_parents (thumbnail_dir, 0700);
       res = TRUE;
     }
 
@@ -958,12 +973,17 @@ make_thumbnail_fail_dirs (MateDesktopThumbnailFactory *factory)
 
   res = FALSE;
 
+#if GLIB_CHECK_VERSION (2, 34, 0)
+  thumbnail_dir = g_build_filename (g_get_user_cache_dir (),
+				    "thumbnails",
+#else
   thumbnail_dir = g_build_filename (g_get_home_dir (),
 				    ".thumbnails",
+#endif
 				    NULL);
   if (!g_file_test (thumbnail_dir, G_FILE_TEST_IS_DIR))
     {
-      g_mkdir (thumbnail_dir, 0700);
+      g_mkdir_with_parents (thumbnail_dir, 0700);
       res = TRUE;
     }
 
@@ -1032,8 +1052,13 @@ mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *fact
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
+#if GLIB_CHECK_VERSION (2, 34, 0)
+  path = g_build_filename (g_get_user_cache_dir (),
+			   "thumbnails",
+#else
   path = g_build_filename (g_get_home_dir (),
 			   ".thumbnails",
+#endif
 			   (priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
 			   file,
 			   NULL);
@@ -1136,8 +1161,13 @@ mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFact
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
+#if GLIB_CHECK_VERSION (2, 34, 0)
+  path = g_build_filename (g_get_user_cache_dir (),
+			   "thumbnails/fail",
+#else
   path = g_build_filename (g_get_home_dir (),
 			   ".thumbnails/fail",
+#endif
 			   appname,
 			   file,
 			   NULL);
@@ -1228,8 +1258,13 @@ mate_desktop_thumbnail_path_for_uri (const char         *uri,
   file = g_strconcat (md5, ".png", NULL);
   g_free (md5);
 
+#if GLIB_CHECK_VERSION (2, 34, 0)
+  path = g_build_filename (g_get_user_cache_dir (),
+			   "thumbnails",
+#else
   path = g_build_filename (g_get_home_dir (),
 			   ".thumbnails",
+#endif
 			   (size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
 			   file,
 			   NULL);
