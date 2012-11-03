@@ -66,8 +66,11 @@ typedef enum {
 } MateBGPlacement;
 
 GType            mate_bg_get_type              (void);
-MateBG *        mate_bg_new                   (void);
+MateBG *         mate_bg_new                   (void);
 void             mate_bg_load_from_preferences (MateBG               *bg);
+void             mate_bg_load_from_system_preferences (MateBG        *bg);
+void             mate_bg_load_from_gsettings   (MateBG               *bg,
+						GSettings            *settings);
 void             mate_bg_save_to_preferences   (MateBG               *bg);
 /* Setters */
 void             mate_bg_set_filename          (MateBG               *bg,

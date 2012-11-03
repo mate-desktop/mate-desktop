@@ -289,19 +289,50 @@ queue_transitioned (MateBG *bg)
 					     NULL);
 }
 
+/* This function load user settings */
 void
 mate_bg_load_from_preferences (MateBG *bg)
+{
+	GSettings *settings;
+	settings = g_settings_new (MATE_BG_SCHEMA);
+	mate_bg_load_from_gsettings (bg, settings);
+	g_object_unref (settings);
+}
+
+/* This function load system settings */
+void
+mate_bg_load_from_system_preferences (MateBG *bg)
+{
+	GSettings *settings;
+	gchar **keys;
+	gchar **k;
+
+	/* FIXME: we need to bind system settings instead of user but
+	* that's currently impossible, not implemented yet.
+	* Hence, reset to system default values.
+	*/
+	settings = g_settings_new (MATE_BG_SCHEMA);
+	g_settings_delay (settings);
+	keys = g_settings_list_keys (settings);
+		for (k = keys; *k; k++) {
+			g_settings_reset (settings, *k);
+	}
+	g_strfreev (keys);
+	mate_bg_load_from_gsettings (bg, settings);
+	g_settings_revert (settings);
+	g_object_unref (settings);
+}
+
+void
+mate_bg_load_from_gsettings (MateBG *bg, GSettings *settings)
 {
 	char    *tmp;
 	char    *filename;
 	MateBGColorType ctype;
 	GdkColor c1, c2;
 	MateBGPlacement placement;
-	GSettings *settings;
 
 	g_return_if_fail (MATE_IS_BG (bg));
-	
-	settings = g_settings_new (MATE_BG_SCHEMA);
 
 	/* Filename */
 	filename = NULL;
@@ -341,8 +372,6 @@ mate_bg_load_from_preferences (MateBG *bg)
 
 	/* Placement */
 	placement = g_settings_get_enum (settings, BG_KEY_PICTURE_PLACEMENT);
-
-	g_object_unref (settings);
 
 	mate_bg_set_color (bg, ctype, &c1, &c2);
 	mate_bg_set_placement (bg, placement);
