@@ -1758,9 +1758,12 @@ get_as_pixbuf_for_size (MateBG    *bg,
 
 		/* If scalable choose maximum size */
 		format = gdk_pixbuf_get_file_info (filename, NULL, NULL);
-		if (format != NULL)
-            tmp = gdk_pixbuf_format_get_name (format);
-		if (format != NULL &&
+		if (format != NULL) {
+			tmp = gdk_pixbuf_format_get_name (format);
+		} else {
+			tmp = NULL;
+		}
+		if (tmp != NULL &&
 		    g_strcmp0 (tmp, "svg") == 0 &&
 		    (best_width > 0 && best_height > 0) &&
 		    (bg->placement == MATE_BG_PLACEMENT_FILL_SCREEN ||
