@@ -102,9 +102,6 @@ struct _MateBG {
 	GdkColor primary;
 	GdkColor secondary;
 
-	gint last_pixmap_width;
-	gint last_pixmap_height;
-
 	GFileMonitor* file_monitor;
 
 	guint changed_id;
@@ -972,16 +969,13 @@ mate_bg_create_pixmap  (MateBG      *bg,
 	g_return_val_if_fail (bg != NULL, NULL);
 	g_return_val_if_fail (window != NULL, NULL);
 
-	if (bg->last_pixmap_width != width ||
-	    bg->last_pixmap_height != height)
+	if (bg->pixbuf_cache &&
+	    gdk_pixbuf_get_width (bg->pixbuf_cache) != width &&
+	    gdk_pixbuf_get_height (bg->pixbuf_cache) != height)
 	{
-		if (bg->pixbuf_cache) {
-			g_object_unref (bg->pixbuf_cache);
-			bg->pixbuf_cache = NULL;
-		}
+		g_object_unref (bg->pixbuf_cache);
+		bg->pixbuf_cache = NULL;
 	}
-	bg->last_pixmap_width = width;
-	bg->last_pixmap_height = height;
 
 	/* has the side effect of loading and caching pixbuf only when in tile mode */
 	mate_bg_get_pixmap_size (bg, width, height, &pm_width, &pm_height);
