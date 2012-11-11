@@ -60,14 +60,14 @@ MATE_DEBUG_CHECK
 MATE_COMPILE_WARNINGS([maximum])
 MATE_MAINTAINER_MODE_DEFINES
 
-# As a special favour for vuntz, support --disable-deprecations
+AC_ARG_ENABLE(deprecation_flags,
+              [AC_HELP_STRING([--enable-deprecation-flags],
+                              [use *_DISABLE_DEPRECATED flags @<:@default=no@:>@])],,
+              [enable_deprecation_flags=no])
 
-AC_ARG_ENABLE([deprecations],
-	[AS_HELP_STRING([--disable-deprecations],[dont warn about deprecated usages])],
-	[],[enable_deprecations=yes])
-if test "$enable_deprecations" = "no"; then
-	DISABLE_DEPRECATED=""
-	AC_SUBST([DISABLE_DEPRECATED])
+if test "x$enable_deprecation_flags" = "xyes"; then
+   DISABLE_DEPRECATED_CFLAGS=$DISABLE_DEPRECATED
+   AC_SUBST(DISABLE_DEPRECATED_CFLAGS)
 fi
 
 # Should we build mate-about or the shared desktop docs? Useful for people who
@@ -333,7 +333,7 @@ mate-desktop $VERSION `echo mate-desktop $VERSION | sed "s/./=/g"`
     compiler:                     ${CC}
     cflags:                       ${CFLAGS}
     Maintainer mode:              ${USE_MAINTAINER_MODE}
-    Warn about deprecations:      ${enable_deprecations}
+    Use *_DISABLE_DEPRECATED:     ${enable_deprecation_flags}
 
     Gtk+ version:                 ${GTK_API_VERSION}
     Build mate-about:             ${enable_mate_about}
