@@ -1306,7 +1306,7 @@ mate_bg_get_pixmap_from_root (GdkScreen *screen)
 								   w_ret, h_ret);
 		}
 
-		gdk_error_trap_pop ();
+		gdk_error_trap_pop_ignored ();
 #else
 		source_pixmap = gdk_pixmap_foreign_new (*(Pixmap *) data);
 		gdk_error_trap_pop ();
@@ -1408,8 +1408,12 @@ mate_bg_set_root_pixmap_id (GdkScreen       *screen,
 		    nitems == 1) {
 			gdk_error_trap_push ();
 			XKillClient (display, *(Pixmap *)data_esetroot);
+#if GTK_CHECK_VERSION (3, 0, 0)
+			gdk_error_trap_pop_ignored ();
+#else
 			gdk_flush ();
 			gdk_error_trap_pop ();
+#endif
 		}
 		XFree (data_esetroot);
 	}
