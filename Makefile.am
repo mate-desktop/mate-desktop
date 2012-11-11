@@ -1,9 +1,4 @@
-SUBDIRS = \
-	po \
-	libmate-desktop \
-	docs \
-	man \
-	schemas
+SUBDIRS = libmate-desktop man docs po schemas
 
 if MATE_ABOUT_ENABLED
 SUBDIRS += mate-about
@@ -14,10 +9,13 @@ endif
 
 ACLOCAL_AMFLAGS = -I m4
 
+DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc --disable-scrollkeeper
+
 if MATE_ABOUT_ENABLED
-versiondir=$(datadir)/mate-about
-version_DATA=mate-version.xml
+versiondir = $(datadir)/mate-about
+version_DATA = mate-version.xml
 endif
+
 @INTLTOOL_XML_RULE@
 
 EXTRA_DIST =			\
@@ -26,8 +24,6 @@ EXTRA_DIST =			\
 	MAINTAINERS		\
 	mate-version.xml.in.in  \
 	mate-doc-utils.make
-
-DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc --disable-scrollkeeper
 
 CLEANFILES = \
 	$(version_DATA)
