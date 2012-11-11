@@ -105,7 +105,7 @@ dnl ----------------------------------------------------------------------------
 dnl GTK library version
 dnl ----------------------------------------------------------------------------
 GTK_API_VERSION=2.0
-GTK_REQUIRED=2.18.0
+GTK_REQUIRED=2.24.0
 
 AC_MSG_CHECKING([which gtk+ version to compile against])
 AC_ARG_WITH([gtk],
@@ -119,7 +119,7 @@ AC_MSG_RESULT([$with_gtk])
 
 case "$with_gtk" in
   2.0) GTK_API_VERSION=2.0
-       GTK_REQUIRED=2.18.0
+       GTK_REQUIRED=2.24.0
        ;;
   3.0) GTK_API_VERSION=3.0
        GTK_REQUIRED=3.0.0
