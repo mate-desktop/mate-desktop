@@ -141,16 +141,21 @@ make_palette (MateRRLabeler *labeler)
 #define LABEL_WINDOW_PADDING 12
 
 static gboolean
+#if GTK_CHECK_VERSION (3, 0, 0)
+label_window_draw_event_cb (GtkWidget *widget, cairo_t *cr, gpointer data)
+#else
 label_window_expose_event_cb (GtkWidget *widget, GdkEventExpose *event, gpointer data)
+#endif
 {
-	cairo_t *cr;
 	GdkColor *color;
 	GtkAllocation allocation;
 
 	color = g_object_get_data (G_OBJECT (widget), "color");
 	gtk_widget_get_allocation (widget, &allocation);
 
-	cr = gdk_cairo_create (gtk_widget_get_window (widget));
+#if !GTK_CHECK_VERSION (3, 0, 0)
+	cairo_t *cr = gdk_cairo_create (gtk_widget_get_window (widget));
+#endif
 
 	/* edge outline */
 
@@ -173,7 +178,9 @@ label_window_expose_event_cb (GtkWidget *widget, GdkEventExpose *event, gpointer
 			 allocation.height - LABEL_WINDOW_EDGE_THICKNESS * 2);
 	cairo_fill (cr);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	cairo_destroy (cr);
+#endif
 
 	return FALSE;
 }
@@ -198,8 +205,13 @@ create_label_window (MateRRLabeler *labeler, MateOutputInfo *output, GdkColor *c
 	 */
 	g_object_set_data (G_OBJECT (window), "color", color);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect (window, "draw",
+			  G_CALLBACK (label_window_draw_event_cb), labeler);
+#else
 	g_signal_connect (window, "expose-event",
 			  G_CALLBACK (label_window_expose_event_cb), labeler);
+#endif
 
 	if (labeler->config->clone) {
 		/* Keep this string in sync with mate-control-center/capplets/display/xrandr-capplet.c:get_display_name() */
