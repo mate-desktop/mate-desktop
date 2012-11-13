@@ -66,11 +66,15 @@ MateBGCrossfade *mate_bg_crossfade_new (int width, int height);
 
 
 #if GTK_CHECK_VERSION(3, 0, 0)
-	gboolean mate_bg_crossfade_set_start_pixmap(MateBGCrossfade* fade, cairo_surface_t* pixmap);
-	gboolean mate_bg_crossfade_set_end_pixmap(MateBGCrossfade* fade, cairo_surface_t* pixmap);
+gboolean          mate_bg_crossfade_set_start_surface (MateBGCrossfade *fade,
+						       cairo_surface_t *surface);
+gboolean          mate_bg_crossfade_set_end_surface (MateBGCrossfade *fade,
+						     cairo_surface_t *surface);
 #else
-	gboolean mate_bg_crossfade_set_start_pixmap(MateBGCrossfade* fade, GdkPixmap* pixmap);
-	gboolean mate_bg_crossfade_set_end_pixmap(MateBGCrossfade* fade, GdkPixmap* pixmap);
+gboolean          mate_bg_crossfade_set_start_pixmap (MateBGCrossfade *fade,
+						      GdkPixmap *pixmap);
+gboolean          mate_bg_crossfade_set_end_pixmap (MateBGCrossfade *fade,
+						    GdkPixmap *pixmap);
 #endif
 
 void              mate_bg_crossfade_start (MateBGCrossfade *fade,

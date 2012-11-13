@@ -1,14 +1,16 @@
 SUBDIRS = libmate libmateui
 
-INCLUDES =							\
-	-DMATELOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale\""  \
-	-DPNP_IDS=\""$(PNP_IDS)"\"				\
-	$(WARN_CFLAGS)						\
-	$(DISABLE_DEPRECATED)					\
-	$(XLIB_CFLAGS)						\
-	$(MATE_DESKTOP_CFLAGS)
-
 lib_LTLIBRARIES = libmate-desktop-2.la
+
+AM_CPPFLAGS =							\
+	$(MATE_DESKTOP_CFLAGS)					\
+	$(XLIB_CFLAGS)						\
+	-DG_LOG_DOMAIN=\"MateDesktop\"				\
+	-DMATELOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale\""	\
+	-DPNP_IDS=\""$(PNP_IDS)"\"				\
+	$(DISABLE_DEPRECATED_CFLAGS)
+
+AM_CFLAGS = $(WARN_CFLAGS)
 
 noinst_PROGRAMS = test-ditem
 
@@ -47,11 +49,11 @@ test_ditem_LDADD = \
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = mate-desktop-2.0.pc
 
-pnpdata_DATA_dist = pnp.ids
 if USE_INTERNAL_PNP_IDS
 pnpdatadir = $(datadir)/libmate-desktop
 pnpdata_DATA = pnp.ids
 endif
+pnpdata_DATA_dist = pnp.ids
 
 check:
 	test -s $(top_srcdir)/libmate-desktop/pnp.ids
