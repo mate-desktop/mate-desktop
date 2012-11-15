@@ -486,8 +486,12 @@ fill_out_screen_info (Display *xdisplay,
     if (info->screen->rr_major_version == 1 && info->screen->rr_minor_version >= 3) {
         gdk_error_trap_push ();
         info->primary = XRRGetOutputPrimary (xdisplay, xroot);
+      #if GTK_CHECK_VERSION (3, 0, 0)
+	gdk_error_trap_pop_ignored ();
+      #else
 	gdk_flush ();
 	gdk_error_trap_pop (); /* ignore error */
+      #endif
     }
 #endif
 
@@ -746,8 +750,12 @@ mate_rr_screen_set_size (MateRRScreen *screen,
     gdk_error_trap_push ();
     XRRSetScreenSize (screen->xdisplay, screen->xroot,
 		      width, height, mm_width, mm_height);
+  #if GTK_CHECK_VERSION (3, 0, 0)
+    gdk_error_trap_pop_ignored ();
+  #else
     gdk_flush ();
     gdk_error_trap_pop (); /* ignore error */
+  #endif
 #endif
 }
 

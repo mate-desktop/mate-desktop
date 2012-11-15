@@ -96,10 +96,14 @@ void             mate_bg_draw                  (MateBG               *bg,
                                                  gboolean               is_root);
 
 #if GTK_CHECK_VERSION(3, 0, 0)
-	cairo_surface_t* mate_bg_create_pixmap(MateBG* bg, GdkWindow* window, int width, int height, gboolean root);
+cairo_surface_t *mate_bg_create_surface        (MateBG               *bg,
 #else
-	GdkPixmap* mate_bg_create_pixmap(MateBG* bg, GdkWindow* window, int width, int height, gboolean root);
+GdkPixmap       *mate_bg_create_pixmap         (MateBG               *bg,
 #endif
+						GdkWindow            *window,
+						int                   width,
+						int                   height,
+						gboolean              root);
 
 gboolean         mate_bg_get_image_size        (MateBG               *bg,
 						 MateDesktopThumbnailFactory *factory,
@@ -124,20 +128,25 @@ GdkPixbuf *      mate_bg_create_frame_thumbnail (MateBG              *bg,
 						 int                    dest_height,
 						 int                    frame_num);
 
-/* Set a pixmap as root - not a MateBG method. At some point
+/* Set a surface as root - not a MateBG method. At some point
  * if we decide to stabilize the API then we may want to make
- * these object methods, drop mate_bg_create_pixmap, etc.
+ * these object methods, drop mate_bg_create_surface, etc.
  */
-
 #if GTK_CHECK_VERSION(3, 0, 0)
-	void mate_bg_set_pixmap_as_root(GdkScreen* screen, cairo_surface_t* pixmap);
-	MateBGCrossfade* mate_bg_set_pixmap_as_root_with_crossfade(GdkScreen* screen, cairo_surface_t* pixmap);
-	cairo_surface_t* mate_bg_get_pixmap_from_root(GdkScreen* screen);
-#else
-	void mate_bg_set_pixmap_as_root(GdkScreen* screen, GdkPixmap* pixmap);
-	MateBGCrossfade* mate_bg_set_pixmap_as_root_with_crossfade(GdkScreen* screen, GdkPixmap* pixmap);
-	GdkPixmap* mate_bg_get_pixmap_from_root(GdkScreen* screen);
-#endif
+void             mate_bg_set_surface_as_root   (GdkScreen            *screen,
+						cairo_surface_t    *surface);
+MateBGCrossfade *mate_bg_set_surface_as_root_with_crossfade (GdkScreen       *screen,
+							     cairo_surface_t *surface);
+cairo_surface_t *mate_bg_get_surface_from_root (GdkScreen *screen);
+
+#else /* GTK_CHECK_VERSION(3, 0, 0) */
+
+void             mate_bg_set_pixmap_as_root    (GdkScreen          *screen,
+						GdkPixmap          *pixmap);
+MateBGCrossfade *mate_bg_set_pixmap_as_root_with_crossfade  (GdkScreen       *screen,
+							     GdkPixmap       *pixmap);
+GdkPixmap *mate_bg_get_pixmap_from_root (GdkScreen *screen);
+#endif /* GTK_CHECK_VERSION(3, 0, 0) */
 
 #ifdef __cplusplus
 }

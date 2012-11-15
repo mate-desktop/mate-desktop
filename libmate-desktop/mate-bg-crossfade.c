@@ -1,4 +1,4 @@
-/* mate-bg-crossfade.h - fade window background between two pixmaps
+/* mate-bg-crossfade.h - fade window background between two surfaces
  *
  * Copyright (C) 2008 Red Hat, Inc.
  *
@@ -38,24 +38,24 @@
 #include <libmateui/mate-bg.h>
 #include "libmateui/mate-bg-crossfade.h"
 
+#if !GTK_CHECK_VERSION(3, 0, 0)
+#define cairo_surface_t GdkPixmap
+#define cairo_create gdk_cairo_create
+#define cairo_set_source_surface gdk_cairo_set_source_pixmap
+#define cairo_surface_destroy g_object_unref
+#endif
+
 struct _MateBGCrossfadePrivate
 {
-	GdkWindow *window;
-	int        width;
-	int        height;
-
-	#if GTK_CHECK_VERSION(3, 0, 0)
-		cairo_surface_t* fading_pixmap;
-		cairo_surface_t* end_pixmap;
-	#else
-		GdkPixmap* fading_pixmap;
-		GdkPixmap* end_pixmap;
-	#endif
-
-	gdouble    start_time;
-	gdouble    total_duration;
-	guint      timeout_id;
-	guint      is_first_frame : 1;
+	GdkWindow       *window;
+	int              width;
+	int              height;
+	cairo_surface_t *fading_surface;
+	cairo_surface_t *end_surface;
+	gdouble          start_time;
+	gdouble          total_duration;
+	guint            timeout_id;
+	guint            is_first_frame : 1;
 };
 
 enum {
@@ -138,14 +138,14 @@ mate_bg_crossfade_finalize (GObject *object)
 
 	mate_bg_crossfade_stop (fade);
 
-	if (fade->priv->fading_pixmap != NULL) {
-		g_object_unref (fade->priv->fading_pixmap);
-		fade->priv->fading_pixmap = NULL;
+	if (fade->priv->fading_surface != NULL) {
+		cairo_surface_destroy (fade->priv->fading_surface);
+		fade->priv->fading_surface = NULL;
 	}
 
-	if (fade->priv->end_pixmap != NULL) {
-		g_object_unref (fade->priv->end_pixmap);
-		fade->priv->end_pixmap = NULL;
+	if (fade->priv->end_surface != NULL) {
+		cairo_surface_destroy (fade->priv->end_surface);
+		fade->priv->end_surface = NULL;
 	}
 }
 
@@ -164,7 +164,7 @@ mate_bg_crossfade_class_init (MateBGCrossfadeClass *fade_class)
 	 * MateBGCrossfade:width:
 	 *
 	 * When a crossfade is running, this is width of the fading
-	 * pixmap.
+	 * surface.
 	 */
 	g_object_class_install_property (gobject_class,
 					 PROP_WIDTH,
@@ -178,7 +178,7 @@ mate_bg_crossfade_class_init (MateBGCrossfadeClass *fade_class)
 	 * MateBGCrossfade:height:
 	 *
 	 * When a crossfade is running, this is height of the fading
-	 * pixmap.
+	 * surface.
 	 */
 	g_object_class_install_property (gobject_class,
 					 PROP_HEIGHT,
@@ -193,7 +193,7 @@ mate_bg_crossfade_class_init (MateBGCrossfadeClass *fade_class)
 	 * @window: the #GdkWindow the crossfade happend on.
 	 *
 	 * When a crossfade finishes, @window will have a copy
-	 * of the end pixmap as its background, and this signal will
+	 * of the end surface as its background, and this signal will
 	 * get emitted.
 	 */
 	signals[FINISHED] = g_signal_new ("finished",
@@ -210,8 +210,8 @@ mate_bg_crossfade_init (MateBGCrossfade *fade)
 {
 	fade->priv = MATE_BG_CROSSFADE_GET_PRIVATE (fade);
 
-	fade->priv->fading_pixmap = NULL;
-	fade->priv->end_pixmap = NULL;
+	fade->priv->fading_surface = NULL;
+	fade->priv->end_surface = NULL;
 	fade->priv->timeout_id = 0;
 }
 
@@ -221,11 +221,11 @@ mate_bg_crossfade_init (MateBGCrossfade *fade)
  * @height: The height of the crossfading window
  *
  * Creates a new object to manage crossfading a
- * window background between two #GdkPixmap drawables.
+ * window background between two #cairo_surface_ts.
  *
  * Return value: the new #MateBGCrossfade
  **/
-MateBGCrossfade* mate_bg_crossfade_new(int width, int height)
+MateBGCrossfade* mate_bg_crossfade_new (int width, int height)
 {
 	GObject* object;
 
@@ -237,28 +237,37 @@ MateBGCrossfade* mate_bg_crossfade_new(int width, int height)
 	return (MateBGCrossfade*) object;
 }
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-	static cairo_surface_t* tile_pixmap(cairo_surface_t* pixmap, int width, int height)
-#else
-	static GdkPixmap* tile_pixmap(GdkPixmap* pixmap, int width, int height)
-#endif
+static cairo_surface_t *
+tile_surface (cairo_surface_t *surface,
+              int              width,
+              int              height)
 {
-	#if GTK_CHECK_VERSION(3, 0, 0)
-		cairo_surface_t* copy;
-	#else
-		GdkPixmap* copy;
-	#endif
-
+	cairo_surface_t *copy;
 	cairo_t *cr;
 
-	copy = gdk_pixmap_new(pixmap, width, height, pixmap == NULL? 24 : -1);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	if (surface == NULL)
+	{
+		copy = gdk_window_create_similar_surface (gdk_get_default_root_window (),
+		                                          CAIRO_CONTENT_COLOR,
+		                                          width, height);
+	}
+	else
+	{
+		copy = cairo_surface_create_similar (surface,
+		                                     cairo_surface_get_content (surface),
+		                                     width, height);
+	}
+#else
+	copy = gdk_pixmap_new(surface, width, height, surface == NULL? 24 : -1);
+#endif
 
-	cr = gdk_cairo_create(copy);
+	cr = cairo_create (copy);
 
-	if (pixmap != NULL)
+	if (surface != NULL)
 	{
 		cairo_pattern_t *pattern;
-		gdk_cairo_set_source_pixmap (cr, pixmap, 0.0, 0.0);
+		cairo_set_source_surface (cr, surface, 0.0, 0.0);
 		pattern = cairo_get_source (cr);
 		cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
 	}
@@ -273,7 +282,7 @@ MateBGCrossfade* mate_bg_crossfade_new(int width, int height)
 
 	if (cairo_status (cr) != CAIRO_STATUS_SUCCESS)
 	{
-		g_object_unref (copy);
+		cairo_surface_destroy (copy);
 		copy = NULL;
 	}
 
@@ -283,36 +292,37 @@ MateBGCrossfade* mate_bg_crossfade_new(int width, int height)
 }
 
 /**
- * mate_bg_crossfade_set_start_pixmap:
+ * mate_bg_crossfade_set_start_surface:
  * @fade: a #MateBGCrossfade
- * @pixmap: The #GdkPixmap to fade from
+ * @surface: The cairo surface to fade from
  *
  * Before initiating a crossfade with mate_bg_crossfade_start()
- * a start and end pixmap have to be set.  This function sets
- * the pixmap shown at the beginning of the crossfade effect.
+ * a start and end surface have to be set.  This function sets
+ * the surface shown at the beginning of the crossfade effect.
  *
- * Return value: %TRUE if successful, or %FALSE if the pixmap
+ * Return value: %TRUE if successful, or %FALSE if the surface
  * could not be copied.
  **/
+gboolean
 #if GTK_CHECK_VERSION(3, 0, 0)
-	gboolean mate_bg_crossfade_set_start_pixmap(MateBGCrossfade* fade, cairo_surface_t* pixmap)
+mate_bg_crossfade_set_start_surface (MateBGCrossfade* fade, cairo_surface_t *surface)
 #else
-	gboolean mate_bg_crossfade_set_start_pixmap(MateBGCrossfade* fade, GdkPixmap* pixmap)
+mate_bg_crossfade_set_start_pixmap (MateBGCrossfade* fade, GdkPixmap *surface)
 #endif
 {
 	g_return_val_if_fail (MATE_IS_BG_CROSSFADE (fade), FALSE);
 
-	if (fade->priv->fading_pixmap != NULL)
+	if (fade->priv->fading_surface != NULL)
 	{
-		g_object_unref (fade->priv->fading_pixmap);
-		fade->priv->fading_pixmap = NULL;
+		cairo_surface_destroy (fade->priv->fading_surface);
+		fade->priv->fading_surface = NULL;
 	}
 
-	fade->priv->fading_pixmap = tile_pixmap(pixmap,
-	                                        fade->priv->width,
-	                                        fade->priv->height);
+	fade->priv->fading_surface = tile_surface (surface,
+						   fade->priv->width,
+						   fade->priv->height);
 
-	return fade->priv->fading_pixmap != NULL;
+	return fade->priv->fading_surface != NULL;
 }
 
 static gdouble
@@ -331,38 +341,39 @@ get_current_time (void)
 }
 
 /**
- * mate_bg_crossfade_set_end_pixmap:
+ * mate_bg_crossfade_set_end_surface:
  * @fade: a #MateBGCrossfade
- * @pixmap: The #GdkPixmap to fade to
+ * @surface: The cairo surface to fade to
  *
  * Before initiating a crossfade with mate_bg_crossfade_start()
- * a start and end pixmap have to be set.  This function sets
- * the pixmap shown at the end of the crossfade effect.
+ * a start and end surface have to be set.  This function sets
+ * the surface shown at the end of the crossfade effect.
  *
- * Return value: %TRUE if successful, or %FALSE if the pixmap
+ * Return value: %TRUE if successful, or %FALSE if the surface
  * could not be copied.
  **/
+gboolean
 #if GTK_CHECK_VERSION(3, 0, 0)
-	gboolean mate_bg_crossfade_set_end_pixmap(MateBGCrossfade* fade, cairo_surface_t* pixmap)
+mate_bg_crossfade_set_end_surface (MateBGCrossfade* fade, cairo_surface_t *surface)
 #else
-	gboolean mate_bg_crossfade_set_end_pixmap(MateBGCrossfade* fade, GdkPixmap* pixmap)
+mate_bg_crossfade_set_end_pixmap (MateBGCrossfade* fade, GdkPixmap *surface)
 #endif
 {
 	g_return_val_if_fail (MATE_IS_BG_CROSSFADE (fade), FALSE);
 
-	if (fade->priv->end_pixmap != NULL) {
-		g_object_unref (fade->priv->end_pixmap);
-		fade->priv->end_pixmap = NULL;
+	if (fade->priv->end_surface != NULL) {
+		cairo_surface_destroy (fade->priv->end_surface);
+		fade->priv->end_surface = NULL;
 	}
 
-	fade->priv->end_pixmap = tile_pixmap (pixmap,
-					      fade->priv->width,
-					      fade->priv->height);
+	fade->priv->end_surface = tile_surface (surface,
+					        fade->priv->width,
+					        fade->priv->height);
 
 	/* Reset timer in case we're called while animating
 	 */
 	fade->priv->start_time = get_current_time ();
-	return fade->priv->end_pixmap != NULL;
+	return fade->priv->end_surface != NULL;
 }
 
 static gboolean
@@ -374,11 +385,7 @@ animations_are_disabled (MateBGCrossfade *fade)
 
 	g_assert (fade->priv->window != NULL);
 
-	#if GTK_CHECK_VERSION(2, 24, 0)
-		screen = gdk_window_get_screen(fade->priv->window);
-	#else // since 2.2
-		screen = gdk_drawable_get_screen(GDK_DRAWABLE(fade->priv->window));
-	#endif
+	screen = gdk_window_get_screen(fade->priv->window);
 
 	settings = gtk_settings_get_for_screen (screen);
 
@@ -391,9 +398,12 @@ static void
 draw_background (MateBGCrossfade *fade)
 {
 	if (GDK_WINDOW_TYPE (fade->priv->window) == GDK_WINDOW_ROOT) {
-		GdkDisplay *display;
-		display = gdk_drawable_get_display (fade->priv->window);
-		gdk_window_clear (fade->priv->window);
+		XClearArea (GDK_WINDOW_XDISPLAY (fade->priv->window),
+			    GDK_WINDOW_XID (fade->priv->window),
+			    0, 0,
+			    gdk_window_get_width (fade->priv->window),
+			    gdk_window_get_height (fade->priv->window),
+			    False);
 		gdk_flush ();
 	} else {
 		gdk_window_invalidate_rect (fade->priv->window, NULL, FALSE);
@@ -425,7 +435,7 @@ on_tick (MateBGCrossfade *fade)
 		return on_tick (fade);
 	}
 
-	if (fade->priv->fading_pixmap == NULL) {
+	if (fade->priv->fading_surface == NULL) {
 		return FALSE;
 	}
 
@@ -441,10 +451,10 @@ on_tick (MateBGCrossfade *fade)
 	 * even the fastest machines will get *some* fade because the framerate
 	 * is capped.
 	 */
-	cr = gdk_cairo_create (fade->priv->fading_pixmap);
+	cr = cairo_create (fade->priv->fading_surface);
 
-	gdk_cairo_set_source_pixmap (cr, fade->priv->end_pixmap,
-				     0.0, 0.0);
+	cairo_set_source_surface (cr, fade->priv->end_surface,
+				  0.0, 0.0);
 	cairo_paint_with_alpha (cr, percent_done);
 
 	status = cairo_status (cr);
@@ -462,20 +472,27 @@ on_finished (MateBGCrossfade *fade)
 	if (fade->priv->timeout_id == 0)
 		return;
 
-	g_assert (fade->priv->end_pixmap != NULL);
+	g_assert (fade->priv->end_surface != NULL);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	cairo_pattern_t *pattern;
+	pattern = cairo_pattern_create_for_surface (fade->priv->end_surface);
+	gdk_window_set_background_pattern (fade->priv->window, pattern);
+	cairo_pattern_destroy (pattern);
+#else
 	gdk_window_set_back_pixmap (fade->priv->window,
-				    fade->priv->end_pixmap,
+				    fade->priv->end_surface,
 				    FALSE);
+#endif
 	draw_background (fade);
 
-	g_object_unref (fade->priv->end_pixmap);
-	fade->priv->end_pixmap = NULL;
+	cairo_surface_destroy (fade->priv->end_surface);
+	fade->priv->end_surface = NULL;
 
-	g_assert (fade->priv->fading_pixmap != NULL);
+	g_assert (fade->priv->fading_surface != NULL);
 
-	g_object_unref (fade->priv->fading_pixmap);
-	fade->priv->fading_pixmap = NULL;
+	cairo_surface_destroy (fade->priv->fading_surface);
+	fade->priv->fading_surface = NULL;
 
 	fade->priv->timeout_id = 0;
 	g_signal_emit (fade, signals[FINISHED], 0, fade->priv->window);
@@ -486,11 +503,11 @@ on_finished (MateBGCrossfade *fade)
  * @fade: a #MateBGCrossfade
  * @window: The #GdkWindow to draw crossfade on
  *
- * This function initiates a quick crossfade between two pixmaps on
+ * This function initiates a quick crossfade between two surfaces on
  * the background of @window.  Before initiating the crossfade both
  * mate_bg_crossfade_start() and mate_bg_crossfade_end() need to
  * be called. If animations are disabled, the crossfade is skipped,
- * and the window background is set immediately to the end pixmap.
+ * and the window background is set immediately to the end surface.
  **/
 void
 mate_bg_crossfade_start (MateBGCrossfade *fade,
@@ -501,8 +518,8 @@ mate_bg_crossfade_start (MateBGCrossfade *fade,
 
 	g_return_if_fail (MATE_IS_BG_CROSSFADE (fade));
 	g_return_if_fail (window != NULL);
-	g_return_if_fail (fade->priv->fading_pixmap != NULL);
-	g_return_if_fail (fade->priv->end_pixmap != NULL);
+	g_return_if_fail (fade->priv->fading_surface != NULL);
+	g_return_if_fail (fade->priv->end_surface != NULL);
 	g_return_if_fail (!mate_bg_crossfade_is_started (fade));
 	g_return_if_fail (GDK_WINDOW_TYPE (window) != GDK_WINDOW_FOREIGN);
 
@@ -516,9 +533,16 @@ mate_bg_crossfade_start (MateBGCrossfade *fade,
 	g_source_unref (source);
 
 	fade->priv->window = window;
+#if GTK_CHECK_VERSION (3, 0, 0)
+	cairo_pattern_t *pattern;
+	pattern = cairo_pattern_create_for_surface (fade->priv->fading_surface);
+	gdk_window_set_background_pattern (fade->priv->window, pattern);
+	cairo_pattern_destroy (pattern);
+#else
 	gdk_window_set_back_pixmap (fade->priv->window,
-				    fade->priv->fading_pixmap,
+				    fade->priv->fading_surface,
 				    FALSE);
+#endif
 	draw_background (fade);
 
 	fade->priv->is_first_frame = TRUE;

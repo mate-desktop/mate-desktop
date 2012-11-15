@@ -1,4 +1,6 @@
-/* mate-rr-labeler.c - Utility to label monitors to identify them
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*-
+ *
+ * mate-rr-labeler.c - Utility to label monitors to identify them
  * while they are being configured.
  *
  * Copyright 2008, Novell, Inc.
@@ -30,6 +32,12 @@
 #include "libmateui/mate-rr-labeler.h"
 #include <gtk/gtk.h>
 
+#include <X11/Xproto.h>
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
+#include <X11/Xatom.h>
+#include <gdk/gdkx.h>
+
 struct _MateRRLabeler {
 	GObject parent;
 
@@ -39,6 +47,9 @@ struct _MateRRLabeler {
 
 	GdkColor *palette;
 	GtkWidget **windows;
+
+	GdkScreen  *screen;
+	Atom        workarea_atom;
 };
 
 struct _MateRRLabelerClass {
@@ -48,11 +59,105 @@ struct _MateRRLabelerClass {
 G_DEFINE_TYPE (MateRRLabeler, mate_rr_labeler, G_TYPE_OBJECT);
 
 static void mate_rr_labeler_finalize (GObject *object);
+static void create_label_windows (MateRRLabeler *labeler);
+
+static gboolean
+get_work_area (MateRRLabeler *labeler,
+	       GdkRectangle   *rect)
+{
+	Atom            workarea;
+	Atom            type;
+	Window          win;
+	int             format;
+	gulong          num;
+	gulong          leftovers;
+	gulong          max_len = 4 * 32;
+	guchar         *ret_workarea;
+	long           *workareas;
+	int             result;
+	int             disp_screen;
+	Display        *display;
+
+	display = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (labeler->screen));
+	workarea = XInternAtom (display, "_NET_WORKAREA", True);
+
+	disp_screen = GDK_SCREEN_XNUMBER (labeler->screen);
+
+	/* Defaults in case of error */
+	rect->x = 0;
+	rect->y = 0;
+	rect->width = gdk_screen_get_width (labeler->screen);
+	rect->height = gdk_screen_get_height (labeler->screen);
+
+	if (workarea == None)
+		return FALSE;
+
+	win = XRootWindow (display, disp_screen);
+	result = XGetWindowProperty (display,
+				     win,
+				     workarea,
+				     0,
+				     max_len,
+				     False,
+				     AnyPropertyType,
+				     &type,
+				     &format,
+				     &num,
+				     &leftovers,
+				     &ret_workarea);
+
+	if (result != Success
+	    || type == None
+	    || format == 0
+	    || leftovers
+	    || num % 4) {
+		return FALSE;
+	}
+
+	workareas = (long *) ret_workarea;
+	rect->x = workareas[disp_screen * 4];
+	rect->y = workareas[disp_screen * 4 + 1];
+	rect->width = workareas[disp_screen * 4 + 2];
+	rect->height = workareas[disp_screen * 4 + 3];
+
+	XFree (ret_workarea);
+
+	return TRUE;
+}
+
+static GdkFilterReturn
+screen_xevent_filter (GdkXEvent      *xevent,
+		      GdkEvent       *event,
+		      MateRRLabeler *labeler)
+{
+	XEvent *xev;
+
+	xev = (XEvent *) xevent;
+
+	if (xev->type == PropertyNotify &&
+	    xev->xproperty.atom == labeler->workarea_atom) {
+		/* update label positions */
+		mate_rr_labeler_hide (labeler);
+		create_label_windows (labeler);
+	}
+
+	return GDK_FILTER_CONTINUE;
+}
 
 static void
 mate_rr_labeler_init (MateRRLabeler *labeler)
 {
-	/* nothing */
+	GdkWindow *gdkwindow;
+
+	labeler->workarea_atom = XInternAtom (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+					      "_NET_WORKAREA",
+					      True);
+
+	labeler->screen = gdk_screen_get_default ();
+	/* code is not really designed to handle multiple screens so *shrug* */
+	gdkwindow = gdk_screen_get_root_window (labeler->screen);
+	gdk_window_add_filter (gdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
+	gdk_window_set_events (gdkwindow, gdk_window_get_events (gdkwindow) | GDK_PROPERTY_CHANGE_MASK);
 }
 
 static void
@@ -69,8 +174,12 @@ static void
 mate_rr_labeler_finalize (GObject *object)
 {
 	MateRRLabeler *labeler;
+	GdkWindow      *gdkwindow;
 
 	labeler = MATE_RR_LABELER (object);
+
+	gdkwindow = gdk_screen_get_root_window (labeler->screen);
+	gdk_window_remove_filter (gdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
 
 	/* We don't destroy the labeler->config (a MateRRConfig*) here; let our
 	 * caller do that instead.
@@ -141,16 +250,21 @@ make_palette (MateRRLabeler *labeler)
 #define LABEL_WINDOW_PADDING 12
 
 static gboolean
+#if GTK_CHECK_VERSION (3, 0, 0)
+label_window_draw_event_cb (GtkWidget *widget, cairo_t *cr, gpointer data)
+#else
 label_window_expose_event_cb (GtkWidget *widget, GdkEventExpose *event, gpointer data)
+#endif
 {
-	cairo_t *cr;
 	GdkColor *color;
 	GtkAllocation allocation;
 
 	color = g_object_get_data (G_OBJECT (widget), "color");
 	gtk_widget_get_allocation (widget, &allocation);
 
-	cr = gdk_cairo_create (gtk_widget_get_window (widget));
+#if !GTK_CHECK_VERSION (3, 0, 0)
+	cairo_t *cr = gdk_cairo_create (gtk_widget_get_window (widget));
+#endif
 
 	/* edge outline */
 
@@ -173,9 +287,31 @@ label_window_expose_event_cb (GtkWidget *widget, GdkEventExpose *event, gpointer
 			 allocation.height - LABEL_WINDOW_EDGE_THICKNESS * 2);
 	cairo_fill (cr);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	cairo_destroy (cr);
+#endif
 
 	return FALSE;
+}
+
+static void
+position_window (MateRRLabeler  *labeler,
+		 GtkWidget       *window,
+		 int              x,
+		 int              y)
+{
+	GdkRectangle    workarea;
+	GdkRectangle    monitor;
+	int             monitor_num;
+
+	get_work_area (labeler, &workarea);
+	monitor_num = gdk_screen_get_monitor_at_point (labeler->screen, x, y);
+	gdk_screen_get_monitor_geometry (labeler->screen,
+                                         monitor_num,
+                                         &monitor);
+	gdk_rectangle_intersect (&monitor, &workarea, &workarea);
+
+	gtk_window_move (GTK_WINDOW (window), workarea.x, workarea.y);
 }
 
 static GtkWidget *
@@ -198,8 +334,13 @@ create_label_window (MateRRLabeler *labeler, MateOutputInfo *output, GdkColor *c
 	 */
 	g_object_set_data (G_OBJECT (window), "color", color);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect (window, "draw",
+			  G_CALLBACK (label_window_draw_event_cb), labeler);
+#else
 	g_signal_connect (window, "expose-event",
 			  G_CALLBACK (label_window_expose_event_cb), labeler);
+#endif
 
 	if (labeler->config->clone) {
 		/* Keep this string in sync with mate-control-center/capplets/display/xrandr-capplet.c:get_display_name() */
@@ -227,7 +368,7 @@ create_label_window (MateRRLabeler *labeler, MateOutputInfo *output, GdkColor *c
 	gtk_container_add (GTK_CONTAINER (window), widget);
 
 	/* Should we center this at the top edge of the monitor, instead of using the upper-left corner? */
-	gtk_window_move (GTK_WINDOW (window), output->x, output->y);
+	position_window (labeler, window, output->x, output->y);
 
 	gtk_widget_show_all (window);
 
