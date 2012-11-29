@@ -95,12 +95,13 @@ typedef struct FileCacheEntry FileCacheEntry;
  *   Implementation of the MateBG class
  */
 struct _MateBG {
-	GObject parent_instance;
-	char* filename;
-	MateBGPlacement placement;
-	MateBGColorType color_type;
-	GdkColor primary;
-	GdkColor secondary;
+	GObject		 parent_instance;
+	char		*filename;
+	MateBGPlacement	 placement;
+	MateBGColorType	 color_type;
+	GdkColor	 primary;
+	GdkColor	 secondary;
+	gboolean	 is_enabled;
 
 	GFileMonitor* file_monitor;
 
@@ -286,23 +287,24 @@ queue_transitioned (MateBG *bg)
 	}
 
 	bg->transitioned_id = g_timeout_add_full (G_PRIORITY_LOW,
-					     100,
-					     (GSourceFunc)do_transitioned,
-					     bg,
-					     NULL);
+						  100,
+						  (GSourceFunc)do_transitioned,
+						  bg,
+						  NULL);
 }
 
-/* This function load user settings */
+/* This function loads the user's preferences */
 void
 mate_bg_load_from_preferences (MateBG *bg)
 {
 	GSettings *settings;
 	settings = g_settings_new (MATE_BG_SCHEMA);
+
 	mate_bg_load_from_gsettings (bg, settings);
 	g_object_unref (settings);
 }
 
-/* This function load system settings */
+/* This function loads default system settings */
 void
 mate_bg_load_from_system_preferences (MateBG *bg)
 {
@@ -316,18 +318,21 @@ mate_bg_load_from_system_preferences (MateBG *bg)
 	*/
 	settings = g_settings_new (MATE_BG_SCHEMA);
 	g_settings_delay (settings);
+
 	keys = g_settings_list_keys (settings);
 		for (k = keys; *k; k++) {
 			g_settings_reset (settings, *k);
 	}
 	g_strfreev (keys);
+
 	mate_bg_load_from_gsettings (bg, settings);
 	g_settings_revert (settings);
 	g_object_unref (settings);
 }
 
 void
-mate_bg_load_from_gsettings (MateBG *bg, GSettings *settings)
+mate_bg_load_from_gsettings (MateBG    *bg,
+			     GSettings *settings)
 {
 	char    *tmp;
 	char    *filename;
@@ -336,11 +341,21 @@ mate_bg_load_from_gsettings (MateBG *bg, GSettings *settings)
 	MateBGPlacement placement;
 
 	g_return_if_fail (MATE_IS_BG (bg));
+	g_return_if_fail (G_IS_SETTINGS (settings));
+
+	bg->is_enabled = g_settings_get_boolean (settings, BG_KEY_DRAW_BACKGROUND);
 
 	/* Filename */
 	filename = NULL;
-	tmp = g_settings_get_string(settings, BG_KEY_PICTURE_FILENAME);
-	if (tmp != NULL && *tmp != '\0') {
+	tmp = g_settings_get_string (settings, BG_KEY_PICTURE_FILENAME);
+	if (tmp && *tmp != '\0') {
+		/* FIXME: UTF-8 checks should go away.
+		 * picture-filename is of type string, which can only be used for
+		 * UTF-8 strings, and some filenames are not, dependending on the
+		 * locale used.
+		 * It would be better (and simpler) to change to a URI instead,
+		 * as URIs are UTF-8 encoded strings.
+		 */
 		if (g_utf8_validate (tmp, -1, NULL) &&
 		    g_file_test (tmp, G_FILE_TEST_EXISTS)) {
 			filename = g_strdup (tmp);
@@ -348,15 +363,11 @@ mate_bg_load_from_gsettings (MateBG *bg, GSettings *settings)
 			filename = g_filename_from_utf8 (tmp, -1, NULL, NULL, NULL);
 		}
 
-		/* Fall back to default background if filename was set
-		   but no longer exists */
-		if (!g_file_test (filename, G_FILE_TEST_EXISTS)) {
-
-			g_free (filename);
-			filename = NULL;
-			
-			/* FIXME: default value? */
-
+		/* Fallback to default BG if the filename set is non-existent */
+		if (filename != NULL && !g_file_test (filename, G_FILE_TEST_EXISTS)) {
+			/* FIXME: better to use g_settings_get_mapped() here */
+			g_settings_reset (settings, BG_KEY_PICTURE_FILENAME);
+			filename = g_settings_get_string (settings, BG_KEY_PICTURE_FILENAME);
 		}
 	}
 	g_free (tmp);
@@ -384,36 +395,29 @@ mate_bg_load_from_gsettings (MateBG *bg, GSettings *settings)
 }
 
 void
-mate_bg_save_to_preferences (MateBG     *bg)
+mate_bg_save_to_preferences (MateBG *bg)
 {
-	MateBGColorType color_type;
-	MateBGPlacement placement;
-	const gchar *filename;
 	gchar *primary;
 	gchar *secondary;
-    GSettings *settings;
+	GSettings *settings;
 
-	settings = g_settings_new (MATE_BG_SCHEMA);
+	g_return_if_fail (MATE_IS_BG (bg));
 
 	primary = color_to_string (&bg->primary);
 	secondary = color_to_string (&bg->secondary);
 
-	color_type = bg->color_type;
+	settings = g_settings_new (MATE_BG_SCHEMA);
+	g_settings_delay (settings);
 
-    if (bg->filename) {
-		filename = bg->filename;
-		placement = bg->placement;
-    }
-    else {
-		filename = "(none)";
-		placement = MATE_BG_PLACEMENT_ZOOMED;
-    }
+	g_settings_set_boolean (settings, BG_KEY_DRAW_BACKGROUND, bg->is_enabled);
+	g_settings_set_string (settings, BG_KEY_PICTURE_FILENAME, bg->filename);
+	g_settings_set_enum (settings, BG_KEY_PICTURE_PLACEMENT, bg->placement);
+	g_settings_set_string (settings, BG_KEY_PRIMARY_COLOR, primary);
+	g_settings_set_string (settings, BG_KEY_SECONDARY_COLOR, secondary);
+	g_settings_set_enum (settings, BG_KEY_COLOR_TYPE, bg->color_type);
 
-	g_settings_set_string (settings, BG_KEY_PICTURE_FILENAME, filename);
-    g_settings_set_string (settings, BG_KEY_PRIMARY_COLOR, primary);
-    g_settings_set_string (settings, BG_KEY_SECONDARY_COLOR, secondary);
-    g_settings_set_enum (settings, BG_KEY_COLOR_TYPE, color_type);
-	g_settings_set_enum (settings, BG_KEY_PICTURE_PLACEMENT, placement);
+	/* Apply changes atomically. */
+	g_settings_apply (settings);
 
 	g_object_unref (settings);
 
@@ -462,10 +466,8 @@ mate_bg_finalize (GObject *object)
 		bg->blow_caches_id = 0;
 	}
 
-	if (bg->filename) {
-		g_free (bg->filename);
-		bg->filename = NULL;
-	}
+	g_free (bg->filename);
+	bg->filename = NULL;
 
 	G_OBJECT_CLASS (mate_bg_parent_class)->finalize (object);
 }
@@ -508,6 +510,7 @@ mate_bg_set_color (MateBG *bg,
 		    GdkColor *secondary)
 {
 	g_return_if_fail (bg != NULL);
+	g_return_if_fail (primary != NULL);
 
 	if (bg->color_type != type			||
 	    !gdk_color_equal (&bg->primary, primary)			||
@@ -524,8 +527,8 @@ mate_bg_set_color (MateBG *bg,
 }
 
 void
-mate_bg_set_placement (MateBG          *bg,
-			MateBGPlacement  placement)
+mate_bg_set_placement (MateBG		*bg,
+		       MateBGPlacement	 placement)
 {
 	g_return_if_fail (bg != NULL);
 
@@ -545,10 +548,10 @@ mate_bg_get_placement (MateBG *bg)
 }
 
 void
-mate_bg_get_color (MateBG               *bg,
-		    MateBGColorType      *type,
-		    GdkColor              *primary,
-		    GdkColor              *secondary)
+mate_bg_get_color (MateBG		*bg,
+		   MateBGColorType	*type,
+		   GdkColor		*primary,
+		   GdkColor		*secondary)
 {
 	g_return_if_fail (bg != NULL);
 
@@ -560,6 +563,27 @@ mate_bg_get_color (MateBG               *bg,
 
 	if (secondary)
 		*secondary = bg->secondary;
+}
+
+void
+mate_bg_set_draw_background (MateBG	*bg,
+			     gboolean	 draw_background)
+{
+	g_return_if_fail (bg != NULL);
+
+	if (bg->is_enabled != draw_background) {
+		bg->is_enabled = draw_background;
+
+		queue_changed (bg);
+	}
+}
+
+gboolean
+mate_bg_get_draw_background (MateBG *bg)
+{
+	g_return_val_if_fail (bg != NULL, FALSE);
+
+	return bg->is_enabled;
 }
 
 const gchar *
@@ -584,17 +608,15 @@ file_changed (GFileMonitor *file_monitor,
 }
 
 void
-mate_bg_set_filename (MateBG     *bg,
-		       const char  *filename)
+mate_bg_set_filename (MateBG	 *bg,
+		      const char *filename)
 {
 	g_return_if_fail (bg != NULL);
 
 	if (is_different (bg, filename)) {
-		char *tmp = g_strdup (filename);
-
 		g_free (bg->filename);
 
-		bg->filename = tmp;
+		bg->filename = g_strdup (filename);
 		bg->file_mtime = get_mtime (bg->filename);
 
 		if (bg->file_monitor) {
@@ -877,10 +899,14 @@ mate_bg_draw (MateBG *bg,
 
 	if (is_root && (bg->placement != MATE_BG_PLACEMENT_SPANNED)) {
 		draw_color_each_monitor (bg, dest, screen);
-		draw_each_monitor (bg, dest, screen);
+		if (bg->placement != MATE_BG_PLACEMENT_NONE) {
+			draw_each_monitor (bg, dest, screen);
+		}
 	} else {
 		draw_color (bg, dest, screen);
-		draw_once (bg, dest, screen);
+		if (bg->placement != MATE_BG_PLACEMENT_NONE) {
+			draw_once (bg, dest, screen);
+		}
 	}
 }
 
@@ -1219,11 +1245,13 @@ mate_bg_create_thumbnail (MateBG               *bg,
 
 	draw_color (bg, result, screen);
 
-	thumb = create_img_thumbnail (bg, factory, screen, dest_width, dest_height, -1);
+	if (bg->placement != MATE_BG_PLACEMENT_NONE) {
+		thumb = create_img_thumbnail (bg, factory, screen, dest_width, dest_height, -1);
 
-	if (thumb) {
-		draw_image (bg->placement, thumb, result);
-		g_object_unref (thumb);
+		if (thumb) {
+			draw_image (bg->placement, thumb, result);
+			g_object_unref (thumb);
+		}
 	}
 
 	return result;
@@ -2880,6 +2908,9 @@ create_thumbnail_for_filename (MateDesktopThumbnailFactory *factory,
 
 	uri = g_filename_to_uri (filename, NULL, NULL);
 
+	if (uri == NULL)
+		return NULL;
+
 	thumb = mate_desktop_thumbnail_factory_lookup (factory, uri, mtime);
 
 	if (thumb) {
@@ -3015,11 +3046,15 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 
 	draw_color (bg, result, screen);
 
-	thumb = create_img_thumbnail (bg, factory, screen, dest_width, dest_height, frame_num + skipped);
+	if (bg->placement != MATE_BG_PLACEMENT_NONE) {
+		thumb = create_img_thumbnail (bg, factory, screen,
+					      dest_width, dest_height,
+					      frame_num + skipped);
 
-	if (thumb) {
-		draw_image (bg->placement, thumb, result);
-		g_object_unref (thumb);
+		if (thumb) {
+			draw_image (bg->placement, thumb, result);
+			g_object_unref (thumb);
+		}
 	}
 
 	return result;
