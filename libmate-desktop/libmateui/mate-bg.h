@@ -81,7 +81,10 @@ void             mate_bg_set_color             (MateBG               *bg,
 						 MateBGColorType       type,
 						 GdkColor              *primary,
 						 GdkColor              *secondary);
+void		mate_bg_set_draw_background    (MateBG		     *bg,
+						gboolean	      draw_background);
 /* Getters */
+gboolean	mate_bg_get_draw_background    (MateBG		     *bg);
 MateBGPlacement mate_bg_get_placement         (MateBG               *bg);
 void		 mate_bg_get_color             (MateBG               *bg,
 						 MateBGColorType      *type,
