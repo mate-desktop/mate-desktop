@@ -309,14 +309,30 @@ void
 mate_bg_load_from_system_preferences (MateBG *bg)
 {
 	GSettings *settings;
-	gchar **keys;
-	gchar **k;
 
 	/* FIXME: we need to bind system settings instead of user but
 	* that's currently impossible, not implemented yet.
 	* Hence, reset to system default values.
 	*/
 	settings = g_settings_new (MATE_BG_SCHEMA);
+
+	mate_bg_load_from_system_gsettings (bg, settings, FALSE);
+
+	g_object_unref (settings);
+}
+
+/* This function loads (and optionally resets to) default system settings */
+void
+mate_bg_load_from_system_gsettings (MateBG    *bg,
+				    GSettings *settings,
+				    gboolean   reset_apply)
+{
+	gchar **keys;
+	gchar **k;
+
+	g_return_if_fail (MATE_IS_BG (bg));
+	g_return_if_fail (G_IS_SETTINGS (settings));
+
 	g_settings_delay (settings);
 
 	keys = g_settings_list_keys (settings);
@@ -325,9 +341,13 @@ mate_bg_load_from_system_preferences (MateBG *bg)
 	}
 	g_strfreev (keys);
 
-	mate_bg_load_from_gsettings (bg, settings);
-	g_settings_revert (settings);
-	g_object_unref (settings);
+	if (reset_apply) {
+		/* Apply changes atomically. */
+		g_settings_apply (settings);
+	} else {
+		mate_bg_load_from_gsettings (bg, settings);
+		g_settings_revert (settings);
+	}
 }
 
 void
@@ -397,16 +417,26 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 void
 mate_bg_save_to_preferences (MateBG *bg)
 {
+	GSettings *settings;
+	settings = g_settings_new (MATE_BG_SCHEMA);
+
+	mate_bg_save_to_gsettings (bg, settings);
+	g_object_unref (settings);
+}
+
+void
+mate_bg_save_to_gsettings (MateBG    *bg,
+			   GSettings *settings)
+{
 	gchar *primary;
 	gchar *secondary;
-	GSettings *settings;
 
 	g_return_if_fail (MATE_IS_BG (bg));
+	g_return_if_fail (G_IS_SETTINGS (settings));
 
 	primary = color_to_string (&bg->primary);
 	secondary = color_to_string (&bg->secondary);
 
-	settings = g_settings_new (MATE_BG_SCHEMA);
 	g_settings_delay (settings);
 
 	g_settings_set_boolean (settings, BG_KEY_DRAW_BACKGROUND, bg->is_enabled);
@@ -418,8 +448,6 @@ mate_bg_save_to_preferences (MateBG *bg)
 
 	/* Apply changes atomically. */
 	g_settings_apply (settings);
-
-	g_object_unref (settings);
 
 	g_free (primary);
 	g_free (secondary);
