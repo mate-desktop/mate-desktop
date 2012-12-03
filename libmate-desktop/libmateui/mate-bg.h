@@ -53,6 +53,9 @@ extern "C" {
 /* whether Caja or mate-settings-daemon draw the desktop */
 #define MATE_BG_KEY_SHOW_DESKTOP	"show-desktop-icons"
 
+/* whether to fade when changing background (By Caja/m-s-d) */
+#define MATE_BG_KEY_BACKGROUND_FADE	"background-fade"
+
 #define MATE_BG_KEY_PRIMARY_COLOR	"primary-color"
 #define MATE_BG_KEY_SECONDARY_COLOR	"secondary-color"
 #define MATE_BG_KEY_COLOR_TYPE		"color-shading-type"
