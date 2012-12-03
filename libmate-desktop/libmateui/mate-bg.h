@@ -47,6 +47,19 @@ extern "C" {
 
 #define MATE_BG_SCHEMA "org.mate.background"
 
+/* whether to draw the desktop bg */
+#define MATE_BG_KEY_DRAW_BACKGROUND	"draw-background"
+
+/* whether Caja or mate-settings-daemon draw the desktop */
+#define MATE_BG_KEY_SHOW_DESKTOP	"show-desktop-icons"
+
+#define MATE_BG_KEY_PRIMARY_COLOR	"primary-color"
+#define MATE_BG_KEY_SECONDARY_COLOR	"secondary-color"
+#define MATE_BG_KEY_COLOR_TYPE		"color-shading-type"
+#define MATE_BG_KEY_PICTURE_PLACEMENT	"picture-options"
+#define MATE_BG_KEY_PICTURE_OPACITY	"picture-opacity"
+#define MATE_BG_KEY_PICTURE_FILENAME	"picture-filename"
+
 typedef struct _MateBG MateBG;
 typedef struct _MateBGClass MateBGClass;
 
