@@ -52,14 +52,6 @@ Author: Soren Sandmann <sandmann@redhat.com>
 #define cairo_surface_destroy g_object_unref
 #endif
 
-#define BG_KEY_DRAW_BACKGROUND    "draw-background"
-#define BG_KEY_PRIMARY_COLOR      "primary-color"
-#define BG_KEY_SECONDARY_COLOR    "secondary-color"
-#define BG_KEY_COLOR_TYPE         "color-shading-type"
-#define BG_KEY_PICTURE_PLACEMENT  "picture-options"
-#define BG_KEY_PICTURE_OPACITY    "picture-opacity"
-#define BG_KEY_PICTURE_FILENAME   "picture-filename"
-
 /* We keep the large pixbufs around if the next update
    in the slideshow is less than 60 seconds away */
 #define KEEP_EXPENSIVE_CACHE_SECS 60
@@ -363,11 +355,11 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 	g_return_if_fail (MATE_IS_BG (bg));
 	g_return_if_fail (G_IS_SETTINGS (settings));
 
-	bg->is_enabled = g_settings_get_boolean (settings, BG_KEY_DRAW_BACKGROUND);
+	bg->is_enabled = g_settings_get_boolean (settings, MATE_BG_KEY_DRAW_BACKGROUND);
 
 	/* Filename */
 	filename = NULL;
-	tmp = g_settings_get_string (settings, BG_KEY_PICTURE_FILENAME);
+	tmp = g_settings_get_string (settings, MATE_BG_KEY_PICTURE_FILENAME);
 	if (tmp && *tmp != '\0') {
 		/* FIXME: UTF-8 checks should go away.
 		 * picture-filename is of type string, which can only be used for
@@ -386,26 +378,26 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 		/* Fallback to default BG if the filename set is non-existent */
 		if (filename != NULL && !g_file_test (filename, G_FILE_TEST_EXISTS)) {
 			/* FIXME: better to use g_settings_get_mapped() here */
-			g_settings_reset (settings, BG_KEY_PICTURE_FILENAME);
-			filename = g_settings_get_string (settings, BG_KEY_PICTURE_FILENAME);
+			g_settings_reset (settings, MATE_BG_KEY_PICTURE_FILENAME);
+			filename = g_settings_get_string (settings, MATE_BG_KEY_PICTURE_FILENAME);
 		}
 	}
 	g_free (tmp);
 
 	/* Colors */
-	tmp = g_settings_get_string (settings, BG_KEY_PRIMARY_COLOR);
+	tmp = g_settings_get_string (settings, MATE_BG_KEY_PRIMARY_COLOR);
 	color_from_string (tmp, &c1);
 	g_free (tmp);
 
-	tmp = g_settings_get_string (settings, BG_KEY_SECONDARY_COLOR);
+	tmp = g_settings_get_string (settings, MATE_BG_KEY_SECONDARY_COLOR);
 	color_from_string (tmp, &c2);
 	g_free (tmp);
 
 	/* Color type */
-	ctype = g_settings_get_enum (settings, BG_KEY_COLOR_TYPE);
+	ctype = g_settings_get_enum (settings, MATE_BG_KEY_COLOR_TYPE);
 
 	/* Placement */
-	placement = g_settings_get_enum (settings, BG_KEY_PICTURE_PLACEMENT);
+	placement = g_settings_get_enum (settings, MATE_BG_KEY_PICTURE_PLACEMENT);
 
 	mate_bg_set_color (bg, ctype, &c1, &c2);
 	mate_bg_set_placement (bg, placement);
@@ -439,12 +431,12 @@ mate_bg_save_to_gsettings (MateBG    *bg,
 
 	g_settings_delay (settings);
 
-	g_settings_set_boolean (settings, BG_KEY_DRAW_BACKGROUND, bg->is_enabled);
-	g_settings_set_string (settings, BG_KEY_PICTURE_FILENAME, bg->filename);
-	g_settings_set_enum (settings, BG_KEY_PICTURE_PLACEMENT, bg->placement);
-	g_settings_set_string (settings, BG_KEY_PRIMARY_COLOR, primary);
-	g_settings_set_string (settings, BG_KEY_SECONDARY_COLOR, secondary);
-	g_settings_set_enum (settings, BG_KEY_COLOR_TYPE, bg->color_type);
+	g_settings_set_boolean (settings, MATE_BG_KEY_DRAW_BACKGROUND, bg->is_enabled);
+	g_settings_set_string (settings, MATE_BG_KEY_PICTURE_FILENAME, bg->filename);
+	g_settings_set_enum (settings, MATE_BG_KEY_PICTURE_PLACEMENT, bg->placement);
+	g_settings_set_string (settings, MATE_BG_KEY_PRIMARY_COLOR, primary);
+	g_settings_set_string (settings, MATE_BG_KEY_SECONDARY_COLOR, secondary);
+	g_settings_set_enum (settings, MATE_BG_KEY_COLOR_TYPE, bg->color_type);
 
 	/* Apply changes atomically. */
 	g_settings_apply (settings);
