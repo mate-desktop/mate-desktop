@@ -1,6 +1,7 @@
 /* mate-bg.h -
 
-   Copyright 2007, Red Hat, Inc.
+   Copyright (C) 2007 Red Hat, Inc.
+   Copyright (C) 2012 Jasmine Hassan <jasmine.aura@gmail.com>
 
    This file is part of the Mate Library.
 
@@ -19,7 +20,8 @@
    write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
    Boston, MA  02110-1301, USA.
 
-   Author: Soren Sandmann <sandmann@redhat.com>
+   Authors: Soren Sandmann <sandmann@redhat.com>
+	    Jasmine Hassan <jasmine.aura@gmail.com>
 */
 
 #ifndef __MATE_BG_H__
