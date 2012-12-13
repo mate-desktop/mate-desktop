@@ -4,6 +4,7 @@ matebg.c: Object for the desktop background.
 
 Copyright (C) 2000 Eazel, Inc.
 Copyright (C) 2007-2008 Red Hat, Inc.
+Copyright (C) 2012 Jasmine Hassan <jasmine.aura@gmail.com>
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU Library General Public License as
@@ -23,7 +24,8 @@ Boston, MA 02110-1301, USA.
 Derived from eel-background.c and eel-gdk-pixbuf-extensions.c by
 Darin Adler <darin@eazel.com> and Ramiro Estrugo <ramiro@eazel.com>
 
-Author: Soren Sandmann <sandmann@redhat.com>
+Authors: Soren Sandmann <sandmann@redhat.com>
+	 Jasmine Hassan <jasmine.aura@gmail.com>
 
 */
 
@@ -47,9 +49,14 @@ Author: Soren Sandmann <sandmann@redhat.com>
 #if GTK_CHECK_VERSION (3, 0, 0)
 # include <cairo-xlib.h>
 #else
-#define cairo_surface_t GdkPixmap
-#define cairo_create gdk_cairo_create
-#define cairo_surface_destroy g_object_unref
+#define cairo_surface_t		GdkPixmap
+#define cairo_create		gdk_cairo_create
+#define cairo_surface_destroy	g_object_unref
+#define cairo_xlib_surface_get_drawable	GDK_DRAWABLE_XID
+#define gdk_error_trap_pop_ignored	gdk_error_trap_pop
+#define mate_bg_get_surface_from_root		mate_bg_get_pixmap_from_root
+#define mate_bg_crossfade_set_start_surface	mate_bg_crossfade_set_start_pixmap
+#define mate_bg_crossfade_set_end_surface	mate_bg_crossfade_set_end_pixmap
 #endif
 
 /* We keep the large pixbufs around if the next update
@@ -125,9 +132,9 @@ static guint signals[N_SIGNALS] = {0};
 G_DEFINE_TYPE(MateBG, mate_bg, G_TYPE_OBJECT)
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-static cairo_surface_t *make_root_pixmap     (GdkScreen  *screen,
+static cairo_surface_t *make_root_pixmap     (GdkWindow  *window,
 #else
-static GdkPixmap       *make_root_pixmap     (GdkScreen  *screen,
+static GdkPixmap       *make_root_pixmap     (GdkWindow  *window,
 #endif
                                               gint        width,
                                               gint        height);
@@ -1026,20 +1033,19 @@ mate_bg_create_pixmap  (MateBG      *bg,
 	/* has the side effect of loading and caching pixbuf only when in tile mode */
 	mate_bg_get_pixmap_size (bg, width, height, &pm_width, &pm_height);
 
+
 	if (is_root)
 	{
-		surface = make_root_pixmap (gdk_window_get_screen(window),
-					    pm_width, pm_height);
+		surface = make_root_pixmap (window, pm_width, pm_height);
 	}
 	else
 	{
-#if GTK_CHECK_VERSION (3, 0, 0)
-		surface = gdk_window_create_similar_surface (window,
-                                                             CAIRO_CONTENT_COLOR,
-                                                             pm_width, pm_height);
-#else
+#  if GTK_CHECK_VERSION (3, 0, 0)
+		surface = gdk_window_create_similar_surface (window, CAIRO_CONTENT_COLOR,
+							     pm_width, pm_height);
+#  else
 		surface = gdk_pixmap_new (window, pm_width, pm_height, -1);
-#endif
+#  endif
 	}
 
 	cr = cairo_create (surface);
@@ -1116,57 +1122,41 @@ static cairo_surface_t *
 #else
 static GdkPixmap *
 #endif
-make_root_pixmap (GdkScreen *screen, gint width, gint height)
+make_root_pixmap (GdkWindow *window, gint width, gint height)
 {
+	GdkScreen *screen = gdk_window_get_screen(window);
+	char *disp_name = DisplayString (GDK_WINDOW_XDISPLAY (window));
 	Display *display;
-	const char *display_name;
-	Pixmap result;
+	Pixmap xpixmap;
 	cairo_surface_t *surface;
-	int screen_num;
 	int depth;
 
-	screen_num = gdk_screen_get_number (screen);
-
-	gdk_flush ();
-
-	display_name = gdk_display_get_name (gdk_screen_get_display (screen));
-	display = XOpenDisplay (display_name);
-
-        if (display == NULL) {
-                g_warning ("Unable to open display '%s' when setting "
-			   "background pixmap\n",
-                           (display_name) ? display_name : "NULL");
-                return NULL;
-        }
-
-	/* Desktop background pixmap should be created from
-	 * dummy X client since most applications will try to
-	 * kill it with XKillClient later when changing pixmap
+	/* Desktop background pixmap should be created from dummy X client since most
+	 * applications will try to kill it with XKillClient later when changing pixmap
 	 */
+	display = XOpenDisplay (disp_name);
 
+	if (display == NULL) {
+		g_warning ("Unable to open display '%s' when setting background pixmap\n",
+		           (disp_name) ? disp_name : "NULL");
+		return NULL;
+	}
+
+	depth = DefaultDepth (display, gdk_screen_get_number (screen));
+	xpixmap = XCreatePixmap (display, GDK_WINDOW_XID (window), width, height, depth);
+
+	XFlush (display);
 	XSetCloseDownMode (display, RetainPermanent);
-
-	depth = DefaultDepth (display, screen_num);
-
-	result = XCreatePixmap (display,
-				RootWindow (display, screen_num),
-				width, height, depth);
-
 	XCloseDisplay (display);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-	surface = cairo_xlib_surface_create (GDK_SCREEN_XDISPLAY (screen),
-                                             result,
+#  if GTK_CHECK_VERSION (3, 0, 0)
+	surface = cairo_xlib_surface_create (GDK_SCREEN_XDISPLAY (screen), xpixmap,
                                              GDK_VISUAL_XVISUAL (gdk_screen_get_system_visual (screen)),
         				     width, height);
-#else
-	surface = gdk_pixmap_foreign_new_for_screen (screen, result,
-							width, height, depth);
-
-	gdk_drawable_set_colormap (
-		GDK_DRAWABLE (surface),
-		gdk_drawable_get_colormap (gdk_screen_get_root_window (screen)));
-#endif
+#  else
+	surface = gdk_pixmap_foreign_new_for_screen (screen, xpixmap, width, height, depth);
+	gdk_drawable_set_colormap (surface, gdk_drawable_get_colormap (window));
+#  endif
 
 	return surface;
 }
@@ -1331,7 +1321,7 @@ mate_bg_get_pixmap_from_root (GdkScreen *screen)
 	if (data != NULL) {
 		gdk_error_trap_push ();
 
-#if GTK_CHECK_VERSION (3, 0, 0)
+#  if GTK_CHECK_VERSION (3, 0, 0)
 		Pixmap xpixmap = *(Pixmap *) data;
 		Window root_return;
 		int x_ret, y_ret;
@@ -1349,7 +1339,7 @@ mate_bg_get_pixmap_from_root (GdkScreen *screen)
 		}
 
 		gdk_error_trap_pop_ignored ();
-#else
+#  else
 		source_pixmap = gdk_pixmap_foreign_new (*(Pixmap *) data);
 		gdk_error_trap_pop ();
 
@@ -1357,13 +1347,13 @@ mate_bg_get_pixmap_from_root (GdkScreen *screen)
 			gdk_drawable_set_colormap (source_pixmap,
 						   gdk_screen_get_default_colormap (screen));
 		}
-#endif
+#  endif
 	}
 
 	width = gdk_screen_get_width (screen);
 	height = gdk_screen_get_height (screen);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
+#  if GTK_CHECK_VERSION (3, 0, 0)
 	if (source_pixmap) {
 		surface = cairo_surface_create_similar (source_pixmap,
 							CAIRO_CONTENT_COLOR,
@@ -1386,7 +1376,7 @@ mate_bg_get_pixmap_from_root (GdkScreen *screen)
 							     CAIRO_CONTENT_COLOR,
 							     width, height);
 	}
-#else
+#  else
 	surface = gdk_pixmap_new (source_pixmap != NULL? source_pixmap :
 				 gdk_screen_get_root_window (screen),
 				 width, height, -1);
@@ -1406,7 +1396,7 @@ mate_bg_get_pixmap_from_root (GdkScreen *screen)
 		surface = NULL;
 	}
 	cairo_destroy (cr);
-#endif
+#  endif
 
 	if (source_pixmap != NULL)
 		cairo_surface_destroy (source_pixmap);
@@ -1417,63 +1407,71 @@ mate_bg_get_pixmap_from_root (GdkScreen *screen)
 	return surface;
 }
 
+/* Sets the "ESETROOT_PMAP_ID" property to later be used to free the pixmap,
+ */
 static void
 mate_bg_set_root_pixmap_id (GdkScreen       *screen,
-			    cairo_surface_t *surface)
+			    Display         *display,
+			    Pixmap           xpixmap)
 {
-	int      result;
-	gint     format;
-	gulong   nitems;
-	gulong   bytes_after;
-	guchar  *data_esetroot;
-	Pixmap   pixmap_id;
+	Window   xroot   = RootWindow (display, gdk_screen_get_number (screen));
+	char    *atom_names[] = {"_XROOTPMAP_ID", "ESETROOT_PMAP_ID"};
+	Atom     atoms[G_N_ELEMENTS(atom_names)] = {0};
+
 	Atom     type;
-	Display *display;
-	int      screen_num;
+	int      format;
+	unsigned long nitems, after;
+	unsigned char *data_root, *data_esetroot;
 
-	screen_num = gdk_screen_get_number (screen);
-	data_esetroot = NULL;
+	/* Get atoms for both properties in an array, only if they exist.
+	 * This method is to avoid multiple round-trips to Xserver
+	 */
+	if (XInternAtoms (display, atom_names, G_N_ELEMENTS(atom_names), True, atoms) &&
+	    atoms[0] != None && atoms[1] != None)
+	{
+		XGetWindowProperty (display, xroot, atoms[0], 0L, 1L, False, AnyPropertyType,
+				    &type, &format, &nitems, &after, &data_root);
+		if (data_root && type == XA_PIXMAP && format == 32 && nitems == 1)
+		{
+			XGetWindowProperty (display, xroot, atoms[1], 0L, 1L, False, AnyPropertyType,
+					    &type, &format, &nitems, &after, &data_esetroot);
+			if (data_esetroot && type == XA_PIXMAP && format == 32 && nitems == 1)
+			{
+				Pixmap xrootpmap = *((Pixmap *) data_root);
+				Pixmap esetrootpmap = *((Pixmap *) data_esetroot);
+				XFree (data_root);
+				XFree (data_esetroot);
 
-	display = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen));
-
-	result = XGetWindowProperty (display,
-				     RootWindow (display, screen_num),
-				     gdk_x11_get_xatom_by_name ("ESETROOT_PMAP_ID"),
-				     0L, 1L, False, XA_PIXMAP,
-				     &type, &format, &nitems,
-				     &bytes_after,
-				     &data_esetroot);
-
-	if (data_esetroot != NULL) {
-		if (result == Success && type == XA_PIXMAP &&
-		    format == 32 &&
-		    nitems == 1) {
-			gdk_error_trap_push ();
-			XKillClient (display, *(Pixmap *)data_esetroot);
-#if GTK_CHECK_VERSION (3, 0, 0)
-			gdk_error_trap_pop_ignored ();
-#else
-			gdk_flush ();
-			gdk_error_trap_pop ();
-#endif
+				gdk_error_trap_push ();
+				if (xrootpmap && xrootpmap == esetrootpmap) {
+					XKillClient (display, xrootpmap);
+				}
+				if (esetrootpmap && esetrootpmap != xrootpmap) {
+					XKillClient (display, esetrootpmap);
+				}
+#			    if !GTK_CHECK_VERSION (3, 0, 0)
+				XSync (display, False);
+#			    endif
+				gdk_error_trap_pop_ignored ();
+			}
 		}
-		XFree (data_esetroot);
 	}
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-	pixmap_id = cairo_xlib_surface_get_drawable (surface);
-#else
-	pixmap_id = GDK_WINDOW_XWINDOW (surface);
-#endif
+	/* Get atoms for both properties in an array, create them if needed.
+	 * This method is to avoid multiple round-trips to Xserver
+	 */
+	if (!XInternAtoms (display, atom_names, G_N_ELEMENTS(atom_names), False, atoms) ||
+	    atoms[0] == None || atoms[1] == None) {
+	    g_warning ("Could not create atoms needed to set root pixmap id/properties.\n");
+	    return;
+	}
 
-	XChangeProperty (display, RootWindow (display, screen_num),
-			 gdk_x11_get_xatom_by_name ("ESETROOT_PMAP_ID"),
-			 XA_PIXMAP, 32, PropModeReplace,
-			 (guchar *) &pixmap_id, 1);
-	XChangeProperty (display, RootWindow (display, screen_num),
-			 gdk_x11_get_xatom_by_name ("_XROOTPMAP_ID"), XA_PIXMAP,
-			 32, PropModeReplace,
-			 (guchar *) &pixmap_id, 1);
+	/* Set new _XROOTMAP_ID and ESETROOT_PMAP_ID properties */
+	XChangeProperty (display, xroot, atoms[0], XA_PIXMAP, 32,
+			 PropModeReplace, (unsigned char *) &xpixmap, 1);
+
+	XChangeProperty (display, xroot, atoms[1], XA_PIXMAP, 32,
+			 PropModeReplace, (unsigned char *) &xpixmap, 1);
 }
 
 /**
@@ -1496,34 +1494,28 @@ mate_bg_set_surface_as_root (GdkScreen *screen, cairo_surface_t *surface)
 mate_bg_set_pixmap_as_root  (GdkScreen *screen, GdkPixmap *surface)
 #endif
 {
-	Display *display;
-	int      screen_num;
-
 	g_return_if_fail (screen != NULL);
-#if GTK_CHECK_VERSION (3, 0, 0)
+#  if GTK_CHECK_VERSION (3, 0, 0)
 	g_return_if_fail (cairo_surface_get_type (surface) == CAIRO_SURFACE_TYPE_XLIB);
-#else
+#  else
 	g_return_if_fail (surface != NULL);
-#endif
+#  endif
 
-	screen_num = gdk_screen_get_number (screen);
+	/* Desktop background pixmap should be created from dummy X client since most
+	 * applications will try to kill it with XKillClient later when changing pixmap
+	 */
+	Display    *display      = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen));
+	Pixmap      pixmap_id    = cairo_xlib_surface_get_drawable (surface);
+	Window      xroot        = RootWindow (display, gdk_screen_get_number (screen));
 
-	display = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen));
+	XGrabServer (display);
+	mate_bg_set_root_pixmap_id (screen, display, pixmap_id);
 
-	gdk_x11_display_grab (gdk_screen_get_display (screen));
+	XSetWindowBackgroundPixmap (display, xroot, pixmap_id);
+	XClearWindow (display, xroot);
 
-	mate_bg_set_root_pixmap_id (screen, surface);
-
-	XSetWindowBackgroundPixmap (display, RootWindow (display, screen_num),
-#if GTK_CHECK_VERSION (3, 0, 0)
-				    cairo_xlib_surface_get_drawable (surface));
-#else
-				    GDK_PIXMAP_XID (surface));
-#endif
-	XClearWindow (display, RootWindow (display, screen_num));
-
-	gdk_display_flush (gdk_screen_get_display (screen));
-	gdk_x11_display_ungrab (gdk_screen_get_display (screen));
+	XFlush (display);
+	XUngrabServer (display);
 }
 
 /**
@@ -1548,40 +1540,28 @@ mate_bg_set_pixmap_as_root_with_crossfade (GdkScreen *screen,
 		 			   GdkPixmap *surface)
 #endif
 {
-	GdkDisplay *display;
-	GdkWindow *root_window;
-	cairo_surface_t *old_surface;
-
-	int      width, height;
-	MateBGCrossfade *fade;
-
 	g_return_val_if_fail (screen != NULL, NULL);
 	g_return_val_if_fail (surface != NULL, NULL);
 
-	root_window = gdk_screen_get_root_window (screen);
+	GdkWindow  *root_window  = gdk_screen_get_root_window (screen);
+	int         width        = gdk_screen_get_width (screen);
+	int         height       = gdk_screen_get_height (screen);
 
-	width = gdk_screen_get_width (screen);
-	height = gdk_screen_get_height (screen);
+	MateBGCrossfade *fade    = mate_bg_crossfade_new (width, height);
 
-	fade = mate_bg_crossfade_new (width, height);
+	Display    *display      = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen));
+	Pixmap      pixmap_id    = cairo_xlib_surface_get_drawable (surface);
 
-	display = gdk_screen_get_display (screen);
-	gdk_x11_display_grab (display);
-#if GTK_CHECK_VERSION (3, 0, 0)
-	old_surface = mate_bg_get_surface_from_root (screen);
-	mate_bg_set_root_pixmap_id (screen, surface);
+	XGrabServer (display);
+	cairo_surface_t *old_surface = mate_bg_get_surface_from_root (screen);
+	mate_bg_set_root_pixmap_id (screen, display, pixmap_id);
+
 	mate_bg_crossfade_set_start_surface (fade, old_surface);
 	cairo_surface_destroy (old_surface);
 	mate_bg_crossfade_set_end_surface (fade, surface);
-#else
-	old_surface = mate_bg_get_pixmap_from_root (screen);
-	mate_bg_set_root_pixmap_id (screen, surface);
-	mate_bg_crossfade_set_start_pixmap (fade, old_surface);
-	cairo_surface_destroy (old_surface);
-	mate_bg_crossfade_set_end_pixmap (fade, surface);
-#endif
-	gdk_display_flush (display);
-	gdk_x11_display_ungrab (display);
+
+	XFlush (display);
+	XUngrabServer (display);
 
 	mate_bg_crossfade_start (fade, root_window);
 
