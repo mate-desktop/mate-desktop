@@ -34,6 +34,7 @@ Authors: Soren Sandmann <sandmann@redhat.com>
 #include <stdarg.h>
 #include <stdlib.h>
 
+#include <glib/gstdio.h>
 #include <gio/gio.h>
 
 #include <gdk/gdkx.h>
@@ -175,8 +176,9 @@ static gboolean   get_thumb_annotations (GdkPixbuf             *thumb,
 
 /* Cache */
 static GdkPixbuf *get_pixbuf_for_size  (MateBG               *bg,
-					int                    width,
-					int                    height);
+					gint                  num_monitor,
+					int                   width,
+					int                   height);
 static void       clear_cache          (MateBG               *bg);
 static gboolean   is_different         (MateBG               *bg,
 					const char            *filename);
@@ -621,12 +623,147 @@ mate_bg_get_filename (MateBG *bg)
 	return bg->filename;
 }
 
+static inline gchar *
+get_wallpaper_cache_dir ()
+{
+	return g_build_filename (g_get_user_cache_dir(), "wallpaper", NULL);
+}
+
+static inline gchar *
+get_wallpaper_cache_prefix_name (gint                     num_monitor,
+				 MateBGPlacement          placement,
+				 gint                     width,
+				 gint                     height)
+{
+	return g_strdup_printf ("%i_%i_%i_%i", num_monitor, (gint) placement, width, height);
+}
+
+static char *
+get_wallpaper_cache_filename (const char              *filename,
+			      gint                     num_monitor,
+			      MateBGPlacement          placement,
+			      gint                     width,
+			      gint                     height)
+{
+	gchar *cache_filename;
+	gchar *cache_prefix_name;
+	gchar *md5_filename;
+	gchar *cache_basename;
+	gchar *cache_dir;
+
+	md5_filename = g_compute_checksum_for_data (G_CHECKSUM_MD5, (const guchar *) filename,
+						    strlen (filename));
+	cache_prefix_name = get_wallpaper_cache_prefix_name (num_monitor, placement, width, height);
+	cache_basename = g_strdup_printf ("%s_%s", cache_prefix_name, md5_filename);
+	cache_dir = get_wallpaper_cache_dir ();
+	cache_filename = g_build_filename (cache_dir, cache_basename, NULL);
+
+	g_free (cache_prefix_name);
+	g_free (md5_filename);
+	g_free (cache_basename);
+	g_free (cache_dir);
+
+	return cache_filename;
+}
+
 static void
-file_changed (GFileMonitor *file_monitor,
-	      GFile *child,
-	      GFile *other_file,
+cleanup_cache_for_monitor (gchar *cache_dir,
+			   gint   num_monitor)
+{
+	GDir            *g_cache_dir;
+	gchar           *monitor_prefix;
+	const gchar     *file;
+
+	g_cache_dir = g_dir_open (cache_dir, 0, NULL);
+	monitor_prefix = g_strdup_printf ("%i_", num_monitor);
+
+	file = g_dir_read_name (g_cache_dir);
+	while (file != NULL) {
+		gchar *path = g_build_filename (cache_dir, file, NULL);
+
+		/* purge files with same monitor id */
+		if (g_str_has_prefix (file, monitor_prefix) &&
+		    g_file_test (path, G_FILE_TEST_IS_REGULAR))
+			g_unlink (path);
+
+		g_free (path);
+
+		file = g_dir_read_name (g_cache_dir);
+	}
+
+	g_free (monitor_prefix);
+	g_dir_close (g_cache_dir);
+}
+
+static gboolean
+cache_file_is_valid (const char *filename,
+		     const char *cache_filename)
+{
+	time_t mtime;
+	time_t cache_mtime;
+
+	if (!g_file_test (cache_filename, G_FILE_TEST_IS_REGULAR))
+		return FALSE;
+
+	mtime = get_mtime (filename);
+	cache_mtime = get_mtime (cache_filename);
+
+	return (mtime < cache_mtime);
+}
+
+static void
+refresh_cache_file (MateBG     *bg,
+		    GdkPixbuf  *new_pixbuf,
+		    gint        num_monitor,
+		    gint        width,
+		    gint        height)
+{
+	gchar           *cache_filename;
+	gchar           *cache_dir;
+	GdkPixbufFormat *format;
+	gchar           *format_name;
+
+	if ((num_monitor == -1) || (width <= 300) || (height <= 300))
+		return;
+
+	cache_filename = get_wallpaper_cache_filename (bg->filename, num_monitor,
+							bg->placement, width, height);
+	cache_dir = get_wallpaper_cache_dir ();
+
+	/* Only refresh scaled file on disk if useful (and don't cache slideshow) */
+	if (!cache_file_is_valid (bg->filename, cache_filename)) {
+		format = gdk_pixbuf_get_file_info (bg->filename, NULL, NULL);
+
+		if (format != NULL) {
+			if (!g_file_test (cache_dir, G_FILE_TEST_IS_DIR)) {
+				g_mkdir_with_parents (cache_dir, 0700);
+			} else {
+				cleanup_cache_for_monitor (cache_dir, num_monitor);
+			}
+
+			format_name = gdk_pixbuf_format_get_name (format);
+
+			if (strcmp (format_name, "jpeg") == 0)
+				gdk_pixbuf_save (new_pixbuf, cache_filename, format_name,
+						 NULL, "quality", "100", NULL);
+			else
+				gdk_pixbuf_save (new_pixbuf, cache_filename, format_name,
+						 NULL, NULL);
+
+			g_free (format_name);
+		}
+	}
+
+	g_free (cache_filename);
+	g_free (cache_dir);
+}
+
+static void
+file_changed (GFileMonitor     *file_monitor,
+	      GFile            *child,
+	      GFile            *other_file,
 	      GFileMonitorEvent event_type,
-	      gpointer user_data)
+	      gpointer          user_data)
 {
 	MateBG *bg = MATE_BG (user_data);
 
@@ -668,8 +805,8 @@ mate_bg_set_filename (MateBG	 *bg,
 }
 
 static void
-draw_color_area (MateBG *bg,
-		 GdkPixbuf *dest,
+draw_color_area (MateBG       *bg,
+		 GdkPixbuf    *dest,
 		 GdkRectangle *rect)
 {
 	guint32 pixel;
@@ -707,7 +844,7 @@ draw_color_area (MateBG *bg,
 }
 
 static void
-draw_color (MateBG *bg,
+draw_color (MateBG    *bg,
 	    GdkPixbuf *dest,
 	    GdkScreen *screen)
 {
@@ -721,7 +858,7 @@ draw_color (MateBG *bg,
 }
 
 static void
-draw_color_each_monitor (MateBG *bg,
+draw_color_each_monitor (MateBG    *bg,
 			 GdkPixbuf *dest,
 			 GdkScreen *screen)
 {
@@ -770,8 +907,8 @@ pixbuf_clip_to_fit (GdkPixbuf *src,
 }
 
 static GdkPixbuf *
-get_scaled_pixbuf (MateBGPlacement placement,
-		   GdkPixbuf *pixbuf,
+get_scaled_pixbuf (MateBGPlacement  placement,
+		   GdkPixbuf       *pixbuf,
 		   int width, int height,
 		   int *x, int *y,
 		   int *w, int *h)
@@ -818,10 +955,11 @@ get_scaled_pixbuf (MateBGPlacement placement,
 
 
 static void
-draw_image_area (MateBGPlacement   placement,
-		 GdkPixbuf        *pixbuf,
-		 GdkPixbuf        *dest,
-		 GdkRectangle     *area)
+draw_image_area (MateBG        *bg,
+		 gint           num_monitor,
+		 GdkPixbuf     *pixbuf,
+		 GdkPixbuf     *dest,
+		 GdkRectangle  *area)
 {
 	int dest_width = area->width;
 	int dest_height = area->height;
@@ -831,9 +969,9 @@ draw_image_area (MateBGPlacement   placement,
 	if (!pixbuf)
 		return;
 
-	scaled = get_scaled_pixbuf (placement, pixbuf, dest_width, dest_height, &x, &y, &w, &h);
+	scaled = get_scaled_pixbuf (bg->placement, pixbuf, dest_width, dest_height, &x, &y, &w, &h);
 
-	switch (placement) {
+	switch (bg->placement) {
 	case MATE_BG_PLACEMENT_TILED:
 		pixbuf_tile (scaled, dest);
 		break;
@@ -851,13 +989,15 @@ draw_image_area (MateBGPlacement   placement,
 		break;
 	}
 
+	refresh_cache_file (bg, scaled, num_monitor, dest_width, dest_height);
+
 	g_object_unref (scaled);
 }
 
 static void
-draw_image (MateBGPlacement  placement,
-	    GdkPixbuf        *pixbuf,
-	    GdkPixbuf        *dest)
+draw_image_for_thumb (MateBG     *bg,
+		      GdkPixbuf  *pixbuf,
+		      GdkPixbuf  *dest)
 {
 	GdkRectangle rect;
 
@@ -866,32 +1006,37 @@ draw_image (MateBGPlacement  placement,
 	rect.width = gdk_pixbuf_get_width (dest);
 	rect.height = gdk_pixbuf_get_height (dest);
 
-	draw_image_area (placement, pixbuf, dest, &rect);
+	draw_image_area (bg, -1, pixbuf, dest, &rect);
 }
 
 static void
-draw_once (MateBG   *bg,
+draw_once (MateBG    *bg,
 	   GdkPixbuf *dest,
-	   GdkScreen *screen)
+	   GdkScreen *screen,
+	   gboolean   is_root)
 {
 	GdkRectangle rect;
 	GdkPixbuf   *pixbuf;
+	gint         monitor;
+
+	/* whether we're drawing on root window or normal (Caja) window */
+	monitor = (is_root) ? 0 : -1;
 
 	rect.x = 0;
 	rect.y = 0;
 	rect.width = gdk_pixbuf_get_width (dest);
 	rect.height = gdk_pixbuf_get_height (dest);
 
-	pixbuf = get_pixbuf_for_size (bg, rect.width, rect.height);
+	pixbuf = get_pixbuf_for_size (bg, monitor, rect.width, rect.height);
 	if (pixbuf) {
-		draw_image_area (bg->placement, pixbuf, dest, &rect);
+		draw_image_area (bg, monitor, pixbuf, dest, &rect);
 
 		g_object_unref (pixbuf);
 	}
 }
 
 static void
-draw_each_monitor (MateBG   *bg,
+draw_each_monitor (MateBG    *bg,
 		   GdkPixbuf *dest,
 		   GdkScreen *screen)
 {
@@ -904,9 +1049,9 @@ draw_each_monitor (MateBG   *bg,
 
 		gdk_screen_get_monitor_geometry (screen, monitor, &rect);
 
-		pixbuf = get_pixbuf_for_size (bg, rect.width, rect.height);
+		pixbuf = get_pixbuf_for_size (bg, monitor, rect.width, rect.height);
 		if (pixbuf) {
-			draw_image_area (bg->placement, pixbuf, dest, &rect);
+			draw_image_area (bg, monitor, pixbuf, dest, &rect);
 
 			g_object_unref (pixbuf);
 		}
@@ -914,10 +1059,10 @@ draw_each_monitor (MateBG   *bg,
 }
 
 void
-mate_bg_draw (MateBG *bg,
+mate_bg_draw (MateBG     *bg,
 	       GdkPixbuf *dest,
 	       GdkScreen *screen,
-	       gboolean is_root)
+	       gboolean   is_root)
 {
 	if (!bg)
 		return;
@@ -930,7 +1075,7 @@ mate_bg_draw (MateBG *bg,
 	} else {
 		draw_color (bg, dest, screen);
 		if (bg->filename) {
-			draw_once (bg, dest, screen);
+			draw_once (bg, dest, screen, is_root);
 		}
 	}
 }
@@ -1089,7 +1234,7 @@ mate_bg_is_dark (MateBG *bg,
 		color.green = (bg->primary.green + bg->secondary.green) / 2;
 		color.blue = (bg->primary.blue + bg->secondary.blue) / 2;
 	}
-	pixbuf = get_pixbuf_for_size (bg, width, height);
+	pixbuf = get_pixbuf_for_size (bg, -1, width, height);
 	if (pixbuf) {
 		guint32 argb = pixbuf_average_value (pixbuf);
 		guchar a = (argb >> 24) & 0xff;
@@ -1256,7 +1401,7 @@ mate_bg_create_thumbnail (MateBG               *bg,
 		thumb = create_img_thumbnail (bg, factory, screen, dest_width, dest_height, -1);
 
 		if (thumb) {
-			draw_image (bg->placement, thumb, result);
+			draw_image_for_thumb (bg, thumb, result);
 			g_object_unref (thumb);
 		}
 	}
@@ -1767,39 +1912,68 @@ file_cache_add_slide_show (MateBG *bg,
 }
 
 static GdkPixbuf *
+load_from_cache_file (MateBG     *bg,
+		      const char *filename,
+		      gint        num_monitor,
+		      gint        best_width,
+		      gint        best_height)
+{
+	GdkPixbuf *pixbuf = NULL;
+	gchar *cache_filename;
+
+	cache_filename = get_wallpaper_cache_filename (filename, num_monitor, bg->placement,
+							best_width, best_height);
+
+	if (cache_file_is_valid (filename, cache_filename))
+		pixbuf = gdk_pixbuf_new_from_file (cache_filename, NULL);
+
+	g_free (cache_filename);
+
+	return pixbuf;
+}
+
+static GdkPixbuf *
 get_as_pixbuf_for_size (MateBG    *bg,
 			const char *filename,
-			int         best_width,
-			int         best_height)
+			gint         monitor,
+			gint         best_width,
+			gint         best_height)
 {
 	const FileCacheEntry *ent;
 	if ((ent = file_cache_lookup (bg, PIXBUF, filename))) {
 		return g_object_ref (ent->u.pixbuf);
 	} else {
 		GdkPixbufFormat *format;
-		GdkPixbuf *pixbuf;
+		GdkPixbuf *pixbuf = NULL;
 		gchar *tmp = NULL;
 
-		/* If scalable choose maximum size */
-		format = gdk_pixbuf_get_file_info (filename, NULL, NULL);
-		if (format != NULL) {
-			tmp = gdk_pixbuf_format_get_name (format);
-		}
+		/* Try to hit local cache first if relevant */
+		if (monitor != -1)
+			pixbuf = load_from_cache_file (bg, filename, monitor,
+							best_width, best_height);
 
-		if (g_strcmp0 (tmp, "svg") == 0 &&
-		    (best_width > 0 && best_height > 0) &&
-		    (bg->placement == MATE_BG_PLACEMENT_FILL_SCREEN ||
-		     bg->placement == MATE_BG_PLACEMENT_SCALED ||
-		     bg->placement == MATE_BG_PLACEMENT_ZOOMED))
-		{
-			pixbuf = gdk_pixbuf_new_from_file_at_size (filename,
-								   best_width, best_height, NULL);
-		} else {
-			pixbuf = gdk_pixbuf_new_from_file (filename, NULL);
-		}
+		if (!pixbuf) {
+			/* If scalable choose maximum size */
+			format = gdk_pixbuf_get_file_info (filename, NULL, NULL);
+			if (format != NULL)
+				tmp = gdk_pixbuf_format_get_name (format);
 
-		if (tmp != NULL)
-			g_free (tmp);
+			if (g_strcmp0 (tmp, "svg") == 0 &&
+			    (best_width > 0 && best_height > 0) &&
+			    (bg->placement == MATE_BG_PLACEMENT_FILL_SCREEN ||
+			     bg->placement == MATE_BG_PLACEMENT_SCALED ||
+			     bg->placement == MATE_BG_PLACEMENT_ZOOMED))
+			{
+				pixbuf = gdk_pixbuf_new_from_file_at_size (filename,
+									   best_width,
+									   best_height, NULL);
+			} else {
+				pixbuf = gdk_pixbuf_new_from_file (filename, NULL);
+			}
+
+			if (tmp != NULL)
+				g_free (tmp);
+		}
 
 		if (pixbuf)
 			file_cache_add_pixbuf (bg, filename, pixbuf);
@@ -2165,6 +2339,7 @@ find_best_size (GSList *sizes, gint width, gint height)
 
 static GdkPixbuf *
 get_pixbuf_for_size (MateBG *bg,
+		     gint monitor,
 		     gint best_width,
 		     gint best_height)
 {
@@ -2186,7 +2361,8 @@ get_pixbuf_for_size (MateBG *bg,
 	if (!hit_cache && bg->filename) {
 		bg->file_mtime = get_mtime (bg->filename);
 
-		bg->pixbuf_cache = get_as_pixbuf_for_size (bg, bg->filename, best_width, best_height);
+		bg->pixbuf_cache = get_as_pixbuf_for_size (bg, bg->filename, monitor,
+							   best_width, best_height);
 		time_until_next_change = G_MAXUINT;
 		if (!bg->pixbuf_cache) {
 			SlideShow *show = get_as_slideshow (bg, bg->filename);
@@ -2200,21 +2376,27 @@ get_pixbuf_for_size (MateBG *bg,
 				slide = get_current_slide (show, &alpha);
 				time_until_next_change = (guint)get_slide_timeout (slide);
 				if (slide->fixed) {
-					FileSize *size;
-					size = find_best_size (slide->file1, best_width, best_height);
-					bg->pixbuf_cache = get_as_pixbuf_for_size (bg, size->file, best_width, best_height);
-				}
-				else {
+					FileSize *size = find_best_size (slide->file1,
+									 best_width, best_height);
+					bg->pixbuf_cache =
+						get_as_pixbuf_for_size (bg, size->file, monitor,
+									best_width, best_height);
+				} else {
 					FileSize *size;
 					GdkPixbuf *p1, *p2;
-					size = find_best_size (slide->file1, best_width, best_height);
-					p1 = get_as_pixbuf_for_size (bg, size->file, best_width, best_height);
-					size = find_best_size (slide->file2, best_width, best_height);
-					p2 = get_as_pixbuf_for_size (bg, size->file, best_width, best_height);
 
-					if (p1 && p2) {
+					size = find_best_size (slide->file1,
+								best_width, best_height);
+					p1 = get_as_pixbuf_for_size (bg, size->file, monitor,
+								     best_width, best_height);
+
+					size = find_best_size (slide->file2,
+								best_width, best_height);
+					p2 = get_as_pixbuf_for_size (bg, size->file, monitor,
+								     best_width, best_height);
+
+					if (p1 && p2)
 						bg->pixbuf_cache = blend (p1, p2, alpha);
-					}
 					if (p1)
 						g_object_unref (p1);
 					if (p2)
@@ -3050,7 +3232,7 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 					      frame_num + skipped);
 
 		if (thumb) {
-			draw_image (bg->placement, thumb, result);
+			draw_image_for_thumb (bg, thumb, result);
 			g_object_unref (thumb);
 		}
 	}
