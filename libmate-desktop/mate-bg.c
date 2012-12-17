@@ -2096,9 +2096,13 @@ ensure_timeout (MateBG *bg,
 {
 	if (!bg->timeout_id) {
 		double timeout = get_slide_timeout (slide);
-		bg->timeout_id = g_timeout_add_full (
-			G_PRIORITY_LOW,
-			timeout * 1000, on_timeout, bg, NULL);
+
+		/* G_MAXUINT means "only one slide" */
+		if (timeout < G_MAXUINT) {
+			bg->timeout_id = g_timeout_add_full (
+				G_PRIORITY_LOW,
+				timeout * 1000, on_timeout, bg, NULL);
+		}
 
 	}
 }
@@ -3053,16 +3057,24 @@ read_slideshow_file (const char *filename,
 	g_markup_parse_context_free (context);
 
 	if (show) {
+		int len;
+
 		t = mktime (&show->start_tm);
 
 		show->start_time = (double)t;
 
 		dump_bg (show);
 
+		len = g_queue_get_length (show->slides);
+
 		/* no slides, that's not a slideshow */
-		if (g_queue_get_length (show->slides) == 0) {
+		if (len == 0) {
 			slideshow_unref (show);
 			show = NULL;
+		/* one slide, there's no transition */
+		} else if (len == 1) {
+			Slide *slide = show->slides->head->data;
+			slide->duration = G_MAXUINT;
 		}
 	}
 
