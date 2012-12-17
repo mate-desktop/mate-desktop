@@ -60,6 +60,8 @@ Authors: Soren Sandmann <sandmann@redhat.com>
 #define mate_bg_crossfade_set_end_surface	mate_bg_crossfade_set_end_pixmap
 #endif
 
+#define MATE_BG_CACHE_DIR "mate/background"
+
 /* We keep the large pixbufs around if the next update
    in the slideshow is less than 60 seconds away */
 #define KEEP_EXPENSIVE_CACHE_SECS 60
@@ -626,7 +628,7 @@ mate_bg_get_filename (MateBG *bg)
 static inline gchar *
 get_wallpaper_cache_dir ()
 {
-	return g_build_filename (g_get_user_cache_dir(), "wallpaper", NULL);
+	return g_build_filename (g_get_user_cache_dir(), MATE_BG_CACHE_DIR, NULL);
 }
 
 static inline gchar *
