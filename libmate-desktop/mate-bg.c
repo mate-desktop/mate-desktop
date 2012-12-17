@@ -882,12 +882,10 @@ draw_once (MateBG   *bg,
 	rect.width = gdk_pixbuf_get_width (dest);
 	rect.height = gdk_pixbuf_get_height (dest);
 
-	pixbuf = get_pixbuf_for_size (bg, gdk_pixbuf_get_width (dest), gdk_pixbuf_get_height (dest));
+	pixbuf = get_pixbuf_for_size (bg, rect.width, rect.height);
 	if (pixbuf) {
-		draw_image_area (bg->placement,
-				 pixbuf,
-				 dest,
-				 &rect);
+		draw_image_area (bg->placement, pixbuf, dest, &rect);
+
 		g_object_unref (pixbuf);
 	}
 }
@@ -897,19 +895,19 @@ draw_each_monitor (MateBG   *bg,
 		   GdkPixbuf *dest,
 		   GdkScreen *screen)
 {
-	GdkRectangle rect;
-	gint num_monitors;
-	int monitor;
+	gint num_monitors = gdk_screen_get_n_monitors (screen);
+	gint monitor = 0;
 
-	num_monitors = gdk_screen_get_n_monitors (screen);
-	for (monitor = 0; monitor < num_monitors; monitor++) {
+	for (; monitor < num_monitors; monitor++) {
+		GdkRectangle rect;
 		GdkPixbuf *pixbuf;
+
 		gdk_screen_get_monitor_geometry (screen, monitor, &rect);
+
 		pixbuf = get_pixbuf_for_size (bg, rect.width, rect.height);
 		if (pixbuf) {
-			draw_image_area (bg->placement,
-					 pixbuf,
-					 dest, &rect);
+			draw_image_area (bg->placement, pixbuf, dest, &rect);
+
 			g_object_unref (pixbuf);
 		}
 	}
@@ -1023,14 +1021,13 @@ mate_bg_create_pixmap  (MateBG      *bg,
 	g_return_val_if_fail (window != NULL, NULL);
 
 	if (bg->pixbuf_cache &&
-	    gdk_pixbuf_get_width (bg->pixbuf_cache) != width &&
-	    gdk_pixbuf_get_height (bg->pixbuf_cache) != height)
+	    (gdk_pixbuf_get_width (bg->pixbuf_cache) != width ||
+	     gdk_pixbuf_get_height (bg->pixbuf_cache) != height))
 	{
 		g_object_unref (bg->pixbuf_cache);
 		bg->pixbuf_cache = NULL;
 	}
 
-	/* has the side effect of loading and caching pixbuf only when in tile mode */
 	mate_bg_get_pixmap_size (bg, width, height, &pm_width, &pm_height);
 
 
@@ -1778,8 +1775,7 @@ get_as_pixbuf_for_size (MateBG    *bg,
 	const FileCacheEntry *ent;
 	if ((ent = file_cache_lookup (bg, PIXBUF, filename))) {
 		return g_object_ref (ent->u.pixbuf);
-	}
-	else {
+	} else {
 		GdkPixbufFormat *format;
 		GdkPixbuf *pixbuf;
 		gchar *tmp = NULL;
@@ -1788,18 +1784,20 @@ get_as_pixbuf_for_size (MateBG    *bg,
 		format = gdk_pixbuf_get_file_info (filename, NULL, NULL);
 		if (format != NULL) {
 			tmp = gdk_pixbuf_format_get_name (format);
-		} else {
-			tmp = NULL;
 		}
-		if (tmp != NULL &&
-		    g_strcmp0 (tmp, "svg") == 0 &&
+
+		if (g_strcmp0 (tmp, "svg") == 0 &&
 		    (best_width > 0 && best_height > 0) &&
 		    (bg->placement == MATE_BG_PLACEMENT_FILL_SCREEN ||
 		     bg->placement == MATE_BG_PLACEMENT_SCALED ||
 		     bg->placement == MATE_BG_PLACEMENT_ZOOMED))
-			pixbuf = gdk_pixbuf_new_from_file_at_size (filename, best_width, best_height, NULL);
-		else
+		{
+			pixbuf = gdk_pixbuf_new_from_file_at_size (filename,
+								   best_width, best_height, NULL);
+		} else {
 			pixbuf = gdk_pixbuf_new_from_file (filename, NULL);
+		}
+
 		if (tmp != NULL)
 			g_free (tmp);
 
