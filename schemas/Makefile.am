@@ -22,7 +22,11 @@ gsettings_SCHEMAS = \
 %.gschema.xml.in: %.gschema.xml.in.in Makefile
 	$(AM_V_GEN) $(SED) -e 's^\@datadir\@^$(datadir)^g' -e 's^\@GETTEXT_PACKAGE\@^$(GETTEXT_PACKAGE)^g' < $< > $@
 
+convertdir = $(datadir)/MateConf/gsettings
+convert_DATA = mate-desktop.convert
+
 EXTRA_DIST = \
+	$(convert_DATA) \
 	$(gsettings_SCHEMAS)
 
 CLEANFILES = \
