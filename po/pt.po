@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Carlos  <crolidge@gmail.com>, 2012.
 # Sérgio Marques <smarquespt@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
-"POT-Creation-Date: 2012-04-06 11:17+0200\n"
-"PO-Revision-Date: 2012-05-16 14:18+0000\n"
-"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
+"POT-Creation-Date: 2012-10-18 00:25+0200\n"
+"PO-Revision-Date: 2012-12-25 03:15+0000\n"
+"Last-Translator: Carlos <crolidge@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/projects/p/MATE/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -26,38 +27,44 @@ msgstr "Sobre o MATE"
 msgid "Learn more about MATE"
 msgstr "Saiba mais sobre o MATE"
 
-#: ../mate-about/mate-about.h:62
+#. Translators should localize the following string which will be
+#. * displayed in the about box to give credit to the translator(s).
+#: ../mate-about/mate-about.c:199
+msgid "translator-credits"
+msgstr "créditos de tradução"
+
+#: ../mate-about/mate-about.h:46
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "O MATE disponibiliza um ambiente de trabalho intuitivo e atrativo para os utilizadores do sistema Linux."
 
-#: ../mate-about/mate-about.h:65
+#: ../mate-about/mate-about.h:49
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "O MATE possui um gestor de ficheiros, um visualizador de documentos, um visualizador de imagens, menus e diversas aplicações."
 
-#: ../mate-about/mate-about.h:68
+#: ../mate-about/mate-about.h:52
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "O MATE é um ambiente de trabalho livre, estável e acessível para os sistemas do tipo Unix."
 
-#: ../mate-about/mate-about.h:71
+#: ../mate-about/mate-about.h:55
 msgid ""
 "MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
 " since it was started in 1997; many more have contributed in other important"
 " ways, including translations, documentation, and quality assurance."
 msgstr "O Mate é um clone do GNOME 2. O código foi desenvolvido por diversas pessoas, desde o seu inicio em 1997. Imensas pessoas ajudaram no desenvolvimento do projeto com as suas traduções, documentação, relatórios de erro e mais."
 
-#: ../mate-about/mate-about.h:75
+#: ../mate-about/mate-about.h:59
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "O GNOME 2 era o ambiente de trabalho mais utilizado no mundo Linux mas, infelizmente, já não existe. O MATE foi criado para recriar este ambiente de trabalho."
 
-#: ../mate-about/mate-about.h:78
+#: ../mate-about/mate-about.h:62
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -270,3 +277,772 @@ msgstr "o tamanho virtual pedido não cabe no tamanho permitido: pedido=(%d, %d)
 #: ../libmate-desktop/mate-rr-labeler.c:212
 msgid "Mirror Screens"
 msgstr "Ecrãs invertidos"
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:1
+msgid "minimum interval in milliseconds"
+msgstr "intervalo mínimo em milissegundos"
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:2
+msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
+msgstr "Ignorar pressões múltiplas ma _mesma_ tecla no espaço de @delay milissegundos."
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:3
+msgid "Pixels per seconds"
+msgstr "Pixeis por segundos"
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:4
+msgid "How many pixels per second to move at the maximum speed."
+msgstr "Quantos pixeis por segundo mover à velocidade máxima."
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:5
+msgid "How long to accelerate in milliseconds"
+msgstr "Durante quanto tempo acelerar, em milissegundos"
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:6
+msgid "How many milliseconds it takes to go from 0 to maximum speed."
+msgstr "Quantos milissegundos demora ir de 0 até à velocidade máxima."
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:7
+msgid "Initial delay in milliseconds"
+msgstr "Atraso inicial em milissegundos"
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:8
+msgid ""
+"How many milliseconds to wait before mouse movement keys start to operate."
+msgstr "Quantos milissegundos aguardar antes das teclas de movimento do rato começarem a responder."
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:9
+msgid "Minimum interval in milliseconds"
+msgstr "Intervalo mínimo em milissegundos"
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:10
+msgid ""
+"Do not accept a key as being pressed unless held for @delay milliseconds."
+msgstr "Não aceitar uma tecla como premida exceto se premida por mais de @delay milissegundos."
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:11
+msgid "Disable if two keys are pressed at the same time."
+msgstr "Desativar se forem premidas duas teclas ao mesmo tempo."
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:12
+msgid "Beep when a modifier is pressed."
+msgstr "Emitir beep quando é premido um modificador."
+
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:1
+msgid "Startup Assistive Technology Applications"
+msgstr "Iniciar Aplicações de Tecnologia Assistiva"
+
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:2
+msgid ""
+"List of assistive technology applications to start when logging into the "
+"MATE desktop."
+msgstr "Lista de aplicações de tecnologia assistiva a iniciar ao entrar numa sessão do ambiente de trabalho MATE."
+
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:1
+msgid "Preferred Mobility assistive technology application"
+msgstr "Aplicação preferida de tecnologia de assistência à Mobilidade"
+
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:2
+msgid ""
+"Preferred Mobility assistive technology application to be used for login, "
+"menu, or command line."
+msgstr "Aplicação preferida de tecnologia de assistência à Mobilidade a ser usada para iniciar sessão, menu ou linha de comando."
+
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:3
+msgid "Start preferred Mobility assistive technology application"
+msgstr "Iniciar a aplicação preferida de tecnologia de assistência à Mobilidade"
+
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:4
+msgid ""
+"MATE to start preferred Mobility assistive technology application during "
+"login."
+msgstr "MATE irá iniciar a aplicação preferida de tecnologia de assistência à Mobilidade ao entrar na sessão. "
+
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:1
+msgid "Preferred Visual assistive technology application"
+msgstr "Aplicação preferida de tecnologia de assistência Visual"
+
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:2
+msgid ""
+"Preferred Visual assistive technology application be used for login, menu, "
+"or command line."
+msgstr "Aplicação preferida de tecnologia de assistência Visual a ser usada para iniciar sessão, menu ou linha de comando."
+
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:3
+msgid "Start preferred Visual assistive technology application"
+msgstr "Iniciar a aplicação preferida de tecnologia de assistência Visual"
+
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:4
+msgid ""
+"MATE to start preferred Visual assistive technology application during "
+"login."
+msgstr "MATE irá iniciar a aplicação preferida de tecnologia de assistência Visual ao iniciar sessão. "
+
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:1
+msgid "Default browser"
+msgstr "Navegador padrão"
+
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:2
+msgid "Default browser for all URLs."
+msgstr "Navegador padrão para todos os URLs."
+
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:3
+msgid "Browser needs terminal"
+msgstr "Navegador necessita de consola"
+
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:4
+msgid "Whether the default browser needs a terminal to run."
+msgstr "Se o navegador padrão precisa de uma consola para ser executado."
+
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:5
+msgid "Browser understands remote"
+msgstr "Navegador compreende remoto"
+
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:6
+msgid "Whether the default browser understands netscape remote."
+msgstr "Se o navegador padrão compreende um netscape remoto."
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:1
+msgid "Default calendar"
+msgstr "Calendário padrão"
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:2
+msgid "Default calendar application"
+msgstr "Aplicação de calendário padrão"
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:3
+msgid "Calendar needs terminal"
+msgstr "O calendário precisa de uma consola"
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:4
+msgid "Whether the default calendar application needs a terminal to run"
+msgstr "Se a aplicação padrão de calendário precisa de uma consola para ser executada."
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:5
+msgid "Default tasks"
+msgstr "Tarefas padrão"
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:6
+msgid "Default tasks application"
+msgstr "Aplicação de tarefas padrão"
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:7
+msgid "Tasks needs terminal"
+msgstr "Tarefas necessitam de consola"
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:8
+msgid "Whether the default tasks application needs a terminal to run"
+msgstr "Se a aplicação padrão de tarefas precisa de uma consola para ser executada."
+
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:1
+msgid "Terminal application"
+msgstr "Aplicação de consola"
+
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:2
+msgid "Terminal program to use when starting applications that require one."
+msgstr "Programa de consola a ser usado ao iniciar aplicação que necessitam uma."
+
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:3
+msgid "Exec Arguments"
+msgstr "Argumentos Exec"
+
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:4
+msgid ""
+"Argument used to execute programs in the terminal defined by the 'exec' key."
+msgstr "Argumento usado para executar programas na consola definida pela tecla 'exec'."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:1
+msgid "Draw Desktop Background"
+msgstr "Desenhar Fundo do Ambiente de Trabalho"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:2
+msgid "Have MATE draw the desktop background."
+msgstr "Fazer com que o MATE desenho o fundo do ambiente de trabalho."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+msgid "Picture Options"
+msgstr "Opções de Imagem"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+msgid ""
+"Determines how the image set by wallpaper_filename is rendered. Possible "
+"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
+" \"spanned\"."
+msgstr "Determina como é processada a imagem definida em wallpaper_filename. Valores possíveis são \"papel de parede\", \"centrada\", \"escalada\", \"esticada\", \"ampliada\", \"estendida\"."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+msgid "Picture Filename"
+msgstr "Nome de Ficheiro da Imagem"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+msgid "File to use for the background image."
+msgstr "Ficheiro a ser usado na imagem de fundo."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+msgid "Picture Opacity"
+msgstr "Opacidade da Imagem"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+msgid "Opacity with which to draw the background picture."
+msgstr "Opacidade com a qual desenhar a imagem de fundo."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+msgid "Primary Color"
+msgstr "Cor Primária"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+msgid "Left or Top color when drawing gradients, or the solid color."
+msgstr "Cor da Esquerda ou do Topo ao desenhar gradientes, ou a cor sólida."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+msgid "Secondary Color"
+msgstr "Cor Secundária"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+msgid ""
+"Right or Bottom color when drawing gradients, not used for solid color."
+msgstr "Cor da Direita ou do Fundo ao desenhar gradientes, não utilizada na cor sólida."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+msgid "Color Shading Type"
+msgstr "Tipo de Sombreado de Cor"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+msgid ""
+"How to shade the background color. Possible values are \"horizontal-"
+"gradient\", \"vertical-gradient\", and \"solid\"."
+msgstr "Como sombrear a cor de fundo. Valores possíveis são \"horizontal-gradient\", \"vertical-gradient\", e \"solid\"."
+
+#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:1
+msgid "File Icon Theme"
+msgstr "Tema de Ícone de Ficheiro"
+
+#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:2
+msgid "Theme used for displaying file icons."
+msgstr "Tema usado para mostrar os ícones de ficheiros."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:1
+msgid "Enable Accessibility"
+msgstr "Ativar Acessibilidade"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:2
+msgid "Whether Applications should have accessibility support."
+msgstr "Se as aplicações devem ter ou não suporte à acessibilidade."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:3
+msgid "Enable Animations"
+msgstr "Ativar Animações"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:4
+msgid ""
+"Whether animations should be displayed. Note: This is a global key, it "
+"changes the behaviour of the window manager, the panel etc."
+msgstr "Se as animações devem ser mostradas ou não. Esta é uma chave global, e altera o comportamento do gestor de janelas, do painel, etc."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:5
+msgid "Menus Have Tearoff"
+msgstr "Menus São Destacáveis"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:6
+msgid "Whether menus should have a tearoff."
+msgstr "Se os menus podem ser destacados."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:7
+msgid "Can Change Accels"
+msgstr "Pode Alterar Aceleradores"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:8
+msgid ""
+"Whether the user can dynamically type a new accelerator when positioned over"
+" an active menuitem."
+msgstr "Se o utilizador pode digitar dinamicamente um novo acelerador quando posicionado sobre um item de menu ativo."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:9
+msgid "Toolbar Style"
+msgstr "Estilo da Barra de Ferramentas"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:10
+msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
+msgstr "Estilo da Barra de ferramentas. Os valores válidos são \"ambos\", \"ambos-horiz\", \"ícones\", e \"texto\"."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:11
+msgid "Menus Have Icons"
+msgstr "Menus Têm Ícones"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:12
+msgid "Whether menus may display an icon next to a menu entry."
+msgstr "Se os menus devem mostrar um ícone ao lado de cada entrada do menu."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:13
+msgid "Buttons Have Icons"
+msgstr "Botões Têm Ícones"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:14
+msgid "Whether buttons may display an icon in addition to the button text."
+msgstr "Se os botões devem mostrar um ícone além do texto do botão."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:15
+msgid "Menubar Detachable"
+msgstr "Barra de Menus Destacável"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:16
+msgid "Whether the user can detach menubars and move them around."
+msgstr "Se o utilizador pode destacar barras de menu e movê-las."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:17
+msgid "Toolbar Detachable"
+msgstr "Barra de Ferramentas Destacável"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:18
+msgid "Whether the user can detach toolbars and move them around."
+msgstr "Se o utilizador pode destacar barras de ferramentas e movê-las."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:19
+msgid "Toolbar Icon Size"
+msgstr "Tamanho dos Ícones da Barra de Ferramentas"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:20
+msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
+msgstr "Tamanho dos ícones nas barras de ferramentas, tanto em pequenas como em grande barras."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:21
+msgid "Cursor Blink"
+msgstr "Piscar do Cursor"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:22
+msgid "Whether the cursor should blink."
+msgstr "Se o cursor deve piscar."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:23
+msgid "Cursor Blink Time"
+msgstr "Intervalo de Piscar do Cursor"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:24
+msgid "Length of the cursor blink cycle, in milliseconds."
+msgstr "Duração do ciclo de piscar do cursor, em milissegundos."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:25
+msgid "Icon Theme"
+msgstr "Tema de Ícones"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:26
+msgid "Icon theme to use for the panel, caja etc."
+msgstr "Tema de ícones a usar no painel, caja, etc."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:27
+msgid "Gtk+ Theme"
+msgstr "Tema Gtk+"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:28
+msgid "Basename of the default theme used by gtk+."
+msgstr "Nome base do tema padrão usado por gtk+."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:29
+msgid "List of symbolic names and color equivalents"
+msgstr "Lista de nomes simbólicos e equivalentes de cor."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:30
+msgid ""
+"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"scheme' setting"
+msgstr "Uma lista de \"name:color\" separada por '\\n' tal como definido pela definição 'gtk-color-scheme'"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:31
+msgid "Default font"
+msgstr "Tipo de letra padrão"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:32
+msgid "Name of the default font used by gtk+."
+msgstr "Nome do tipo de letra padrão usado por gtk+."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:33
+msgid "GTK IM Preedit Style"
+msgstr "Estilo de Pré-edição IM de GTK"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:34
+msgid "Name of the GTK+ input method Preedit Style used by gtk+."
+msgstr "Nome do Estilo de Pré-edição do método de introdução GTK+ utilizado pelo gtk+."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:35
+msgid "GTK IM Status Style"
+msgstr "Estilo do Estado IM de GTK"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:36
+msgid "Name of the GTK+ input method Status Style used by gtk+."
+msgstr "Nome do Estilo de Estado do método de introdução GTK+ utilizado pelo gtk+."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:37
+msgid "GTK IM Module"
+msgstr "Módulo IM de GTK"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:38
+msgid "Name of the input method module used by GTK+."
+msgstr "Nome do módulo do método de entrada usado pelo GTK+."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
+msgid "Document font"
+msgstr "Tipo de letra do documento"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
+msgid "Name of the default font used for reading documents."
+msgstr "Nome do tipo de letra padrão usado para ler documentos."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
+msgid "Monospace font"
+msgstr "Tipo de letra monoespaçada"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
+msgid ""
+"Name of a monospaced (fixed-width) font for use in locations like terminals."
+msgstr "Nome de um tipo de letra monoespaçada (largura fixa) a utilizar em locais tais como consolas."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
+msgid "Use Custom Font"
+msgstr "Usar Tipo de letra Personlizado"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
+msgid "Whether to use a custom font in gtk+ applications."
+msgstr "Se se deve usar um tipo de letra personalizado nas aplicações gtk+."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
+msgid "Status Bar on Right"
+msgstr "Barra de Estado na Direita"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:46
+msgid "Whether to display a status bar meter on the right."
+msgstr "Se se deve mostrar um medidor na barra de estado à direita."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:47
+msgid "Module for GtkFileChooser"
+msgstr "Módulo de GtkFileChooser"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:48
+msgid ""
+"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Possible values are \"gio\" and \"gtk+\"."
+msgstr "Módulo a usar como modelo do sistema de ficheiros para o widget GtkFileChooser. Os valores possíveis são \"gio\" e \"gtk+\"."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:49
+msgid "Menubar accelerator"
+msgstr "Acelerador da barra de menus"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:50
+msgid "Keyboard shortcut to open the menu bars."
+msgstr "Atalho de teclado para abrir as barras de menu."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:51
+msgid "Show the 'Input Methods' menu"
+msgstr "Mostrar o menu \"Métodos de Entrada\""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:52
+msgid ""
+"Whether the context menus of entries and text views should offer to change "
+"the input method."
+msgstr "Se os menus de contexto de entradas e vistas de texto devem oferecer a mudança do método de entrada."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:53
+msgid "Show the 'Unicode Control Character' menu"
+msgstr "Mostrar o menu \"Carácter de Controlo Unicode\""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:54
+msgid ""
+"Whether the context menus of entries and text views should offer to insert "
+"control characters."
+msgstr "Se os menus de contexto de entradas e vistas de texto devem oferecer a inserção de caracteres de controlo."
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
+msgid "Disable command line"
+msgstr "Desativar linha de comando"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:2
+msgid ""
+"Prevent the user from accessing the terminal or specifying a command line to"
+" be executed. For example, this would disable access to the panel's \"Run "
+"Application\" dialog."
+msgstr "Impedir o utilizador de aceder à consola ou especificar uma linha de comando para execução. Por exemplo, isto desativaria o acesso ao diálogo \"Executar Aplicação\" no painel."
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:3
+msgid "Disable saving files to disk"
+msgstr "Desativar guardar ficheiros no disco"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:4
+msgid ""
+"Prevent the user from saving files to disk. For example, this would disable "
+"access to all applications' \"Save as\" dialogs."
+msgstr "Impedir o utilizador de gravar ficheiros no disco. Por exemplo, isto desativaria o acesso aos diálogos \"Guardar como\" em todas as aplicações."
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:5
+msgid "Disable printing"
+msgstr "Desativar impressão"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:6
+msgid ""
+"Prevent the user from printing. For example, this would disable access to "
+"all applications' \"Print\" dialogs."
+msgstr "Impedir o utilizador de imprimir. Por exemplo, isto desativaria o acesso aos diálogos \"Imprimir\" em todas as aplicações."
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:7
+msgid "Disable print setup"
+msgstr "Desativar configuração de impressão"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:8
+msgid ""
+"Prevent the user from modifying print settings. For example, this would "
+"disable access to all applications' \"Print Setup\" dialogs."
+msgstr "Impedir o utilizador de modificar as definições de impressão. Por exemplo, isto iria desativar o acesso aos diálogos de configuração de impressão em todas as aplicações ."
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:9
+msgid "Disable user switching"
+msgstr "Desativar troca de utilizadores"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:10
+msgid ""
+"Prevent the user from switching to another account while his session is "
+"active."
+msgstr "Impedir o utilizador de alternar para outra conta cuja sessão esteja ativa."
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:11
+msgid "Disable lock screen"
+msgstr "Desativar o trancar ecrã"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:12
+msgid "Prevent the user to lock his screen."
+msgstr "Impedir o utilizador de trancar o seu ecrã."
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:13
+msgid "Disable URL and MIME type handlers"
+msgstr "Desativar manipuladores de URLs e tipos MIME"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:14
+msgid "Prevent running any URL or MIME type handler applications."
+msgstr "Impedir a execução de aplicações de manipulação de URLs ou tipos MIME."
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
+msgid "possible values are \"on\", \"off\", and \"custom\"."
+msgstr "os valores possíveis são \"on\", \"off\", e \"custom\"."
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:2
+msgid "Keyboard Bell Custom Filename"
+msgstr "Nome de Ficheiro de Campainha de Teclado Personalizada"
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:3
+msgid "File name of the bell sound to be played."
+msgstr "Nome do ficheiro do som de campainha a ser reproduzido."
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:4
+msgid "Remember NumLock state"
+msgstr "Recordar o estado de NumLock"
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:5
+msgid ""
+"When set to true, MATE will remember the state of the NumLock LED between "
+"sessions."
+msgstr "Quando definido como verdadeiro, o MATE irá recordar o estado do LED NumLock entre sessões."
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:6
+msgid "NumLock state"
+msgstr "Estado de NumLock"
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:7
+msgid "The remembered state of the NumLock LED."
+msgstr "O estado recordado do LED NumLock."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:1
+msgid "Mouse button orientation"
+msgstr "Orientação do botão do rato"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:2
+msgid "Swap left and right mouse buttons for left-handed mice."
+msgstr "Trocar botões esquerdo e direito do rato em ratos para esquerdinos."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:3
+msgid "Single Click"
+msgstr "Clique Único"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:4
+msgid "Single click to open icons."
+msgstr "Clique único para abrir ícones."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:5
+msgid ""
+"Acceleration multiplier for mouse motion. A value of -1 is the system "
+"default."
+msgstr "Multiplicador de aceleração do movimento do rato. Um valor de -1 é o padrão do sistema."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:6
+msgid "Motion Threshold"
+msgstr "Tolerância de Movimento"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:7
+msgid ""
+"Distance in pixels the pointer must move before accelerated mouse motion is "
+"activated. A value of -1 is the system default."
+msgstr "Distância em pixeis que o ponteiro deve se mover antes de ser ativado o movimento acelerado do rato. Um valor de -1 representa o padrão do sistema."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:8
+msgid "Drag Threshold"
+msgstr "Tolerância de Arrasto"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:9
+msgid "Distance before a drag is started."
+msgstr "Distância antes de se iniciar um arrasto."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:10
+msgid "Double Click Time"
+msgstr "Tempo do Clique Duplo"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:11
+msgid "Length of a double click."
+msgstr "Duração de um clique duplo."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+msgid "Locate Pointer"
+msgstr "Localizar Ponteiro"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+msgid ""
+"Highlights the current location of the pointer when the Control key is "
+"pressed and released."
+msgstr "Realça a localização atual do ponteiro quando a tecla de Control é premida e largada."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+msgid "Cursor font"
+msgstr "Tipo de letra do cursor"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+msgid ""
+"Font name of the cursor. If unset, the default font is used. This value is "
+"only propagated to the X server start of each session, so changing it mid-"
+"session won't have an effect until the next time you log in."
+msgstr "Nome do tipo de letra do cursor. Se indefinido, é utilizada o tipo por defeito. Este valor é apenas propagado servidor ao X ao iniciar cada sessão, pelo que alterá-lo a meio de uma sessão não terá qualquer efeito até à próxima vez que iniciar uma sessão."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+msgid "Cursor theme"
+msgstr "Tema do cursor"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+msgid ""
+"Cursor theme name. Used only by Xservers that support Xcursor, such as "
+"XFree86 4.3 and later."
+msgstr "Nome do tema de cursor. Utilizado apenas por Xservers que suportem Xcursor, tais como o XFree86 4.3 e posteriores."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+msgid "Cursor size"
+msgstr "Tamanho do cursor"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+msgid "Size of the cursor referenced by cursor_theme."
+msgstr "Tamanho do cursor referenciado por cursor_theme."
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:1
+msgid "Default mixer device"
+msgstr "Dispositivo padrão de mistura"
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:2
+msgid "The default mixer device used by the multimedia key bindings."
+msgstr "O dispositivo de mistura padrão usado atalhos de teclado multimédia."
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:3
+msgid "Default mixer tracks"
+msgstr "Faixas de mistura padrão"
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:4
+msgid "The default mixer tracks used by the multimedia key bindings."
+msgstr "As faixas de mistura padrão usadas pelos atalhos de teclado multimédia."
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:5
+msgid "Enable ESD"
+msgstr "Ativar ESD"
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:6
+msgid "Enable sound server startup."
+msgstr "Ativar início do servidor de som."
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:7
+msgid "Sounds for events"
+msgstr "Sons de eventos"
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:8
+msgid "Whether to play sounds on user events."
+msgstr "Se deve ou não reproduzir sons em eventos de utilizador."
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:9
+msgid "Sound theme name"
+msgstr "Nome do tema de som"
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:10
+msgid "The XDG sound theme to use for event sounds."
+msgstr "O tema de sons XDG a usar em sons de eventos."
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:11
+msgid "Input feedback sounds"
+msgstr "Sons de resposta à introdução"
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:12
+msgid "Whether to play sounds on input events."
+msgstr "Se deve ou não reproduzir sons em eventos de entrada."
+
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:1
+msgid ""
+"Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
+"cleaning."
+msgstr "Idade máxima para as miniaturas na cache, em dias. Defina como -1 para desativar a limpeza."
+
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:2
+msgid ""
+"Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
+"cleaning."
+msgstr "Tamanho máximo da cache de miniaturas, em megabytes. Defina como -1 para desativar a limpeza. "
+
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:1
+msgid "Disable all external thumbnailers"
+msgstr "Desativar todos os geradores de miniaturas externos"
+
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:2
+msgid ""
+"Set to true to disable all external thumbnailer programs, independent on "
+"whether they are independently disabled/enabled."
+msgstr "Definir como verdadeiro para desativar todas os programas externos de criação de miniaturas, independentemente de serem ou não ativadas/desativadas independentemente. "
+
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:3
+msgid ""
+"List of mime-types for which external thumbnailer programs will be disabled"
+msgstr "Lista de tipos MIME nos quais os programas externos de criação de miniaturas serão desativados"
+
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:4
+msgid ""
+"Thumbnails will not be created for files whose mime-type is contained in the"
+" list."
+msgstr "Não serão criadas miniaturas de ficheiros cujo tipo MIME está na lista."
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:1
+msgid "Type time"
+msgstr "Tempo a digitar"
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:2
+msgid "Number of minutes of typing time before break mode starts."
+msgstr "Número de minutos a digitar antes de iniciar modo de intervalo."
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:3
+msgid "Break time"
+msgstr "Intervalo"
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:4
+msgid "Number of minutes that the typing break should last."
+msgstr "Número de minutos que o intervalo deve durar."
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:5
+msgid "Allow postponing of breaks"
+msgstr "Permitir adiar intervalos"
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:6
+msgid "Whether or not the typing break screen can be postponed."
+msgstr "Se o ecrã de intervalo pode ou não ser adiado."
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:7
+msgid "Whether or not keyboard locking is enabled"
+msgstr "Se está ou não ativo o trancar do teclado"
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
+msgid "Whether or not keyboard locking is enabled."
+msgstr "Se está ou não ativo o trancar do teclado."

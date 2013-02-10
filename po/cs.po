@@ -1,33 +1,27 @@
-# Czech message catalog for mate-desktop.
-# Copyright (C) 1999, 2006, 2007, 2008, 2009, 2010 the author(s) of mate-desktop.
-# Copyright (C) 2004, 2005 Miloslav Trmac <mitr@volny.cz>.
-# This file is distributed under the same license as the mate-desktop package.
-# GIS <gis@academy.cas.cz>, 1999.
-# David Šauer <davids@penguin.cz>, 1999.
-# George Lebl <jirka@5z.com>, 2000, 2001.
-# Stanislav Brabec <utx@penguin.cz>, 2000, 2001.
-# Michal Bukovjan <bukm@centrum.cz>, 2002.
-# Miloslav Trmac <mitr@volny.cz>, 2004, 2005.
-# Jakub Friedl <jfriedl@suse.cz>, 2006, 2007.
-# Petr Tomeš <ptomes@gmail.com>, 2006.
-# Petr Kovar <pknbe@volny.cz>, 2007, 2008, 2009, 2010.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Michal Procházka <>, 2012.
+# Michal Procházka <mich.procha@seznam.cz>, 2012.
+# Ondřej Kolín <ondrej.kolin@gmail.com>, 2012.
+#   <scibex@gmail.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-23 00:29+0200\n"
-"PO-Revision-Date: 2010-09-23 00:29+0200\n"
-"Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
-"Language-Team: Czech <mate-cs-list@gnome.org>\n"
-"Language: cs\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2012-10-18 00:25+0200\n"
+"PO-Revision-Date: 2012-12-12 08:32+0000\n"
+"Last-Translator: Michal Procházka <mich.procha@seznam.cz>\n"
+"Language-Team: Czech (http://www.transifex.com/projects/p/MATE/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 1.0\n"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
-#: ../mate-about/mate-about.in:60
 msgid "About MATE"
 msgstr "O MATE"
 
@@ -35,136 +29,54 @@ msgstr "O MATE"
 msgid "Learn more about MATE"
 msgstr "Poznejte lépe MATE"
 
-#: ../mate-about/mate-about.in:61
-msgid "News"
-msgstr "Novinky"
-
-#: ../mate-about/mate-about.in:62
-msgid "MATE Library"
-msgstr "Knihovna MATE"
-
-#: ../mate-about/mate-about.in:63
-msgid "Friends of MATE"
-msgstr "Přátelé MATE"
-
-#: ../mate-about/mate-about.in:64
-msgid "Contact"
-msgstr "Kontakt"
-
-#: ../mate-about/mate-about.in:68
-msgid "The Mysterious GEGL"
-msgstr "Tajemná koza"
-
-#: ../mate-about/mate-about.in:69
-msgid "The Squeaky Rubber MATE"
-msgstr "Pískající gumový trpaslík"
-
-#: ../mate-about/mate-about.in:70
-msgid "Wanda The MATE Fish"
-msgstr "Wanda, ryba MATE"
-
-#: ../mate-about/mate-about.in:567
-msgid "_Open URL"
-msgstr "_Otevřít URL"
-
-#: ../mate-about/mate-about.in:574
-msgid "_Copy URL"
-msgstr "_Kopírovat URL"
-
-#: ../mate-about/mate-about.in:826
-msgid "About the MATE Desktop"
-msgstr "O pracovním prostředí MATE"
-
-#: ../mate-about/mate-about.in:859
-msgid "%(name)s: %(value)s"
-msgstr "%(name)s: %(value)s"
-
-#: ../mate-about/mate-about.in:873
-msgid "Welcome to the MATE Desktop"
-msgstr "Vítejte v pracovním prostředí MATE"
-
-#: ../mate-about/mate-about.in:890
-msgid "Brought to you by:"
-msgstr "Pro vás od:"
-
-#: ../mate-about/mate-about.in:914
-msgid "<b>%(name)s:</b> %(value)s"
-msgstr "<b>%(name)s:</b> %(value)s"
-
-#: ../mate-about/mate-about.in:975
-msgid "Version"
-msgstr "Verze"
-
-#: ../mate-about/mate-about.in:977
-msgid "Distributor"
-msgstr "Distributor"
-
-#: ../mate-about/mate-about.in:979
-msgid "Build Date"
-msgstr "Datum překladu"
-
-#: ../mate-about/mate-about.in:1024
-msgid "Display information on this MATE version"
-msgstr "Zobrazí informace o této verzi MATE"
-
-#: ../mate-version.xml.in.in.h:1
-msgid ""
-"MATE also includes a complete development platform for applications "
-"programmers, allowing the creation of powerful and complex applications."
+#. Translators should localize the following string which will be
+#. * displayed in the about box to give credit to the translator(s).
+#: ../mate-about/mate-about.c:199
+msgid "translator-credits"
 msgstr ""
-"MATE také poskytuje úplnou vývojovou platformu pro programátory aplikací, "
-"umožňující tvorbu mocných a komplexních aplikací."
 
-#: ../mate-version.xml.in.in.h:2
+#: ../mate-about/mate-about.h:46
+msgid ""
+"MATE provides an intuitive and attractive desktop to Linux users using "
+"traditional metaphors."
+msgstr "MATE poskytuje intuitivní a atraktivní prostředí pro uživatele Linuxu za použití tradičních postupů"
+
+#: ../mate-about/mate-about.h:49
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
-"manager, web browser, menus, and many applications."
-msgstr ""
-"MATE zahrnuje většinu z toho, co ve svém počítači vidíte, včetně správce "
-"souborů, webového prohlížeče, nabídek a mnoha aplikací."
+"manager, document viewer, image viewer, menus, and many applications."
+msgstr "MATE zahrnuje většinu toho, co vidíte na svém počítači, včetně správce souborů, prohlížeče dokumentů, prohlížeče obrázků, různá menu a mnoho aplikací"
 
-#. NOTE TO AUTHORS: Do not put anything in the following paragraphs that
-#. will be substituted by the configure script. Otherwise you will break
-#. the translations.
-#: ../mate-version.xml.in.in.h:6
+#: ../mate-about/mate-about.h:52
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
-msgstr ""
-"MATE je svobodné, snadno použitelné, stabilní a přístupné pracovní "
-"prostředí, určené pro rodinu operačních systémů podobných Unixu."
+msgstr "MATE je svobodné, použitelné, stabilní a přístupné prostředí pro rodinu Unixových operačních systémů."
 
-#: ../mate-version.xml.in.in.h:7
+#: ../mate-about/mate-about.h:55
 msgid ""
-"MATE's focus on usability and accessibility, regular release cycle, and "
-"strong corporate backing make it unique among Free Software desktops."
-msgstr ""
-"Zaměření MATE na snadnou použitelnost a přístupnost, pravidelný vývojový "
-"cyklus a silná podpora velkými společnostmi jsou jedinečné mezi svobodnými "
-"softwarovými pracovními prostředími."
+"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
+" since it was started in 1997; many more have contributed in other important"
+" ways, including translations, documentation, and quality assurance."
+msgstr "MATE je větev GNOME 2. Stovky lidí přispěli kódy ke GNOME od jeho začátků v roce 1997; mnohem více přispělo v ostatních oblastech, zahrnujíce překlady, dokumentace, a zárukách kvality."
 
-#: ../mate-version.xml.in.in.h:8
+#: ../mate-about/mate-about.h:59
 msgid ""
-"MATE's greatest strength is our strong community. Virtually anyone, with or "
-"without coding skills, can contribute to making MATE better."
-msgstr ""
-"Největší silou MATE je jeho silná komunita. Téměř kdokoliv, ať už s nebo "
-"bez znalosti programování, se může podílet na vylepšování MATE."
+"GNOME 2 was the most popular Linux desktop but it’s no longer available... "
+"MATE is here to provide that same desktop to you!"
+msgstr "GNOME 2 bylo nejpopulárnější Linuxové prostředí, ale není již více k dispozici... MATE je tu proto, aby vám nabídl to samé."
 
-#: ../mate-version.xml.in.in.h:9
+#: ../mate-about/mate-about.h:62
 msgid ""
-"Hundreds of people have contributed code to MATE since it was started in "
-"1997; many more have contributed in other important ways, including "
-"translations, documentation, and quality assurance."
-msgstr ""
-"Od počátků MATE v roce 1997 k němu přispěly kódem stovky lidí; mnoho "
-"dalších přispělo jinými důležitými způsoby, včetně překladů, dokumentace a "
-"kontroly kvality."
+"The name “MATE” comes from yerba maté, a species of holly native to "
+"subtropical South America. Its leaves contain caffeine and are used to make "
+"infusions and a beverage called mate."
+msgstr "Jméno \"MATE\" pochází z yerba maté, druhu cesmíny ze subtropické jižní Ameriky. Její lístky obsahují coffein a jsou používány k přípravě infúzí a nápoje zvaného \"Maté\""
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: ../libmate-desktop/display-name.c:265
+#: ../libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Neznámý"
@@ -185,7 +97,7 @@ msgstr "Chyba při přetáčení souboru \"%s\": %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3528
+#: ../libmate-desktop/mate-desktop-item.c:3523
 msgid "No name"
 msgstr "Žádný název"
 
@@ -229,7 +141,7 @@ msgstr "Žádný příkaz (Exec) ke spuštění"
 msgid "Bad command (Exec) to launch"
 msgstr "Chybný příkaz (Exec) ke spuštění"
 
-#: ../libmate-desktop/mate-desktop-item.c:3585
+#: ../libmate-desktop/mate-desktop-item.c:3580
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Neznámé kódování: %s"
@@ -270,11 +182,9 @@ msgstr "nelze získat informace o výstupu %d"
 #: ../libmate-desktop/mate-rr.c:1479
 #, c-format
 msgid ""
-"requested position/size for CRTC %d is outside the allowed limit: position="
-"(%d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr ""
-"požadovaná poloha/velikost CRTC %d je mimo povolený limit: poloha=(%d, %d), "
-"velikost=(%d, %d), maximum=(%d, %d)"
+"requested position/size for CRTC %d is outside the allowed limit: "
+"position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
+msgstr "požadovaná poloha/velikost CRTC %d je mimo povolený limit: poloha=(%d, %d), velikost=(%d, %d), maximum=(%d, %d)"
 
 #: ../libmate-desktop/mate-rr.c:1515
 #, c-format
@@ -318,11 +228,7 @@ msgid ""
 "existing mode = %d, new mode = %d\n"
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
-msgstr ""
-"výstup %s nemá parametry stejné jako další klonovaný výstup:\n"
-"existující režim = %d, nový režim = %d\n"
-"existující souřadnice = (%d, %d), nové souřadnice = (%d, %d)\n"
-"existující otočení = %s, nové otočení = %s"
+msgstr "výstup %s nemá parametry stejné jako další klonovaný výstup:\nexistující režim = %d, nový režim = %d\nexistující souřadnice = (%d, %d), nové souřadnice = (%d, %d)\nexistující otočení = %s, nové otočení = %s"
 
 #: ../libmate-desktop/mate-rr-config.c:1470
 #, c-format
@@ -337,26 +243,21 @@ msgstr "Zkouší se režimy CRTC %d\n"
 #: ../libmate-desktop/mate-rr-config.c:1663
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
-msgstr ""
-"CRTC %d: zkouší se režim %dx%d@%dHz s výstupem na %dx%d@%dHz (průchod %d)\n"
+msgstr "CRTC %d: zkouší se režim %dx%d@%dHz s výstupem na %dx%d@%dHz (průchod %d)\n"
 
 #: ../libmate-desktop/mate-rr-config.c:1710
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
-msgstr ""
-"k výstupům nelze přiřadit CRTC:\n"
-"%s"
+msgstr "k výstupům nelze přiřadit CRTC:\n%s"
 
 #: ../libmate-desktop/mate-rr-config.c:1714
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
 "%s"
-msgstr ""
-"žádný z vybraných režimů nebyl kompatibilní s možnými režimy:\n"
-"%s"
+msgstr "žádný z vybraných režimů nebyl kompatibilní s možnými režimy:\n%s"
 
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
@@ -366,19 +267,784 @@ msgstr ""
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
-msgstr ""
-"požadovaná virtuální velikost přesahuje dostupnou velikost: požadováno=(%d, "
-"%d), minimum=(%d, %d), maximum=(%d, %d)"
+msgstr "požadovaná virtuální velikost přesahuje dostupnou velikost: požadováno=(%d, %d), minimum=(%d, %d), maximum=(%d, %d)"
 
-#. Keep this string in sync with mate-control-center/capplets/display/xrandr-capplet.c:get_display_name()
+#. Keep this string in sync with mate-control-center/capplets/display/xrandr-
+#. capplet.c:get_display_name()
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#.
+#. 
 #: ../libmate-desktop/mate-rr-labeler.c:212
 msgid "Mirror Screens"
 msgstr "Zrcadlící obrazovky"
 
-#~ msgid "could not find a suitable configuration of screens"
-#~ msgstr "nelze získat vyhovující konfiguraci obrazovek"
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:1
+msgid "minimum interval in milliseconds"
+msgstr "minimální interval v milisekundách"
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:2
+msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
+msgstr ""
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:3
+msgid "Pixels per seconds"
+msgstr "Pixelů za sekundu"
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:4
+msgid "How many pixels per second to move at the maximum speed."
+msgstr ""
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:5
+msgid "How long to accelerate in milliseconds"
+msgstr ""
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:6
+msgid "How many milliseconds it takes to go from 0 to maximum speed."
+msgstr ""
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:7
+msgid "Initial delay in milliseconds"
+msgstr "Počáteční zpoždění v milisekundách"
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:8
+msgid ""
+"How many milliseconds to wait before mouse movement keys start to operate."
+msgstr ""
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:9
+msgid "Minimum interval in milliseconds"
+msgstr "Minimální interval v milisekundách"
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:10
+msgid ""
+"Do not accept a key as being pressed unless held for @delay milliseconds."
+msgstr ""
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:11
+msgid "Disable if two keys are pressed at the same time."
+msgstr "Zakázat, jsou-li zároveň stisknuty dvě klávesy."
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:12
+msgid "Beep when a modifier is pressed."
+msgstr "Pípnout, je-li stisknut modifikátor."
+
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:1
+msgid "Startup Assistive Technology Applications"
+msgstr ""
+
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:2
+msgid ""
+"List of assistive technology applications to start when logging into the "
+"MATE desktop."
+msgstr ""
+
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:1
+msgid "Preferred Mobility assistive technology application"
+msgstr ""
+
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:2
+msgid ""
+"Preferred Mobility assistive technology application to be used for login, "
+"menu, or command line."
+msgstr ""
+
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:3
+msgid "Start preferred Mobility assistive technology application"
+msgstr ""
+
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:4
+msgid ""
+"MATE to start preferred Mobility assistive technology application during "
+"login."
+msgstr ""
+
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:1
+msgid "Preferred Visual assistive technology application"
+msgstr "Preferovaná aplikace technologie usnadnění v oblasti zobrazování"
+
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:2
+msgid ""
+"Preferred Visual assistive technology application be used for login, menu, "
+"or command line."
+msgstr ""
+
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:3
+msgid "Start preferred Visual assistive technology application"
+msgstr "Spustit preferovanou aplikaci technologie usnadnění v oblasti zobrazování"
+
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:4
+msgid ""
+"MATE to start preferred Visual assistive technology application during "
+"login."
+msgstr "MATE spustí preferovanou aplikaci technologie usnadnění v oblasti zobrazování během přihlášení."
+
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:1
+msgid "Default browser"
+msgstr "Výchozí "
+
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:2
+msgid "Default browser for all URLs."
+msgstr "Výchozí prohlížeč pro všechna URL."
+
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:3
+msgid "Browser needs terminal"
+msgstr "Prohlížeč potřebuje terminál"
+
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:4
+msgid "Whether the default browser needs a terminal to run."
+msgstr ""
+
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:5
+msgid "Browser understands remote"
+msgstr ""
+
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:6
+msgid "Whether the default browser understands netscape remote."
+msgstr ""
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:1
+msgid "Default calendar"
+msgstr "Výchozí kalendář"
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:2
+msgid "Default calendar application"
+msgstr "Výchozí aplikace kalendáře"
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:3
+msgid "Calendar needs terminal"
+msgstr "Kalendář potřebuje terminál"
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:4
+msgid "Whether the default calendar application needs a terminal to run"
+msgstr ""
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:5
+msgid "Default tasks"
+msgstr "Výchozí úlohy"
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:6
+msgid "Default tasks application"
+msgstr "Výchozí aplikace úloh"
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:7
+msgid "Tasks needs terminal"
+msgstr "Úlohy potřebují terminál"
+
+#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:8
+msgid "Whether the default tasks application needs a terminal to run"
+msgstr ""
+
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:1
+msgid "Terminal application"
+msgstr "Aplikace terminálu"
+
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:2
+msgid "Terminal program to use when starting applications that require one."
+msgstr ""
+
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:3
+msgid "Exec Arguments"
+msgstr ""
+
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:4
+msgid ""
+"Argument used to execute programs in the terminal defined by the 'exec' key."
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:1
+msgid "Draw Desktop Background"
+msgstr "Nakreslit pozadí pracovní plochy"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:2
+msgid "Have MATE draw the desktop background."
+msgstr "Nechat MATE kreslit pozadí pracovní plochy."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+msgid "Picture Options"
+msgstr "Vlastnosti obrázku"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+msgid ""
+"Determines how the image set by wallpaper_filename is rendered. Possible "
+"values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
+" \"spanned\"."
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+msgid "Picture Filename"
+msgstr "Jméno souboru obrázku"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+msgid "File to use for the background image."
+msgstr "Soubor, který chcete použít pro obrázek na pozadí."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+msgid "Picture Opacity"
+msgstr "Průhlednost obrázku"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+msgid "Opacity with which to draw the background picture."
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+msgid "Primary Color"
+msgstr "Primární barva"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+msgid "Left or Top color when drawing gradients, or the solid color."
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+msgid "Secondary Color"
+msgstr "Sekundární barva"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+msgid ""
+"Right or Bottom color when drawing gradients, not used for solid color."
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+msgid "Color Shading Type"
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+msgid ""
+"How to shade the background color. Possible values are \"horizontal-"
+"gradient\", \"vertical-gradient\", and \"solid\"."
+msgstr ""
+
+#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:1
+msgid "File Icon Theme"
+msgstr "Motiv ikon souborů"
+
+#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:2
+msgid "Theme used for displaying file icons."
+msgstr "Motiv používaný k zobrazování ikon souborů."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:1
+msgid "Enable Accessibility"
+msgstr "Povolit zpřístupnění"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:2
+msgid "Whether Applications should have accessibility support."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:3
+msgid "Enable Animations"
+msgstr "Povolit animace"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:4
+msgid ""
+"Whether animations should be displayed. Note: This is a global key, it "
+"changes the behaviour of the window manager, the panel etc."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:5
+msgid "Menus Have Tearoff"
+msgstr "Nabídky mají úchyt"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:6
+msgid "Whether menus should have a tearoff."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:7
+msgid "Can Change Accels"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:8
+msgid ""
+"Whether the user can dynamically type a new accelerator when positioned over"
+" an active menuitem."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:9
+msgid "Toolbar Style"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:10
+msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:11
+msgid "Menus Have Icons"
+msgstr "Nabídky mají ikony"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:12
+msgid "Whether menus may display an icon next to a menu entry."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:13
+msgid "Buttons Have Icons"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:14
+msgid "Whether buttons may display an icon in addition to the button text."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:15
+msgid "Menubar Detachable"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:16
+msgid "Whether the user can detach menubars and move them around."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:17
+msgid "Toolbar Detachable"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:18
+msgid "Whether the user can detach toolbars and move them around."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:19
+msgid "Toolbar Icon Size"
+msgstr "Velikost ikon lišty nástrojů"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:20
+msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:21
+msgid "Cursor Blink"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:22
+msgid "Whether the cursor should blink."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:23
+msgid "Cursor Blink Time"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:24
+msgid "Length of the cursor blink cycle, in milliseconds."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:25
+msgid "Icon Theme"
+msgstr "Motiv ikon"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:26
+msgid "Icon theme to use for the panel, caja etc."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:27
+msgid "Gtk+ Theme"
+msgstr "Motiv Gtk+"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:28
+msgid "Basename of the default theme used by gtk+."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:29
+msgid "List of symbolic names and color equivalents"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:30
+msgid ""
+"A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
+"scheme' setting"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:31
+msgid "Default font"
+msgstr "Výchozí font"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:32
+msgid "Name of the default font used by gtk+."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:33
+msgid "GTK IM Preedit Style"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:34
+msgid "Name of the GTK+ input method Preedit Style used by gtk+."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:35
+msgid "GTK IM Status Style"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:36
+msgid "Name of the GTK+ input method Status Style used by gtk+."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:37
+msgid "GTK IM Module"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:38
+msgid "Name of the input method module used by GTK+."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
+msgid "Document font"
+msgstr "Písmo dokumentu"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
+msgid "Name of the default font used for reading documents."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
+msgid "Monospace font"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
+msgid ""
+"Name of a monospaced (fixed-width) font for use in locations like terminals."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
+msgid "Use Custom Font"
+msgstr "Použít vlastní písmo"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
+msgid "Whether to use a custom font in gtk+ applications."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
+msgid "Status Bar on Right"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:46
+msgid "Whether to display a status bar meter on the right."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:47
+msgid "Module for GtkFileChooser"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:48
+msgid ""
+"Module to use as the filesystem model for the GtkFileChooser widget. "
+"Possible values are \"gio\" and \"gtk+\"."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:49
+msgid "Menubar accelerator"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:50
+msgid "Keyboard shortcut to open the menu bars."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:51
+msgid "Show the 'Input Methods' menu"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:52
+msgid ""
+"Whether the context menus of entries and text views should offer to change "
+"the input method."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:53
+msgid "Show the 'Unicode Control Character' menu"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:54
+msgid ""
+"Whether the context menus of entries and text views should offer to insert "
+"control characters."
+msgstr ""
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
+msgid "Disable command line"
+msgstr "Zakázat příkazový řádek"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:2
+msgid ""
+"Prevent the user from accessing the terminal or specifying a command line to"
+" be executed. For example, this would disable access to the panel's \"Run "
+"Application\" dialog."
+msgstr ""
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:3
+msgid "Disable saving files to disk"
+msgstr "Zakázat ukládání souborů na disk"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:4
+msgid ""
+"Prevent the user from saving files to disk. For example, this would disable "
+"access to all applications' \"Save as\" dialogs."
+msgstr ""
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:5
+msgid "Disable printing"
+msgstr "Zakázat tisk"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:6
+msgid ""
+"Prevent the user from printing. For example, this would disable access to "
+"all applications' \"Print\" dialogs."
+msgstr ""
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:7
+msgid "Disable print setup"
+msgstr "Zakázat nastavení tisku"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:8
+msgid ""
+"Prevent the user from modifying print settings. For example, this would "
+"disable access to all applications' \"Print Setup\" dialogs."
+msgstr ""
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:9
+msgid "Disable user switching"
+msgstr "Zakázat přepínání uživatelů"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:10
+msgid ""
+"Prevent the user from switching to another account while his session is "
+"active."
+msgstr ""
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:11
+msgid "Disable lock screen"
+msgstr "Zakázat zamykání obrazovky"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:12
+msgid "Prevent the user to lock his screen."
+msgstr "Zabránit uživateli v zamčení obrazovky."
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:13
+msgid "Disable URL and MIME type handlers"
+msgstr ""
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:14
+msgid "Prevent running any URL or MIME type handler applications."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
+msgid "possible values are \"on\", \"off\", and \"custom\"."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:2
+msgid "Keyboard Bell Custom Filename"
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:3
+msgid "File name of the bell sound to be played."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:4
+msgid "Remember NumLock state"
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:5
+msgid ""
+"When set to true, MATE will remember the state of the NumLock LED between "
+"sessions."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:6
+msgid "NumLock state"
+msgstr "Stav NumLocku"
+
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:7
+msgid "The remembered state of the NumLock LED."
+msgstr "Pamatovat si stav NumLock LED."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:1
+msgid "Mouse button orientation"
+msgstr "Orientace tlačítek myši"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:2
+msgid "Swap left and right mouse buttons for left-handed mice."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:3
+msgid "Single Click"
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:4
+msgid "Single click to open icons."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:5
+msgid ""
+"Acceleration multiplier for mouse motion. A value of -1 is the system "
+"default."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:6
+msgid "Motion Threshold"
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:7
+msgid ""
+"Distance in pixels the pointer must move before accelerated mouse motion is "
+"activated. A value of -1 is the system default."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:8
+msgid "Drag Threshold"
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:9
+msgid "Distance before a drag is started."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:10
+msgid "Double Click Time"
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:11
+msgid "Length of a double click."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+msgid "Locate Pointer"
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+msgid ""
+"Highlights the current location of the pointer when the Control key is "
+"pressed and released."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+msgid "Cursor font"
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+msgid ""
+"Font name of the cursor. If unset, the default font is used. This value is "
+"only propagated to the X server start of each session, so changing it mid-"
+"session won't have an effect until the next time you log in."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+msgid "Cursor theme"
+msgstr "Motiv kurzoru"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+msgid ""
+"Cursor theme name. Used only by Xservers that support Xcursor, such as "
+"XFree86 4.3 and later."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+msgid "Cursor size"
+msgstr "Velikost kurzoru"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+msgid "Size of the cursor referenced by cursor_theme."
+msgstr ""
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:1
+msgid "Default mixer device"
+msgstr ""
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:2
+msgid "The default mixer device used by the multimedia key bindings."
+msgstr ""
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:3
+msgid "Default mixer tracks"
+msgstr ""
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:4
+msgid "The default mixer tracks used by the multimedia key bindings."
+msgstr ""
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:5
+msgid "Enable ESD"
+msgstr "Povolit ESD"
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:6
+msgid "Enable sound server startup."
+msgstr ""
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:7
+msgid "Sounds for events"
+msgstr ""
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:8
+msgid "Whether to play sounds on user events."
+msgstr ""
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:9
+msgid "Sound theme name"
+msgstr "Název motivu zvuku"
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:10
+msgid "The XDG sound theme to use for event sounds."
+msgstr ""
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:11
+msgid "Input feedback sounds"
+msgstr ""
+
+#: ../schemas/org.mate.sound.gschema.xml.in.in.h:12
+msgid "Whether to play sounds on input events."
+msgstr ""
+
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:1
+msgid ""
+"Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
+"cleaning."
+msgstr ""
+
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:2
+msgid ""
+"Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
+"cleaning."
+msgstr ""
+
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:1
+msgid "Disable all external thumbnailers"
+msgstr ""
+
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:2
+msgid ""
+"Set to true to disable all external thumbnailer programs, independent on "
+"whether they are independently disabled/enabled."
+msgstr ""
+
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:3
+msgid ""
+"List of mime-types for which external thumbnailer programs will be disabled"
+msgstr ""
+
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:4
+msgid ""
+"Thumbnails will not be created for files whose mime-type is contained in the"
+" list."
+msgstr ""
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:1
+msgid "Type time"
+msgstr ""
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:2
+msgid "Number of minutes of typing time before break mode starts."
+msgstr ""
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:3
+msgid "Break time"
+msgstr ""
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:4
+msgid "Number of minutes that the typing break should last."
+msgstr ""
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:5
+msgid "Allow postponing of breaks"
+msgstr ""
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:6
+msgid "Whether or not the typing break screen can be postponed."
+msgstr ""
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:7
+msgid "Whether or not keyboard locking is enabled"
+msgstr ""
+
+#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
+msgid "Whether or not keyboard locking is enabled."
+msgstr ""
