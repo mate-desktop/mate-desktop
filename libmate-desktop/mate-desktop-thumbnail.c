@@ -1096,7 +1096,8 @@ mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *facto
   /* Don't thumbnail thumbnails */
   if (uri &&
       strncmp (uri, "file:/", 6) == 0 &&
-      strstr (uri, "/.thumbnails/") != NULL)
+      (strstr (uri, "/.thumbnails/") != NULL ||
+      strstr (uri, "/.cache/thumbnails/") != NULL))
     return FALSE;
   
   if (!mime_type)
