@@ -388,9 +388,19 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 
 		/* Fallback to default BG if the filename set is non-existent */
 		if (filename != NULL && !g_file_test (filename, G_FILE_TEST_EXISTS)) {
-			/* FIXME: better to use g_settings_get_mapped() here */
+			
+			g_free (filename);
+			
+			g_settings_delay (settings);
 			g_settings_reset (settings, MATE_BG_KEY_PICTURE_FILENAME);
 			filename = g_settings_get_string (settings, MATE_BG_KEY_PICTURE_FILENAME);
+			g_settings_revert (settings);
+			
+			//* Check if default background exists, also */
+			if (filename != NULL && !g_file_test (filename, G_FILE_TEST_EXISTS)) {
+				g_free (filename);
+				filename = NULL;
+			}
 		}
 	}
 	g_free (tmp);
@@ -414,7 +424,8 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 	mate_bg_set_placement (bg, placement);
 	mate_bg_set_filename (bg, filename);
 
-	g_free (filename);
+	if (filename != NULL)
+		g_free (filename);
 }
 
 void
