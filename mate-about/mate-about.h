@@ -66,13 +66,25 @@
 	};
 
 	const char* authors[] = {
-		// MATE developers
+		/* MATE founders */
 		"Perberos <perberos@gmail.com>",
 		"Stefano Karapetsas <stefano@karapetsas.com>",
 		"Steve Zesch <stevezesch2@gmail.com>",
 		"Clement Lefebvre <root@linuxmint.com>",
+		/* MATE developers */
+		"Scott Balneaves <sbalneav@alburg.net>",
+		"Marcel Dijkstra <marcel.dykstra@gmail.com>",
+		"Jasmine Hassan <jasmine.aura@gmail.com>",
+		"Brent Hull <bhull2010@live.com>",
+		"Steev Klimaszewski <steev@gentoo.org>",
+		"Joseph Krieger <rowen@Alien-Laptop.site>",
 		"Nelson Marques <nmo.marques@gmail.com>",
-		// GNOME developers
+		"Dan Mashal <dan.mashal@fedoraproject.org>",
+		"Elan Ruusamäe <glen@delfi.ee>",
+		"Yaakov Selkowitz <yselkowitz@users.sourceforge.net>",
+		"Sam Tygier <samtygier@yahoo.co.uk>",
+		"Wolfgang Ulbrich <chat-to-me@raveit.de>",
+		/* GNOME developers */
 		"Jérôme Abela",
 		"Rob Adams",
 		"Djihed Afifi",
