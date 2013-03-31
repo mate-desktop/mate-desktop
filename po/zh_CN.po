@@ -3,16 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Christopher Meng <cickumqt@gmail.com>, 2012.
+# Christopher Meng <cickumqt@gmail.com>, 2012-2013.
 # Dianjin Wang <1132321739qq@gmail.com>, 2012.
+# Haonan Yu <rebuilty@gmail.com>, 2013.
 #  <xingzuo88@qq.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2012-10-18 00:25+0200\n"
-"PO-Revision-Date: 2013-02-18 03:00+0000\n"
-"Last-Translator: liulitchi <xingzuo88@qq.com>\n"
+"PO-Revision-Date: 2013-03-26 15:06+0000\n"
+"Last-Translator: rebuilty <rebuilty@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/MATE/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,7 +71,7 @@ msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
-msgstr ""
+msgstr "”MATE“来源于”yerba maté“，一种生长在南美洲的冬青树。它的叶子中含有咖啡因，可以用来制作一种名为”mate“的饮料。"
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -285,7 +286,7 @@ msgstr "　最小间隔时间（毫秒）"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr ""
+msgstr "忽略在 @delay 毫秒内多次按下的同一个键"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:3
 msgid "Pixels per seconds"
@@ -297,15 +298,15 @@ msgstr ""
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr ""
+msgstr "经过多少毫秒后开始加速"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr ""
+msgstr "在多少毫秒内从 0 增长到最大速度。"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:7
 msgid "Initial delay in milliseconds"
-msgstr ""
+msgstr "初始延迟毫秒数"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:8
 msgid ""
@@ -385,7 +386,7 @@ msgstr "默认浏览器"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:2
 msgid "Default browser for all URLs."
-msgstr ""
+msgstr "默认浏览器"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:3
 msgid "Browser needs terminal"
@@ -481,11 +482,11 @@ msgstr "用作背景"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:7
 msgid "Picture Opacity"
-msgstr ""
+msgstr "图片不透明度"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:8
 msgid "Opacity with which to draw the background picture."
-msgstr ""
+msgstr "背景图片的不透明度。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:9
 msgid "Primary Color"
@@ -493,180 +494,180 @@ msgstr "原色"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:10
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr ""
+msgstr "绘制渐变带时左边或上边的颜色，或者是纯色。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:11
 msgid "Secondary Color"
-msgstr ""
+msgstr "次要颜色"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:12
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr ""
+msgstr "绘制渐变带时的右边或下边颜色，绘制纯色时不使用。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:13
 msgid "Color Shading Type"
-msgstr ""
+msgstr "颜色渐变类型"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:14
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
-msgstr ""
+msgstr "如何渐变背景颜色。可用的值有“水平渐变”，“垂直渐变”和“纯色”。"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.in.h:1
 msgid "File Icon Theme"
-msgstr ""
+msgstr "文件图标主题"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr ""
+msgstr "用于显示文件图标的主题。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:1
 msgid "Enable Accessibility"
-msgstr ""
+msgstr "启用辅助工具"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr ""
+msgstr "应用程序是否启用辅助访问支持。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:3
 msgid "Enable Animations"
-msgstr ""
+msgstr "启用动画"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr ""
+msgstr "是否应该显示动画。注意：这是一个全局设置，它将改变窗口管理器、面板等的行为。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:5
 msgid "Menus Have Tearoff"
-msgstr ""
+msgstr "菜单具有分隔线"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr ""
+msgstr "菜单是否应该有分隔线。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:7
 msgid "Can Change Accels"
-msgstr ""
+msgstr "可改变快捷键"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:8
 msgid ""
 "Whether the user can dynamically type a new accelerator when positioned over"
 " an active menuitem."
-msgstr ""
+msgstr "当指针指向激活的菜单项时，用户是否能动态地输入新的快捷键。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:9
 msgid "Toolbar Style"
-msgstr ""
+msgstr "工具栏风格"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:10
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr ""
+msgstr "工具栏风格。有效的值是“文字在图标下方”，“文字在图标旁边”，“仅图标”和“仅文本”。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:11
 msgid "Menus Have Icons"
-msgstr ""
+msgstr "菜单上使用图标"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr ""
+msgstr "是否在菜单上菜单项的旁边显示图标。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:13
 msgid "Buttons Have Icons"
-msgstr ""
+msgstr "按钮显示图标"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:14
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr ""
+msgstr "是否在按钮文本旁边显示图标。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:15
 msgid "Menubar Detachable"
-msgstr ""
+msgstr "菜单栏可分离"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:16
 msgid "Whether the user can detach menubars and move them around."
-msgstr ""
+msgstr "用户是否能分离菜单栏并四处移动它们。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:17
 msgid "Toolbar Detachable"
-msgstr ""
+msgstr "工具栏可分离"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:18
 msgid "Whether the user can detach toolbars and move them around."
-msgstr ""
+msgstr "用户是否能分离工具栏并四处移动它们。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:19
 msgid "Toolbar Icon Size"
-msgstr ""
+msgstr "工具栏图标大小"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr ""
+msgstr "工具栏图标的大小，“小号工具栏”或者“大号工具栏”。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:21
 msgid "Cursor Blink"
-msgstr ""
+msgstr "光标闪烁"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:22
 msgid "Whether the cursor should blink."
-msgstr ""
+msgstr "光标是否闪烁。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:23
 msgid "Cursor Blink Time"
-msgstr ""
+msgstr "光标闪烁时间"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:24
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr ""
+msgstr "光标闪烁周期的长度，单位为毫秒。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:25
 msgid "Icon Theme"
-msgstr ""
+msgstr "图标主题"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:26
 msgid "Icon theme to use for the panel, caja etc."
-msgstr ""
+msgstr "用于面板、Caja 等的图标主题。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:27
 msgid "Gtk+ Theme"
-msgstr ""
+msgstr "Gtk+ 主题"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:28
 msgid "Basename of the default theme used by gtk+."
-msgstr ""
+msgstr "gtk+ 默认主题的基本名称。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:29
 msgid "List of symbolic names and color equivalents"
-msgstr ""
+msgstr "符号名称与颜色值列表"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:30
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
-msgstr ""
+msgstr "使用”\\n“分隔的”名称：颜色“列表被”gtk-color-scheme“设置所定义"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:31
 msgid "Default font"
-msgstr ""
+msgstr "默认字体"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:32
 msgid "Name of the default font used by gtk+."
-msgstr ""
+msgstr "gtk+ 使用的默认字体名称。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:33
 msgid "GTK IM Preedit Style"
-msgstr ""
+msgstr "GTK 输入法预编辑风格"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:34
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr ""
+msgstr "GTK+ 使用的输入法预编辑风格名称。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:35
 msgid "GTK IM Status Style"
-msgstr ""
+msgstr "GTK IM 状态风格"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:36
 msgid "Name of the GTK+ input method Status Style used by gtk+."
@@ -674,7 +675,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:37
 msgid "GTK IM Module"
-msgstr ""
+msgstr "GTK IM 模块"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:38
 msgid "Name of the input method module used by GTK+."
@@ -682,7 +683,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
 msgid "Document font"
-msgstr ""
+msgstr "文档字体"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
 msgid "Name of the default font used for reading documents."
@@ -690,7 +691,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
 msgid "Monospace font"
-msgstr ""
+msgstr "等距字体"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
 msgid ""
@@ -699,7 +700,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
 msgid "Use Custom Font"
-msgstr ""
+msgstr "使用自定义字体"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
 msgid "Whether to use a custom font in gtk+ applications."
@@ -707,7 +708,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
 msgid "Status Bar on Right"
-msgstr ""
+msgstr "状态栏位于右边"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:46
 msgid "Whether to display a status bar meter on the right."
@@ -733,7 +734,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:51
 msgid "Show the 'Input Methods' menu"
-msgstr ""
+msgstr "显示“输入法”菜单"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:52
 msgid ""
@@ -753,7 +754,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
 msgid "Disable command line"
-msgstr ""
+msgstr "禁用命令行"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:2
 msgid ""
@@ -774,7 +775,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:5
 msgid "Disable printing"
-msgstr ""
+msgstr "禁用打印"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:6
 msgid ""
@@ -794,7 +795,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:9
 msgid "Disable user switching"
-msgstr ""
+msgstr "禁用用户切换"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:10
 msgid ""
@@ -804,15 +805,15 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:11
 msgid "Disable lock screen"
-msgstr ""
+msgstr "禁用锁定屏幕"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:12
 msgid "Prevent the user to lock his screen."
-msgstr ""
+msgstr "禁止用户锁定自己的屏幕。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:13
 msgid "Disable URL and MIME type handlers"
-msgstr ""
+msgstr "禁用 URL 和 MIME 类型处理器"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
@@ -824,7 +825,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:2
 msgid "Keyboard Bell Custom Filename"
-msgstr ""
+msgstr "自定义键盘铃声文件名"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:3
 msgid "File name of the bell sound to be played."
@@ -832,7 +833,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:4
 msgid "Remember NumLock state"
-msgstr ""
+msgstr "记住 NumLock 状态"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:5
 msgid ""
@@ -842,7 +843,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:6
 msgid "NumLock state"
-msgstr ""
+msgstr "NumLock 状态"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:7
 msgid "The remembered state of the NumLock LED."
@@ -858,11 +859,11 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:3
 msgid "Single Click"
-msgstr ""
+msgstr "单击"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:4
 msgid "Single click to open icons."
-msgstr ""
+msgstr "单击以打开图标。"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:5
 msgid ""
@@ -882,7 +883,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:8
 msgid "Drag Threshold"
-msgstr ""
+msgstr "拖放阈值"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:9
 msgid "Distance before a drag is started."
@@ -890,7 +891,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:10
 msgid "Double Click Time"
-msgstr ""
+msgstr "双击时间"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:11
 msgid "Length of a double click."
@@ -898,7 +899,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
 msgid "Locate Pointer"
-msgstr ""
+msgstr "定位指针"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
 msgid ""
@@ -908,7 +909,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
 msgid "Cursor font"
-msgstr ""
+msgstr "光标字体"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
 msgid ""
@@ -919,7 +920,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
 msgid "Cursor theme"
-msgstr ""
+msgstr "光标主题"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
 msgid ""
@@ -929,7 +930,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
 msgid "Cursor size"
-msgstr ""
+msgstr "光标大小"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
 msgid "Size of the cursor referenced by cursor_theme."
@@ -937,7 +938,7 @@ msgstr ""
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:1
 msgid "Default mixer device"
-msgstr ""
+msgstr "默认混音器设备"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
@@ -945,7 +946,7 @@ msgstr ""
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:3
 msgid "Default mixer tracks"
-msgstr ""
+msgstr "默认混音器音轨"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
@@ -961,7 +962,7 @@ msgstr ""
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:7
 msgid "Sounds for events"
-msgstr ""
+msgstr "事件声音"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:8
 msgid "Whether to play sounds on user events."
@@ -977,7 +978,7 @@ msgstr ""
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:11
 msgid "Input feedback sounds"
-msgstr ""
+msgstr "输入反馈声音"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:12
 msgid "Whether to play sounds on input events."
@@ -997,7 +998,7 @@ msgstr ""
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:1
 msgid "Disable all external thumbnailers"
-msgstr ""
+msgstr "禁用所有外部缩略图程序"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:2
 msgid ""
@@ -1018,7 +1019,7 @@ msgstr ""
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:1
 msgid "Type time"
-msgstr ""
+msgstr "打字时间"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
@@ -1034,7 +1035,7 @@ msgstr ""
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:5
 msgid "Allow postponing of breaks"
-msgstr ""
+msgstr "允许推迟间断"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
