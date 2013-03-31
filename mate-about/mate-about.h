@@ -77,7 +77,7 @@
 		"Jasmine Hassan <jasmine.aura@gmail.com>",
 		"Brent Hull <bhull2010@live.com>",
 		"Steev Klimaszewski <steev@gentoo.org>",
-		"Joseph Krieger <rowen@Alien-Laptop.site>",
+		"Joseph Krieger <rowen.stipe@gmail.com>",
 		"Nelson Marques <nmo.marques@gmail.com>",
 		"Dan Mashal <dan.mashal@fedoraproject.org>",
 		"Elan Ruusamäe <glen@delfi.ee>",
