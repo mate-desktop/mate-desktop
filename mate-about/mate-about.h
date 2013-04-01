@@ -626,8 +626,9 @@
 	};
 	// artists
 	const char* artists[] = {
+		"Marcel Dijkstra <marcel.dykstra@gmail.com>",
 		"Rowen Stipe <rowen.stipe@gmail.com>",
-		"/g/entoomen <https://boards.4chan.org/g/>",
+		"Wolfgang Ulbrich <chat-to-me@raveit.de>",
 		NULL
 	};
 

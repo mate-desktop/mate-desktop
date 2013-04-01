@@ -230,15 +230,6 @@ AC_SUBST(GETTEXT_PACKAGE)
 
 AM_GLIB_GNU_GETTEXT
 
-AC_ARG_ENABLE([gnucat],
-              [AS_HELP_STRING([--enable-gnucat], [enable the use of gnu cat as logo in mate-about])],
-              [enable_gnucat=yes], [enable_gnucat=no])
-
-if test "x$enable_gnucat" = "xyes"; then
-    MATE_ABOUT_CFLAGS="$MATE_ABOUT_CFLAGS -DENABLE_GNUCAT=1"
-fi
-AM_CONDITIONAL(GNUCAT_ENABLED, test "x$enable_gnucat" = "xyes")
-
 dnl ============================================================================
 dnl | se comprueba unique
 dnl | de lo contrario, se intenta utilizar libunique
@@ -343,5 +334,4 @@ mate-desktop $VERSION `echo mate-desktop $VERSION | sed "s/./=/g"`
     Startup notification support: ${have_startup_notification}
     XRandr support:               ${have_randr}
     Build gtk-doc documentation:  ${enable_gtk_doc}
-    Enable gnucat:                ${enable_gnucat}
 "
