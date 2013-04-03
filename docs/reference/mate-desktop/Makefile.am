@@ -67,7 +67,7 @@ expand_content_files=
 # signals and properties.
 # e.g. INCLUDES=-I$(top_srcdir) -I$(top_builddir) $(GTK_DEBUG_FLAGS)
 # e.g. GTKDOC_LIBS=$(top_builddir)/gtk/$(gtktargetlib)
-INCLUDES=$(MATE_DESKTOP_CFLAGS) -I$(top_srcdir)/libmate-desktop -DMATE_DESKTOP_USE_UNSTABLE_API
+AM_CPPFLAGS=$(MATE_DESKTOP_CFLAGS) -I$(top_srcdir)/libmate-desktop -DMATE_DESKTOP_USE_UNSTABLE_API
 GTKDOC_LIBS=$(MATE_DESKTOP_LIBS) $(top_builddir)/libmate-desktop/libmate-desktop-2.la
 
 # This includes the standard gtk-doc make rules, copied by gtkdocize.
