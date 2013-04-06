@@ -226,6 +226,8 @@ if os.path.exists(mateconf_panel_file):
                 # changed types
                 if obj_type == "launcher-object":
                     obj_type = "launcher"
+                elif obj_type == "action-applet":
+                    obj_type = "action"
                 obj_settings.set_string("object-type", obj_type)
             elif "type" in child.attrib:
                 name = gsettings_id(child.attrib["name"])
