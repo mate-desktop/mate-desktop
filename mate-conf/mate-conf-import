@@ -27,11 +27,14 @@ import sys
 # to read MateConf files
 import xml.etree.ElementTree as ElementTree
 
-# to write GSettings
+
 import gi
+# to show dialogs
 gi.require_version("Gtk", "2.0")
 from gi.repository import Gtk
+# to read convert files
 from gi.repository import GLib
+# to write GSettings
 from gi.repository import Gio
 
 # command options
@@ -81,6 +84,7 @@ dialog = Gtk.MessageDialog (None,
                             "Migrate settings from MATE 1.4?")
 res = dialog.run()
 if res != Gtk.ResponseType.YES:
+    dialog.destroy()
     sys.exit(0)
 dialog.destroy()
 
@@ -118,6 +122,7 @@ for convert_file in convert_files:
             # if user has custom mateconf
             if os.path.exists(mateconf_file):
 
+                # MateConf file could be empty
                 try:
                     tree = ElementTree.parse(mateconf_file)
                     root = tree.getroot()
@@ -219,25 +224,31 @@ if os.path.exists(mateconf_panel_file):
         new_objects.append(obj_id)
 
         for child in obj_root:
+            # toplevel-id
             if child.attrib["name"] == "toplevel_id":
                 obj_settings.set_string("toplevel-id", gsettings_id(child[0].text))
+            # object-type
             elif child.attrib["name"] == "object_type":
                 obj_type = child[0].text
-                # changed types
+                # changed types in 1.6
                 if obj_type == "launcher-object":
                     obj_type = "launcher"
                 elif obj_type == "action-applet":
                     obj_type = "action"
                 obj_settings.set_string("object-type", obj_type)
+            # other settings
             elif "type" in child.attrib:
                 name = gsettings_id(child.attrib["name"])
+                # boolean
                 if child.attrib["type"] == "bool":
                     if child.attrib["value"] == "true":
                         obj_settings.set_boolean(name, True)
                     else:
                         obj_settings.set_boolean(name, False)
+                # int
                 elif child.attrib["type"] == "int":
                     obj_settings.set_int(name, int(child.attrib["value"]))
+                # string
                 elif child.attrib["type"] == "string":
                     obj_settings.set_string(name, child[0].text)
 
@@ -252,30 +263,37 @@ if os.path.exists(mateconf_panel_file):
         new_objects.append(app_id)
 
         for child in app_root:
+            # toplevel-id
             if child.attrib["name"] == "toplevel_id":
                 app_settings.set_string("toplevel-id", gsettings_id(child[0].text))
+            # object-type
             elif child.attrib["name"] == "object_type":
                 app_type = child[0].text
                 if app_type == "external-applet":
                     app_type = "applet"
                 app_settings.set_string("object-type", app_type)
+            # applet-iid
             elif child.attrib["name"] == "applet_iid":
                 applet_iid = child[0].text
-                # changed iids
+                # changed iids in 1.6
                 if applet_iid == "OAFIID:SensorsApplet":
                     applet_iid = "SensorsAppletFactory::SensorsApplet"
                 elif applet_iid == "OAFIID:MATE_NetspeedApplet":
                     applet_iid = "NetspeedAppletFactory::NetspeedApplet"
                 app_settings.set_string("applet-iid", applet_iid)
+            # other settings
             elif "type" in child.attrib:
                 name = gsettings_id(child.attrib["name"])
+                # boolean
                 if child.attrib["type"] == "bool":
                     if child.attrib["value"] == "true":
                         app_settings.set_boolean(name, True)
                     else:
                         app_settings.set_boolean(name, False)
+                # int
                 elif child.attrib["type"] == "int":
                     app_settings.set_int(name, int(child.attrib["value"]))
+                # string
                 elif child.attrib["type"] == "string":
                     app_settings.set_string(name, child[0].text)
 
@@ -292,13 +310,16 @@ if os.path.exists(mateconf_panel_file):
         for child in toplevel_root:
             if "type" in child.attrib:
                 name = gsettings_id(child.attrib["name"])
+                # boolean
                 if child.attrib["type"] == "bool":
                     if child.attrib["value"] == "true":
                         toplevel_settings.set_boolean(name, True)
                     else:
                         toplevel_settings.set_boolean(name, False)
+                # int
                 elif child.attrib["type"] == "int":
                     toplevel_settings.set_int(name, int(child.attrib["value"]))
+                # string
                 elif child.attrib["type"] == "string":
                     toplevel_settings.set_string(name, child[0].text)
 
