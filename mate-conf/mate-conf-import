@@ -145,17 +145,24 @@ for convert_file in convert_files:
                         # string
                         elif child.attrib["type"] == "string":
 
+                            value = child[0].text
                             # hack for background
                             if gsettings_schema == "org.mate.background" and gsettings_key == "picture-filename":
                                 # check if the background exists before apply it
-                                if not os.path.exists(child[0].text):
-                                    no_background = True
-                                    continue
+                                if not os.path.exists(value):
+                                    if "/pixmaps/backgrounds/" in value:
+                                        value = value.replace("/pixmaps/backgrounds/", "/backgrounds/")
+                                        if not os.path.exists(value):
+                                            no_background = True
+                                            continue
+                                    else:
+                                        no_background = True
+                                        continue
                             if no_background and gsettings_schema == "org.mate.background":
                                 continue
 
-                            debug_message(gsettings_schema, gsettings_key, child[0].text)
-                            settings.set_string(gsettings_key, child[0].text)
+                            debug_message(gsettings_schema, gsettings_key, value)
+                            settings.set_string(gsettings_key, value)
 
                         # list
                         elif child.attrib["type"] == "list":
