@@ -166,8 +166,9 @@ for convert_file in convert_files:
                             if no_background and gsettings_schema == "org.mate.background":
                                 continue
 
-                            debug_message(gsettings_schema, gsettings_key, value)
-                            settings.set_string(gsettings_key, value)
+                            if value != None:
+                                debug_message(gsettings_schema, gsettings_key, value)
+                                settings.set_string(gsettings_key, value)
 
                         # list
                         elif child.attrib["type"] == "list":
