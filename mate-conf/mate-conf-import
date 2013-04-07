@@ -218,6 +218,8 @@ if os.path.exists(mateconf_panel_file):
     for obj in objects:
         debug_message("object", obj)
         mateconf_obj_file = os.path.join(mateconf_user_path, "apps/panel/objects", obj, "%mateconf.xml")
+        if not os.path.exists(mateconf_obj_file):
+            continue
         obj_tree = ElementTree.parse(mateconf_obj_file)
         obj_root = obj_tree.getroot()
         obj_id = gsettings_id(obj)
@@ -257,6 +259,8 @@ if os.path.exists(mateconf_panel_file):
     for app in applets:
         debug_message("applet", app)
         mateconf_app_file = os.path.join(mateconf_user_path, "apps/panel/applets", app, "%mateconf.xml")
+        if not os.path.exists(mateconf_app_file):
+            continue
         app_tree = ElementTree.parse(mateconf_app_file)
         app_root = app_tree.getroot()
         app_id = gsettings_id(app)
