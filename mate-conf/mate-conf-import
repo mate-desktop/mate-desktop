@@ -220,8 +220,11 @@ if os.path.exists(mateconf_panel_file):
         mateconf_obj_file = os.path.join(mateconf_user_path, "apps/panel/objects", obj, "%mateconf.xml")
         if not os.path.exists(mateconf_obj_file):
             continue
-        obj_tree = ElementTree.parse(mateconf_obj_file)
-        obj_root = obj_tree.getroot()
+        try:
+            obj_tree = ElementTree.parse(mateconf_obj_file)
+            obj_root = obj_tree.getroot()
+        except:
+            continue
         obj_id = gsettings_id(obj)
         obj_settings = Gio.Settings.new_with_path("org.mate.panel.object", "/org/mate/panel/objects/%s/" % obj_id)
         new_objects.append(obj_id)
@@ -261,8 +264,11 @@ if os.path.exists(mateconf_panel_file):
         mateconf_app_file = os.path.join(mateconf_user_path, "apps/panel/applets", app, "%mateconf.xml")
         if not os.path.exists(mateconf_app_file):
             continue
-        app_tree = ElementTree.parse(mateconf_app_file)
-        app_root = app_tree.getroot()
+        try:
+            app_tree = ElementTree.parse(mateconf_app_file)
+            app_root = app_tree.getroot()
+        except:
+            continue
         app_id = gsettings_id(app)
         app_settings = Gio.Settings.new_with_path("org.mate.panel.object", "/org/mate/panel/objects/%s/" % app_id)
         new_objects.append(app_id)
@@ -308,8 +314,13 @@ if os.path.exists(mateconf_panel_file):
     for toplevel in toplevels:
         debug_message("toplevel", toplevel)
         mateconf_toplevel_file = os.path.join(mateconf_user_path, "apps/panel/toplevels", toplevel, "%mateconf.xml")
-        toplevel_tree = ElementTree.parse(mateconf_toplevel_file)
-        toplevel_root = toplevel_tree.getroot()
+        if not os.path.exists(mateconf_toplevel_file):
+            continue
+        try:
+            toplevel_tree = ElementTree.parse(mateconf_toplevel_file)
+            toplevel_root = toplevel_tree.getroot()
+        except:
+            continue
         toplevel_id = gsettings_id(toplevel)
         toplevel_settings = Gio.Settings.new_with_path("org.mate.panel.toplevel", "/org/mate/panel/toplevels/%s/" % toplevel_id)
         new_toplevels.append(toplevel_id)
