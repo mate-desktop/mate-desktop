@@ -272,6 +272,8 @@ if os.path.exists(mateconf_panel_file):
                 app_type = child[0].text
                 if app_type == "external-applet":
                     app_type = "applet"
+                elif app_type == "matecomponent-applet":
+                    app_type = "applet"
                 app_settings.set_string("object-type", app_type)
             # applet-iid
             elif child.attrib["name"] == "applet_iid":
