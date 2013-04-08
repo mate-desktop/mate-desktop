@@ -41,6 +41,7 @@ from gi.repository import Gio
 parser = optparse.OptionParser()
 parser.add_option("-d", "--debug", dest="debug", action="store_true", help="enable debug messages")
 parser.add_option("-f", "--force", dest="force", action="store_true", help="force migration of settings")
+parser.add_option("-l", "--linuxmint", dest="linuxmint", action="store_true", help="force detection of linuxmint")
 (options, args) = parser.parse_args()
 
 # print a message only if debug option is enabled
@@ -195,6 +196,7 @@ for convert_file in convert_files:
         settings.apply()
 
 # ugly hack to migrate panel layout
+is_linuxmint = os.path.exists("/etc/linuxmint/info") or options.linuxmint
 mateconf_panel_file = os.path.join(mateconf_user_path, "apps/panel/general", "%mateconf.xml")
 if os.path.exists(mateconf_panel_file):
 
@@ -213,17 +215,22 @@ if os.path.exists(mateconf_panel_file):
     # new lists (applets are together with objects in 1.6)
     new_toplevels = []
     new_objects = []
+    new_applets_without_toplevel = []
+    new_bottom_toplevel = None
+    new_top_toplevel = None
 
     # import objects
     for obj in objects:
         debug_message("object", obj)
         mateconf_obj_file = os.path.join(mateconf_user_path, "apps/panel/objects", obj, "%mateconf.xml")
         if not os.path.exists(mateconf_obj_file):
+            debug_message ("object", obj, "mateconf file not found!")
             continue
         try:
             obj_tree = ElementTree.parse(mateconf_obj_file)
             obj_root = obj_tree.getroot()
         except:
+            debug_message ("object", obj, "mateconf file invalid!")
             continue
         obj_id = gsettings_id(obj)
         obj_settings = Gio.Settings.new_with_path("org.mate.panel.object", "/org/mate/panel/objects/%s/" % obj_id)
@@ -241,6 +248,8 @@ if os.path.exists(mateconf_panel_file):
                     obj_type = "launcher"
                 elif obj_type == "action-applet":
                     obj_type = "action"
+                elif obj_type == "drawer-object":
+                    obj_type = "drawer"
                 obj_settings.set_string("object-type", obj_type)
             # other settings
             elif "type" in child.attrib:
@@ -263,20 +272,57 @@ if os.path.exists(mateconf_panel_file):
         debug_message("applet", app)
         mateconf_app_file = os.path.join(mateconf_user_path, "apps/panel/applets", app, "%mateconf.xml")
         if not os.path.exists(mateconf_app_file):
-            continue
+            debug_message ("applet", app, "mateconf file not found!")
         try:
             app_tree = ElementTree.parse(mateconf_app_file)
             app_root = app_tree.getroot()
         except:
+            debug_message ("applet", app, "mateconf file invalid!")
+            # empty mateconf file, try to create an applet
+            # FIXME: we should add default applets with their values
+            # this means use default 1.4 layout, except for linuxmint
+            # (that should be the only distribution with a custom panel layout)
+            applet_iid = None
+            right_stick = False
+            position = 0
+            # if you add an applet here, add also the same iid couple later
+            if "showdesktop" in app:
+                applet_iid = "WnckletFactory::ShowDesktopApplet"
+            elif "notification" in app:
+                applet_iid = "NotificationAreaAppletFactory::NotificationArea"
+                right_stick = True
+                position = 10
+            elif "clock" in app:
+                applet_iid = "ClockAppletFactory::ClockApplet"
+                right_stick = True
+            elif "windowlist" in app:
+                applet_iid = "WnckletFactory::WindowListApplet"
+                position = 10
+            elif "mintmenu" in app:
+                applet_iid = "MintMenuAppletFactory::MintMenuApplet"
+            if applet_iid != None:
+                debug_message ("applet", app, "try to create as '%s'" % applet_iid)
+                app_id = gsettings_id(app)
+                app_settings = Gio.Settings.new_with_path("org.mate.panel.object", "/org/mate/panel/objects/%s/" % app_id)
+                new_objects.append(app_id)
+                new_applets_without_toplevel.append(app_id)
+                app_settings.set_string("object-type", "applet")
+                app_settings.set_string("applet-iid", applet_iid)
+                app_settings.set_boolean("panel-right-stick", right_stick)
+                app_settings.set_int("position", position)
             continue
         app_id = gsettings_id(app)
         app_settings = Gio.Settings.new_with_path("org.mate.panel.object", "/org/mate/panel/objects/%s/" % app_id)
         new_objects.append(app_id)
 
+        applet_iid = None
+        toplevel_id = None
+        app_type = None
         for child in app_root:
             # toplevel-id
             if child.attrib["name"] == "toplevel_id":
-                app_settings.set_string("toplevel-id", gsettings_id(child[0].text))
+                toplevel_id = gsettings_id(child[0].text)
+                app_settings.set_string("toplevel-id", toplevel_id)
             # object-type
             elif child.attrib["name"] == "object_type":
                 app_type = child[0].text
@@ -293,6 +339,14 @@ if os.path.exists(mateconf_panel_file):
                     applet_iid = "SensorsAppletFactory::SensorsApplet"
                 elif applet_iid == "OAFIID:MATE_NetspeedApplet":
                     applet_iid = "NetspeedAppletFactory::NetspeedApplet"
+                elif applet_iid == "OAFIID:MATE_DictionaryApplet":
+                    applet_iid = "DictionaryAppletFactory::DictionaryApplet"
+                elif applet_iid == "OAFIID:Invest_Applet":
+                    applet_iid = "InvestAppletFactory::InvestApplet"
+                elif applet_iid == "OAFIID:TimerApplet":
+                    # not yet ready in 1.6 :(
+                    applet_iid = "TimerAppletFactory::TimerApplet"
+                debug_message ("applet", app, "is '%s'" % applet_iid)
                 app_settings.set_string("applet-iid", applet_iid)
             # other settings
             elif "type" in child.attrib:
@@ -310,17 +364,49 @@ if os.path.exists(mateconf_panel_file):
                 elif child.attrib["type"] == "string":
                     app_settings.set_string(name, child[0].text)
 
+        # applet-iid could be missing if it is a default applet, but the
+        # user changes some values of it (for example, position)
+        if applet_iid == None:
+            if "showdesktop" in app:
+                applet_iid = "WnckletFactory::ShowDesktopApplet"
+            elif "notification" in app:
+                applet_iid = "NotificationAreaAppletFactory::NotificationArea"
+            elif "clock" in app:
+                applet_iid = "ClockAppletFactory::ClockApplet"
+            elif "windowlist" in app:
+                applet_iid = "WnckletFactory::WindowListApplet"
+            elif "mintmenu" in app:
+                applet_iid = "MintMenuAppletFactory::MintMenuApplet"
+            if applet_iid != None:
+                debug_message ("applet", app, "id was missing: '%s'" % applet_iid)
+                app_settings.set_string("applet-iid", applet_iid)
+
+        if toplevel_id == None:
+            new_applets_without_toplevel.append(app_id)
+        if app_type == None:
+            app_settings.set_string("object-type", "applet")
+
     # import panels
     for toplevel in toplevels:
         debug_message("toplevel", toplevel)
         mateconf_toplevel_file = os.path.join(mateconf_user_path, "apps/panel/toplevels", toplevel, "%mateconf.xml")
         if not os.path.exists(mateconf_toplevel_file):
-            continue
+            debug_message ("toplevel", toplevel, "mateconf file not found!")
         try:
             toplevel_tree = ElementTree.parse(mateconf_toplevel_file)
             toplevel_root = toplevel_tree.getroot()
         except:
+            # empty mateconf file, it's a default panel
+            debug_message ("toplevel", toplevel, "mateconf file invalid, creating as default!")
+            toplevel_id = gsettings_id(toplevel)
+            toplevel_settings = Gio.Settings.new_with_path("org.mate.panel.toplevel", "/org/mate/panel/toplevels/%s/" % toplevel_id)
+            if is_linuxmint:
+                toplevel_settings.set_string("orientation", "bottom")
+            else:
+                toplevel_settings.set_string("orientation", "top")
+            new_toplevels.append(toplevel_id)
             continue
+
         toplevel_id = gsettings_id(toplevel)
         toplevel_settings = Gio.Settings.new_with_path("org.mate.panel.toplevel", "/org/mate/panel/toplevels/%s/" % toplevel_id)
         new_toplevels.append(toplevel_id)
@@ -328,6 +414,11 @@ if os.path.exists(mateconf_panel_file):
         for child in toplevel_root:
             if "type" in child.attrib:
                 name = gsettings_id(child.attrib["name"])
+                if name == "orientation":
+                    if child[0].text == "top":
+                        new_top_toplevel = toplevel_id
+                    elif child[0].text == "bottom":
+                        new_bottom_toplevel = toplevel_id
                 # boolean
                 if child.attrib["type"] == "bool":
                     if child.attrib["value"] == "true":
@@ -340,6 +431,14 @@ if os.path.exists(mateconf_panel_file):
                 # string
                 elif child.attrib["type"] == "string":
                     toplevel_settings.set_string(name, child[0].text)
+
+    # set created applets to first toplevel
+    for app_id in new_applets_without_toplevel:
+        app_settings = Gio.Settings.new_with_path("org.mate.panel.object", "/org/mate/panel/objects/%s/" % app_id)
+        if is_linuxmint and (new_bottom_toplevel != None):
+            app_settings.set_string("toplevel-id", new_bottom_toplevel)
+        else:
+            app_settings.set_string("toplevel-id", new_toplevels[0])
 
     # set new toplevels and objects
     panel_settings.set_strv("toplevel-id-list", new_toplevels)
