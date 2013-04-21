@@ -27,7 +27,7 @@ import sys
 # to read MateConf files
 import xml.etree.ElementTree as ElementTree
 
-
+# gobject introspection
 import gi
 # to show dialogs
 gi.require_version("Gtk", "2.0")
@@ -82,7 +82,8 @@ dialog = Gtk.MessageDialog (None,
                             Gtk.DialogFlags.MODAL,
                             Gtk.MessageType.QUESTION,
                             Gtk.ButtonsType.YES_NO,
-                            "Migrate settings from MATE 1.4?")
+                            "Are you sure to migrate settings from MATE 1.4?\n" + \
+                            "This will delete permanently all your current 1.6 settings.")
 res = dialog.run()
 if res != Gtk.ResponseType.YES:
     dialog.destroy()
@@ -343,6 +344,10 @@ if os.path.exists(mateconf_panel_file):
                     applet_iid = "DictionaryAppletFactory::DictionaryApplet"
                 elif applet_iid == "OAFIID:Invest_Applet":
                     applet_iid = "InvestAppletFactory::InvestApplet"
+                elif applet_iid == "OAFIID:MATE_DictionaryApplet":
+                    applet_iid = "DictionaryAppletFactory::DictionaryApplet"
+                elif applet_iid == "OAFIID:MATE_InhibitApplet":
+                    applet_iid = "InhibitAppletFactory::InhibitApplet"
                 elif applet_iid == "OAFIID:TimerApplet":
                     # not yet ready in 1.6 :(
                     applet_iid = "TimerAppletFactory::TimerApplet"
