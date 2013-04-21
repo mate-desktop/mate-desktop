@@ -81,6 +81,12 @@ AC_ARG_ENABLE([desktop-docs],
 	[],[enable_desktop_docs=yes])
 AM_CONDITIONAL(DESKTOP_DOCS_ENABLED, test "x$enable_desktop_docs" = "xyes")
 
+# Install tool to migrate 1.4 MateConf settings
+AC_ARG_ENABLE([mate-conf-import],
+	[AS_HELP_STRING([--disable-mate-conf-import],[dont install mate-conf-import tool])],
+	[],[enable_mate_conf_import=yes])
+AM_CONDITIONAL(MATE_CONF_IMPORT_ENABLED, test "x$enable_mate_conf_import" = "xyes")
+
 # Path to the pnp.ids file -- to know if we use one shipped with another
 # package, or an internal file
 
@@ -301,6 +307,8 @@ desktop-docs/gpl/Makefile
 desktop-docs/lgpl/Makefile
 schemas/Makefile
 man/Makefile
+mate-conf/Makefile
+mate-conf/mate-conf-import.desktop.in
 ])
 
 AC_OUTPUT
@@ -330,6 +338,7 @@ mate-desktop $VERSION `echo mate-desktop $VERSION | sed "s/./=/g"`
     Build mate-about:             ${enable_mate_about}
     Use libunique:                ${enable_libunique}
     Build desktop-wide docs:      ${enable_desktop_docs}
+    Install mate-conf-import:     ${enable_mate_conf_import}
     Use external pnp.ids:         ${EXTERNAL_PNP_IDS}
     Startup notification support: ${have_startup_notification}
     XRandr support:               ${have_randr}

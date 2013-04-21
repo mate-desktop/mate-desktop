@@ -6,6 +6,9 @@ endif
 if DESKTOP_DOCS_ENABLED
 SUBDIRS += desktop-docs
 endif
+if MATE_CONF_IMPORT_ENABLED
+SUBDIRS += mate-conf
+endif
 
 ACLOCAL_AMFLAGS = -I m4
 
