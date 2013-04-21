@@ -452,6 +452,51 @@ if os.path.exists(mateconf_panel_file):
     # apply settings!
     panel_settings.apply()
 
+# ugly hack to migrate terminal default profile
+mateconf_terminal_file = os.path.join(mateconf_user_path, "apps/mate-terminal/profiles/Default", "%mateconf.xml")
+if os.path.exists(mateconf_terminal_file):
+
+    tree = ElementTree.parse(mateconf_terminal_file)
+    root = tree.getroot()
+
+    gsettings_schema = "org.mate.terminal.profile"
+    terminal_settings = Gio.Settings.new_with_path(gsettings_schema, "/org/mate/terminal/profiles/default/")
+    terminal_settings.delay()
+
+    for child in root:
+        # if the key exists, the user has a custom value
+        if 'name' in child.attrib:
+
+            gsettings_key = gsettings_id(child.attrib['name'])
+
+            # boolean
+            if child.attrib["type"] == "bool":
+                if child.attrib["value"] == "true":
+                    debug_message(gsettings_schema, gsettings_key, True)
+                    terminal_settings.set_boolean(gsettings_key, True)
+                else:
+                    debug_message(gsettings_schema, gsettings_key, False)
+                    terminal_settings.set_boolean(gsettings_key, False)
+
+            # int
+            elif child.attrib["type"] == "int":
+                debug_message(gsettings_schema, gsettings_key, int(child.attrib["value"]))
+                terminal_settings.set_int(gsettings_key, int(child.attrib["value"]))
+
+            # string
+            elif child.attrib["type"] == "string":
+
+                value = child[0].text
+                if value != None:
+                    debug_message(gsettings_schema, gsettings_key, value)
+                    terminal_settings.set_string(gsettings_key, value)
+
+            else:
+                debug_message("Unknown type", child.attrib["type"])
+
+    # apply settings!
+    terminal_settings.apply()
+
 # success!
 dialog = Gtk.MessageDialog (None,
                             Gtk.DialogFlags.MODAL,
