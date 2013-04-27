@@ -153,8 +153,8 @@
           g_timeout_add(gdk_pixbuf_animation_iter_get_delay_time(iter), (GSourceFunc) on_animation_frame, (gpointer) &animation_object);
         }
       }
+
     #elif GTK_CHECK_VERSION(3, 0, 0) || GTK_CHECK_VERSION(2, 6, 0) 
-    #if GTK_CHECK_VERSION(3, 0, 0) || GTK_CHECK_VERSION(2, 6, 0)
 
 			gtk_about_dialog_set_logo_icon_name(mate_about_dialog, icon);
 
