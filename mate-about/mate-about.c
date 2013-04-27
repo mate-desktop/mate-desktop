@@ -31,10 +31,41 @@
 	bind_textdomain_codeset(package, codeset); \
 	textdomain(package);
 #endif
+  // what a mess!
+  #ifdef ENABLE_GNUCAT
+
+  // Thanks! http://www.gtkforums.com/viewtopic.php?t=1639
+  typedef struct _iter_arg {
+    GtkWidget* widget;
+    GdkPixbufAnimation* animation;
+    GdkPixbufAnimationIter* iter;
+  } iter_arg_t;
+
+  gboolean on_animation_frame(iter_arg_t* object)
+  {
+    if (object->widget == NULL)
+    {
+      return FALSE;
+    }
+
+    static gint frame = 1;
+
+    if (gdk_pixbuf_animation_iter_advance(object->iter, NULL))
+    {
+      frame++;
+
+      gtk_about_dialog_set_logo((GtkAboutDialog*) object->widget, gdk_pixbuf_animation_iter_get_pixbuf(object->iter));
+    }
+
+    return TRUE;
+  }
+
+  #endif
 
 	#if GTK_CHECK_VERSION(3, 0, 0) && !defined(UNIQUE)
 
-	static void mate_about_on_activate(GtkApplication* app)
+
+ 	static void mate_about_on_activate(GtkApplication* app)
 	{
 		GList* list;
 		GtkWidget* window;
@@ -74,7 +105,56 @@
 
 		gtk_window_set_default_icon_name(icon);
 
-		#if GTK_CHECK_VERSION(3, 0, 0) || GTK_CHECK_VERSION(2, 6, 0)
+    #ifdef ENABLE_GNUCAT
+
+      /* check if it's christmas, to show a different image */
+      gboolean is_christmas = FALSE;
+
+      GDate* d = g_date_new();
+      g_date_set_time_t(d, (time_t) time(NULL));
+
+      if (g_date_get_month(d) == G_DATE_DECEMBER)
+      {
+        GDateDay day = g_date_get_day(d);
+
+        if (day >= 24 && day <=25)
+        {
+          is_christmas = TRUE;
+        }
+      }
+
+      g_date_free(d);
+
+      if (is_christmas == TRUE)
+      {
+        GdkPixbuf* pixbuf = gdk_pixbuf_new_from_file(PIXMAPS_DIR "gnu-cat_navideno_v3.png", NULL);
+        gtk_about_dialog_set_logo(mate_about_dialog, pixbuf);
+        g_object_unref(pixbuf);
+      }
+      else
+      {
+        iter_arg_t animation_object;
+        GdkPixbufAnimation* animation;
+        GdkPixbufAnimationIter *iter;
+        GtkWidget* image;
+
+        animation = gdk_pixbuf_animation_new_from_file(PIXMAPS_DIR "gnu-cat.gif", NULL);
+
+        if (animation != NULL)
+        {
+          iter = gdk_pixbuf_animation_get_iter(animation, NULL);
+
+          animation_object.animation = animation;
+          animation_object.iter = iter;
+          animation_object.widget = (GtkWidget*) mate_about_dialog;
+
+          gtk_about_dialog_set_logo(mate_about_dialog, gdk_pixbuf_animation_iter_get_pixbuf(iter));
+
+          g_timeout_add(gdk_pixbuf_animation_iter_get_delay_time(iter), (GSourceFunc) on_animation_frame, (gpointer) &animation_object);
+        }
+      }
+    #elif GTK_CHECK_VERSION(3, 0, 0) || GTK_CHECK_VERSION(2, 6, 0) 
+    #if GTK_CHECK_VERSION(3, 0, 0) || GTK_CHECK_VERSION(2, 6, 0)
 
 			gtk_about_dialog_set_logo_icon_name(mate_about_dialog, icon);
 
