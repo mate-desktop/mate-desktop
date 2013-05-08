@@ -30,10 +30,12 @@
 	#include <unique/unique.h>
 #endif
 
+//class mate-about
+//{
 	const char* program_name = "MATE Desktop Environment";
 	const char* version = PACKAGE_VERSION;
 	const char* icon = "desktop";
-	const char* website = "http://www.mate-desktop.org/";
+	const char* website = "http://mate-desktop.org/";
 
 	const char* copyright =  ""
 		"Copyright © 1997-2011 GNOME developers\n"
@@ -628,6 +630,9 @@
 	const char* artists[] = {
 		"Marcel Dijkstra <marcel.dykstra@gmail.com>",
 		"Rowen Stipe <rowen.stipe@gmail.com>",
+		#ifdef GNUCAT_ENABLED
+		    "/g/entoomen (https://boards.4chan.org/g/)",
+		#endif
 		"Wolfgang Ulbrich <chat-to-me@raveit.de>",
 		NULL
 	};
@@ -665,5 +670,6 @@
 		{"version", 'v', 0, G_OPTION_ARG_NONE, &mate_about_nogui, "Show MATE version", NULL},
 		{NULL}
 	};
+//}
 
 #endif /* __MATE_ABOUT_H__ */
