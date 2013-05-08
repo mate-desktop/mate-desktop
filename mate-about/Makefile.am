@@ -11,6 +11,12 @@ AM_CPPFLAGS = \
 
 @INTLTOOL_DESKTOP_RULE@
 
+
+if GNUCAT_ENABLED
+pixmapdir  = $(datadir)/pixmaps
+pixmap_DATA = gnu-cat_navideno_v3.png gnu-cat.gif
+endif 
+
 desktopdir = $(datadir)/applications
 desktop_in_files = mate-about.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
