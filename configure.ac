@@ -189,7 +189,7 @@ PKG_CHECK_MODULES(XLIB, x11,
     [X11_PACKAGE=
      AC_PATH_XTRA
      if test "x$no_x" = xyes; then
-       AC_MSG_ERROR([no (requires X development libraries)])
+       AC_MSG_ERROR("no (requires X development libraries)")
      else
        XLIB_LIBS="$X_PRE_LIBS $X_LIBS -lX11 $X_EXTRA_LIBS"
        XLIB_CFLAGS=$X_CFLAGS
@@ -226,20 +226,6 @@ AC_SUBST(MATE_ABOUT_LIBS)
 dnl mate-doc-utils stuff
 
 MATE_DOC_INIT
-
-
-dnl GNU MATE logo
-
-AC_ARG_ENABLE([gnucat],
-               [AS_HELP_STRING([--enable-gnucat], [enable the use of gnu cat as logo in mate-about])],
-               [enable_gnucat=yes], [enable_gnucat=no])
-
-if test "x$enable_gnucat" = "xyes"; then
-	MATE_ABOUT_CFLAGS="$MATE_ABOUT_CFLAGS -DGNUCAT_ENABLED=1"
-fi
-
-AM_CONDITIONAL(GNUCAT_ENABLED, test "x$enable_gnucat" = "xyes") 
-
 
 dnl Language Support
 
@@ -357,6 +343,4 @@ mate-desktop $VERSION `echo mate-desktop $VERSION | sed "s/./=/g"`
     Startup notification support: ${have_startup_notification}
     XRandr support:               ${have_randr}
     Build gtk-doc documentation:  ${enable_gtk_doc}
-
-    Enable gnucat:                ${enable_gnucat}
 "
