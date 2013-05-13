@@ -140,7 +140,9 @@
 
 		mate_gettext(GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
 
+		#if !GLIB_CHECK_VERSION (2, 36, 0)
 		g_type_init();
+		#endif
 
 		/* http://www.gtk.org/api/2.6/glib/glib-Commandline-option-parser.html */
 		GOptionContext* context = g_option_context_new(NULL);
