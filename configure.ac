@@ -83,8 +83,8 @@ AM_CONDITIONAL(DESKTOP_DOCS_ENABLED, test "x$enable_desktop_docs" = "xyes")
 
 # Install tool to migrate 1.4 MateConf settings
 AC_ARG_ENABLE([mate-conf-import],
-	[AS_HELP_STRING([--disable-mate-conf-import],[dont install mate-conf-import tool])],
-	[],[enable_mate_conf_import=yes])
+	[AS_HELP_STRING([--enable-mate-conf-import],[install mate-conf-import tool])],
+	[enable_mate_conf_import=yes],[enable_mate_conf_import=no])
 AM_CONDITIONAL(MATE_CONF_IMPORT_ENABLED, test "x$enable_mate_conf_import" = "xyes")
 
 # Path to the pnp.ids file -- to know if we use one shipped with another
