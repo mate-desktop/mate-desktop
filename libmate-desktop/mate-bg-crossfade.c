@@ -45,6 +45,10 @@
 #define cairo_surface_destroy g_object_unref
 #endif
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+#define GDK_WINDOW_TYPE(d) (gdk_window_get_window_type (GDK_WINDOW (d)))
+#endif
+
 struct _MateBGCrossfadePrivate
 {
 	GdkWindow       *window;

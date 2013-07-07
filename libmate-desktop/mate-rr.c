@@ -673,7 +673,11 @@ mate_rr_screen_new (GdkScreen *gdk_screen,
 	
 	screen->gdk_screen = gdk_screen;
 	screen->gdk_root = gdk_screen_get_root_window (gdk_screen);
+	#if GTK_CHECK_VERSION(3, 0, 0)
+	screen->xroot = gdk_x11_window_get_xid (screen->gdk_root);
+	#else
 	screen->xroot = gdk_x11_drawable_get_xid (screen->gdk_root);
+	#endif
 	screen->xdisplay = dpy;
 	screen->xscreen = gdk_x11_screen_get_xscreen (screen->gdk_screen);
 	screen->connector_type_atom = XInternAtom (dpy, "ConnectorType", FALSE);
