@@ -223,9 +223,9 @@ PKG_CHECK_MODULES(MATE_ABOUT, gtk+-$GTK_API_VERSION >= $GTK_REQUIRED)
 AC_SUBST(MATE_ABOUT_CFLAGS)
 AC_SUBST(MATE_ABOUT_LIBS)
 
-dnl mate-doc-utils stuff
+dnl yelp-tools stuff
 
-MATE_DOC_INIT
+YELP_HELP_INIT
 
 dnl Language Support
 

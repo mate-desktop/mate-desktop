@@ -1,10 +1,7 @@
-include $(top_srcdir)/mate-doc-utils.make
-dist-hook: doc-dist-hook
+@YELP_HELP_RULES@
 
-DOC_MODULE = fdl
-DOC_ENTITIES = 
-DOC_INCLUDES = 
-
-DOC_LINGUAS = ar ca el es eu fr hu ko oc pl sv uk vi de
+HELP_ID = fdl
+HELP_FILES = index.docbook
+HELP_LINGUAS = ar ca el es eu fr hu ko oc pl sv uk vi de
 
 -include $(top_srcdir)/git.mk

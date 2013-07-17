@@ -25,8 +25,7 @@ EXTRA_DIST =			\
 	COPYING-DOCS		\
 	HACKING			\
 	MAINTAINERS		\
-	mate-version.xml.in.in  \
-	mate-doc-utils.make
+	mate-version.xml.in.in
 
 CLEANFILES = \
 	$(version_DATA)
@@ -44,7 +43,6 @@ MAINTAINERCLEANFILES = \
 	`find "$(srcdir)" -type f -name Makefile.in -print` \
 	$(srcdir)/configure \
 	$(srcdir)/gtk-doc.make \
-	$(srcdir)/m4/mate-doc-utils.m4 \
 	$(srcdir)/m4/gtk-doc.m4 \
 	$(srcdir)/m4/intltool.m4
 
