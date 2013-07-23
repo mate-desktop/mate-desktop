@@ -35,8 +35,8 @@
 #include <cairo-xlib.h>
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
-#include <libmateui/mate-bg.h>
-#include "libmateui/mate-bg-crossfade.h"
+#include <mate-bg.h>
+#include "mate-bg-crossfade.h"
 
 #if !GTK_CHECK_VERSION(3, 0, 0)
 #define cairo_surface_t GdkPixmap

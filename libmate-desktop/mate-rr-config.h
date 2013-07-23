@@ -28,7 +28,7 @@
 #error   mate-rr-config.h is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including mate-rr-config.h
 #endif
 
-#include <libmateui/mate-rr.h>
+#include <mate-rr.h>
 #include <glib.h>
 
 typedef struct MateOutputInfo MateOutputInfo;

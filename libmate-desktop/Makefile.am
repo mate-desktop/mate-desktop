@@ -1,4 +1,13 @@
-SUBDIRS = libmate libmateui
+libmate_desktopdir = $(includedir)/mate-desktop-2.0/
+libmate_desktop_HEADERS = \
+	mate-desktop-utils.h \
+	mate-desktop-item.h \
+	mate-bg.h			\
+	mate-bg-crossfade.h		\
+	mate-desktop-thumbnail.h	\
+	mate-rr.h			\
+	mate-rr-config.h		\
+	mate-rr-labeler.h
 
 lib_LTLIBRARIES = libmate-desktop-2.la
 

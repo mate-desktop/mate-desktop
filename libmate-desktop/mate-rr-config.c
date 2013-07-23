@@ -35,7 +35,7 @@
 #include <gdk/gdkx.h>
 
 #undef MATE_DISABLE_DEPRECATED
-#include "libmateui/mate-rr-config.h"
+#include "mate-rr-config.h"
 
 #include "edid.h"
 #include "mate-rr-private.h"

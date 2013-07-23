@@ -20,7 +20,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include <libmate/mate-desktop-item.h>
+#include <mate-desktop-item.h>
 
 #include <locale.h>
 #include <stdlib.h>

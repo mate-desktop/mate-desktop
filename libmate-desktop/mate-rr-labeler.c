@@ -29,7 +29,7 @@
 
 #include <config.h>
 #include <glib/gi18n-lib.h>
-#include "libmateui/mate-rr-labeler.h"
+#include "mate-rr-labeler.h"
 #include <gtk/gtk.h>
 
 #include <X11/Xproto.h>

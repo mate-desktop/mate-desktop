@@ -41,7 +41,7 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
-#include "libmateui/mate-desktop-thumbnail.h"
+#include "mate-desktop-thumbnail.h"
 #include <glib/gstdio.h>
 #include <glib-unix.h>
 

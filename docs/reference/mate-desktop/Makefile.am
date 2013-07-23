@@ -42,7 +42,7 @@ FIXXREF_OPTIONS=
 # Used for dependencies. The docs will be rebuilt if any of these change.
 # e.g. HFILE_GLOB=$(top_srcdir)/gtk/*.h
 # e.g. CFILE_GLOB=$(top_srcdir)/gtk/*.c
-HFILE_GLOB=$(top_srcdir)/libmate-desktop/libmate/*.h $(top_srcdir)/libmate-desktop/libmateui/*.h
+HFILE_GLOB=$(top_srcdir)/libmate-desktop/*.h
 CFILE_GLOB=$(top_srcdir)/libmate-desktop/*.c
 
 # Header files to ignore when scanning.

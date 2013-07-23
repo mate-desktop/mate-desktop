@@ -33,8 +33,8 @@
 
 #include <gdk/gdk.h>
 #include <gio/gio.h>
-#include <libmateui/mate-desktop-thumbnail.h>
-#include <libmateui/mate-bg-crossfade.h>
+#include <mate-desktop-thumbnail.h>
+#include <mate-bg-crossfade.h>
 
 #ifdef __cplusplus
 extern "C" {

@@ -30,7 +30,7 @@
 #include <glib.h>
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
-#include "libmateui/mate-desktop-thumbnail.h"
+#include "mate-desktop-thumbnail.h"
 
 #define LOAD_BUFFER_SIZE 65536
 

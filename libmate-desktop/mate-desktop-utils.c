@@ -30,7 +30,7 @@
 #include <glib/gi18n-lib.h>
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
-#include <libmate/mate-desktop-utils.h>
+#include <mate-desktop-utils.h>
 
 #include "private.h"
 

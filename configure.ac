@@ -292,8 +292,6 @@ Makefile
 mate-about/Makefile
 mate-about/mate-about.desktop.in
 libmate-desktop/Makefile
-libmate-desktop/libmate/Makefile
-libmate-desktop/libmateui/Makefile
 libmate-desktop/mate-desktop-2.0.pc
 libmate-desktop/mate-desktop-2.0-uninstalled.pc
 docs/Makefile

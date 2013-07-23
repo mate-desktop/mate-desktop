@@ -38,7 +38,7 @@
 #include <X11/Xatom.h>
 
 #undef MATE_DISABLE_DEPRECATED
-#include "libmateui/mate-rr.h"
+#include "mate-rr.h"
 
 #include "private.h"
 #include "mate-rr-private.h"
