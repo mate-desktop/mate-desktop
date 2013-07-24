@@ -30,7 +30,7 @@ libmate_desktop_2_la_SOURCES = \
 	mate-desktop-utils.c	\
 	mate-desktop-thumbnail.c \
 	mate-thumbnail-pixbuf-utils.c \
-	mate-dconf.h \
+	mate-dconf.c \
 	mate-bg.c		\
 	mate-bg-crossfade.c	\
 	display-name.c		\
