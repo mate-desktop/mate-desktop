@@ -2,6 +2,7 @@ libmate_desktopdir = $(includedir)/mate-desktop-2.0/
 libmate_desktop_HEADERS = \
 	mate-desktop-utils.h \
 	mate-desktop-item.h \
+	mate-dconf.h \
 	mate-bg.h			\
 	mate-bg-crossfade.h		\
 	mate-desktop-thumbnail.h	\
@@ -14,6 +15,7 @@ lib_LTLIBRARIES = libmate-desktop-2.la
 AM_CPPFLAGS =							\
 	$(MATE_DESKTOP_CFLAGS)					\
 	$(XLIB_CFLAGS)						\
+	$(DCONF_CFLAGS)						\
 	-DG_LOG_DOMAIN=\"MateDesktop\"				\
 	-DMATELOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale\""	\
 	-DPNP_IDS=\""$(PNP_IDS)"\"				\
@@ -28,6 +30,7 @@ libmate_desktop_2_la_SOURCES = \
 	mate-desktop-utils.c	\
 	mate-desktop-thumbnail.c \
 	mate-thumbnail-pixbuf-utils.c \
+	mate-dconf.h \
 	mate-bg.c		\
 	mate-bg-crossfade.c	\
 	display-name.c		\
@@ -41,7 +44,8 @@ libmate_desktop_2_la_SOURCES = \
 
 libmate_desktop_2_la_LIBADD =	\
 	$(XLIB_LIBS)		\
-	$(MATE_DESKTOP_LIBS)
+	$(MATE_DESKTOP_LIBS)	\
+	$(DCONF_LIBS)
 
 libmate_desktop_2_la_LDFLAGS = \
 	-version-info $(LT_VERSION) \

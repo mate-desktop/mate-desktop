@@ -144,6 +144,22 @@ AC_SUBST(GIO_REQUIRED)
 AC_SUBST(XRANDR_REQUIRED)
 
 dnl ----------------------------------------------------------------------------
+dnl DCONF
+dnl ----------------------------------------------------------------------------
+
+DCONF_NEW_REQUIRED=0.13.4
+DCONF_OLD_REQUIRED=0.10.0
+
+PKG_CHECK_MODULES([DCONF], [dconf >= $DCONF_NEW_REQUIRED],
+   [AC_DEFINE([HAVE_DCONF_0_13], [1], [Use DCONF >= $DCONF_NEW_REQUIRED])],
+   [PKG_CHECK_MODULES([DCONF], [dconf >= $DCONF_OLD_REQUIRED],
+       [AC_DEFINE([HAVE_DCONF_0_10], [1], [Use DCONF $DCONF_OLD_REQUIRED])
+    ])
+])
+AC_SUBST(DCONF_CFLAGS)
+AC_SUBST(DCONF_LIBS)
+
+dnl ----------------------------------------------------------------------------
 dnl startup notification
 dnl ----------------------------------------------------------------------------
 STARTUP_NOTIFICATION_VERSION=0.5
