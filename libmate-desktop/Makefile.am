@@ -1,4 +1,4 @@
-libmate_desktopdir = $(includedir)/mate-desktop-2.0/
+libmate_desktopdir = $(includedir)/mate-desktop-2.0/libmate-desktop
 libmate_desktop_HEADERS = \
 	mate-desktop-utils.h \
 	mate-desktop-item.h \
