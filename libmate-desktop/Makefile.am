@@ -3,6 +3,7 @@ libmate_desktop_HEADERS = \
 	mate-desktop-utils.h \
 	mate-desktop-item.h \
 	mate-dconf.h \
+	mate-gsettings.h \
 	mate-bg.h			\
 	mate-bg-crossfade.h		\
 	mate-desktop-thumbnail.h	\
@@ -31,6 +32,7 @@ libmate_desktop_2_la_SOURCES = \
 	mate-desktop-thumbnail.c \
 	mate-thumbnail-pixbuf-utils.c \
 	mate-dconf.c \
+	mate-gsettings.c \
 	mate-bg.c		\
 	mate-bg-crossfade.c	\
 	display-name.c		\
