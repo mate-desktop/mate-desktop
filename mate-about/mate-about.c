@@ -72,24 +72,18 @@
 	{
 		mate_about_dialog = (GtkAboutDialog*) gtk_about_dialog_new();
 
-		gtk_window_set_default_icon_name(icon);
+		gtk_window_set_default_icon_name(desktop_icon);
 
-		#if GTK_CHECK_VERSION(3, 0, 0) || GTK_CHECK_VERSION(2, 6, 0)
+		GtkIconTheme* icon_theme = gtk_icon_theme_get_default();
 
+		if (gtk_icon_theme_has_icon(icon_theme, icon))
+		{
 			gtk_about_dialog_set_logo_icon_name(mate_about_dialog, icon);
-
-		#else
-
-			GtkIconTheme* icon_theme = gtk_icon_theme_get_default();
-
-			if (gtk_icon_theme_has_icon(icon_theme, icon))
-			{
-				GdkPixbuf* pixbuf = gtk_icon_theme_load_icon(icon_theme, icon, 64, 0, NULL);
-				gtk_about_dialog_set_logo(mate_about_dialog, pixbuf);
-				g_object_unref(pixbuf);
-			}
-
-		#endif
+		}
+		else
+		{
+			gtk_about_dialog_set_logo_icon_name(mate_about_dialog, desktop_icon);
+		}
 
 		// name
 		#if GTK_CHECK_VERSION(3, 0, 0) || GTK_CHECK_VERSION(2, 12, 0)
