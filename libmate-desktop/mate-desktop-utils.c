@@ -163,6 +163,53 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 #endif
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+/**
+ * mate_gdk_spawn_command_line_on_screen:
+ * @screen: a GdkScreen
+ * @command: a command line
+ * @error: return location for errors
+ *
+ * This is a replacement for gdk_spawn_command_line_on_screen, removed
+ * in GTK3.
+ *
+ * gdk_spawn_command_line_on_screen is like g_spawn_command_line_async(),
+ * except the child process is spawned in such an environment that on
+ * calling gdk_display_open() it would be returned a GdkDisplay with
+ * screen as the default screen.
+ *
+ * This is useful for applications which wish to launch an application
+ * on a specific screen.
+ *
+ * Returns: TRUE on success, FALSE if error is set.
+ *
+ * Since: 1.7.1
+ **/
+gboolean
+mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error)
+{
+	GAppInfo *appinfo = NULL;
+	GdkAppLaunchContext *context = NULL;
+
+	appinfo = g_app_info_create_from_commandline (command, NULL, G_APP_INFO_CREATE_NONE, &error);
+
+	if (!error) {
+		context = gdk_app_launch_context_new ();
+		gdk_app_launch_context_set_screen (context, screen);
+		g_app_info_launch (appinfo, NULL, G_APP_LAUNCH_CONTEXT (context), &error);
+		g_object_unref (context);
+	}
+
+	if (appinfo != NULL)
+		g_object_unref (appinfo);
+
+	if (!error)
+		return TRUE;
+	else
+		return FALSE;
+}
+#endif
+
 void
 _mate_desktop_init_i18n (void) {
 	static gboolean initialized = FALSE;

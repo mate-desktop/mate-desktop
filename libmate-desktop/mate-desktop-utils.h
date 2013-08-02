@@ -44,6 +44,11 @@ extern "C" {
 /* prepend the terminal command to a vector */
 void mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+/* replace gdk_spawn_command_line_on_screen, not available in GTK3 */
+gboolean mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error);
+#endif
+
 #ifdef __cplusplus
 }
 #endif
