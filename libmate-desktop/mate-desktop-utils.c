@@ -191,12 +191,12 @@ mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, 
 	GAppInfo *appinfo = NULL;
 	GdkAppLaunchContext *context = NULL;
 
-	appinfo = g_app_info_create_from_commandline (command, NULL, G_APP_INFO_CREATE_NONE, &error);
+	appinfo = g_app_info_create_from_commandline (command, NULL, G_APP_INFO_CREATE_NONE, error);
 
 	if (!error) {
 		context = gdk_app_launch_context_new ();
 		gdk_app_launch_context_set_screen (context, screen);
-		g_app_info_launch (appinfo, NULL, G_APP_LAUNCH_CONTEXT (context), &error);
+		g_app_info_launch (appinfo, NULL, G_APP_LAUNCH_CONTEXT (context), error);
 		g_object_unref (context);
 	}
 
