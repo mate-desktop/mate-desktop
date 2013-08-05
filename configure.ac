@@ -80,6 +80,11 @@ AC_ARG_ENABLE([desktop-docs],
 	[AS_HELP_STRING([--disable-desktop-docs],[do not build desktop-wide help documents])],
 	[],[enable_desktop_docs=yes])
 AM_CONDITIONAL(DESKTOP_DOCS_ENABLED, test "x$enable_desktop_docs" = "xyes")
+AC_ARG_ENABLE([user-guide],
+	[AS_HELP_STRING([--disable-user-guide],[do not build user guide])],
+	[],[enable_user_guide=yes])
+AM_CONDITIONAL(USER_GUIDE_ENABLED, test "x$enable_user_guide" = "xyes")
+
 
 # Install tool to migrate 1.4 MateConf settings
 AC_ARG_ENABLE([mate-conf-import],
@@ -323,6 +328,7 @@ schemas/Makefile
 man/Makefile
 mate-conf/Makefile
 mate-conf/mate-conf-import.desktop.in
+user-guide/Makefile
 ])
 
 AC_OUTPUT
@@ -352,6 +358,7 @@ mate-desktop $VERSION `echo mate-desktop $VERSION | sed "s/./=/g"`
     Build mate-about:             ${enable_mate_about}
     Use libunique:                ${enable_libunique}
     Build desktop-wide docs:      ${enable_desktop_docs}
+    Build user guide:             ${enable_user_guide}
     Install mate-conf-import:     ${enable_mate_conf_import}
     Use external pnp.ids:         ${EXTERNAL_PNP_IDS}
     Startup notification support: ${have_startup_notification}

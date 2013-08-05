@@ -1,0 +1,1065 @@
+<!-- -*- indent-tabs-mode: nil -*- -->
+<chapter id="tools">
+  <title>Tools and Utilities</title>
+
+  <highlights>
+    <para>This section describes some of the tools and utilities in the MATE Desktop.</para>
+  </highlights>
+
+  <section id="tools-run-app">
+    <title>Running Applications</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="gospanel-23"/>
+    <indexterm>
+      <primary>Run Application dialog, using</primary>
+    </indexterm>
+    <para>
+      The <guilabel>Run Application</guilabel> dialog gives you access to the command
+      line. When you run a command in the <guilabel>Run Application</guilabel> dialog,
+      you cannot receive output from the command.
+    </para>
+    <para>
+    To run a command from the command line perform the following steps:</para>
+    <orderedlist>
+      <listitem>
+        <para>Open the <guilabel>Run Application</guilabel> dialog in any of the
+        following ways:
+        <variablelist>
+          <varlistentry><term>From a panel</term>
+          <listitem><para>You can add the <application>Run Application</application> button to any 
+          panel. See <xref linkend="panels-addobject"/>. Click on the <guibutton>Run Application</guibutton> 
+          panel button to open the <guilabel>Run Application</guilabel> dialog.</para></listitem></varlistentry>
+          <varlistentry><term>Using shortcut keys</term>
+          <listitem>
+            <para>
+              Press <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>. You can change 
+              the shortcut keys that display the <guilabel>Run Application</guilabel> dialog
+              in the <link linkend="prefs-keyboard-shortcuts"><application>Keyboard Shortcuts</application> 
+            preference tool</link>.</para>
+          </listitem>
+          </varlistentry>
+        </variablelist>
+      </para>
+      <para>The <guilabel>Run Application</guilabel> dialog is displayed.</para>
+    </listitem>
+    <listitem>
+      <para>Enter the command that you want to run in the blank field, or choose from the list of known applications.</para>
+      <para>If you enter only the location of a file, an appropriate application will launch to open it.
+      If you enter a web page address, your default web browser will open the page. Prefix the web page address with http://, as in http://www.gnome.org.
+      </para>
+      <para>
+        To choose a command that you ran previously, click the
+        down arrow button beside the command field, then choose the command to run.
+      </para>
+      <para>
+      You can also use the <guibutton>Run with file</guibutton> button to
+      choose a file to append to the command line. For example, you can enter 
+      <application>emacs</application> as the command, then choose a file to edit.
+      </para>
+      <para>Select the <guilabel>Run in terminal</guilabel> option to run the application
+      or command in a terminal window. Choose this option for an application or
+      command that does not create a window in which to run.</para>
+    </listitem>
+    <listitem>
+      <para>Click on the <guibutton>Run</guibutton> button on the <guilabel>Run Application</guilabel> dialog. </para>
+    </listitem>
+      </orderedlist>
+    </section>
+
+<section id="tools-screenshot">
+  <title>Taking Screenshots</title>
+  <!-- preserve id for backwards compatibility: 2.12 -->
+  <anchor id="goseditmainmenu-53"/>   
+  <indexterm>
+    <primary>screenshots, taking</primary>
+  </indexterm>
+  <para>You can take a screenshot in any of the following ways:</para>
+  <itemizedlist>
+    <listitem>
+      <para>From any panel</para>
+      <para>You can add a <guibutton>Take Screenshot</guibutton> button to any panel. For instructions on how to do this, see <xref linkend="panels-addobject"/>. Click on the <guibutton>Take Screenshot</guibutton> button to take
+a screenshot of the entire screen.</para>
+    </listitem>
+    <listitem>
+      <para>Use shortcut keys</para>
+      <para>To take a screenshot, use the following shortcut keys:</para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.67*"/>
+          <colspec colname="colspec1" colwidth="64.33*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Default Shortcut Keys</para>
+              </entry>
+              <entry>
+                <para>Function</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <keycap>Print Screen</keycap>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Takes a screenshot of the entire screen.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para><keycombo><keycap>Alt</keycap><keycap>Print Screen</keycap></keycombo></para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Takes a screenshot of the window which is active.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+      <para>You can use the <link linkend="prefs-keyboard-shortcuts"><application>Keyboard Shortcuts</application> 
+      preference tool</link> to modify the default shortcut keys.</para>
+    </listitem>
+    <listitem>
+      <para>From the Menubar</para>
+      <para>Choose <menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem>
+      <guimenuitem>Take Screenshot</guimenuitem></menuchoice>.</para>
+    </listitem>
+    <listitem>
+      <para>From the Terminal</para>
+      <para>
+        You can use the <command>mate-screenshot</command> command to
+        take a screenshot. The <command>mate-screenshot</command> command takes
+        a screenshot of the entire screen, and displays the <guilabel>Save Screenshot</guilabel> 
+        dialog. Use the <guilabel>Save Screenshot</guilabel> dialog to save the screenshot.
+      </para>
+      <para>
+        You can also use options on the <command>mate-screenshot</command> command 
+        as follows: 
+      </para>
+      <informaltable frame="topbot">
+        <tgroup cols="2" colsep="0" rowsep="0">
+          <colspec colname="colspec0" colwidth="35.67*"/>
+          <colspec colname="colspec1" colwidth="64.33*"/>
+          <thead>
+            <row rowsep="1">
+              <entry>
+                <para>Option</para>
+              </entry>
+              <entry>
+                <para>Function</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>--window</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Takes a screenshot of the window that has focus.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>--delay=<replaceable>seconds</replaceable></command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>
+                  Takes a screenshot after the specified number of seconds, 
+                and displays the <guilabel>Save Screenshot</guilabel> dialog. 
+                Use the <guilabel>Save Screenshot</guilabel> dialog to save 
+                the screenshot.
+                </para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>--include-border</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Takes a screenshot including the border of the window.</para>
+              </entry>
+            </row>                                  
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>--remove-border</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Takes a screenshot without the border of the window.</para>
+              </entry>
+            </row>                                  
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>--border-effect=shadow</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Takes a screenshot and adds a shadow bevel effect around it.</para>
+              </entry>
+            </row>                                  
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>--border-effect=border</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Takes a screenshot and adds a border effect around it.</para>
+              </entry>
+            </row>                                  
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>--interactive</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Opens a window that lets you set options before taking the screenshot.</para>
+              </entry>
+            </row>
+            <row>
+              <entry colname="colspec0" valign="top">
+                <para>
+                  <command>--help</command>
+                </para>
+              </entry>
+              <entry colname="colspec1" valign="top">
+                <para>Displays the options for the command.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </listitem>
+  </itemizedlist>
+
+  <para>
+  When you take a screenshot, the <guilabel>Save Screenshot</guilabel> dialog 
+  opens. To save the screenshot as an image file, enter the filename for the 
+  screenshot, choose a location from the drop-down list and click the <guilabel>Save</guilabel> button. You can also use the <guilabel>Copy to Clipboard</guilabel> button to copy the image to the clipboard or transfer it to another application by drag-and-drop.
+  </para>
+  
+</section>
+
+<!-- ============= Yelp ============================= -->
+<section id="yelp">
+  <title>Yelp Help Browser</title>
+  <indexterm>
+    <primary>Yelp</primary>
+  </indexterm>
+  <!-- ============= Introduction ============================== -->
+
+  <section id="yelp-introduction">
+    <title>Introduction</title>
+
+    <para>The <application>Yelp Help Browser</application> application allows you to view documentation
+    regarding MATE and other components through a variety of formats. These
+    formats include docbook files, HTML help pages, man pages and info pages
+    (support for man pages and info pages may optionally be compiled in).
+    Despite the different formats supported, Yelp does its best to provide a
+    unified look and feel regardless of the original document format.</para>
+
+    <para><application>Yelp Help Browser</application> is internationalised, meaning that it has support
+    to view documents in different languages. The documents must be localised
+    or translated for each language and installed properly for Yelp Help
+    Browser to be able to view them.</para>
+  </section>
+
+  <!-- ============= Getting Started  ================================ -->
+
+  <section id="yelp-getting-started">
+    <title>Starting Yelp</title>
+
+    <section>
+      <title>To Start <application>Yelp Help Browser</application></title>
+
+      <para>You can start <application>Yelp Help Browser</application> in the following ways:</para>
+
+      <para><variablelist>
+          <varlistentry>
+            <term><guimenu>System</guimenu> Menu</term>
+
+            <listitem>
+              <para>Choose <application>Help</application></para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term>Command Line</term>
+
+            <listitem>
+              <para>Execute the following command:
+              <command>yelp</command></para>
+            </listitem>
+          </varlistentry>
+        </variablelist></para>
+    </section>
+
+    <section>
+      <title>Interface</title>
+
+      <para>When you start <application>Yelp Help Browser</application>, you will see the following
+      window appear.</para>
+
+      <para><figure id="fig-yelp-window">
+          <title><application>Yelp Help Browser</application> Window</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/yelp_window.png" />
+            </imageobject>
+          </mediaobject>
+        </figure><application>Yelp Help Browser</application> contains the following elements in <xref
+      linkend="fig-yelp-window" /></para>
+
+      <variablelist>
+        <varlistentry>
+          <term><interface>Menubar</interface></term>
+
+          <listitem>
+            <para><variablelist>
+                <varlistentry>
+                  <term><guimenu>File</guimenu></term>
+
+                  <listitem>
+                    <para>Use this menu to Open a New Window, view the About
+                    this Document page, Print the current document, or Close
+                    the window.</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><guimenu>Edit</guimenu></term>
+
+                  <listitem>
+                    <para>Use this menu to Copy, Select all, Find..., or to
+                    set your Preferences.</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><guimenu>Go</guimenu></term>
+
+                  <listitem>
+                    <para>Use this menu to navigate Back, Forward, to the Help
+                    Topics page. When viewing a DocBook document, use this
+                    menu to navigate to the Next Section, Previous Section or
+                    to the Contents.</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><guimenu>Bookmarks</guimenu></term>
+
+                  <listitem>
+                    <para>Use this menu to Add Bookmark(s), or Edit
+                    Bookmark(s).</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><guimenu>Help</guimenu></term>
+
+                  <listitem>
+                    <para>View information about Yelp Help Browser and
+                    contributors to the project through the
+                    <guimenuitem>About</guimenuitem> menuitem. Open this
+                    document with the <guimenuitem>Contents</guimenuitem>
+                    menuitem or by pressing <keycap>F1</keycap>.</para>
+                  </listitem>
+                </varlistentry>
+              </variablelist></para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Toolbar</interface></term>
+
+          <listitem>
+            <para><variablelist>
+                <varlistentry>
+                  <term><guibutton>Back</guibutton></term>
+
+                  <listitem>
+                    <para>Use this button to navigate back in your document
+                    history.</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><guibutton>Forward</guibutton></term>
+
+                  <listitem>
+                    <para>Use this button to navigate forward in your document
+                    history.</para>
+                  </listitem>
+                </varlistentry>
+
+                <varlistentry>
+                  <term><guibutton>Help Topics</guibutton></term>
+
+                  <listitem>
+                    <para>Use this button to return to the main table of
+                    contents (shown in <xref linkend="fig-yelp-window" />).</para>
+                  </listitem>
+                </varlistentry>
+              </variablelist></para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry id="yelp-browser-pane" xreflabel="Yelp Browser Pane">
+          <term><interface>Browser Pane</interface></term>
+
+          <listitem>
+            <para>The browser pane is where you will be presented with the
+            table of contents or the documentation. Use the table of contents
+            to navigate to the documentation you need.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </section>
+  </section>
+
+  <!--===================== Usage ========================-->
+
+  <section id="yelp-usage">
+    <title>Using Yelp</title>
+
+    <section>
+      <title>Open a Document</title>
+
+      <para>To open a document in <application>Yelp Help Browser</application>:
+	  
+	  <itemizedlist>
+		<listitem>
+			<para>In an application, click <menuchoice>
+                <guimenu>Help</guimenu>
+
+                <guimenuitem>Contents</guimenuitem>
+              </menuchoice>
+			  </para>
+		</listitem>	  
+		<listitem>
+			<para>Use the Table of Contents to navigate to the desired document.</para>
+		</listitem>
+		<listitem>
+			<para>You can drag a Docbook XML file from Caja to the Yelp window or launcher.</para>
+		</listitem>
+		<listitem>
+			<para>Press the <keycap>F1</keycap> key.</para>
+		</listitem>		
+	  
+	  </itemizedlist></para>
+	  
+      <para>Alternatively, you may view a particular document by invoking Yelp
+      Help Browser from the command line or dragging files to Yelp. See <xref
+      linkend="yelp-open-specific" /> for more on this.</para>
+    </section>
+
+    <section>
+      <title>Open a New Window</title>
+
+      <para>To open a new window:</para>
+	  
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>File</guimenu>
+
+                <guimenuitem>New Window</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+
+    <section>
+      <title>About This Document</title>
+
+      <para>To view information about the currently open document:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>File</guimenu>
+
+                <guimenuitem>About This Document</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+        </itemizedlist><note>
+          <para>This option is only available for DocBook documentation. Legal
+          notices and documentation contributors are usually listed in this
+          section.</para>
+        </note></para>
+    </section>
+
+    <section>
+      <title>Print a Page</title>
+
+      <para>To print any page that you are able to view in <application>Yelp Help Browser</application>:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>File</guimenu>
+
+                <guimenuitem>Print this Page</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+
+    <section>
+      <title>Print a Document</title>
+
+      <para>To print an entire document:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>File</guimenu>
+
+                <guimenuitem>Print this Document</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+        </itemizedlist><note>
+          <para>This option is only available for DocBook
+          documentation.</para>
+        </note></para>
+    </section>
+
+    <section>
+      <title>Close a Window</title>
+
+      <para>To close a window in <application>Yelp Help Browser</application>, do the following:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>File</guimenu>
+
+                <guimenuitem>Close Window</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+
+    <section>
+      <title>Set Preferences</title>
+
+      <para>To set your preferences in <application>Yelp Help Browser</application>:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Edit</guimenu>
+
+                <guimenuitem>Preferences</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+        </itemizedlist>A window will appear that looks like <xref
+      linkend="yelp-preferences" />:</para>
+
+      <para><figure id="yelp-preferences">
+          <title><application>Yelp Help Browser</application> Preferences Window</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/yelp_preferences.png" />
+            </imageobject>
+          </mediaobject>
+        </figure>The options that are available in this dialog have the
+      following functions:</para>
+
+      <para><variablelist>
+          <varlistentry>
+            <term><guilabel>Use system fonts</guilabel></term>
+
+            <listitem>
+              <para>Check this option to display documentation using the
+              default fonts used by the MATE Desktop.</para>
+
+              <para>To choose your own fonts to display documentation, uncheck
+              this option and click on the buttons next to the text
+              <guilabel>Variable Width</guilabel> or <guilabel>Fixed
+              Width</guilabel>.</para>
+
+              <para><variablelist>
+                  <varlistentry>
+                    <term><guilabel>Variable Width</guilabel></term>
+
+                    <listitem>
+                      <para>This is the font to use when a static or fixed
+                      width font is not required. The majority of text will be
+                      of this type.</para>
+                    </listitem>
+                  </varlistentry>
+
+                  <varlistentry>
+                    <term><guilabel>Fixed Width</guilabel></term>
+
+                    <listitem>
+                      <para>This is the font to use when all text characters
+                      need to be of the same size. This font is usually used
+                      to indicate commands, program blocks, or other text that
+                      falls under these categories.</para>
+                    </listitem>
+                  </varlistentry>
+                </variablelist></para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term><guilabel>Browse with caret</guilabel></term>
+
+            <listitem>
+              <para>Click this option if you would like see a caret or cursor
+              in the <xref linkend="yelp-browser-pane" />. This allows you to
+              browse the document more easily by showing where the cursor is
+              located in the document.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist></para>
+    </section>
+
+    <section>
+      <title>Go Back in Document History</title>
+
+      <para>To go back in the document history:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Go</guimenu>
+
+                <guimenuitem>Back</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycombo><keycap>Alt</keycap><keycap>Left</keycap></keycombo></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the <guibutton>Back</guibutton> button in the
+            <interface>Toolbar</interface></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+
+    <section>
+      <title>Go Forward in Document History</title>
+
+      <para>To go forward in the document history:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Go</guimenu>
+
+                <guimenuitem>Forward</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycombo><keycap>Alt</keycap><keycap>Right</keycap></keycombo></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the <guibutton>Forward</guibutton> button in the
+            <interface>Toolbar</interface></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+
+    <section>
+      <title>Go to Help Topics</title>
+
+      <para>To go to the Help Topics:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Go</guimenu>
+
+                <guimenuitem>Help Topics</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycombo><keycap>Alt</keycap><keycap>Home</keycap></keycombo></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the <guibutton>Help Topics</guibutton> button in the
+            <interface>Toolbar</interface></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+
+    <section>
+      <title>Go to Previous Section</title>
+
+      <para>To go to the previous section:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Go</guimenu>
+
+                <guimenuitem>Previous Section</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycombo><keycap>Alt</keycap><keycap>Up</keycap></keycombo></para>
+          </listitem>
+        </itemizedlist><note>
+          <para>This option is only available in DocBook formatted
+          documents.</para>
+        </note></para>
+    </section>
+
+    <section>
+      <title>Go to Next Section</title>
+
+      <para>To go to the next section:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Go</guimenu>
+
+                <guimenuitem>Next Section</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycombo><keycap>Alt</keycap><keycap>Down</keycap></keycombo></para>
+          </listitem>
+        </itemizedlist><note>
+          <para>This option is only available in DocBook formatted
+          documents.</para>
+        </note></para>
+    </section>
+
+    <section>
+      <title>Go to Contents</title>
+
+      <para>To go to the contents for a document:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Go</guimenu>
+
+                <guimenuitem>Contents</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+        </itemizedlist><note>
+          <para>This option is only available in DocBook formatted
+          documents.</para>
+        </note></para>
+    </section>
+
+    <section>
+      <title>Add a Bookmark</title>
+
+      <para>To add a bookmark for a particular document:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Bookmarks</guimenu>
+
+                <guimenuitem>Add Bookmark</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo></para>
+          </listitem>
+        </itemizedlist>A window will appear that looks like <xref
+      linkend="yelp-add-bookmark" />.</para>
+
+      <para><figure id="yelp-add-bookmark">
+          <title>Add Bookmark Window</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/yelp_add_bookmark.png" />
+            </imageobject>
+          </mediaobject>
+        </figure>Enter your desired bookmark title in to the
+      <guilabel>Title</guilabel> text entry field. Then click
+      <guibutton>Add</guibutton> to add the bookmark, or click
+      <guibutton>Cancel</guibutton> to cancel the request.</para>
+    </section>
+
+    <section>
+      <title>Edit Bookmarks</title>
+
+      <para>To edit your collection of bookmarks:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Bookmarks</guimenu>
+                <guimenuitem>Edit Bookmarks...</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+
+          <listitem>
+            <para>Use the key combination
+            <keycombo><keycap>Ctrl</keycap><keycap>B</keycap></keycombo></para>
+          </listitem>
+        </itemizedlist>A window will appear that looks like <xref
+      linkend="yelp-edit-bookmarks" />.</para>
+
+      <para><figure id="yelp-edit-bookmarks">
+          <title>Edit Bookmarks Window</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/yelp_edit_bookmarks.png" />
+            </imageobject>
+          </mediaobject>
+        </figure>You can manage your bookmarks using this window in the
+      following ways:</para>
+
+      <para><variablelist>
+          <varlistentry>
+            <term><guibutton>Open</guibutton></term>
+
+            <listitem>
+              <para>Use this button to open the selected bookmark in a new
+              window.</para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term><guibutton>Rename</guibutton></term>
+
+            <listitem>
+              <para>Use this button to rename the title of your
+              bookmark.</para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term><guibutton>Remove</guibutton></term>
+
+            <listitem>
+              <para>Use this button to delete the bookmark from your
+              collection.</para>
+            </listitem>
+          </varlistentry>
+        </variablelist>Once you are finished managing your bookmarks, click
+      the <guibutton>Close</guibutton> button to exit the <interface>Edit
+      Bookmarks Window</interface>.</para>
+    </section>
+
+    <section>
+      <title>Get Help</title>
+
+      <para>To get help using <application>Yelp Help Browser</application> (and see this
+      document):</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Click <menuchoice>
+                <guimenu>Help</guimenu>
+
+                <guimenuitem>Contents</guimenuitem>
+              </menuchoice></para>
+          </listitem>
+        </itemizedlist></para>
+    </section>
+  </section>
+
+  <!--=============== Advanced Features ====================-->
+
+  <section id="yelp-advanced">
+    <title>Advanced Features</title>
+
+   <section id="yelp-open-specific"
+        xreflabel="Opening Specific Documents">
+    <title>Opening Specific Documents</title>
+
+    <section id="yelp-open-drag">
+      <title>Opening Documents from the File Manager</title>
+        <para>To open a document, such as an XML file, from the file manager, open the document in <application>Caja</application> File Manager, or drag the icon from <application>Caja</application> to the <application>Yelp</application> document pane
+        or launcher.</para>
+    </section>
+
+    <section id="yelp-advanced-cmdline"
+           xreflabel="Using the Command Line to Open Documents">
+      <title>Using the Command Line to Open Documents</title>
+
+      <para>Yelp Help Browser supports opening documents from the command
+      line. There are a number of URIs (Uniform Resource Identifiers) that can
+      be used. These include:</para>
+
+      <variablelist>
+          <varlistentry>
+            <term><option>file:</option></term>
+
+            <listitem>
+              <para>Use this URI when you want to access a file with
+              yelp, for example:</para>
+
+              <screen><userinput>yelp file:///usr/share/mate/help/gcalctool/C/gcalctool.xml</userinput></screen>
+
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term><option>ghelp:</option> or
+            <option>mate-help:</option></term>
+
+            <listitem>
+              <para>Use this URI when you want to access MATE help documents,
+              which are typically written in DocBook format.</para>
+
+              <screen><userinput>yelp ghelp:gcalctool</userinput></screen>
+
+              <para>If you want to open the help document at a particular section,
+              append a question mark to the end of the URI, followed by the section id.</para>
+              
+              <screen><userinput>yelp ghelp:user-guide?yelp-advanced-cmdline</userinput></screen>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term><option>man:</option></term>
+
+            <listitem>
+              <para>Use this URI when you want to access a particular man
+              page. You can append the section of the man page you would like
+              to view if there are multiple man pages with the same
+              name.  The section number should be enclosed in parenthesis and 
+              therefore it may be necessary to escape the argument so that the
+              shell does not interpret the parenthesis.</para>
+
+              <screen><userinput>yelp man:gcalctool</userinput></screen>
+              
+              <para>or</para>
+
+              <screen><userinput>yelp 'man:intro(1)'</userinput>
+<userinput>yelp 'man:intro(2)'</userinput></screen>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term><option>info:</option></term>
+
+            <listitem>
+              <para>Use this URI when you want to access a particular GNU info
+              page.</para>
+
+              <screen><userinput>yelp info:make</userinput></screen>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+    </section>
+
+   </section>
+
+    <section>
+      <title>Refreshing Content on Demand</title>
+
+      <para><application>Yelp Help Browser</application> supports the
+      <keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo> shortcut keys, which will reload the DocBook
+      document that is currently open. This allows developers to view changes
+      to documents as they are made.</para>
+    </section>
+  </section>
+
+  <section id="yelp-moreinfo">
+    <title>More Information</title>
+
+    <para>This section details some of the helper applications which 
+    <application>Yelp Help Browser</application> uses, and provides resources where you can get more information
+    about <application>Yelp Help Browser</application>.</para>
+
+    <section>
+      <title>Scrollkeeper</title>
+
+      <para><application>Yelp Help Browser</application> uses scrollkeeper to generate the table of
+      contents for DocBook and HTML documentation, and also keep track of
+      translations for each document.</para>
+    </section>
+
+    <section>
+      <title>MATE Documentation Utilites</title>
+
+      <para>The documentation distributed with MATE uses this set of
+      utilities for a variety of things:</para>
+
+      <para><itemizedlist>
+          <listitem>
+            <para>Ease translation of documents to different languages.</para>
+          </listitem>
+
+          <listitem>
+            <para>Provide a set of tools to help package and install
+            documentation into the correct location and register the
+            documentation with scrollkeeper.</para>
+          </listitem>
+
+          <listitem>
+            <para>Perform conversion from DocBook format to a format suitable
+            for display.</para>
+          </listitem>
+        </itemizedlist><application>Yelp Help Browser</application> relies on <ulink url="ghelp:mate-doc-xslt">MATE XSLT
+      Stylesheets</ulink> to perform conversion from DocBook to HTML.  <ulink url="ghelp:mate-doc-make">MATE Documentation 
+      Build Utilities</ulink> are relied upon by application authors to install and register documentation within the help system.</para>
+    </section>
+
+    <section>
+      <title>Homepage and Mailing List</title>
+
+      <para>For further information on <application>Yelp Help Browser</application>, please visit the Documentation Project homepage, <ulink
+    url="http://live.gnome.org/Yelp">http://live.gnome.org/Yelp</ulink>, or subscribe to
+      the mailing list, <ulink type="http" url="http://mail.gnome.org/mailman/listinfo/mate-doc-devel-list">mate-doc-devel-list@gnome.org</ulink>.</para>
+    </section>
+  </section>
+
+  <section id="yelp-joininggdp">
+    <title>Joining the MATE Documentation Project</title>
+
+    <para>If you are interesting in helping produce and update documentation
+    for the MATE project, please visit the Documentation Project homepage: <ulink
+    url="http://live.gnome.org/DocumentationProject">http://live.gnome.org/DocumentationProject</ulink></para>
+  </section>
+
+</section>
+
+</chapter>

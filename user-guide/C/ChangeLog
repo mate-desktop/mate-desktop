@@ -1,0 +1,853 @@
+2009-04-03  Claude Paroz  <claude@2xlibre.net>
+
+	* goscaja.xml: title tag should be before anchor to be valid DocBook.
+	Fixes #577778
+
+2009-02-24  Matthias Clasen  <mclasen@redhat.com>
+
+	* goscustdesk.xml: Update the keybinding capplet docs.
+	Fixes #571018
+
+2009-02-24  Matthias Clasen  <mclasen@redhat.com>
+
+	* goscustdesk.xml: Update the Window capplet docs.
+	Fixes #570915
+
+2009-02-24  Matthias Clasen  <mclasen@redhat.com>
+
+	* gostools.xml: Update mate-screenshot documentation.
+	Fixes #571017
+
+2009-02-12  Claude Paroz  <claude@2xlibre.net>
+
+	* goscustdesk.xml: Updated Preferred applications section.
+	Fixes #413452.
+
+2008-11-16  Claude Paroz  <claude@2xlibre.net>
+
+	* glossary.xml: Replaced 'CD Player' by 'Volume Control' in example.
+
+2008-11-16  Claude Paroz  <claude@2xlibre.net>
+
+	* gospanel.xml: Replaced 'CD Player' applet by Clock applet in example.
+	Fixes #452870.
+	Updated and partially rewritten table describing Panel launcher command
+	codes. Deprecated codes removed. Fixes #375679. 
+	* figures/sample_applet.png: Updated screenshot with new applet and fresh
+	look.
+
+2008-11-01  Claude Paroz  <claude@2xlibre.net>
+
+	* goscustaccess.xml:
+	* goscustlookandfeel.xml:
+	* gosmarco.xml:
+	* l10n-readme.txt:
+	* plainmatestartpreftools.xml:
+	* user-guide.pdf: Deleted old files.
+	Fixes #415937.
+
+2008-08-08  Claude Paroz  <claude@2xlibre.net>
+
+	* goscaja.xml:
+	* gosoverview.xml: Fixed typos as of
+	http://mail.gnome.org/archives/mate-doc-list/2008-July/msg00011.html
+
+2008-04-09  Claude Paroz  <claude@2xlibre.net>
+
+	* gosoverview.xml:
+	* gospanel.xml: Generalize the launcher area description.
+	Fixes #413456.
+
+2008-04-07  Claude Paroz  <claude@2xlibre.net>
+
+	* user-guide.xml: Corrected link to MATE Feedback.
+
+2008-04-05  Claude Paroz  <claude@2xlibre.net>
+
+	* goscustdesk.xml: Fixed duplicated 'such as'. Rewritten background style
+	section.
+	Fixes #452768, #452648.
+
+2008-04-05  Claude Paroz  <claude@2xlibre.net>
+
+	* goscaja.xml: Fixed outdated menu items. Patch by Robert-André
+	Mauchin.
+	Fixes #502015.
+
+2008-03-30  Claude Paroz  <claude@2xlibre.net>
+
+	* figures/caja_zoom_in_button.png: in and out buttons were identical.
+	Fixes #509299.
+
+2008-03-30  Claude Paroz  <claude@2xlibre.net>
+
+	* goscustdesk.xml: Typo fixed. Fixes #449450.
+
+2007-09-01  Claude Paroz  <claude@2xlibre.net>
+
+	* goscustdesk.xml: Corrected non terminated menuchoice tag.
+
+2007-09-01  Claude Paroz  <claude@2xlibre.net>
+
+	* goscustdesk.xml: Updated Preferred Applications section. Patch by
+	Benjamin Gramlich <benjamin.gramlich@gmail.com>. Fixes #353085.
+
+2007-03-11  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+	* goscustdesk.xml: partly reversing changes from #398902: new Control Center
+	is held back. Keeping subcategories.
+	* gospanel.xml: updated explanation for locking to panel. #416415
+
+2007-03-09  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+	* gospanel.xml: reverted updated ids -- see #415887 for reasons.
+
+2007-03-08  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+	* gospanel.xml: merged in content from Window List manual. #415887
+	    updated section IDs in new material and links to it.
+
+2007-03-01  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * gosoverview.xml: Refer to mouse pointer, not mouse. #413476
+      Correct reference to old (1.x) top panel name. #413475
+  * goscaja.xml: Fixed missing or incorrect tags. #413486
+      Fixed typo. #413482
+      Rewrote descrition of the location bar buttons. #413487
+  
+2007-02-28  Luca Ferretti  <elle.uca@libero.it>
+
+	* figures/caja_emblem.png:
+	Doh! Filenames should be in English too...
+
+2007-02-28  Luca Ferretti  <elle.uca@libero.it>
+
+	* figures/caja_trash_launcher.png:
+	Updated to match current MATE appearance.
+
+2007-02-28  Luca Ferretti  <elle.uca@libero.it>
+
+	* figures/caja_emblem.png:
+	* figures/caja_link_emblem.png:
+	Updated to match current MATE appearance. caja_link_emblem.png
+	is just a copy of emblem-symbolic-link from mate-icon-theme and
+	don't need localization. 
+	
+2007-02-27  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * goscaja.xml: correct procedure to create a new folder. #412306
+
+2007-02-15  Luca Ferretti  <elle.uca@libero.it>
+
+	* figures/caja_zoom_in_button.png:
+	* figures/caja_normal_size_button.png:
+	* figures/caja_zoom_out_button.png:
+
+	Updated to match current MATE appearance. Zoom in and out
+	don't need localized versions. Normal size could need if
+	in your locale it's different from "100%".
+
+2007-01-30  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * goscustdesk.xml:
+    Better explanation of tools that need a password
+    remove screenshot and intro from network-admin documentation. #398902 
+
+2007-01-24  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * goseditmainmenu.xml: 
+  * goscustdesk.xml: 
+  * gostools.xml: 
+  * user-guide.xml: 
+  * gosoverview.xml: 
+    Moving Printers section from Tools to Preferences.
+    Importing network-admin documentation from who knows where
+    Adding extra chunking to goscustdesk.xml for those viewing it as a standalone
+chapter
+    Deleting the CDDB Database section (apparently obsolete)
+    Adding Matthew East and Carlos Garnacho Parro to contributors
+    -- Patch from Matthew East. #398902.
+
+2007-01-22  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * goscustdesk.xml: split into subsections for categories to reflect new Control Center. Patch from Matthew East. #398902
+  * goscaja.xml: preserving section ids removed from goscustdesk.xml.
+
+2007-01-16  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * goscaja.xml: Added new material on unix filesystem and permissions,
+    material from Ubuntu docs team (dual-licensed with GFDL). #389033
+
+2006-12-26  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+	* goseditmainmenu.xml:
+	* gospanel.xml:
+	  Better titles for sections: Using the Panels, Using the Main Menubar. #389035
+  * goscaja.xml: Update for Location bar button, 
+    remove 'Always use text entry location bar' pref. #348841
+
+2006-12-23  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * goscaja.xml: Shift+Del shortcut. Patch from Milo Casagrande, fixes #362646
+  * goscustdesk.xml: update labels for screensaver preferences. Patch from Milo Casagrande, fixes #380083
+  
+2006-12-20  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * goscustdesk.xml: warn of bugs in adding fonts: 
+    folder not updated; running apps don't have access. Fixes #386834
+	* gostools.xml: open documents and urls in the Run Application dialog. #383240    
+
+2006-12-02  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+	* gostools.xml: mention opening files in Yelp from Caja. Patch from karderio. Fixes #381377
+  * gosbasic.xml: rewrite 'Mouse Skills' and 'Mouse Button Conventions'. Patch from karderio. Fixes #381418
+
+2006-11-11  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * goscaja.xml: remove mention of Duplicate command in context menu. Patch from Christophe Bliard. Fixes #372705
+
+2006-11-02  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * goscustdesk.xml: mention "Document font" in font preferences. Fixes #369160
+    Split section on font preferences more sensibly while I'm at it.
+
+2006-09-06  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * goscaja.xml: better wording for writing CDs:
+      patch from Chris Wagner for #354625
+
+2006-09-04  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+	* goseditmainmenu.xml: change window title for mozo menu editor
+	* gospanel.xml: new launcher properties dialog
+
+2006-09-03  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * figures/titlebar_window.png: new image
+  * gosoverview.xml: updated screenshot of window titlebar
+  * goscaja.xml: updated section on file permissions for new UI
+  * gosfeedback.xml: very quick update for Bug Buddy  
+
+2006-08-27  Joachim Noreiko  <jnoreiko@yahoo.com>
+
+  * goscaja.xml, gospanel.xml: changed titles
+  * goscustdesk.xml: typos: #350755.
+
+2006-08-22  Francisco Javier F. Serrador  <serrador@openshine.com>
+
+	* gosbasic.xml: Replaced "Command" with "Action" on table headers.
+	* gostools.xml: 
+	   Fixed some mistakes with tags.
+	   Added some documentation about mate-screenshot
+	options, and recoded keycombos using docbook tags.
+	
+2006-08-11 Joachim Noreiko <jnoreiko@yahoo.com>
+
+  * goscaja.xml: fixed a typo. Fixes #350755
+  * gostools.xml: added link to Yelp homepage
+
+2006-08-10 Joachim Noreiko <jnoreiko@yahoo.com>
+
+  * gosoverview.xml, gosstartsession.xml, gospanel.xml, goseditmainmenu.xml,
+  goscaja.xml, gostools.xml, goscustdesk.xml:
+  replace 'Desktop' menu with 'System'. Fixes #350489
+
+2006-07-08 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goseditmainmenu.xml:
+	added link to admin guide section 'Customizing Menus'. Fixes 331928
+
+2006-07-06 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gostools.xml:
+	added section on setting up a printer. Fixes #346395
+	
+2006-07-01 Joachim Noreiko <jnoreiko@yahoo.com>
+
+  * gosfeedback.xml:
+  created new file
+  moved in "Join Mate" section
+  copied in material from mate-feedback/C/mate-feedback.xml Fixes #335968
+  added link to Bug Report Tool manual
+	* user-guide.xml:	moved appendix to gosfeedback.xml & added include for same
+
+2006-04-09 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goseditmainmenu.xml:
+	* gospanel.xml:
+	cleaning up terminology for the panel menubar	
+	* gospanel.xml:
+	documenting launcher replaceable command parameters. Fixes #307978
+	* user-guide.xml:	
+	added appendix section 'Joining the MATE Project'
+
+2006-04-08 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gosoverview.xml:
+	updated section on the Filechooser, following review by GTK team
+	
+2006-04-07 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gosoverview.xml:
+	updated section on detachable toolbars
+	* goscustdesk.xml:
+	added info on Editable menu accelerators option
+
+2006-04-03 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* figures/caja_spatial_icon_view.png 
+	* figures/caja_spatial_list_view.png 
+	* figures/caja_spatial_view.png
+	scaled down to 75%
+	* goscaja.xml:
+	new section on item properties window: basic intro & links in and out	
+
+2006-04-01 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscustdesk.xml:
+	added note about Ignore Host List in Network Proxy prefs, reformatted list
+	
+2006-03-29 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscustdesk.xml:
+	rewritten Keyboard Layout Options.
+	
+2006-03-26 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscustdesk.xml:
+	rewritten Keyboard Shortcuts Preferences. Fixes #329073
+	
+2006-03-25 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscustdesk.xml:
+	rewritten Keyboard Layouts Preferences & Typing Break sections
+	
+2006-03-17 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goseditmainmenu.xml:
+	rewritten section on editing menus
+	removed old sections that depend on obsolete apps:/// URI, eg 'To Add a Menu'
+
+2006-03-13  Brent Smith  <mate@nextreality.net>
+
+	* user-guide.pdf:
+	Final version of the 2.14 PDF.
+
+2006-03-12 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscaja.xml:
+	updated "Special URIs" section, added links to saner alternatives.
+	added brief section on Open Location dialog
+	tidied up sections on moving and copying files
+	rewritten section on Bookmarks to work for spatial mode
+	rewritten intro section on opening files
+	added note about Joliet and the Rock Ridge to writing CDs section. Fixes #153112
+	added id 'caja-server-connect' (filed bug for help button)
+	moved section 'Modifying the Appearance of Files and Folders' further down
+	moved 'Using Views' out of the above section and into 'Managing Your Files'
+	moved 'Selecting Files and Folders' up within 'Managing Your Files'
+	* goscustdesk.xml:
+	removed mention of fonts:/// URI. Fixes #140647
+	* glossary.xml:
+	added term 'file extension'
+	* gospanel.xml:
+	removed old sections, rearranged stuff, generally tidied up
+  * /figures/menu_bar_applet.png	
+  updated for 2.14
+	
+2006-03-11 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gosbasic.xml:
+	added references to new pointer images & tweaked text. Partial fix to #330123
+	* goscaja.xml:
+	updated a section id
+
+2006-03-11  Brent Smith  <mate@nextreality.net>
+
+	* figures/busy_pointer.png:
+	* figures/hyperlink_pointer.png:
+	* figures/ibeam_pointer.png:
+	* figures/movewindow_pointer.png:
+	Added these files to CVS as partial fix to #330123
+
+2006-03-11 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gospanel.xml:
+	rewritten section 'Adding an Object to a Panel'. Fixes #332309
+	rewritten section on launchers. Split off and renamed 'Launcher Properties', which the UI links to
+
+2006-03-11  Brent Smith  <mate@nextreality.net>
+
+	* goseditmainmenu.xml:
+	* gospanel.xml:
+	Changed four xref elements which linked to an anchor, which is a no
+	no.  Made them link to the closest appropriate section.
+
+2006-03-09  Christian Neumair  <chris@mate-de.org>
+
+	* figures/caja_browser_window.png:
+	* figures/caja_computer_contents.png:
+	* figures/caja_home_launcher.png:
+	* gosdeskback.xml:
+	Remove, no longer used. Fixes #324966. Thanks to Joachim Noreiko.
+
+	* Makefile.in:
+	Remove gosdeskback.xml.
+
+2006-03-08  Christian Neumair  <chris@mate-de.org>
+
+	* figures/caja_link_emblem.png:
+	* figures/caja_noread_emblem.png:
+	* figures/caja_nowrite_emblem.png:
+	Replace with newer artwork. Fixes #314261. Thanks to Nelson Benítez.
+
+2006-03-08 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gospanel.xml:
+	added link in lock screen button to screensaver prefs
+	changed name to 'Lock Screen Button' to match interface.
+	* gosstartsession.xml:	
+	changed name to 'Lock Screen Button' to match interface.
+
+2006-03-02 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscustdesk.xml:
+	added section on screensaver prefs (mate-screensaver)
+
+2006-02-28  Brent Smith  <mate@nextreality.net>
+
+	* gostools.xml:
+	completed a unfinished sentence; documented the man: and ghelp: URIs a
+	bit more.  Added links to mate-doc-utils documentation. Fixes #331793 
+	for good.  Thanks to Joachim for merging the Yelp documentation.
+
+2006-02-28 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gosoverview.xml:
+	added section on the fileselector
+
+2006-02-28 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscustdesk.xml:
+	added link to GStreamer, prefs tool with docs outside the UG
+	added a note to the CD database prefs tool saying *diplomatically* that no apps except CD player use it
+	added introduction to pref tools
+
+2006-02-27 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gosoverview.xml:
+	added section on the desktop, using material from the wiki by Nigel Tao
+	* goscaja.xml:
+	updated a section id
+	moved id "caja-desktop" to gosoverview.xml for new section
+	* goscustdesk.xml:	
+	cleaned up desktop background prefs
+	* user-guide.xml:
+	added Nigel Tao to the author list
+	
+2006-02-26 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscaja.xml:
+	expanded and updated section on burning CDs, including material from the wiki
+	
+2006-02-26 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gostools.xml:
+	added yelp documentation from Brent Smith
+
+2006-02-26 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscaja.xml:
+	major surgery, reordering sections and collapsing some
+	"Assigning Actions to Files" folded into "Opening Files"
+	"Changing Backgrounds" moved to "Modifying the Appearance of Files and Folders"
+	"Caja Preferences" promoted to top-level
+
+2006-02-26 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gosstartsession.xml:
+	added username in Log Out menu entry (fixes bug 332445)
+	removed paragraph on save session dialog (fixes bug 332609)
+	* gostools.xml:
+	updated screenshot section (fixes bug 332441)
+	removed procedure to add screenshot applet to panel, linked to panel section instead
+	
+2006-02-26 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscaja.xml:
+	update from John Stowers:
+	added new sections on:
+	searching
+	location bar
+	list vs. icon view
+	extending Caja
+	select files by pattern
+	hidden files
+	tidied up a lot of the browser/spatial inconsistencies and explains them clearly
+	(note: removed ids goscaja-components, goscaja-presentation
+	were added in cvs revision 1.17.)
+	* goscustdesk.xml:
+	* goseditmainmenu.xml:	
+	updated cross-references to goscaja.xml
+	* new figures:
+	figures/caja_browser_mode.png
+	figures/caja_button_bar.png
+	figures/caja_emblem.png
+	figures/caja_go_to_location.png
+	figures/caja_refine_search.png
+	figures/caja_search_bar.png
+	figures/caja_search_results.png
+	figures/caja_spatial_icon_view.png
+	figures/caja_spatial_list_view.png
+	figures/caja_spatial_mode.png
+	figures/caja_spatial_view.png
+	figures/caja_restore_saved_search.png
+	* user-guide.xml:
+	added John Stowers to the author list
+	
+2006-02-25 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gosoverview.xml:
+	added new introduction to applications, using material
+	from the wiki by Daniel Espinosa Ortiz
+	relegated old material to a subsection
+	* goscustdesk.xml:
+	updated a section id
+	* goseditmainmenu.xml:
+	minor edit for readability	
+	* user-guide.xml:
+	added Tim Littlemore and Brent Smith to the author list
+	*	goscustdesk-remotedesktop.xml
+	removed from cvs: no longer used. material was moved to goscustdesk.xml
+
+2006-02-24 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gosoverview.xml:
+	updated section on workspaces, using material from
+	the wiki by Tim Littlemore and Brent Smith
+	* goseditmainmenu.xml:
+	updated first part for 2.14. 
+	removed a number of sections
+	moved some sections to gospanel.xml and gostools.xml
+	* gospanel.xml:
+	moved in Main Menu section from goseditmainmenu.xml
+	moved in Menu Bar section from goseditmainmenu.xml
+	* gostools.xml:
+	moved in Run Application Dialog section from goseditmainmenu.xml and updated it 	
+	* gosstartsession.xml:
+	changed section ids newly linked to from goseditmainmenu.xml
+	to use meaningful names instead of numbers 
+
+2006-02-22 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gospanel.xml:
+	updated first two sections for 2.14
+	* goseditmainmenu.xml:
+	* gosoverview.xml:
+	* goscaja.xml:
+	changed section ids newly linked to from gospanel.xml
+	to use meaningful names instead of numbers 
+
+2006-02-21 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gosoverview.xml:
+	added mention of edge resistance and holding shift to move a window between edges
+	added mention of numeric keypad
+	added mention of alt-dragging a window
+	expanded section on using the keyboard to resize a window
+
+2006-02-18 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* user-guide.xml:
+	converted the documents to use XInclude instead of SYSTEM entities
+
+2006-02-16,17 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscaja.xml:
+	added id 'caja-select-pattern' in anticipation of bug 331443
+	added id 'caja-permissions'
+
+2006-02-14 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* user-guide.xml:
+	Added Daniel Espinosa Ortiz to the author listing  
+	* goscustdesk.xml:
+	Appended 'Preferences' to titles of top-level sections on Preference tools
+	* goscaja.xml:
+	Removed paragraph from section 'Using Views to Display Your Files and Folders'
+	that doesn't seem relevant here
+	* goseditmainmenu.xml, gostools.xml
+	moved section on taking screenshots from goseditmainmenu.xml to gostools.xml
+
+2006-02-13 Brent Smith <mate@nextreality.net>
+
+	* ChangeLog:
+	convert spaces to tabs where appropriate in ChangeLog (sorry, it was
+	driving me nuts)
+
+2006-02-13 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* Makefile.am, and  
+	* user-guide.xml:
+	removed references to goscustdesk-remotedesktop.xml
+	* goscustdesk.xml:
+	copied in material from goscustdesk-remotedesktop.xml
+	removed section 'Customizing Your Panels', prefs tool no longer exists
+	rearranged order of sections to match the menu
+
+2006-02-13 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* gosstartsession.xml:
+	updated with material from the wiki by Daniel Espinosa Ortiz  
+	* goscustdesk.xml:
+	added section on screensaver: empty placeholder for now
+	changed section ids newly linked to from gosstartsession.xml
+	to use meaningful names instead of numbers
+	* gospanel.xml:
+	changed section ids newly linked to from gosstartsession.xml
+	to use meaningful names instead of numbers 
+
+2006-02-12  Brent Smith  <mate@nextreality.net>
+
+	* Makefile.am:
+	added gostools.xml to entities variable so that it gets installed.
+	removed part1.xml and part2.xml since these files don't exist in cvs.
+	* user-guide-C.omf:
+	added more verbose description of document to scrollkeeper
+	* user-guide.xml:
+	re-added gostools entity reference (assuming that it will be expanded
+	upon before release)
+	updated version, and added abstract
+
+2006-02-12  Brent Smith  <mate@nextreality.net>
+
+	* mate2-user-guide/C/gospanel.xml:
+	small validation fix (previous commit, moved to this ChangeLog instead
+	of top-level ChangeLog)
+	* mate2-user-guide/C/user-guide.xml:
+	removed reference to gostools.xml since it is not installed by
+	Makefile.am
+
+2006-02-12 Joachim Noreiko <jnoreiko@yahoo.com>		
+
+	* gosoverview.xml:
+	style guide tweaks
+	
+2006-02-12 Joachim Noreiko <jnoreiko@yahoo.com>	
+
+	* gospanel.xml:
+	copying section on the window selector from gosmarco.xml to fix bug 330917
+
+2006-02-12 Joachim Noreiko <jnoreiko@yahoo.com>	
+
+	* user-guide.xml:
+	adding myself to authorlist, 
+	adding comments to help with matching xml files to sections of the guide
+
+2006-02-11  Brent Smith  <mate@nextreality.net>
+
+	* goscaja.xml:
+	Fix my error in applying wrong patch.
+	* user-guide.xml:
+	Added Karderio to the author listing, and modified the revhistory.
+
+2006-02-11 Joachim Noreiko <jnoreiko@yahoo.com>		
+
+	* gosoverview.xml:
+	updated section on Giving Focus to a Window with material from the wiki
+	by Daniel Espinosa Ortiz
+	* goscustdesk.xml:
+	changed section ids newly linked to from gosoverview.xml, 
+	to use meaningful names instead of numbers 
+		
+2006-02-08 Joachim Noreiko <jnoreiko@yahoo.com>		
+
+	* gosbasic.xml:
+	Fix for Bug 310227 – spelling mistakes
+
+2006-02-08 Joachim Noreiko <jnoreiko@yahoo.com>		
+
+	* goscustdesk.xml:
+	Removing section on 'File Types and Programs' prefs tool, no longer exists.
+
+2006-02-08 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscustdesk.xml:
+	Changing section title to 'Configuring Your Desktop'
+	and subsection titles to match menu elements
+
+2006-02-08 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscustdesk.xml:
+	Fix for Bug 330122 – Need explanation of how to open 
+	Keyboard Accessibility Preferences
+
+2006-02-06 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscustdesk.xml:
+	Fixing Bug 316943: adding links to the Accessibility guide
+	in the section on Configuring Keyboard Accessibility Options.
+
+2006-02-04  Shaun McCance  <shaunm@gnome.org>
+
+	* gosoverview.xml:
+	* gospanel.xml:
+	* gostools.xml:
+	- Quick validity fixes
+
+2006-02-04  Brent Smith  <mate@nextreality.net>
+
+	* goscaja.xml:
+	Many updates to the goscaja.xml document from Chris Fox
+	(Karderio), fixes #324966
+
+2006-02-02 Joachim Noreiko <jnoreiko@yahoo.com>
+
+	* goscustdesk.xml:
+	Updated mouse preferences to match UI change 'cursor'->'pointer' (Bug 318056)
+
+2006-01-15  Shaun McCance  <shaunm@gnome.org>
+
+	* mate2-user-guide/C/gosbasic.xml:
+	* mate2-user-guide/C/goscustdesk.xml:
+	* mate2-user-guide/C/gosoverview.xml:
+	- User Guide updates from Joachim Noreiko
+
+2004-08-27  Shaun McCance  <shaunm@gnome.org>
+
+	* user-guide-C.omf:
+	- Updated maintainer
+	- Unixified the newlines
+
+2004-04-20  Shaun McCance  <shaunm@gnome.org>
+
+	* goscustdesk.xml:
+	* plainmatestartpreftools.xml:
+	- Numerous edits per the mini-review today
+
+2004-03-18  Brian Casey <brian.casey@sun.com>
+
+	  * Further updates to User Guide for MATE 2.6.
+
+2004-03-09  Brian Casey <brian.casey@sun.com>
+
+	 * Updated User Guide for MATE 2.6.
+
+2004-01-30  Shaun McCance  <shaunm@gnome.org>
+
+	* Makefile.am:
+	- Changes for as-a-whole user guide, instead of by-chapter.
+
+2004-01-22 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Removed w*.xml wrapper files, front.xml, and all OMF files that refer to w*.xml files. This is to remove the implementation of the UG in Yelp whereby each chapter is displayed as an individual book. 
+
+2003-09-08 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Further updates to User Guide for MATE 2.4.
+
+2003-08-10 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Updated User Guide for MATE 2.4.
+
+2003-04-08 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Added wglossary.xml so that User Guide Glossary appears in Yelp. Updated screenshots: caja_desktop.png, typical_anno_desktop.png, caja_home_launcher.png, typical_anno_desktop.xcf
+
+2003-03-24 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Fixed incorrect version identifier in all OMFs.
+
+2003-03-24 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Removed obsolete files: cc_accessx.png cc_appearance_tab.png cc_defaultbrowser_tab.png cc_defaulthelp_tab.png cc_htmlkeyboard_tab.png cc_htmlmisc_tab.png cc_keyboardsound_tab.png cc_mimetypes_tab.png controlcenter_anno_window.png controlcenter_icon.png pluma2_window.png pluma_pref2_dialog.png mateterminal_icon.png help_icon.png menu_editor_anno_window.png caja_news_edit_tab.png caja_news_select_tab.png caja_news_tab.png caja_pref_navigation_dialog.png caja_website_window.png netscape_icon.png runprogram_icon.png statusdock2_button.png statusdock_button.png tasklist_applet.png tasklist_group2_applet.png tasklist_group_applet.png titlebar_anno_msw_window.png typical_anno_menu.png
+
+2003-03-07 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Updated User Guide for MATE 2.2.1.
+
+2003-01-27 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Updated User Guide PDF for MATE 2.2. Removed l10n-screenshots.txt.
+
+2003-01-24 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Updated User Guide for MATE 2.2.
+
+2002-11-27 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Added revision history information for previous revisions in user-guide.xml and front.xml. This information had been 
+accidentally omitted.
+
+2002-11-13 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Added 'V' before manrevision entity in user-guide.xml and front.xml.
+
+2002-10-16 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * V2.3 of the User Guide
+	 * New section: 5.6.2.1 To Add a Launcher to an Empty Menu
+	 * Updated section: 9.10 Setting Themes in the Desktop
+	 * All chapters: Updated graphic text equivalents.
+	 * Updated screenshots: typical_anno_desktop.png, menu_panel.png, caja_prop_emblem_window.png, cc_theme_window_tab.png, 
+cc_theme_tab.png, cc_marco.png, cc_basic_keyboardshortcuts.png
+	 * Added l10n-readme.txt and l10n-screenshots.txt to assist localisation.
+	 * Added OMF file for User Guide Glossary.
+
+2002-10-09 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Removed obsolete file matessug.xml.
+
+2002-08-28 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Updated launcher_popup.png to reflect restored functionality.
+
+2002-08-27 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Updated *.xml, *.omf, figures/*.png, figures/*.xcf with 2.0.1 
+	   changes. Includes menu editing, new keyboard shortcuts functionality,
+	   removable media.	 V2.2 of the User Guide.
+
+2002-08-24 Eric Baudais  <baudais@kkpsi.org>
+
+	* user-guide.pdf: Adding a PDF version of the UG.
+
+2002-08-07 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Minor updates: fixing valigns, typos, updating 508 text, 
+	   adding View > Stop info.
+
+2002-08-06 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Minor updates to Caja, Sessions, Basic Preferences, Panels 
+	   for 2.0.1. Sessions: typo in To Use Startup Applications. Panels: 
+	   Changed OK button to Close button in To Modify Panel Properties. 
+	   Caja: Changed File menu to Edit menu in Duplicate, and Rename.
+	   Basic Preferences: Updated label name in Network Proxy.
+
+2002-08-02 Eugene O'Connor <eugene.oconnor@sun.com>
+
+	 * Updated *.xml, *.omf, figures/*.png, figures/*.xcf with 2.0.1 
+	   changes.
+
+2002-07-28 Eugene O'Connor <eugene.oconnor@sun.com>
+
+* Updated *.xml, *.omf, figures/*.png, figures/*.xcf with 2.0.1 
+	changes.
+
+2002-07-28 Chris Lyttle  <chris@wilddev.net>
+
+	* *.omf: reverted files to previous version now that SK support works
+	
+2002-07-19 Chris Lyttle  <chris@wilddev.net>
+
+	* *.omf: reverted files to previous version as scrollkeeper doesn't
+	support these changes yet.
+
+2002-07-17 Eugene O'Connor <eugene.oconnor@sun.com>
+
+* Updated existing OMFs with new ScrollKeeper categories and short titles
+* Added new OMFs to enable Desktop Preferences chapters and File Manager 
+	chapter to be linked to from more than one link in the Yelp side pane.
+
+

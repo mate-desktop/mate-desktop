@@ -1,0 +1,245 @@
+<?xml version="1.0"?><!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+"http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+  <!ENTITY mateversion "2.14">
+  <!ENTITY manrevision "2.14.0">
+  <!ENTITY LEGAL SYSTEM             "legal.xml">
+]>
+<?db.chunk.max_depth 3?>
+<book id="index"> 
+  <title>Desktop User Guide</title> 
+  <bookinfo>
+    <abstract role="description">
+      <para>The MATE User Guide is a collection of documentation which details general use of the
+      MATE Desktop environment.  Topics covered include sessions, panels, menus, file management,
+      and preferences.</para>
+    </abstract>
+    <copyright>
+      <year>2005</year>
+      <holder>Shaun McCance</holder>
+    </copyright>
+    <copyright>
+      <year>2004</year>
+      <holder>Sun Microsystems</holder>
+    </copyright>
+    <copyright>
+      <year>2003</year>
+      <holder>Sun Microsystems</holder>
+    </copyright>
+    <!-- translators: uncomment this:
+    <copyright>
+      <year>2002</year>
+      <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+    </copyright>
+    -->
+    <publisher role="maintainer">
+      <publishername>MATE Documentation Project</publishername>
+    </publisher>
+
+    &LEGAL;
+
+    <authorgroup>
+      <author>
+        <firstname>Sun</firstname>
+        <surname>MATE Documentation Team</surname>
+        <affiliation>
+          <orgname>Sun Microsystems</orgname>
+        </affiliation>
+      </author>
+      <author>
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>MATE Documentation Project</orgname>
+        </affiliation>
+        <email>shaunm@gnome.org</email>
+      </author>
+      <author>
+        <surname>Karderio</surname>
+        <affiliation>
+          <orgname>MATE Documentation Project</orgname>
+        </affiliation>
+        <email>karderio at gmail dot com</email>
+      </author>
+      <author>
+        <firstname>Joachim</firstname>
+        <surname>Noreiko</surname>
+        <affiliation>
+          <orgname>MATE Documentation Project</orgname>
+        </affiliation>
+        <email>jnoreiko at yahoo dot com</email>
+      </author>
+      <author>
+        <firstname>Daniel</firstname>
+        <surname>Espinosa Ortiz</surname>
+        <affiliation>
+          <orgname>MATE Documentation Project</orgname>
+        </affiliation>
+        <email>esodan at gmail dot com</email>
+      </author>      
+      <author>
+        <firstname>Brent</firstname>
+        <surname>Smith</surname>
+        <affiliation>
+          <orgname>MATE Documentation Project</orgname>
+        </affiliation>
+        <email>mate at nextreality dot net</email>
+      </author>
+      <author>
+        <firstname>Tim</firstname>
+        <surname>Littlemore</surname>
+        <affiliation>
+          <orgname>MATE Documentation Project</orgname>
+        </affiliation>
+        <email>tim at tjl2 dot com</email>
+      </author>      
+      <author>
+        <firstname>John</firstname>
+        <surname>Stowers</surname>
+        <affiliation>
+          <orgname>MATE Documentation Project</orgname>
+        </affiliation>
+        <email>john dot stowers at gmail dot com</email>
+      </author>
+      <author>
+        <firstname>Nigel</firstname>
+        <surname>Tao</surname>
+        <affiliation>
+          <orgname>MATE Documentation Project</orgname>
+        </affiliation>
+        <email>nigel dot tao at myrealbox dot com</email>
+      </author>      
+      <author>
+        <firstname>Matthew</firstname>
+        <surname>East</surname>
+        <affiliation>
+          <orgname>Ubuntu Documentation Project</orgname>
+        </affiliation>
+        <email>mdke at ubuntu dot com</email>
+      </author>
+      <author>
+        <firstname>Carlos</firstname>
+        <surname>Garnacho Parro</surname>
+        <affiliation>
+          <orgname>MATE Project</orgname>
+        </affiliation>
+        <email>carlosg@gnome.org</email>
+      </author>
+      </authorgroup>
+	  
+	 <releaseinfo revision="2.26" role="review">
+     </releaseinfo>
+
+    <revhistory>
+      <revision>
+        <revnumber>2.14</revnumber>
+        <date>2006-02-03</date>
+        <revdescription>
+          <para role="author">Karderio</para>
+          <para role="publisher">MATE Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.10</revnumber>
+        <date>2005-03-08</date>
+        <revdescription>
+          <para role="author">Shaun McCance</para>
+          <para role="publisher">MATE Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>MATE 2.8 Desktop User Guide V2.8</revnumber>
+        <date>September 2004</date>
+        <revdescription>
+          <para role="publisher">MATE Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>MATE 2.4 Desktop User Guide V2.7</revnumber>
+        <date>September 2003</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">MATE Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>MATE 2.4 Desktop User Guide V2.6</revnumber>
+        <date>August 2003</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">MATE Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>MATE 2.2.1 Desktop User Guide V2.5</revnumber>
+        <date>March 2003</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">MATE Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>MATE 2.2 Desktop User Guide V2.4</revnumber>
+        <date>January 2003</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">MATE Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>MATE 2.0 Desktop User Guide V2.3</revnumber>
+        <date>October 2002</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">MATE Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>MATE 2.0 Desktop User Guide V2.2</revnumber>
+        <date>August 2002</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">MATE Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>MATE 2.0 Desktop User Guide V2.1</revnumber>
+        <date>August 2002</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">MATE Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>MATE 2.0 Desktop User Guide V1.0</revnumber>
+        <date>May 2002</date>
+        <revdescription>
+          <para role="author">Sun Microsystems</para>
+          <para role="publisher">MATE Documentation Project</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>This manual describes version &mateversion; of the
+    MATE desktop.</releaseinfo>
+
+    <legalnotice>
+      <title>Feedback</title>
+      <para>To report a bug or make a suggestion regarding the MATE
+      desktop or this manual, follow the directions in the <link
+      linkend="feedback">MATE Feedback Page</link>.</para>
+    </legalnotice>
+  </bookinfo>
+
+  <include href="gosbasic.xml" xmlns="http://www.w3.org/2001/XInclude" />       <!-- Basic skills -->
+  <include href="gosoverview.xml" xmlns="http://www.w3.org/2001/XInclude" />    <!-- Overview-->
+  <include href="gosstartsession.xml" xmlns="http://www.w3.org/2001/XInclude" /><!-- Sessions -->
+  <include href="gospanel.xml" xmlns="http://www.w3.org/2001/XInclude" />       <!-- Panels -->
+  <include href="goseditmainmenu.xml" xmlns="http://www.w3.org/2001/XInclude" /><!-- Menus -->
+  <include href="goscaja.xml" xmlns="http://www.w3.org/2001/XInclude" />    <!-- Caja -->
+  <include href="gostools.xml" xmlns="http://www.w3.org/2001/XInclude" />       <!-- Tools & utilities -->
+  <include href="goscustdesk.xml" xmlns="http://www.w3.org/2001/XInclude" />    <!-- Preferences -->
+  <include href="glossary.xml" xmlns="http://www.w3.org/2001/XInclude" />       <!-- Glossary -->
+  <include href="gosfeedback.xml" xmlns="http://www.w3.org/2001/XInclude" />    <!-- Feedback -->
+    
+</book>

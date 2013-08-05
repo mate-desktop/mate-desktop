@@ -1,0 +1,120 @@
+<chapter id="menubar">
+  <title>Using the Main Menubar</title>
+  
+  <!-- preserve id for backwards compatibility: 2.12 -->
+  <anchor id="goseditmainmenu-1"/><!-- Working With Menus -->
+  <anchor id="goseditmainmenu-2"/><!-- Introduction to Menus -->  
+  <anchor id="goseditmainmenu-5"/><!-- Menu Features -->
+  <anchor id="goseditmainmenu-11"/><!-- Menu Item Popup Menu -->
+  <anchor id="goseditmainmenu-51"/><!-- Actions Menu -->
+  <anchor id="menus-introduction"/><!-- Introduction to Menus --> 
+        
+  <highlights>
+    <para>This chapter describes how to use the MATE Panel Menubar.</para>
+  </highlights>
+  <indexterm>
+    <primary>menus</primary>
+    <secondary>introduction</secondary>
+  </indexterm>
+  <indexterm>
+    <primary>menus</primary>
+    <secondary>Menu Bar</secondary>
+    <see>Menu Bar</see>
+  </indexterm>
+  <indexterm>
+    <primary>Menu Bar</primary>
+    <secondary>introduction</secondary>
+  </indexterm>  
+
+  <para>The panel menubar is your main point of access to MATE. Use the <guimenu>Applications</guimenu> menu to launch applications, the <guimenu>Places</guimenu> to open locations on your computer or network, and the <guimenu>System</guimenu> to customize your system, get help with MATE, and log out of MATE or shut down your computer.</para>
+  <para>The following sections describe these three menus.</para>
+  <tip><para>By default, the panel menubar is on the <link linkend="top-panel">Top Edge Panel</link>. But like any other panel object, you can move the menubar to another panel, or have more than one instance of the menubar in your panels. For more on this, see <xref linkend="panel-menus"/>.</para></tip>
+
+  <section id="applications-menu">
+    <title>Applications Menu</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="goseditmainmenu-8"/>     
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>Applications menu</secondary>
+    </indexterm>
+    <para>The <guimenu>Applications</guimenu> menu contains a hierarchy of submenus, from which you can start the applications that are installed on your system.</para>
+    <para>Each submenu correponds to a category. For example, in the <guimenu>Sound &amp; Video</guimenu> submenu, you will find applications for playing CDs and recording sound.</para>
+    <para>To launch an application, perform the following steps:</para>
+    <orderedlist>
+      <listitem><para>Open the <guimenu>Applications</guimenu> menu by clicking on it.</para></listitem>
+      <listitem><para>Move the mouse down the menu to the category the application you want is in. Each submenu opens as your mouse passes over the category.</para></listitem>
+      <listitem><para>Click the menu item for the application.</para></listitem>
+    </orderedlist>
+    <para>When you install a new application, it is automatically added to the <guimenu>Applications</guimenu> menu in a suitable category. For example, if you install an instant messenger application, a VoIP application, or an FTP client, you will find it in the <guimenu>Internet</guimenu> submenu.</para>
+  </section>
+  <section id="places-menu">
+    <title>Places Menu</title>
+    <indexterm>
+      <primary>Places menu</primary>
+    </indexterm>
+    <para>The <guimenu>Places</guimenu> menu is a quick way to go to various locations on your computer and your local network. The <guimenu>Places</guimenu> menu allows you to open the following items:</para>
+    <itemizedlist>
+      <listitem><para>Your Home folder<remark>Add link!</remark></para></listitem>    
+      <listitem><para>The Desktop folder, which corresponds to the items displays in the desktop.</para></listitem>    
+      <listitem><para>The items in your Caja bookmarks. For more on this, see <xref linkend="caja-bookmarks"/>.</para></listitem>
+      <listitem><para>Your computer, which shows all your drives.</para></listitem>
+      <listitem><para>The Caja CD/DVD Creator. For more on this, see <xref linkend="caja-cdwriter"/>.</para></listitem>
+      <listitem><para>The local network. For more on this, see <xref linkend="caja-accessnetwork"/>.</para></listitem>
+    </itemizedlist>
+    
+    <para>The last three items on the menu perform actions rather than open locations.</para>    
+                   
+    <itemizedlist>          
+      <listitem><para><guimenuitem>Connect to Server</guimenuitem> lets you choose a server on your network. For more on this, see <xref linkend="caja-server-connect"/>.</para></listitem>
+      <listitem><para><guimenuitem>Search for Files</guimenuitem> lets you search for files on your computer. For more on this, see the <ulink type="help" url="ghelp:mate-search-tool">Search for Files Manual</ulink>.</para></listitem>     
+      <listitem><para>The <guimenuitem>Recent Documents</guimenuitem> submenu lists the documents you have recently opened. The last entry in the submenu clears the list.</para></listitem>                  
+    </itemizedlist>                
+  </section>
+  <section id="desktop-menu">
+    <title>System Menu</title>  
+    <indexterm>
+      <primary>System Menu</primary>
+    </indexterm>
+    <para>The <guimenu>System</guimenu> menu allows you to set your preferences for the MATE Desktop, get help with using MATE, and log out or shut down.</para>  
+    <itemizedlist>
+      <listitem><para>The <guimenuitem>Control Center</guimenuitem> item contains preference tools to configure your computer. For more information on using these preference tools, see <xref linkend="prefs"/>.</para></listitem>
+      <listitem><para>The <guimenuitem>Help</guimenuitem> item launches the Help Browser.</para></listitem>
+      <listitem><para>The <guimenuitem>About MATE</guimenuitem> item has a brief introduction to MATE, links to the MATE website, and credits.</para></listitem>
+      <listitem><para>The <guimenuitem>Lock Screen</guimenuitem> command starts your screensaver, and requires your password to return to the desktop. For more on this, see <xref linkend="lock-screen"/>.</para></listitem>
+      <listitem><para>Choose <guimenuitem>Log Out</guimenuitem> to log out of MATE, or to switch user.</para></listitem>
+      <listitem><para>Choose <guimenuitem>Shut Down</guimenuitem> to end your MATE session and turn off your computer, or restart it.</para></listitem>
+     </itemizedlist>
+     
+     <para>For more on logging out and shutting down, see <xref linkend="shutdown"/>.</para> 
+
+  </section>    
+  <section id="menu-editor">
+    <title>Customizing the Panel Menubar</title>
+    <!-- preserve id for backwards compatibility: 2.12 -->
+    <anchor id="goseditmainmenu-54"/>          
+    <indexterm>
+      <primary>menus</primary>
+      <secondary>customizing</secondary>
+    </indexterm>
+
+    <para>You can modify the contents of the following menus:</para>
+    <itemizedlist>
+      <listitem>
+        <para><guimenu>Applications</guimenu> menu</para>
+      </listitem>
+      <listitem>
+        <para><menuchoice><guimenu>System</guimenu><guisubmenu>Preferences</guisubmenu></menuchoice> submenu</para>
+      </listitem>
+      <listitem>
+        <para><menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu></menuchoice> submenu</para>
+      </listitem>
+    </itemizedlist>
+    
+    <para>To edit the items in these menus, right-click on the panel menubar, and choose <guimenuitem>Edit Menus</guimenuitem>. The <guilabel>Menu Layout</guilabel> window opens.</para>
+    <para>The <guilabel>Menu Layout</guilabel> window lists the menus in the left pane. Click on the expander arrows to show or hide submenus. Choose a menu in the left pane to see its items listed in the right pane.</para>
+    <para>To remove an item from a menu, deselect it in the list. The item can be added back to the menu by selecting it once again.</para>
+
+    <note><para>The <ulink type="help" url="ghelp:system-admin-guide?menustructure-0">System Administration Guide</ulink> has more information on how MATE implements menus and how administrators can customize them.</para></note>
+  </section>
+</chapter>
