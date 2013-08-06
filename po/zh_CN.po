@@ -3,17 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Christopher Meng <cickumqt@gmail.com>, 2012-2013.
-# Dianjin Wang <1132321739qq@gmail.com>, 2012.
-# Haonan Yu <rebuilty@gmail.com>, 2013.
-#  <xingzuo88@qq.com>, 2013.
+# Christopher Meng <cickumqt@gmail.com>, 2012-2013
+# Dianjin Wang <1132321739qq@gmail.com>, 2012
+# Cravix <dr.neemous@gmail.com>, 2013
+# rebuilty <rebuilty@gmail.com>, 2013
+# Wylmer Wang <wantinghard@gmail.com>, 2013
+# liulitchi <xingzuo88@qq.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2012-10-18 00:25+0200\n"
-"PO-Revision-Date: 2013-03-26 15:06+0000\n"
-"Last-Translator: rebuilty <rebuilty@gmail.com>\n"
+"PO-Revision-Date: 2013-06-26 12:25+0000\n"
+"Last-Translator: Wylmer Wang <wantinghard@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/MATE/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,11 +25,11 @@ msgstr ""
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
-msgstr "关于 MATE"
+msgstr "关于MATE"
 
 #: ../mate-about/mate-about.desktop.in.in.h:2
 msgid "Learn more about MATE"
-msgstr "进一步了解 MATE"
+msgstr "进一步了解MATE"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
@@ -99,7 +101,7 @@ msgstr "重绕文件“%1$s”时发生错误：%2$s"
 #: ../libmate-desktop/mate-desktop-item.c:380
 #: ../libmate-desktop/mate-desktop-item.c:3523
 msgid "No name"
-msgstr "无名称"
+msgstr "未命名"
 
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
@@ -109,12 +111,12 @@ msgstr "文件“%s”不是常规的文件或目录。"
 #: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
 msgid "Cannot find file '%s'"
-msgstr "无法找到文件 %s"
+msgstr "无法找到文件 '%s'"
 
 #: ../libmate-desktop/mate-desktop-item.c:837
 #, c-format
 msgid "No filename to save to"
-msgstr "没有文件名来保存"
+msgstr "未输入保存文件名"
 
 #: ../libmate-desktop/mate-desktop-item.c:1828
 #, c-format
@@ -129,7 +131,7 @@ msgstr "没有 URL 来启动"
 #: ../libmate-desktop/mate-desktop-item.c:2078
 #, c-format
 msgid "Not a launchable item"
-msgstr "不是一个可调用项"
+msgstr "非可执行项"
 
 #: ../libmate-desktop/mate-desktop-item.c:2088
 #, c-format
@@ -139,32 +141,32 @@ msgstr "没有要执行的命令"
 #: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Bad command (Exec) to launch"
-msgstr "调用的命令(可执行文件)无效"
+msgstr "无效命令（可执行文件）"
 
 #: ../libmate-desktop/mate-desktop-item.c:3580
 #, c-format
 msgid "Unknown encoding of: %s"
-msgstr "未知编码：%s"
+msgstr "未知的字符编码：%s"
 
 #: ../libmate-desktop/mate-desktop-utils.c:133
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr "无法找到正在使用xterm的终端程序，可能他无法工作"
+msgstr "无法找到可用的终端程序，暂先使用xterm（可能也无法工作）"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:444
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
-msgstr "无法得到屏幕来源(CRTC，输出，模式)"
+msgstr "无法得到屏幕来源（CRTC，输出，模式）"
 
 #: ../libmate-desktop/mate-rr.c:464
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
-msgstr "试图得到屏幕大小范围时出现无法处理的 X 错误"
+msgstr "试图获取屏幕大小时出现无法处理的 X 错误"
 
 #: ../libmate-desktop/mate-rr.c:470
 #, c-format
 msgid "could not get the range of screen sizes"
-msgstr "无法得到屏幕大小范围"
+msgstr "无法获知屏幕大小"
 
 #: ../libmate-desktop/mate-rr.c:715
 #, c-format
@@ -194,7 +196,7 @@ msgstr "无法为 CRTC %d 设定配置"
 #: ../libmate-desktop/mate-rr.c:1631
 #, c-format
 msgid "could not get information about CRTC %d"
-msgstr "无法获得CRTC %d的相关信息。"
+msgstr "无法获取CRTC %d的相关信息。"
 
 #: ../libmate-desktop/mate-rr-config.c:501
 msgid "Laptop"
@@ -294,7 +296,7 @@ msgstr "每秒像素数"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr ""
+msgstr "最大速度时每秒钟移动多少个像素点。"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:5
 msgid "How long to accelerate in milliseconds"
@@ -311,16 +313,16 @@ msgstr "初始延迟毫秒数"
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
-msgstr ""
+msgstr "在鼠标移动键起作用前等待多少毫秒。"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:9
 msgid "Minimum interval in milliseconds"
-msgstr ""
+msgstr "最小时间间隔（以毫秒计）"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr ""
+msgstr "仅在按下@delay毫秒不放后接受按键输入。"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:11
 msgid "Disable if two keys are pressed at the same time."
@@ -328,57 +330,57 @@ msgstr "如果两个键同时按下则禁用"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:12
 msgid "Beep when a modifier is pressed."
-msgstr ""
+msgstr "按下辅助键时响铃。"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr ""
+msgstr "启动辅助技术应用程序"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
-msgstr ""
+msgstr "登录 MATE 桌面时启动的辅助技术应用程序列表。"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "首选的行动辅助技术应用程序"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr ""
+msgstr "用于登录、菜单或命令行的首选移动辅助技术应用程序。"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr ""
+msgstr "启动首选的行动辅助技术应用程序"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr ""
+msgstr "MATE 将要在登录时启动的首选移动辅助技术应用程序。"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "首选的视觉辅助技术应用程序"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:2
 msgid ""
 "Preferred Visual assistive technology application be used for login, menu, "
 "or command line."
-msgstr ""
+msgstr "用于登录、菜单或命令行的首选视觉辅助技术应用程序。"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "启动首选的视觉辅助技术应用程序"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr ""
+msgstr "MATE 将要在登录时启动的首选视觉辅助技术应用程序。"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:1
 msgid "Default browser"
@@ -390,19 +392,19 @@ msgstr "默认浏览器"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:3
 msgid "Browser needs terminal"
-msgstr ""
+msgstr "浏览器需要终端"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:4
 msgid "Whether the default browser needs a terminal to run."
-msgstr ""
+msgstr "默认的浏览器是否需要终端来运行。"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:5
 msgid "Browser understands remote"
-msgstr ""
+msgstr "浏览器理解远程命令"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:6
 msgid "Whether the default browser understands netscape remote."
-msgstr ""
+msgstr "默认的浏览器是否理解 netscape 远程控制命令。"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:1
 msgid "Default calendar"
@@ -414,11 +416,11 @@ msgstr "默认第日历程序"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:3
 msgid "Calendar needs terminal"
-msgstr ""
+msgstr "日历需要终端"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr ""
+msgstr "默认的日历应用程序是否需要终端来运行。"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:5
 msgid "Default tasks"
@@ -434,7 +436,7 @@ msgstr "需要打开终端执行任务。"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr ""
+msgstr "默认的任务应用程序是否需要终端来运行。"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:1
 msgid "Terminal application"
@@ -442,16 +444,16 @@ msgstr "终端应用"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr ""
+msgstr "当启动需要终端的应用程序时使用的终端程序。"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:3
 msgid "Exec Arguments"
-msgstr ""
+msgstr "执行参数"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr ""
+msgstr "在“exec”键定义的终端里执行程序的参数。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:1
 msgid "Draw Desktop Background"
@@ -459,7 +461,7 @@ msgstr "绘制桌面背景"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr ""
+msgstr "让 MATE 绘制桌面背景。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:3
 msgid "Picture Options"
@@ -470,7 +472,7 @@ msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr ""
+msgstr "决定如何显示墙纸文件名指定的图片。可用的值有：“none”、“wallpaper”、“centered”、“scaled”、“stretched”、“zoom”和“spanned”。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:5
 msgid "Picture Filename"
@@ -671,7 +673,7 @@ msgstr "GTK IM 状态风格"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:36
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr ""
+msgstr "gtk+ 使用的 GTK+ 输入法状态风格的名称。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:37
 msgid "GTK IM Module"
@@ -679,7 +681,7 @@ msgstr "GTK IM 模块"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:38
 msgid "Name of the input method module used by GTK+."
-msgstr ""
+msgstr "GTK+ 使用的输入法模块的名称。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
 msgid "Document font"
@@ -687,7 +689,7 @@ msgstr "文档字体"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
 msgid "Name of the default font used for reading documents."
-msgstr ""
+msgstr "读取文档所使用的默认字体的名称。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
 msgid "Monospace font"
@@ -696,7 +698,7 @@ msgstr "等距字体"
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
-msgstr ""
+msgstr "类似终端程序等位置中所用的等距(固定宽度)字体。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
 msgid "Use Custom Font"
@@ -704,7 +706,7 @@ msgstr "使用自定义字体"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr ""
+msgstr "是否在 gtk+ 程序中使用自定义字体。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
 msgid "Status Bar on Right"
@@ -712,25 +714,25 @@ msgstr "状态栏位于右边"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:46
 msgid "Whether to display a status bar meter on the right."
-msgstr ""
+msgstr "是否在右边显示状态栏指示。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:47
 msgid "Module for GtkFileChooser"
-msgstr ""
+msgstr "GtkFileChooser 的模块"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:48
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
-msgstr ""
+msgstr "GtkFileChooser 部件所用的文件系统模型的模块。可供选择的值是“gio”和“gtk+”。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:49
 msgid "Menubar accelerator"
-msgstr ""
+msgstr "菜单栏加速键"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:50
 msgid "Keyboard shortcut to open the menu bars."
-msgstr ""
+msgstr "打开菜单栏的键盘快捷键。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:51
 msgid "Show the 'Input Methods' menu"
@@ -740,17 +742,17 @@ msgstr "显示“输入法”菜单"
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
-msgstr ""
+msgstr "输入框和文本视图中的快捷菜单是否应提供更改输入法的选项。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:53
 msgid "Show the 'Unicode Control Character' menu"
-msgstr ""
+msgstr "显示“Unicode 控制字符”菜单"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:54
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
-msgstr ""
+msgstr "输入框和文本视图中的快捷菜单是否应提供插入控制字符的选项。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
 msgid "Disable command line"
@@ -761,17 +763,17 @@ msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr ""
+msgstr "避免用户表单访问终端或指定要执行的命令行。例如，这将禁止访问面板的“运行应用程序”对话框。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:3
 msgid "Disable saving files to disk"
-msgstr ""
+msgstr "禁止将文件保存到磁盘"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:4
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr ""
+msgstr "阻止用户将文件保存到磁盘。例如，这将禁止访问全部应用程序的“另存为”对话框。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:5
 msgid "Disable printing"
@@ -781,17 +783,17 @@ msgstr "禁用打印"
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr ""
+msgstr "阻止用户进行打印。例如，这将禁止访问全部应用程序的“打印”对话框。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:7
 msgid "Disable print setup"
-msgstr ""
+msgstr "禁用打印设置"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:8
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr ""
+msgstr "阻止用户修改打印设置。例如，这将禁止访问全部应用程序的“打印设置”对话框。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:9
 msgid "Disable user switching"
@@ -801,7 +803,7 @@ msgstr "禁用用户切换"
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr ""
+msgstr "阻止用户在本人会话活动时切换到另外一个账户。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:11
 msgid "Disable lock screen"
@@ -817,11 +819,11 @@ msgstr "禁用 URL 和 MIME 类型处理器"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr ""
+msgstr "阻止运行任何 URL 或 MIME 类型处理程序。"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr ""
+msgstr "可用的值是“on”，“off”和“custom”。"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:2
 msgid "Keyboard Bell Custom Filename"
@@ -829,7 +831,7 @@ msgstr "自定义键盘铃声文件名"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:3
 msgid "File name of the bell sound to be played."
-msgstr ""
+msgstr "要播放的响铃声音的文件名。"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:4
 msgid "Remember NumLock state"
@@ -839,7 +841,7 @@ msgstr "记住 NumLock 状态"
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr ""
+msgstr "设定为 true 时，MATE 将在不同会话间记住 NumLock 灯的状态。"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:6
 msgid "NumLock state"
@@ -847,15 +849,15 @@ msgstr "NumLock 状态"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:7
 msgid "The remembered state of the NumLock LED."
-msgstr ""
+msgstr "设定为 true 时，MATE 将在不同会话间记住 NumLock 灯的状态。"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:1
 msgid "Mouse button orientation"
-msgstr ""
+msgstr "鼠标按键方向"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr ""
+msgstr "为左手鼠标交换左右鼠标按键。"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:3
 msgid "Single Click"
@@ -869,17 +871,17 @@ msgstr "单击以打开图标。"
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
-msgstr ""
+msgstr "鼠标运动的加速倍数。系统的默认值是 -1。"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:6
 msgid "Motion Threshold"
-msgstr ""
+msgstr "运动阈值"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:7
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
-msgstr ""
+msgstr "启动鼠标运动加速前鼠标必须移动的像素点数。系统默认的值是 -1。"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:8
 msgid "Drag Threshold"
@@ -887,7 +889,7 @@ msgstr "拖放阈值"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:9
 msgid "Distance before a drag is started."
-msgstr ""
+msgstr "判断拖放开始的距离。"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:10
 msgid "Double Click Time"
@@ -895,7 +897,7 @@ msgstr "双击时间"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:11
 msgid "Length of a double click."
-msgstr ""
+msgstr "双击时长。"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
 msgid "Locate Pointer"
@@ -905,7 +907,7 @@ msgstr "定位指针"
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr ""
+msgstr "在按下或放开Ctrl键时高亮显示指针位置"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
 msgid "Cursor font"
@@ -916,7 +918,7 @@ msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
-msgstr ""
+msgstr "光标字体的名称。如果未设置，则使用默认的字体。此设置只有在每次会话开始前传送给 X 服务器，因此在会话当中改变它不会有用，要等到您下次登录后才会起作用。"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
 msgid "Cursor theme"
@@ -926,7 +928,7 @@ msgstr "光标主题"
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
-msgstr ""
+msgstr "光标主题名称。仅适用于支持 Xcursor 的 Xserver，比如 XFree86 4.3 或更新版本。"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
 msgid "Cursor size"
@@ -934,7 +936,7 @@ msgstr "光标大小"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
 msgid "Size of the cursor referenced by cursor_theme."
-msgstr ""
+msgstr "cursor_theme 引用的光标大小。"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:1
 msgid "Default mixer device"
@@ -942,7 +944,7 @@ msgstr "默认混音器设备"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr ""
+msgstr "多媒体按键绑定所使用的默认混音器设备。"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:3
 msgid "Default mixer tracks"
@@ -950,15 +952,15 @@ msgstr "默认混音器音轨"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr ""
+msgstr "多媒体按键绑定所使用的默认混音器音轨。"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:5
 msgid "Enable ESD"
-msgstr ""
+msgstr "启用ESD"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:6
 msgid "Enable sound server startup."
-msgstr ""
+msgstr "在启动时启用声音服务器。"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:7
 msgid "Sounds for events"
@@ -966,15 +968,15 @@ msgstr "事件声音"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:8
 msgid "Whether to play sounds on user events."
-msgstr ""
+msgstr "是否在触发用户事件时播放声音"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:9
 msgid "Sound theme name"
-msgstr ""
+msgstr "声音主题名"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:10
 msgid "The XDG sound theme to use for event sounds."
-msgstr ""
+msgstr "用于事件声音的 XDG 声音主题。"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:11
 msgid "Input feedback sounds"
@@ -982,19 +984,19 @@ msgstr "输入反馈声音"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:12
 msgid "Whether to play sounds on input events."
-msgstr ""
+msgstr "是否在触发输入事件时播放声音"
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
-msgstr ""
+msgstr "缩略图缓存的最长时间（以天为单位表示），-1即不设上限。"
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr ""
+msgstr "缩略图缓存的最大大小（以MB为单位表示），-1即不设上限。"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:1
 msgid "Disable all external thumbnailers"
@@ -1004,18 +1006,18 @@ msgstr "禁用所有外部缩略图程序"
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
-msgstr ""
+msgstr "设为true可禁用所有外部缩略图生成程序，即使这些程序"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:3
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
-msgstr ""
+msgstr "禁止外部缩略图生成器为之生成缩略图的文件类型列表"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:4
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr ""
+msgstr "文件类型包含于该表内的文件将不会生成缩略图。"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:1
 msgid "Type time"
@@ -1023,7 +1025,7 @@ msgstr "打字时间"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr ""
+msgstr "间断模式开始前的最少打字时间。"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:3
 msgid "Break time"
@@ -1031,7 +1033,7 @@ msgstr "中断时间"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:4
 msgid "Number of minutes that the typing break should last."
-msgstr ""
+msgstr "休息时长。"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:5
 msgid "Allow postponing of breaks"
@@ -1039,12 +1041,12 @@ msgstr "允许推迟间断"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
-msgstr ""
+msgstr "可否推迟休息。"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:7
 msgid "Whether or not keyboard locking is enabled"
-msgstr ""
+msgstr "是否已启用键盘锁定。"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
 msgid "Whether or not keyboard locking is enabled."
-msgstr ""
+msgstr "是否已启用键盘锁定。"

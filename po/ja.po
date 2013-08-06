@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ABE Tsunehiko <hallconnen2+transifex@gmail.com>, 2013.
+# uǝsıɯoʎ(読み専) <hallconnen2+transifex@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2012-10-18 00:25+0200\n"
-"PO-Revision-Date: 2013-03-08 05:24+0000\n"
-"Last-Translator: 読み専(先行量産型) <hallconnen2+transifex@gmail.com>\n"
+"PO-Revision-Date: 2013-05-02 10:58+0000\n"
+"Last-Translator: uǝsıɯoʎ(読み専) <hallconnen2+transifex@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/MATE/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -303,7 +303,7 @@ msgstr "速さが0から最大値になるまで何ミリ秒かかるか"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:7
 msgid "Initial delay in milliseconds"
-msgstr ""
+msgstr "初期の遅延 (ミリ秒単位)"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:8
 msgid ""
@@ -335,47 +335,47 @@ msgstr "支援技術のアプリケーションを起動する"
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
-msgstr ""
+msgstr "MATE デスクトップにログインした後に起動する支援技術 (Assistive Technology) アプリケーションの並びです。"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "起動する移動性支援技術のアプリケーション"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr ""
+msgstr "ログインやメニュー、あるいはコマンドラインで利用する移動性支援技術 (Mobility Assistive Technology) をサポートしたアプリケーションです。"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr ""
+msgstr "移動性支援技術をサポートしたアプリケーションを起動する"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr ""
+msgstr "ログインしたら移動性支援技術 (Mobility Assistive Technology) をサポートするアプリケーションを優先して起動するかどうかです。"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "起動する視覚支援技術のアプリケーション"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:2
 msgid ""
 "Preferred Visual assistive technology application be used for login, menu, "
 "or command line."
-msgstr ""
+msgstr "ログインやメニュー、あるいはコマンドラインで利用する視覚支援技術 (Visual Assistive Technology) をサポートしたアプリケーションです。"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "視覚支援技術をサポートしたアプリケーションを起動する"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr ""
+msgstr "ログインしたら視覚支援技術 (Visual Assistive Technology) をサポートするアプリケーションを優先して起動するかどうかです。"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:1
 msgid "Default browser"
@@ -387,254 +387,254 @@ msgstr "すべての URL で利用するデフォルトのブラウザです。"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:3
 msgid "Browser needs terminal"
-msgstr ""
+msgstr "ブラウザを端末から起動する"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:4
 msgid "Whether the default browser needs a terminal to run."
-msgstr ""
+msgstr "デフォルトのブラウザを実行するのに端末が必要かどうかです。"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:5
 msgid "Browser understands remote"
-msgstr ""
+msgstr "ブラウザはリモートを理解する"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:6
 msgid "Whether the default browser understands netscape remote."
-msgstr ""
+msgstr "デフォルトのブラウザが Netscape リモートを理解するかどうかです。"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:1
 msgid "Default calendar"
-msgstr ""
+msgstr "デフォルトのカレンダ"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:2
 msgid "Default calendar application"
-msgstr ""
+msgstr "デフォルトのカレンダ・アプリケーションです。"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:3
 msgid "Calendar needs terminal"
-msgstr ""
+msgstr "カレンダを端末から起動する"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr ""
+msgstr "デフォルトのカレンダ・アプリケーションを実行するのに端末が必要かどうかです。"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:5
 msgid "Default tasks"
-msgstr ""
+msgstr "デフォルトのタスク"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:6
 msgid "Default tasks application"
-msgstr ""
+msgstr "デフォルトのタスク管理アプリケーションです"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:7
 msgid "Tasks needs terminal"
-msgstr ""
+msgstr "タスクを端末から起動する"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr ""
+msgstr "デフォルトのタスク管理アプリケーションを実行するのに端末が必要かどうかです。"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:1
 msgid "Terminal application"
-msgstr ""
+msgstr "端末アプリケーション"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr ""
+msgstr "端末から起動する必要のあるアプリケーションから利用される端末プログラムです。"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:3
 msgid "Exec Arguments"
-msgstr ""
+msgstr "実行時の引数"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr ""
+msgstr "'exec' キーで定義された、端末でプログラムを実行するために利用する引数です。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:1
 msgid "Draw Desktop Background"
-msgstr ""
+msgstr "デスクトップの背景を描画する"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr ""
+msgstr "MATE にデスクトップの背景を描画させるかどうかです。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:3
 msgid "Picture Options"
-msgstr ""
+msgstr "画像のオプション"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:4
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr ""
+msgstr "wallpaper_filename で指定した画像をどのように描画するか設定します。設定可能な値: \"none\"、\"wallpaper\"、\"centered\"、\"scaled\"、\"stretched\"、\"zoom\"、\"spanned\""
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:5
 msgid "Picture Filename"
-msgstr ""
+msgstr "画像のファイル名"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:6
 msgid "File to use for the background image."
-msgstr ""
+msgstr "背景の画像に使用するファイルです。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:7
 msgid "Picture Opacity"
-msgstr ""
+msgstr "画像の透明度"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:8
 msgid "Opacity with which to draw the background picture."
-msgstr ""
+msgstr "背景の画像に適用する透明度です。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:9
 msgid "Primary Color"
-msgstr ""
+msgstr "一番目の色"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:10
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr ""
+msgstr "グラデーション時の左側もしくは上側の色、あるいは単色時の色です。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:11
 msgid "Secondary Color"
-msgstr ""
+msgstr "二番目の色"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:12
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr ""
+msgstr "グラデーション時の右側もしくは下側の色、あるいは単色時の色です。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:13
 msgid "Color Shading Type"
-msgstr ""
+msgstr "色調の変化"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:14
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
-msgstr ""
+msgstr "背景の色調をどのように変化させるか設定します。設定可能な値: \"horizontal-gradient\"、\"vertical-gradient\"、\"solid\""
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.in.h:1
 msgid "File Icon Theme"
-msgstr ""
+msgstr "ファイル・アイコンのテーマ"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr ""
+msgstr "ファイルのアイコンに適用するテーマです。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:1
 msgid "Enable Accessibility"
-msgstr ""
+msgstr "アクセシビリティを有効にする"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr ""
+msgstr "アプリケーションにアクセシビリティをサポートさせるかどうかです。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:3
 msgid "Enable Animations"
-msgstr ""
+msgstr "アニメーションを有効にする"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr ""
+msgstr "アニメーションを有効にするかどうかを設定します。[注意] これはグローバルな設定なので、ウィンドウ・マネージャやパネルなどの挙動に影響します。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:5
 msgid "Menus Have Tearoff"
-msgstr ""
+msgstr "メニューに可動メニューを表示する"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr ""
+msgstr "メニューを切り離せるようにするかどうかです。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:7
 msgid "Can Change Accels"
-msgstr ""
+msgstr "アクセラレーション・キーを変更できるようにする"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:8
 msgid ""
 "Whether the user can dynamically type a new accelerator when positioned over"
 " an active menuitem."
-msgstr ""
+msgstr "メニューアイテムを利用可能な状態にして、新しいアクセラレータを直接入力し登録することができるかどうかです。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:9
 msgid "Toolbar Style"
-msgstr ""
+msgstr "ツールバーの形式"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:10
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr ""
+msgstr "ツールバーのスタイルです。設定可能な値: \"both\"、\"both-horiz\"、\"icons\"、\"text\""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:11
 msgid "Menus Have Icons"
-msgstr ""
+msgstr "メニューにアイコンを表示する"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr ""
+msgstr "メニュー項目の隣にアイコンを表示するかどうかです。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:13
 msgid "Buttons Have Icons"
-msgstr ""
+msgstr "ボタンにアイコンを表示するかどうか"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:14
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr ""
+msgstr "ボタンにラベルとアイコンの両方を表示するかどうかです。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:15
 msgid "Menubar Detachable"
-msgstr ""
+msgstr "メニューバーを取り外せるようにする"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:16
 msgid "Whether the user can detach menubars and move them around."
-msgstr ""
+msgstr "メニューバーを取り外して移動できるようにするかどうかです。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:17
 msgid "Toolbar Detachable"
-msgstr ""
+msgstr "ツールバーを取り外せるようにする"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:18
 msgid "Whether the user can detach toolbars and move them around."
-msgstr ""
+msgstr "ツールバーを取り外して移動できるようにするかどうかです。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:19
 msgid "Toolbar Icon Size"
-msgstr ""
+msgstr "ツールバーのアイコンのサイズ"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr ""
+msgstr "ツールバーに表示するアイコンの大きさです。設定可能な値: \"small-toolbar\" または \"large-toolbar\""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:21
 msgid "Cursor Blink"
-msgstr ""
+msgstr "カーソルの点滅"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:22
 msgid "Whether the cursor should blink."
-msgstr ""
+msgstr "カーソルを点滅させるかどうかです。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:23
 msgid "Cursor Blink Time"
-msgstr ""
+msgstr "カーソルの点滅間隔"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:24
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr ""
+msgstr "カーソルが点滅する間隔です (ミリ秒単位)。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:25
 msgid "Icon Theme"
-msgstr ""
+msgstr "アイコンのテーマ"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:26
 msgid "Icon theme to use for the panel, caja etc."
-msgstr ""
+msgstr "パネルや Caja などで使用するアイコンのテーマです。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:27
 msgid "Gtk+ Theme"
-msgstr ""
+msgstr "GTK+ テーマ"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:28
 msgid "Basename of the default theme used by gtk+."
-msgstr ""
+msgstr "GTK+ が使用するデフォルトのテーマの名前 (basename) です。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:29
 msgid "List of symbolic names and color equivalents"

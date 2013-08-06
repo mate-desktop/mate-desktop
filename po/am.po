@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# samson <sambelet@yahoo.com>, 2013.
+# samson <sambelet@yahoo.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2012-10-18 00:25+0200\n"
-"PO-Revision-Date: 2013-03-22 18:01+0000\n"
+"PO-Revision-Date: 2013-06-05 01:03+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic (http://www.transifex.com/projects/p/MATE/language/am/)\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "ስለ ሜት በበለጠ ለመማር "
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:199
 msgid "translator-credits"
-msgstr "ምስጋና ለተርጓሚ "
+msgstr "ምስጋና-ለተርጓሚዎችች "
 
 #: ../mate-about/mate-about.h:46
 msgid ""
@@ -81,12 +81,12 @@ msgstr "ያልታወቀ "
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
-msgstr "ፋይል '%s'ን ለማንበብ ስህተት አለ፦ %s"
+msgstr "ስህተት ፋይል በማንበብ ላይ '%s': %s"
 
 #: ../libmate-desktop/mate-desktop-item.c:288
 #, c-format
 msgid "Error rewinding file '%s': %s"
-msgstr "ፋይል '%s'ን ወደኋላ ለማጠንጠን ስህተት አለ፦ %s"
+msgstr "ስህተት ፋይል በማጠንጠን ላይ '%s': %s"
 
 #. Translators: the "name" mentioned
 #. * here is the name of an application or
@@ -101,7 +101,7 @@ msgstr "ስም የለም"
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
-msgstr "ፋይል '%s' መደበኛ ፋይል ወይም ማውጫ አይደለም።"
+msgstr "ፋይል '%s' መደበኛ ፋይል ወይም ዳይሬክቶሪ አይደለም"
 
 #: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
@@ -116,7 +116,7 @@ msgstr "ለማስቀመጥ ምንም የፋይል ስም የለም"
 #: ../libmate-desktop/mate-desktop-item.c:1828
 #, c-format
 msgid "Starting %s"
-msgstr "%sን እየጀመረ ነው"
+msgstr "በማስጀመር ላይ %s"
 
 #: ../libmate-desktop/mate-desktop-item.c:2062
 #, c-format
@@ -126,7 +126,7 @@ msgstr "ለማስጀመር ምንም URL የለም"
 #: ../libmate-desktop/mate-desktop-item.c:2078
 #, c-format
 msgid "Not a launchable item"
-msgstr "ማስነሳት የሚቻል አይደለም"
+msgstr "ማስነሳት የሚቻል እቃ አይደለም"
 
 #: ../libmate-desktop/mate-desktop-item.c:2088
 #, c-format
@@ -141,17 +141,17 @@ msgstr "ለማስነሳት ትክክል ያለሆነ (Exec) ትእዛዝ"
 #: ../libmate-desktop/mate-desktop-item.c:3580
 #, c-format
 msgid "Unknown encoding of: %s"
-msgstr "የ%s የማይታወቅ የሆሄያት ኮድ፦"
+msgstr "ያልታወቀ encoding of: %s"
 
 #: ../libmate-desktop/mate-desktop-utils.c:133
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr ""
+msgstr "ተርሚናልን ማግኘት አልተቻለም xterm, በመጠቀም ባይሰራም እንኳን"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:444
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
-msgstr ""
+msgstr "የመመልከቻውን ምንጮች ማግኘት አልተቻለም (CRTCs, outputs, modes)"
 
 #: ../libmate-desktop/mate-rr.c:464
 #, c-format
@@ -195,7 +195,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-rr-config.c:501
 msgid "Laptop"
-msgstr ""
+msgstr "ላፕቶፕ "
 
 #: ../libmate-desktop/mate-rr-config.c:1162
 #, c-format
@@ -216,7 +216,7 @@ msgstr ""
 #: ../libmate-desktop/mate-rr-config.c:1441
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
-msgstr ""
+msgstr "CRTC %d ማሽከርከርን አይደግፍም=%s"
 
 #: ../libmate-desktop/mate-rr-config.c:1455
 #, c-format
@@ -235,7 +235,7 @@ msgstr ""
 #: ../libmate-desktop/mate-rr-config.c:1639
 #, c-format
 msgid "Trying modes for CRTC %d\n"
-msgstr ""
+msgstr "ዘዴዎችን በመሞከር ላይ ለ CRTC %d\n"
 
 #: ../libmate-desktop/mate-rr-config.c:1663
 #, c-format
@@ -287,7 +287,7 @@ msgstr ""
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:3
 msgid "Pixels per seconds"
-msgstr "ፒክስልስ በሰከከንዶች "
+msgstr "ፒክስልስ በ ሰከከንዶች "
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
@@ -427,7 +427,7 @@ msgstr "የነባር ስራዎች መተግበሪያ "
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:7
 msgid "Tasks needs terminal"
-msgstr "ስራዎች ተርሚናል ይፈልጋል "
+msgstr "ስራዎቹ ተርሚናል ይፈልጋሉ  "
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
@@ -598,7 +598,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:19
 msgid "Toolbar Icon Size"
-msgstr "የእቃ መደርደሪያ መጠን "
+msgstr "የእቃ መደርደሪያ ምልክት መጠን "
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
@@ -606,7 +606,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:21
 msgid "Cursor Blink"
-msgstr ""
+msgstr "የመጠቆሚያ ብልጭ ድርግም ባይ"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:22
 msgid "Whether the cursor should blink."
@@ -614,11 +614,11 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:23
 msgid "Cursor Blink Time"
-msgstr ""
+msgstr "የመጠቆሚያ ብልጭ ድርግም ባይ ሰአት"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:24
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr ""
+msgstr "የመጠቆሚያ ብልጭ ድርግም ባይ ሰአት በ ሚሊ ሰከንድስ "
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:25
 msgid "Icon Theme"
@@ -806,7 +806,7 @@ msgstr "መመልከቻውን መቆለፊያ ማሰናከያ "
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:12
 msgid "Prevent the user to lock his screen."
-msgstr ""
+msgstr "ተጠቃሚው መመልከቻውን እንዳይቆልፍ መከልከያ"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:13
 msgid "Disable URL and MIME type handlers"
@@ -860,7 +860,7 @@ msgstr "አንድ ጊዜ መጫኛ "
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:4
 msgid "Single click to open icons."
-msgstr "አንድ ጊዜ መጫኛ ምልክቶች ለመክፈቻ "
+msgstr "በአንድ ጊዜ መጫኛ ምልክቶችን መክፈቻ "
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:5
 msgid ""
@@ -880,15 +880,15 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:8
 msgid "Drag Threshold"
-msgstr ""
+msgstr "መግቢያውን መጎተቻ "
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:9
 msgid "Distance before a drag is started."
-msgstr ""
+msgstr "እርቀቱ መጎተቻው ከመጀመሩ በፊት "
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:10
 msgid "Double Click Time"
-msgstr ""
+msgstr "ሁለት ጊዜ መጫኛ "
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:11
 msgid "Length of a double click."
@@ -927,7 +927,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
 msgid "Cursor size"
-msgstr ""
+msgstr "የመጠቆሚያው መጠን"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
 msgid "Size of the cursor referenced by cursor_theme."
@@ -959,7 +959,7 @@ msgstr ""
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:7
 msgid "Sounds for events"
-msgstr "ድምፅ ለሁኔታዎች "
+msgstr "ድምፅ ለ ሁኔታዎች "
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:8
 msgid "Whether to play sounds on user events."
@@ -1024,7 +1024,7 @@ msgstr ""
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:3
 msgid "Break time"
-msgstr ""
+msgstr "የ እረፍት ጊዜ"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:4
 msgid "Number of minutes that the typing break should last."

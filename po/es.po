@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Lluís Tusquellas <lutusq@lutusq.jazztel.es>, 2012.
-#   <lutusq@lutusq.jazztel.es>, 2012.
+# Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013
+# Lluís Tusquellas <lutusq@gmail.com>, 2012
+# Lluís Tusquellas <lutusq@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2012-10-18 00:25+0200\n"
-"PO-Revision-Date: 2012-11-28 22:03+0000\n"
-"Last-Translator: Lluís Tusquellas <lutusq@gmail.com>\n"
+"PO-Revision-Date: 2013-05-08 06:49+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitoschido@ubuntu.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/MATE/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,27 +50,27 @@ msgstr "MATE incluye la mayor parte de lo que usted ve en su computador, incluid
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
-msgstr "MATE es un entorno de escritorio libre, usable, estable y accesible para la familia de Sistemas Operativos similares a Unix."
+msgstr "MATE es un entorno de escritorio libre, usable, estable y accesible para la familia de sistemas operativos similares a Unix."
 
 #: ../mate-about/mate-about.h:55
 msgid ""
 "MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
 " since it was started in 1997; many more have contributed in other important"
 " ways, including translations, documentation, and quality assurance."
-msgstr "MATE es un fork de GNOME 2. Millares de personas han contribuído al código de GNOME desde su inicio en 1997; muchos más lo han hecho en otras maneras importantes, como traducciones, documentación, y comprobación de la calidad."
+msgstr "MATE es una bifurcación de GNOME 2. Cientos de personas han contribuido al código de GNOME desde su inicio en 1997; muchos más lo han hecho en otros aspectos importantes, como traducciones, documentación, y control de calidad."
 
 #: ../mate-about/mate-about.h:59
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
-msgstr "GNOME 2 era el más popular de los escritorios para Linux, pero no estará ya más disponible... MATE está aquí para proporcionarle el mismo escritorio!"
+msgstr "GNOME 2 era el escritorio para Linux más popular, pero ya no está disponible. MATE le proporciona el mismo entorno y experiencia."
 
 #: ../mate-about/mate-about.h:62
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
-msgstr "El nombre “MATE” proviene de la yerba maté, una especie de acebo nativo de la América del Sur subtropical. Sus hojas contienen cafeína y se usan para hacer infusiones y una bebida llamada mate."
+msgstr "El nombre «MATE» proviene de la yerba maté, una especie de acebo nativo de la América del Sur subtropical. Sus hojas contienen cafeína y se usan para hacer infusiones y una bebida llamada mate."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -102,7 +103,7 @@ msgstr "Sin nombre"
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
-msgstr "El archivo «%s» no es un archivo o directorio regular."
+msgstr "El archivo «%s» no es un archivo o carpeta normal."
 
 #: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
@@ -284,11 +285,11 @@ msgstr "intervalo mínimo en milisegundos"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr "Ignorar varias pulsiones de la _misma_tecla en @delay milisegundos"
+msgstr "Ignorar varias pulsaciones de la _misma_tecla en @delay milisegundos"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:3
 msgid "Pixels per seconds"
-msgstr "Pixels por segundo"
+msgstr "Píxeles por segundo"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
@@ -296,7 +297,7 @@ msgstr "Cuántos píxeles per segundo para moverse a la máxima velocidad"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr "Qué largo para acelerar en milisegundos"
+msgstr "Cuánta distancia acelerar en milisegundos"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
@@ -322,7 +323,7 @@ msgstr "No aceptar una tecla como presionada si no se mantiene apretada durante 
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:11
 msgid "Disable if two keys are pressed at the same time."
-msgstr "Inhabilitar si dos teclas son apretadas al mismo tiempo."
+msgstr "Desactivar si se pulsan dos teclas al mismo tiempo."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:12
 msgid "Beep when a modifier is pressed."
@@ -380,11 +381,11 @@ msgstr "MATE para comenzar la aplicación preferida de tecnología de asistencia
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:1
 msgid "Default browser"
-msgstr "Navegador por defecto"
+msgstr "Navegador predeterminado"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:2
 msgid "Default browser for all URLs."
-msgstr "Navegador por defecto para todas las URLs."
+msgstr "Navegador predeterminado para todos los URL."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:3
 msgid "Browser needs terminal"
@@ -404,15 +405,15 @@ msgstr "Si el navegador predeterminado entiende netscape remoto."
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:1
 msgid "Default calendar"
-msgstr "Calendario por defecto"
+msgstr "Calendario predeterminado"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:2
 msgid "Default calendar application"
-msgstr "Aplicación de calendario por defecto"
+msgstr "Aplicación de calendario predeterminada"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:3
 msgid "Calendar needs terminal"
-msgstr "Calendario necesita un terminal"
+msgstr "El calendario necesita un terminal"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
@@ -420,11 +421,11 @@ msgstr "Si la aplicación de calendario por defecto necesita un terminal para ej
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:5
 msgid "Default tasks"
-msgstr "Tareas por defecto"
+msgstr "Tareas predeterminadas"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:6
 msgid "Default tasks application"
-msgstr "Aplicación de tareas por defecto"
+msgstr "Aplicación de tareas predeterminada"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:7
 msgid "Tasks needs terminal"
@@ -444,12 +445,12 @@ msgstr "Programa de terminal para usarse cuando se ejecutan aplicaciones que nec
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:3
 msgid "Exec Arguments"
-msgstr "Argumentos exec"
+msgstr "Argumentos de ejecución"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr "Argumento usado para ejecutar programas en el terminal definidos por la tecla 'exec'."
+msgstr "Argumento usado para ejecutar programas en el terminal definidos por la clave «exec»."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:1
 msgid "Draw Desktop Background"
@@ -457,7 +458,7 @@ msgstr "Dibuja fondo de escritorio"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr "MATE ha de dibujar el fondo de escritorio"
+msgstr "Hacer que MATE gestione el fondo del escritorio."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:3
 msgid "Picture Options"
@@ -468,7 +469,7 @@ msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr "Determina cómo se forma la imagen de fichero_de_imagen. Los valores posibles son \"fondo de escritorio\", \"centrado\", \"escalado\", \"estirado\", \"zoom\", \"extendido\". "
+msgstr "Determina cómo se renderiza la imagen definida por wallpaper_filename. Los valores posibles son «wallpaper», «centered», «scaled», «stretched», «zoom», «spanned»."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:5
 msgid "Picture Filename"
@@ -567,7 +568,7 @@ msgstr "Estilo de la barra de herramientas. Los valores válidos son \"ambos\", 
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:11
 msgid "Menus Have Icons"
-msgstr "Los menús tienen íconos"
+msgstr "Los menús tienen iconos"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
@@ -575,7 +576,7 @@ msgstr "Si el menú puede mostrar un ícono al lado de una entrada de menú."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:13
 msgid "Buttons Have Icons"
-msgstr "Los botones tienen íconos"
+msgstr "Los botones tienen iconos"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:14
 msgid "Whether buttons may display an icon in addition to the button text."
@@ -603,7 +604,7 @@ msgstr "Tamaño de los íconos de la barra de herramientas"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr "Tamaño de los íconos en las barras de herramientas, sea \"barra pequeña\" o \"barra grande\"."
+msgstr "El tamaño de los iconos de las barras de herramientas, que puede ser «small-toolbar» o «large-toolbar»."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:21
 msgid "Cursor Blink"
@@ -623,11 +624,11 @@ msgstr "Duración del ciclo de parpadeo del cursor, en milisegundos."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:25
 msgid "Icon Theme"
-msgstr "Tema de íconos"
+msgstr "Tema de iconos"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:26
 msgid "Icon theme to use for the panel, caja etc."
-msgstr "Tema de íconos para ser usados en el panel, caja, etc."
+msgstr "El tema de iconos que usar en el panel, Caja, etc."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:27
 msgid "Gtk+ Theme"
@@ -649,11 +650,11 @@ msgstr "Una lista separada por '\\n' de \"nombre: color\" como se define en la o
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:31
 msgid "Default font"
-msgstr "Fuente por defecto"
+msgstr "Tipo de letra predeterminado"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:32
 msgid "Name of the default font used by gtk+."
-msgstr "Nombre de la fuente por defecto usada por gtk+"
+msgstr "Nombre del tipo de letra predeterminado que usará gtk+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:33
 msgid "GTK IM Preedit Style"
@@ -681,15 +682,15 @@ msgstr "Nombre del método  de entrada del módulo GTK+ usado por gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
 msgid "Document font"
-msgstr "Fuente del documento"
+msgstr "Tipo de letra para documentos"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
 msgid "Name of the default font used for reading documents."
-msgstr "Nombre de la fuente por defecto usada para leer documentos."
+msgstr "Nombre del tipo de letra predeterminado que se usará para leer documentos."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
 msgid "Monospace font"
-msgstr "Fuente monoespacio"
+msgstr "Tipo de letra monoespaciada"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
 msgid ""
@@ -793,7 +794,7 @@ msgstr "Evitar que el usuario pueda modificar los ajustes de impresión. Por eje
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:9
 msgid "Disable user switching"
-msgstr "Deshabilita el cambio de usuario"
+msgstr "Desactivar el cambio de usuario"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:10
 msgid ""
@@ -861,7 +862,7 @@ msgstr "Click simple"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:4
 msgid "Single click to open icons."
-msgstr "Click simple para abrir íconos."
+msgstr "Pulsación sencilla para abrir los iconos."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:5
 msgid ""
@@ -936,7 +937,7 @@ msgstr "Tamaño del cursor por referencia al tema del cursor"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:1
 msgid "Default mixer device"
-msgstr "Aparato de ratón por defecto"
+msgstr "Dispositivo mezclador predeterminado"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
@@ -952,7 +953,7 @@ msgstr "El mezclador de pistas por defecto utilizado por las asociaciones de tec
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:5
 msgid "Enable ESD"
-msgstr "Habilita ESD"
+msgstr "Activar ESD"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:6
 msgid "Enable sound server startup."
