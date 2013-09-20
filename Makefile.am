@@ -1,4 +1,4 @@
-SUBDIRS = libmate-desktop man docs po schemas
+SUBDIRS = libmate-desktop man docs po schemas tools
 
 if MATE_ABOUT_ENABLED
 SUBDIRS += mate-about
@@ -28,7 +28,8 @@ EXTRA_DIST =			\
 	COPYING-DOCS		\
 	HACKING			\
 	MAINTAINERS		\
-	mate-version.xml.in.in
+	mate-version.xml.in.in  \
+	tools/mate-gsettings-toggle
 
 CLEANFILES = \
 	$(version_DATA)

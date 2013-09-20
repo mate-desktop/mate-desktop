@@ -328,6 +328,7 @@ schemas/Makefile
 man/Makefile
 mate-conf/Makefile
 mate-conf/mate-conf-import.desktop.in
+tools/Makefile
 user-guide/Makefile
 ])
 
