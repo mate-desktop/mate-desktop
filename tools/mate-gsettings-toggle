@@ -1,0 +1,48 @@
+#!/usr/bin/env sh
+
+SCHEMA="org.mate.applications-at"
+KEYS="screen-keyboard-enabled screen-magnifier-enabled screen-reader-enabled"
+GSETTINGS="$(which gsettings 2> /dev/null)"
+
+if [ "${?}" != "0" ]; then
+    printf "gsettings command not found....\n"
+    printf "please install gsettings which is part of glib\n"
+    exit 1
+fi
+
+found="0"
+for key in ${KEYS}; do
+    if [ "${key}" = "${1}" ]; then
+        found="1"
+    fi
+done
+
+if [ "${found}" = "0" ]; then
+    printf "Invalid key \"${1}\", should be one of:\n"
+    printf "${KEYS}\n"
+    exit 1
+fi
+
+curval=$(eval "${GSETTINGS} get ${SCHEMA} ${1}")
+
+case ${curval} in
+"false")
+    $(eval "${GSETTINGS} set ${SCHEMA} ${1} 'true'")
+    if [ "${?}" = "0" ]; then
+        printf "Toggle true\n"
+        exit 0
+    else
+        printf "Something went wrong: got exit status ${?}\n"
+        exit 1
+    fi;;
+"true")
+    $(eval "${GSETTINGS} set ${SCHEMA} ${1} 'false'")
+    if [ "${?}" = "0" ]; then
+        printf "Toggle false\n"
+        exit 0
+    else
+        printf "Something went wrong: got exit status ${?}\n"
+        exit 1
+    fi;;
+esac
+
