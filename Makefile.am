@@ -1,13 +1,10 @@
-SUBDIRS = libmate-desktop man docs po schemas
+SUBDIRS = libmate-desktop man docs po schemas tools
 
 if MATE_ABOUT_ENABLED
 SUBDIRS += mate-about
 endif
 if DESKTOP_DOCS_ENABLED
 SUBDIRS += desktop-docs
-endif
-if MATE_CONF_IMPORT_ENABLED
-SUBDIRS += mate-conf
 endif
 
 ACLOCAL_AMFLAGS = -I m4
@@ -26,7 +23,8 @@ EXTRA_DIST =			\
 	HACKING			\
 	MAINTAINERS		\
 	mate-version.xml.in.in  \
-	mate-doc-utils.make
+	mate-doc-utils.make \
+	tools/mate-gsettings-toggle
 
 CLEANFILES = \
 	$(version_DATA)
