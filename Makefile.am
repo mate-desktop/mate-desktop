@@ -9,9 +9,6 @@ endif
 if USER_GUIDE_ENABLED
 SUBDIRS += user-guide
 endif
-if MATE_CONF_IMPORT_ENABLED
-SUBDIRS += mate-conf
-endif
 
 ACLOCAL_AMFLAGS = -I m4
 
