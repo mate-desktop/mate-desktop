@@ -307,8 +307,8 @@ desktop-docs/gpl/Makefile
 desktop-docs/lgpl/Makefile
 schemas/Makefile
 man/Makefile
-mate-conf/Makefile
-mate-conf/mate-conf-import.desktop.in
+tools/Makefile
+tools/mate-conf-import.desktop.in
 ])
 
 AC_OUTPUT
