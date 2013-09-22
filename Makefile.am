@@ -25,8 +25,7 @@ EXTRA_DIST =			\
 	COPYING-DOCS		\
 	HACKING			\
 	MAINTAINERS		\
-	mate-version.xml.in.in  \
-	tools/mate-gsettings-toggle
+	mate-version.xml.in.in
 
 CLEANFILES = \
 	$(version_DATA)
