@@ -67,6 +67,7 @@
 	};
 
 	const char* authors[] = {
+		"MATE:",
 		/* MATE founders */
 		"Perberos <perberos@gmail.com>",
 		"Stefano Karapetsas <stefano@karapetsas.com>",
@@ -86,6 +87,7 @@
 		"Sam Tygier <samtygier@yahoo.co.uk>",
 		"Wolfgang Ulbrich <chat-to-me@raveit.de>",
 		/* GNOME developers */
+		"GNOME:",
 		"Jérôme Abela",
 		"Rob Adams",
 		"Djihed Afifi",
