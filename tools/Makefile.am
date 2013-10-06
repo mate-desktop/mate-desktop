@@ -11,4 +11,4 @@ endif
 
 EXTRA_DIST = $(bin_SCRIPTS)
 
-CLEANFILES = mate-conf-import.desktop
+CLEANFILES = mate-conf-import.desktop mate-conf-import.desktop.in
