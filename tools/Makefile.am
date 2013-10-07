@@ -9,6 +9,6 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 bin_SCRIPTS += mate-conf-import
 endif
 
-EXTRA_DIST = $(bin_SCRIPTS)
+EXTRA_DIST = mate-gsettings-toggle mate-conf-import
 
 CLEANFILES = mate-conf-import.desktop mate-conf-import.desktop.in
