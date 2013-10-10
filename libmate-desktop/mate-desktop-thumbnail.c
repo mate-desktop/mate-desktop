@@ -47,6 +47,13 @@
 
 #define SECONDS_BETWEEN_STATS 10
 
+static void
+thumbnailers_directory_changed (GFileMonitor                 *monitor,
+                                GFile                        *file,
+                                GFile                        *other_file,
+                                GFileMonitorEvent             event_type,
+                                MateDesktopThumbnailFactory *factory);
+
 struct _MateDesktopThumbnailFactoryPrivate {
   MateDesktopThumbnailSize size;
 
@@ -634,6 +641,88 @@ remove_thumbnailer (MateDesktopThumbnailFactory *factory,
 }
 
 static void
+remove_thumbnailers_for_dir (MateDesktopThumbnailFactory *factory,
+                             const gchar                  *thumbnailer_dir,
+                             GFileMonitor                 *monitor)
+{
+  MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
+  GList *l;
+  Thumbnailer *thumb;
+
+  g_mutex_lock (&priv->lock);
+
+  /* Remove all the thumbnailers inside this @thumbnailer_dir. */
+  for (l = priv->thumbnailers; l; l = g_list_next (l))
+    {
+      thumb = (Thumbnailer *)l->data;
+
+      if (g_str_has_prefix (thumb->path, thumbnailer_dir) == TRUE)
+        {
+          priv->thumbnailers = g_list_delete_link (priv->thumbnailers, l);
+          g_hash_table_foreach_remove (priv->mime_types_map,
+                                       (GHRFunc)remove_thumbnailer_from_mime_type_map,
+                                       (gpointer)thumb->path);
+          thumbnailer_unref (thumb);
+
+          break;
+        }
+    }
+
+  /* Remove the monitor for @thumbnailer_dir. */
+  priv->monitors = g_list_remove (priv->monitors, monitor);
+  g_signal_handlers_disconnect_by_func (monitor, thumbnailers_directory_changed, factory);
+
+  g_mutex_unlock (&priv->lock);
+}
+
+static void
+mate_desktop_thumbnail_factory_load_thumbnailers_for_dir (MateDesktopThumbnailFactory *factory,
+                                                           const gchar                  *path)
+{
+  MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
+  GDir *dir;
+  GFile *dir_file;
+  GFileMonitor *monitor;
+  const gchar *dirent;
+
+  dir = g_dir_open (path, 0, NULL);
+  if (!dir)
+      return;
+
+  /* Monitor dir */
+  dir_file = g_file_new_for_path (path);
+  monitor = g_file_monitor_directory (dir_file,
+                                      G_FILE_MONITOR_NONE,
+                                      NULL, NULL);
+  if (monitor)
+    {
+      g_signal_connect (monitor, "changed",
+                        G_CALLBACK (thumbnailers_directory_changed),
+                        factory);
+      priv->monitors = g_list_prepend (priv->monitors, monitor);
+    }
+  g_object_unref (dir_file);
+
+  while ((dirent = g_dir_read_name (dir)))
+    {
+      Thumbnailer *thumb;
+      gchar       *filename;
+
+      if (!g_str_has_suffix (dirent, THUMBNAILER_EXTENSION))
+          continue;
+
+      filename = g_build_filename (path, dirent, NULL);
+      thumb = thumbnailer_new (filename);
+      g_free (filename);
+
+      if (thumb)
+          mate_desktop_thumbnail_factory_add_thumbnailer (factory, thumb);
+    }
+
+  g_dir_close (dir);
+}
+
+static void
 thumbnailers_directory_changed (GFileMonitor                 *monitor,
                                 GFile                        *file,
                                 GFile                        *other_file,
@@ -661,6 +750,19 @@ thumbnailers_directory_changed (GFileMonitor                 *monitor,
 
       g_free (path);
       break;
+    case G_FILE_MONITOR_EVENT_UNMOUNTED:
+    case G_FILE_MONITOR_EVENT_MOVED:
+      path = g_file_get_path (file);
+      remove_thumbnailers_for_dir (factory, path, monitor);
+
+      if (event_type == G_FILE_MONITOR_EVENT_MOVED)
+          mate_desktop_thumbnail_factory_load_thumbnailers_for_dir (factory, path);
+
+      g_free (path);
+      break;
+    case G_FILE_MONITOR_EVENT_CHANGES_DONE_HINT:
+    case G_FILE_MONITOR_EVENT_ATTRIBUTE_CHANGED:
+    case G_FILE_MONITOR_EVENT_PRE_UNMOUNT:
     default:
       break;
     }
@@ -679,47 +781,7 @@ mate_desktop_thumbnail_factory_load_thumbnailers (MateDesktopThumbnailFactory *f
   dirs = get_thumbnailers_dirs ();
   for (i = 0; dirs[i]; i++)
     {
-      const gchar *path = dirs[i];
-      GDir *dir;
-      GFile *dir_file;
-      GFileMonitor *monitor;
-      const gchar *dirent;
-
-      dir = g_dir_open (path, 0, NULL);
-      if (!dir)
-        continue;
-
-      /* Monitor dir */
-      dir_file = g_file_new_for_path (path);
-      monitor = g_file_monitor_directory (dir_file,
-                                          G_FILE_MONITOR_NONE,
-                                          NULL, NULL);
-      if (monitor)
-        {
-          g_signal_connect (monitor, "changed",
-                            G_CALLBACK (thumbnailers_directory_changed),
-                            factory);
-          priv->monitors = g_list_prepend (priv->monitors, monitor);
-        }
-      g_object_unref (dir_file);
-
-      while ((dirent = g_dir_read_name (dir)))
-        {
-          Thumbnailer *thumb;
-          gchar       *filename;
-
-          if (!g_str_has_suffix (dirent, THUMBNAILER_EXTENSION))
-            continue;
-
-          filename = g_build_filename (path, dirent, NULL);
-          thumb = thumbnailer_new (filename);
-          g_free (filename);
-
-          if (thumb)
-            mate_desktop_thumbnail_factory_add_thumbnailer (factory, thumb);
-        }
-
-      g_dir_close (dir);
+      mate_desktop_thumbnail_factory_load_thumbnailers_for_dir (factory, dirs[i]);
     }
 
   priv->loaded = TRUE;
