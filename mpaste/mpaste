@@ -1,0 +1,64 @@
+#!/usr/bin/python
+
+# Pastes input from stdin to paste.mate-desktop.org
+
+# Copyright (C) 2013 Steve Zesch
+
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+import urllib
+import urllib2
+import optparse
+import sys
+
+def write_paste(values):
+	url = 'http://paste.mate-desktop.org/api/create'
+	data = urllib.urlencode(values)
+	request = urllib2.Request(url, data)
+	response = urllib2.urlopen(request)
+	page = response.read()
+
+	return page
+
+def build_values(options, text):
+	values = {}
+
+	for opt, val in options.__dict__.items():
+		if val:
+			values[opt] = val
+
+	values['text'] = text
+
+	if values.has_key('private') and values['private'] == True:
+			values['private'] = 1
+
+	return values
+
+if __name__ == '__main__':
+	parser = optparse.OptionParser()
+	parser.add_option('-t', '--title', dest='title', help='title of this paste')
+	parser.add_option('-n', '--name', dest='name', help='author of this paste')
+	parser.add_option('-p', '--private', dest='private', action='store_true',
+						help='should this paste be private')
+	parser.add_option('-l', '--language', dest='lang', 
+						help='language this paste is in')
+	parser.add_option('-e', '--expire', dest='expire', help='paste expiration in minutes')
+	parser.add_option('-r', '--reply', dest='reply', help='reply to existing paste')
+
+	(options, args) = parser.parse_args()
+
+	text = sys.stdin.read()
+	returned_url = write_paste(build_values(options, text))
+	print returned_url
