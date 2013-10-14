@@ -92,6 +92,14 @@ AC_ARG_ENABLE([mate-conf-import],
 	[enable_mate_conf_import=yes],[enable_mate_conf_import=no])
 AM_CONDITIONAL(MATE_CONF_IMPORT_ENABLED, test "x$enable_mate_conf_import" = "xyes")
 
+
+# Install tool to paste text to paste.mate-desktop.org
+AC_ARG_ENABLE([mpaste],
+	[AS_HELP_STRING([--enable-mpaste],[install mpaste tool])],
+	[enable_mpaste=yes],[enable_mpaste=no])
+AM_CONDITIONAL(MPASTE_ENABLED, test "x$enable_mpaste" = "xyes")
+
+
 # Path to the pnp.ids file -- to know if we use one shipped with another
 # package, or an internal file
 
@@ -360,6 +368,7 @@ mate-desktop $VERSION `echo mate-desktop $VERSION | sed "s/./=/g"`
     Build desktop-wide docs:      ${enable_desktop_docs}
     Build user guide:             ${enable_user_guide}
     Install mate-conf-import:     ${enable_mate_conf_import}
+    Install mpaste:               ${enable_mpaste}
     Use external pnp.ids:         ${EXTERNAL_PNP_IDS}
     Startup notification support: ${have_startup_notification}
     XRandr support:               ${have_randr}
