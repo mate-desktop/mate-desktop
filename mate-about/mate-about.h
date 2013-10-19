@@ -72,7 +72,7 @@
 		"Stefano Karapetsas <stefano@karapetsas.com>",
 		"Steve Zesch <stevezesch2@gmail.com>",
 		"Clement Lefebvre <root@linuxmint.com>",
-		/* MATE developers */
+		/* MATE developers and contributors */
 		"Scott Balneaves <sbalneav@alburg.net>",
 		"Marcel Dijkstra <marcel.dykstra@gmail.com>",
 		"Jasmine Hassan <jasmine.aura@gmail.com>",
@@ -85,6 +85,12 @@
 		"Yaakov Selkowitz <yselkowitz@users.sourceforge.net>",
 		"Sam Tygier <samtygier@yahoo.co.uk>",
 		"Wolfgang Ulbrich <chat-to-me@raveit.de>",
+		"Sander Sweers <infirit@gmail.com>",
+		"Benjamin Denisart <p.drouand@gmail.com>",
+		"Efstathios Iosifidis <iefstathios@gmail.com>",
+		"Martin Wimpress <code@flexion.org>",
+		"John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>",
+		"Mike Gabriel <sunweaver@debian.org>",
 		/* GNOME developers */
 		"GNOME:",
 		"Jérôme Abela",
