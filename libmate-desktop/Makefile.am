@@ -1,5 +1,6 @@
 libmate_desktopdir = $(includedir)/mate-desktop-2.0/libmate-desktop
 libmate_desktop_HEADERS = \
+	mate-desktop.h \
 	mate-desktop-utils.h \
 	mate-desktop-item.h \
 	mate-dconf.h \
@@ -24,7 +25,7 @@ AM_CPPFLAGS =							\
 
 AM_CFLAGS = $(WARN_CFLAGS)
 
-noinst_PROGRAMS = test-ditem
+noinst_PROGRAMS = test-ditem test
 
 libmate_desktop_2_la_SOURCES = \
 	mate-desktop-item.c	\
@@ -52,6 +53,13 @@ libmate_desktop_2_la_LIBADD =	\
 libmate_desktop_2_la_LDFLAGS = \
 	-version-info $(LT_VERSION) \
 	-no-undefined
+
+test_SOURCES = \
+	test.c
+
+test_LDADD = \
+	libmate-desktop-2.la		\
+	$(MATE_DESKTOP_LIBS)
 
 test_ditem_SOURCES = \
 	test-ditem.c

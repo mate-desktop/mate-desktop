@@ -55,6 +55,10 @@ AC_SUBST(MATE_DATE)
 AC_SUBST(MATE_DATE_COMMENT_START)
 AC_SUBST(MATE_DATE_COMMENT_END)
 
+AC_DEFINE(MATE_MAJOR, [mate_platform], [Define to the major version])
+AC_DEFINE(MATE_MINOR, [mate_minor], [Define to the minor version])
+AC_DEFINE(MATE_MICRO, [mate_micro], [Define to the micro version])
+
 MATE_COMMON_INIT
 MATE_DEBUG_CHECK
 MATE_COMPILE_WARNINGS([maximum])
