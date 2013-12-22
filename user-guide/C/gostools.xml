@@ -941,19 +941,19 @@ a screenshot of the entire screen.</para>
           </varlistentry>
 
           <varlistentry>
-            <term><option>ghelp:</option> or
+            <term><option>help:</option> or
             <option>mate-help:</option></term>
 
             <listitem>
               <para>Use this URI when you want to access MATE help documents,
               which are typically written in DocBook format.</para>
 
-              <screen><userinput>yelp ghelp:gcalctool</userinput></screen>
+              <screen><userinput>yelp help:gcalctool</userinput></screen>
 
               <para>If you want to open the help document at a particular section,
               append a question mark to the end of the URI, followed by the section id.</para>
               
-              <screen><userinput>yelp ghelp:user-guide?yelp-advanced-cmdline</userinput></screen>
+              <screen><userinput>yelp help:user-guide?yelp-advanced-cmdline</userinput></screen>
             </listitem>
           </varlistentry>
 
@@ -1038,8 +1038,8 @@ a screenshot of the entire screen.</para>
             <para>Perform conversion from DocBook format to a format suitable
             for display.</para>
           </listitem>
-        </itemizedlist><application>Yelp Help Browser</application> relies on <ulink url="ghelp:mate-doc-xslt">MATE XSLT
-      Stylesheets</ulink> to perform conversion from DocBook to HTML.  <ulink url="ghelp:mate-doc-make">MATE Documentation 
+        </itemizedlist><application>Yelp Help Browser</application> relies on <ulink url="help:mate-doc-xslt">MATE XSLT
+      Stylesheets</ulink> to perform conversion from DocBook to HTML.  <ulink url="help:mate-doc-make">MATE Documentation
       Build Utilities</ulink> are relied upon by application authors to install and register documentation within the help system.</para>
     </section>
 
