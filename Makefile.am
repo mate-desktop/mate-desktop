@@ -10,7 +10,7 @@ if USER_GUIDE_ENABLED
 SUBDIRS += user-guide
 endif
 
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc --disable-scrollkeeper --enable-mpaste
 
