@@ -39,7 +39,7 @@
 	const char* copyright =  ""
 		"Copyright © 1997-2011 GNOME developers\n"
 		"Copyright © 2011 Perberos\n"
-		"Copyright © 2012-2013 MATE developers";
+		"Copyright © 2012-2014 MATE developers";
 
 	/* Increment comments_count if you add other comments. This will be
 	 * used to choose a random comment. */
