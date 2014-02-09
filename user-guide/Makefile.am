@@ -72,4 +72,12 @@ HELP_MEDIA =					\
 
 HELP_LINGUAS = ar bg cs de el es eu fi fr gl hu id it ja ko oc pa pt pt_BR ru sv th uk zh_CN
 
+
+@INTLTOOL_DESKTOP_RULE@
+desktopdir = $(datadir)/applications
+desktop_in_files = mate-user-guide.desktop.in
+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+
+CLEANFILES = $(desktop_DATA)
+
 -include $(top_srcdir)/git.mk
