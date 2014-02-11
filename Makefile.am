@@ -22,6 +22,7 @@ endif
 @INTLTOOL_XML_RULE@
 
 EXTRA_DIST =			\
+	autogen.sh		\
 	COPYING-DOCS		\
 	HACKING			\
 	MAINTAINERS		\
