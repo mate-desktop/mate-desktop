@@ -199,10 +199,8 @@ mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, 
 		gdk_app_launch_context_set_screen (context, screen);
 		res = g_app_info_launch (appinfo, NULL, G_APP_LAUNCH_CONTEXT (context), error);
 		g_object_unref (context);
-	}
-
-	if (appinfo != NULL)
 		g_object_unref (appinfo);
+	}
 
 	return res;
 }
