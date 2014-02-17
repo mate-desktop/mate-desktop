@@ -193,7 +193,7 @@ mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, 
 
 	appinfo = g_app_info_create_from_commandline (command, NULL, G_APP_INFO_CREATE_NONE, error);
 
-	if (&error != NULL) {
+	if (!error || *error == NULL) {
 		context = gdk_app_launch_context_new ();
 		gdk_app_launch_context_set_screen (context, screen);
 		g_app_info_launch (appinfo, NULL, G_APP_LAUNCH_CONTEXT (context), error);
@@ -203,7 +203,7 @@ mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, 
 	if (appinfo != NULL)
 		g_object_unref (appinfo);
 
-	if (&error != NULL)
+	if (!error || *error == NULL)
 		return TRUE;
 	else
 		return FALSE;
