@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
-"POT-Creation-Date: 2012-10-18 00:25+0200\n"
-"PO-Revision-Date: 2013-08-01 15:51+0000\n"
-"Last-Translator: abuyop <abuyop@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-18 12:06+0100\n"
+"PO-Revision-Date: 2014-02-18 11:09+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
 "Language-Team: Malay (http://www.transifex.com/projects/p/MATE/language/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,46 +24,46 @@ msgstr "Perihal MATE"
 
 #: ../mate-about/mate-about.desktop.in.in.h:2
 msgid "Learn more about MATE"
-msgstr "Belajar lebih lanjut mengenai MATE"
+msgstr "Ketahui lebih lanjut mengenai MATE"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:199
+#: ../mate-about/mate-about.c:113
 msgid "translator-credits"
 msgstr "abuyop <abuyop@gmail.com>"
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE menyediakan desktop yang intuitif dan menarik pada pengguna Linux menggunakan metafor tradisional."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "MATE termasuklah apa yang anda lihat pada komputer anda, termasuklah pengurus fail, pelihat dokumen, pelihat imej, menu, dan banyak aplikasi lain."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:54
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE adalah persekitaran desktop yang bebas, berguna, stabil dan boleh dicapai untuk keluarga sistem pengoperasian seakan-Unix."
 
-#: ../mate-about/mate-about.h:55
+#: ../mate-about/mate-about.h:57
 msgid ""
 "MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
 " since it was started in 1997; many more have contributed in other important"
 " ways, including translations, documentation, and quality assurance."
 msgstr "MATE merupakan cabang dari GNOME 2. Beratus-ratus individu telah menyumbang kod ke GNOME semenjak ia dimulakan pada tahun 1997; ada yang memberi sumbangan dalam bentuk terjemahan, dokumentasi, dan jaminan kualiti."
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:61
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 merupakan desktop Linux yang popular tetapi ia sudah dijumudkan... oleh itu MATE disini menyediakan dekstop yang serupa untuk anda!"
 
-#: ../mate-about/mate-about.h:62
+#: ../mate-about/mate-about.h:64
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -86,7 +86,7 @@ msgstr "Ralat membaca fail '%s': %s"
 #: ../libmate-desktop/mate-desktop-item.c:288
 #, c-format
 msgid "Error rewinding file '%s': %s"
-msgstr "Ralat rewind fail '%s': %s"
+msgstr "Ralat mengundur semula fail '%s': %s"
 
 #. Translators: the "name" mentioned
 #. * here is the name of an application or
@@ -94,24 +94,24 @@ msgstr "Ralat rewind fail '%s': %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3523
+#: ../libmate-desktop/mate-desktop-item.c:3527
 msgid "No name"
 msgstr "Tiada Nama"
 
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
-msgstr "Fail '%s' adalah bukan fail atau direktori biasa"
+msgstr "Fail '%s' adalah bukan fail nalar atau direktori."
 
 #: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
 msgid "Cannot find file '%s'"
-msgstr "Tidak dapat jumpa fail '%s'"
+msgstr "Tidak menemui fail '%s'"
 
 #: ../libmate-desktop/mate-desktop-item.c:837
 #, c-format
 msgid "No filename to save to"
-msgstr "Tiada namafail untuk disimpan"
+msgstr "Tiada nama fail untuk disimpan"
 
 #: ../libmate-desktop/mate-desktop-item.c:1828
 #, c-format
@@ -131,67 +131,67 @@ msgstr "Tiada item boleh dilancarkan"
 #: ../libmate-desktop/mate-desktop-item.c:2088
 #, c-format
 msgid "No command (Exec) to launch"
-msgstr "Tiada arahan (Exec) untuk dilancarkan"
+msgstr "Tiada perintah (Exec) untuk dilancarkan"
 
 #: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Bad command (Exec) to launch"
-msgstr "Arahan (Exec) untuk dilancarkan adalah salah"
+msgstr "Perintah teruk (Exec) untuk dilancarkan"
 
-#: ../libmate-desktop/mate-desktop-item.c:3580
+#: ../libmate-desktop/mate-desktop-item.c:3584
 #, c-format
 msgid "Unknown encoding of: %s"
-msgstr "Pengkodan tidak diketahui: %s"
+msgstr "Pengekodan tidak diketahui: %s"
 
 #: ../libmate-desktop/mate-desktop-utils.c:133
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr "Tidak menjumpai terminal, menggunakan xterm meskipun ia mungkin tidak boleh dijalankan"
+msgstr "Tidak menemui terminal, menggunakan xterm meskipun ia mungkin tidak boleh dijalankan"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:444
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
-msgstr "tidak dapat "
+msgstr "tidak dapat sumber skrin (CRT, output, mod)"
 
 #: ../libmate-desktop/mate-rr.c:464
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
-msgstr "ralat X tak dapat ditangani semasa mendapatkan julat saiz skrin"
+msgstr "ralat X tidak dapat dikendali semasa mendapatkan julat saiz skrin"
 
 #: ../libmate-desktop/mate-rr.c:470
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "tidak mendapat julat saiz skrin"
 
-#: ../libmate-desktop/mate-rr.c:715
+#: ../libmate-desktop/mate-rr.c:723
 #, c-format
 msgid "RANDR extension is not present"
-msgstr "Sambungan RANDR tiada"
+msgstr "Sambungan RANDR tidak hadir"
 
-#: ../libmate-desktop/mate-rr.c:1092
+#: ../libmate-desktop/mate-rr.c:1104
 #, c-format
 msgid "could not get information about output %d"
-msgstr "tidak dapat maklumat output %d"
+msgstr "tidak dapat maklumat mengenai output %d"
 
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1479
+#: ../libmate-desktop/mate-rr.c:1491
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr "posisi/saiz CRTC %d yang diminta berada di luar had dibenarkan: posisi=(%d, %d), saiz=(%d, %d), maksimum=(%d, %d)"
+msgstr "kedudukan/saiz CRTC %d yang diminta berada di luar had dibenarkan: kedudukan=(%d, %d), saiz=(%d, %d), maksimum=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1515
+#: ../libmate-desktop/mate-rr.c:1527
 #, c-format
 msgid "could not set the configuration for CRTC %d"
-msgstr "tidak dapat menetapkan konfigurasi untuk CRTC %d"
+msgstr "tidak dapat tetapkan konfigurasi untuk CRTC %d"
 
-#: ../libmate-desktop/mate-rr.c:1631
+#: ../libmate-desktop/mate-rr.c:1643
 #, c-format
 msgid "could not get information about CRTC %d"
-msgstr "tidak dapat maklumat tentang CRTC %d"
+msgstr "tidak dapat maklumat mengenai CRTC %d"
 
 #: ../libmate-desktop/mate-rr-config.c:501
 msgid "Laptop"
@@ -264,7 +264,7 @@ msgstr "tiada dari mod terpilih serasi dengan mod yang mungkin:⏎\n%s"
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
-msgstr "saiz maya yang diperlukan tidak muat saiz sedia ada: diminta=(%d, %d), minimum=(%d, %d), maksimum=(%d, %d)"
+msgstr "saiz maya diperlukan tidak muat saiz sedia ada: diminta=(%d, %d), minimum=(%d, %d), maksimum=(%d, %d)"
 
 #. Keep this string in sync with mate-control-center/capplets/display/xrandr-
 #. capplet.c:get_display_name()
@@ -272,10 +272,9 @@ msgstr "saiz maya yang diperlukan tidak muat saiz sedia ada: diminta=(%d, %d), m
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#. 
-#: ../libmate-desktop/mate-rr-labeler.c:212
+#: ../libmate-desktop/mate-rr-labeler.c:353
 msgid "Mirror Screens"
-msgstr "Skrin-skrin cermin"
+msgstr "Skrin Cermin"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:1
 msgid "minimum interval in milliseconds"
@@ -459,54 +458,72 @@ msgid "Have MATE draw the desktop background."
 msgstr "Benarkan MATE melukis latar belakang dektop."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+msgid "Show Desktop Icons"
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+msgid "Fade the background on change"
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+msgid ""
+"If set to true, then MATE will change the desktop background with a fading "
+"effect."
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
 msgid "Picture Options"
 msgstr "Pilihan Gambar"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
 msgstr "Tentukan bagaimana imej ditetap oleh nama fail kertas dinding diterap. Nilai yang mungkin adalah \"none\", \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", \"spanned\"."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
 msgid "Picture Filename"
 msgstr "Nama Fail Gambar"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
 msgid "File to use for the background image."
 msgstr "Fail yang diguna untuk imej latar belakang."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
 msgid "Picture Opacity"
 msgstr "Kelegapan Gambar"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
 msgid "Opacity with which to draw the background picture."
 msgstr "Kelegapan yang mana lukis gambar latar belakang."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
 msgid "Primary Color"
 msgstr "Warna Utama"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
 msgstr "Warna kiri atau atas bila melukis gradien, atau warna tegar."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:15
 msgid "Secondary Color"
 msgstr "Warna Sekunder"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr "Warna Kanan atau Bawah bila melukis gradien, tidak digunakan untuk warna tegar."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:17
 msgid "Color Shading Type"
 msgstr "Jenis Lorekan Warna"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
@@ -816,6 +833,14 @@ msgstr "Lumpuhkan pemegang jenis URL dan MIME"
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr "Halang menjalankan sebarang aplikasi pemegang jenis URL atau MIME."
 
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
+msgid "Disable theme settings"
+msgstr ""
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
+msgid "Prevent the user to change theme settings."
+msgstr ""
+
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
 msgstr "nilai yang boleh adalah \"on\", \"off\" dan \"custom\"."
@@ -895,41 +920,51 @@ msgid "Length of a double click."
 msgstr "Jangkamasa dwi-klik."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+msgid "Middle button emulation"
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+msgid ""
+"Enables middle mouse button emulation through simultaneous left and right "
+"button click."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
 msgid "Locate Pointer"
 msgstr "Cari Penuding"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
 msgstr "Sorot lokasi semasa penuding bila kekunci Control diketuk dan dilepaskan."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
 msgid "Cursor font"
 msgstr "Fon kursor"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
 msgstr "Nama fon kursor. Jika dinyahtetap, fon lalai digunakan. Nilai ini hanya disebar pada permulaan pelayan X bagi setiap sesi, jadi pengubahannya pada pertengahan-sesi tidak memberi kesan sehinggalah anda daftar masuk kali berikutnya."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
 msgid "Cursor theme"
 msgstr "Tema kursor"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
 msgstr "Nama tema kursor. Hanya diguna oleh pelayan X yang menyokong Xcursor, seperti XFree86 4.3 dan yang terkemudian."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:20
 msgid "Cursor size"
 msgstr "Saiz Kursor"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:21
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Saiz kursor yang dirujuk oleh tema kursor."
 
@@ -1045,3 +1080,19 @@ msgstr "Sama ada  ia atau tidak penguncian papan kekunci dibenarkan"
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Sama ada ia atau tidak penguncian papan kekunci dibenarkan."
+
+#: ../tools/mate-conf-import.desktop.in.in.h:1
+msgid "Migrate MATE 1.4 settings"
+msgstr ""
+
+#: ../tools/mate-conf-import.desktop.in.in.h:2
+msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
+msgstr ""
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:1
+msgid "Help"
+msgstr ""
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:2
+msgid "Get help with MATE"
+msgstr ""

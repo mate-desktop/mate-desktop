@@ -8,10 +8,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
-"POT-Creation-Date: 2012-10-18 00:25+0200\n"
-"PO-Revision-Date: 2013-05-27 09:29+0000\n"
-"Last-Translator: Pere O. <gotrunks@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-18 12:06+0100\n"
+"PO-Revision-Date: 2014-02-18 11:09+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
 "Language-Team: Catalan (http://www.transifex.com/projects/p/MATE/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,42 +29,42 @@ msgstr "Apreneu més coses sobre el MATE"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:199
+#: ../mate-about/mate-about.c:113
 msgid "translator-credits"
 msgstr "Softcatalà <info@softcatala.org> i els traductors del Gnome\nPere Orga <pere@orga.cat>"
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "El MATE proporciona un escriptori intuïtiu i atractiu per als usuaris del Linux que fan servir metàfores tradicionals."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "El MATE inclou gairebé tot el que veieu al vostre ordinador: el gestor de fitxers, el visualitzador de documents, el visualitzador d'imatges, els menús i moltes altres aplicacions."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:54
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE és un entorn d'escriptori lliure, usable, estable i accessible per a la família de sistemes operatius Unix."
 
-#: ../mate-about/mate-about.h:55
+#: ../mate-about/mate-about.h:57
 msgid ""
 "MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
 " since it was started in 1997; many more have contributed in other important"
 " ways, including translations, documentation, and quality assurance."
 msgstr "MATE és un fork del GNOME 2. Des de que es va començar el GNOME el 1997, hi han contribuït centenars de persones; moltes també en traduccions, documentació, garantia de qualitat i en altres aspectes importants."
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:61
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 era l'entorn d'escriptori per a Linux més popular però ja no està disponible. El MATE és aquí per proporcionar el mateix escriptori."
 
-#: ../mate-about/mate-about.h:62
+#: ../mate-about/mate-about.h:64
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -95,7 +95,7 @@ msgstr "S'ha produït un error en rebobinar el fitxer «%s»: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3523
+#: ../libmate-desktop/mate-desktop-item.c:3527
 msgid "No name"
 msgstr "Sense nom"
 
@@ -139,7 +139,7 @@ msgstr "No hi ha una ordre (Exec) per a executar"
 msgid "Bad command (Exec) to launch"
 msgstr "Ordre errònia (Exec) per a executar"
 
-#: ../libmate-desktop/mate-desktop-item.c:3580
+#: ../libmate-desktop/mate-desktop-item.c:3584
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Codificació desconeguda de: %s"
@@ -164,12 +164,12 @@ msgstr "s'ha produït un error no gestionat de l'X en obtenir les mides de panta
 msgid "could not get the range of screen sizes"
 msgstr "no s'ha pogut obtenir el rang de les mides de pantalla"
 
-#: ../libmate-desktop/mate-rr.c:715
+#: ../libmate-desktop/mate-rr.c:723
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "no hi ha l'extensió RANDR"
 
-#: ../libmate-desktop/mate-rr.c:1092
+#: ../libmate-desktop/mate-rr.c:1104
 #, c-format
 msgid "could not get information about output %d"
 msgstr "no s'ha pogut obtenir la informació sobre la sortida %d"
@@ -177,19 +177,19 @@ msgstr "no s'ha pogut obtenir la informació sobre la sortida %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1479
+#: ../libmate-desktop/mate-rr.c:1491
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "la posició/mida sol·licitades per al CRTC %d són fora dels límits permesos: posició=(%d, %d), mida=(%d, %d), màxim=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1515
+#: ../libmate-desktop/mate-rr.c:1527
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "no s'ha pogut establir la configuració per al CRTC %d"
 
-#: ../libmate-desktop/mate-rr.c:1631
+#: ../libmate-desktop/mate-rr.c:1643
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "no s'ha pogut obtenir la informació sobre el CRTC %d"
@@ -273,8 +273,7 @@ msgstr "la mida virtual sol·licitada no s'ajusta a la mida disponible: sol·lic
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#. 
-#: ../libmate-desktop/mate-rr-labeler.c:212
+#: ../libmate-desktop/mate-rr-labeler.c:353
 msgid "Mirror Screens"
 msgstr "Pantalles duplicades"
 
@@ -460,54 +459,72 @@ msgid "Have MATE draw the desktop background."
 msgstr "Fes que el MATE dibuixi el fons de l'escriptori."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+msgid "Show Desktop Icons"
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+msgid "Fade the background on change"
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+msgid ""
+"If set to true, then MATE will change the desktop background with a fading "
+"effect."
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
 msgid "Picture Options"
 msgstr "Opcions de la imatge"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
 msgstr "Determina com es representa la imatge establerta per la clau «wallpaper_filename». Els valors possibles són «wallpaper» (fons de pantalla), «centered» (centrat), «scaled» (escalat), «stretched» (ajustat) «zoom» (ampliat) i «spanned» (estirat)."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
 msgid "Picture Filename"
 msgstr "Nom del fitxer de la imatge"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
 msgid "File to use for the background image."
 msgstr "Fitxer a utilitzar per a la imatge de fons."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
 msgid "Picture Opacity"
 msgstr "Opacitat de la imatge"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
 msgid "Opacity with which to draw the background picture."
 msgstr "Opacitat amb la qual dibuixar la imatge de fons."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
 msgid "Primary Color"
 msgstr "Color primari"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
 msgstr "Color de l'esquerra o superior quan es dibuixi el degradat, o el color sòlid."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:15
 msgid "Secondary Color"
 msgstr "Color secundari"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr "Color de la dreta o inferior quan es dibuixi el degradat, no s'utilitza per a colors sòlids."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:17
 msgid "Color Shading Type"
 msgstr "Tipus d'ombreig de color"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
@@ -645,7 +662,7 @@ msgstr "Llista de noms simbòlis i colors equivalents"
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
-msgstr ""
+msgstr "Una llista de «nom:color» separada per «\\n» tal com defineix el paràmetre «gtk-color-scheme»"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:31
 msgid "Default font"
@@ -817,6 +834,14 @@ msgstr "Inhabilita els gestors d'URL i de tipus MIME"
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr "Evita que s'executi cap aplicació de gestió d'URL o de tipus MIME."
 
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
+msgid "Disable theme settings"
+msgstr ""
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
+msgid "Prevent the user to change theme settings."
+msgstr ""
+
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
 msgstr "els valors possibles són «on» (actiu), «off» (apagat) i «custom» (personalitzat)."
@@ -896,41 +921,51 @@ msgid "Length of a double click."
 msgstr "Durada d'un doble clic."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+msgid "Middle button emulation"
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+msgid ""
+"Enables middle mouse button emulation through simultaneous left and right "
+"button click."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
 msgid "Locate Pointer"
 msgstr "Ubica el punter"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
 msgstr "Ressalta la ubicació actual del punter quan es prem i es deixa anar la tecla Control."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
 msgid "Cursor font"
 msgstr "Tipus de lletra del cursor"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
 msgstr "Tipus de lletra del cursor. Si no està establert, s'utilitza el tipus de lletra predeterminat. Aquest valor només es propaga al servidor d'X a l'inici de cada sessió, així que canviar-lo en mig de la sessió no tindrà cap efecte fins que torneu a entrar."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
 msgid "Cursor theme"
 msgstr "Tema del cursor"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
 msgstr "Nom del tema del cursor. Només s'utilitza en servidors X que permeten utilitzar Xcursor, com ara el XFree86 4.3 o superior."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:20
 msgid "Cursor size"
 msgstr "Mida del cursor"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:21
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Mida del cursor referit pel «cursor_theme»."
 
@@ -1007,13 +1042,13 @@ msgstr "Establiu-ho a cert per inhabilitar tots els programes externs de creaci�
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:3
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
-msgstr ""
+msgstr "Llista de tipus MIME per els quals el generador de miniatures estarà desactivat"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:4
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr ""
+msgstr "No es crearan miniatures dels fitxers que tinguin un tipus MIME d'aquesta llista."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:1
 msgid "Type time"
@@ -1046,3 +1081,19 @@ msgstr "Si està habilitat el bloqueig de teclat"
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Si està habilitat el bloqueig de teclat."
+
+#: ../tools/mate-conf-import.desktop.in.in.h:1
+msgid "Migrate MATE 1.4 settings"
+msgstr ""
+
+#: ../tools/mate-conf-import.desktop.in.in.h:2
+msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
+msgstr ""
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:1
+msgid "Help"
+msgstr ""
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:2
+msgid "Get help with MATE"
+msgstr ""

@@ -4,16 +4,16 @@
 # 
 # Translators:
 # Alexei Sorokin <sor.alexei@meowr.ru>, 2012-2013
-# Alexei Sorokin <sor.alexei@meowr.ru>, 2013
+# Alexei Sorokin <sor.alexei@meowr.ru>, 2013-2014
 # Ratibor <ratibor01@gmail.com>, 2012
-# Sergey Yakovlev <me@klay.me>, 2012
+# Sergey Yakovlev, 2012
 # vlad648 <Vlad648@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-18 00:25+0200\n"
-"PO-Revision-Date: 2013-11-20 11:55+0000\n"
+"POT-Creation-Date: 2014-02-18 12:06+0100\n"
+"PO-Revision-Date: 2014-02-18 16:02+0000\n"
 "Last-Translator: Alexei Sorokin <sor.alexei@meowr.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/MATE/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -32,42 +32,42 @@ msgstr "Узнать больше о MATE"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:199
+#: ../mate-about/mate-about.c:113
 msgid "translator-credits"
 msgstr "Алексей Сорокин <sor.alexei@meowr.ru>\nГлеб Мехренин\nАлександр Хромин\nАлександр Соколов\nА. Резник\nassen\nДенис Арефьев <arefevdns@mail.ru>\ntekk <eighthkeepa@gmail.com>\nСергей Яковлев\npro100fed\nvlad648\nМакс Валянский <max.valjanski@gmail.com>\nСергей Панов\nВалек Филиппов\nДмитрий Мастрюков\nАндрей Носенко <awn@bcs.zp.ua>\nЛеонид Кантер <leon@asplinux.ru>\nАлександр Сигачёв <ajvol2@gmail.com>\nДмитрий Яценко <d.acenko@gmail.com>"
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE предоставляет интуитивно понятный и привлекательный рабочий стол для Linux пользователей, использующих традиционную концепцию."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "MATE включает большую часть того, что Вы видите на своём компьютере, включая файловый менеджер, обозреватели документов и изображений, меню и многие другие приложения"
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:54
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE - это Свободная, удобная, доступная рабочая среда для Unix-подобного семейства операционных систем."
 
-#: ../mate-about/mate-about.h:55
+#: ../mate-about/mate-about.h:57
 msgid ""
 "MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
 " since it was started in 1997; many more have contributed in other important"
 " ways, including translations, documentation, and quality assurance."
 msgstr "MATE — ответвление от разработки GNOME 2. Сотни людей вложили код в GNOME с момента его старта в 1997; а многие другие сделали вклад в другие важные направления, включая переводы, документацию и гарантию качества."
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:61
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 был самой популярной рабочей средой для Linux, но более она не доступна... Теперь есть MATE для предоставления вам той же рабочей среды!"
 
-#: ../mate-about/mate-about.h:62
+#: ../mate-about/mate-about.h:64
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -98,7 +98,7 @@ msgstr "Ошибка перемотки файла «%s»: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3523
+#: ../libmate-desktop/mate-desktop-item.c:3527
 msgid "No name"
 msgstr "Без имени"
 
@@ -142,7 +142,7 @@ msgstr "Отсутствует команда (Exec) для запуска"
 msgid "Bad command (Exec) to launch"
 msgstr "Команда (Exec) для запуска недопустима"
 
-#: ../libmate-desktop/mate-desktop-item.c:3580
+#: ../libmate-desktop/mate-desktop-item.c:3584
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Неизвестная кодировка %s"
@@ -167,12 +167,12 @@ msgstr "возникла неизвестная ошибка X при получ
 msgid "could not get the range of screen sizes"
 msgstr "не удалось получить допустимые размеры экрана"
 
-#: ../libmate-desktop/mate-rr.c:715
+#: ../libmate-desktop/mate-rr.c:723
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "Расширение RANDR отсутствует"
 
-#: ../libmate-desktop/mate-rr.c:1092
+#: ../libmate-desktop/mate-rr.c:1104
 #, c-format
 msgid "could not get information about output %d"
 msgstr "не удалось получить информацию о выходе %d"
@@ -180,19 +180,19 @@ msgstr "не удалось получить информацию о выход�
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1479
+#: ../libmate-desktop/mate-rr.c:1491
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "требуемое положение или размер для CRTC %d выходит за рамки допустимых пределов: положение=(%d, %d), размер=(%d, %d), максимально=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1515
+#: ../libmate-desktop/mate-rr.c:1527
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "не удалось установить конфигурацию контроллера CRT %d"
 
-#: ../libmate-desktop/mate-rr.c:1631
+#: ../libmate-desktop/mate-rr.c:1643
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "не удалось получить информацию о контроллере CRT %d"
@@ -276,7 +276,7 @@ msgstr "требуемый виртуальный размер не умещае
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:212
+#: ../libmate-desktop/mate-rr-labeler.c:353
 msgid "Mirror Screens"
 msgstr "Зеркальные экраны"
 
@@ -462,54 +462,72 @@ msgid "Have MATE draw the desktop background."
 msgstr "Должна ли среда MATE отрисовывать рабочий стол."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+msgid "Show Desktop Icons"
+msgstr "Показать значки на рабочем столе"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgstr "Должен ли файловый менеджер MATE (Caja) отрисовывать значки на рабочем столе."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+msgid "Fade the background on change"
+msgstr "Плавное исчезновение фона при его изменении"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+msgid ""
+"If set to true, then MATE will change the desktop background with a fading "
+"effect."
+msgstr "Если истинно, MATE будет менять фон рабочего стола с эффектом плавного исчезновения."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
 msgid "Picture Options"
 msgstr "Параметры картинки"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
 msgstr "Определяет, как будет отрисовываться изображение, установленное ключом wallpaper_filename. Возможные значения: «none», «wallpaper», «centered», «scaled», «stretched», «zoom», «spanned»."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
 msgid "Picture Filename"
 msgstr "Имя файла картинки"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
 msgid "File to use for the background image."
 msgstr "Файл, используемый в качестве фона рабочего стола."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
 msgid "Picture Opacity"
 msgstr "Непрозрачность картинки"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
 msgid "Opacity with which to draw the background picture."
 msgstr "Непрозрачность, с которой следует отрисовывать фоновое изображение."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
 msgid "Primary Color"
 msgstr "Первичный цвет"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
 msgstr "Левый или верхний цвета при отрисовке градиента, либо сплошной цвет."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:15
 msgid "Secondary Color"
 msgstr "Вспомогательный цвет"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr "Правый или нижний цвета при отрисовке градиента. Не используется при сплошном цвете."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:17
 msgid "Color Shading Type"
 msgstr "Тип затемнения цветов"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
@@ -819,6 +837,14 @@ msgstr "Отключить обработчики URL и типов MIME"
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr "Запретить запуск программ-обработчиков URL или типов MIME."
 
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
+msgid "Disable theme settings"
+msgstr "Отключить настройки темы"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
+msgid "Prevent the user to change theme settings."
+msgstr "Предотвратить изменение настроек темы пользователем."
+
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
 msgstr "возможные значения: «on», «off» и «custom»."
@@ -898,41 +924,51 @@ msgid "Length of a double click."
 msgstr "Длительность двойного щелчка."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+msgid "Middle button emulation"
+msgstr "Эмуляция средней кнопки"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+msgid ""
+"Enables middle mouse button emulation through simultaneous left and right "
+"button click."
+msgstr "Включает эмуляцию средней кнопки мыши через одновременное нажатие на левую и правую клавиши."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
 msgid "Locate Pointer"
 msgstr "Найти указатель"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
 msgstr "Подсвечивает текущее расположение указателя, когда клавиша Control нажата и отпущена."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
 msgid "Cursor font"
 msgstr "Шрифт курсора"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
 msgstr "Название шрифта курсора. Если не установлено, будет использован шрифт по умолчанию. Это значение передаётся X-серверу только в начале сеанса, так что изменения, внесённые во время сеанса, не вступят в действие до следующего входа в систему."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
 msgid "Cursor theme"
 msgstr "Тема оформления курсора"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
 msgstr "Имя темы курсоров. Используется только с X-серверами, которые поддерживают расширение Xcursor — такими, как XFree86 4.3 и более поздние."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:20
 msgid "Cursor size"
 msgstr "Размер курсора"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:21
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Размер курсора, на который ссылается ключ cursor_theme."
 
@@ -1048,3 +1084,19 @@ msgstr "Включить или нет возможность блокировк
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Включение возможности блокировки клавиатуры"
+
+#: ../tools/mate-conf-import.desktop.in.in.h:1
+msgid "Migrate MATE 1.4 settings"
+msgstr "Мигрировать настройки MATE 1.4"
+
+#: ../tools/mate-conf-import.desktop.in.in.h:2
+msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
+msgstr "Утилита для миграции настроек MATE 1.4 в MATE 1.6+"
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:1
+msgid "Help"
+msgstr "Справка"
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:2
+msgid "Get help with MATE"
+msgstr "Получить справку по MATE"

@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-18 00:25+0200\n"
-"PO-Revision-Date: 2013-11-21 07:05+0000\n"
-"Last-Translator: Wei-Lun Chao <bluebat@member.fsf.org>\n"
+"POT-Creation-Date: 2014-02-18 12:06+0100\n"
+"PO-Revision-Date: 2014-02-18 11:09+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
 "Language-Team: Chinese (Mandarin) (http://www.transifex.com/projects/p/MATE/language/cmn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,42 +31,42 @@ msgstr "獲取更多有關 MATE 的資訊"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:199
+#: ../mate-about/mate-about.c:113
 msgid "translator-credits"
 msgstr "趙惟倫 <bluebat@member.fsf.org>, 2013\nChao-Hsiung Liao <j_h_liau@yahoo.com.tw>, 2008, 2010\nWoodman Tuen <wmtuen@gmail.com>, 2007\nAbel Cheung <abel@oaka.org>, 2001-2003, 2007"
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE 使用傳統形式提供 Linux 使用者直觀與吸引人的桌面。"
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "MATE 包含大部分您的電腦上會出現的東西，包含檔案管理員、文件檢視器、圖像檢視器、選單，以及許多應用程式。"
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:54
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE 是自由、可用、穩定、用於 Unix 家族之類作業系統的可存取桌面環境。"
 
-#: ../mate-about/mate-about.h:55
+#: ../mate-about/mate-about.h:57
 msgid ""
 "MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
 " since it was started in 1997; many more have contributed in other important"
 " ways, including translations, documentation, and quality assurance."
 msgstr "MATE 衍生自 GNOME 2。自從 GNOME 於 1997 年啟動開始，已有數以百計的人貢獻程式碼給它；更多的人已經以其他的重要方式做出貢獻，包含翻譯、文件以及品質管制。"
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:61
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 是最常用的 Linux 桌面，但是它已不再被維護…。MATE 在此可以提供相同的桌面給您！"
 
-#: ../mate-about/mate-about.h:62
+#: ../mate-about/mate-about.h:64
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -97,7 +97,7 @@ msgstr "回到檔案「%s」的開始位置時發生錯誤：%s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3523
+#: ../libmate-desktop/mate-desktop-item.c:3527
 msgid "No name"
 msgstr "沒有名稱"
 
@@ -141,7 +141,7 @@ msgstr "沒有可啟動的指令 (Exec)"
 msgid "Bad command (Exec) to launch"
 msgstr "準備啟動的指令 (Exec) 出現錯誤"
 
-#: ../libmate-desktop/mate-desktop-item.c:3580
+#: ../libmate-desktop/mate-desktop-item.c:3584
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "以下 URI 內容的編碼不明：%s"
@@ -166,12 +166,12 @@ msgstr "在取得螢幕大小的範圍發生無法處理的 X 錯誤"
 msgid "could not get the range of screen sizes"
 msgstr "無法取得螢幕大小的範圍"
 
-#: ../libmate-desktop/mate-rr.c:715
+#: ../libmate-desktop/mate-rr.c:723
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "沒有 RANDR 擴充功能"
 
-#: ../libmate-desktop/mate-rr.c:1092
+#: ../libmate-desktop/mate-rr.c:1104
 #, c-format
 msgid "could not get information about output %d"
 msgstr "無法取得輸出 %d 的資訊"
@@ -179,19 +179,19 @@ msgstr "無法取得輸出 %d 的資訊"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1479
+#: ../libmate-desktop/mate-rr.c:1491
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "對 CTRC %d 要求的位置/大小超出允許的限制：位置 =(%d，%d)，大小 =(%d，%d)，最大值=(%d，%d)"
 
-#: ../libmate-desktop/mate-rr.c:1515
+#: ../libmate-desktop/mate-rr.c:1527
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "無法設定 CRTC %d 的組態"
 
-#: ../libmate-desktop/mate-rr.c:1631
+#: ../libmate-desktop/mate-rr.c:1643
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "無法取得 CRTC %d 的資訊"
@@ -275,7 +275,7 @@ msgstr "要求的虛擬大小無法符合可用的大小：要求的 =(%d，%d)�
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:212
+#: ../libmate-desktop/mate-rr-labeler.c:353
 msgid "Mirror Screens"
 msgstr "鏡射螢幕"
 
@@ -461,54 +461,72 @@ msgid "Have MATE draw the desktop background."
 msgstr "讓 MATE 繪製桌面背景。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+msgid "Show Desktop Icons"
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+msgid "Fade the background on change"
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+msgid ""
+"If set to true, then MATE will change the desktop background with a fading "
+"effect."
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
 msgid "Picture Options"
 msgstr "圖片選項"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
 msgstr "決定由 wallpaper_filename 所設定的圖像將如何進行潤算。可能的值為「桌布」、「置中」、「比例」、「擴展」，「縮放」，「展開」。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
 msgid "Picture Filename"
 msgstr "圖片檔名"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
 msgid "File to use for the background image."
 msgstr "用於背景影像的檔案。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
 msgid "Picture Opacity"
 msgstr "圖片濁度"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
 msgid "Opacity with which to draw the background picture."
 msgstr "用來繪製背景圖片的濁度。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
 msgid "Primary Color"
 msgstr "主要顏色"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
 msgstr "繪製顏色梯度時左側或頂部的顏色，或者是單色。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:15
 msgid "Secondary Color"
 msgstr "次要顏色"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr "繪製顏色梯度時右側或底部的顏色，未用於單色。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:17
 msgid "Color Shading Type"
 msgstr "背景顏色遮蔽方式"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
@@ -818,6 +836,14 @@ msgstr "停用網址和 MIME 類型處理常式"
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr "防止執行任何網址或 MIME 類型處理常式的應用程式。"
 
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
+msgid "Disable theme settings"
+msgstr ""
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
+msgid "Prevent the user to change theme settings."
+msgstr ""
+
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
 msgstr "可能的值為「開」、「關」和「自訂」。"
@@ -897,41 +923,51 @@ msgid "Length of a double click."
 msgstr "連按兩下的時間長度。"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+msgid "Middle button emulation"
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+msgid ""
+"Enables middle mouse button emulation through simultaneous left and right "
+"button click."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
 msgid "Locate Pointer"
 msgstr "尋找指標位置"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
 msgstr "當控制鍵被按下和放開時，突顯目前指標的位置。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
 msgid "Cursor font"
 msgstr "游標字型"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
 msgstr "游標字型的名稱。如果解除設定，將會使用預設的字型。這個值只有在每個作業階段的 X 伺服器啟動時生效，因此在作業階段之中變更它將不會有效果，直到您下一次的登入。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
 msgid "Cursor theme"
 msgstr "游標布景主題"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
 msgstr "游標布景主題名稱。只會由支援 Xcursor 的 Xservers 所使用，像是 XFree86 4.3 和後續版本。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:20
 msgid "Cursor size"
 msgstr "游標大小"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:21
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "游標布景主題所參考的游標大小。"
 
@@ -1047,3 +1083,19 @@ msgstr "是否鍵盤鎖定已啟用"
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
 msgid "Whether or not keyboard locking is enabled."
 msgstr "是否鍵盤鎖定已啟用。"
+
+#: ../tools/mate-conf-import.desktop.in.in.h:1
+msgid "Migrate MATE 1.4 settings"
+msgstr ""
+
+#: ../tools/mate-conf-import.desktop.in.in.h:2
+msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
+msgstr ""
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:1
+msgid "Help"
+msgstr ""
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:2
+msgid "Get help with MATE"
+msgstr ""

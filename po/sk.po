@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ján Ďanovský <dagsoftware@yahoo.com>, 2013
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-18 00:25+0200\n"
-"PO-Revision-Date: 2014-02-13 15:45+0000\n"
+"POT-Creation-Date: 2014-02-18 12:06+0100\n"
+"PO-Revision-Date: 2014-02-18 15:35+0000\n"
 "Last-Translator: tibbi <tibbbi2@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -28,42 +28,42 @@ msgstr "Naučiť sa viac o MATE"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:199
+#: ../mate-about/mate-about.c:113
 msgid "translator-credits"
 msgstr "Ján Ďanovský <dagsoftware@yahoo.com>\nTibor Kaputa <tibbbi2@gmail.com>"
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE poskytuje intuitívne a atraktívne prostredie pre používateľov Linuxu za použitia tradičných postupov"
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "MATE zahŕňa väčšinu toho, čo vidíte na svojom počítači, vrátane správcu súborov, prehliadača dokumentov, prehliadača obrázkov, rôznych menu a mnohých programov"
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:54
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE je slobodné, použiteľné, stabilné a prístupné prostredie pre rodinu Unixových operačných systémov."
 
-#: ../mate-about/mate-about.h:55
+#: ../mate-about/mate-about.h:57
 msgid ""
 "MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
 " since it was started in 1997; many more have contributed in other important"
 " ways, including translations, documentation, and quality assurance."
 msgstr "MATE je odvodený od GNOME 2. Stovky ľudí prispeli kódom do GNOME od jeho začiatku v roku 1997; omnoho viac prispelo v ostatných oblastiach, zahrňujúcich preklady, dokumentáciu, a záruku kvality."
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:61
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 bolo najpopulárnejšie Linuxové prostredie, ale už viac nie je k dispozícii... MATE je tu pre to, aby vám poskytol to isté."
 
-#: ../mate-about/mate-about.h:62
+#: ../mate-about/mate-about.h:64
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -94,14 +94,14 @@ msgstr "Chyba pri presune v súbore '%s': %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3523
+#: ../libmate-desktop/mate-desktop-item.c:3527
 msgid "No name"
 msgstr "Bez názvu"
 
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
-msgstr "Súbor '%s' nie je normálny súbor alebo adresár."
+msgstr "Súbor '%s' nie je normálny súbor alebo priečinok."
 
 #: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
@@ -138,7 +138,7 @@ msgstr "Nezadaný príkaz (Exec), ktorý sa má spustiť"
 msgid "Bad command (Exec) to launch"
 msgstr "Neplatný príkaz (Exec), ktorý sa má spustiť"
 
-#: ../libmate-desktop/mate-desktop-item.c:3580
+#: ../libmate-desktop/mate-desktop-item.c:3584
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Neznáme kódovanie pre: %s"
@@ -156,19 +156,19 @@ msgstr "nepodarilo sa získať zdroje obrazovky (CRTC, výstupy, režimy)"
 #: ../libmate-desktop/mate-rr.c:464
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
-msgstr "nezvládnutá chyba X pri získavaní rozsahu veľkostí obrazovky"
+msgstr "neobslúžená chyba X pri získavaní rozsahu veľkostí obrazovky"
 
 #: ../libmate-desktop/mate-rr.c:470
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "nepodarilo sa získať rozsah veľkostí obrazovky"
 
-#: ../libmate-desktop/mate-rr.c:715
+#: ../libmate-desktop/mate-rr.c:723
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "rozšírenie RANDR nie je prítomné"
 
-#: ../libmate-desktop/mate-rr.c:1092
+#: ../libmate-desktop/mate-rr.c:1104
 #, c-format
 msgid "could not get information about output %d"
 msgstr "nepodarilo sa získať informácie o výstupe %d"
@@ -176,19 +176,19 @@ msgstr "nepodarilo sa získať informácie o výstupe %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1479
+#: ../libmate-desktop/mate-rr.c:1491
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "vyžiadaná poloha/veľkosť pre CRTC %d je mimo povolenú hranicu: poloha=(%d, %d), veľkosť=(%d, %d), maximum=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1515
+#: ../libmate-desktop/mate-rr.c:1527
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "nepodarilo sa nastaviť konfiguráciu pre CRTC %d"
 
-#: ../libmate-desktop/mate-rr.c:1631
+#: ../libmate-desktop/mate-rr.c:1643
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "nepodarilo sa získať informáciu o CRTC %d"
@@ -201,7 +201,7 @@ msgstr "Prenosný počítač"
 #, c-format
 msgid ""
 "none of the saved display configurations matched the active configuration"
-msgstr "žiadna z uložených konfigurácií displeja nezodpovedá aktívnej konfigurácií"
+msgstr "žiadna z uložených konfigurácií displeja nezodpovedá aktívnej konfigurácii"
 
 #: ../libmate-desktop/mate-rr-config.c:1423
 #, c-format
@@ -272,9 +272,9 @@ msgstr "vyžadovaná virtuálna veľkosť nezodpovedá dostupnej veľkosti: vyž
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:212
+#: ../libmate-desktop/mate-rr-labeler.c:353
 msgid "Mirror Screens"
-msgstr "Odzrkadliť obrazovky"
+msgstr "Zrkadlené obrazovky"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:1
 msgid "minimum interval in milliseconds"
@@ -406,7 +406,7 @@ msgstr "Predvolený kalendár"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:2
 msgid "Default calendar application"
-msgstr "Predvolená aplikácia kalendára"
+msgstr "Predvolený program kalendára"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:3
 msgid "Calendar needs terminal"
@@ -414,7 +414,7 @@ msgstr "Kalendár potrebuje terminál"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr "Či predvolená aplikácia kalendáru potrebuje na spustenie terminál"
+msgstr "Či predvolený program kalendára potrebuje na spustenie terminál."
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:5
 msgid "Default tasks"
@@ -422,7 +422,7 @@ msgstr "Predvolené úlohy"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:6
 msgid "Default tasks application"
-msgstr "Predvolená aplikácia pre úlohy"
+msgstr "Predvolený program pre úlohy"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:7
 msgid "Tasks needs terminal"
@@ -430,15 +430,15 @@ msgstr "Úlohy potrebujú terminál"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr "Či predvolená aplikácia úloh potrebuje na spustenie terminál."
+msgstr "Či predvolený program úloh potrebuje na spustenie terminál."
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:1
 msgid "Terminal application"
-msgstr "Aplikácie terminálu"
+msgstr "Programy terminálu"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr "Terminál, ktorý má byť použitý pri spúšťaní aplikácií, ktoré ho potrebujú."
+msgstr "Terminál, ktorý má byť použitý pri spúšťaní programov, ktoré ho potrebujú."
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:3
 msgid "Exec Arguments"
@@ -455,57 +455,75 @@ msgstr "Nakresliť pozadie pracovnej plochy"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr "Nechať MATE nakresliť pozadie pracovnej plochy."
+msgstr "Nechať MATE kresliť pozadie pracovnej plochy."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+msgid "Show Desktop Icons"
+msgstr "Zobraziť ikony na ploche"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgstr "Poveriť správcu súborov MATE (Caja) nakreslením ikoniek na ploche."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+msgid "Fade the background on change"
+msgstr "Zoslabiť pozadie pri zmene"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+msgid ""
+"If set to true, then MATE will change the desktop background with a fading "
+"effect."
+msgstr "Ak je nastavené na true, MATE zmení nastavenie s efektom zoslabnutia."
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
 msgid "Picture Options"
 msgstr "Možnosti obrázka"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
 msgstr "Určuje, ako má byť vykreslený obrázok nastavený wallpaper_filename. Možné hodnoty sú „pozadie“, „na stred“, „prispôsobený“, „roztiahnutý“, „vyplniť“, „prispôsobený“."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
 msgid "Picture Filename"
 msgstr "Názov súboru obrázka"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
 msgid "File to use for the background image."
 msgstr "Súbor, ktorý chcete použiť pre obrázok pozadia."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
 msgid "Picture Opacity"
 msgstr "Priesvitnosť obrázka"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
 msgid "Opacity with which to draw the background picture."
 msgstr "Priehľadnosť vykresľovaného obrázka na pozadí."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
 msgid "Primary Color"
 msgstr "Primárna farba"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
 msgstr "Ľavá alebo horná farba pri vykreslení prechodu, alebo jednotná farba."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:15
 msgid "Secondary Color"
 msgstr "Sekundárna farba"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr "Pravá alebo dolná farba pri vykreslení prechodu, nepoužité pri jednotnej farbe."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:17
 msgid "Color Shading Type"
 msgstr "Typ farebného tieňovania"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
@@ -569,7 +587,7 @@ msgstr "Menu majú ikony"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr "Či sa majú menu zobrazovať ikony vedľa položiek."
+msgstr "Či sa majú v menu zobrazovať ikony vedľa položiek."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:13
 msgid "Buttons Have Icons"
@@ -700,7 +718,7 @@ msgstr "Použiť vlastné písmo"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Či sa má použiť vlastné písmo v gtk+ aplikáciách."
+msgstr "Či sa má použiť vlastné písmo v gtk+ programoch."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
 msgid "Status Bar on Right"
@@ -815,6 +833,14 @@ msgstr "Zakázať ovládače URL a MIME typu"
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr "Zabráni spusteniu ovládacieho programu pre URL alebo MIME typ."
 
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
+msgid "Disable theme settings"
+msgstr "Zakázať nastavenia témy"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
+msgid "Prevent the user to change theme settings."
+msgstr "Zabráni používateľovi zmeniť nastavenia témy."
+
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
 msgstr "povolené hodnoty sú „zapnuté“, „vypnuté“ a „vlastné“"
@@ -894,43 +920,53 @@ msgid "Length of a double click."
 msgstr "Doba dvojitého kliknutia"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+msgid "Middle button emulation"
+msgstr "Emulácia stredného tlačidla"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+msgid ""
+"Enables middle mouse button emulation through simultaneous left and right "
+"button click."
+msgstr "Povolí emuláciu stredného tlačidla pomocou spoločného stlačenia ľavého a pravého tlačidla."
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
 msgid "Locate Pointer"
 msgstr "Nájsť ukazovateľ"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
 msgstr "Zvýrazní aktuálnu polohu ukazovateľa pri stlačení a uvoľnení klávesy Ctrl."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
 msgid "Cursor font"
 msgstr "Písmo kurzora"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
 msgstr "Názov písma pre kurzor. Ak nie je nastavené, použije sa predvolené písmo. Táto hodnota je odovzdaná len X serveru pri štarte každej relácie. Jej zmena počas relácie sa prejaví až pri vašom ďalšom prihlásení."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
 msgid "Cursor theme"
 msgstr "Téma kurzora"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
 msgstr "Názov témy kurzora. Použité len Xservermi, ktoré podporujú Xcursor, ako sú XFree86 4.3 a novšie."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:20
 msgid "Cursor size"
 msgstr "Veľkosť kurzora"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:21
 msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Veľkosť kurzora odkazovaná témou kurzoru"
+msgstr "Veľkosť kurzora odkazovaná témou kurzora"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:1
 msgid "Default mixer device"
@@ -1044,3 +1080,19 @@ msgstr "Či je alebo nie je povolené uzamykanie klávesnice"
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Či je alebo nie je povolené uzamykanie klávesnice"
+
+#: ../tools/mate-conf-import.desktop.in.in.h:1
+msgid "Migrate MATE 1.4 settings"
+msgstr "Premigrovať nastavenia MATE 1.4"
+
+#: ../tools/mate-conf-import.desktop.in.in.h:2
+msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
+msgstr "Nástroj na premigrovanie nastavení z MATE 1.4 do MATE 1.6"
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:1
+msgid "Help"
+msgstr "Pomocník"
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:2
+msgid "Get help with MATE"
+msgstr "Dostať pomoc od MATE"

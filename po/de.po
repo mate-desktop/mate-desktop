@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-18 00:25+0200\n"
-"PO-Revision-Date: 2014-02-05 17:59+0000\n"
+"POT-Creation-Date: 2014-02-18 12:06+0100\n"
+"PO-Revision-Date: 2014-02-18 17:15+0000\n"
 "Last-Translator: to_ba\n"
 "Language-Team: German (http://www.transifex.com/projects/p/MATE/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -32,47 +32,47 @@ msgstr "Mehr über MATE erfahren"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:199
+#: ../mate-about/mate-about.c:113
 msgid "translator-credits"
 msgstr "Übersetzer-Impressum"
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE bietet eine intuitive und attraktive Arbeitsumgebung für Linux-Anwender mit traditionellen Metaphern."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
-msgstr "MATE enthält fast alle Computeranwendungen, einschließlich Datei-Manager, Dokumentenbetrachter, Bildbetrachter, Menüs und viele Anwendungen."
+msgstr "MATE enthält fast alle Computeranwendungen, einschließlich Dateiverwaltung, Dokumentenbetrachter, Bildbetrachter, Menüs und viele Anwendungen."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:54
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE ist eine frei verwendbare, stabile, barrierefreie Arbeitsumgebung für Unix-ähnliche Betriebssysteme."
 
-#: ../mate-about/mate-about.h:55
+#: ../mate-about/mate-about.h:57
 msgid ""
 "MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
 " since it was started in 1997; many more have contributed in other important"
 " ways, including translations, documentation, and quality assurance."
 msgstr "MATE ist ein Fork von GNOME 2. Hunderte von Menschen haben zum GNOME-Code beigetragen, der im Jahr 1997 gestartet wurde, viele mehr haben auch in anderen wichtigen Punkten, wie Übersetzungen, Dokumentation und Qualitätssicherung beigetragen."
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:61
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 war die beliebteste Linux-Arbeitsumgebung, welcher aber nicht mehr verfügbar ist. MATE ist hier, um die gleiche Arbeitsumgebung anbieten zu können!"
 
-#: ../mate-about/mate-about.h:62
+#: ../mate-about/mate-about.h:64
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
-msgstr "Der Name \"MATE\" wird abgeleitet von yerba maté, eine Stechpalmenart, die heimisch im subtropischen Südamerika ist. Seine Blätter enthalten Koffein und werden verwendet, um Infusionen und ein Getränk namens Mate herzustellen."
+msgstr "Der Name »MATE« wird abgeleitet von yerba maté, eine Stechpalmenart, die heimisch im subtropischen Südamerika ist. Seine Blätter enthalten Koffein und werden verwendet, um Infusionen und ein Getränk namens Mate herzustellen."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -98,7 +98,7 @@ msgstr "Fehler beim Zurücksetzen von Datei »%s«: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3523
+#: ../libmate-desktop/mate-desktop-item.c:3527
 msgid "No name"
 msgstr "Namenlos"
 
@@ -142,7 +142,7 @@ msgstr "Kein ausführbarer Startbefehl"
 msgid "Bad command (Exec) to launch"
 msgstr "Ausführbarer Startbefehl fehlerhaft"
 
-#: ../libmate-desktop/mate-desktop-item.c:3580
+#: ../libmate-desktop/mate-desktop-item.c:3584
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Zeichenkodierung von %s unbekannt"
@@ -167,12 +167,12 @@ msgstr "Unbehandelter X Fehler beim Abfragen der Bildschirmgrößen"
 msgid "could not get the range of screen sizes"
 msgstr "Mögliche Bildschirmgrößen konnten nicht abgefragt werden"
 
-#: ../libmate-desktop/mate-rr.c:715
+#: ../libmate-desktop/mate-rr.c:723
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "Die RANDR-Erweiterung ist nicht vorhanden"
 
-#: ../libmate-desktop/mate-rr.c:1092
+#: ../libmate-desktop/mate-rr.c:1104
 #, c-format
 msgid "could not get information about output %d"
 msgstr "Es konnten keine Informationen über die Ausgabe »%d« erfragt werden"
@@ -180,19 +180,19 @@ msgstr "Es konnten keine Informationen über die Ausgabe »%d« erfragt werden"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1479
+#: ../libmate-desktop/mate-rr.c:1491
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "Gewählte Position/Größe für CRTC »%d« ist über dem erlaubten Limit:Position=(%d, %d), Größe=(%d, %d), Maximum=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1515
+#: ../libmate-desktop/mate-rr.c:1527
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "Konfiguration für CRTC »%d« konnte nicht angewendet werden"
 
-#: ../libmate-desktop/mate-rr.c:1631
+#: ../libmate-desktop/mate-rr.c:1643
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "Informationen über CRTC »%d« konnten nicht erfragt werden"
@@ -276,7 +276,7 @@ msgstr "Gewählte virtuelle Größe passt nicht zur verfügbaren Größe: Erwün
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:212
+#: ../libmate-desktop/mate-rr-labeler.c:353
 msgid "Mirror Screens"
 msgstr "Bildschirme spiegeln"
 
@@ -462,54 +462,72 @@ msgid "Have MATE draw the desktop background."
 msgstr "MATE benutzen um den Schreibtischhintergrund zu zeichnen"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+msgid "Show Desktop Icons"
+msgstr "Schreibtischsymbole anzeigen"
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+msgid "Have MATE file manager (Caja) draw the desktop icons."
+msgstr "MATEs Dateiverwaltung (Caja), um die Schreibtischsymbole darzustellen. "
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+msgid "Fade the background on change"
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+msgid ""
+"If set to true, then MATE will change the desktop background with a fading "
+"effect."
+msgstr ""
+
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
 msgid "Picture Options"
 msgstr "Bildeinstellungen"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
 msgstr "Legt fest, wie das Bild von Wallpaper_Dateinamen gesetzt gerendert wird. Mögliche Werte sind \"wallpaper\", \"zentriert\", \"skalierte\", \"gespannt\", \"zoom\", \"überspannt\"."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
 msgid "Picture Filename"
 msgstr "Bild Dateiname"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
 msgid "File to use for the background image."
 msgstr "Datei als Hintergrundbild verwenden."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
 msgid "Picture Opacity"
 msgstr "Bild Deckkraft"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
 msgid "Opacity with which to draw the background picture."
 msgstr "Transparenz mit der das Hintergrundbild dargestellt werden soll."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
 msgid "Primary Color"
 msgstr "primäre Farbe"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
 msgstr "Linke oder obere Farbe beim Zeichnen eines Farbverlaufs, bzw. einem\neinfarbigen Hintergrund verwendete Farbe."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:15
 msgid "Secondary Color"
 msgstr "sekundäre Farbe"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr "Rechte oder untere Farbe beim Zeichnen eines Farbverlaufs. Bei einem\neinfarbigen Hintergrund wir diese Farbe nicht verwendet."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:17
 msgid "Color Shading Type"
 msgstr "farbschattierungstyp"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.background.gschema.xml.in.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
@@ -539,7 +557,7 @@ msgstr "aktiviere Animationen"
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr "Legt fest ob Animationen angezeigt werden sollen. Hinweis: Dies ist ein globaler Schlüssel. Er ändert das Verhalten des Fenstermanagers, Panels,  usw."
+msgstr "Legt fest ob Animationen angezeigt werden sollen. Hinweis: Dies ist ein globaler Schlüssel. Er ändert das Verhalten der Fensterverwaltung, der Leiste, usw."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:5
 msgid "Menus Have Tearoff"
@@ -629,7 +647,7 @@ msgstr "Symbol Thema"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:26
 msgid "Icon theme to use for the panel, caja etc."
-msgstr "Symbol Thema für das Panel verwenden, caja usw."
+msgstr "Symbolthema für die Leiste verwenden, caja usw."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:27
 msgid "Gtk+ Theme"
@@ -761,7 +779,7 @@ msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr "Den Benutzer daran hindern, auf das Terminal zuzugreifen oder eine\nauszuführende Befehlszeile anzugeben. Dies verhindert beispielsweise den Zugriff auf den Panel-Dialog \"Anwendung ausführen\"."
+msgstr "Den Benutzer daran hindern, auf das Terminal zuzugreifen oder eine\nauszuführende Befehlszeile anzugeben. Dies verhindert beispielsweise den Zugriff auf den Leistendialog »Anwendung ausführen«."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:3
 msgid "Disable saving files to disk"
@@ -819,9 +837,17 @@ msgstr "Verarbeitung von URL- und MIME-Typen verhinden"
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr "Verhindert, dass Anwendungen zum Verarbeiten von URL- oder MIME-Typen gestartet werden."
 
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
+msgid "Disable theme settings"
+msgstr "Themaeinstellungen deaktivieren"
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
+msgid "Prevent the user to change theme settings."
+msgstr ""
+
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "Mögliche Werte sind \"an\", \"aus\" und \"benutzerdefiniert\"."
+msgstr "Mögliche Werte sind »an«, »aus« und »benutzerdefiniert«."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:2
 msgid "Keyboard Bell Custom Filename"
@@ -898,41 +924,51 @@ msgid "Length of a double click."
 msgstr "Länge von einem Doppelklick."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+msgid "Middle button emulation"
+msgstr "Emulation der mittleren Taste"
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+msgid ""
+"Enables middle mouse button emulation through simultaneous left and right "
+"button click."
+msgstr ""
+
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
 msgid "Locate Pointer"
 msgstr "Zeiger suchen"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
 msgstr "Betont der aktuellen Position des Mauszeigers, wenn die Strg-Taste gedrückt und wieder losgelassen wird."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
 msgid "Cursor font"
 msgstr "Zeigerschrift"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
 msgstr "Schriftname des Zeigers. Falls dieser Schlüssel nicht gesetzt wurde, wird die Vorgabeschrift verwendet. Dieser Wert wird dem X-Server lediglich am Anfang jeder Sitzung mitgeteilt, daher werden Änderungen an diesem Schlüssel erst ausgewertet, wenn Sie sich das nächste Mal anmelden."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
 msgid "Cursor theme"
 msgstr "Zeigerthema"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
 msgstr "Cursor Themen-Name. Nur von X-Servern verwendet, unterstützt Xcursor, wie XFree86 4.3 und höher."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:20
 msgid "Cursor size"
 msgstr "Cursor Größe"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:21
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Größe des Cursors mit dem verwiesenen Cursor Thema."
 
@@ -1048,3 +1084,19 @@ msgstr "Legt fest, ob die Tastatur Sperre Aktiviert werden soll."
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Legt fest, ob die Tastatur Sperre Aktiviert werden soll."
+
+#: ../tools/mate-conf-import.desktop.in.in.h:1
+msgid "Migrate MATE 1.4 settings"
+msgstr "MATE 1.4 Einstellungen migrieren"
+
+#: ../tools/mate-conf-import.desktop.in.in.h:2
+msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
+msgstr "Werkzeug, um die Einstellungen von MATE 1.4 zu MATE 1.6 zu migrieren"
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:1
+msgid "Help"
+msgstr "Hilfe"
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:2
+msgid "Get help with MATE"
+msgstr "Hilfe für MATE bekommen"
