@@ -169,39 +169,22 @@ gboolean         mate_bg_get_image_size        (MateBG               *bg,
                                                  int                    best_height,
 						 int                   *width,
 						 int                   *height);
-#if GTK_CHECK_VERSION (3, 0, 0)
-cairo_surface_t *mate_bg_create_thumbnail      (MateBG               *bg,
-						 MateDesktopThumbnailFactory *factory,
-						 GdkScreen             *screen,
-						 int                    dest_width,
-						 int                    dest_height);
-#else
 GdkPixbuf *      mate_bg_create_thumbnail      (MateBG               *bg,
 						 MateDesktopThumbnailFactory *factory,
 						 GdkScreen             *screen,
 						 int                    dest_width,
 						 int                    dest_height);
-#endif
 gboolean         mate_bg_is_dark               (MateBG               *bg,
                                                  int                    dest_width,
 						 int                    dest_height);
 gboolean         mate_bg_has_multiple_sizes    (MateBG               *bg);
 gboolean         mate_bg_changes_with_time     (MateBG               *bg);
-#if GTK_CHECK_VERSION (3, 0, 0)
-cairo_surface_t *mate_bg_create_frame_thumbnail (MateBG              *bg,
-						 MateDesktopThumbnailFactory *factory,
-						 GdkScreen             *screen,
-						 int                    dest_width,
-						 int                    dest_height,
-						 int                    frame_num);
-#else
 GdkPixbuf *      mate_bg_create_frame_thumbnail (MateBG              *bg,
 						 MateDesktopThumbnailFactory *factory,
 						 GdkScreen             *screen,
 						 int                    dest_width,
 						 int                    dest_height,
 						 int                    frame_num);
-#endif
 
 /* Set a surface as root - not a MateBG method. At some point
  * if we decide to stabilize the API then we may want to make
