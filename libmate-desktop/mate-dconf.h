@@ -41,7 +41,7 @@ gboolean mate_dconf_recursive_reset (const gchar  *dir,
 gchar **mate_dconf_list_subdirs (const gchar *dir,
                                  gboolean     remove_trailing_slash);
 
-void mate_dconf_sync ();
+void mate_dconf_sync (void);
 
 G_END_DECLS
 

@@ -1480,7 +1480,11 @@ static void
 sn_error_trap_pop (SnDisplay *display,
 		   Display   *xdisplay)
 {
+#if GTK_CHECK_VERSION(3, 0, 0)
+	gdk_error_trap_pop_ignored();
+#else
 	gdk_error_trap_pop ();
+#endif
 }
 
 static char **

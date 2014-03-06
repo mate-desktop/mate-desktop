@@ -277,9 +277,19 @@ tile_surface (cairo_surface_t *surface,
 	}
 	else
 	{
+#if GTK_CHECK_VERSION(3, 0, 0)
+		GtkStyleContext *style_context;
+		style_context = gtk_style_context_new();
+		GdkRGBA color;
+		gtk_style_context_get(style_context, GTK_STATE_FLAG_NORMAL,
+			GTK_STYLE_PROPERTY_BACKGROUND_COLOR, &color,
+			NULL);
+		gdk_cairo_set_source_rgba(cr, &color);
+#else
 		GtkStyle *style;
 		style = gtk_widget_get_default_style ();
 		gdk_cairo_set_source_color(cr, &style->bg[GTK_STATE_NORMAL]);
+#endif
 	}
 
 	cairo_paint (cr);
