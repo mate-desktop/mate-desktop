@@ -195,12 +195,7 @@ mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, 
 	appinfo = g_app_info_create_from_commandline (command, NULL, G_APP_INFO_CREATE_NONE, error);
 
 	if (appinfo) {
-#if GTK_CHECK_VERSION(3, 0, 0)
-		GdkDisplay *display = gdk_screen_get_display(screen);
-		context = gdk_display_get_app_launch_context(display);
-#else
 		context = gdk_app_launch_context_new ();
-#endif
 		gdk_app_launch_context_set_screen (context, screen);
 		res = g_app_info_launch (appinfo, NULL, G_APP_LAUNCH_CONTEXT (context), error);
 		g_object_unref (context);

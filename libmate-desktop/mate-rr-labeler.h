@@ -32,22 +32,12 @@
 
 #include "mate-rr-config.h"
 
-#include <gtk/gtk.h>
-
 #define MATE_TYPE_RR_LABELER            (mate_rr_labeler_get_type ())
 #define MATE_RR_LABELER(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_RR_LABELER, MateRRLabeler))
 #define MATE_RR_LABELER_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  MATE_TYPE_RR_LABELER, MateRRLabelerClass))
 #define MATE_IS_RR_LABELER(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_RR_LABELER))
 #define MATE_IS_RR_LABELER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  MATE_TYPE_RR_LABELER))
 #define MATE_RR_LABELER_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  MATE_TYPE_RR_LABELER, MateRRLabelerClass))
-
-#ifndef MATE_DEPRECATED_FOR
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define MATE_DEPRECATED_FOR(func) G_DEPRECATED_FOR(func)
-#else
-#define MATE_DEPRECATED_FOR(func)
-#endif
-#endif
 
 typedef struct _MateRRLabeler MateRRLabeler;
 typedef struct _MateRRLabelerClass MateRRLabelerClass;
@@ -58,11 +48,6 @@ MateRRLabeler *mate_rr_labeler_new (MateRRConfig *config);
 
 void mate_rr_labeler_hide (MateRRLabeler *labeler);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-void mate_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateOutputInfo *output, GdkRGBA *color_out);
-#endif
-
-MATE_DEPRECATED_FOR(mate_rr_labeler_get_rgba_for_output)
 void mate_rr_labeler_get_color_for_output (MateRRLabeler *labeler, MateOutputInfo *output, GdkColor *color_out);
 
 #endif

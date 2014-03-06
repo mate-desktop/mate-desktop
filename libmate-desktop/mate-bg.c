@@ -101,13 +101,8 @@ struct _MateBG {
 	char		*filename;
 	MateBGPlacement	 placement;
 	MateBGColorType	 color_type;
-#if GTK_CHECK_VERSION(3, 0, 0)
-	GdkRGBA		 primary;
-	GdkRGBA		 secondary;
-#else
 	GdkColor	 primary;
 	GdkColor	 secondary;
-#endif
 	gboolean	 is_enabled;
 
 	GFileMonitor* file_monitor;
@@ -155,31 +150,17 @@ static GdkPixbuf *pixbuf_scale_to_fit  (GdkPixbuf  *src,
 static GdkPixbuf *pixbuf_scale_to_min  (GdkPixbuf  *src,
 					int         min_width,
 					int         min_height);
-#if !GTK_CHECK_VERSION(3, 0, 0)
+
 static void       pixbuf_draw_gradient (GdkPixbuf    *pixbuf,
 					gboolean      horizontal,
 					GdkColor     *c1,
 					GdkColor     *c2,
 					GdkRectangle *rect);
-#endif
 
 static void       pixbuf_tile          (GdkPixbuf  *src,
-#if GTK_CHECK_VERSION (3, 0, 0)
-					cairo_t    *cr,
-					int        width,
-					int        height
-#else
-					GdkPixbuf  *dest
-#endif
-					);
+					GdkPixbuf  *dest);
 static void       pixbuf_blend         (GdkPixbuf  *src,
-#if GTK_CHECK_VERSION (3, 0, 0)
-					cairo_t    *cr,
-					int         dest_width,
-					int         dest_height,
-#else
 					GdkPixbuf  *dest,
-#endif
 					int         src_x,
 					int         src_y,
 					int         width,
@@ -225,20 +206,6 @@ static FileSize   *find_best_size      (GSList                *sizes,
 					gint                   width,
 					gint                   height);
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-static void
-color_from_string(const char *string,
-		  GdkRGBA    *colorp)
-{
-	/* If all else fails use black */
-	if (!gdk_rgba_parse (colorp, string)) {
-		colorp->red = 0.0;
-		colorp->blue = 0.0;
-		colorp->green = 0.0;
-		colorp->alpha = 1.0;
-	}
-}
-#else
 static void
 color_from_string (const char *string,
 		   GdkColor   *colorp)
@@ -251,15 +218,7 @@ color_from_string (const char *string,
 
 	gdk_color_parse (string, colorp);
 }
-#endif
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-static char *
-color_to_string (const GdkRGBA *color)
-{
-	return gdk_rgba_to_string(color);
-}
-#else
 static char *
 color_to_string (const GdkColor *color)
 {
@@ -268,7 +227,6 @@ color_to_string (const GdkColor *color)
 				color->green >> 8,
 				color->blue >> 8);
 }
-#endif
 
 static gboolean
 do_changed (MateBG *bg)
@@ -402,11 +360,7 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 	char    *tmp;
 	char    *filename;
 	MateBGColorType ctype;
-#if GTK_CHECK_VERSION(3, 0, 0)
-	GdkRGBA c1,c2;
-#else
 	GdkColor c1, c2;
-#endif
 	MateBGPlacement placement;
 
 	g_return_if_fail (MATE_IS_BG (bg));
@@ -466,11 +420,7 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 	/* Placement */
 	placement = g_settings_get_enum (settings, MATE_BG_KEY_PICTURE_PLACEMENT);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-	mate_bg_set_rgba (bg, ctype, &c1, &c2);
-#else
 	mate_bg_set_color (bg, ctype, &c1, &c2);
-#endif
 	mate_bg_set_placement (bg, placement);
 	mate_bg_set_filename (bg, filename);
 
@@ -595,43 +545,6 @@ mate_bg_new (void)
 	return g_object_new (MATE_TYPE_BG, NULL);
 }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-void
-mate_bg_set_rgba (MateBG *bg,
-		    MateBGColorType type,
-		    GdkRGBA *primary,
-		    GdkRGBA *secondary
-		)
-{
-	g_return_if_fail (bg != NULL);
-	g_return_if_fail (primary != NULL);
-
-	if (bg->color_type != type			||
-	    !gdk_rgba_equal (&bg->primary, primary)			||
-	    (secondary && !gdk_rgba_equal (&bg->secondary, secondary)))
-	{
-		bg->color_type = type;
-		bg->primary = *primary;
-		if (secondary) {
-			bg->secondary = *secondary;
-		}
-
-		queue_changed (bg);
-	}
-}
-
-static void
-color_to_rgba(const GdkColor* color, GdkRGBA* rgba)
-{
-	g_assert (color != NULL);
-	g_assert (rgba != NULL);
-	rgba->red = color->red/65535.0;
-	rgba->blue = color->blue/65535.0;
-	rgba->green = color->green/65535.0;
-	rgba->alpha = 1.0;
-}
-#endif
-
 void
 mate_bg_set_color (MateBG *bg,
 		    MateBGColorType type,
@@ -641,39 +554,15 @@ mate_bg_set_color (MateBG *bg,
 	g_return_if_fail (bg != NULL);
 	g_return_if_fail (primary != NULL);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-	GdkRGBA primary_rgba;
-	GdkRGBA secondary_rgba;
-
-	color_to_rgba(primary, &primary_rgba);
-
-	if(secondary) {
-		color_to_rgba(secondary, &secondary_rgba);
-	}
-#endif
-
 	if (bg->color_type != type			||
-#if GTK_CHECK_VERSION (3, 0, 0)
-	    !gdk_rgba_equal (&bg->primary, &primary_rgba)		||
-	    (secondary && !gdk_rgba_equal (&bg->secondary, &secondary_rgba)))
-#else
 	    !gdk_color_equal (&bg->primary, primary)			||
-	    (secondary && !gdk_color_equal (&bg->secondary, secondary)))
-#endif
-	{
+	    (secondary && !gdk_color_equal (&bg->secondary, secondary))) {
 
 		bg->color_type = type;
-#if GTK_CHECK_VERSION (3, 0, 0)
-		bg->primary = primary_rgba;
-		if (secondary) {
-			bg->secondary = secondary_rgba;
-		}
-#else
 		bg->primary = *primary;
 		if (secondary) {
 			bg->secondary = *secondary;
 		}
-#endif
 
 		queue_changed (bg);
 	}
@@ -700,26 +589,6 @@ mate_bg_get_placement (MateBG *bg)
 	return bg->placement;
 }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-void
-mate_bg_get_rgba (MateBG		*bg,
-		   MateBGColorType	*type,
-		   GdkRGBA		*primary,
-		   GdkRGBA		*secondary)
-{
-	g_return_if_fail (bg != NULL);
-
-	if (type)
-		*type = bg->color_type;
-
-	if (primary)
-		*primary = bg->primary;
-
-	if (secondary)
-		*secondary = bg->secondary;
-}
-#endif
-
 void
 mate_bg_get_color (MateBG		*bg,
 		   MateBGColorType	*type,
@@ -731,17 +600,11 @@ mate_bg_get_color (MateBG		*bg,
 	if (type)
 		*type = bg->color_type;
 
-	if (primary) {
-		primary->red = bg->primary.red * 0xffff;
-		primary->green = bg->primary.green * 0xffff;
-		primary->blue = bg->primary.blue * 0xffff;
-	}
+	if (primary)
+		*primary = bg->primary;
 
-	if (secondary) {
-		secondary->red = bg->secondary.red * 0xffff;
-		secondary->green = bg->secondary.green * 0xffff;
-		secondary->blue = bg->secondary.blue * 0xffff;
-	}
+	if (secondary)
+		*secondary = bg->secondary;
 }
 
 void
@@ -954,12 +817,12 @@ mate_bg_set_filename (MateBG	 *bg,
 	}
 }
 
-#if !GTK_CHECK_VERSION(3, 0, 0)
 static void
 draw_color_area (MateBG       *bg,
 		 GdkPixbuf    *dest,
 		 GdkRectangle *rect)
 {
+	guint32 pixel;
 	GdkRectangle extent;
 
         extent.x = 0;
@@ -970,8 +833,7 @@ draw_color_area (MateBG       *bg,
 	gdk_rectangle_intersect (rect, &extent, rect);
 
 	switch (bg->color_type) {
-	case MATE_BG_COLOR_SOLID: {
-		guint32 pixel;
+	case MATE_BG_COLOR_SOLID:
 		/* not really a big deal to ignore the area of interest */
 		pixel = ((bg->primary.red >> 8) << 24)      |
 			((bg->primary.green >> 8) << 16)    |
@@ -979,7 +841,6 @@ draw_color_area (MateBG       *bg,
 			(0xff);
 
 		gdk_pixbuf_fill (dest, pixel);
-		}
 		break;
 
 	case MATE_BG_COLOR_H_GRADIENT:
@@ -994,24 +855,12 @@ draw_color_area (MateBG       *bg,
 		break;
 	}
 }
-#endif
 
 static void
 draw_color (MateBG    *bg,
-#if GTK_CHECK_VERSION(3, 0, 0)
-	cairo_t       *cr,
-	gint          width,
-	gint          height
-#else
-	    GdkPixbuf *dest
-#endif
-	)
+	    GdkPixbuf *dest,
+	    GdkScreen *screen)
 {
-#if GTK_CHECK_VERSION(3, 0, 0)
-	gdk_cairo_set_source_rgba(cr, &(bg->primary));
-	cairo_rectangle(cr, 0, 0, width, height);
-	cairo_fill(cr);
-#else
 	GdkRectangle rect;
 
 	rect.x = 0;
@@ -1019,11 +868,8 @@ draw_color (MateBG    *bg,
 	rect.width = gdk_pixbuf_get_width (dest);
 	rect.height = gdk_pixbuf_get_height (dest);
 	draw_color_area (bg, dest, &rect);
-#endif
 }
 
-
-#if !GTK_CHECK_VERSION(3, 0, 0)
 static void
 draw_color_each_monitor (MateBG    *bg,
 			 GdkPixbuf *dest,
@@ -1039,7 +885,6 @@ draw_color_each_monitor (MateBG    *bg,
 		draw_color_area (bg, dest, &rect);
 	}
 }
-#endif
 
 static GdkPixbuf *
 pixbuf_clip_to_fit (GdkPixbuf *src,
@@ -1126,11 +971,7 @@ static void
 draw_image_area (MateBG        *bg,
 		 gint           num_monitor,
 		 GdkPixbuf     *pixbuf,
-#if GTK_CHECK_VERSION (3, 0, 0)
-		 cairo_t       *cr,
-#else
 		 GdkPixbuf     *dest,
-#endif
 		 GdkRectangle  *area)
 {
 	int dest_width = area->width;
@@ -1145,28 +986,16 @@ draw_image_area (MateBG        *bg,
 
 	switch (bg->placement) {
 	case MATE_BG_PLACEMENT_TILED:
-#if GTK_CHECK_VERSION (3, 0, 0)
-		pixbuf_tile (scaled, cr, dest_width, dest_height);
-#else
 		pixbuf_tile (scaled, dest);
-#endif
 		break;
 	case MATE_BG_PLACEMENT_ZOOMED:
 	case MATE_BG_PLACEMENT_CENTERED:
 	case MATE_BG_PLACEMENT_FILL_SCREEN:
 	case MATE_BG_PLACEMENT_SCALED:
-#if GTK_CHECK_VERSION (3, 0, 0)
-		pixbuf_blend (scaled, cr, dest_width, dest_height, 0, 0, w, h, x + area->x, y + area->y, 1.0);
-#else
 		pixbuf_blend (scaled, dest, 0, 0, w, h, x + area->x, y + area->y, 1.0);
-#endif
 		break;
 	case MATE_BG_PLACEMENT_SPANNED:
-#if GTK_CHECK_VERSION (3, 0, 0)
-		pixbuf_blend (scaled, cr, dest_width, dest_height, 0, 0, w, h, x, y, 1.0);
-#else
 		pixbuf_blend (scaled, dest, 0, 0, w, h, x, y, 1.0);
-#endif
 		break;
 	default:
 		g_assert_not_reached ();
@@ -1181,44 +1010,22 @@ draw_image_area (MateBG        *bg,
 static void
 draw_image_for_thumb (MateBG     *bg,
 		      GdkPixbuf  *pixbuf,
-#if GTK_CHECK_VERSION (3, 0, 0)
-		      cairo_t    *cr,
-		      gint       width,
-		      gint       height
-#else
-		      GdkPixbuf  *dest
-#endif
-			)
+		      GdkPixbuf  *dest)
 {
 	GdkRectangle rect;
 
 	rect.x = 0;
 	rect.y = 0;
-#if GTK_CHECK_VERSION (3, 0, 0)
-	rect.width = width;
-	rect.height = height;
-
-#else
 	rect.width = gdk_pixbuf_get_width (dest);
 	rect.height = gdk_pixbuf_get_height (dest);
-#endif
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-	draw_image_area (bg, -1, pixbuf, cr, &rect);
-#else
 	draw_image_area (bg, -1, pixbuf, dest, &rect);
-#endif
 }
 
 static void
 draw_once (MateBG    *bg,
-#if GTK_CHECK_VERSION (3, 0, 0)
-           cairo_t   *cr,
-           gint      width,
-           gint      height,
-#else
 	   GdkPixbuf *dest,
-#endif
+	   GdkScreen *screen,
 	   gboolean   is_root)
 {
 	GdkRectangle rect;
@@ -1230,27 +1037,17 @@ draw_once (MateBG    *bg,
 
 	rect.x = 0;
 	rect.y = 0;
-#if GTK_CHECK_VERSION (3, 0, 0)
-	rect.width = width;
-	rect.height = height;
-#else
 	rect.width = gdk_pixbuf_get_width (dest);
 	rect.height = gdk_pixbuf_get_height (dest);
-#endif
 
 	pixbuf = get_pixbuf_for_size (bg, monitor, rect.width, rect.height);
 	if (pixbuf) {
-#if GTK_CHECK_VERSION (3, 0, 0)
-		draw_image_area (bg, monitor, pixbuf, cr, &rect);
-#else
 		draw_image_area (bg, monitor, pixbuf, dest, &rect);
-#endif
 
 		g_object_unref (pixbuf);
 	}
 }
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
 static void
 draw_each_monitor (MateBG    *bg,
 		   GdkPixbuf *dest,
@@ -1273,48 +1070,25 @@ draw_each_monitor (MateBG    *bg,
 		}
 	}
 }
-#endif
 
 void
 mate_bg_draw (MateBG     *bg,
-#if GTK_CHECK_VERSION(3, 0, 0)
-		cairo_t  *cr,
-		gint     width,
-		gint     height,
-#else
 	       GdkPixbuf *dest,
 	       GdkScreen *screen,
-#endif
 	       gboolean   is_root)
 {
 	if (!bg)
 		return;
 
 	if (is_root && (bg->placement != MATE_BG_PLACEMENT_SPANNED)) {
-#if GTK_CHECK_VERSION(3, 0, 0)
-		draw_color (bg, cr, width, height);
-#else
 		draw_color_each_monitor (bg, dest, screen);
-#endif
 		if (bg->filename) {
-#if GTK_CHECK_VERSION (3, 0, 0)
-			draw_once (bg, cr, width, height, is_root);
-#else
 			draw_each_monitor (bg, dest, screen);
-#endif
 		}
 	} else {
-#if GTK_CHECK_VERSION(3, 0, 0)
-		draw_color (bg, cr, width, height);
-#else
-		draw_color (bg, dest);
-#endif
+		draw_color (bg, dest, screen);
 		if (bg->filename) {
-#if GTK_CHECK_VERSION (3, 0, 0)
-			draw_once (bg, cr, width, height, is_root);
-#else
-			draw_once (bg, dest, is_root);
-#endif
+			draw_once (bg, dest, screen, is_root);
 		}
 	}
 }
@@ -1431,17 +1205,10 @@ mate_bg_create_pixmap  (MateBG      *bg,
 
 	cr = cairo_create (surface);
 	if (!bg->filename && bg->color_type == MATE_BG_COLOR_SOLID) {
-#if GTK_CHECK_VERSION(3, 0, 0)
-		gdk_cairo_set_source_rgba (cr, &(bg->primary));
-#else
 		gdk_cairo_set_source_color (cr, &(bg->primary));
-#endif
 	}
 	else
 	{
-#if GTK_CHECK_VERSION(3, 0, 0)
-		gdk_cairo_set_source_window(cr, window, 0, 0);
-#else
 		GdkPixbuf *pixbuf;
 
 		pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8,
@@ -1449,7 +1216,6 @@ mate_bg_create_pixmap  (MateBG      *bg,
 		mate_bg_draw (bg, pixbuf, gdk_window_get_screen (window), is_root);
 		gdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
 		g_object_unref (pixbuf);
-#endif
 	}
 
 	cairo_paint (cr);
@@ -1468,11 +1234,7 @@ mate_bg_is_dark (MateBG *bg,
 		  int      width,
 		  int      height)
 {
-#if GTK_CHECK_VERSION(3, 0, 0)
-	GdkRGBA color;
-#else
 	GdkColor color;
-#endif
 	int intensity;
 	GdkPixbuf *pixbuf;
 
@@ -1499,14 +1261,9 @@ mate_bg_is_dark (MateBG *bg,
 		g_object_unref (pixbuf);
 	}
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-	// todo
-	intensity = 20;
-#else
 	intensity = (color.red * 77 +
 		     color.green * 150 +
 		     color.blue * 28) >> 16;
-#endif
 
 	return intensity < 160; /* biased slightly to be dark */
 }
@@ -1637,53 +1394,30 @@ fit_factor (int from_width, int from_height,
 	return MIN (to_width  / (double) from_width, to_height / (double) from_height);
 }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-cairo_surface_t *
-#else
 GdkPixbuf *
-#endif
 mate_bg_create_thumbnail (MateBG               *bg,
 		           MateDesktopThumbnailFactory *factory,
 			   GdkScreen             *screen,
 			   int                    dest_width,
 			   int                    dest_height)
 {
-#if GTK_CHECK_VERSION (3, 0, 0)
-	cairo_surface_t *result;
-#else
 	GdkPixbuf *result;
-#endif
 	GdkPixbuf *thumb;
 
 	g_return_val_if_fail (bg != NULL, NULL);
 
-
-#if GTK_CHECK_VERSION (3, 0, 0)
-	result = cairo_image_surface_create(CAIRO_FORMAT_RGB24, dest_width, dest_height);
-	cairo_t *cr = cairo_create(result);
-	draw_color (bg, cr, dest_width, dest_height);
-#else
 	result = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
 
-	draw_color (bg, result);
-#endif
+	draw_color (bg, result, screen);
 
 	if (bg->filename) {
 		thumb = create_img_thumbnail (bg, factory, screen, dest_width, dest_height, -1);
 
 		if (thumb) {
-#if GTK_CHECK_VERSION (3, 0, 0)
-			draw_image_for_thumb (bg, thumb, cr, dest_width, dest_height);
-#else
 			draw_image_for_thumb (bg, thumb, result);
-#endif
 			g_object_unref (thumb);
 		}
 	}
-
-#if GTK_CHECK_VERSION (3, 0, 0)
-	cairo_destroy(cr);
-#endif
 
 	return result;
 }
@@ -2056,11 +1790,7 @@ blend (GdkPixbuf *p1,
        GdkPixbuf *p2,
        double alpha)
 {
-#if GTK_CHECK_VERSION (3, 0, 0)
-	cairo_surface_t *surface = gdk_cairo_surface_create_from_pixbuf(p1, 0, NULL);
-#else
 	GdkPixbuf *result = gdk_pixbuf_copy (p1);
-#endif
 	GdkPixbuf *tmp;
 
 	if (gdk_pixbuf_get_width (p2) != gdk_pixbuf_get_width (p1) ||
@@ -2074,18 +1804,7 @@ blend (GdkPixbuf *p1,
 		tmp = g_object_ref (p2);
 	}
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-	cairo_t *cr = cairo_create(surface);
-	int width = gdk_pixbuf_get_width(p1);
-	int height = gdk_pixbuf_get_height(p1);
-	pixbuf_blend (tmp, cr, width, height, 0, 0, -1, -1, 0, 0, alpha);
-	cairo_destroy (cr);
-
-	GdkPixbuf *result = gdk_pixbuf_get_from_surface (surface, 0, 0, width, height);
-	cairo_surface_destroy (surface);
-#else
 	pixbuf_blend (tmp, result, 0, 0, -1, -1, 0, 0, alpha);
-#endif
 
         g_object_unref (tmp);
 
@@ -2890,7 +2609,6 @@ pixbuf_scale_to_min (GdkPixbuf *src, int min_width, int min_height)
 	return dest;
 }
 
-#if !GTK_CHECK_VERSION(3, 0, 0)
 static guchar *
 create_gradient (const GdkColor *primary,
 		 const GdkColor *secondary,
@@ -2921,12 +2639,14 @@ pixbuf_draw_gradient (GdkPixbuf    *pixbuf,
 	int height;
 	int rowstride;
 	guchar *dst;
+	guchar *dst_limit;
 	int n_channels = 3;
 
 	rowstride = gdk_pixbuf_get_rowstride (pixbuf);
 	width = rect->width;
 	height = rect->height;
 	dst = gdk_pixbuf_get_pixels (pixbuf) + rect->x * n_channels + rowstride * rect->y;
+	dst_limit = dst + height * rowstride;
 
 	if (horizontal) {
 		guchar *gradient = create_gradient (primary, secondary, width);
@@ -2962,17 +2682,10 @@ pixbuf_draw_gradient (GdkPixbuf    *pixbuf,
 		g_free (gradient);
 	}
 }
-#endif
 
 static void
 pixbuf_blend (GdkPixbuf *src,
-#if GTK_CHECK_VERSION (3, 0, 0)
-	      cairo_t   *cr,
-	      int        dest_width,
-              int        dest_height,
-#else
 	      GdkPixbuf *dest,
-#endif
 	      int	 src_x,
 	      int	 src_y,
 	      int	 src_width,
@@ -2981,10 +2694,8 @@ pixbuf_blend (GdkPixbuf *src,
 	      int	 dest_y,
 	      double	 alpha)
 {
-#if !GTK_CHECK_VERSION (3, 0, 0)
 	int dest_width = gdk_pixbuf_get_width (dest);
 	int dest_height = gdk_pixbuf_get_height (dest);
-#endif
 	int offset_x = dest_x - src_x;
 	int offset_y = dest_y - src_y;
 
@@ -3008,47 +2719,29 @@ pixbuf_blend (GdkPixbuf *src,
 		src_height = dest_height - dest_y;
 	}
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-	gdk_cairo_set_source_pixbuf(cr, src, offset_x, offset_y);
-	cairo_rectangle (cr, offset_x, offset_y, src_width, src_height);
-	cairo_paint_with_alpha (cr, alpha);
-	cairo_fill (cr);
-#else
 	gdk_pixbuf_composite (src, dest,
 			      dest_x, dest_y,
 			      src_width, src_height,
 			      offset_x, offset_y,
 			      1, 1, GDK_INTERP_NEAREST,
 			      alpha * 0xFF + 0.5);
-#endif
 }
 
 static void
-#if GTK_CHECK_VERSION (3, 0, 0)
-pixbuf_tile (GdkPixbuf *src, cairo_t *cr, int dest_width, int dest_height)
-#else
 pixbuf_tile (GdkPixbuf *src, GdkPixbuf *dest)
-#endif
 {
 	int x, y;
 	int tile_width, tile_height;
-#if !GTK_CHECK_VERSION (3, 0, 0)
 	int dest_width = gdk_pixbuf_get_width (dest);
 	int dest_height = gdk_pixbuf_get_height (dest);
-#endif
 
 	tile_width = gdk_pixbuf_get_width (src);
 	tile_height = gdk_pixbuf_get_height (src);
 
 	for (y = 0; y < dest_height; y += tile_height) {
 		for (x = 0; x < dest_width; x += tile_width) {
-#if GTK_CHECK_VERSION (3, 0, 0)
-			pixbuf_blend (src, cr, dest_width, dest_height, 0, 0,
-				      tile_width, tile_height, x, y, 1.0);
-#else
 			pixbuf_blend (src, dest, 0, 0,
 				      tile_width, tile_height, x, y, 1.0);
-#endif
 		}
 	}
 }
@@ -3510,11 +3203,7 @@ mate_bg_changes_with_time (MateBG *bg)
  * vaguely defined as 'suitable point to show while single-stepping
  * through the slideshow'. Returns NULL if frame_num is out of bounds.
  */
-#if GTK_CHECK_VERSION (3, 0, 0)
-cairo_surface_t *
-#else
 GdkPixbuf *
-#endif
 mate_bg_create_frame_thumbnail (MateBG			*bg,
 				 MateDesktopThumbnailFactory	*factory,
 				 GdkScreen			*screen,
@@ -3523,11 +3212,7 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 				 int				 frame_num)
 {
 	SlideShow *show;
-#if GTK_CHECK_VERSION (3, 0, 0)
-	cairo_surface_t *result;
-#else
 	GdkPixbuf *result;
-#endif
 	GdkPixbuf *thumb;
         GList *l;
         int i, skipped;
@@ -3562,16 +3247,10 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 	if (!found)
 		return NULL;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-	result = cairo_image_surface_create(CAIRO_FORMAT_RGB24, dest_width, dest_height);
-	cairo_t *cr = cairo_create(result);
 
-	draw_color(bg, cr,  dest_width, dest_height);
-#else
 	result = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
 
-	draw_color (bg, result);
-#endif
+	draw_color (bg, result, screen);
 
 	if (bg->filename) {
 		thumb = create_img_thumbnail (bg, factory, screen,
@@ -3579,18 +3258,10 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 					      frame_num + skipped);
 
 		if (thumb) {
-#if GTK_CHECK_VERSION (3, 0, 0)
-			draw_image_for_thumb (bg, thumb, cr,  dest_width, dest_height);
-#else
 			draw_image_for_thumb (bg, thumb, result);
-#endif
 			g_object_unref (thumb);
 		}
 	}
-
-#if GTK_CHECK_VERSION (3, 0, 0)
-	cairo_destroy (cr);
-#endif
 
 	return result;
 }

@@ -40,15 +40,6 @@
 extern "C" {
 #endif
 
-
-#ifndef MATE_DEPRECATED_FOR
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define MATE_DEPRECATED_FOR(func) G_DEPRECATED_FOR(func)
-#else
-#define MATE_DEPRECATED_FOR(func)
-#endif
-#endif
-
 #define MATE_TYPE_BG            (mate_bg_get_type ())
 #define MATE_BG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_BG, MateBG))
 #define MATE_BG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  MATE_TYPE_BG, MateBGClass))
@@ -110,13 +101,6 @@ void             mate_bg_set_filename          (MateBG               *bg,
 						 const char            *filename);
 void             mate_bg_set_placement         (MateBG               *bg,
 						 MateBGPlacement       placement);
-#if GTK_CHECK_VERSION (3, 0, 0)
-void             mate_bg_set_rgba             (MateBG               *bg,
-						 MateBGColorType     type,
-						 GdkRGBA             *primary,
-						 GdkRGBA             *secondary);
-#endif
-MATE_DEPRECATED_FOR(mate_bg_set_rgba)
 void             mate_bg_set_color             (MateBG               *bg,
 						 MateBGColorType       type,
 						 GdkColor              *primary,
@@ -126,15 +110,6 @@ void		 mate_bg_set_draw_background   (MateBG		     *bg,
 /* Getters */
 gboolean	 mate_bg_get_draw_background   (MateBG		     *bg);
 MateBGPlacement  mate_bg_get_placement         (MateBG               *bg);
-
-#if GTK_CHECK_VERSION (3, 0, 0)
-void		 mate_bg_get_rgba             (MateBG               *bg,
-						 MateBGColorType      *type,
-						 GdkRGBA              *primary,
-						 GdkRGBA              *secondary);
-#endif
-
-MATE_DEPRECATED_FOR(mate_bg_get_rgba)
 void		 mate_bg_get_color             (MateBG               *bg,
 						 MateBGColorType      *type,
 						 GdkColor              *primary,
@@ -143,14 +118,8 @@ const gchar *    mate_bg_get_filename          (MateBG               *bg);
 
 /* Drawing and thumbnailing */
 void             mate_bg_draw                  (MateBG               *bg,
-#if GTK_CHECK_VERSION(3, 0, 0)
-						cairo_t		     *cr,
-						gint			width,
-						gint			height,
-#else
 						 GdkPixbuf             *dest,
 						 GdkScreen	       *screen,
-#endif
                                                  gboolean               is_root);
 
 #if GTK_CHECK_VERSION(3, 0, 0)
@@ -169,39 +138,22 @@ gboolean         mate_bg_get_image_size        (MateBG               *bg,
                                                  int                    best_height,
 						 int                   *width,
 						 int                   *height);
-#if GTK_CHECK_VERSION (3, 0, 0)
-cairo_surface_t *mate_bg_create_thumbnail      (MateBG               *bg,
-						 MateDesktopThumbnailFactory *factory,
-						 GdkScreen             *screen,
-						 int                    dest_width,
-						 int                    dest_height);
-#else
 GdkPixbuf *      mate_bg_create_thumbnail      (MateBG               *bg,
 						 MateDesktopThumbnailFactory *factory,
 						 GdkScreen             *screen,
 						 int                    dest_width,
 						 int                    dest_height);
-#endif
 gboolean         mate_bg_is_dark               (MateBG               *bg,
                                                  int                    dest_width,
 						 int                    dest_height);
 gboolean         mate_bg_has_multiple_sizes    (MateBG               *bg);
 gboolean         mate_bg_changes_with_time     (MateBG               *bg);
-#if GTK_CHECK_VERSION (3, 0, 0)
-cairo_surface_t *mate_bg_create_frame_thumbnail (MateBG              *bg,
-						 MateDesktopThumbnailFactory *factory,
-						 GdkScreen             *screen,
-						 int                    dest_width,
-						 int                    dest_height,
-						 int                    frame_num);
-#else
 GdkPixbuf *      mate_bg_create_frame_thumbnail (MateBG              *bg,
 						 MateDesktopThumbnailFactory *factory,
 						 GdkScreen             *screen,
 						 int                    dest_width,
 						 int                    dest_height,
 						 int                    frame_num);
-#endif
 
 /* Set a surface as root - not a MateBG method. At some point
  * if we decide to stabilize the API then we may want to make
