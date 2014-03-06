@@ -1637,7 +1637,11 @@ fit_factor (int from_width, int from_height,
 	return MIN (to_width  / (double) from_width, to_height / (double) from_height);
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+cairo_surface_t *
+#else
 GdkPixbuf *
+#endif
 mate_bg_create_thumbnail (MateBG               *bg,
 		           MateDesktopThumbnailFactory *factory,
 			   GdkScreen             *screen,
@@ -1645,17 +1649,18 @@ mate_bg_create_thumbnail (MateBG               *bg,
 			   int                    dest_height)
 {
 #if GTK_CHECK_VERSION (3, 0, 0)
-	cairo_surface_t *surface;
-#endif
+	cairo_surface_t *result;
+#else
 	GdkPixbuf *result;
+#endif
 	GdkPixbuf *thumb;
 
 	g_return_val_if_fail (bg != NULL, NULL);
 
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-	surface = cairo_image_surface_create(CAIRO_FORMAT_RGB24, dest_width, dest_height);
-	cairo_t *cr = cairo_create(surface);
+	result = cairo_image_surface_create(CAIRO_FORMAT_RGB24, dest_width, dest_height);
+	cairo_t *cr = cairo_create(result);
 	draw_color (bg, cr, dest_width, dest_height);
 #else
 	result = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
@@ -1678,8 +1683,6 @@ mate_bg_create_thumbnail (MateBG               *bg,
 
 #if GTK_CHECK_VERSION (3, 0, 0)
 	cairo_destroy(cr);
-	result = gdk_pixbuf_get_from_surface(surface, 0, 0, dest_width, dest_height);
-	cairo_surface_destroy (surface);
 #endif
 
 	return result;
@@ -3507,7 +3510,11 @@ mate_bg_changes_with_time (MateBG *bg)
  * vaguely defined as 'suitable point to show while single-stepping
  * through the slideshow'. Returns NULL if frame_num is out of bounds.
  */
+#if GTK_CHECK_VERSION (3, 0, 0)
+cairo_surface_t *
+#else
 GdkPixbuf *
+#endif
 mate_bg_create_frame_thumbnail (MateBG			*bg,
 				 MateDesktopThumbnailFactory	*factory,
 				 GdkScreen			*screen,
@@ -3517,9 +3524,10 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 {
 	SlideShow *show;
 #if GTK_CHECK_VERSION (3, 0, 0)
-	cairo_surface_t *surface;
-#endif
+	cairo_surface_t *result;
+#else
 	GdkPixbuf *result;
+#endif
 	GdkPixbuf *thumb;
         GList *l;
         int i, skipped;
@@ -3555,8 +3563,8 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 		return NULL;
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-	surface = cairo_image_surface_create(CAIRO_FORMAT_RGB24, dest_width, dest_height);
-	cairo_t *cr = cairo_create(surface);
+	result = cairo_image_surface_create(CAIRO_FORMAT_RGB24, dest_width, dest_height);
+	cairo_t *cr = cairo_create(result);
 
 	draw_color(bg, cr,  dest_width, dest_height);
 #else
@@ -3582,8 +3590,6 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 
 #if GTK_CHECK_VERSION (3, 0, 0)
 	cairo_destroy (cr);
-	result = gdk_pixbuf_get_from_surface (surface, 0, 0, dest_width, dest_height);
-	cairo_surface_destroy (surface);
 #endif
 
 	return result;
