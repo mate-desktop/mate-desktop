@@ -3,9 +3,6 @@ SUBDIRS = libmate-desktop man docs po schemas tools
 if MATE_ABOUT_ENABLED
 SUBDIRS += mate-about
 endif
-if DESKTOP_DOCS_ENABLED
-SUBDIRS += desktop-docs
-endif
 if USER_GUIDE_ENABLED
 SUBDIRS += user-guide
 endif

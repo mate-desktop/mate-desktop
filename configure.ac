@@ -80,10 +80,6 @@ AC_ARG_ENABLE([mate-about],
 	[AS_HELP_STRING([--disable-mate-about],[dont build mate-about])],
 	[],[enable_mate_about=yes])
 AM_CONDITIONAL(MATE_ABOUT_ENABLED, test "x$enable_mate_about" = "xyes")
-AC_ARG_ENABLE([desktop-docs],
-	[AS_HELP_STRING([--disable-desktop-docs],[do not build desktop-wide help documents])],
-	[],[enable_desktop_docs=yes])
-AM_CONDITIONAL(DESKTOP_DOCS_ENABLED, test "x$enable_desktop_docs" = "xyes")
 AC_ARG_ENABLE([user-guide],
 	[AS_HELP_STRING([--disable-user-guide],[do not build user guide])],
 	[],[enable_user_guide=yes])
@@ -332,10 +328,6 @@ docs/reference/Makefile
 docs/reference/mate-desktop/Makefile
 mate-version.xml.in
 po/Makefile.in
-desktop-docs/Makefile
-desktop-docs/fdl/Makefile
-desktop-docs/gpl/Makefile
-desktop-docs/lgpl/Makefile
 schemas/Makefile
 man/Makefile
 tools/mate-conf-import.desktop.in
@@ -370,7 +362,6 @@ mate-desktop $VERSION `echo mate-desktop $VERSION | sed "s/./=/g"`
     Gtk+ version:                 ${GTK_API_VERSION}
     Build mate-about:             ${enable_mate_about}
     Use libunique:                ${enable_libunique}
-    Build desktop-wide docs:      ${enable_desktop_docs}
     Build user guide:             ${enable_user_guide}
     Install mate-conf-import:     ${enable_mate_conf_import}
     Install mpaste:               ${enable_mpaste}
