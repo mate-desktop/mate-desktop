@@ -54,7 +54,7 @@
 		N_("MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 		"like family of operating systems."),
 
-		N_("MATE is a fork of GNOME 2. Hundreds of people have contributed code to "
+		N_("MATE is the continuation of GNOME 2. Hundreds of people have contributed code to "
 		"GNOME since it was started in 1997; many more have contributed in other "
 		"important ways, including translations, documentation, and quality assurance."),
 
