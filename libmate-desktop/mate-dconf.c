@@ -151,7 +151,7 @@ mate_dconf_list_subdirs (const gchar *dir,
  *
  * Since: 1.7.1
  */
-void mate_dconf_sync ()
+void mate_dconf_sync (void)
 {
 #ifdef HAVE_DCONF_0_13
     DConfClient  *client = mate_dconf_client_get ();
