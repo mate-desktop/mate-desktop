@@ -2060,7 +2060,7 @@ display_credits_dialog (GtkWidget *button,
   gtk_container_set_border_width (GTK_CONTAINER (gtk_dialog_get_action_area (credits_dialog)), 5);
 
   priv->credits_dialog = dialog;
-  gtk_window_set_default_size (GTK_WINDOW (dialog), 360, 260);
+  gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 300);
   gtk_dialog_set_default_response (credits_dialog, GTK_RESPONSE_CANCEL);
 
   gtk_window_set_modal (GTK_WINDOW (dialog),
