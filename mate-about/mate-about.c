@@ -70,7 +70,7 @@
 
 	void mate_about_run(void)
 	{
-		mate_about_dialog = (GtkAboutDialog*) gtk_about_dialog_new();
+		mate_about_dialog = (MateAboutDialog*) mate_about_dialog_new();
 
 		gtk_window_set_default_icon_name(desktop_icon);
 
@@ -78,44 +78,35 @@
 
 		if (gtk_icon_theme_has_icon(icon_theme, icon))
 		{
-			gtk_about_dialog_set_logo_icon_name(mate_about_dialog, icon);
+			mate_about_dialog_set_logo_icon_name(mate_about_dialog, icon);
 		}
 		else
 		{
-			gtk_about_dialog_set_logo_icon_name(mate_about_dialog, desktop_icon);
+			mate_about_dialog_set_logo_icon_name(mate_about_dialog, desktop_icon);
 		}
 
 		// name
-		#if GTK_CHECK_VERSION(3, 0, 0) || GTK_CHECK_VERSION(2, 12, 0)
-			gtk_about_dialog_set_program_name(mate_about_dialog, gettext(program_name));
-		#else
-			gtk_about_dialog_set_name(mate_about_dialog, gettext(program_name));
-		#endif
+		mate_about_dialog_set_program_name(mate_about_dialog, gettext(program_name));
 
 		// version
-		gtk_about_dialog_set_version(mate_about_dialog, version);
+		mate_about_dialog_set_version(mate_about_dialog, version);
 
 		// credits and website
-		gtk_about_dialog_set_copyright(mate_about_dialog, copyright);
-		gtk_about_dialog_set_website(mate_about_dialog, website);
+		mate_about_dialog_set_copyright(mate_about_dialog, copyright);
+		mate_about_dialog_set_website(mate_about_dialog, website);
 
 		/**
 		 * This generate a random message.
 		 * The comments index must not be more than comments_count - 1
 		 */
-		gtk_about_dialog_set_comments(mate_about_dialog, gettext(comments_array[g_random_int_range(0, comments_count - 1)]));
+		mate_about_dialog_set_comments(mate_about_dialog, gettext(comments_array[g_random_int_range(0, comments_count - 1)]));
 
-		gtk_about_dialog_set_authors(mate_about_dialog, authors);
-		gtk_about_dialog_set_artists(mate_about_dialog, artists);
-		gtk_about_dialog_set_documenters(mate_about_dialog, documenters);
+		mate_about_dialog_set_authors(mate_about_dialog, authors);
+		mate_about_dialog_set_artists(mate_about_dialog, artists);
+		mate_about_dialog_set_documenters(mate_about_dialog, documenters);
 		/* Translators should localize the following string which will be
 		 * displayed in the about box to give credit to the translator(s). */
-		gtk_about_dialog_set_translator_credits(mate_about_dialog, _("translator-credits"));
-
-		#if GTK_CHECK_VERSION(3, 0, 0)
-			gtk_about_dialog_set_license_type(mate_about_dialog, GTK_LICENSE_GPL_3_0);
-			gtk_about_dialog_set_wrap_license(mate_about_dialog, TRUE);
-		#endif
+		mate_about_dialog_set_translator_credits(mate_about_dialog, _("translator-credits"));
 
 		#ifdef USE_UNIQUE
 			unique_app_watch_window(mate_about_application, (GtkWindow*) mate_about_dialog);
