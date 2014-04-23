@@ -27,7 +27,7 @@
  */
 
 #include "config.h"
-
+#include "private.h"
 #include "mate-aboutdialog.h"
 
 #include <string.h>
@@ -466,6 +466,8 @@ mate_about_dialog_init (MateAboutDialog *about)
   GtkDialog *dialog = GTK_DIALOG (about);
   MateAboutDialogPrivate *priv;
   GtkWidget *vbox, *hbox, *button, *close_button, *image;
+
+  _mate_desktop_init_i18n ();
 
   /* Data */
   priv = MATE_ABOUT_DIALOG_GET_PRIVATE (about);

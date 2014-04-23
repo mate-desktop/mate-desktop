@@ -42,6 +42,7 @@ G_BEGIN_DECLS
 
 typedef struct _MateAboutDialog        MateAboutDialog;
 typedef struct _MateAboutDialogClass   MateAboutDialogClass;
+typedef struct _MateAboutDialogPrivate MateAboutDialogPrivate;
 
 /**
  * MateAboutDialog:
@@ -54,7 +55,7 @@ struct _MateAboutDialog
   GtkDialog parent_instance;
 
   /*< private >*/
-  GtkAboutDialogPrivate *private_data;
+  MateAboutDialogPrivate *private_data;
 };
 
 struct _MateAboutDialogClass
