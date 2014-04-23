@@ -54,6 +54,73 @@ mate_gsettings_schema_exists (const gchar* schema)
     return schema_exists;
 }
 
+/* (copied from gnome-panel)
+ * Adapted from is_valid_keyname() in glib (gio/glib-compile-schemas.c)
+ * Differences:
+ *  - gettext support removed (we don't need translations here)
+ *  - remove support for allow_any_name
+ */
+gboolean
+mate_gsettings_is_valid_keyname (const gchar  *key,
+                                 GError      **error)
+{
+  gint i;
+
+  if (key[0] == '\0')
+    {
+      g_set_error_literal (error, G_MARKUP_ERROR, G_MARKUP_ERROR_INVALID_CONTENT,
+                           "empty names are not permitted");
+      return FALSE;
+    }
+
+  if (!g_ascii_islower (key[0]))
+    {
+      g_set_error (error, G_MARKUP_ERROR, G_MARKUP_ERROR_INVALID_CONTENT,
+                   "invalid name '%s': names must begin "
+                     "with a lowercase letter", key);
+      return FALSE;
+    }
+
+  for (i = 1; key[i]; i++)
+    {
+      if (key[i] != '-' &&
+          !g_ascii_islower (key[i]) &&
+          !g_ascii_isdigit (key[i]))
+        {
+          g_set_error (error, G_MARKUP_ERROR, G_MARKUP_ERROR_INVALID_CONTENT,
+                       "invalid name '%s': invalid character '%c'; "
+                         "only lowercase letters, numbers and dash ('-') "
+                         "are permitted.", key, key[i]);
+          return FALSE;
+        }
+
+      if (key[i] == '-' && key[i + 1] == '-')
+        {
+          g_set_error (error, G_MARKUP_ERROR, G_MARKUP_ERROR_INVALID_CONTENT,
+                       "invalid name '%s': two successive dashes ('--') "
+                         "are not permitted.", key);
+          return FALSE;
+        }
+    }
+
+  if (key[i - 1] == '-')
+    {
+      g_set_error (error, G_MARKUP_ERROR, G_MARKUP_ERROR_INVALID_CONTENT,
+                   "invalid name '%s': the last character may not be a "
+                     "dash ('-').", key);
+      return FALSE;
+    }
+
+  if (i > 32)
+    {
+      g_set_error (error, G_MARKUP_ERROR, G_MARKUP_ERROR_INVALID_CONTENT,
+                   "invalid name '%s': maximum length is 32", key);
+      return FALSE;
+    }
+
+  return TRUE;
+}
+
 gboolean
 mate_gsettings_append_strv (GSettings   *settings,
                             const gchar *key,
