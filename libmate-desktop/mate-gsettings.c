@@ -24,8 +24,6 @@
 
 #include "mate-gsettings.h"
 
-#include <gio/gio.h>
-
 /**
  * mate_gsettings_schema_exists:
  * @schema: schema to check.
@@ -54,4 +52,74 @@ mate_gsettings_schema_exists (const gchar* schema)
     }
 
     return schema_exists;
+}
+
+gboolean
+mate_gsettings_append_strv (GSettings   *settings,
+                            const gchar *key,
+                            const gchar *value)
+{
+    gchar    **old;
+    gchar    **new;
+    gint       size;
+    gboolean   retval;
+
+    old = g_settings_get_strv (settings, key);
+
+    for (size = 0; old[size] != NULL; size++);
+
+    size += 1; /* appended value */
+    size += 1; /* NULL */
+
+    new = g_realloc_n (old, size, sizeof (gchar *));
+
+    new[size - 2] = g_strdup (value);
+    new[size - 1] = NULL;
+
+    retval = g_settings_set_strv (settings, key,
+                                  (const gchar **) new);
+
+    g_strfreev (new);
+
+    return retval;
+}
+
+gboolean
+mate_gsettings_remove_all_from_strv (GSettings   *settings,
+                                     const gchar *key,
+                                     const gchar *value)
+{
+    GArray    *array;
+    gchar    **old;
+    gint       i;
+    gboolean   retval;
+
+    old = g_settings_get_strv (settings, key);
+    array = g_array_new (TRUE, TRUE, sizeof (gchar *));
+
+    for (i = 0; old[i] != NULL; i++) {
+        if (g_strcmp0 (old[i], value) != 0)
+            array = g_array_append_val (array, old[i]);
+    }
+
+    retval = g_settings_set_strv (settings, key,
+                                  (const gchar **) array->data);
+
+    g_strfreev (old);
+    g_array_free (array, TRUE);
+
+    return retval;
+}
+
+GSList*
+mate_gsettings_strv_to_gslist (const gchar *const *array)
+{
+    GSList *list = NULL;
+    gint i;
+    if (array != NULL) {
+        for (i = 0; array[i]; i++) {
+            list = g_slist_append (list, g_strdup (array[i]));
+        }
+    }
+    return list;
 }
