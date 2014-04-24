@@ -513,6 +513,9 @@ mate_about_dialog_init (MateAboutDialog *about)
   gtk_label_set_selectable (GTK_LABEL (priv->comments_label), TRUE);
   gtk_label_set_justify (GTK_LABEL (priv->comments_label), GTK_JUSTIFY_CENTER);
   gtk_label_set_line_wrap (GTK_LABEL (priv->comments_label), TRUE);
+#if GTK_CHECK_VERSION (3, 0, 0)
+  gtk_label_set_max_width_chars (GTK_LABEL (priv->comments_label), 60);
+#endif
   gtk_box_pack_start (GTK_BOX (vbox), priv->comments_label, FALSE, FALSE, 0);
 
   priv->copyright_label = gtk_label_new (NULL);
