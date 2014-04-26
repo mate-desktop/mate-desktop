@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-22 10:56+0100\n"
-"PO-Revision-Date: 2014-02-24 20:53+0000\n"
-"Last-Translator: Darkcircle <darkcircle.0426@gmail.com>\n"
+"POT-Creation-Date: 2014-04-23 22:55+0200\n"
+"PO-Revision-Date: 2014-04-23 20:56+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/MATE/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,42 +31,43 @@ msgstr "마테에 대해 더 알아보기"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:113
+#: ../mate-about/mate-about.c:109
 msgid "translator-credits"
 msgstr "번역자들"
 
-#: ../mate-about/mate-about.h:48
+#: ../mate-about/mate-about.h:50
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "마테는  전통적인 방식을 사용해 직관적이고  아름다운 데스크톱을 리눅스 사용자에게 제공합니다. "
 
-#: ../mate-about/mate-about.h:51
+#: ../mate-about/mate-about.h:53
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "마테는  파일 관리자, 문서 보기, 이미지 보기,  메뉴,  많은 응용프로그램을 포함해 사용자가 컴퓨터에서 볼 수 있는 대부분을 포함하고 있습니다."
 
-#: ../mate-about/mate-about.h:54
+#: ../mate-about/mate-about.h:56
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "마테는 유닉스 계열 운영 체제에서 사용하는 자유롭고 안정적이며 일상에서 사용 가능한  데스크톱 환경입니다."
 
-#: ../mate-about/mate-about.h:57
+#: ../mate-about/mate-about.h:59
 msgid ""
-"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
-" since it was started in 1997; many more have contributed in other important"
-" ways, including translations, documentation, and quality assurance."
-msgstr "마테는 그놈 2에서 파생하였습니다. 그놈은 1997년 이래로 수백명의 사람이 그놈 코드에 기여했습니다. 더욱 많은 사람이 번역, 문서 작성, 품질 관리와 같은 방식으로 기여했습니다.  "
+"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"code to GNOME since it was started in 1997; many more have contributed in "
+"other important ways, including translations, documentation, and quality "
+"assurance."
+msgstr ""
 
-#: ../mate-about/mate-about.h:61
+#: ../mate-about/mate-about.h:63
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "그놈 2는 가장 인기있는 리눅스 데스크톱이었지만 지금은 개발이 중단되었습니다. 여기 마테가 그놈 2와 똑같은 데스크톱을 사용자에게 제공할 것입니다!"
 
-#: ../mate-about/mate-about.h:64
+#: ../mate-about/mate-about.h:66
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -80,6 +81,165 @@ msgstr "“마테”라는 이름은 yerba maté라는  남미 아열대 고유�
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "알 수 없음"
+
+#: ../libmate-desktop/mate-aboutdialog.c:184
+msgid "Could not show link"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:240
+msgid "Program name"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:241
+msgid ""
+"The name of the program. If this is not set, it defaults to "
+"g_get_application_name()"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:255
+msgid "Program version"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:256
+msgid "The version of the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:270
+msgid "Copyright string"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:271
+msgid "Copyright information for the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:288
+msgid "Comments string"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:289
+msgid "Comments about the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:307
+#: ../libmate-desktop/mate-aboutdialog.c:2128
+msgid "License"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:308
+msgid "The license of the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:323
+msgid "Website URL"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:324
+msgid "The URL for the link to the website of the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:339
+msgid "Website label"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:340
+msgid ""
+"The label for the link to the website of the program. If this is not set, it"
+" defaults to the URL"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:356
+msgid "Authors"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:357
+msgid "List of authors of the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:373
+msgid "Documenters"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:374
+msgid "List of people documenting the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:390
+msgid "Artists"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:391
+msgid "List of people who have contributed artwork to the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:408
+msgid "Translator credits"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:409
+msgid ""
+"Credits to the translators. This string should be marked as translatable"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:424
+msgid "Logo"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:425
+msgid ""
+"A logo for the about box. If this is not set, it defaults to "
+"gtk_window_get_default_icon_list()"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:440
+msgid "Logo Icon Name"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:441
+msgid "A named icon to use as the logo for the about box."
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:454
+msgid "Wrap license"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:455
+msgid "Whether to wrap the license text."
+msgstr ""
+
+#. Add the credits button
+#: ../libmate-desktop/mate-aboutdialog.c:544
+msgid "C_redits"
+msgstr ""
+
+#. Add the license button
+#: ../libmate-desktop/mate-aboutdialog.c:558
+msgid "_License"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:833
+#, c-format
+msgid "About %s"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2052
+msgid "Credits"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2080
+msgid "Written by"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2083
+msgid "Documented by"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2095
+msgid "Translated by"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2099
+msgid "Artwork by"
+msgstr ""
 
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -1091,11 +1251,3 @@ msgstr "마테 1.4 설정 옮기기"
 #: ../tools/mate-conf-import.desktop.in.in.h:2
 msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
 msgstr "마테 1.4 설정을 마테 1.6으로 옮기는 도구"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:1
-msgid "Help"
-msgstr "도움말"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:2
-msgid "Get help with MATE"
-msgstr "마테 도움말을 봅니다"

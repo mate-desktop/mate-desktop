@@ -4,17 +4,18 @@
 # 
 # Translators:
 # Koljan1970 <Stuartlittle1970@gmail.com>, 2013
-# zubr139 <zubr139@ukr.net>, 2013
-# zubr139 <zubr139@ukr.net>, 2012
-# zubr139 <zubr139@ukr.net>, 2012-2013
+# Oleh Tsyupka <aalesshhkka@gmail.com>, 2014
+# zubr139, 2013
+# zubr139, 2012
+# zubr139, 2012-2013
 # Koljan1970 <Stuartlittle1970@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-22 10:56+0100\n"
-"PO-Revision-Date: 2014-02-23 04:38+0000\n"
-"Last-Translator: Koljan1970 <Stuartlittle1970@gmail.com>\n"
+"POT-Creation-Date: 2014-04-23 22:55+0200\n"
+"PO-Revision-Date: 2014-04-25 09:36+0000\n"
+"Last-Translator: Oleh Tsyupka <aalesshhkka@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,42 +33,43 @@ msgstr "Дізнайтесь більше про MATE"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:113
+#: ../mate-about/mate-about.c:109
 msgid "translator-credits"
 msgstr "zubr139 <zubr139@ukr.net>\nMykola Tkach <Stuartlittle1970@gmail.com>"
 
-#: ../mate-about/mate-about.h:48
+#: ../mate-about/mate-about.h:50
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE надає інтуїтивно зрозуміле та приваблививе робоче оточення для Linux користувачів, що використовують традиційну концепцію."
 
-#: ../mate-about/mate-about.h:51
+#: ../mate-about/mate-about.h:53
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "MATE містить більшу частину того, что Ви бачите на своєму комп’ютері, включаючи файловий менеджер, переглядачі документів та зображень, меню та багато інших додатків"
 
-#: ../mate-about/mate-about.h:54
+#: ../mate-about/mate-about.h:56
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE - це Вільне, зручне, доступне робоче середовище для Unix-подібних операційних систем."
 
-#: ../mate-about/mate-about.h:57
+#: ../mate-about/mate-about.h:59
 msgid ""
-"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
-" since it was started in 1997; many more have contributed in other important"
-" ways, including translations, documentation, and quality assurance."
-msgstr "MATE — відгалудження від розробки GNOME 2. Сотні людей вклали код у GNOME з моменту його старту у 1997; а багато інших зробили внесок у інші важливі напрямки, включаючи переклади, документацію та гарантію якості."
+"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"code to GNOME since it was started in 1997; many more have contributed in "
+"other important ways, including translations, documentation, and quality "
+"assurance."
+msgstr "MATE — відгалудження від розробки GNOME 2. Сотні людей вклали код у GNOME з моменту його старту в 1997; а багато інших зробили внесок у інші важливі напрямки, включаючи переклади, документацію та гарантію якості."
 
-#: ../mate-about/mate-about.h:61
+#: ../mate-about/mate-about.h:63
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 був найпопулярнішим робочим середовищем для Linux, але більше він не розробляється... Тепер є MATE для надання вам того самого робочого середовища!"
 
-#: ../mate-about/mate-about.h:64
+#: ../mate-about/mate-about.h:66
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -81,6 +83,165 @@ msgstr "Ім’я «MATE» йде від мате́, виду падубу па�
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Невідомий"
+
+#: ../libmate-desktop/mate-aboutdialog.c:184
+msgid "Could not show link"
+msgstr "Не вдається відкрити посилання"
+
+#: ../libmate-desktop/mate-aboutdialog.c:240
+msgid "Program name"
+msgstr "Назва проґрами"
+
+#: ../libmate-desktop/mate-aboutdialog.c:241
+msgid ""
+"The name of the program. If this is not set, it defaults to "
+"g_get_application_name()"
+msgstr "Назва проґрами. Якщо це пропущено, то стандартно використовуватиметься g_get_application_name()"
+
+#: ../libmate-desktop/mate-aboutdialog.c:255
+msgid "Program version"
+msgstr "Версія проґрами"
+
+#: ../libmate-desktop/mate-aboutdialog.c:256
+msgid "The version of the program"
+msgstr "Версія проґрами"
+
+#: ../libmate-desktop/mate-aboutdialog.c:270
+msgid "Copyright string"
+msgstr "Авторські права"
+
+#: ../libmate-desktop/mate-aboutdialog.c:271
+msgid "Copyright information for the program"
+msgstr "Інформація про авторські права на проґраму"
+
+#: ../libmate-desktop/mate-aboutdialog.c:288
+msgid "Comments string"
+msgstr "Коментарі"
+
+#: ../libmate-desktop/mate-aboutdialog.c:289
+msgid "Comments about the program"
+msgstr "Коментарі про проґраму"
+
+#: ../libmate-desktop/mate-aboutdialog.c:307
+#: ../libmate-desktop/mate-aboutdialog.c:2128
+msgid "License"
+msgstr "Ліцензія"
+
+#: ../libmate-desktop/mate-aboutdialog.c:308
+msgid "The license of the program"
+msgstr "Ліцензія проґрами"
+
+#: ../libmate-desktop/mate-aboutdialog.c:323
+msgid "Website URL"
+msgstr "Адреса веб-сайту"
+
+#: ../libmate-desktop/mate-aboutdialog.c:324
+msgid "The URL for the link to the website of the program"
+msgstr "URL-адреса для посилання на веб-сайт проґрами"
+
+#: ../libmate-desktop/mate-aboutdialog.c:339
+msgid "Website label"
+msgstr "Мітка веб-сайту"
+
+#: ../libmate-desktop/mate-aboutdialog.c:340
+msgid ""
+"The label for the link to the website of the program. If this is not set, it"
+" defaults to the URL"
+msgstr "Мітка для посилання на веб-сайт застосунку. Якщо це не задано,використовуватиметься стандартна URL."
+
+#: ../libmate-desktop/mate-aboutdialog.c:356
+msgid "Authors"
+msgstr "Автори"
+
+#: ../libmate-desktop/mate-aboutdialog.c:357
+msgid "List of authors of the program"
+msgstr "Перелік авторів застосунку"
+
+#: ../libmate-desktop/mate-aboutdialog.c:373
+msgid "Documenters"
+msgstr "Автори документації"
+
+#: ../libmate-desktop/mate-aboutdialog.c:374
+msgid "List of people documenting the program"
+msgstr "Перелік авторів документації до застосунку"
+
+#: ../libmate-desktop/mate-aboutdialog.c:390
+msgid "Artists"
+msgstr "Митці"
+
+#: ../libmate-desktop/mate-aboutdialog.c:391
+msgid "List of people who have contributed artwork to the program"
+msgstr "Перелік людей, які брали участь в оздобленні проґрами"
+
+#: ../libmate-desktop/mate-aboutdialog.c:408
+msgid "Translator credits"
+msgstr "Інформація про перекладачів"
+
+#: ../libmate-desktop/mate-aboutdialog.c:409
+msgid ""
+"Credits to the translators. This string should be marked as translatable"
+msgstr "Інформація про перекладачів. Цей рядок має бути позначеним до перекладу"
+
+#: ../libmate-desktop/mate-aboutdialog.c:424
+msgid "Logo"
+msgstr "Емблема"
+
+#: ../libmate-desktop/mate-aboutdialog.c:425
+msgid ""
+"A logo for the about box. If this is not set, it defaults to "
+"gtk_window_get_default_icon_list()"
+msgstr "Лоґо для опису коробки. Якщо це не задано, стандартно використовуватиметься gtk_window_get_default_icon_list()"
+
+#: ../libmate-desktop/mate-aboutdialog.c:440
+msgid "Logo Icon Name"
+msgstr "Назва значка емблеми"
+
+#: ../libmate-desktop/mate-aboutdialog.c:441
+msgid "A named icon to use as the logo for the about box."
+msgstr "Названий значок, що використовується для показу емблеми опису про коробку."
+
+#: ../libmate-desktop/mate-aboutdialog.c:454
+msgid "Wrap license"
+msgstr "Обкладинка ліцензії"
+
+#: ../libmate-desktop/mate-aboutdialog.c:455
+msgid "Whether to wrap the license text."
+msgstr "Обернений текст ліцензії."
+
+#. Add the credits button
+#: ../libmate-desktop/mate-aboutdialog.c:544
+msgid "C_redits"
+msgstr "Т_ворці"
+
+#. Add the license button
+#: ../libmate-desktop/mate-aboutdialog.c:558
+msgid "_License"
+msgstr "_Ліцензія"
+
+#: ../libmate-desktop/mate-aboutdialog.c:833
+#, c-format
+msgid "About %s"
+msgstr "Про %s"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2052
+msgid "Credits"
+msgstr "Інформація про творців"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2080
+msgid "Written by"
+msgstr "Автори"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2083
+msgid "Documented by"
+msgstr "Автори документації"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2095
+msgid "Translated by"
+msgstr "Перекладачі"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2099
+msgid "Artwork by"
+msgstr "Художники"
 
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -1092,11 +1253,3 @@ msgstr "Мігрувати налаштування MATE 1.4"
 #: ../tools/mate-conf-import.desktop.in.in.h:2
 msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
 msgstr "Утиліта для міграції налаштувань MATE 1.4 у MATE 1.6+"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:1
-msgid "Help"
-msgstr "Довідка"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:2
-msgid "Get help with MATE"
-msgstr "Отримати довідку по MATE"

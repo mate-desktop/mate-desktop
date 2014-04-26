@@ -4,12 +4,13 @@
 # 
 # Translators:
 # andjeng, 2013
+# willysr <willysr@slackware-id.org>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-22 10:56+0100\n"
-"PO-Revision-Date: 2014-02-22 09:58+0000\n"
+"POT-Creation-Date: 2014-04-23 22:55+0200\n"
+"PO-Revision-Date: 2014-04-23 20:56+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/projects/p/MATE/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -28,42 +29,43 @@ msgstr "Lebih jauh tentang MATE"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:113
+#: ../mate-about/mate-about.c:109
 msgid "translator-credits"
 msgstr "Ahmad Riza H Nst  <rizahnst@gnome.org>\nMohammad DAMT <mdamt@bisnisweb.com>\nYohanes Nugroho <yohanes@opensource.or.id>\nDirgita <dirgitadevina@yahoo.co.id>, 2010.\nGregori <lunaticpandora99@yahoo.co.id>, 2013\n\nKontribusi Launchpad:\n  Andika Triwidada https://launchpad.net/~andika\n  Andy Apdhani https://launchpad.net/~imtheface\n  Huda Toriq https://launchpad.net/~hudas-mail\n  Mohammad DAMT https://launchpad.net/~mdamt\n  Nur Kholis Majid https://launchpad.net/~kholis\n  Rahman Yusri Aftian https://launchpad.net/~aftian\n  Wisnu Manupraba https://launchpad.net/~inoex135"
 
-#: ../mate-about/mate-about.h:48
+#: ../mate-about/mate-about.h:50
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE menyediakan desktop yang intuitif dan atraktif kepada pengguna Linux menggunakan interface, aksi dan tampilan  tradisional."
 
-#: ../mate-about/mate-about.h:51
+#: ../mate-about/mate-about.h:53
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "MATE termasuk hampir semua apa yang anda lihat pada komputer, termasuk manajer file, penampil dokumen, penampil citra, menu, dan banyak aplikasi lainnya."
 
-#: ../mate-about/mate-about.h:54
+#: ../mate-about/mate-about.h:56
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE merupakan desktop environment yang Bebas, mudah dipakai, stabil, dan mudah diakses untuk sistem operasi keluarga Unix-like."
 
-#: ../mate-about/mate-about.h:57
+#: ../mate-about/mate-about.h:59
 msgid ""
-"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
-" since it was started in 1997; many more have contributed in other important"
-" ways, including translations, documentation, and quality assurance."
-msgstr "MATE merupakan fork dari GNOME 2. Ratusan orang telah berkontribusi kode ke GNOME sejak dimulai pada tahun 1997, dan juga banyak yang berkontribusi dalam bentuk lain, termasuk translasi, dokumentasi, dan jaminan kualitas."
+"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"code to GNOME since it was started in 1997; many more have contributed in "
+"other important ways, including translations, documentation, and quality "
+"assurance."
+msgstr ""
 
-#: ../mate-about/mate-about.h:61
+#: ../mate-about/mate-about.h:63
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 merupakan desktop Linux yang paling popular, namun sudah tidak lagi tersedia... MATE berusaha menyediakan desktop yang sama kepada anda!"
 
-#: ../mate-about/mate-about.h:64
+#: ../mate-about/mate-about.h:66
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -77,6 +79,165 @@ msgstr "Nama \"MATE\" berasal dari yerba maté, jenis asli dari daerah subtropis
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Tak Dikenal"
+
+#: ../libmate-desktop/mate-aboutdialog.c:184
+msgid "Could not show link"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:240
+msgid "Program name"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:241
+msgid ""
+"The name of the program. If this is not set, it defaults to "
+"g_get_application_name()"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:255
+msgid "Program version"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:256
+msgid "The version of the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:270
+msgid "Copyright string"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:271
+msgid "Copyright information for the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:288
+msgid "Comments string"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:289
+msgid "Comments about the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:307
+#: ../libmate-desktop/mate-aboutdialog.c:2128
+msgid "License"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:308
+msgid "The license of the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:323
+msgid "Website URL"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:324
+msgid "The URL for the link to the website of the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:339
+msgid "Website label"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:340
+msgid ""
+"The label for the link to the website of the program. If this is not set, it"
+" defaults to the URL"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:356
+msgid "Authors"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:357
+msgid "List of authors of the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:373
+msgid "Documenters"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:374
+msgid "List of people documenting the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:390
+msgid "Artists"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:391
+msgid "List of people who have contributed artwork to the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:408
+msgid "Translator credits"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:409
+msgid ""
+"Credits to the translators. This string should be marked as translatable"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:424
+msgid "Logo"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:425
+msgid ""
+"A logo for the about box. If this is not set, it defaults to "
+"gtk_window_get_default_icon_list()"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:440
+msgid "Logo Icon Name"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:441
+msgid "A named icon to use as the logo for the about box."
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:454
+msgid "Wrap license"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:455
+msgid "Whether to wrap the license text."
+msgstr ""
+
+#. Add the credits button
+#: ../libmate-desktop/mate-aboutdialog.c:544
+msgid "C_redits"
+msgstr ""
+
+#. Add the license button
+#: ../libmate-desktop/mate-aboutdialog.c:558
+msgid "_License"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:833
+#, c-format
+msgid "About %s"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2052
+msgid "Credits"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2080
+msgid "Written by"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2083
+msgid "Documented by"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2095
+msgid "Translated by"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2099
+msgid "Artwork by"
+msgstr ""
 
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -459,21 +620,21 @@ msgstr "Gunakan MATE untuk menggambar latar belakang."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:3
 msgid "Show Desktop Icons"
-msgstr ""
+msgstr "Tampilkan Ikon Desktop"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr ""
+msgstr "Bagaimana MATE file manager (Caja) menggambar ikon desktop."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:5
 msgid "Fade the background on change"
-msgstr ""
+msgstr "Memudarkan latar belakang pada saat perubahan"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:6
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
-msgstr ""
+msgstr "Jika diset true, maka MATE akan mengganti latar belakang desktop dengan efek pudar."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:7
 msgid "Picture Options"
@@ -823,7 +984,7 @@ msgstr "Matikan penguncian layar"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:12
 msgid "Prevent the user from locking the screen."
-msgstr ""
+msgstr "Mencegah pemakai mengunci layar."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:13
 msgid "Disable URL and MIME type handlers"
@@ -835,11 +996,11 @@ msgstr "Mencegah berjalannya aplikasi penangan sebarang URL atau tipe MIME."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
 msgid "Disable theme settings"
-msgstr ""
+msgstr "Nonaktifkan setting tema"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
 msgid "Prevent the user from changing theme settings."
-msgstr ""
+msgstr "Mencegah pemakai untuk mengganti setting tema."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
@@ -921,13 +1082,13 @@ msgstr "Lamanya klik ganda."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
 msgid "Middle button emulation"
-msgstr ""
+msgstr "Emulasi tombol tengah"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
 msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
-msgstr ""
+msgstr "Mengaktifkan tombol mouse tengah melalui simulasi klik tombol kiri dan kanan."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
 msgid "Locate Pointer"
@@ -1083,16 +1244,8 @@ msgstr "Apakah penguncian keyboard dilakukan."
 
 #: ../tools/mate-conf-import.desktop.in.in.h:1
 msgid "Migrate MATE 1.4 settings"
-msgstr ""
+msgstr "Migrasi setting MATE 1.4"
 
 #: ../tools/mate-conf-import.desktop.in.in.h:2
 msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr ""
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:1
-msgid "Help"
-msgstr ""
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:2
-msgid "Get help with MATE"
-msgstr ""
+msgstr "Perangkat untuk migrasi setting MATE 1.4 ke MATE 1.6"

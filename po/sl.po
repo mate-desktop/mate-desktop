@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-22 10:56+0100\n"
-"PO-Revision-Date: 2014-02-24 13:39+0000\n"
+"POT-Creation-Date: 2014-04-23 22:55+0200\n"
+"PO-Revision-Date: 2014-04-25 13:29+0000\n"
 "Last-Translator: jierro <jierro@windowslive.com>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/MATE/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -30,42 +30,43 @@ msgstr "Več podrobnosti o MATE"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:113
+#: ../mate-about/mate-about.c:109
 msgid "translator-credits"
 msgstr "Matic Žgur <mr.zgur@gmail.com>\nAndraž Tori <andraz.tori1@guest.arnes.si>\nMatej Urbančič <mateju@svn.mate.org>\nDamir Jerovšek <damir.jerovsek@ubuntu.com> "
 
-#: ../mate-about/mate-about.h:48
+#: ../mate-about/mate-about.h:50
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE omogoča intuitivno in privlačno namizje za uporabnike operacijskega sistema Linux, ki uporabljajo tradicionalne metafore."
 
-#: ../mate-about/mate-about.h:51
+#: ../mate-about/mate-about.h:53
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "MATE vključuje večino tega, kar vidite na vašem računalniku, vključno z upravljalnikom datotek, pregledovalnikom dokumentov, pregledovalnikom slik, meniji ter številnimi aplikacijami."
 
-#: ../mate-about/mate-about.h:54
+#: ../mate-about/mate-about.h:56
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE je prosto, uporabno, stabilno, dostopno namizno okolje za Unixu podobno družino operacijskih sistemov"
 
-#: ../mate-about/mate-about.h:57
+#: ../mate-about/mate-about.h:59
 msgid ""
-"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
-" since it was started in 1997; many more have contributed in other important"
-" ways, including translations, documentation, and quality assurance."
-msgstr "MATE je vejitev od GNOME 2. Stotine ljudi je prispevalo kodo za GNOME, odkar je bil ustanovljen leta 1997; še veliko več jih je prispevalo na druge pomembne načine, vključivši prevode, dokumentacijo in zagotavljanje kakovosti."
+"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"code to GNOME since it was started in 1997; many more have contributed in "
+"other important ways, including translations, documentation, and quality "
+"assurance."
+msgstr "MATE je nadaljevanje projekta GNOME 2. Stotine ljudi je prispevalo kodo za GNOME, odkar je bil ustanovljen leta 1997; še veliko več jih je prispevalo na druge pomembne načine, vključivši prevode, dokumentacijo in zagotavljanje kakovosti."
 
-#: ../mate-about/mate-about.h:61
+#: ../mate-about/mate-about.h:63
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 je bilo najbolj priljubljeno Linux okolje, vendar ga ni več na voljo ... MATE je tukaj, da vam zagotovi to enako okolje!"
 
-#: ../mate-about/mate-about.h:64
+#: ../mate-about/mate-about.h:66
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -79,6 +80,165 @@ msgstr "Ime \"MATE\" izhaja iz yerba maté, avtohtone vrste Južne Amerike. Njeg
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Neznano"
+
+#: ../libmate-desktop/mate-aboutdialog.c:184
+msgid "Could not show link"
+msgstr "Povezave ni mogoče prikazati"
+
+#: ../libmate-desktop/mate-aboutdialog.c:240
+msgid "Program name"
+msgstr "Ime programa"
+
+#: ../libmate-desktop/mate-aboutdialog.c:241
+msgid ""
+"The name of the program. If this is not set, it defaults to "
+"g_get_application_name()"
+msgstr "Ime programa. Če ime ni nastavljeno, bo privzeto g_get_application_name()"
+
+#: ../libmate-desktop/mate-aboutdialog.c:255
+msgid "Program version"
+msgstr "Različica programa"
+
+#: ../libmate-desktop/mate-aboutdialog.c:256
+msgid "The version of the program"
+msgstr "Različica programa"
+
+#: ../libmate-desktop/mate-aboutdialog.c:270
+msgid "Copyright string"
+msgstr "Niz z avtorskimi pravicami"
+
+#: ../libmate-desktop/mate-aboutdialog.c:271
+msgid "Copyright information for the program"
+msgstr "Podrobnosti avtorskih pravic za ta program"
+
+#: ../libmate-desktop/mate-aboutdialog.c:288
+msgid "Comments string"
+msgstr "Niz z opombami"
+
+#: ../libmate-desktop/mate-aboutdialog.c:289
+msgid "Comments about the program"
+msgstr "Opombe o programu"
+
+#: ../libmate-desktop/mate-aboutdialog.c:307
+#: ../libmate-desktop/mate-aboutdialog.c:2128
+msgid "License"
+msgstr "Dovoljenje"
+
+#: ../libmate-desktop/mate-aboutdialog.c:308
+msgid "The license of the program"
+msgstr "Dovoljenje programa"
+
+#: ../libmate-desktop/mate-aboutdialog.c:323
+msgid "Website URL"
+msgstr "URL spletne strani"
+
+#: ../libmate-desktop/mate-aboutdialog.c:324
+msgid "The URL for the link to the website of the program"
+msgstr "URL za povezavo s spletno stranjo programa"
+
+#: ../libmate-desktop/mate-aboutdialog.c:339
+msgid "Website label"
+msgstr "Oznaka spletne strani"
+
+#: ../libmate-desktop/mate-aboutdialog.c:340
+msgid ""
+"The label for the link to the website of the program. If this is not set, it"
+" defaults to the URL"
+msgstr "Oznaka povezave do spletne strani programa. Če to ni nastavljeno, bo privzeto nastavljen URL"
+
+#: ../libmate-desktop/mate-aboutdialog.c:356
+msgid "Authors"
+msgstr "Avtorji"
+
+#: ../libmate-desktop/mate-aboutdialog.c:357
+msgid "List of authors of the program"
+msgstr "Seznam avtorjev programa"
+
+#: ../libmate-desktop/mate-aboutdialog.c:373
+msgid "Documenters"
+msgstr "Pisci dokumentacije"
+
+#: ../libmate-desktop/mate-aboutdialog.c:374
+msgid "List of people documenting the program"
+msgstr "Seznam piscev dokumentacije programa"
+
+#: ../libmate-desktop/mate-aboutdialog.c:390
+msgid "Artists"
+msgstr "Oblikovalci"
+
+#: ../libmate-desktop/mate-aboutdialog.c:391
+msgid "List of people who have contributed artwork to the program"
+msgstr "Seznam ljudi, ki so prispevali grafično podobo programa"
+
+#: ../libmate-desktop/mate-aboutdialog.c:408
+msgid "Translator credits"
+msgstr "Zasluge prevajalcem"
+
+#: ../libmate-desktop/mate-aboutdialog.c:409
+msgid ""
+"Credits to the translators. This string should be marked as translatable"
+msgstr "Zasluge prevajalcem. Ta niz naj bo označen za prevod"
+
+#: ../libmate-desktop/mate-aboutdialog.c:424
+msgid "Logo"
+msgstr "Logotip"
+
+#: ../libmate-desktop/mate-aboutdialog.c:425
+msgid ""
+"A logo for the about box. If this is not set, it defaults to "
+"gtk_window_get_default_icon_list()"
+msgstr "Logotip za okno O programu. Če to ni nastavljeno, bo privzeto na gtk_window_get_default_icon_list()"
+
+#: ../libmate-desktop/mate-aboutdialog.c:440
+msgid "Logo Icon Name"
+msgstr "Ime ikone logotipa"
+
+#: ../libmate-desktop/mate-aboutdialog.c:441
+msgid "A named icon to use as the logo for the about box."
+msgstr "Imenovana ikona za uporabo kot logotip za okno O programu."
+
+#: ../libmate-desktop/mate-aboutdialog.c:454
+msgid "Wrap license"
+msgstr "Prelomi besedilo dovoljenja"
+
+#: ../libmate-desktop/mate-aboutdialog.c:455
+msgid "Whether to wrap the license text."
+msgstr "Ali se naj prelomi besedilo dovoljenja."
+
+#. Add the credits button
+#: ../libmate-desktop/mate-aboutdialog.c:544
+msgid "C_redits"
+msgstr "_Zasluge"
+
+#. Add the license button
+#: ../libmate-desktop/mate-aboutdialog.c:558
+msgid "_License"
+msgstr "_Dovoljenje"
+
+#: ../libmate-desktop/mate-aboutdialog.c:833
+#, c-format
+msgid "About %s"
+msgstr "O %s"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2052
+msgid "Credits"
+msgstr "Zasluge"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2080
+msgid "Written by"
+msgstr "Napisali"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2083
+msgid "Documented by"
+msgstr "Dokumentirali"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2095
+msgid "Translated by"
+msgstr "Prevedli"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2099
+msgid "Artwork by"
+msgstr "Grafična podoba"
 
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -1090,11 +1250,3 @@ msgstr "Preseli nastavitve MATE 1.4"
 #: ../tools/mate-conf-import.desktop.in.in.h:2
 msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
 msgstr "Orodje za preselitev nastavitev MATE 1.4 v MATE 1.6"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:1
-msgid "Help"
-msgstr "Pomoč"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:2
-msgid "Get help with MATE"
-msgstr "Pridobi pomoč z MATE"

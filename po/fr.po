@@ -6,14 +6,14 @@
 # ericbsd <ericturgeon@ghostbsd.org>, 2014
 # mauron, 2013-2014
 # mauron, 2012
-# Tubuntu, 2014
+# Tubuntu <tubuntu@testimonium.be>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-22 10:56+0100\n"
-"PO-Revision-Date: 2014-02-22 21:07+0000\n"
-"Last-Translator: ericbsd <ericturgeon@ghostbsd.org>\n"
+"POT-Creation-Date: 2014-04-23 22:55+0200\n"
+"PO-Revision-Date: 2014-04-23 22:41+0000\n"
+"Last-Translator: Tubuntu <tubuntu@testimonium.be>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/MATE/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,42 +31,43 @@ msgstr "En savoir plus sur MATE"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:113
+#: ../mate-about/mate-about.c:109
 msgid "translator-credits"
 msgstr "Contributeurs au projet GNOME :\nVincent Renardias <vincent@ldsol.com>, 1998-2000.\nJoaquim Fellmann <joaquim@hrnet.fr>, 2000.\nChristophe Merlet <redfox@redfoxcenter.org>, 2000-2006.\nChristophe Fergeau <teuf@users.sourceforge.net>, 2002-2003.\nSun G11n <gnome_int_l10n@ireland.sun.com>, 2002.\nRobert-André Mauchin <zebob.m@pengzone.org>, 2006-2008.\nStéphane Raimbault <stephane.raimbault@gmail.com>, 2007.\nYannick Tailliez <ytdispatch-libre@yahoo.com>, 2008.\nClaude Paroz <claude@2xlibre.net>, 2008-2010.\nGérard Baylard <gerard dot b at bbox dot fr>, 2010 \nContribution anonyme au projet MATE"
 
-#: ../mate-about/mate-about.h:48
+#: ../mate-about/mate-about.h:50
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE offre un bureau intuitif et attractif aux utilisateurs de GNU/Linux qui préfèrent les métaphores traditionnelles."
 
-#: ../mate-about/mate-about.h:51
+#: ../mate-about/mate-about.h:53
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "MATE comprend la plupart des éléments qui vous voyez sur votre ordinateur, incluant le gestionnaire de fichiers, les visionneurs de documents et d'images, les menus ainsi que de nombreuses applications."
 
-#: ../mate-about/mate-about.h:54
+#: ../mate-about/mate-about.h:56
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE est un environnement de bureau libre, stable et cohérent pour les systèmes d'exploitation de la famille Unix."
 
-#: ../mate-about/mate-about.h:57
+#: ../mate-about/mate-about.h:59
 msgid ""
-"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
-" since it was started in 1997; many more have contributed in other important"
-" ways, including translations, documentation, and quality assurance."
-msgstr "MATE est dérivé de GNOME 2. Des centaines de personnes ont contribué au code à GNOME depuis ses débuts en 1997 ; bien plus ont contribué d'autres façons importantes, y compris par des traductions, de la documentation et l'assurance qualité."
+"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"code to GNOME since it was started in 1997; many more have contributed in "
+"other important ways, including translations, documentation, and quality "
+"assurance."
+msgstr "MATE est la continuation de GNOME 2. Des centaines de personnes ont contribué au code de GNOME depuis son début en 1997; et bien plus ont contribué de façon tout aussi importante aux traductions, à la documentation et à l'assurance qualité."
 
-#: ../mate-about/mate-about.h:61
+#: ../mate-about/mate-about.h:63
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 était le bureau GNU/Linux le plus populaire mais n'est plus disponible... MATE est là pour vous offrir le même bureau !"
 
-#: ../mate-about/mate-about.h:64
+#: ../mate-about/mate-about.h:66
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -80,6 +81,165 @@ msgstr "Le nom « MATE » vient de yerba maté, espèce sud-américaine subt
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Inconnu"
+
+#: ../libmate-desktop/mate-aboutdialog.c:184
+msgid "Could not show link"
+msgstr "Impossible d'afficher le lien"
+
+#: ../libmate-desktop/mate-aboutdialog.c:240
+msgid "Program name"
+msgstr "Nom du programme"
+
+#: ../libmate-desktop/mate-aboutdialog.c:241
+msgid ""
+"The name of the program. If this is not set, it defaults to "
+"g_get_application_name()"
+msgstr "Le nom du programme. Si laissé vide, il sera défini par défaut par g_get_application_name()."
+
+#: ../libmate-desktop/mate-aboutdialog.c:255
+msgid "Program version"
+msgstr "Version du programme"
+
+#: ../libmate-desktop/mate-aboutdialog.c:256
+msgid "The version of the program"
+msgstr "La version du programme"
+
+#: ../libmate-desktop/mate-aboutdialog.c:270
+msgid "Copyright string"
+msgstr "Chaîne du droit d'auteur"
+
+#: ../libmate-desktop/mate-aboutdialog.c:271
+msgid "Copyright information for the program"
+msgstr "Information du droit d'auteur du programme."
+
+#: ../libmate-desktop/mate-aboutdialog.c:288
+msgid "Comments string"
+msgstr "Chaîne des commentaires"
+
+#: ../libmate-desktop/mate-aboutdialog.c:289
+msgid "Comments about the program"
+msgstr "Commentaires au sujet du programme."
+
+#: ../libmate-desktop/mate-aboutdialog.c:307
+#: ../libmate-desktop/mate-aboutdialog.c:2128
+msgid "License"
+msgstr "Licence"
+
+#: ../libmate-desktop/mate-aboutdialog.c:308
+msgid "The license of the program"
+msgstr "La licence du programme."
+
+#: ../libmate-desktop/mate-aboutdialog.c:323
+msgid "Website URL"
+msgstr "URL du site internet"
+
+#: ../libmate-desktop/mate-aboutdialog.c:324
+msgid "The URL for the link to the website of the program"
+msgstr "L'URL du lien vers le site internet du programme."
+
+#: ../libmate-desktop/mate-aboutdialog.c:339
+msgid "Website label"
+msgstr "Libellé du site internet"
+
+#: ../libmate-desktop/mate-aboutdialog.c:340
+msgid ""
+"The label for the link to the website of the program. If this is not set, it"
+" defaults to the URL"
+msgstr "Le libellé du lien vers le site internet du programme. Si laissé vide, l'URL sera définie par défaut."
+
+#: ../libmate-desktop/mate-aboutdialog.c:356
+msgid "Authors"
+msgstr "Auteurs"
+
+#: ../libmate-desktop/mate-aboutdialog.c:357
+msgid "List of authors of the program"
+msgstr "Listes des auteurs du programme."
+
+#: ../libmate-desktop/mate-aboutdialog.c:373
+msgid "Documenters"
+msgstr "Documentalistes"
+
+#: ../libmate-desktop/mate-aboutdialog.c:374
+msgid "List of people documenting the program"
+msgstr "Liste des personnes documentant le programme."
+
+#: ../libmate-desktop/mate-aboutdialog.c:390
+msgid "Artists"
+msgstr "Artistes"
+
+#: ../libmate-desktop/mate-aboutdialog.c:391
+msgid "List of people who have contributed artwork to the program"
+msgstr "Liste des personnes ayant contribué à la création graphique du programme."
+
+#: ../libmate-desktop/mate-aboutdialog.c:408
+msgid "Translator credits"
+msgstr "Remerciements aux traducteurs"
+
+#: ../libmate-desktop/mate-aboutdialog.c:409
+msgid ""
+"Credits to the translators. This string should be marked as translatable"
+msgstr "Remerciements aux traducteurs. Cette chaîne doit être marquée comme traduisible."
+
+#: ../libmate-desktop/mate-aboutdialog.c:424
+msgid "Logo"
+msgstr "Logo"
+
+#: ../libmate-desktop/mate-aboutdialog.c:425
+msgid ""
+"A logo for the about box. If this is not set, it defaults to "
+"gtk_window_get_default_icon_list()"
+msgstr "Un logo pour la boîte de dialogue A propos. Si laissé vide, il sera défini par défaut par gtk_window_get_default_icon_list()."
+
+#: ../libmate-desktop/mate-aboutdialog.c:440
+msgid "Logo Icon Name"
+msgstr "Nom de l'icône du logo"
+
+#: ../libmate-desktop/mate-aboutdialog.c:441
+msgid "A named icon to use as the logo for the about box."
+msgstr "Un icône nommée à utiliser comme logo dans la boîte de dialogue A propos."
+
+#: ../libmate-desktop/mate-aboutdialog.c:454
+msgid "Wrap license"
+msgstr "Entourer la licence"
+
+#: ../libmate-desktop/mate-aboutdialog.c:455
+msgid "Whether to wrap the license text."
+msgstr "Entourer le texte de la licence."
+
+#. Add the credits button
+#: ../libmate-desktop/mate-aboutdialog.c:544
+msgid "C_redits"
+msgstr "_Remerciements"
+
+#. Add the license button
+#: ../libmate-desktop/mate-aboutdialog.c:558
+msgid "_License"
+msgstr "_Licence"
+
+#: ../libmate-desktop/mate-aboutdialog.c:833
+#, c-format
+msgid "About %s"
+msgstr "À propos de %s"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2052
+msgid "Credits"
+msgstr "Remerciements"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2080
+msgid "Written by"
+msgstr "Écrit par"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2083
+msgid "Documented by"
+msgstr "Documenté par"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2095
+msgid "Translated by"
+msgstr "Traduit par"
+
+#: ../libmate-desktop/mate-aboutdialog.c:2099
+msgid "Artwork by"
+msgstr "Création graphique par"
 
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -1091,11 +1251,3 @@ msgstr "Faire migrer les paramètres de MATE 1.4"
 #: ../tools/mate-conf-import.desktop.in.in.h:2
 msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
 msgstr "Outil pour faire migrer les paramètres de MATE 1.4 vers MATE 1.6"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:1
-msgid "Help"
-msgstr "Aide"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:2
-msgid "Get help with MATE"
-msgstr "Obtenir de l'aide sur MATE"
