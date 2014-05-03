@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-23 22:55+0200\n"
-"PO-Revision-Date: 2014-04-25 15:50+0000\n"
+"PO-Revision-Date: 2014-04-27 20:48+0000\n"
 "Last-Translator: to_ba\n"
 "Language-Team: German (http://www.transifex.com/projects/p/MATE/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "Mehr über MATE erfahren"
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:109
 msgid "translator-credits"
-msgstr "Übersetzer-Impressum"
+msgstr "Übersetzer"
 
 #: ../mate-about/mate-about.h:50
 msgid ""
@@ -61,7 +61,7 @@ msgid ""
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
-msgstr ""
+msgstr "MATE ist die Fortsetzung von GNOME 2. Hunderte von Menschen haben zum GNOME-Code beigetragen, der im Jahr 1997 gestartet wurde, viele mehr haben auch in anderen wichtigen Punkten, wie den Übersetzungen, der Dokumentation und der Qualitätssicherung beigetragen."
 
 #: ../mate-about/mate-about.h:63
 msgid ""
@@ -96,7 +96,7 @@ msgstr "Programmname"
 msgid ""
 "The name of the program. If this is not set, it defaults to "
 "g_get_application_name()"
-msgstr ""
+msgstr "Der Name des Programms. Wenn es nicht eingestellt ist, dann ist dieses g_get_application_name()."
 
 #: ../libmate-desktop/mate-aboutdialog.c:255
 msgid "Program version"
@@ -137,7 +137,7 @@ msgstr "Adresse der Internetseite"
 
 #: ../libmate-desktop/mate-aboutdialog.c:324
 msgid "The URL for the link to the website of the program"
-msgstr ""
+msgstr "Die Adresse des Verweises zur Internetseite des Programms"
 
 #: ../libmate-desktop/mate-aboutdialog.c:339
 msgid "Website label"
@@ -147,7 +147,7 @@ msgstr "Bezeichnung der Internetseiten"
 msgid ""
 "The label for the link to the website of the program. If this is not set, it"
 " defaults to the URL"
-msgstr ""
+msgstr "Die Kennung des Verweises für die Internetseite von dem Programm. Wenn es nicht eingestellt ist, dann ist dieses die Internetadresse."
 
 #: ../libmate-desktop/mate-aboutdialog.c:356
 msgid "Authors"
@@ -159,11 +159,11 @@ msgstr "Liste der Programmautoren"
 
 #: ../libmate-desktop/mate-aboutdialog.c:373
 msgid "Documenters"
-msgstr ""
+msgstr "Dokumentatoren"
 
 #: ../libmate-desktop/mate-aboutdialog.c:374
 msgid "List of people documenting the program"
-msgstr ""
+msgstr "Liste der Dokumentatoren des Programms"
 
 #: ../libmate-desktop/mate-aboutdialog.c:390
 msgid "Artists"
@@ -628,7 +628,7 @@ msgstr "Schreibtischsymbole anzeigen"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "MATEs Dateiverwaltung (Caja), um die Schreibtischsymbole darzustellen. "
+msgstr "MATEs-Dateiverwaltung (Caja) benutzen, um die Schreibtischsymbole darzustellen. "
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:5
 msgid "Fade the background on change"
@@ -901,11 +901,11 @@ msgstr "Modul für die GTK-Dateiauswahl"
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
-msgstr "Module als Dateisystem Modell für die GtkFileChooser Widget verwenden. Mögliche Werte sind \"gio\" und \"gtk +\"."
+msgstr "Modul, welches als Dateisystemmodell für GtkFileChooser-Widget verwendet werden soll. Mögliche Werte sind »gio« und »gtk +«."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:49
 msgid "Menubar accelerator"
-msgstr "Menüleisten Beschleuniger"
+msgstr "Menüleistentastenkombination"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:50
 msgid "Keyboard shortcut to open the menu bars."
@@ -919,7 +919,7 @@ msgstr "Das Eingabemethodenmenü anzeigen"
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
-msgstr "Legt fest, ob die Kontextmenüs der Eingabefelder und Text-bereiche die\nMöglichkeit bieten sollen, die Eingabemethode zu ändern."
+msgstr "Legt fest, ob die Kontextmenüs der Eingabefelder und Textbereiche die Möglichkeit bieten sollen, die Eingabemethode zu ändern."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:53
 msgid "Show the 'Unicode Control Character' menu"
@@ -929,7 +929,7 @@ msgstr "Das »Unicode-Steuerzeichen einfügen«-Menü anzeigen"
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
-msgstr "Legt fest, ob die Kontextmenüs der Eingabefelder und Textbereiche die\nMöglichkeit bieten sollen, Steuerzeichen einzugeben."
+msgstr "Legt fest, ob die Kontextmenüs der Eingabefelder und Textbereiche die Möglichkeit bieten sollen, Steuerzeichen einzugeben."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
 msgid "Disable command line"
@@ -940,17 +940,17 @@ msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr "Den Benutzer daran hindern, auf das Terminal zuzugreifen oder eine\nauszuführende Befehlszeile anzugeben. Dies verhindert beispielsweise den Zugriff auf den Leistendialog »Anwendung ausführen«."
+msgstr "Den Benutzer daran hindern, auf das Terminal zuzugreifen oder eine auszuführende Befehlszeile anzugeben. Dies verhindert beispielsweise den Zugriff auf den Leistendialog »Anwendung ausführen«."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:3
 msgid "Disable saving files to disk"
-msgstr "Speichern von Dateien auf die Festplatte Deaktivieren."
+msgstr "Speichern von Dateien auf die Festplatte deaktivieren."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:4
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr "Benutzer am Speichern von Dateien auf die Festplatte hindern. Dies verhindert beispielsweise den Zugriff auf den \"Speichern unter\"-Dialog aller Anwendungen."
+msgstr "Benutzer am Speichern von Dateien auf die Festplatte hindern. Dies verhindert beispielsweise den Zugriff auf den »Speichern unter«-Dialog aller Anwendungen."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:5
 msgid "Disable printing"
@@ -960,7 +960,7 @@ msgstr "Drucken deaktivieren"
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr "Benutzer am Drucken hindern. Dies verhindert beispielsweise den Zugriff\nauf den \"Druck\"-dialog aller Anwendungen."
+msgstr "Benutzer am Drucken hindern. Dies verhindert beispielsweise den Zugriff auf den »Druck«-Dialog aller Anwendungen."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:7
 msgid "Disable print setup"
@@ -970,7 +970,7 @@ msgstr "Druckereinstellungen deaktivieren"
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr "Den Benutzer daran hindern, die Druckeinstellungen zu verändern. Dies verhindert beispielsweise den Zugriff auf den \"Druckeinstellungs\"-dialog aller Anwendungen."
+msgstr "Den Benutzer daran hindern, die Druckeinstellungen zu verändern. Dies verhindert beispielsweise den Zugriff auf die »Druckeinstellungen« aller Anwendungen."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:9
 msgid "Disable user switching"
@@ -988,15 +988,15 @@ msgstr "Bildschirmsperre deaktivieren"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:12
 msgid "Prevent the user from locking the screen."
-msgstr "Verhindern, dass der Benutzer den Bildschirm zu sperren kann."
+msgstr "Verhindern, dass der Benutzer den Bildschirm sperren kann."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:13
 msgid "Disable URL and MIME type handlers"
-msgstr "Verarbeitung von URL- und MIME-Typen verhinden"
+msgstr "Verarbeitung von Adress(URL)- und MIME-Typen verhindern"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr "Verhindert, dass Anwendungen zum Verarbeiten von URL- oder MIME-Typen gestartet werden."
+msgstr "Verhindert, dass Anwendungen zum Verarbeiten von Adress(URL)- oder MIME-Typen gestartet werden."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
 msgid "Disable theme settings"
@@ -1020,33 +1020,33 @@ msgstr "Dateiname des wiederzugebenden Glockenklangs."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:4
 msgid "Remember NumLock state"
-msgstr "NumLock Status speichern"
+msgstr "Status der Num-Taste merken"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:5
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr "Falls auf \"wahr\" gesetzt, speichert Mate den Status der NumLock-LED zwischen zwei Sitzungen."
+msgstr "Falls auf »wahr« gesetzt, speichert Mate den Status der Num-Tasten-LED zwischen zwei Sitzungen."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:6
 msgid "NumLock state"
-msgstr "NumLock Zustand"
+msgstr "Zustand der Num-Taste"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:7
 msgid "The remembered state of the NumLock LED."
-msgstr "Den Zustand der NumLock LED erhalten."
+msgstr "Der gemerkte Zustand der Num-Tasten-LED."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:1
 msgid "Mouse button orientation"
-msgstr "Maustasten Orientierung"
+msgstr "Orientierung der Maustasten"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "Tauschen der linken und rechten Maustaste für Linkshänder Mäuse."
+msgstr "Die linke und rechte Maustaste für Linkshändermäuse tauschen."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:3
 msgid "Single Click"
-msgstr "einfacher Mausklick"
+msgstr "Einfacher Mausklick"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:4
 msgid "Single click to open icons."
@@ -1056,7 +1056,7 @@ msgstr "Einfacher Mausklick zum öffnen der Symbole."
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
-msgstr "Beschleunigungs Multiplikator für Mausbewegung. Ein Wert von -1 hat das System standardmäßig."
+msgstr "Beschleunigungsmultiplikator für Mausbewegung. Ein Wert von -1 ist die Systemvorgabe."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:6
 msgid "Motion Threshold"
@@ -1066,7 +1066,7 @@ msgstr "Bewegungsgrenzwert"
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
-msgstr "Distanz in Pixel, die der Mauszeiger bewegt werden muss, bevor eine\nbeschleunigte Mausbewegung aktiviert wird. Wert -1 ist die Systemvorgabe."
+msgstr "Distanz in Pixel, die der Mauszeiger bewegt werden muss, bevor eine beschleunigte Mausbewegung aktiviert wird. Wert -1 ist die Systemvorgabe."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:8
 msgid "Drag Threshold"
@@ -1078,7 +1078,7 @@ msgstr "Distanz bevor das Ziehen einsetzt."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:10
 msgid "Double Click Time"
-msgstr "Doppelklick Zeit"
+msgstr "Doppelklickzeit"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:11
 msgid "Length of a double click."
@@ -1092,7 +1092,7 @@ msgstr "Emulation der mittleren Taste"
 msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
-msgstr "Erlaubt die Emulation des mittleren Mausknopfes durch gleichzeitiges Klicken des linken und rechten Knopfes."
+msgstr "Erlaubt die Emulation der mittleren Maustaste durch gleichzeitiges Klicken der linken und rechten Taste."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
 msgid "Locate Pointer"
@@ -1102,7 +1102,7 @@ msgstr "Zeiger suchen"
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr "Betont der aktuellen Position des Mauszeigers, wenn die Strg-Taste gedrückt und wieder losgelassen wird."
+msgstr "Hebt die aktuellen Position des Mauszeigers hervor, wenn die Strg-Taste gedrückt und wieder losgelassen wird."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
 msgid "Cursor font"
@@ -1135,19 +1135,19 @@ msgstr "Größe des Mauszeigers, durch das Mauszeigerthema zugewiesen."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:1
 msgid "Default mixer device"
-msgstr "Mixer Standard Einstellungen"
+msgstr "Vorgabemischgerät"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr "Standard Mixer, welcher beim Verwenden der Multimedia-Tasten genutzt wird."
+msgstr "Vorgabemischgerät, welches beim Verwenden der Multimedia-Tasten genutzt wird."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:3
 msgid "Default mixer tracks"
-msgstr "Standard Mixer-Kanäle"
+msgstr "Vorgegebene Mischkanäle"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr "Standard Mixer-Kanäle, welche beim Verwenden der Multimedia-Tasten genutzt werden."
+msgstr "Vorgegebene Mischkanäle, welche beim Verwenden der Multimedia-Tasten genutzt werden."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:5
 msgid "Enable ESD"
@@ -1155,7 +1155,7 @@ msgstr "ESD aktivieren"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:6
 msgid "Enable sound server startup."
-msgstr "Aktivieren des Sound-Servers beim Mate-Start."
+msgstr "Den Klangservers beim Mate-Start aktivieren."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:7
 msgid "Sounds for events"
@@ -1163,50 +1163,50 @@ msgstr "Klänge für Ereignisse"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:8
 msgid "Whether to play sounds on user events."
-msgstr "Sollen bei Benutzer-Ereignissen Klänge abgespielt werden?"
+msgstr "Ob bei Benutzerereignissen Klänge abgespielt werden."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:9
 msgid "Sound theme name"
-msgstr "Klang Themanamen"
+msgstr "Klangthemenname"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:10
 msgid "The XDG sound theme to use for event sounds."
-msgstr "Das XDG Klang Thema für Ereignis-Sounds verwenden."
+msgstr "Das XDG-Klangthema für Ereignisklänge verwenden."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:11
 msgid "Input feedback sounds"
-msgstr "Klänge bei Eingaben"
+msgstr "Eingangsrückmeldeklänge"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:12
 msgid "Whether to play sounds on input events."
-msgstr "Legt fest ob bei Eingabe-Ereignissen Klänge abgespielt werden."
+msgstr "Ob bei Eingangsereignissen Klänge abgespielt werden sollen."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
-msgstr "Maximales Alter für Miniaturbilder im Zwischenspeicher in Tagen. Auf -1 festlegen, um die Reinigung zu deaktivieren."
+msgstr "Maximales Alter für Miniaturbilder im Zwischenspeicher, in Tagen. Auf -1 festlegen, um die Reinigung zu deaktivieren."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr "Maximalgröße des Miniaturansichtsspeicher in Megabyte an. Auf -1 festlegen, um die Reinigung zu deaktivieren."
+msgstr "Maximalgröße des Miniaturansichtsspeicher, in Megabyte an. Auf -1 festlegen, um die Reinigung zu deaktivieren."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:1
 msgid "Disable all external thumbnailers"
-msgstr "Deaktivieren Sie alle externen Miniaturansichtsspeicher"
+msgstr "Alle externen Miniaturansichtsspeicher deaktivieren"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:2
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
-msgstr "Sollen externe Programme zum Erzeugen von Miniatur-Vorschaubildern deaktiviert werden, auch wenn sie anderweitig aktiviert sind?"
+msgstr "Sollen externe Programme zum Erzeugen von Miniaturvorschaubildern deaktiviert werden, auch wenn sie anderweitig aktiviert sind?"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:3
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
-msgstr "Liste der MIME-Typen, für die externe Vorschaubilder-Programme deaktiviert werden"
+msgstr "Liste der MIME-Typen, für die externe Vorschaubildprogramme deaktiviert werden"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:4
 msgid ""
@@ -1216,11 +1216,11 @@ msgstr "Vorschaubilder werden nicht für Dateien erstellt, deren MIME-Typ in der
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:1
 msgid "Type time"
-msgstr "Zeit Typ"
+msgstr "Zeittyp"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr "Anzahl der Minuten eingeben, bevor Pause-Modus startet."
+msgstr "Anzahl der Minuten eingeben, bevor Pausemodus startet."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:3
 msgid "Break time"
@@ -1240,11 +1240,11 @@ msgstr "Legt fest ob der Benutzer die Eingabepause verschieben kann."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:7
 msgid "Whether or not keyboard locking is enabled"
-msgstr "Legt fest, ob die Tastatur Sperre Aktiviert werden soll."
+msgstr "Legt fest, ob die Tastatursperre aktiviert werden soll."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
 msgid "Whether or not keyboard locking is enabled."
-msgstr "Legt fest, ob die Tastatur Sperre Aktiviert werden soll."
+msgstr "Legt fest, ob die Tastatursperre aktiviert werden soll."
 
 #: ../tools/mate-conf-import.desktop.in.in.h:1
 msgid "Migrate MATE 1.4 settings"
