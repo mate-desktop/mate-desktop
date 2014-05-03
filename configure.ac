@@ -142,7 +142,7 @@ case "$with_gtk" in
 esac
 
 GDK_PIXBUF_REQUIRED=2.4.0
-GLIB_REQUIRED=2.19.1
+GLIB_REQUIRED=2.26.0
 GIO_REQUIRED=2.26.0
 XRANDR_REQUIRED=1.2
 
@@ -261,34 +261,6 @@ AC_SUBST(GETTEXT_PACKAGE)
 
 AM_GLIB_GNU_GETTEXT
 
-dnl ============================================================================
-dnl | se comprueba unique
-dnl | de lo contrario, se intenta utilizar libunique
-dnl ============================================================================
-case "$with_gtk" in
-	2.0) LIBUNIQUE_VERSION=1.0
-		;;
-	3.0) LIBUNIQUE_VERSION=3.0
-		;;
-esac
-
-PKG_CHECK_MODULES(UNIQUE, unique-$LIBUNIQUE_VERSION, enable_libunique=yes, enable_libunique=no)
-
-AC_SUBST([UNIQUE_CFLAGS])
-AC_SUBST([UNIQUE_LIBS])
-
-AC_ARG_ENABLE(unique, [  --enable-unique         enable the use of libunique instead of g_application or gtk_application], enable_libunique=yes,)
-
-if test "x$enable_libunique" = "xyes"; then
-	UNIQUE_CFLAGS="$UNIQUE_CFLAGS -DUSE_UNIQUE=1"
-	# fix for deprecated on 2.26
-	# unique en la version 1.0, contiene simbolos no definidos a partir de
-	# glib 2.26, pero puede ser obviado si se utiliza -DG_CONST_RETURN=const
-	if $PKG_CONFIG --atleast-version 2.26 glib-2.0; then
-		UNIQUE_CFLAGS="$UNIQUE_CFLAGS -DG_CONST_RETURN=const"
-	fi
-fi
-
 GLIB_GSETTINGS
 
 dnl Do not use AC_PROG_AWK since we need the full pathname.
@@ -355,7 +327,6 @@ mate-desktop $VERSION `echo mate-desktop $VERSION | sed "s/./=/g"`
 
     Gtk+ version:                 ${GTK_API_VERSION}
     Build mate-about:             ${enable_mate_about}
-    Use libunique:                ${enable_libunique}
     Install mate-conf-import:     ${enable_mate_conf_import}
     Install mpaste:               ${enable_mpaste}
     Use external pnp.ids:         ${EXTERNAL_PNP_IDS}

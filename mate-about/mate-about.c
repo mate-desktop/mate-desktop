@@ -18,9 +18,6 @@
  * 02110-1301, USA.
  */
 
-#ifndef __MATE_ABOUT_C__
-#define __MATE_ABOUT_C__
-
 #include "mate-about.h"
 
 /* get text macro, this should be on the common macros. or not?
@@ -32,7 +29,7 @@
 	textdomain(package);
 #endif
 
-	#if GTK_CHECK_VERSION(3, 0, 0) && !defined(UNIQUE)
+	#if GTK_CHECK_VERSION(3, 0, 0)
 
 	static void mate_about_on_activate(GtkApplication* app)
 	{
@@ -51,7 +48,7 @@
 		}
 	}
 
-	#elif GLIB_CHECK_VERSION(2, 26, 0) && !defined(UNIQUE)
+	#else
 
 	// callback
 	static void mate_about_on_activate(GApplication* app)
@@ -108,9 +105,7 @@
 		 * displayed in the about box to give credit to the translator(s). */
 		mate_about_dialog_set_translator_credits(mate_about_dialog, _("translator-credits"));
 
-		#ifdef USE_UNIQUE
-			unique_app_watch_window(mate_about_application, (GtkWindow*) mate_about_dialog);
-		#elif GTK_CHECK_VERSION(3, 0, 0) && !defined(UNIQUE)
+		#if GTK_CHECK_VERSION(3, 0, 0)
 			gtk_window_set_application(GTK_WINDOW(mate_about_dialog), mate_about_application);
 		#endif
 
@@ -147,29 +142,7 @@
 		{
 			gtk_init(&argc, &argv);
 
-			/**
-			 * Examples taken from:
-			 * http://developer.gnome.org/gtk3/3.0/gtk-migrating-GtkApplication.html
-			 */
-			#ifdef USE_UNIQUE
-
-				mate_about_application = unique_app_new("org.mate.about", NULL);
-
-				if (unique_app_is_running(mate_about_application))
-				{
-					UniqueResponse response = unique_app_send_message(mate_about_application, UNIQUE_ACTIVATE, NULL);
-
-					if (response != UNIQUE_RESPONSE_OK)
-					{
-						status = 1;
-					}
-				}
-				else
-				{
-					mate_about_run();
-				}
-
-			#elif GTK_CHECK_VERSION(3, 0, 0) && !defined(USE_UNIQUE)
+			#if GTK_CHECK_VERSION(3, 0, 0)
 
 				mate_about_application = gtk_application_new("org.mate.about", 0);
 				g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
@@ -178,7 +151,7 @@
 
 				g_object_unref(mate_about_application);
 
-			#elif GLIB_CHECK_VERSION(2, 26, 0) && !defined(USE_UNIQUE)
+			#else
 
 				mate_about_application = g_application_new("org.mate.about", G_APPLICATION_FLAGS_NONE);
 				g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
@@ -187,14 +160,8 @@
 
 				g_object_unref(mate_about_application);
 
-			#else
-
-				mate_about_run();
-
 			#endif
 		}
 
 		return status;
 	}
-
-#endif

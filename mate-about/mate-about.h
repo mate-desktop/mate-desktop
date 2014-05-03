@@ -28,10 +28,6 @@
 
 #include <libmate-desktop/mate-aboutdialog.h>
 
-#ifdef USE_UNIQUE
-	#include <unique/unique.h>
-#endif
-
 	const char* program_name = "MATE Desktop Environment";
 	const char* version = PACKAGE_VERSION;
 	const char* icon = "mate";
@@ -646,13 +642,9 @@
 	// widget for mate-about window
 	MateAboutDialog* mate_about_dialog = FALSE;
 
-	// libunique thing
-	#ifdef USE_UNIQUE
-		extern UniqueApp* mate_about_application;
-		UniqueApp* mate_about_application = NULL;
-	#elif GTK_CHECK_VERSION(3, 0, 0)
+	#if GTK_CHECK_VERSION(3, 0, 0)
 		GtkApplication* mate_about_application;
-	#elif GLIB_CHECK_VERSION(2, 26, 0)
+	#else
 		GApplication* mate_about_application;
 	#endif
 
@@ -665,9 +657,9 @@
 	void mate_about_run(void);
 	void mate_about_release_version(void);
 
-	#if GTK_CHECK_VERSION(3, 0, 0) && !defined(USE_UNIQUE)
+	#if GTK_CHECK_VERSION(3, 0, 0)
 		static void mate_about_on_activate(GtkApplication* app);
-	#elif GLIB_CHECK_VERSION(2, 26, 0) && !defined(USE_UNIQUE)
+	#else
 		static void mate_about_on_activate(GApplication* app);
 	#endif
 
