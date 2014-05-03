@@ -24,144 +24,144 @@
  */
 #ifndef mate_gettext
 #define mate_gettext(package, locale, codeset) \
-	bindtextdomain(package, locale); \
-	bind_textdomain_codeset(package, codeset); \
-	textdomain(package);
+    bindtextdomain(package, locale); \
+    bind_textdomain_codeset(package, codeset); \
+    textdomain(package);
 #endif
 
-	#if GTK_CHECK_VERSION(3, 0, 0)
+#if GTK_CHECK_VERSION(3, 0, 0)
 
-	static void mate_about_on_activate(GtkApplication* app)
-	{
-		GList* list;
-		GtkWidget* window;
+static void mate_about_on_activate(GtkApplication* app)
+{
+    GList* list;
+    GtkWidget* window;
 
-		list = gtk_application_get_windows(app);
+    list = gtk_application_get_windows(app);
 
-		if (list)
-		{
-			gtk_window_present(GTK_WINDOW(list->data));
-		}
-		else
-		{
-			mate_about_run();
-		}
-	}
+    if (list)
+    {
+        gtk_window_present(GTK_WINDOW(list->data));
+    }
+    else
+    {
+        mate_about_run();
+    }
+}
 
-	#else
+#else
 
-	// callback
-	static void mate_about_on_activate(GApplication* app)
-	{
-		if (!mate_about_dialog)
-		{
-			mate_about_run();
-		}
-		else
-		{
-			gtk_window_present(GTK_WINDOW(mate_about_dialog));
-		}
-	}
+// callback
+static void mate_about_on_activate(GApplication* app)
+{
+    if (!mate_about_dialog)
+    {
+        mate_about_run();
+    }
+    else
+    {
+        gtk_window_present(GTK_WINDOW(mate_about_dialog));
+    }
+}
 
-	#endif
+#endif
 
-	void mate_about_run(void)
-	{
-		mate_about_dialog = (MateAboutDialog*) mate_about_dialog_new();
+void mate_about_run(void)
+{
+    mate_about_dialog = (MateAboutDialog*) mate_about_dialog_new();
 
-		gtk_window_set_default_icon_name(desktop_icon);
+    gtk_window_set_default_icon_name(desktop_icon);
 
-		GtkIconTheme* icon_theme = gtk_icon_theme_get_default();
+    GtkIconTheme* icon_theme = gtk_icon_theme_get_default();
 
-		if (gtk_icon_theme_has_icon(icon_theme, icon))
-		{
-			mate_about_dialog_set_logo_icon_name(mate_about_dialog, icon);
-		}
-		else
-		{
-			mate_about_dialog_set_logo_icon_name(mate_about_dialog, desktop_icon);
-		}
+    if (gtk_icon_theme_has_icon(icon_theme, icon))
+    {
+        mate_about_dialog_set_logo_icon_name(mate_about_dialog, icon);
+    }
+    else
+    {
+        mate_about_dialog_set_logo_icon_name(mate_about_dialog, desktop_icon);
+    }
 
-		// name
-		mate_about_dialog_set_program_name(mate_about_dialog, gettext(program_name));
+    // name
+    mate_about_dialog_set_program_name(mate_about_dialog, gettext(program_name));
 
-		// version
-		mate_about_dialog_set_version(mate_about_dialog, version);
+    // version
+    mate_about_dialog_set_version(mate_about_dialog, version);
 
-		// credits and website
-		mate_about_dialog_set_copyright(mate_about_dialog, copyright);
-		mate_about_dialog_set_website(mate_about_dialog, website);
+    // credits and website
+    mate_about_dialog_set_copyright(mate_about_dialog, copyright);
+    mate_about_dialog_set_website(mate_about_dialog, website);
 
-		/**
-		 * This generate a random message.
-		 * The comments index must not be more than comments_count - 1
-		 */
-		mate_about_dialog_set_comments(mate_about_dialog, gettext(comments_array[g_random_int_range(0, comments_count - 1)]));
+    /**
+     * This generate a random message.
+     * The comments index must not be more than comments_count - 1
+     */
+    mate_about_dialog_set_comments(mate_about_dialog, gettext(comments_array[g_random_int_range(0, comments_count - 1)]));
 
-		mate_about_dialog_set_authors(mate_about_dialog, authors);
-		mate_about_dialog_set_artists(mate_about_dialog, artists);
-		mate_about_dialog_set_documenters(mate_about_dialog, documenters);
-		/* Translators should localize the following string which will be
-		 * displayed in the about box to give credit to the translator(s). */
-		mate_about_dialog_set_translator_credits(mate_about_dialog, _("translator-credits"));
+    mate_about_dialog_set_authors(mate_about_dialog, authors);
+    mate_about_dialog_set_artists(mate_about_dialog, artists);
+    mate_about_dialog_set_documenters(mate_about_dialog, documenters);
+    /* Translators should localize the following string which will be
+     * displayed in the about box to give credit to the translator(s). */
+    mate_about_dialog_set_translator_credits(mate_about_dialog, _("translator-credits"));
 
-		#if GTK_CHECK_VERSION(3, 0, 0)
-			gtk_window_set_application(GTK_WINDOW(mate_about_dialog), mate_about_application);
-		#endif
+    #if GTK_CHECK_VERSION(3, 0, 0)
+        gtk_window_set_application(GTK_WINDOW(mate_about_dialog), mate_about_application);
+    #endif
 
-		// start and destroy
-		gtk_dialog_run((GtkDialog*) mate_about_dialog);
-		gtk_widget_destroy((GtkWidget*) mate_about_dialog);
-	}
+    // start and destroy
+    gtk_dialog_run((GtkDialog*) mate_about_dialog);
+    gtk_widget_destroy((GtkWidget*) mate_about_dialog);
+}
 
-	int main(int argc, char** argv)
-	{
-		int status = 0;
+int main(int argc, char** argv)
+{
+    int status = 0;
 
-		mate_gettext(GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
+    mate_gettext(GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
 
-		#if !GLIB_CHECK_VERSION (2, 36, 0)
-		g_type_init();
-		#endif
+    #if !GLIB_CHECK_VERSION (2, 36, 0)
+    g_type_init();
+    #endif
 
-		/* http://www.gtk.org/api/2.6/glib/glib-Commandline-option-parser.html */
-		GOptionContext* context = g_option_context_new(NULL);
-		g_option_context_add_main_entries(context, command_entries, GETTEXT_PACKAGE);
-		g_option_context_add_group(context, gtk_get_option_group(TRUE));
-		g_option_context_parse(context, &argc, &argv, NULL);
+    /* http://www.gtk.org/api/2.6/glib/glib-Commandline-option-parser.html */
+    GOptionContext* context = g_option_context_new(NULL);
+    g_option_context_add_main_entries(context, command_entries, GETTEXT_PACKAGE);
+    g_option_context_add_group(context, gtk_get_option_group(TRUE));
+    g_option_context_parse(context, &argc, &argv, NULL);
 
-		/* Not necesary at all, program just run and die.
-		 * But it free a little memory. */
-		g_option_context_free(context);
+    /* Not necesary at all, program just run and die.
+     * But it free a little memory. */
+    g_option_context_free(context);
 
-		if (mate_about_nogui == TRUE)
-		{
-			printf("%s %s\n", gettext(program_name), version);
-		}
-		else
-		{
-			gtk_init(&argc, &argv);
+    if (mate_about_nogui == TRUE)
+    {
+        printf("%s %s\n", gettext(program_name), version);
+    }
+    else
+    {
+        gtk_init(&argc, &argv);
 
-			#if GTK_CHECK_VERSION(3, 0, 0)
+        #if GTK_CHECK_VERSION(3, 0, 0)
 
-				mate_about_application = gtk_application_new("org.mate.about", 0);
-				g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
+            mate_about_application = gtk_application_new("org.mate.about", 0);
+            g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
 
-				status = g_application_run(G_APPLICATION(mate_about_application), argc, argv);
+            status = g_application_run(G_APPLICATION(mate_about_application), argc, argv);
 
-				g_object_unref(mate_about_application);
+            g_object_unref(mate_about_application);
 
-			#else
+        #else
 
-				mate_about_application = g_application_new("org.mate.about", G_APPLICATION_FLAGS_NONE);
-				g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
+            mate_about_application = g_application_new("org.mate.about", G_APPLICATION_FLAGS_NONE);
+            g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
 
-				status = g_application_run(G_APPLICATION(mate_about_application), argc, argv);
+            status = g_application_run(G_APPLICATION(mate_about_application), argc, argv);
 
-				g_object_unref(mate_about_application);
+            g_object_unref(mate_about_application);
 
-			#endif
-		}
+        #endif
+    }
 
-		return status;
-	}
+    return status;
+}
