@@ -1,7 +1,7 @@
 /*
  * test.c: general tests for libmate-desktop
  *
- * Copyright (C) 2013 Stefano Karapetsas
+ * Copyright (C) 2013-2014 Stefano Karapetsas
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,14 +24,33 @@
 
 #include <config.h>
 #include "mate-desktop.h"
+#include "mate-colorbutton.h"
 
 int
 main (int argc, char **argv)
 {
-#if MATE_DESKTOP_CHECK_VERSION (1, 7, 2)
-    return 0;
-#else
-    g_warning ("Old mate-desktop version!");
-    return 1;
-#endif
+    GtkWindow *window = NULL;
+    GtkWidget *widget = NULL;
+
+    /* initialize GTK+ */
+    gtk_init (&argc, &argv);
+
+    /* create window */
+    window = GTK_WINDOW (gtk_window_new (GTK_WINDOW_TOPLEVEL));
+
+    gtk_window_set_title (window, "MATE Desktop Test");
+
+    /* create a MateColorButton */
+    widget = mate_color_button_new ();
+
+    /* add MateColorButton to window */
+    gtk_container_add (GTK_CONTAINER (window), widget);
+
+    /* quit signal */
+    g_signal_connect (GTK_WIDGET (window), "destroy", gtk_main_quit, NULL);
+
+    gtk_widget_show_all (GTK_WIDGET (window));
+
+    /* start application */
+    gtk_main ();
 }
