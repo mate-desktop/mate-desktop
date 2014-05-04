@@ -2639,14 +2639,14 @@ pixbuf_draw_gradient (GdkPixbuf    *pixbuf,
 	int height;
 	int rowstride;
 	guchar *dst;
-	guchar *dst_limit;
+	//guchar *dst_limit;
 	int n_channels = 3;
 
 	rowstride = gdk_pixbuf_get_rowstride (pixbuf);
 	width = rect->width;
 	height = rect->height;
 	dst = gdk_pixbuf_get_pixels (pixbuf) + rect->x * n_channels + rowstride * rect->y;
-	dst_limit = dst + height * rowstride;
+	//dst_limit = dst + height * rowstride;
 
 	if (horizontal) {
 		guchar *gradient = create_gradient (primary, secondary, width);
