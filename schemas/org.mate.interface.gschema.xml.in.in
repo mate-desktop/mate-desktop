@@ -140,5 +140,10 @@
       <_summary>Show the 'Unicode Control Character' menu</_summary>
       <_description>Whether the context menus of entries and text views  should offer to insert control characters.</_description>
     </key>
+    <key name="gtk-decoration-layout" type="s">
+      <default>'menu:minimize,maximize,close'</default>
+      <_summary>Titlebar layout of GTK3 client-side decorated windows</_summary>
+      <_description>This setting determines which buttons should be put in the titlebar of client-side decorated windows, and whether they should be placed at the left of right. See https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout.</_description>
+    </key>
   </schema>
 </schemalist>
