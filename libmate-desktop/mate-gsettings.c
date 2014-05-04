@@ -37,10 +37,22 @@
 gboolean
 mate_gsettings_schema_exists (const gchar* schema)
 {
+#if GLIB_CHECK_VERSION (2, 40, 0)
+    GSettingsSchemaSource *schema_source;
+    GSettingsSchema *schema_schema;
+#else
     const char * const *schemas;
-    gboolean schema_exists;
     gint i;
+#endif
+    gboolean schema_exists;
 
+#if GLIB_CHECK_VERSION (2, 40, 0)
+    schema_source = g_settings_schema_source_get_default();
+    schema_schema = g_settings_schema_source_lookup (schema_source, schema, FALSE);
+    schema_exists = (schema_schema != NULL);
+    if (schema_schema)
+        g_settings_schema_unref (schema_schema);
+#else
     schemas = g_settings_list_schemas ();
     schema_exists = FALSE;
 
@@ -50,6 +62,7 @@ mate_gsettings_schema_exists (const gchar* schema)
             break;
         }
     }
+#endif
 
     return schema_exists;
 }
