@@ -2098,7 +2098,11 @@ get_screen_color (GtkWidget *button)
 				  NULL,
 				  picker_cursor,
 				  time);
+#if GTK_CHECK_VERSION (3, 0, 0)
+  g_object_unref (picker_cursor);
+#else
   gdk_cursor_unref (picker_cursor);
+#endif
   
   if (grab_status != GDK_GRAB_SUCCESS)
     {
