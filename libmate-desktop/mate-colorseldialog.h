@@ -47,10 +47,10 @@ struct _MateColorSelectionDialog
 {
   GtkDialog parent_instance;
 
-  GtkWidget *GSEAL (colorsel);
-  GtkWidget *GSEAL (ok_button);
-  GtkWidget *GSEAL (cancel_button);
-  GtkWidget *GSEAL (help_button);
+  GtkWidget *colorsel;
+  GtkWidget *ok_button;
+  GtkWidget *cancel_button;
+  GtkWidget *help_button;
 };
 
 struct _MateColorSelectionDialogClass

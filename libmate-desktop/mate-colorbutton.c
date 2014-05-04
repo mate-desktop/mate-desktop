@@ -257,14 +257,22 @@ mate_color_button_get_checkered (void)
 }
 
 /* Handle exposure events for the color picker's drawing area */
+#if GTK_CHECK_VERSION (3, 0, 0)
+static gboolean
+draw (GtkWidget      *widget, 
+      cairo_t        *cr, 
+      gpointer        data)
+#else
 static gint
 expose_event (GtkWidget      *widget, 
               GdkEventExpose *event, 
               gpointer        data)
+#endif
 {
   MateColorButton *color_button = MATE_COLOR_BUTTON (data);
   GtkAllocation allocation;
   cairo_pattern_t *checkered;
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cairo_t *cr;
 
   cr = gdk_cairo_create (event->window);
@@ -272,6 +280,7 @@ expose_event (GtkWidget      *widget,
   gtk_widget_get_allocation (widget, &allocation);
   gdk_cairo_rectangle (cr, &allocation);
   cairo_clip (cr);
+#endif
 
   if (mate_color_button_has_alpha (color_button))
     {
@@ -304,13 +313,15 @@ expose_event (GtkWidget      *widget,
 
   if (!gtk_widget_is_sensitive (GTK_WIDGET (color_button)))
     {
-      gdk_cairo_set_source_color (cr, &GTK_WIDGET(color_button)->style->bg[GTK_STATE_INSENSITIVE]);
+      gdk_cairo_set_source_color (cr, &gtk_widget_get_style (GTK_WIDGET(color_button))->bg[GTK_STATE_INSENSITIVE]);
       checkered = mate_color_button_get_checkered ();
       cairo_mask (cr, checkered);
       cairo_pattern_destroy (checkered);
     }
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cairo_destroy (cr);
+#endif
 
   return FALSE;
 }
@@ -334,20 +345,20 @@ mate_color_button_drag_data_received (GtkWidget        *widget,
 {
   guint16 *dropped;
 
-  if (selection_data->length < 0)
+  if (gtk_selection_data_get_length (selection_data) < 0)
     return;
 
   /* We accept drops with the wrong format, since the KDE color
    * chooser incorrectly drops application/x-color with format 8.
    */
-  if (selection_data->length != 8) 
+  if (gtk_selection_data_get_length (selection_data) != 8) 
     {
       g_warning (_("Received invalid color data\n"));
       return;
     }
 
 
-  dropped = (guint16 *)selection_data->data;
+  dropped = (guint16 *)gtk_selection_data_get_data (selection_data);
 
   color_button->priv->color.red = dropped[0];
   color_button->priv->color.green = dropped[1];
@@ -409,7 +420,7 @@ mate_color_button_drag_data_get (GtkWidget        *widget,
   dropped[2] = color_button->priv->color.blue;
   dropped[3] = color_button->priv->alpha;
 
-  gtk_selection_data_set (selection_data, selection_data->target,
+  gtk_selection_data_set (selection_data, gtk_selection_data_get_target (selection_data),
 			  16, (guchar *)dropped, 8);
 }
 
@@ -446,8 +457,13 @@ mate_color_button_init (MateColorButton *color_button)
   g_object_unref (layout);
 
   gtk_widget_set_size_request (color_button->priv->draw_area, rect.width - 2, rect.height - 2);
+#if GTK_CHECK_VERSION (3, 0, 0)
+  g_signal_connect (color_button->priv->draw_area, "draw",
+                    G_CALLBACK (draw), color_button);
+#else
   g_signal_connect (color_button->priv->draw_area, "expose-event",
                     G_CALLBACK (expose_event), color_button);
+#endif
   gtk_container_add (GTK_CONTAINER (frame), color_button->priv->draw_area);
   gtk_widget_show (color_button->priv->draw_area);
 

@@ -42,6 +42,7 @@ G_BEGIN_DECLS
 
 typedef struct _MateColorSelection       MateColorSelection;
 typedef struct _MateColorSelectionClass  MateColorSelectionClass;
+typedef struct _ColorSelectionPrivate    ColorSelectionPrivate;
 
 
 typedef void (* MateColorSelectionChangePaletteFunc) (const GdkColor    *colors,
@@ -55,7 +56,7 @@ struct _MateColorSelection
   GtkVBox parent_instance;
 
   /* < private_data > */
-  gpointer GSEAL (private_data);
+  ColorSelectionPrivate *private_data;
 };
 
 struct _MateColorSelectionClass
@@ -121,8 +122,6 @@ void mate_color_selection_set_color         (MateColorSelection *colorsel,
 					    gdouble           *color);
 void mate_color_selection_get_color         (MateColorSelection *colorsel,
 					    gdouble           *color);
-void mate_color_selection_set_update_policy (MateColorSelection *colorsel,
-					    GtkUpdateType      policy);
 #endif /* GTK_DISABLE_DEPRECATED */
 
 G_END_DECLS

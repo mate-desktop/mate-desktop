@@ -59,7 +59,7 @@ struct _MateColorButton {
 
   /*< private >*/
 
-  MateColorButtonPrivate *GSEAL (priv);
+  MateColorButtonPrivate *priv;
 };
 
 struct _MateColorButtonClass {

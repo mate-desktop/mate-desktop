@@ -131,15 +131,15 @@ mate_color_selection_dialog_init (MateColorSelectionDialog *colorseldiag)
   _mate_desktop_init_i18n ();
 
   gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-  gtk_box_set_spacing (GTK_BOX (dialog->vbox), 2); /* 2 * 5 + 2 = 12 */
-  gtk_container_set_border_width (GTK_CONTAINER (dialog->action_area), 5);
-  gtk_box_set_spacing (GTK_BOX (dialog->action_area), 6);
+  gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (dialog)), 2); /* 2 * 5 + 2 = 12 */
+  gtk_container_set_border_width (GTK_CONTAINER (gtk_dialog_get_action_area (dialog)), 5);
+  gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_action_area (dialog)), 6);
 
   colorseldiag->colorsel = mate_color_selection_new ();
   gtk_container_set_border_width (GTK_CONTAINER (colorseldiag->colorsel), 5);
   mate_color_selection_set_has_palette (MATE_COLOR_SELECTION(colorseldiag->colorsel), FALSE); 
   mate_color_selection_set_has_opacity_control (MATE_COLOR_SELECTION(colorseldiag->colorsel), FALSE);
-  gtk_container_add (GTK_CONTAINER (GTK_DIALOG (colorseldiag)->vbox), colorseldiag->colorsel);
+  gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (colorseldiag))), colorseldiag->colorsel);
   gtk_widget_show (colorseldiag->colorsel);
   
   colorseldiag->cancel_button = gtk_dialog_add_button (GTK_DIALOG (colorseldiag),
