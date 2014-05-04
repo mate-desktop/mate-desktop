@@ -11,7 +11,10 @@ libmate_desktop_HEADERS = \
 	mate-desktop-thumbnail.h	\
 	mate-rr.h			\
 	mate-rr-config.h		\
-	mate-rr-labeler.h
+	mate-rr-labeler.h \
+	mate-colorbutton.h \
+	mate-colorsel.h \
+	mate-colorseldialog.h
 
 lib_LTLIBRARIES = libmate-desktop-2.la
 
@@ -43,6 +46,9 @@ libmate_desktop_2_la_SOURCES = \
 	mate-rr-config.c	\
 	mate-rr-labeler.c	\
 	mate-rr-private.h	\
+	mate-colorbutton.c \
+	mate-colorsel.c \
+	mate-colorseldialog.c \
 	edid-parse.c		\
 	edid.h			\
 	private.h
