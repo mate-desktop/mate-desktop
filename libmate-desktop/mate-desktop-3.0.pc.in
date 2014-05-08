@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: mate-desktop-@GTK_API_VERSION@
+Description: Utility library for loading .desktop files
+Requires: gtk+-@GTK_API_VERSION@ @STARTUP_NOTIFICATION_PACKAGE@
+Requires.private: dconf
+Version: @VERSION@
+Libs: -L${libdir} -lmate-desktop-3
+Cflags: -I${includedir}/mate-desktop-@GTK_API_VERSION@
