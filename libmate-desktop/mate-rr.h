@@ -88,6 +88,9 @@ typedef enum {
 #define MATE_RR_TYPE_MODE (mate_rr_mode_get_type())
 
 GType mate_rr_screen_get_type (void);
+GType mate_rr_output_get_type (void);
+GType mate_rr_crtc_get_type (void);
+GType mate_rr_mode_get_type (void);
 
 /* MateRRScreen */
 MateRRScreen * mate_rr_screen_new                (GdkScreen             *screen,

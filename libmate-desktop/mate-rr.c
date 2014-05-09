@@ -87,6 +87,7 @@ struct MateRROutput
     MateRRMode **	modes;
     int			n_preferred;
     guint8 *		edid_data;
+    int         edid_size;
     char *              connector_type;
 };
 
@@ -124,6 +125,7 @@ struct MateRRMode
 /* MateRRCrtc */
 static MateRRCrtc *  crtc_new          (ScreenInfo         *info,
 					 RRCrtc              id);
+static MateRRCrtc *  crtc_copy         (const MateRRCrtc  *from);
 static void           crtc_free         (MateRRCrtc        *crtc);
 
 #ifdef HAVE_RANDR
@@ -142,6 +144,7 @@ static gboolean       output_initialize (MateRROutput      *output,
 					 GError            **error);
 #endif
 
+static MateRROutput *output_copy       (const MateRROutput *from);
 static void           output_free       (MateRROutput      *output);
 
 /* MateRRMode */
@@ -153,6 +156,7 @@ static void           mode_initialize   (MateRRMode        *mode,
 					 XRRModeInfo        *info);
 #endif
 
+static MateRRMode *  mode_copy         (const MateRRMode  *from);
 static void           mode_free         (MateRRMode        *mode);
 
 
@@ -162,6 +166,10 @@ static gboolean mate_rr_screen_initable_init (GInitable*, GCancellable*, GError*
 static void mate_rr_screen_initable_iface_init (GInitableIface *iface);
 G_DEFINE_TYPE_WITH_CODE (MateRRScreen, mate_rr_screen, G_TYPE_OBJECT,
     G_IMPLEMENT_INTERFACE (G_TYPE_INITABLE, mate_rr_screen_initable_iface_init))
+
+G_DEFINE_BOXED_TYPE (MateRRCrtc, mate_rr_crtc, crtc_copy, crtc_free)
+G_DEFINE_BOXED_TYPE (MateRROutput, mate_rr_output, output_copy, output_free)
+G_DEFINE_BOXED_TYPE (MateRRMode, mate_rr_mode, mode_copy, mode_free)
 
 /* Errors */
 
@@ -773,7 +781,7 @@ mate_rr_screen_class_init (MateRRScreenClass *klass)
             "GDK Screen",
             "The GDK Screen represented by this MateRRScreen",
             GDK_TYPE_SCREEN,
-            G_PARAM_CONSTRUCT | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB
+            G_PARAM_WRITABLE | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB
             )
         );
 
@@ -1114,7 +1122,7 @@ mate_rr_screen_get_output_by_id (MateRRScreen *screen,
 static MateRROutput *
 output_new (ScreenInfo *info, RROutput id)
 {
-    MateRROutput *output = g_new0 (MateRROutput, 1);
+    MateRROutput *output = g_slice_new0 (MateRROutput);
     
     output->id = id;
     output->info = info;
@@ -1161,26 +1169,25 @@ get_property (Display *dpy,
 }
 
 static guint8 *
-read_edid_data (MateRROutput *output)
+read_edid_data (MateRROutput *output, int *len)
 {
     Atom edid_atom;
     guint8 *result;
-    int len;
 
     edid_atom = XInternAtom (DISPLAY (output), "EDID", FALSE);
     result = get_property (DISPLAY (output),
-			   output->id, edid_atom, &len);
+			   output->id, edid_atom, len);
 
     if (!result)
     {
 	edid_atom = XInternAtom (DISPLAY (output), "EDID_DATA", FALSE);
 	result = get_property (DISPLAY (output),
-			       output->id, edid_atom, &len);
+			       output->id, edid_atom, len);
     }
 
     if (result)
     {
-	if (len % 128 == 0)
+	if (*len % 128 == 0)
 	    return result;
 	else
 	    g_free (result);
@@ -1301,13 +1308,59 @@ output_initialize (MateRROutput *output, XRRScreenResources *res, GError **error
     output->n_preferred = info->npreferred;
     
     /* Edid data */
-    output->edid_data = read_edid_data (output);
+    output->edid_data = read_edid_data (output, &output->edid_size);
     
     XRRFreeOutputInfo (info);
 
     return TRUE;
 }
 #endif /* HAVE_RANDR */
+
+static MateRROutput*
+output_copy (const MateRROutput *from)
+{
+    GPtrArray *array;
+    MateRRCrtc **p_crtc;
+    MateRROutput **p_output;
+    MateRRMode **p_mode;
+    MateRROutput *output = g_slice_new0 (MateRROutput);
+
+    output->id = from->id;
+    output->info = from->info;
+    output->name = g_strdup (from->name);
+    output->current_crtc = from->current_crtc;
+    output->width_mm = from->width_mm;
+    output->height_mm = from->height_mm;
+    output->connected = from->connected;
+    output->n_preferred = from->n_preferred;
+    output->connector_type = g_strdup (from->connector_type);
+
+    array = g_ptr_array_new ();
+    for (p_crtc = from->possible_crtcs; *p_crtc != NULL; p_crtc++)
+    {
+        g_ptr_array_add (array, *p_crtc);
+    }
+    output->possible_crtcs = (MateRRCrtc**) g_ptr_array_free (array, FALSE);
+
+    array = g_ptr_array_new ();
+    for (p_output = from->clones; *p_output != NULL; p_output++)
+    {
+        g_ptr_array_add (array, *p_output);
+    }
+    output->clones = (MateRROutput**) g_ptr_array_free (array, FALSE);
+
+    array = g_ptr_array_new ();
+    for (p_mode = from->modes; *p_mode != NULL; p_mode++)
+    {
+        g_ptr_array_add (array, *p_mode);
+    }
+    output->modes = (MateRRMode**) g_ptr_array_free (array, FALSE);
+
+    output->edid_size = from->edid_size;
+    output->edid_data = g_memdup (from->edid_data, from->edid_size);
+
+    return output;
+}
 
 static void
 output_free (MateRROutput *output)
@@ -1318,7 +1371,7 @@ output_free (MateRROutput *output)
     g_free (output->edid_data);
     g_free (output->name);
     g_free (output->connector_type);
-    g_free (output);
+    g_slice_free (MateRROutput, output);
 }
 
 guint32
@@ -1762,12 +1815,45 @@ mate_rr_crtc_supports_rotation (MateRRCrtc *   crtc,
 static MateRRCrtc *
 crtc_new (ScreenInfo *info, RROutput id)
 {
-    MateRRCrtc *crtc = g_new0 (MateRRCrtc, 1);
+    MateRRCrtc *crtc = g_slice_new0 (MateRRCrtc);
     
     crtc->id = id;
     crtc->info = info;
     
     return crtc;
+}
+
+static MateRRCrtc *
+crtc_copy (const MateRRCrtc *from)
+{
+    MateRROutput **p_output;
+    GPtrArray *array;
+    MateRRCrtc *to = g_slice_new0 (MateRRCrtc);
+
+    to->info = from->info;
+    to->id = from->id;
+    to->current_mode = from->current_mode;
+    to->x = from->x;
+    to->y = from->y;
+    to->current_rotation = from->current_rotation;
+    to->rotations = from->rotations;
+    to->gamma_size = from->gamma_size;
+
+    array = g_ptr_array_new ();
+    for (p_output = from->current_outputs; *p_output != NULL; p_output++)
+    {
+        g_ptr_array_add (array, *p_output);
+    }
+    to->current_outputs = (MateRROutput**) g_ptr_array_free (array, FALSE);
+
+    array = g_ptr_array_new ();
+    for (p_output = from->possible_outputs; *p_output != NULL; p_output++)
+    {
+        g_ptr_array_add (array, *p_output);
+    }
+    to->possible_outputs = (MateRROutput**) g_ptr_array_free (array, FALSE);
+
+    return to;
 }
 
 #ifdef HAVE_RANDR
@@ -1846,14 +1932,14 @@ crtc_free (MateRRCrtc *crtc)
 {
     g_free (crtc->current_outputs);
     g_free (crtc->possible_outputs);
-    g_free (crtc);
+    g_slice_free (MateRRCrtc, crtc);
 }
 
 /* MateRRMode */
 static MateRRMode *
 mode_new (ScreenInfo *info, RRMode id)
 {
-    MateRRMode *mode = g_new0 (MateRRMode, 1);
+    MateRRMode *mode = g_slice_new0 (MateRRMode);
     
     mode->id = id;
     mode->info = info;
@@ -1903,11 +1989,26 @@ mode_initialize (MateRRMode *mode, XRRModeInfo *info)
 }
 #endif /* HAVE_RANDR */
 
+static MateRRMode *
+mode_copy (const MateRRMode *from)
+{
+    MateRRMode *to = g_slice_new0 (MateRRMode);
+
+    to->id = from->id;
+    to->info = from->info;
+    to->name = g_strdup (from->name);
+    to->width = from->width;
+    to->height = from->height;
+    to->freq = from->freq;
+
+    return to;
+}
+
 static void
 mode_free (MateRRMode *mode)
 {
     g_free (mode->name);
-    g_free (mode);
+    g_slice_free (MateRRMode, mode);
 }
 
 void

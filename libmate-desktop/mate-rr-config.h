@@ -66,6 +66,11 @@ struct MateOutputInfo
     gpointer		user_data;
 };
 
+#define MATE_RR_TYPE_OUTPUT_INFO    (mate_rr_output_info_get_type())
+#define MATE_RR_TYPE_CONFIG         (mate_rr_config_get_type())
+GType mate_rr_output_info_get_type (void);
+GType mate_rr_config_get_type (void);
+
 struct MateRRConfig
 {
     /* "clone" means that at least two outputs are at (0, 0) offset and they

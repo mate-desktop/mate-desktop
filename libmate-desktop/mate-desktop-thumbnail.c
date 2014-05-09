@@ -850,7 +850,7 @@ mate_desktop_thumbnail_factory_new (MateDesktopThumbnailSize size)
  *
  * Usage of this function is threadsafe.
  *
- * Return value: The absolute path of the thumbnail, or %NULL if none exist.
+ * Return value: (transfer full): The absolute path of the thumbnail, or %NULL if none exist.
  *
  * Since: 2.2
  **/

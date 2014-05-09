@@ -84,7 +84,11 @@ static CrtcAssignment  *crtc_assignment_new   (MateRRScreen    *screen,
 					       GError          **error);
 static void             crtc_assignment_free  (CrtcAssignment   *assign);
 static void             output_free           (MateOutputInfo  *output);
-static MateOutputInfo *output_copy           (MateOutputInfo  *output);
+static MateOutputInfo *output_copy           (const MateOutputInfo  *output);
+static MateRRConfig *  mate_rr_config_copy (const MateRRConfig *config);
+
+G_DEFINE_BOXED_TYPE (MateOutputInfo, mate_rr_output_info, output_copy, output_free)
+G_DEFINE_BOXED_TYPE (MateRRConfig, mate_rr_config, mate_rr_config_copy, mate_rr_config_free)
 
 typedef struct Parser Parser;
 
@@ -627,7 +631,7 @@ output_free (MateOutputInfo *output)
 }
 
 static MateOutputInfo *
-output_copy (MateOutputInfo *output)
+output_copy (const MateOutputInfo *output)
 {
     MateOutputInfo *copy = g_new0 (MateOutputInfo, 1);
 
@@ -1118,7 +1122,7 @@ mate_rr_config_save (MateRRConfig *configuration, GError **error)
 }
 
 static MateRRConfig *
-mate_rr_config_copy (MateRRConfig *config)
+mate_rr_config_copy (const MateRRConfig *config)
 {
     MateRRConfig *copy = g_new0 (MateRRConfig, 1);
     int i;
@@ -1238,8 +1242,8 @@ mate_rr_config_apply_with_time (MateRRConfig *config,
  * See the documentation for mate_rr_config_apply_from_filename().  This
  * function simply calls that other function with a filename of
  * mate_rr_config_get_intended_filename().
-
- * @Deprecated: 2.26: Use mate_rr_config_apply_from_filename() instead and pass it
+ *
+ * Deprecated: 2.26: Use mate_rr_config_apply_from_filename() instead and pass it
  * the filename from mate_rr_config_get_intended_filename().
  */
 gboolean

@@ -35,7 +35,7 @@
 #define LOAD_BUFFER_SIZE 65536
 
 /**
- * mate_thumbnail_scale_down_pixbuf:
+ * mate_desktop_thumbnail_scale_down_pixbuf:
  * @pixbuf: a #GdkPixbuf
  * @dest_width: the desired new width
  * @dest_height: the desired new height
@@ -44,7 +44,7 @@
  * is a lot faster than gdk-pixbuf when scaling down by
  * large amounts.
  *
- * Return value: a scaled pixbuf
+ * Return value: (transfer full): a scaled pixbuf
  * 
  * Since: 2.2
  **/
