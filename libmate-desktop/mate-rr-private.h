@@ -31,7 +31,7 @@ struct ScreenInfo
 #endif
 };
 
-struct MateRRScreen
+struct MateRRScreenPrivate
 {
     GdkScreen *			gdk_screen;
     GdkWindow *			gdk_root;
@@ -44,9 +44,6 @@ struct MateRRScreen
     int				rr_major_version;
     int				rr_minor_version;
     
-    MateRRScreenChanged	callback;
-    gpointer			data;
-
     Atom                        connector_type_atom;
 };
 

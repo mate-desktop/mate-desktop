@@ -1849,7 +1849,7 @@ crtc_assignment_apply (CrtcAssignment *assign, guint32 timestamp, GError **error
      * status.
      */
 
-    gdk_x11_display_grab (gdk_screen_get_display (assign->screen->gdk_screen));
+    gdk_x11_display_grab (gdk_screen_get_display (assign->screen->priv->gdk_screen));
 
     /* Turn off all crtcs that are currently displaying outside the new screen,
      * or are not used in the new setup
@@ -1913,7 +1913,7 @@ crtc_assignment_apply (CrtcAssignment *assign, guint32 timestamp, GError **error
 
     mate_rr_screen_set_primary_output (assign->screen, assign->primary);
 
-    gdk_x11_display_ungrab (gdk_screen_get_display (assign->screen->gdk_screen));
+    gdk_x11_display_ungrab (gdk_screen_get_display (assign->screen->priv->gdk_screen));
 
     return success;
 }

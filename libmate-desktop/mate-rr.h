@@ -31,10 +31,21 @@
 #include <glib.h>
 #include <gdk/gdk.h>
 
-typedef struct MateRRScreen MateRRScreen;
+typedef struct MateRRScreenPrivate MateRRScreenPrivate;
 typedef struct MateRROutput MateRROutput;
 typedef struct MateRRCrtc MateRRCrtc;
 typedef struct MateRRMode MateRRMode;
+
+typedef struct {
+    GObject parent;
+
+    MateRRScreenPrivate* priv;
+} MateRRScreen;
+
+typedef struct {
+    GObjectClass parent_class;
+
+} MateRRScreenClass;
 
 typedef void (* MateRRScreenChanged) (MateRRScreen *screen, gpointer data);
 
@@ -64,6 +75,19 @@ typedef enum {
 } MateRRError;
 
 #define MATE_RR_CONNECTOR_TYPE_PANEL "Panel"  /* This is a laptop's built-in LCD */
+
+#define MATE_RR_TYPE_SCREEN (mate_rr_screen_get_type())
+#define MATE_RR_SCREEN(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_RR_TYPE_SCREEN, MateRRScreen))
+#define MATE_RR_IS_SCREEN(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_RR_TYPE_SCREEN))
+#define MATE_RR_SCREEN_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_RR_TYPE_SCREEN, MateRRScreenClass))
+#define MATE_RR_IS_SCREEN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_RR_TYPE_SCREEN))
+#define MATE_RR_SCREEN_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_RR_TYPE_SCREEN, MateRRScreenClass))
+
+#define MATE_RR_TYPE_OUTPUT (mate_rr_output_get_type())
+#define MATE_RR_TYPE_CRTC (mate_rr_crtc_get_type())
+#define MATE_RR_TYPE_MODE (mate_rr_mode_get_type())
+
+GType mate_rr_screen_get_type (void);
 
 /* MateRRScreen */
 MateRRScreen * mate_rr_screen_new                (GdkScreen             *screen,

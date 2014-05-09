@@ -43,7 +43,7 @@
 #include "private.h"
 #include "mate-rr-private.h"
 
-#define DISPLAY(o) ((o)->info->screen->xdisplay)
+#define DISPLAY(o) ((o)->info->screen->priv->xdisplay)
 
 #ifndef HAVE_RANDR
 /* This is to avoid a ton of ifdefs wherever we use a type from libXrandr */
@@ -58,6 +58,19 @@ typedef int Rotation;
 #define RR_Reflect_X		16
 #define RR_Reflect_Y		32
 #endif
+
+enum {
+    SCREEN_PROP_0,
+    SCREEN_PROP_GDK_SCREEN,
+    SCREEN_PROP_LAST,
+};
+
+enum {
+    SCREEN_CHANGED,
+    SCREEN_SIGNAL_LAST,
+};
+
+gint screen_signals[SCREEN_SIGNAL_LAST];
 
 struct MateRROutput
 {
@@ -142,6 +155,13 @@ static void           mode_initialize   (MateRRMode        *mode,
 
 static void           mode_free         (MateRRMode        *mode);
 
+
+static void mate_rr_screen_finalize (GObject*);
+static void mate_rr_screen_set_property (GObject*, guint, const GValue*, GParamSpec*);
+static gboolean mate_rr_screen_initable_init (GInitable*, GCancellable*, GError**);
+static void mate_rr_screen_initable_iface_init (GInitableIface *iface);
+G_DEFINE_TYPE_WITH_CODE (MateRRScreen, mate_rr_screen, G_TYPE_OBJECT,
+    G_IMPLEMENT_INTERFACE (G_TYPE_INITABLE, mate_rr_screen_initable_iface_init))
 
 /* Errors */
 
@@ -408,8 +428,8 @@ fill_out_screen_info (Display *xdisplay,
 #ifdef HAVE_RANDR
     XRRScreenResources *resources;
     
-    g_assert (xdisplay != NULL);
-    g_assert (info != NULL);
+    g_return_val_if_fail (xdisplay != NULL, FALSE);
+    g_return_val_if_fail (info != NULL, FALSE);
 
     /* First update the screen resources */
 
@@ -423,7 +443,7 @@ fill_out_screen_info (Display *xdisplay,
 	 */
 #if (RANDR_MAJOR > 1 || (RANDR_MAJOR == 1 && RANDR_MINOR >= 3))
         /* Runtime check for RandR 1.3 or higher */
-        if (info->screen->rr_major_version == 1 && info->screen->rr_minor_version >= 3)
+        if (info->screen->priv->rr_major_version == 1 && info->screen->priv->rr_minor_version >= 3)
             resources = XRRGetScreenResourcesCurrent (xdisplay, xroot);
         else
             resources = XRRGetScreenResources (xdisplay, xroot);
@@ -483,7 +503,7 @@ fill_out_screen_info (Display *xdisplay,
     info->primary = None;
 #if (RANDR_MAJOR > 1 || (RANDR_MAJOR == 1 && RANDR_MINOR >= 3))
     /* Runtime check for RandR 1.3 or higher */
-    if (info->screen->rr_major_version == 1 && info->screen->rr_minor_version >= 3) {
+    if (info->screen->priv->rr_major_version == 1 && info->screen->priv->rr_minor_version >= 3) {
         gdk_error_trap_push ();
         info->primary = XRRGetOutputPrimary (xdisplay, xroot);
       #if GTK_CHECK_VERSION (3, 0, 0)
@@ -513,7 +533,7 @@ screen_info_new (MateRRScreen *screen, gboolean needs_reprobe, GError **error)
     info->modes = NULL;
     info->screen = screen;
     
-    if (fill_out_screen_info (screen->xdisplay, screen->xroot, info, needs_reprobe, error))
+    if (fill_out_screen_info (screen->priv->xdisplay, screen->priv->xroot, info, needs_reprobe, error))
     {
 	return info;
     }
@@ -537,16 +557,16 @@ screen_update (MateRRScreen *screen, gboolean force_callback, gboolean needs_rep
 	    return FALSE;
 
 #ifdef HAVE_RANDR
-    if (info->resources->configTimestamp != screen->info->resources->configTimestamp)
+    if (info->resources->configTimestamp != screen->priv->info->resources->configTimestamp)
 	    changed = TRUE;
 #endif
 
-    screen_info_free (screen->info);
+    screen_info_free (screen->priv->info);
 	
-    screen->info = info;
+    screen->priv->info = info;
 
-    if ((changed || force_callback) && screen->callback)
-	screen->callback (screen, screen->data);
+    if (changed || force_callback)
+	g_signal_emit (G_OBJECT (screen), screen_signals[SCREEN_CHANGED], 0);
     
     return changed;
 }
@@ -564,7 +584,7 @@ screen_on_event (GdkXEvent *xevent,
     if (!e)
 	return GDK_FILTER_CONTINUE;
 
-    event_num = e->type - screen->randr_event_base;
+    event_num = e->type - screen->priv->randr_event_base;
 
     if (event_num == RRScreenChangeNotify) {
 	/* We don't reprobe the hardware; we just fetch the X server's latest
@@ -596,8 +616,8 @@ screen_on_event (GdkXEvent *xevent,
 					     (guint32) rr_event->timestamp,
 					     (guint32) rr_event->config_timestamp,
 					     rr_event->serial,
-					     (guint32) screen->info->resources->timestamp,
-					     (guint32) screen->info->resources->configTimestamp);
+					     (guint32) screen->priv->info->resources->timestamp,
+					     (guint32) screen->priv->info->resources->configTimestamp);
 	    g_signal_connect (dialog, "response",
 			      G_CALLBACK (gtk_widget_destroy), NULL);
 	    gtk_widget_show (dialog);
@@ -647,94 +667,178 @@ screen_on_event (GdkXEvent *xevent,
     return GDK_FILTER_CONTINUE;
 }
 
-/* Returns NULL if screen could not be created.  For instance, if
- * the driver does not support Xrandr 1.2.
- */
-MateRRScreen *
-mate_rr_screen_new (GdkScreen *gdk_screen,
-		     MateRRScreenChanged callback,
-		     gpointer data,
-		     GError **error)
+static gboolean
+mate_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **error)
+
 {
-#ifdef HAVE_RANDR
-    Display *dpy = GDK_SCREEN_XDISPLAY (gdk_screen);
+    MateRRScreen *self = MATE_RR_SCREEN (initable);
+    Display *dpy = GDK_SCREEN_XDISPLAY (self->priv->gdk_screen);
     int event_base;
     int ignore;
-#endif
 
-    g_return_val_if_fail (error == NULL || *error == NULL, NULL);
-    
-    _mate_desktop_init_i18n ();
+    self->priv->connector_type_atom = XInternAtom (dpy, "ConnectorType", FALSE);
 
 #ifdef HAVE_RANDR
     if (XRRQueryExtension (dpy, &event_base, &ignore))
     {
-	MateRRScreen *screen = g_new0 (MateRRScreen, 1);
-	
-	screen->gdk_screen = gdk_screen;
-	screen->gdk_root = gdk_screen_get_root_window (gdk_screen);
-	screen->xroot = GDK_WINDOW_XID (screen->gdk_root);
-	screen->xdisplay = dpy;
-	screen->xscreen = gdk_x11_screen_get_xscreen (screen->gdk_screen);
-	screen->connector_type_atom = XInternAtom (dpy, "ConnectorType", FALSE);
-	
-	screen->callback = callback;
-	screen->data = data;
-	
-	screen->randr_event_base = event_base;
+        self->priv->randr_event_base = event_base;
 
-	XRRQueryVersion (dpy, &screen->rr_major_version, &screen->rr_minor_version);
-	if (screen->rr_major_version > 1 || (screen->rr_major_version == 1 && screen->rr_minor_version < 2)) {
-	    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_NO_RANDR_EXTENSION,
-			 "RANDR extension is too old (must be at least 1.2)");
-	    g_free (screen);
-	    return NULL;
+        XRRQueryVersion (dpy, &self->priv->rr_major_version, &self->priv->rr_minor_version);
+        if (self->priv->rr_major_version > 1 || (self->priv->rr_major_version == 1 && self->priv->rr_minor_version < 2)) {
+            g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_NO_RANDR_EXTENSION,
+                "RANDR extension is too old (must be at least 1.2)");
+            return FALSE;
+        }
+
+        self->priv->info = screen_info_new (self, TRUE, error);
+
+        if (!self->priv->info) {
+	    return FALSE;
 	}
 
-	screen->info = screen_info_new (screen, TRUE, error);
-	
-	if (!screen->info) {
-	    g_free (screen);
-	    return NULL;
-	}
+        XRRSelectInput (self->priv->xdisplay,
+            self->priv->xroot,
+            RRScreenChangeNotifyMask);
+        gdk_x11_register_standard_event_type (gdk_screen_get_display (self->priv->gdk_screen),
+                          event_base,
+                          RRNotify + 1);
+        gdk_window_add_filter (self->priv->gdk_root, screen_on_event, self);
 
-	if (screen->callback) {
-	    XRRSelectInput (screen->xdisplay,
-			    screen->xroot,
-			    RRScreenChangeNotifyMask);
-
-	    gdk_x11_register_standard_event_type (gdk_screen_get_display (gdk_screen),
-						  event_base,
-						  RRNotify + 1);
-
-	    gdk_window_add_filter (screen->gdk_root, screen_on_event, screen);
-	}
-
-	return screen;
+        return TRUE;
     }
     else
     {
 #endif /* HAVE_RANDR */
-	g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_NO_RANDR_EXTENSION,
-		     _("RANDR extension is not present"));
-	
-	return NULL;
+    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_NO_RANDR_EXTENSION,
+        _("RANDR extension is not present"));
+
+    return FALSE;
+
 #ifdef HAVE_RANDR
    }
 #endif
 }
 
 void
-mate_rr_screen_destroy (MateRRScreen *screen)
+mate_rr_screen_initable_iface_init (GInitableIface *iface)
 {
-	g_return_if_fail (screen != NULL);
+    iface->init = mate_rr_screen_initable_init;
+}
 
-	gdk_window_remove_filter (screen->gdk_root, screen_on_event, screen);
+void
+    mate_rr_screen_finalize (GObject *gobject)
+{
+    MateRRScreen *screen = MATE_RR_SCREEN (gobject);
 
-	screen_info_free (screen->info);
-	screen->info = NULL;
+    gdk_window_remove_filter (screen->priv->gdk_root, screen_on_event, screen);
 
-	g_free (screen);
+    screen_info_free (screen->priv->info);
+}
+
+void
+    mate_rr_screen_set_property (GObject *gobject, guint property_id, const GValue *value, GParamSpec *property)
+{
+    MateRRScreen *self = MATE_RR_SCREEN (gobject);
+
+    switch (property_id)
+    {
+    case SCREEN_PROP_GDK_SCREEN:
+        self->priv->gdk_screen = g_value_get_object (value);
+        self->priv->gdk_root = gdk_screen_get_root_window (self->priv->gdk_screen);
+        self->priv->xroot = gdk_x11_drawable_get_xid (self->priv->gdk_root);
+        self->priv->xdisplay = GDK_SCREEN_XDISPLAY (self->priv->gdk_screen);
+        self->priv->xscreen = gdk_x11_screen_get_xscreen (self->priv->gdk_screen);
+        return;
+    default:
+        G_OBJECT_WARN_INVALID_PROPERTY_ID (gobject, property_id, property);
+        return;
+    }
+}
+
+void
+mate_rr_screen_class_init (MateRRScreenClass *klass)
+{
+    GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
+    g_type_class_add_private (klass, sizeof (MateRRScreenPrivate));
+
+    gobject_class->set_property = mate_rr_screen_set_property;
+    gobject_class->get_property = NULL;
+    gobject_class->finalize = mate_rr_screen_finalize;
+
+    g_object_class_install_property(
+        gobject_class,
+        SCREEN_PROP_GDK_SCREEN,
+        g_param_spec_object (
+            "gdk-screen",
+            "GDK Screen",
+            "The GDK Screen represented by this MateRRScreen",
+            GDK_TYPE_SCREEN,
+            G_PARAM_CONSTRUCT | G_PARAM_CONSTRUCT_ONLY | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB
+            )
+        );
+
+    screen_signals[SCREEN_CHANGED] = g_signal_newv("screen-changed",
+        G_TYPE_FROM_CLASS (gobject_class),
+        G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
+        NULL,
+        NULL,
+        NULL,
+        g_cclosure_marshal_VOID__VOID,
+        G_TYPE_NONE,
+        0,
+        NULL);
+}
+
+void
+mate_rr_screen_init (MateRRScreen *self)
+{
+    self->priv = G_TYPE_INSTANCE_GET_PRIVATE (self, MATE_RR_TYPE_SCREEN, MateRRScreenPrivate);
+
+    self->priv->gdk_screen = NULL;
+    self->priv->gdk_root = NULL;
+    self->priv->xdisplay = NULL;
+    self->priv->xroot = None;
+    self->priv->xscreen = NULL;
+    self->priv->info = NULL;
+    self->priv->rr_major_version = 0;
+    self->priv->rr_minor_version = 0;
+}
+
+/**
+ * mate_rr_screen_new: (skip)
+ * Creates a new #MateRRScreen instance
+ *
+ * @screen: the #GdkScreen on which to operate
+ * @callback: an optional callback for screen-changed signal
+ * @data:
+ * @error: will be set if XRandR is not supported
+ *
+ * Returns: a new #MateRRScreen instance or NULL if screen could not be created,
+ * for instance if the driver does not support Xrandr 1.2
+ */
+MateRRScreen *
+mate_rr_screen_new (GdkScreen *screen,
+                    MateRRScreenChanged callback,
+                    gpointer data,
+                    GError **error)
+{
+    _mate_desktop_init_i18n ();
+    MateRRScreen *self = g_initable_new (MATE_RR_TYPE_SCREEN, NULL, error, "gdk-screen", screen, NULL);
+    if (self && callback) {
+        g_signal_connect (self, "screen-changed", G_CALLBACK (callback), data);
+    }
+    return self;
+}
+/**
+ * mate_rr_screen_destroy:
+ *
+ * Destroy the screen and all associated resources
+ * Deprecated: 3.0
+ */
+void
+mate_rr_screen_destroy (MateRRScreen *self)
+{
+    g_object_run_dispose (G_OBJECT (self));
 }
 
 void
@@ -744,11 +848,11 @@ mate_rr_screen_set_size (MateRRScreen *screen,
 			  int       mm_width,
 			  int       mm_height)
 {
-    g_return_if_fail (screen != NULL);
+    g_return_if_fail (MATE_RR_IS_SCREEN (screen));
 
 #ifdef HAVE_RANDR
     gdk_error_trap_push ();
-    XRRSetScreenSize (screen->xdisplay, screen->xroot,
+    XRRSetScreenSize (screen->priv->xdisplay, screen->priv->xroot,
 		      width, height, mm_width, mm_height);
   #if GTK_CHECK_VERSION (3, 0, 0)
     gdk_error_trap_pop_ignored ();
@@ -759,6 +863,16 @@ mate_rr_screen_set_size (MateRRScreen *screen,
 #endif
 }
 
+/**
+ * mate_rr_screen_get_ranges:
+ *
+ * Get the ranges of the screen
+ * @screen: a #MateRRScreen
+ * @min_width: (out): the minimum width
+ * @max_width: (out): the maximum width
+ * @min_height: (out): the minimum height
+ * @max_height: (out): the maximum height
+ */
 void
 mate_rr_screen_get_ranges (MateRRScreen *screen,
 			    int	          *min_width,
@@ -766,26 +880,26 @@ mate_rr_screen_get_ranges (MateRRScreen *screen,
 			    int           *min_height,
 			    int	          *max_height)
 {
-    g_return_if_fail (screen != NULL);
+    g_return_if_fail (MATE_RR_IS_SCREEN (screen));
     
     if (min_width)
-	*min_width = screen->info->min_width;
+	*min_width = screen->priv->info->min_width;
     
     if (max_width)
-	*max_width = screen->info->max_width;
+	*max_width = screen->priv->info->max_width;
     
     if (min_height)
-	*min_height = screen->info->min_height;
+	*min_height = screen->priv->info->min_height;
     
     if (max_height)
-	*max_height = screen->info->max_height;
+	*max_height = screen->priv->info->max_height;
 }
 
 /**
- * mate_rr_screen_get_timestamps
+ * mate_rr_screen_get_timestamps:
  * @screen: a #MateRRScreen
- * @change_timestamp_ret: Location in which to store the timestamp at which the RANDR configuration was last changed
- * @config_timestamp_ret: Location in which to store the timestamp at which the RANDR configuration was last obtained
+ * @change_timestamp_ret: (out): Location in which to store the timestamp at which the RANDR configuration was last changed
+ * @config_timestamp_ret: (out): Location in which to store the timestamp at which the RANDR configuration was last obtained
  *
  * Queries the two timestamps that the X RANDR extension maintains.  The X
  * server will prevent change requests for stale configurations, those whose
@@ -798,14 +912,14 @@ mate_rr_screen_get_timestamps (MateRRScreen *screen,
 				guint32       *change_timestamp_ret,
 				guint32       *config_timestamp_ret)
 {
-    g_return_if_fail (screen != NULL);
+    g_return_if_fail (MATE_RR_IS_SCREEN (screen));
 
 #ifdef HAVE_RANDR
     if (change_timestamp_ret)
-	*change_timestamp_ret = screen->info->resources->timestamp;
+	*change_timestamp_ret = screen->priv->info->resources->timestamp;
 
     if (config_timestamp_ret)
-	*config_timestamp_ret = screen->info->resources->configTimestamp;
+	*config_timestamp_ret = screen->priv->info->resources->configTimestamp;
 #endif
 }
 
@@ -819,21 +933,21 @@ force_timestamp_update (MateRRScreen *screen)
 
     timestamp_updated = FALSE;
 
-    crtc = screen->info->crtcs[0];
+    crtc = screen->priv->info->crtcs[0];
 
     if (crtc == NULL)
 	goto out;
 
-    current_info = XRRGetCrtcInfo (screen->xdisplay,
-				   screen->info->resources,
+    current_info = XRRGetCrtcInfo (screen->priv->xdisplay,
+				   screen->priv->info->resources,
 				   crtc->id);
 
     if (current_info == NULL)
 	goto out;
 
     gdk_error_trap_push ();
-    status = XRRSetCrtcConfig (screen->xdisplay,
-			       screen->info->resources,
+    status = XRRSetCrtcConfig (screen->priv->xdisplay,
+			       screen->priv->info->resources,
 			       crtc->id,
 			       current_info->timestamp,
 			       current_info->x,
@@ -856,7 +970,7 @@ out:
 }
 
 /**
- * mate_rr_screen_refresh
+ * mate_rr_screen_refresh:
  * @screen: a #MateRRScreen
  * @error: location to store error, or %NULL
  *
@@ -876,83 +990,121 @@ mate_rr_screen_refresh (MateRRScreen *screen,
 
     g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
 
-    gdk_x11_display_grab (gdk_screen_get_display (screen->gdk_screen));
+    gdk_x11_display_grab (gdk_screen_get_display (screen->priv->gdk_screen));
 
     refreshed = screen_update (screen, FALSE, TRUE, error);
     force_timestamp_update (screen); /* this is to keep other clients from thinking that the X server re-detected things by itself - bgo#621046 */
 
-    gdk_x11_display_ungrab (gdk_screen_get_display (screen->gdk_screen));
+    gdk_x11_display_ungrab (gdk_screen_get_display (screen->priv->gdk_screen));
 
     return refreshed;
 }
 
+/**
+ * mate_rr_screen_list_modes:
+ *
+ * List available XRandR modes
+ *
+ * Returns: (array zero-terminated=1) (transfer none):
+ */
 MateRRMode **
 mate_rr_screen_list_modes (MateRRScreen *screen)
 {
-    g_return_val_if_fail (screen != NULL, NULL);
-    g_return_val_if_fail (screen->info != NULL, NULL);
+    g_return_val_if_fail (MATE_RR_IS_SCREEN (screen), NULL);
+    g_return_val_if_fail (screen->priv->info != NULL, NULL);
     
-    return screen->info->modes;
+    return screen->priv->info->modes;
 }
 
+/**
+ * mate_rr_screen_list_clone_modes:
+ *
+ * List available XRandR clone modes
+ *
+ * Returns: (array zero-terminated=1) (transfer none):
+ */
 MateRRMode **
 mate_rr_screen_list_clone_modes   (MateRRScreen *screen)
 {
-    g_return_val_if_fail (screen != NULL, NULL);
-    g_return_val_if_fail (screen->info != NULL, NULL);
+    g_return_val_if_fail (MATE_RR_IS_SCREEN (screen), NULL);
+    g_return_val_if_fail (screen->priv->info != NULL, NULL);
 
-    return screen->info->clone_modes;
+    return screen->priv->info->clone_modes;
 }
 
+/**
+ * mate_rr_screen_list_crtcs:
+ *
+ * List all CRTCs
+ *
+ * Returns: (array zero-terminated=1) (transfer none):
+ */
 MateRRCrtc **
 mate_rr_screen_list_crtcs (MateRRScreen *screen)
 {
-    g_return_val_if_fail (screen != NULL, NULL);
-    g_return_val_if_fail (screen->info != NULL, NULL);
+    g_return_val_if_fail (MATE_RR_IS_SCREEN (screen), NULL);
+    g_return_val_if_fail (screen->priv->info != NULL, NULL);
     
-    return screen->info->crtcs;
+    return screen->priv->info->crtcs;
 }
 
+/**
+ * mate_rr_screen_list_outputs:
+ *
+ * List all outputs
+ *
+ * Returns: (array zero-terminated=1) (transfer none):
+ */
 MateRROutput **
 mate_rr_screen_list_outputs (MateRRScreen *screen)
 {
-    g_return_val_if_fail (screen != NULL, NULL);
-    g_return_val_if_fail (screen->info != NULL, NULL);
+    g_return_val_if_fail (MATE_RR_IS_SCREEN (screen), NULL);
+    g_return_val_if_fail (screen->priv->info != NULL, NULL);
     
-    return screen->info->outputs;
+    return screen->priv->info->outputs;
 }
 
+/**
+ * mate_rr_screen_get_crtc_by_id:
+ *
+ * Returns: (transfer none): the CRTC identified by @id
+ */
 MateRRCrtc *
 mate_rr_screen_get_crtc_by_id (MateRRScreen *screen,
 				guint32        id)
 {
     int i;
     
-    g_return_val_if_fail (screen != NULL, NULL);
-    g_return_val_if_fail (screen->info != NULL, NULL);
+    g_return_val_if_fail (MATE_RR_IS_SCREEN (screen), NULL);
+    g_return_val_if_fail (screen->priv->info != NULL, NULL);
     
-    for (i = 0; screen->info->crtcs[i] != NULL; ++i)
+    for (i = 0; screen->priv->info->crtcs[i] != NULL; ++i)
     {
-	if (screen->info->crtcs[i]->id == id)
-	    return screen->info->crtcs[i];
+	if (screen->priv->info->crtcs[i]->id == id)
+	    return screen->priv->info->crtcs[i];
     }
     
     return NULL;
 }
 
+/**
+ * mate_rr_screen_get_output_by_id:
+ *
+ * Returns: (transfer none): the output identified by @id
+ */
 MateRROutput *
 mate_rr_screen_get_output_by_id (MateRRScreen *screen,
 				  guint32        id)
 {
     int i;
     
-    g_return_val_if_fail (screen != NULL, NULL);
-    g_return_val_if_fail (screen->info != NULL, NULL);
+    g_return_val_if_fail (MATE_RR_IS_SCREEN (screen), NULL);
+    g_return_val_if_fail (screen->priv->info != NULL, NULL);
     
-    for (i = 0; screen->info->outputs[i] != NULL; ++i)
+    for (i = 0; screen->priv->info->outputs[i] != NULL; ++i)
     {
-	if (screen->info->outputs[i]->id == id)
-	    return screen->info->outputs[i];
+	if (screen->priv->info->outputs[i]->id == id)
+	    return screen->priv->info->outputs[i];
     }
     
     return NULL;
@@ -1051,7 +1203,7 @@ get_connector_type_string (MateRROutput *output)
 
     result = NULL;
 
-    if (XRRGetOutputProperty (DISPLAY (output), output->id, output->info->screen->connector_type_atom,
+    if (XRRGetOutputProperty (DISPLAY (output), output->id, output->info->screen->priv->connector_type_atom,
 			      0, 100, False, False,
 			      AnyPropertyType,
 			      &actual_type, &actual_format,
@@ -1185,18 +1337,23 @@ mate_rr_output_get_edid_data (MateRROutput *output)
     return output->edid_data;
 }
 
+/**
+ * mate_rr_screen_get_output_by_id:
+ *
+ * Returns: (transfer none): the output identified by @name
+ */
 MateRROutput *
 mate_rr_screen_get_output_by_name (MateRRScreen *screen,
 				    const char    *name)
 {
     int i;
     
-    g_return_val_if_fail (screen != NULL, NULL);
-    g_return_val_if_fail (screen->info != NULL, NULL);
+    g_return_val_if_fail (MATE_RR_IS_SCREEN (screen), NULL);
+    g_return_val_if_fail (screen->priv->info != NULL, NULL);
     
-    for (i = 0; screen->info->outputs[i] != NULL; ++i)
+    for (i = 0; screen->priv->info->outputs[i] != NULL; ++i)
     {
-	MateRROutput *output = screen->info->outputs[i];
+	MateRROutput *output = screen->priv->info->outputs[i];
 	
 	if (strcmp (output->name, name) == 0)
 	    return output;
@@ -1383,8 +1540,8 @@ mate_rr_screen_set_primary_output (MateRRScreen *screen,
         id = None;
 
         /* Runtime check for RandR 1.3 or higher */
-    if (screen->rr_major_version == 1 && screen->rr_minor_version >= 3)
-        XRRSetOutputPrimary (screen->xdisplay, screen->xroot, id);
+    if (screen->priv->rr_major_version == 1 && screen->priv->rr_minor_version >= 3)
+        XRRSetOutputPrimary (screen->priv->xdisplay, screen->priv->xroot, id);
 #endif
 #endif /* HAVE_RANDR */
 }
