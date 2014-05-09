@@ -141,6 +141,8 @@ case "$with_gtk" in
        ;;
 esac
 
+AM_CONDITIONAL([USE_GTK3], [test "x$GTK_API_VERSION" = "x3.0"])
+
 GDK_PIXBUF_REQUIRED=2.4.0
 GLIB_REQUIRED=2.26.0
 GIO_REQUIRED=2.26.0
@@ -284,13 +286,17 @@ AC_SEARCH_LIBS([sqrt], [m])
 # check for gtk-doc
 GTK_DOC_CHECK([1.4])
 
+if test "x$GTK_API_VERSION" = "x3.0"; then
+AC_CONFIG_FILES([libmate-desktop/mate-desktop-3.0.pc])
+else
+AC_CONFIG_FILES([libmate-desktop/mate-desktop-2.0.pc])
+fi
+
 AC_CONFIG_FILES([
 Makefile
 mate-about/Makefile
 mate-about/mate-about.desktop.in
 libmate-desktop/Makefile
-libmate-desktop/mate-desktop-2.0.pc
-libmate-desktop/mate-desktop-2.0-uninstalled.pc
 docs/Makefile
 docs/reference/Makefile
 docs/reference/mate-desktop/Makefile
