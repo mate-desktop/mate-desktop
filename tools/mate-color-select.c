@@ -42,7 +42,12 @@ main (int argc, char **argv)
     /* initialize GTK+ */
     gtk_init (&argc, &argv);
 
+#if GTK_CHECK_VERSION (3, 12, 0)
+    color_dialog = mate_color_selection_dialog_new_with_header_bar (_("MATE Color Selection"));
+    gtk_header_bar_set_show_close_button (gtk_dialog_get_header_bar (GTK_DIALOG (color_dialog)), TRUE);
+#else
     color_dialog = mate_color_selection_dialog_new (_("MATE Color Selection"));
+#endif
 
     /* quit signal */
     g_signal_connect (color_dialog, "destroy", gtk_main_quit, NULL);
