@@ -298,6 +298,7 @@ mate-version.xml.in
 po/Makefile.in
 schemas/Makefile
 man/Makefile
+tools/mate-color-select.desktop.in
 tools/mate-conf-import.desktop.in
 tools/Makefile
 ])

@@ -1,11 +1,24 @@
+bin_PROGRAMS = mate-color-select
 bin_SCRIPTS = mate-gsettings-toggle
 
-if MATE_CONF_IMPORT_ENABLED
+mate_color_select_SOURCES = \
+	mate-color-select.c
+
+mate_color_select_CFLAGS = \
+	-DLOCALE_DIR=\"$(datadir)/locale\" \
+	$(MATE_DESKTOP_CFLAGS)
+
+mate_color_select_LDADD = \
+	$(top_builddir)/libmate-desktop/libmate-desktop-2.la \
+	$(MATE_DESKTOP_LIBS)
+
 @INTLTOOL_DESKTOP_RULE@
 
 desktopdir = $(datadir)/applications
-desktop_in_files = mate-conf-import.desktop.in
+desktop_in_files = mate-color-select.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+if MATE_CONF_IMPORT_ENABLED
+desktop_in_files += mate-conf-import.desktop.in
 bin_SCRIPTS += mate-conf-import
 endif
 
@@ -14,8 +27,9 @@ bin_SCRIPTS += mpaste
 endif
 
 EXTRA_DIST = \
+	mate-conf-import.desktop.in.in \
 	mate-conf-import \
 	mate-gsettings-toggle \
 	mpaste
 
-CLEANFILES = mate-conf-import.desktop mate-conf-import.desktop.in
+CLEANFILES = *.desktop *.desktop.in
