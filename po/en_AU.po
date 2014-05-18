@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-23 22:55+0200\n"
-"PO-Revision-Date: 2014-04-25 01:36+0000\n"
-"Last-Translator: k3lt01 <keltoiboy@gmail.com>\n"
+"POT-Creation-Date: 2014-05-14 19:55+0200\n"
+"PO-Revision-Date: 2014-05-14 17:58+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
 "Language-Team: English (Australia) (http://www.transifex.com/projects/p/MATE/language/en_AU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,29 +29,29 @@ msgstr "Learn more about MATE"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:109
+#: ../mate-about/mate-about.c:106
 msgid "translator-credits"
 msgstr "translator-credits"
 
-#: ../mate-about/mate-about.h:50
+#: ../mate-about/mate-about.h:46
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE provides an intuitive and attractive desktop to Linux users using traditional metaphors."
 
-#: ../mate-about/mate-about.h:53
+#: ../mate-about/mate-about.h:49
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "MATE includes most of what you see on your computer, including the file manager, document viewer, image viewer, menus, and many applications."
 
-#: ../mate-about/mate-about.h:56
+#: ../mate-about/mate-about.h:52
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE is a Free, usable, stable, accessible desktop environment for the Unix-like family of operating systems."
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:55
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -59,13 +59,13 @@ msgid ""
 "assurance."
 msgstr "MATE is the continuation of GNOME 2. Hundreds of people have contributed code to GNOME since it was started in 1997; many more have contributed in other important ways, including translations, documentation, and quality assurance."
 
-#: ../mate-about/mate-about.h:63
+#: ../mate-about/mate-about.h:59
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 was the most popular Linux desktop but it’s no longer available... MATE is here to provide that same desktop to you!"
 
-#: ../mate-about/mate-about.h:66
+#: ../mate-about/mate-about.h:62
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -119,7 +119,7 @@ msgid "Comments about the program"
 msgstr "Comments about the program"
 
 #: ../libmate-desktop/mate-aboutdialog.c:307
-#: ../libmate-desktop/mate-aboutdialog.c:2128
+#: ../libmate-desktop/mate-aboutdialog.c:2164
 msgid "License"
 msgstr "Licence"
 
@@ -205,39 +205,263 @@ msgid "Whether to wrap the license text."
 msgstr "Whether to wrap the licence text."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:544
+#: ../libmate-desktop/mate-aboutdialog.c:547
 msgid "C_redits"
 msgstr "C_redits"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:558
+#: ../libmate-desktop/mate-aboutdialog.c:561
 msgid "_License"
 msgstr "_Licence"
 
-#: ../libmate-desktop/mate-aboutdialog.c:833
+#: ../libmate-desktop/mate-aboutdialog.c:841
 #, c-format
 msgid "About %s"
 msgstr "About %s"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2052
+#: ../libmate-desktop/mate-aboutdialog.c:2088
 msgid "Credits"
 msgstr "Credits"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2080
+#: ../libmate-desktop/mate-aboutdialog.c:2116
 msgid "Written by"
 msgstr "Written by"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2083
+#: ../libmate-desktop/mate-aboutdialog.c:2119
 msgid "Documented by"
 msgstr "Documented by"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2095
+#: ../libmate-desktop/mate-aboutdialog.c:2131
 msgid "Translated by"
 msgstr "Translated by"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2099
+#: ../libmate-desktop/mate-aboutdialog.c:2135
 msgid "Artwork by"
 msgstr "Artwork by"
+
+#: ../libmate-desktop/mate-colorbutton.c:154
+msgid "Use alpha"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:155
+msgid "Whether or not to give the color an alpha value"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:169
+msgid "Title"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:170
+msgid "The title of the color selection dialog"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:171
+#: ../libmate-desktop/mate-colorbutton.c:470
+msgid "Pick a Color"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:184
+#: ../libmate-desktop/mate-colorsel.c:337
+msgid "Current Color"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:185
+msgid "The selected color"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:199
+#: ../libmate-desktop/mate-colorsel.c:344
+msgid "Current Alpha"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:200
+msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:356
+msgid "Received invalid color data\n"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:323
+msgid "Has Opacity Control"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:324
+msgid "Whether the color selector should allow setting opacity"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:330
+msgid "Has palette"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:331
+msgid "Whether a palette should be used"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:338
+msgid "The current color"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:345
+msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:398
+msgid ""
+"Select the color you want from the outer ring. Select the darkness or "
+"lightness of that color using the inner triangle."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:422
+msgid ""
+"Click the eyedropper, then click a color anywhere on your screen to select "
+"that color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:431
+msgid "_Hue:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:432
+msgid "Position on the color wheel."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:434
+msgid "_Saturation:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:435
+msgid "\"Deepness\" of the color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:436
+msgid "_Value:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:437
+msgid "Brightness of the color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:438
+msgid "_Red:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:439
+msgid "Amount of red light in the color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:440
+msgid "_Green:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:441
+msgid "Amount of green light in the color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:442
+msgid "_Blue:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:443
+msgid "Amount of blue light in the color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:446
+msgid "Op_acity:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:453
+#: ../libmate-desktop/mate-colorsel.c:463
+msgid "Transparency of the color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:470
+msgid "Color _name:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:484
+msgid ""
+"You can enter an HTML-style hexadecimal color value, or simply a color name "
+"such as 'orange' in this entry."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:514
+msgid "_Palette:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:543
+msgid "Color Wheel"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1057
+msgid ""
+"The previously-selected color, for comparison to the color you're selecting "
+"now. You can drag this color to a palette entry, or select this color as "
+"current by dragging it to the other color swatch alongside."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1060
+msgid ""
+"The color you've chosen. You can drag this color to a palette entry to save "
+"it for use in the future."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1065
+msgid ""
+"The previously-selected color, for comparison to the color you're selecting "
+"now."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1068
+msgid "The color you've chosen."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1514
+msgid "gtk-color-sel"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1519
+msgid "_Save color here"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1749
+msgid ""
+"Click this palette entry to make it the current color. To change this entry,"
+" drag a color swatch here or right-click it and select \"Save color here.\""
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:99
+#: ../libmate-desktop/mate-colorseldialog.c:168
+msgid "Color Selection"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:100
+msgid "The color selection embedded in the dialog."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:106
+msgid "OK Button"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:107
+msgid "The OK button of the dialog."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:113
+msgid "Cancel Button"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:114
+msgid "The cancel button of the dialog."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:120
+msgid "Help Button"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:121
+msgid "The help button of the dialog."
+msgstr ""
 
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -927,6 +1151,19 @@ msgid ""
 "control characters."
 msgstr "Whether the context menus of entries and text views should offer to insert control characters."
 
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:55
+msgid "Titlebar layout of GTK3 client-side decorated windows"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:56
+msgid ""
+"This setting determines which buttons should be put in the titlebar of "
+"client-side decorated windows, and whether they should be placed at the left"
+" of right. See "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"decoration-layout."
+msgstr ""
+
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
 msgid "Disable command line"
 msgstr "Disable command line"
@@ -1241,6 +1478,19 @@ msgstr "Whether or not keyboard locking is enabled"
 #: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Whether or not keyboard locking is enabled."
+
+#: ../tools/mate-color-select.c:46 ../tools/mate-color-select.c:49
+#: ../tools/mate-color-select.desktop.in.in.h:1
+msgid "MATE Color Selection"
+msgstr ""
+
+#: ../tools/mate-color-select.desktop.in.in.h:2
+msgid "Color selection dialog"
+msgstr ""
+
+#: ../tools/mate-color-select.desktop.in.in.h:3
+msgid "Choose colors from the palette or the screen"
+msgstr ""
 
 #: ../tools/mate-conf-import.desktop.in.in.h:1
 msgid "Migrate MATE 1.4 settings"

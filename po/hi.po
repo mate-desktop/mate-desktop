@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Sadgamaya <g.raghavan.g@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-22 10:56+0100\n"
-"PO-Revision-Date: 2014-02-22 09:58+0000\n"
+"POT-Creation-Date: 2014-05-14 19:55+0200\n"
+"PO-Revision-Date: 2014-05-14 17:58+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
 "Language-Team: Hindi (http://www.transifex.com/projects/p/MATE/language/hi/)\n"
 "MIME-Version: 1.0\n"
@@ -27,42 +28,43 @@ msgstr "गनोम के बारे में और जानें"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:113
+#: ../mate-about/mate-about.c:106
 msgid "translator-credits"
 msgstr ""
 
-#: ../mate-about/mate-about.h:48
+#: ../mate-about/mate-about.h:46
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
 
-#: ../mate-about/mate-about.h:51
+#: ../mate-about/mate-about.h:49
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
 
-#: ../mate-about/mate-about.h:54
+#: ../mate-about/mate-about.h:52
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
 
-#: ../mate-about/mate-about.h:57
+#: ../mate-about/mate-about.h:55
 msgid ""
-"MATE is a fork of GNOME 2. Hundreds of people have contributed code to GNOME"
-" since it was started in 1997; many more have contributed in other important"
-" ways, including translations, documentation, and quality assurance."
+"MATE is the continuation of GNOME 2. Hundreds of people have contributed "
+"code to GNOME since it was started in 1997; many more have contributed in "
+"other important ways, including translations, documentation, and quality "
+"assurance."
 msgstr ""
 
-#: ../mate-about/mate-about.h:61
+#: ../mate-about/mate-about.h:59
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr ""
 
-#: ../mate-about/mate-about.h:64
+#: ../mate-about/mate-about.h:62
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -75,6 +77,389 @@ msgstr ""
 #: ../libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
+msgstr "अज्ञात"
+
+#: ../libmate-desktop/mate-aboutdialog.c:184
+msgid "Could not show link"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:240
+msgid "Program name"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:241
+msgid ""
+"The name of the program. If this is not set, it defaults to "
+"g_get_application_name()"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:255
+msgid "Program version"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:256
+msgid "The version of the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:270
+msgid "Copyright string"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:271
+msgid "Copyright information for the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:288
+msgid "Comments string"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:289
+msgid "Comments about the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:307
+#: ../libmate-desktop/mate-aboutdialog.c:2164
+msgid "License"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:308
+msgid "The license of the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:323
+msgid "Website URL"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:324
+msgid "The URL for the link to the website of the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:339
+msgid "Website label"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:340
+msgid ""
+"The label for the link to the website of the program. If this is not set, it"
+" defaults to the URL"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:356
+msgid "Authors"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:357
+msgid "List of authors of the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:373
+msgid "Documenters"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:374
+msgid "List of people documenting the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:390
+msgid "Artists"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:391
+msgid "List of people who have contributed artwork to the program"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:408
+msgid "Translator credits"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:409
+msgid ""
+"Credits to the translators. This string should be marked as translatable"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:424
+msgid "Logo"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:425
+msgid ""
+"A logo for the about box. If this is not set, it defaults to "
+"gtk_window_get_default_icon_list()"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:440
+msgid "Logo Icon Name"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:441
+msgid "A named icon to use as the logo for the about box."
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:454
+msgid "Wrap license"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:455
+msgid "Whether to wrap the license text."
+msgstr ""
+
+#. Add the credits button
+#: ../libmate-desktop/mate-aboutdialog.c:547
+msgid "C_redits"
+msgstr ""
+
+#. Add the license button
+#: ../libmate-desktop/mate-aboutdialog.c:561
+msgid "_License"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:841
+#, c-format
+msgid "About %s"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2088
+msgid "Credits"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2116
+msgid "Written by"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2119
+msgid "Documented by"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2131
+msgid "Translated by"
+msgstr ""
+
+#: ../libmate-desktop/mate-aboutdialog.c:2135
+msgid "Artwork by"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:154
+msgid "Use alpha"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:155
+msgid "Whether or not to give the color an alpha value"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:169
+msgid "Title"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:170
+msgid "The title of the color selection dialog"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:171
+#: ../libmate-desktop/mate-colorbutton.c:470
+msgid "Pick a Color"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:184
+#: ../libmate-desktop/mate-colorsel.c:337
+msgid "Current Color"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:185
+msgid "The selected color"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:199
+#: ../libmate-desktop/mate-colorsel.c:344
+msgid "Current Alpha"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:200
+msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorbutton.c:356
+msgid "Received invalid color data\n"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:323
+msgid "Has Opacity Control"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:324
+msgid "Whether the color selector should allow setting opacity"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:330
+msgid "Has palette"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:331
+msgid "Whether a palette should be used"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:338
+msgid "The current color"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:345
+msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:398
+msgid ""
+"Select the color you want from the outer ring. Select the darkness or "
+"lightness of that color using the inner triangle."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:422
+msgid ""
+"Click the eyedropper, then click a color anywhere on your screen to select "
+"that color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:431
+msgid "_Hue:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:432
+msgid "Position on the color wheel."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:434
+msgid "_Saturation:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:435
+msgid "\"Deepness\" of the color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:436
+msgid "_Value:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:437
+msgid "Brightness of the color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:438
+msgid "_Red:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:439
+msgid "Amount of red light in the color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:440
+msgid "_Green:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:441
+msgid "Amount of green light in the color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:442
+msgid "_Blue:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:443
+msgid "Amount of blue light in the color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:446
+msgid "Op_acity:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:453
+#: ../libmate-desktop/mate-colorsel.c:463
+msgid "Transparency of the color."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:470
+msgid "Color _name:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:484
+msgid ""
+"You can enter an HTML-style hexadecimal color value, or simply a color name "
+"such as 'orange' in this entry."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:514
+msgid "_Palette:"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:543
+msgid "Color Wheel"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1057
+msgid ""
+"The previously-selected color, for comparison to the color you're selecting "
+"now. You can drag this color to a palette entry, or select this color as "
+"current by dragging it to the other color swatch alongside."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1060
+msgid ""
+"The color you've chosen. You can drag this color to a palette entry to save "
+"it for use in the future."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1065
+msgid ""
+"The previously-selected color, for comparison to the color you're selecting "
+"now."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1068
+msgid "The color you've chosen."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1514
+msgid "gtk-color-sel"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1519
+msgid "_Save color here"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:1749
+msgid ""
+"Click this palette entry to make it the current color. To change this entry,"
+" drag a color swatch here or right-click it and select \"Save color here.\""
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:99
+#: ../libmate-desktop/mate-colorseldialog.c:168
+msgid "Color Selection"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:100
+msgid "The color selection embedded in the dialog."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:106
+msgid "OK Button"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:107
+msgid "The OK button of the dialog."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:113
+msgid "Cancel Button"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:114
+msgid "The cancel button of the dialog."
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:120
+msgid "Help Button"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorseldialog.c:121
+msgid "The help button of the dialog."
 msgstr ""
 
 #: ../libmate-desktop/mate-desktop-item.c:220
@@ -105,7 +490,7 @@ msgstr "फ़ाइल '%s' सामान्य फ़ाइल अथवा 
 #: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
 msgid "Cannot find file '%s'"
-msgstr ""
+msgstr "'%s' फ़ाइल नहीं पा सका"
 
 #: ../libmate-desktop/mate-desktop-item.c:837
 #, c-format
@@ -277,77 +662,77 @@ msgstr "मिरर स्क्रीन"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:1
 msgid "minimum interval in milliseconds"
-msgstr ""
+msgstr "न्यूनतम अंतराल मिलिसेकंडस में"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr ""
+msgstr "@delay मिलीसेकेंड के अंदर  _same_ key का कई बार दबाए जाना अनदेखा करें."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:3
 msgid "Pixels per seconds"
-msgstr ""
+msgstr "पिक्सेल प्रति सेकेंड"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr ""
+msgstr "अधिकतम गति पर कितने पिक्सेल प्रति सेकेंड चलाना है"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr ""
+msgstr "मिलिसेकंडस में कितना त्वरण करें"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr ""
+msgstr "0 से अधिकतम गति तक पहुँचने में यह कितना मिलीसेकेंड लेता है."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:7
 msgid "Initial delay in milliseconds"
-msgstr ""
+msgstr "आरंभिक विलम्ब मिलिसेकंडस में"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
-msgstr ""
+msgstr "माउस गतिविधि कुंजी के कार्य करना प्रारंभ करने से पहले कितने मिलीसेकेंड तक प्रतीक्षा करें."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:9
 msgid "Minimum interval in milliseconds"
-msgstr ""
+msgstr "न्यूनतम अंतराल मिलिसेकंडस में"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr ""
+msgstr "बतौर दबाए गए रूप में कोई कुंजी स्वीकारें नहीं करें जब तक कि @delay मिलिसेकेंड के लिए रोका नहीं जाए."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:11
 msgid "Disable if two keys are pressed at the same time."
-msgstr ""
+msgstr "यदि दो कुंजियाँ एक साथ दबाई जाएँ तो अक्षम करें"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:12
 msgid "Beep when a modifier is pressed."
-msgstr ""
+msgstr "जब परिवर्धक दबाया जाता है तो बीप करें"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr ""
+msgstr "मददगार तकनॉनाज़ी अनुप्रयोगों को प्रारंभ करें"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
-msgstr ""
+msgstr " माटे डेस्कटॉप में लॉगिंग के दौरान आरंभ करने के लिए मददगार तकनीक अनुप्रयोगों की सूची."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "पसंदीदा गतिशीलता मददगार तकनीक अनुप्रयोग"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr ""
+msgstr "लॉगिन, मेन्यू, या कमांड लाइन के लिए प्रयोग किए जाने के लिए पसंदीदा गतिशीलता मददगार तकनीक अनुप्रयोग."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr ""
+msgstr "पसंदीदा गतिशीलता मददगार तकनीक अनुप्रयोग आरंभ करें"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:4
 msgid ""
@@ -377,51 +762,51 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:1
 msgid "Default browser"
-msgstr ""
+msgstr "तयशुदा ब्राउज़र"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:2
 msgid "Default browser for all URLs."
-msgstr ""
+msgstr "सभी यूआरएल के लिए तयशुदा ब्राउज़र."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:3
 msgid "Browser needs terminal"
-msgstr ""
+msgstr "ब्राउज़र को टर्मिनल की आवश्यकता है"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:4
 msgid "Whether the default browser needs a terminal to run."
-msgstr ""
+msgstr "क्या तयशुदा ब्राउज़र चलाने के लिए टर्मिनल की आवश्यकता है."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:5
 msgid "Browser understands remote"
-msgstr ""
+msgstr "ब्राउज़र रिमोट को समझता है"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:6
 msgid "Whether the default browser understands netscape remote."
-msgstr ""
+msgstr "क्या तयशुदा ब्राउज़र नेटस्केप रिमोट को समझता है."
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:1
 msgid "Default calendar"
-msgstr ""
+msgstr "तयशुदा पंचांग"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:2
 msgid "Default calendar application"
-msgstr ""
+msgstr "तयशुदा पंचांग अनुप्रयोग"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:3
 msgid "Calendar needs terminal"
-msgstr ""
+msgstr "पंचांग को टर्मिनल की आवश्यकता है"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr ""
+msgstr "क्या तयशुदा पंचांग अनुप्रयोग चलाने के लिए टर्मिनल की आवश्यकता है"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:5
 msgid "Default tasks"
-msgstr ""
+msgstr "तयशुदा कार्य"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:6
 msgid "Default tasks application"
-msgstr ""
+msgstr "तयशुदा कार्य अनुप्रयोग"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:7
 msgid "Tasks needs terminal"
@@ -429,11 +814,11 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr ""
+msgstr "क्या तयशुदा कार्य अनुप्रयोग चलाने के लिए टर्मिनल की आवश्यकता है"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:1
 msgid "Terminal application"
-msgstr ""
+msgstr "टर्मिनल अनुप्रयोग"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:2
 msgid "Terminal program to use when starting applications that require one."
@@ -441,7 +826,7 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:3
 msgid "Exec Arguments"
-msgstr ""
+msgstr "ईएक्सईसी आर्गुमेंट्स"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:4
 msgid ""
@@ -450,11 +835,11 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:1
 msgid "Draw Desktop Background"
-msgstr ""
+msgstr "डेस्कटॉप पृष्ठभूमि आरेखित करें"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr ""
+msgstr "माटे को डेस्कटॉप पृष्ठभूमि आरेखित करने दें"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:3
 msgid "Show Desktop Icons"
@@ -476,7 +861,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:7
 msgid "Picture Options"
-msgstr ""
+msgstr "छवि विकल्प"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:8
 msgid ""
@@ -487,40 +872,40 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:9
 msgid "Picture Filename"
-msgstr ""
+msgstr "छवि फ़ाइल नाम"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:10
 msgid "File to use for the background image."
-msgstr ""
+msgstr "पृष्ठभूमि छवि में उपयोग हेतु फ़ाइल"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:11
 msgid "Picture Opacity"
-msgstr ""
+msgstr "छवि अपारदर्शिता"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:12
 msgid "Opacity with which to draw the background picture."
-msgstr ""
+msgstr "अपारदर्शिता जिससे पृष्ठभूमि छवि आरेखित करनी है."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:13
 msgid "Primary Color"
-msgstr ""
+msgstr "प्राथमिक रंग"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr ""
+msgstr "बायाँ या शीर्ष रंग जब अनुपात आरेखित किए जाएँ, या ठोस रंग."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:15
 msgid "Secondary Color"
-msgstr ""
+msgstr "द्वैतीयक रंग"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr ""
+msgstr "दायाँ या तल रंग जब अनुपात आरेखित किए जाएँ, ठोस रंगों में प्रयुक्त नहीं."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:17
 msgid "Color Shading Type"
-msgstr ""
+msgstr "रंग आभा प्रकार"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:18
 msgid ""
@@ -530,15 +915,15 @@ msgstr ""
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.in.h:1
 msgid "File Icon Theme"
-msgstr ""
+msgstr "फ़ाइल चिह्न प्रसंग"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr ""
+msgstr "फ़ाइल प्रतीक प्रदर्शित करने में प्रयुक्त प्रसंग."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:1
 msgid "Enable Accessibility"
-msgstr ""
+msgstr "एक्सेसिबिलिटी सक्षम"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:2
 msgid "Whether Applications should have accessibility support."
@@ -546,7 +931,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:3
 msgid "Enable Animations"
-msgstr ""
+msgstr "एनीमेशन सक्षम करें"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:4
 msgid ""
@@ -556,11 +941,11 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:5
 msgid "Menus Have Tearoff"
-msgstr ""
+msgstr "मेनू अलग करने योग्य हों"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr ""
+msgstr "क्या मेन्यू अलग करने योग्य होना चाहिए."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:7
 msgid "Can Change Accels"
@@ -574,7 +959,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:9
 msgid "Toolbar Style"
-msgstr ""
+msgstr "उपकरण-पट्टी शैली"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:10
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
@@ -763,6 +1148,19 @@ msgstr ""
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:55
+msgid "Titlebar layout of GTK3 client-side decorated windows"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:56
+msgid ""
+"This setting determines which buttons should be put in the titlebar of "
+"client-side decorated windows, and whether they should be placed at the left"
+" of right. See "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"decoration-layout."
 msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
@@ -1080,18 +1478,23 @@ msgstr ""
 msgid "Whether or not keyboard locking is enabled."
 msgstr ""
 
+#: ../tools/mate-color-select.c:46 ../tools/mate-color-select.c:49
+#: ../tools/mate-color-select.desktop.in.in.h:1
+msgid "MATE Color Selection"
+msgstr ""
+
+#: ../tools/mate-color-select.desktop.in.in.h:2
+msgid "Color selection dialog"
+msgstr ""
+
+#: ../tools/mate-color-select.desktop.in.in.h:3
+msgid "Choose colors from the palette or the screen"
+msgstr ""
+
 #: ../tools/mate-conf-import.desktop.in.in.h:1
 msgid "Migrate MATE 1.4 settings"
 msgstr ""
 
 #: ../tools/mate-conf-import.desktop.in.in.h:2
 msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr ""
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:1
-msgid "Help"
-msgstr ""
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:2
-msgid "Get help with MATE"
 msgstr ""
