@@ -1159,16 +1159,19 @@ palette_paint (GtkWidget    *drawing_area,
     return;
 
   gtk_widget_get_allocation (drawing_area, &allocation);
+
+#if !GTK_CHECK_VERSION (3, 0, 0)
+  cr = gdk_cairo_create (gtk_widget_get_window (drawing_area));
+#endif
+
   gdk_cairo_set_source_color (cr, &gtk_widget_get_style (drawing_area)->bg[GTK_STATE_NORMAL]);
 #if GTK_CHECK_VERSION (3, 0, 0)
   cairo_rectangle (cr, 0, 0, allocation.width, allocation.height);
 #else
-  cr = gdk_cairo_create (gtk_widget_get_window (drawing_area));
-
   gdk_cairo_rectangle (cr, area);
 #endif
   cairo_fill (cr);
-  
+
   if (gtk_widget_has_focus (drawing_area))
     {
       set_focus_line_attributes (drawing_area, cr, &focus_width);
