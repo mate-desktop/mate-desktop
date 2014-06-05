@@ -32,11 +32,6 @@
 
 #include <gdk/gdkkeysyms.h>
 #include <gtk/gtk.h>
-#if GTK_CHECK_VERSION (3, 0, 0)
-#include <gdk/gdkkeysyms-compat.h>
-#else
-#include <gdkconfig.h>
-#endif
 #include <glib/gi18n-lib.h>
 #include "mate-colorsel.h"
 
@@ -1664,11 +1659,11 @@ palette_activate (GtkWidget   *widget,
 		  gpointer     data)
 {
   /* should have a drawing area subclass with an activate signal */
-  if ((event->keyval == GDK_space) ||
-      (event->keyval == GDK_Return) ||
-      (event->keyval == GDK_ISO_Enter) ||
-      (event->keyval == GDK_KP_Enter) ||
-      (event->keyval == GDK_KP_Space))
+  if ((event->keyval == GDK_KEY_space) ||
+      (event->keyval == GDK_KEY_Return) ||
+      (event->keyval == GDK_KEY_ISO_Enter) ||
+      (event->keyval == GDK_KEY_KP_Enter) ||
+      (event->keyval == GDK_KEY_KP_Space))
     {
       if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (widget), "color_set")) != 0)
         {
@@ -1974,15 +1969,15 @@ key_press (GtkWidget   *invisible,
 
   switch (event->keyval) 
     {
-    case GDK_space:
-    case GDK_Return:
-    case GDK_ISO_Enter:
-    case GDK_KP_Enter:
-    case GDK_KP_Space:
+    case GDK_KEY_space:
+    case GDK_KEY_Return:
+    case GDK_KEY_ISO_Enter:
+    case GDK_KEY_KP_Enter:
+    case GDK_KEY_KP_Space:
       grab_color_at_mouse (screen, x, y, data);
       /* fall through */
 
-    case GDK_Escape:
+    case GDK_KEY_Escape:
       shutdown_eyedropper (data);
       
       g_signal_handlers_disconnect_by_func (invisible,
@@ -1995,23 +1990,23 @@ key_press (GtkWidget   *invisible,
       return TRUE;
 
 #if defined GDK_WINDOWING_X11 || defined GDK_WINDOWING_WIN32
-    case GDK_Up:
-    case GDK_KP_Up:
+    case GDK_KEY_Up:
+    case GDK_KEY_KP_Up:
       dy = state == GDK_MOD1_MASK ? -BIG_STEP : -1;
       break;
 
-    case GDK_Down:
-    case GDK_KP_Down:
+    case GDK_KEY_Down:
+    case GDK_KEY_KP_Down:
       dy = state == GDK_MOD1_MASK ? BIG_STEP : 1;
       break;
 
-    case GDK_Left:
-    case GDK_KP_Left:
+    case GDK_KEY_Left:
+    case GDK_KEY_KP_Left:
       dx = state == GDK_MOD1_MASK ? -BIG_STEP : -1;
       break;
 
-    case GDK_Right:
-    case GDK_KP_Right:
+    case GDK_KEY_Right:
+    case GDK_KEY_KP_Right:
       dx = state == GDK_MOD1_MASK ? BIG_STEP : 1;
       break;
 #endif
