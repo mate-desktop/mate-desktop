@@ -133,11 +133,7 @@ struct _ColorSelectionPrivate
 };
 
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 static void mate_color_selection_dispose		(GObject		 *object);
-#else
-static void mate_color_selection_destroy		(GtkObject		 *object);
-#endif
 static void mate_color_selection_finalize        (GObject		 *object);
 static void update_color			(MateColorSelection	 *colorsel);
 static void mate_color_selection_set_property    (GObject                 *object,
@@ -289,9 +285,6 @@ static void
 mate_color_selection_class_init (MateColorSelectionClass *klass)
 {
   GObjectClass *gobject_class;
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  GtkObjectClass *object_class;
-#endif
   GtkWidgetClass *widget_class;
   
   gobject_class = G_OBJECT_CLASS (klass);
@@ -299,12 +292,7 @@ mate_color_selection_class_init (MateColorSelectionClass *klass)
   gobject_class->set_property = mate_color_selection_set_property;
   gobject_class->get_property = mate_color_selection_get_property;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   gobject_class->dispose = mate_color_selection_dispose;
-#else
-  object_class = GTK_OBJECT_CLASS (klass);
-  object_class->destroy = mate_color_selection_destroy;
-#endif
 
   widget_class = GTK_WIDGET_CLASS (klass);
   widget_class->realize = mate_color_selection_realize;
@@ -343,11 +331,7 @@ mate_color_selection_class_init (MateColorSelectionClass *klass)
   
   color_selection_signals[COLOR_CHANGED] =
     g_signal_new ("color-changed",
-#if GTK_CHECK_VERSION (3, 0, 0)
 		  G_OBJECT_CLASS_TYPE (gobject_class),
-#else
-		  G_OBJECT_CLASS_TYPE (object_class),
-#endif
 		  G_SIGNAL_RUN_FIRST,
 		  G_STRUCT_OFFSET (MateColorSelectionClass, color_changed),
 		  NULL, NULL,
@@ -611,7 +595,6 @@ mate_color_selection_get_property (GObject     *object,
     }
 }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 static void
 mate_color_selection_dispose (GObject *object)
 {
@@ -626,24 +609,6 @@ mate_color_selection_dispose (GObject *object)
 
   G_OBJECT_CLASS (mate_color_selection_parent_class)->dispose (object);
 }
-#else
-/* GtkObject methods */
-
-static void
-mate_color_selection_destroy (GtkObject *object)
-{
-  MateColorSelection *cselection = MATE_COLOR_SELECTION (object);
-  ColorSelectionPrivate *priv = cselection->private_data;
-
-  if (priv->dropper_grab_widget)
-    {
-      gtk_widget_destroy (priv->dropper_grab_widget);
-      priv->dropper_grab_widget = NULL;
-    }
-
-  GTK_OBJECT_CLASS (mate_color_selection_parent_class)->destroy (object);
-}
-#endif
 
 /* GtkWidget methods */
 
