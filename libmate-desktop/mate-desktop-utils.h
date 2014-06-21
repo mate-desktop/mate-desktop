@@ -32,10 +32,7 @@
 #endif
 
 #include <glib.h>
-#include <glib-object.h>
-
 #include <gdk/gdk.h>
-#include <gtk/gtk.h>
 
 #ifdef __cplusplus
 extern "C" {
