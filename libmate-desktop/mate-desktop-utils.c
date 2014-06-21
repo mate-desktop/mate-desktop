@@ -196,8 +196,13 @@ mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, 
 	appinfo = g_app_info_create_from_commandline (command, NULL, G_APP_INFO_CREATE_NONE, error);
 
 	if (appinfo) {
+#if GTK_CHECK_VERSION (3, 0, 0)
+		context = gdk_display_get_app_launch_context (gdk_screen_get_display (screen));
+#else
+		/* Deprecated in GDK 3.0 */
 		context = gdk_app_launch_context_new ();
 		gdk_app_launch_context_set_screen (context, screen);
+#endif
 		res = g_app_info_launch (appinfo, NULL, G_APP_LAUNCH_CONTEXT (context), error);
 		g_object_unref (context);
 		g_object_unref (appinfo);
