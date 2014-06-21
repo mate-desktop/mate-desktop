@@ -28,6 +28,8 @@
 #include <glib.h>
 #include <gio/gio.h>
 #include <glib/gi18n-lib.h>
+#include <gdk/gdk.h>
+#include <gtk/gtk.h>
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
 #include <mate-desktop-utils.h>
