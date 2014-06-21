@@ -51,4 +51,4 @@ gboolean mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *
 }
 #endif
 
-#endif /* MATE_DITEM_H */
+#endif /* MATE_DESKTOP_UTILS_H */

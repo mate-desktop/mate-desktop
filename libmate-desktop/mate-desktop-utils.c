@@ -171,8 +171,8 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
  * @command: a command line
  * @error: return location for errors
  *
- * This is a replacement for gdk_spawn_command_line_on_screen, removed
- * in GTK3.
+ * This is a replacement for gdk_spawn_command_line_on_screen, deprecated
+ * in GDK 2.24 and removed in GDK 3.0.
  *
  * gdk_spawn_command_line_on_screen is like g_spawn_command_line_async(),
  * except the child process is spawned in such an environment that on
