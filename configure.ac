@@ -310,7 +310,8 @@ dnl - Show summary
 dnl ---------------------------------------------------------------------------
 
 echo "
-mate-desktop $VERSION `echo mate-desktop $VERSION | sed "s/./=/g"`
+mate-desktop $VERSION
+`echo mate-desktop $VERSION | sed "s/./=/g"`
 
     prefix:                       ${prefix}
     exec_prefix:                  ${exec_prefix}
