@@ -165,7 +165,6 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 #endif
 }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 /**
  * mate_gdk_spawn_command_line_on_screen:
  * @screen: a GdkScreen
@@ -206,7 +205,6 @@ mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, 
 
 	return res;
 }
-#endif
 
 void
 _mate_desktop_init_i18n (void) {
