@@ -29,12 +29,11 @@
 #error    MateBGCrossfade is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including mate-bg-crossfade.h
 #endif
 
+#include <glib.h>
 #include <gdk/gdk.h>
 #include <gtk/gtk.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MATE_TYPE_BG_CROSSFADE            (mate_bg_crossfade_get_type ())
 #define MATE_BG_CROSSFADE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_BG_CROSSFADE, MateBGCrossfade))
@@ -82,8 +81,6 @@ void              mate_bg_crossfade_start (MateBGCrossfade *fade,
 gboolean          mate_bg_crossfade_is_started (MateBGCrossfade *fade);
 void              mate_bg_crossfade_stop (MateBGCrossfade *fade);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif

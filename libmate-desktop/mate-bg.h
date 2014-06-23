@@ -31,14 +31,13 @@
 #error    MateBG is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including mate-bg.h
 #endif
 
+#include <glib.h>
 #include <gdk/gdk.h>
 #include <gio/gio.h>
 #include "mate-desktop-thumbnail.h"
 #include "mate-bg-crossfade.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 #define MATE_TYPE_BG            (mate_bg_get_type ())
 #define MATE_BG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_BG, MateBG))
@@ -175,8 +174,6 @@ MateBGCrossfade *mate_bg_set_pixmap_as_root_with_crossfade  (GdkScreen       *sc
 GdkPixmap *mate_bg_get_pixmap_from_root (GdkScreen *screen);
 #endif /* GTK_CHECK_VERSION(3, 0, 0) */
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif

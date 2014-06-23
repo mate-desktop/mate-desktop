@@ -35,9 +35,7 @@
 #include <time.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 typedef enum {
   MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL,
@@ -107,8 +105,6 @@ GdkPixbuf *mate_desktop_thumbnail_scale_down_pixbuf (GdkPixbuf          *pixbuf,
 						      int                 dest_width,
 						      int                 dest_height);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* MATE_DESKTOP_THUMBNAIL_H */

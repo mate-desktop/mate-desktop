@@ -25,14 +25,12 @@
 #ifndef __MATE_DESKTOP_PRIVATE_H__
 #define __MATE_DESKTOP_PRIVATE_H__
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+#include <glib.h>
+
+G_BEGIN_DECLS
 
 void _mate_desktop_init_i18n (void);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif

@@ -34,9 +34,7 @@
 #include <glib.h>
 #include <gdk/gdk.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 /* prepend the terminal command to a vector */
 void mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv);
@@ -44,8 +42,6 @@ void mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv);
 /* replace gdk_spawn_command_line_on_screen, not available in GTK3 */
 gboolean mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* MATE_DESKTOP_UTILS_H */

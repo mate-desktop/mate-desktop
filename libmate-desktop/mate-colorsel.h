@@ -28,6 +28,7 @@
 #ifndef __MATE_COLOR_SELECTION_H__
 #define __MATE_COLOR_SELECTION_H__
 
+#include <glib.h>
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS

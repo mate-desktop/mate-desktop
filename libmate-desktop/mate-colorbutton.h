@@ -32,6 +32,7 @@
 #ifndef __MATE_COLOR_BUTTON_H__
 #define __MATE_COLOR_BUTTON_H__
 
+#include <glib.h>
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS

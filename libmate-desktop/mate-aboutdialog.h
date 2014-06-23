@@ -29,6 +29,7 @@
 #ifndef __MATE_ABOUT_DIALOG_H__
 #define __MATE_ABOUT_DIALOG_H__
 
+#include <glib.h>
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS

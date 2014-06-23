@@ -34,9 +34,7 @@
 #include <gdk/gdk.h>
 #include <gtk/gtk.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+G_BEGIN_DECLS
 
 typedef enum {
 	MATE_DESKTOP_ITEM_TYPE_NULL = 0 /* This means its NULL, that is, not
@@ -305,8 +303,6 @@ void                    mate_desktop_item_set_launch_time   (MateDesktopItem    
 void			mate_desktop_item_clear_section     (MateDesktopItem           *item,
 							      const char                 *section);
 
-#ifdef __cplusplus
-}
-#endif
+G_END_DECLS
 
 #endif /* MATE_DITEM_H */
