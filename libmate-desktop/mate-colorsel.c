@@ -35,12 +35,11 @@
 #include <glib/gi18n-lib.h>
 #include "mate-colorsel.h"
 
-/* Keep it in sync with gtksettings.c:default_color_palette */
-#define DEFAULT_COLOR_PALETTE   "black:white:gray50:red:purple:blue:light blue:green:yellow:orange:lavender:brown:goldenrod4:dodger blue:pink:light green:gray10:gray30:gray75:gray90"
+#define DEFAULT_COLOR_PALETTE "#ef2929:#fcaf3e:#fce94f:#8ae234:#729fcf:#ad7fa8:#e9b96e:#888a85:#eeeeec:#cc0000:#f57900:#edd400:#73d216:#3465a4:#75507b:#c17d11:#555753:#d3d7cf:#a40000:#ce5c00:#c4a000:#4e9a06:#204a87:#5c3566:#8f5902:#2e3436:#babdb6:#000000:#2e3436:#555753:#888a85:#babdb6:#d3d7cf:#eeeeec:#f3f3f3:#ffffff"
 
 /* Number of elements in the custom palatte */
-#define GTK_CUSTOM_PALETTE_WIDTH 10
-#define GTK_CUSTOM_PALETTE_HEIGHT 2
+#define GTK_CUSTOM_PALETTE_WIDTH 9
+#define GTK_CUSTOM_PALETTE_HEIGHT 4
 
 #define CUSTOM_PALETTE_ENTRY_WIDTH   20
 #define CUSTOM_PALETTE_ENTRY_HEIGHT  20
@@ -1245,42 +1244,15 @@ palette_drag_end (GtkWidget      *widget,
 static GdkColor *
 get_current_colors (MateColorSelection *colorsel)
 {
-  GtkSettings *settings;
   GdkColor *colors = NULL;
   gint n_colors = 0;
-  gchar *palette;
 
-  settings = gtk_widget_get_settings (GTK_WIDGET (colorsel));
-  g_object_get (settings, "gtk-color-palette", &palette, NULL);
-  
-  if (!mate_color_selection_palette_from_string (palette, &colors, &n_colors))
-    {
-      mate_color_selection_palette_from_string (DEFAULT_COLOR_PALETTE,
-                                               &colors,
-                                               &n_colors);
-    }
-  else
-    {
-      /* If there are less colors provided than the number of slots in the
-       * color selection, we fill in the rest from the defaults.
-       */
-      if (n_colors < (GTK_CUSTOM_PALETTE_WIDTH * GTK_CUSTOM_PALETTE_HEIGHT))
-	{
-	  GdkColor *tmp_colors = colors;
-	  gint tmp_n_colors = n_colors;
-	  
-	  mate_color_selection_palette_from_string (DEFAULT_COLOR_PALETTE,
-                                                   &colors,
-                                                   &n_colors);
-	  memcpy (colors, tmp_colors, sizeof (GdkColor) * tmp_n_colors);
-
-	  g_free (tmp_colors);
-	}
-    }
+  mate_color_selection_palette_from_string (DEFAULT_COLOR_PALETTE,
+                                            &colors,
+                                            &n_colors);
 
   /* make sure that we fill every slot */
   g_assert (n_colors == GTK_CUSTOM_PALETTE_WIDTH * GTK_CUSTOM_PALETTE_HEIGHT);
-  g_free (palette);
   
   return colors;
 }

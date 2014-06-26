@@ -49,6 +49,8 @@ main (int argc, char **argv)
     color_dialog = mate_color_selection_dialog_new (_("MATE Color Selection"));
 #endif
 
+    mate_color_selection_set_has_palette (MATE_COLOR_SELECTION_DIALOG (color_dialog)->colorsel, TRUE);
+
     /* quit signal */
     g_signal_connect (color_dialog, "destroy", gtk_main_quit, NULL);
 
