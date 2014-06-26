@@ -669,6 +669,32 @@ mate_color_button_set_color (MateColorButton *color_button,
   g_object_notify (G_OBJECT (color_button), "color");
 }
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+/**
+ * mate_color_button_set_rgba:
+ * @color_button: a #MateColorButton.
+ * @color: A #GdkRGBA to set the current color with.
+ *
+ * Sets the current color to be @color.
+ *
+ * Since: 1.9.1
+ **/
+void
+mate_color_button_set_rgba (MateColorButton *color_button,
+			    const GdkRGBA *color)
+{
+  g_return_if_fail (MATE_IS_COLOR_BUTTON (color_button));
+  g_return_if_fail (color != NULL);
+
+  color_button->priv->color.red = color->red * 65535;
+  color_button->priv->color.green = color->green * 65535;
+  color_button->priv->color.blue = color->blue * 65535;
+
+  gtk_widget_queue_draw (color_button->priv->draw_area);
+  
+  g_object_notify (G_OBJECT (color_button), "color");
+}
+#endif
 
 /**
  * mate_color_button_set_alpha:
@@ -711,6 +737,28 @@ mate_color_button_get_color (MateColorButton *color_button,
   color->green = color_button->priv->color.green;
   color->blue = color_button->priv->color.blue;
 }
+
+#if GTK_CHECK_VERSION(3, 0, 0)
+/**
+ * mate_color_button_get_rgba:
+ * @color_button: a #MateColorButton.
+ * @color: a #GdkRGBA to fill in with the current color.
+ *
+ * Sets @color to be the current color in the #MateColorButton widget.
+ *
+ * Since: 1.9.1
+ **/
+void
+mate_color_button_get_rgba (MateColorButton *color_button,
+			                      GdkRGBA         *color)
+{
+  g_return_if_fail (MATE_IS_COLOR_BUTTON (color_button));
+  
+  color->red = color_button->priv->color.red / 65535.;
+  color->green = color_button->priv->color.green / 65535.;
+  color->blue = color_button->priv->color.blue / 65535.;
+}
+#endif
 
 /**
  * mate_color_button_get_alpha:
