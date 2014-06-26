@@ -3050,7 +3050,7 @@ mate_color_selection_set_change_palette_hook (MateColorSelectionChangePaletteFun
  * 
  * Return value: the previous change palette hook (that was replaced).
  *
- * Since: 2.2
+ * Since: 1.9.1
  **/
 MateColorSelectionChangePaletteWithScreenFunc
 mate_color_selection_set_change_palette_with_screen_hook (MateColorSelectionChangePaletteWithScreenFunc func)

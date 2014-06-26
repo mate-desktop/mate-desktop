@@ -211,7 +211,7 @@ mate_color_selection_dialog_new_with_header_bar (const gchar *title)
  *
  * Returns: (transfer none): the embedded #MateColorSelection
  *
- * Since: 2.14
+ * Since: 1.9.1
  **/
 GtkWidget*
 mate_color_selection_dialog_get_color_selection (MateColorSelectionDialog *colorsel)
