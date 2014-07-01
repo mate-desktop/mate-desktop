@@ -1,6 +1,9 @@
 bin_PROGRAMS = mate-color-select
 bin_SCRIPTS = mate-gsettings-toggle
 
+AM_CPPFLAGS = \
+	-I$(top_srcdir)
+
 mate_color_select_SOURCES = \
 	mate-color-select.c
 
