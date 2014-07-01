@@ -630,6 +630,8 @@ mate_color_button_clicked (GtkButton *button)
 
   mate_color_selection_set_has_opacity_control (MATE_COLOR_SELECTION (color_dialog->colorsel),
                                                color_button->priv->use_alpha);
+
+  mate_color_selection_set_has_palette (MATE_COLOR_SELECTION (color_dialog->colorsel), TRUE);
   
   mate_color_selection_set_previous_color (MATE_COLOR_SELECTION (color_dialog->colorsel), 
 					  &color_button->priv->color);
