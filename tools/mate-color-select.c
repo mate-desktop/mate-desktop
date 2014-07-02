@@ -33,7 +33,6 @@
     bind_textdomain_codeset(package, codeset); \
     textdomain(package);
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
 gboolean
 copy_color (GtkWidget *widget, GdkEvent  *event, MateColorSelectionDialog *color_dialog)
 {
@@ -42,13 +41,11 @@ copy_color (GtkWidget *widget, GdkEvent  *event, MateColorSelectionDialog *color
 
     mate_color_selection_get_current_color (color_dialog->colorsel, &color);
     g_object_get (color_dialog->colorsel, "hex-string", &color_string, NULL);
-    g_print ("%s\n", color_string);
 
     gtk_clipboard_set_text (gtk_clipboard_get (GDK_SELECTION_CLIPBOARD), color_string, -1);
 
     g_free (color_string);
 }
-#endif
 
 int
 main (int argc, char **argv)
@@ -73,7 +70,6 @@ main (int argc, char **argv)
     /* quit signal */
     g_signal_connect (color_dialog, "destroy", gtk_main_quit, NULL);
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
     widget = gtk_button_new_from_stock (GTK_STOCK_COPY);
     gtk_container_add (gtk_dialog_get_action_area (GTK_DIALOG (color_dialog)), widget);
     g_signal_connect (widget, "button-release-event", copy_color, color_dialog);
@@ -81,7 +77,6 @@ main (int argc, char **argv)
     widget = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
     gtk_container_add (gtk_dialog_get_action_area (GTK_DIALOG (color_dialog)), widget);
     g_signal_connect (widget, "button-release-event", gtk_main_quit, NULL);
-#endif
 
     gtk_widget_show_all (color_dialog);
     gtk_widget_hide (MATE_COLOR_SELECTION_DIALOG (color_dialog)->ok_button);
