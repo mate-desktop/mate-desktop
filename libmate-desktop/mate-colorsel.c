@@ -73,7 +73,8 @@ enum {
   PROP_HAS_PALETTE,
   PROP_HAS_OPACITY_CONTROL,
   PROP_CURRENT_COLOR,
-  PROP_CURRENT_ALPHA
+  PROP_CURRENT_ALPHA,
+  PROP_HEX_STRING
 };
 
 enum {
@@ -327,7 +328,15 @@ mate_color_selection_class_init (MateColorSelectionClass *klass)
 						      _("The current opacity value (0 fully transparent, 65535 fully opaque)"),
 						      0, 65535, 65535,
 						      G_PARAM_READWRITE));
-  
+  g_object_class_install_property (gobject_class,
+                                   PROP_HEX_STRING,
+                                   g_param_spec_string ("hex-string",
+                                                       _("HEX String"),
+                                                       _("The hexadecimal string of current color"),
+                                                       "",
+                                                       G_PARAM_READABLE));
+
+
   color_selection_signals[COLOR_CHANGED] =
     g_signal_new ("color-changed",
 		  G_OBJECT_CLASS_TYPE (gobject_class),
@@ -571,6 +580,7 @@ mate_color_selection_get_property (GObject     *object,
 				  GParamSpec  *pspec)
 {
   MateColorSelection *colorsel = MATE_COLOR_SELECTION (object);
+  ColorSelectionPrivate *priv = colorsel->private_data;
   GdkColor color;
   
   switch (prop_id)
@@ -587,6 +597,9 @@ mate_color_selection_get_property (GObject     *object,
       break;
     case PROP_CURRENT_ALPHA:
       g_value_set_uint (value, mate_color_selection_get_current_alpha (colorsel));
+      break;
+    case PROP_HEX_STRING:
+      g_value_set_string (value, gtk_editable_get_chars (GTK_EDITABLE (priv->hex_entry), 0, -1));
       break;
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
