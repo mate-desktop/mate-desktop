@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-14 19:55+0200\n"
-"PO-Revision-Date: 2014-05-25 00:34+0000\n"
-"Last-Translator: Naresu Tenshi <naresutenshi@openmailbox.org>\n"
+"PO-Revision-Date: 2014-07-06 19:36+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitoschido@ubuntu.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/MATE/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,13 +31,13 @@ msgstr "Acerca de MATE"
 
 #: ../mate-about/mate-about.desktop.in.in.h:2
 msgid "Learn more about MATE"
-msgstr "Aprenda más acerca de MATE"
+msgstr "Más información sobre MATE"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:106
 msgid "translator-credits"
-msgstr "Créditos del traductor"
+msgstr "Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2014"
 
 #: ../mate-about/mate-about.h:46
 msgid ""
@@ -502,7 +502,7 @@ msgstr "No se encontró el archivo «%s»"
 #: ../libmate-desktop/mate-desktop-item.c:837
 #, c-format
 msgid "No filename to save to"
-msgstr "No hay nombre de archivo para guardar"
+msgstr "No hay ningún nombre de archivo que guardar"
 
 #: ../libmate-desktop/mate-desktop-item.c:1828
 #, c-format
@@ -512,12 +512,12 @@ msgstr "Iniciando %s"
 #: ../libmate-desktop/mate-desktop-item.c:2062
 #, c-format
 msgid "No URL to launch"
-msgstr "No hay URL que lanzar"
+msgstr "No hay ningún URL que abrir"
 
 #: ../libmate-desktop/mate-desktop-item.c:2078
 #, c-format
 msgid "Not a launchable item"
-msgstr "No es un elemento lanzable"
+msgstr "No es un elemento que pueda abrirse"
 
 #: ../libmate-desktop/mate-desktop-item.c:2088
 #, c-format
@@ -875,15 +875,15 @@ msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr "Determina cómo se renderiza la imagen definida por wallpaper_filename. Los valores posibles son «wallpaper», «centered», «scaled», «stretched», «zoom», «spanned»."
+msgstr "Determina cómo se representa la imagen definida por wallpaper_filename. Los valores posibles son «wallpaper», «centered», «scaled», «stretched», «zoom», «spanned»."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:9
 msgid "Picture Filename"
-msgstr "Nombre del fichero de imagen"
+msgstr "Nombre del archivo de imagen"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:10
 msgid "File to use for the background image."
-msgstr "Fichero a usar para la imagen de fondo"
+msgstr "El archivo que usar como la imagen de fondo."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:11
 msgid "Picture Opacity"
@@ -912,21 +912,21 @@ msgstr "Color de la derecha o abajo cuando se dibuja degradado, no para color s�
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:17
 msgid "Color Shading Type"
-msgstr "Tipo de color sombreado"
+msgstr "Tipo de sombreado del color"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
-msgstr "Cómo sombrear el color de fondo. Los valores posibles son \"gradiente horizontal\", \"gradiente \"vertical \" y \"sólido\"."
+msgstr "Determina el método de sombreado del fondo. Los valores posibles son «horizontal-gradient», «vertical-gradient» y «solid»."
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.in.h:1
 msgid "File Icon Theme"
-msgstr "Fichero de tema de íconos"
+msgstr "Archivo del tema de iconos"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr "Tema usado para mostrar fichero de íconos."
+msgstr "El tema que se usa al mostrar los iconos de los archivos."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:1
 msgid "Enable Accessibility"
@@ -948,7 +948,7 @@ msgstr "Si se deben mostrar animaciones. Nota: Esta es una clave global, cambia 
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:5
 msgid "Menus Have Tearoff"
-msgstr "Menús divisibles"
+msgstr "Menús desprendibles"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:6
 msgid "Whether menus should have a tearoff."
@@ -1038,11 +1038,11 @@ msgstr "El tema de iconos que usar en el panel, Caja, etc."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:27
 msgid "Gtk+ Theme"
-msgstr "Tema Gtk+"
+msgstr "Tema de Gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:28
 msgid "Basename of the default theme used by gtk+."
-msgstr "Nombre básico del tema usado por defecto pot Gtk+"
+msgstr "El nombre básico del tema predeterminado que usa Gtk+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:29
 msgid "List of symbolic names and color equivalents"
@@ -1072,7 +1072,7 @@ msgstr "Nombre del método  de entrada de GTK+ Preedit usado por gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:35
 msgid "GTK IM Status Style"
-msgstr "Estilo Status de GTK IM"
+msgstr "Estilo del estado de MI en GTK"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:36
 msgid "Name of the GTK+ input method Status Style used by gtk+."
@@ -1096,7 +1096,7 @@ msgstr "Nombre del tipo de letra predeterminado que se usará para leer document
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
 msgid "Monospace font"
-msgstr "Tipo de letra monoespaciada"
+msgstr "Tipo de letra monoespaciado"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
 msgid ""
@@ -1105,7 +1105,7 @@ msgstr "Nombre del tipo de letra monoespaciado (de anchura fija) que usar en lug
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
 msgid "Use Custom Font"
-msgstr "Usar fuente personalizada"
+msgstr "Usar tipo de letra personalizado"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
 msgid "Whether to use a custom font in gtk+ applications."
@@ -1139,7 +1139,7 @@ msgstr "Atajos de teclado para abrir las barras de menú."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:51
 msgid "Show the 'Input Methods' menu"
-msgstr "Mostrar el menú \"Métodos de entrada\""
+msgstr "Mostrar el menú «Métodos de entrada»"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:52
 msgid ""
@@ -1247,7 +1247,7 @@ msgstr "Previene que el usuario cambie la configuración del tema."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "Los posibles valores son \"on\", \"off\", y \"a medida\"."
+msgstr "los valores posibles son «on», «off» y «custom»."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:2
 msgid "Keyboard Bell Custom Filename"
@@ -1285,7 +1285,7 @@ msgstr "Intercambiar botones izquierdo y derecho de ratones para zurdos ."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:3
 msgid "Single Click"
-msgstr "Click simple"
+msgstr "Pulsación sencilla"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:4
 msgid "Single click to open icons."
@@ -1414,7 +1414,7 @@ msgstr "El tema de sonido XDG para usar en los eventos de usuario."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:11
 msgid "Input feedback sounds"
-msgstr "Sonidos de retroalimentación de entrada."
+msgstr "Sonidos de respuesta a la entrada"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.in.h:12
 msgid "Whether to play sounds on input events."

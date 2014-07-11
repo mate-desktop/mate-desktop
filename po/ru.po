@@ -8,6 +8,7 @@
 # Alexei Sorokin <sor.alexei@meowr.ru>, 2012-2013
 # Alexei Sorokin <sor.alexei@meowr.ru>, 2013-2014
 # equeim <equeim@gmail.com>, 2014
+# Evolve32 <evolve32@yandex.ru>, 2014
 # Ratibor Ratiborovich <ratibor01@gmail.com>, 2012
 # qwertyuiop, 2012
 # Агафонов Владислав <Vlad648@gmail.com>, 2013
@@ -17,8 +18,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-14 19:55+0200\n"
-"PO-Revision-Date: 2014-06-24 14:33+0000\n"
-"Last-Translator: Агафонов Владислав <Vlad648@gmail.com>\n"
+"PO-Revision-Date: 2014-06-26 11:41+0000\n"
+"Last-Translator: Evolve32 <evolve32@yandex.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/MATE/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -140,17 +141,17 @@ msgstr "Адрес сайта"
 
 #: ../libmate-desktop/mate-aboutdialog.c:324
 msgid "The URL for the link to the website of the program"
-msgstr ""
+msgstr "URL ссылки на сайт программы"
 
 #: ../libmate-desktop/mate-aboutdialog.c:339
 msgid "Website label"
-msgstr ""
+msgstr "Загловок сайта"
 
 #: ../libmate-desktop/mate-aboutdialog.c:340
 msgid ""
 "The label for the link to the website of the program. If this is not set, it"
 " defaults to the URL"
-msgstr ""
+msgstr "Заголовок для ссылки на сайт программы. Если не установлено, то будет использован URL"
 
 #: ../libmate-desktop/mate-aboutdialog.c:356
 msgid "Authors"
@@ -158,7 +159,7 @@ msgstr "Авторы"
 
 #: ../libmate-desktop/mate-aboutdialog.c:357
 msgid "List of authors of the program"
-msgstr ""
+msgstr "Список авторов программы"
 
 #: ../libmate-desktop/mate-aboutdialog.c:373
 msgid "Documenters"
@@ -174,11 +175,11 @@ msgstr "Художники"
 
 #: ../libmate-desktop/mate-aboutdialog.c:391
 msgid "List of people who have contributed artwork to the program"
-msgstr ""
+msgstr "Список людей, которые создавали графику для программы"
 
 #: ../libmate-desktop/mate-aboutdialog.c:408
 msgid "Translator credits"
-msgstr ""
+msgstr "Список переводчиков"
 
 #: ../libmate-desktop/mate-aboutdialog.c:409
 msgid ""
@@ -193,7 +194,7 @@ msgstr "Эмблема"
 msgid ""
 "A logo for the about box. If this is not set, it defaults to "
 "gtk_window_get_default_icon_list()"
-msgstr ""
+msgstr "Логотип для окна \"О программе\". Если не установлено, то будет использовано \"gtk_window_get_default_icon_list\""
 
 #: ../libmate-desktop/mate-aboutdialog.c:440
 msgid "Logo Icon Name"
@@ -201,15 +202,15 @@ msgstr "Название эмблемы"
 
 #: ../libmate-desktop/mate-aboutdialog.c:441
 msgid "A named icon to use as the logo for the about box."
-msgstr ""
+msgstr "Именованая иконка для использования в виде эмблемы окна \"О программе\"."
 
 #: ../libmate-desktop/mate-aboutdialog.c:454
 msgid "Wrap license"
-msgstr ""
+msgstr "Наличие текста лицензии"
 
 #: ../libmate-desktop/mate-aboutdialog.c:455
 msgid "Whether to wrap the license text."
-msgstr ""
+msgstr "Включать ли текст лицензии."
 
 #. Add the credits button
 #: ../libmate-desktop/mate-aboutdialog.c:547
@@ -248,11 +249,11 @@ msgstr "Оформление"
 
 #: ../libmate-desktop/mate-colorbutton.c:154
 msgid "Use alpha"
-msgstr ""
+msgstr "Использовать прозрачность цвета"
 
 #: ../libmate-desktop/mate-colorbutton.c:155
 msgid "Whether or not to give the color an alpha value"
-msgstr ""
+msgstr "Использовать прозрачность цвета или нет."
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
@@ -390,7 +391,7 @@ msgstr "Наи_менование цвета:"
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
-msgstr ""
+msgstr "Вы можете ввести в это поле или шестнадцатеричное значение цвета(в HTML стиле), или его название, например, \"orange\"."
 
 #: ../libmate-desktop/mate-colorsel.c:514
 msgid "_Palette:"
@@ -405,70 +406,70 @@ msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
-msgstr ""
+msgstr "Ранее выбранный цвет для сравнения с цветом, выбранным сейчас. Вы можете перетянуть этот цвет на тот, что находится сбоку, чтобы сделать его текущим цветом или перетянуть его на палитру дополнительных цветов."
 
 #: ../libmate-desktop/mate-colorsel.c:1060
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
-msgstr ""
+msgstr "Выбранный вами цвет. Вы можете перетащить его на палитру дополнительных цветов, тем самым сохранив его для дальнейшего использования."
 
 #: ../libmate-desktop/mate-colorsel.c:1065
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
-msgstr ""
+msgstr "Выбранный ранее цвет для сравнения с цветом, выбранным сейчас."
 
 #: ../libmate-desktop/mate-colorsel.c:1068
 msgid "The color you've chosen."
-msgstr ""
+msgstr "Выбранный вами цвет."
 
 #: ../libmate-desktop/mate-colorsel.c:1514
 msgid "gtk-color-sel"
-msgstr ""
+msgstr "gtk-color-sel"
 
 #: ../libmate-desktop/mate-colorsel.c:1519
 msgid "_Save color here"
-msgstr ""
+msgstr "Со_хранить цвет здесь"
 
 #: ../libmate-desktop/mate-colorsel.c:1749
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
-msgstr ""
+msgstr "Нажмите на этот элемент палитры чтобы сделать его текущим цветом. Чтобы изменить эту ячейку, перетащите в нее образец цвета или нажмите ПКМ на ней и выберите \"Сохранить цвет здесь\"."
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
 #: ../libmate-desktop/mate-colorseldialog.c:168
 msgid "Color Selection"
-msgstr ""
+msgstr "Выбор цвета"
 
 #: ../libmate-desktop/mate-colorseldialog.c:100
 msgid "The color selection embedded in the dialog."
-msgstr ""
+msgstr "Выбор цвета, встроенный в диалог."
 
 #: ../libmate-desktop/mate-colorseldialog.c:106
 msgid "OK Button"
-msgstr ""
+msgstr "Кнопка \"OK\""
 
 #: ../libmate-desktop/mate-colorseldialog.c:107
 msgid "The OK button of the dialog."
-msgstr ""
+msgstr "Кнопка диалога \"OK\"."
 
 #: ../libmate-desktop/mate-colorseldialog.c:113
 msgid "Cancel Button"
-msgstr ""
+msgstr "Кнопка \"Отмена\""
 
 #: ../libmate-desktop/mate-colorseldialog.c:114
 msgid "The cancel button of the dialog."
-msgstr ""
+msgstr "Кнопка диалога \"Отмена\"."
 
 #: ../libmate-desktop/mate-colorseldialog.c:120
 msgid "Help Button"
-msgstr ""
+msgstr "Кнопка \"Помощь\"."
 
 #: ../libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
-msgstr ""
+msgstr "Кнопка диалога \"Помощь\"."
 
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -1160,7 +1161,7 @@ msgstr "Должны ли контекстные меню элементов в�
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:55
 msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr ""
+msgstr "Кнопки заголовка в GTK3 окнах, которые используют декорации на стороне клиента. Для GTK >= 3.12."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:56
 msgid ""
@@ -1169,7 +1170,7 @@ msgid ""
 " of right. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
-msgstr ""
+msgstr "Эта опция определяет наличие кнопок, которые следует отобразить в заголовке окон, использующих декорации на стороне клиента, а также сторону, где их следует разместить. Для дополнительной информации см. https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
 msgid "Disable command line"
@@ -1489,7 +1490,7 @@ msgstr "Включение возможности блокировки клав�
 #: ../tools/mate-color-select.c:46 ../tools/mate-color-select.c:49
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
-msgstr ""
+msgstr "Выбор цвета"
 
 #: ../tools/mate-color-select.desktop.in.in.h:2
 msgid "Color selection dialog"
@@ -1497,7 +1498,7 @@ msgstr "Выбор цвета"
 
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
-msgstr ""
+msgstr "Выберите цвет из палитры цветов или с экрана"
 
 #: ../tools/mate-conf-import.desktop.in.in.h:1
 msgid "Migrate MATE 1.4 settings"
