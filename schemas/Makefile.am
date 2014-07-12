@@ -7,6 +7,7 @@ desktop_gschemas_in_in = \
 	org.mate.applications-office.gschema.xml.in.in \
 	org.mate.applications-terminal.gschema.xml.in.in \
 	org.mate.background.gschema.xml.in.in \
+	org.mate.debug.gschema.xml.in.in \
 	org.mate.file-views.gschema.xml.in.in \
 	org.mate.interface.gschema.xml.in.in \
 	org.mate.lockdown.gschema.xml.in.in \
