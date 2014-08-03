@@ -3,15 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# infirit <infirit@gmail.com>, 2014
 # Michael Steenbeek <m.o.steenbeek@gmail.com>, 2012,2014
 # closeddoors1559 <mrvnp@msn.com>, 2014
+# Tom van den Brink <tomracing79@hotmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-14 19:55+0200\n"
-"PO-Revision-Date: 2014-07-02 08:46+0000\n"
-"Last-Translator: closeddoors1559 <mrvnp@msn.com>\n"
+"PO-Revision-Date: 2014-07-22 08:46+0000\n"
+"Last-Translator: Tom van den Brink <tomracing79@hotmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/MATE/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,7 +59,7 @@ msgid ""
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
-msgstr ""
+msgstr "MATE is een fork van GNOME 2. Honderden mensen hebben code bijgedragen aan GNOME sinds het begon in 1997; velen anderen hebben op andere manieren bijgedragen, met vertalingen, documentatie en kwaliteitsbewaking."
 
 #: ../mate-about/mate-about.h:59
 msgid ""
@@ -92,7 +94,7 @@ msgstr "Programmanaam"
 msgid ""
 "The name of the program. If this is not set, it defaults to "
 "g_get_application_name()"
-msgstr ""
+msgstr "De naam van het programma. Wanneer niet ingesteld valt terug op g_get_application_name()"
 
 #: ../libmate-desktop/mate-aboutdialog.c:255
 msgid "Program version"
@@ -104,19 +106,19 @@ msgstr "De versie van het programma"
 
 #: ../libmate-desktop/mate-aboutdialog.c:270
 msgid "Copyright string"
-msgstr ""
+msgstr "Copyright-tekenreeks"
 
 #: ../libmate-desktop/mate-aboutdialog.c:271
 msgid "Copyright information for the program"
-msgstr ""
+msgstr "Copyrightinformatie voor het programma"
 
 #: ../libmate-desktop/mate-aboutdialog.c:288
 msgid "Comments string"
-msgstr ""
+msgstr "Toelichting-tekenreeks"
 
 #: ../libmate-desktop/mate-aboutdialog.c:289
 msgid "Comments about the program"
-msgstr ""
+msgstr "Korte toelichting op het programma"
 
 #: ../libmate-desktop/mate-aboutdialog.c:307
 #: ../libmate-desktop/mate-aboutdialog.c:2164
@@ -129,99 +131,99 @@ msgstr "De licentie van het programma"
 
 #: ../libmate-desktop/mate-aboutdialog.c:323
 msgid "Website URL"
-msgstr ""
+msgstr "Website URL"
 
 #: ../libmate-desktop/mate-aboutdialog.c:324
 msgid "The URL for the link to the website of the program"
-msgstr ""
+msgstr "De URL voor de link naar de website van het programma"
 
 #: ../libmate-desktop/mate-aboutdialog.c:339
 msgid "Website label"
-msgstr ""
+msgstr "Website label"
 
 #: ../libmate-desktop/mate-aboutdialog.c:340
 msgid ""
 "The label for the link to the website of the program. If this is not set, it"
 " defaults to the URL"
-msgstr ""
+msgstr "Het label voor de link naar de website van het programma. Wanneer dit niet is ingesteld valt terug naar de URL"
 
 #: ../libmate-desktop/mate-aboutdialog.c:356
 msgid "Authors"
-msgstr ""
+msgstr "Auteurs"
 
 #: ../libmate-desktop/mate-aboutdialog.c:357
 msgid "List of authors of the program"
-msgstr ""
+msgstr "Lijst van auteurs van het programma"
 
 #: ../libmate-desktop/mate-aboutdialog.c:373
 msgid "Documenters"
-msgstr ""
+msgstr "Documenteerders"
 
 #: ../libmate-desktop/mate-aboutdialog.c:374
 msgid "List of people documenting the program"
-msgstr ""
+msgstr "Lijst van mensen die het programma documenteren"
 
 #: ../libmate-desktop/mate-aboutdialog.c:390
 msgid "Artists"
-msgstr ""
+msgstr "Artiest"
 
 #: ../libmate-desktop/mate-aboutdialog.c:391
 msgid "List of people who have contributed artwork to the program"
-msgstr ""
+msgstr "Lijst van mensen die kunstwerken hebben bij gedragen voor het programma"
 
 #: ../libmate-desktop/mate-aboutdialog.c:408
 msgid "Translator credits"
-msgstr ""
+msgstr "Vertaler-bedankjes"
 
 #: ../libmate-desktop/mate-aboutdialog.c:409
 msgid ""
 "Credits to the translators. This string should be marked as translatable"
-msgstr ""
+msgstr "Vermelding van de vertalers. Deze tekenreeks moet als vertaalbaar worden gemarkeerd."
 
 #: ../libmate-desktop/mate-aboutdialog.c:424
 msgid "Logo"
-msgstr ""
+msgstr "Logo"
 
 #: ../libmate-desktop/mate-aboutdialog.c:425
 msgid ""
 "A logo for the about box. If this is not set, it defaults to "
 "gtk_window_get_default_icon_list()"
-msgstr ""
+msgstr "Een logo voor het info venster. Wanneer niet ingesteld valt terug op gtk_window_get_default_icon_list()"
 
 #: ../libmate-desktop/mate-aboutdialog.c:440
 msgid "Logo Icon Name"
-msgstr ""
+msgstr "Pictogram naam logo"
 
 #: ../libmate-desktop/mate-aboutdialog.c:441
 msgid "A named icon to use as the logo for the about box."
-msgstr ""
+msgstr "De naam van het te gebruiken logo in het info venster."
 
 #: ../libmate-desktop/mate-aboutdialog.c:454
 msgid "Wrap license"
-msgstr ""
+msgstr "Pak licentie in"
 
 #: ../libmate-desktop/mate-aboutdialog.c:455
 msgid "Whether to wrap the license text."
-msgstr ""
+msgstr "Al dan niet de licentie inpakken."
 
 #. Add the credits button
 #: ../libmate-desktop/mate-aboutdialog.c:547
 msgid "C_redits"
-msgstr ""
+msgstr "Met _dank aan"
 
 #. Add the license button
 #: ../libmate-desktop/mate-aboutdialog.c:561
 msgid "_License"
-msgstr ""
+msgstr "_Licentie"
 
 #: ../libmate-desktop/mate-aboutdialog.c:841
 #, c-format
 msgid "About %s"
-msgstr ""
+msgstr "Over %s"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2088
 msgid "Credits"
-msgstr ""
+msgstr "Met dank aan"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2116
 msgid "Written by"
@@ -229,7 +231,7 @@ msgstr "Geschreven door"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2119
 msgid "Documented by"
-msgstr ""
+msgstr "Gedocumenteerd door"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2131
 msgid "Translated by"
@@ -237,15 +239,15 @@ msgstr "Vertaald door"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2135
 msgid "Artwork by"
-msgstr ""
+msgstr "Kunstwerk door"
 
 #: ../libmate-desktop/mate-colorbutton.c:154
 msgid "Use alpha"
-msgstr ""
+msgstr "Gebruik alpha"
 
 #: ../libmate-desktop/mate-colorbutton.c:155
 msgid "Whether or not to give the color an alpha value"
-msgstr ""
+msgstr "Al dan niet de kleur een alpha-waarde te geven"
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
@@ -253,12 +255,12 @@ msgstr "Titel"
 
 #: ../libmate-desktop/mate-colorbutton.c:170
 msgid "The title of the color selection dialog"
-msgstr ""
+msgstr "De titel van de kleurkiezer dialoog"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
 #: ../libmate-desktop/mate-colorbutton.c:470
 msgid "Pick a Color"
-msgstr ""
+msgstr "Kies een kleur"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
 #: ../libmate-desktop/mate-colorsel.c:337
@@ -272,39 +274,39 @@ msgstr "De geselecteerde kleur"
 #: ../libmate-desktop/mate-colorbutton.c:199
 #: ../libmate-desktop/mate-colorsel.c:344
 msgid "Current Alpha"
-msgstr ""
+msgstr "Huidige alpha"
 
 #: ../libmate-desktop/mate-colorbutton.c:200
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr ""
+msgstr "De geselecteerde doorzichtigheid (0 volledig transparant, 65535 volledig ondoorzichtig)"
 
 #: ../libmate-desktop/mate-colorbutton.c:356
 msgid "Received invalid color data\n"
-msgstr ""
+msgstr "Ongeldige kleurdata ontvangen \n"
 
 #: ../libmate-desktop/mate-colorsel.c:323
 msgid "Has Opacity Control"
-msgstr ""
+msgstr "Heeft doorzichtigheid element"
 
 #: ../libmate-desktop/mate-colorsel.c:324
 msgid "Whether the color selector should allow setting opacity"
-msgstr ""
+msgstr "Al dan niet de doorzichtigheids-instelling toe laten"
 
 #: ../libmate-desktop/mate-colorsel.c:330
 msgid "Has palette"
-msgstr ""
+msgstr "Heeft palet"
 
 #: ../libmate-desktop/mate-colorsel.c:331
 msgid "Whether a palette should be used"
-msgstr ""
+msgstr "Of dit palet gebruikt moet worden"
 
 #: ../libmate-desktop/mate-colorsel.c:338
 msgid "The current color"
-msgstr ""
+msgstr "De huidige kleur"
 
 #: ../libmate-desktop/mate-colorsel.c:345
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr ""
+msgstr "De huidige doorzichtigheid (0 volledig transparant, 65535 volledig ondoorzichtig)"
 
 #: ../libmate-desktop/mate-colorsel.c:398
 msgid ""
@@ -316,31 +318,31 @@ msgstr ""
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
-msgstr ""
+msgstr "Klik op de pipet, en klik daarna ergens op je scherm om een kleur te selecteren."
 
 #: ../libmate-desktop/mate-colorsel.c:431
 msgid "_Hue:"
-msgstr ""
+msgstr "_Tint:"
 
 #: ../libmate-desktop/mate-colorsel.c:432
 msgid "Position on the color wheel."
-msgstr ""
+msgstr "Positie van de kleur schema."
 
 #: ../libmate-desktop/mate-colorsel.c:434
 msgid "_Saturation:"
-msgstr ""
+msgstr "_Verzadiging:"
 
 #: ../libmate-desktop/mate-colorsel.c:435
 msgid "\"Deepness\" of the color."
-msgstr ""
+msgstr "\"Diepte\" van de kleur."
 
 #: ../libmate-desktop/mate-colorsel.c:436
 msgid "_Value:"
-msgstr ""
+msgstr "_Waarde:"
 
 #: ../libmate-desktop/mate-colorsel.c:437
 msgid "Brightness of the color."
-msgstr ""
+msgstr "Helderheid van de kleur."
 
 #: ../libmate-desktop/mate-colorsel.c:438
 msgid "_Red:"
@@ -348,7 +350,7 @@ msgstr "_Rood:"
 
 #: ../libmate-desktop/mate-colorsel.c:439
 msgid "Amount of red light in the color."
-msgstr ""
+msgstr "Hoeveelheid rood licht in de kleur."
 
 #: ../libmate-desktop/mate-colorsel.c:440
 msgid "_Green:"
@@ -356,7 +358,7 @@ msgstr "_Groen:"
 
 #: ../libmate-desktop/mate-colorsel.c:441
 msgid "Amount of green light in the color."
-msgstr ""
+msgstr "Hoeveelheid groen licht in de kleur."
 
 #: ../libmate-desktop/mate-colorsel.c:442
 msgid "_Blue:"
@@ -364,11 +366,11 @@ msgstr "_Blauw:"
 
 #: ../libmate-desktop/mate-colorsel.c:443
 msgid "Amount of blue light in the color."
-msgstr ""
+msgstr "Hoeveelheid blauw licht in de kleur."
 
 #: ../libmate-desktop/mate-colorsel.c:446
 msgid "Op_acity:"
-msgstr ""
+msgstr "_Ondoorzichtigheid:"
 
 #: ../libmate-desktop/mate-colorsel.c:453
 #: ../libmate-desktop/mate-colorsel.c:463
@@ -377,21 +379,21 @@ msgstr "Doorzichtigheid van de kleur."
 
 #: ../libmate-desktop/mate-colorsel.c:470
 msgid "Color _name:"
-msgstr ""
+msgstr "Kleur_naam:"
 
 #: ../libmate-desktop/mate-colorsel.c:484
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
-msgstr ""
+msgstr "Je kan HTML-stijl hexadecimale kleur waarde invoeren, of de naam van de kleur zoals 'oranje' in dit veld."
 
 #: ../libmate-desktop/mate-colorsel.c:514
 msgid "_Palette:"
-msgstr ""
+msgstr "_Palet:"
 
 #: ../libmate-desktop/mate-colorsel.c:543
 msgid "Color Wheel"
-msgstr ""
+msgstr "Kleurenschema"
 
 #: ../libmate-desktop/mate-colorsel.c:1057
 msgid ""
@@ -404,25 +406,25 @@ msgstr ""
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
-msgstr ""
+msgstr "De door u gekozen kleur. U kunt de kleur verslepen naar een palet invoer om de kleur op te slaan voor toekomstig gebruik."
 
 #: ../libmate-desktop/mate-colorsel.c:1065
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
-msgstr ""
+msgstr "De voorheen gekozen kleur, om de kleur te kunnen vergelijken met de huidige kleur keuzen."
 
 #: ../libmate-desktop/mate-colorsel.c:1068
 msgid "The color you've chosen."
-msgstr ""
+msgstr "De gekozen kleur."
 
 #: ../libmate-desktop/mate-colorsel.c:1514
 msgid "gtk-color-sel"
-msgstr ""
+msgstr "gtk-color-sel"
 
 #: ../libmate-desktop/mate-colorsel.c:1519
 msgid "_Save color here"
-msgstr ""
+msgstr "_Bewaar kleur hier"
 
 #: ../libmate-desktop/mate-colorsel.c:1749
 msgid ""
@@ -433,11 +435,11 @@ msgstr ""
 #: ../libmate-desktop/mate-colorseldialog.c:99
 #: ../libmate-desktop/mate-colorseldialog.c:168
 msgid "Color Selection"
-msgstr ""
+msgstr "Kleur selectie"
 
 #: ../libmate-desktop/mate-colorseldialog.c:100
 msgid "The color selection embedded in the dialog."
-msgstr ""
+msgstr "De kleur selectie ingebed in het dialoog."
 
 #: ../libmate-desktop/mate-colorseldialog.c:106
 msgid "OK Button"
@@ -445,23 +447,23 @@ msgstr "OK-knop"
 
 #: ../libmate-desktop/mate-colorseldialog.c:107
 msgid "The OK button of the dialog."
-msgstr ""
+msgstr "De OK knop van het dialoog."
 
 #: ../libmate-desktop/mate-colorseldialog.c:113
 msgid "Cancel Button"
-msgstr ""
+msgstr "Annuleren klop"
 
 #: ../libmate-desktop/mate-colorseldialog.c:114
 msgid "The cancel button of the dialog."
-msgstr ""
+msgstr "De annuleer knop van het dialoog."
 
 #: ../libmate-desktop/mate-colorseldialog.c:120
 msgid "Help Button"
-msgstr ""
+msgstr "Help knop"
 
 #: ../libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
-msgstr ""
+msgstr "De help knop van het dialoog."
 
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -1482,15 +1484,15 @@ msgstr "Of het op slot zetten van het toetsenbord is ingeschakeld."
 #: ../tools/mate-color-select.c:46 ../tools/mate-color-select.c:49
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
-msgstr ""
+msgstr "MATE kleur selectie"
 
 #: ../tools/mate-color-select.desktop.in.in.h:2
 msgid "Color selection dialog"
-msgstr ""
+msgstr "Kleur selectie dialoog"
 
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
-msgstr ""
+msgstr "Kies kleuren van het palet of het scherm"
 
 #: ../tools/mate-conf-import.desktop.in.in.h:1
 msgid "Migrate MATE 1.4 settings"
