@@ -69,9 +69,6 @@ struct _MateColorSelectionDialogClass
 /* ColorSelectionDialog */
 GType      mate_color_selection_dialog_get_type            (void) G_GNUC_CONST;
 GtkWidget* mate_color_selection_dialog_new                 (const gchar *title);
-#if GTK_CHECK_VERSION (3, 12, 0)
-GtkWidget* mate_color_selection_dialog_new_with_header_bar (const gchar *title);
-#endif
 GtkWidget* mate_color_selection_dialog_get_color_selection (MateColorSelectionDialog *colorsel);
 
 
