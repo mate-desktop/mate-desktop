@@ -36,6 +36,7 @@ def build_paste(args, data):
     values = {}
     for opt, val in args.__dict__.items():
         if opt == 'infile': continue
+        if opt == 'title': values[opt] = val[:29]
         if val: values[opt] = val
 
     values['data'] = data
@@ -162,7 +163,7 @@ if __name__ == '__main__':
 
     # If we read a file and no title given use the file name
     if not args.title and args.infile.name != '<stdin>':
-        paste['title'] = args.infile.name
+        paste['title'] = args.infile.name[:29]
 
     # Post the data to the website
     resp = session.post(api_url + 'create', data=paste)
