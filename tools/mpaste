@@ -25,6 +25,7 @@
 # TODO: If api is updated for registered users add back --author
 
 from __future__ import unicode_literals, print_function
+from gi.repository import Gio
 import json
 import requests
 import argparse
@@ -84,10 +85,44 @@ def get_params(session):
 
     return params
 
+def get_proxies():
+    '''Read proxy from gsettings'''
+
+    proxies = {}
+    schemas = ('org.gnome.system.proxy.ftp',
+               'org.gnome.system.proxy.http',
+               'org.gnome.system.proxy.https',
+               'org.gnome.system.proxy.socks')
+
+    settings = Gio.Settings.new('org.gnome.system.proxy')
+    mode = settings['mode']
+
+    if mode == 'none':
+        return {}
+
+    for schema in schemas:
+        settings = Gio.Settings.new(schema)
+        host = settings['host']
+        port = str(settings['port'])
+        proxy_type = schema.split('.')[-1]
+
+        if not host:
+            continue
+
+        proxies[proxy_type] = ':'.join((host, port))
+
+    return proxies
+
 if __name__ == '__main__':
     api_url = 'http://paste.mate-desktop.org/api/json/'
 
+    # Get proxies from gsettings
+    proxies = get_proxies()
+
+    # create session and add proxies
     session = requests.session()
+    session.proxies = proxies
+
     params = get_params(session)
 
     # Create argument parser and read arguments
