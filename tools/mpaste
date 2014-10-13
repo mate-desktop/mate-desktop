@@ -4,6 +4,9 @@
 
 # Copyright (C) 2013 Steve Zesch
 
+# Rewritten for Sticky notes 2014-10-09
+# Copyright (C) 2014 Sander Sweers
+
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 2
@@ -18,47 +21,122 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-import urllib
-import urllib2
-import optparse
+# TODO: cache language/expire results on disk
+# TODO: If api is updated for registered users add back --author
+
+from __future__ import unicode_literals, print_function
+import json
+import requests
+import argparse
 import sys
 
-def write_paste(values):
-	url = 'http://paste.mate-desktop.org/api/create'
-	data = urllib.urlencode(values)
-	request = urllib2.Request(url, data)
-	response = urllib2.urlopen(request)
-	page = response.read()
+def build_paste(args, data):
+    '''Build paste from arguments and data'''
+    values = {}
+    for opt, val in args.__dict__.items():
+        if opt == 'infile': continue
+        if val: values[opt] = val
 
-	return page
+    values['data'] = data
 
-def build_values(options, text):
-	values = {}
+    return values
 
-	for opt, val in options.__dict__.items():
-		if val:
-			values[opt] = val
+def create_parser():
+    '''Build argument parser'''
+    parser = argparse.ArgumentParser(prog='mpaste')
+    parser.add_argument('-t', '--title', dest='title',
+                        help='title of this paste')
+    ## parser.add_argument('-a', '--author', dest='author',
+    ##                     help='author of this paste')
+    parser.add_argument('-p', '--private', dest='private', action='store_true',
+                        help='should this paste be private')
+    parser.add_argument('-pwd', '--password', dest='password',
+                        help='password of this paste')
+    parser.add_argument('-lang', '--language', dest='language', default="text",
+                        help='language this paste is in')
+    parser.add_argument('-ll', '--language-list', dest='lang_list', action='store_true',
+                        help='List all supported languages')
+    parser.add_argument('-e', '--expire', dest='expire', type=int, default=1800,
+                        help='paste expiration in minutes')
+    parser.add_argument('infile', nargs='?', type=argparse.FileType('r'), default=sys.stdin,
+                        help='The file to paste or when no file read stdin')
 
-	values['text'] = text
+    return parser
 
-	if values.has_key('private') and values['private'] == True:
-			values['private'] = 1
+def get_params(session):
+    '''Retrieve valid parameters and defaults'''
+    param_api_url = 'http://paste.mate-desktop.org/api/json/parameter/'
+    params = {}
 
-	return values
+    resp_lang = session.get(param_api_url + 'language')
+    if resp_lang.status_code != 200:
+        params['languages'] = 'text'
+        print('Could not load languages from api, defaulting to \"text\"')
+    else:
+        params['languages'] = json.loads(resp_lang.content)['result']['values']
+
+    resp_expire = session.get(param_api_url + 'expire')
+    if resp_expire.status_code != 200:
+        params['expires'] = 1800
+        print('Could not get expiration times, defaulting to 1800')
+    else:
+        params['expires'] = json.loads(resp_expire.content)['result']['values']
+
+    return params
 
 if __name__ == '__main__':
-	parser = optparse.OptionParser()
-	parser.add_option('-t', '--title', dest='title', help='title of this paste')
-	parser.add_option('-n', '--name', dest='name', help='author of this paste')
-	parser.add_option('-p', '--private', dest='private', action='store_true',
-						help='should this paste be private')
-	parser.add_option('-l', '--language', dest='lang', 
-						help='language this paste is in')
-	parser.add_option('-e', '--expire', dest='expire', help='paste expiration in minutes')
-	parser.add_option('-r', '--reply', dest='reply', help='reply to existing paste')
+    api_url = 'http://paste.mate-desktop.org/api/json/'
 
-	(options, args) = parser.parse_args()
+    session = requests.session()
+    params = get_params(session)
 
-	text = sys.stdin.read()
-	returned_url = write_paste(build_values(options, text))
-	print returned_url
+    # Create argument parser and read arguments
+    parser = create_parser()
+    args = parser.parse_args()
+
+    # Print all supported languages
+    if args.lang_list:
+        print('Supported languages are:')
+        for lang in params['languages']:
+            print('* %s' % lang)
+        sys.exit()
+
+    # Check if we are reading from a file or stdin
+    if sys.stdin.isatty():
+        print('Reading file: %s ...' % args.infile.name)
+        data = args.infile.read()
+    else:
+        print('Reading from stdin ...')
+        data = sys.stdin.read()
+
+    # Check if provided lang is supported
+    if not args.language in params['languages']:
+        print('Unsupported language: %s' % args.language)
+        print('Run --all-language to get a list of valid values')
+        sys.exit(1)
+
+    # Check if expiration in minutes is valid
+    if not args.expire in params['expires']:
+        valid = ', '.join([str(i) for i in sorted(params['expires'])])
+        print('Invalid expiring time: %s' % args.expire)
+        print('Valid expire values in minutes are: \n%s' % valid)
+        sys.exit(1)
+
+    # Build the paste dict used by requests
+    paste = build_paste(args, data)
+
+    # If we read a file and no title given use the file name
+    if not args.title and args.infile.name != '<stdin>':
+        paste['title'] = args.infile.name
+
+    # Post the data to the website
+    resp = session.post(api_url + 'create', data=paste)
+    result = json.loads(resp.content)['result']
+
+    # Show url or error
+    if len(result) < 2:
+        print('Could not paste, got error: %s' % result['error'])
+    else:
+        print('Pasted successfully \o/')
+        print('Url: http://paste.mate-desktop.org/%s' % result['id'])
+        if result['hash']: print('Got the following hash: %s' % result['hash'])
