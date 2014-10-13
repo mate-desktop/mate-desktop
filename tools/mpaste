@@ -36,7 +36,7 @@ def build_paste(args, data):
     values = {}
     for opt, val in args.__dict__.items():
         if opt == 'infile': continue
-        if opt == 'title': values[opt] = val[:29]
+        if opt == 'title' and val: values[opt] = val[:29]
         if val: values[opt] = val
 
     values['data'] = data
