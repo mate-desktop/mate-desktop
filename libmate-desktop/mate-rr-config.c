@@ -131,6 +131,8 @@ stack_is (Parser *parser,
 	stack = g_list_prepend (stack, (gpointer)s);
 	s = va_arg (args, const char *);
     }
+
+    va_end (args);
 	
     l1 = stack;
     l2 = parser->stack->head;

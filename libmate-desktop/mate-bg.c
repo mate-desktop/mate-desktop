@@ -2821,6 +2821,8 @@ stack_is (SlideShow *parser,
 		s = va_arg (args, const char *);
 	}
 
+	va_end (args);
+
 	l1 = stack;
 	l2 = parser->stack->head;
 
