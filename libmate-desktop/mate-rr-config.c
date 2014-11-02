@@ -440,8 +440,8 @@ out:
 MateRRConfig *
 mate_rr_config_new_current (MateRRScreen *screen)
 {
-    MateRRConfig *config = g_new0 (MateRRConfig, 1);
-    GPtrArray *a = g_ptr_array_new ();
+    MateRRConfig *config;
+    GPtrArray *a;
     MateRROutput **rr_outputs;
     int i;
     int clone_width = -1;
@@ -449,6 +449,9 @@ mate_rr_config_new_current (MateRRScreen *screen)
     int last_x;
 
     g_return_val_if_fail (screen != NULL, NULL);
+
+    config = g_new0 (MateRRConfig, 1);
+    a = g_ptr_array_new ();
 
     rr_outputs = mate_rr_screen_list_outputs (screen);
 
@@ -1107,6 +1110,7 @@ mate_rr_config_save (MateRRConfig *configuration, GError **error)
 
     g_free (backup_filename);
     g_free (intended_filename);
+    g_string_free (output, TRUE);
 
     return result;
 }
