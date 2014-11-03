@@ -32,7 +32,6 @@ endif
 EXTRA_DIST = \
 	mate-conf-import.desktop.in.in \
 	mate-conf-import \
-	mate-gsettings-toggle \
 	mpaste
 
 CLEANFILES = *.desktop *.desktop.in
