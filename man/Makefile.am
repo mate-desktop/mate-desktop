@@ -1,4 +1,4 @@
-man_MANS = mate-gsettings-toggle.1
+man_MANS =
 
 if MATE_ABOUT_ENABLED
 man_MANS += mate-about.1

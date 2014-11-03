@@ -1,5 +1,5 @@
 bin_PROGRAMS = mate-color-select
-bin_SCRIPTS = mate-gsettings-toggle
+bin_SCRIPTS =
 
 AM_CPPFLAGS = \
 	-I$(top_srcdir)
