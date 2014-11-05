@@ -90,6 +90,11 @@ const char* authors[] = {
     "Martin Wimpress <code@flexion.org>",
     "John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>",
     "Mike Gabriel <sunweaver@debian.org>",
+    /* MATE Google Summer of Code students */
+    "Alexander van der Meij <alexandervdm@gliese.me>",
+    "Avishkar Gupta <avishkar_gupta@outlook.com>",
+    "Laszlo Boros <iamsemmu@gmail.com>",
+    "Michal Ratajsky <michal.ratajsky@gmail.com>",
     /* GNOME developers */
     "GNOME:",
     "Jérôme Abela",
