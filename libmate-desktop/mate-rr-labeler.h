@@ -48,6 +48,9 @@ MateRRLabeler *mate_rr_labeler_new (MateRRConfig *config);
 
 void mate_rr_labeler_hide (MateRRLabeler *labeler);
 
+#ifdef GDK_VERSION_3_0
+void mate_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateOutputInfo *output, GdkRGBA *color_out);
+#endif
 void mate_rr_labeler_get_color_for_output (MateRRLabeler *labeler, MateOutputInfo *output, GdkColor *color_out);
 
 #endif
