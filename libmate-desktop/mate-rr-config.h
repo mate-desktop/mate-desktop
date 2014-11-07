@@ -93,6 +93,7 @@ gboolean        mate_rr_config_equal	     (MateRRConfig  *config1,
 gboolean        mate_rr_config_save         (MateRRConfig  *configuration,
 					      GError        **error);
 void            mate_rr_config_sanitize     (MateRRConfig  *configuration);
+gboolean        mate_rr_config_ensure_primary (MateRRConfig *configuration);
 
 #ifndef MATE_DISABLE_DEPRECATED
 gboolean	mate_rr_config_apply        (MateRRConfig  *configuration,
