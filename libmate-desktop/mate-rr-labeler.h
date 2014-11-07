@@ -41,6 +41,18 @@
 
 typedef struct _MateRRLabeler MateRRLabeler;
 typedef struct _MateRRLabelerClass MateRRLabelerClass;
+typedef struct _MateRRLabelerPrivate MateRRLabelerPrivate;
+
+struct _MateRRLabeler {
+	GObject parent;
+
+	/*< private >*/
+	MateRRLabelerPrivate *priv;
+};
+
+struct _MateRRLabelerClass {
+	GObjectClass parent_class;
+};
 
 GType mate_rr_labeler_get_type (void);
 
@@ -49,8 +61,8 @@ MateRRLabeler *mate_rr_labeler_new (MateRRConfig *config);
 void mate_rr_labeler_hide (MateRRLabeler *labeler);
 
 #ifdef GDK_VERSION_3_0
-void mate_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateOutputInfo *output, GdkRGBA *color_out);
+void mate_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *color_out);
 #endif
-void mate_rr_labeler_get_color_for_output (MateRRLabeler *labeler, MateOutputInfo *output, GdkColor *color_out);
+void mate_rr_labeler_get_color_for_output (MateRRLabeler *labeler, MateRROutputInfo *output, GdkColor *color_out);
 
 #endif

@@ -1,4 +1,4 @@
-/* randrwrap.h
+/* mate-rr.h
  *
  * Copyright 2007, 2008, Red Hat, Inc.
  * 
@@ -21,8 +21,8 @@
  * 
  * Author: Soren Sandmann <sandmann@redhat.com>
  */
-#ifndef RANDR_WRAP_H
-#define RANDR_WRAP_H
+#ifndef MATE_RR_H
+#define MATE_RR_H
 
 #ifndef MATE_DESKTOP_USE_UNSTABLE_API
 #error    MateRR is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including materr.h
@@ -45,9 +45,8 @@ typedef struct {
 typedef struct {
     GObjectClass parent_class;
 
+        void (* changed) (void);
 } MateRRScreenClass;
-
-typedef void (* MateRRScreenChanged) (MateRRScreen *screen, gpointer data);
 
 typedef enum
 {
@@ -76,16 +75,16 @@ typedef enum {
 
 #define MATE_RR_CONNECTOR_TYPE_PANEL "Panel"  /* This is a laptop's built-in LCD */
 
-#define MATE_RR_TYPE_SCREEN (mate_rr_screen_get_type())
-#define MATE_RR_SCREEN(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_RR_TYPE_SCREEN, MateRRScreen))
-#define MATE_RR_IS_SCREEN(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_RR_TYPE_SCREEN))
-#define MATE_RR_SCREEN_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_RR_TYPE_SCREEN, MateRRScreenClass))
-#define MATE_RR_IS_SCREEN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_RR_TYPE_SCREEN))
-#define MATE_RR_SCREEN_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_RR_TYPE_SCREEN, MateRRScreenClass))
+#define MATE_TYPE_RR_SCREEN                  (mate_rr_screen_get_type())
+#define MATE_RR_SCREEN(obj)                  (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_RR_SCREEN, MateRRScreen))
+#define MATE_IS_RR_SCREEN(obj)               (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_RR_SCREEN))
+#define MATE_RR_SCREEN_CLASS(klass)          (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_RR_SCREEN, MateRRScreenClass))
+#define MATE_IS_RR_SCREEN_CLASS(klass)       (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_RR_SCREEN))
+#define MATE_RR_SCREEN_GET_CLASS(obj)        (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_RR_SCREEN, MateRRScreenClass))
 
-#define MATE_RR_TYPE_OUTPUT (mate_rr_output_get_type())
-#define MATE_RR_TYPE_CRTC (mate_rr_crtc_get_type())
-#define MATE_RR_TYPE_MODE (mate_rr_mode_get_type())
+#define MATE_TYPE_RR_OUTPUT (mate_rr_output_get_type())
+#define MATE_TYPE_RR_CRTC   (mate_rr_crtc_get_type())
+#define MATE_TYPE_RR_MODE   (mate_rr_mode_get_type())
 
 GType mate_rr_screen_get_type (void);
 GType mate_rr_output_get_type (void);
@@ -94,10 +93,7 @@ GType mate_rr_mode_get_type (void);
 
 /* MateRRScreen */
 MateRRScreen * mate_rr_screen_new                (GdkScreen             *screen,
-						    MateRRScreenChanged   callback,
-						    gpointer               data,
 						    GError               **error);
-void            mate_rr_screen_destroy            (MateRRScreen         *screen);
 MateRROutput **mate_rr_screen_list_outputs       (MateRRScreen         *screen);
 MateRRCrtc **  mate_rr_screen_list_crtcs         (MateRRScreen         *screen);
 MateRRMode **  mate_rr_screen_list_modes         (MateRRScreen         *screen);
@@ -126,6 +122,8 @@ void            mate_rr_screen_get_timestamps     (MateRRScreen         *screen,
 
 void            mate_rr_screen_set_primary_output (MateRRScreen         *screen,
                                                     MateRROutput         *output);
+
+MateRRMode   **mate_rr_screen_create_clone_modes (MateRRScreen *screen);
 
 /* MateRROutput */
 guint32         mate_rr_output_get_id             (MateRROutput         *output);
@@ -201,4 +199,4 @@ void            mate_rr_crtc_set_gamma            (MateRRCrtc           *crtc,
 						    unsigned short        *red,
 						    unsigned short        *green,
 						    unsigned short        *blue);
-#endif
+#endif /* MATE_RR_H */

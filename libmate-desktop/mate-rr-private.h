@@ -47,4 +47,34 @@ struct MateRRScreenPrivate
     Atom                        connector_type_atom;
 };
 
+struct MateRROutputInfoPrivate
+{
+    char *		name;
+
+    gboolean		on;
+    int			width;
+    int			height;
+    int			rate;
+    int			x;
+    int			y;
+    MateRRRotation	rotation;
+
+    gboolean		connected;
+    gchar		vendor[4];
+    guint		product;
+    guint		serial;
+    double		aspect;
+    int			pref_width;
+    int			pref_height;
+    char *		display_name;
+    gboolean            primary;
+};
+
+struct MateRRConfigPrivate
+{
+  gboolean clone;
+  MateRRScreen *screen;
+  MateRROutputInfo **outputs;
+};
+
 #endif

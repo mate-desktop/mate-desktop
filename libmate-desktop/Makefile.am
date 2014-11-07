@@ -45,6 +45,7 @@ introspection_sources = \
 	display-name.c		\
 	mate-rr.c		\
 	mate-rr-config.c	\
+	mate-rr-output-info.c	\
 	mate-rr-labeler.c	\
 	mate-colorbutton.c \
 	mate-colorsel.c \
