@@ -1096,8 +1096,10 @@ mate_rr_config_ensure_primary (MateRRConfig *configuration)
         for (i = 0; configuration->outputs[i] != NULL; ++i) {
                 MateOutputInfo *info = configuration->outputs[i];
 
-                if (! info->on)
+                if (! info->on) {
+                        info->primary = FALSE;
                         continue;
+		}
 
                 /* ensure only one */
                 if (info->primary) {
