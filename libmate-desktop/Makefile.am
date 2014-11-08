@@ -110,6 +110,7 @@ MateDesktop_2_0_gir_CFLAGS = -DMATE_DESKTOP_USE_UNSTABLE_API -I$(top_srcdir)
 MateDesktop_2_0_gir_LIBS = libmate-desktop-2.la
 MateDesktop_2_0_gir_FILES = $(introspection_sources) $(libmate_desktop_HEADERS)
 MateDesktop_2_0_gir_SCANNERFLAGS = --identifier-prefix=Mate --symbol-prefix=mate_
+INTROSPECTION_SCANNER_ARGS += $(patsubst %,--c-include='libmate-desktop/%',$(libmate_desktop_HEADERS))
 INTROSPECTION_GIRS += MateDesktop-2.0.gir
 
 girdir = $(datadir)/gir-1.0
