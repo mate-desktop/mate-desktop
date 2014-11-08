@@ -45,10 +45,6 @@
 #define cairo_surface_destroy g_object_unref
 #endif
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-#define GDK_WINDOW_TYPE(d) (gdk_window_get_window_type (GDK_WINDOW (d)))
-#endif
-
 struct _MateBGCrossfadePrivate
 {
 	GdkWindow       *window;
@@ -401,7 +397,7 @@ animations_are_disabled (MateBGCrossfade *fade)
 static void
 draw_background (MateBGCrossfade *fade)
 {
-	if (GDK_WINDOW_TYPE (fade->priv->window) == GDK_WINDOW_ROOT) {
+	if (gdk_window_get_window_type (fade->priv->window) == GDK_WINDOW_ROOT) {
 		XClearArea (GDK_WINDOW_XDISPLAY (fade->priv->window),
 			    GDK_WINDOW_XID (fade->priv->window),
 			    0, 0,
@@ -525,7 +521,7 @@ mate_bg_crossfade_start (MateBGCrossfade *fade,
 	g_return_if_fail (fade->priv->fading_surface != NULL);
 	g_return_if_fail (fade->priv->end_surface != NULL);
 	g_return_if_fail (!mate_bg_crossfade_is_started (fade));
-	g_return_if_fail (GDK_WINDOW_TYPE (window) != GDK_WINDOW_FOREIGN);
+	g_return_if_fail (gdk_window_get_window_type (window) != GDK_WINDOW_FOREIGN);
 
 	source = g_timeout_source_new (1000 / 60.0);
 	g_source_set_callback (source,
