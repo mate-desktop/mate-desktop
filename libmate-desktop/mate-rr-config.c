@@ -671,6 +671,7 @@ mate_rr_config_load_filename (MateRRConfig *result, const char *filename, GError
     gboolean found = FALSE;
 
     g_return_val_if_fail (MATE_IS_RR_CONFIG (result), FALSE);
+    g_return_val_if_fail (filename != NULL, FALSE);
     g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
 
     if (filename == NULL)
@@ -748,8 +749,16 @@ MateRRConfig *
 mate_rr_config_new_stored (MateRRScreen *screen, GError **error)
 {
     MateRRConfig *self = g_object_new (MATE_TYPE_RR_CONFIG, "screen", screen, NULL);
+    char *filename;
+    gboolean success;
 
-    if (mate_rr_config_load_filename (self, NULL, error))
+    filename = mate_rr_config_get_intended_filename ();
+
+    success = mate_rr_config_load_filename (self, filename, error);
+
+    g_free (filename);
+
+    if (success)
       return self;
     else
       {
