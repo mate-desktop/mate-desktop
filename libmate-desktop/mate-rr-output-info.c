@@ -76,11 +76,11 @@ char *mate_rr_output_info_get_name (MateRROutputInfo *self)
 }
 
 /**
- * mate_rr_output_info_get_active:
+ * mate_rr_output_info_is_active:
  *
  * Returns: whether there is a CRTC assigned to this output (i.e. a signal is being sent to it)
  */
-gboolean mate_rr_output_info_get_active (MateRROutputInfo *self)
+gboolean mate_rr_output_info_is_active (MateRROutputInfo *self)
 {
     g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), FALSE);
 
@@ -156,11 +156,11 @@ void mate_rr_output_info_set_rotation (MateRROutputInfo *self, MateRRRotation ro
 }
 
 /**
- * mate_rr_output_info_get_connected:
+ * mate_rr_output_info_is_connected:
  *
  * Returns: whether the output is physically connected to a monitor
  */
-gboolean mate_rr_output_info_get_connected (MateRROutputInfo *self)
+gboolean mate_rr_output_info_is_connected (MateRROutputInfo *self)
 {
     g_return_val_if_fail (MATE_IS_RR_OUTPUT_INFO (self), FALSE);
 

@@ -456,7 +456,7 @@ create_label_windows (MateRRLabeler *labeler)
 	outputs = mate_rr_config_get_outputs (labeler->priv->config);
 
 	for (i = 0; i < labeler->priv->num_outputs; i++) {
-		if (!created_window_for_clone && mate_rr_output_info_get_active (outputs[i])) {
+		if (!created_window_for_clone && mate_rr_output_info_is_active (outputs[i])) {
 			labeler->priv->windows[i] = create_label_window (labeler, outputs[i], labeler->priv->palette + i);
 
 			if (mate_rr_config_get_clone (labeler->priv->config))

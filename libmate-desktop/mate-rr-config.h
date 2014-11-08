@@ -61,7 +61,7 @@ GType mate_rr_output_info_get_type (void);
 
 char *mate_rr_output_info_get_name (MateRROutputInfo *self);
 
-gboolean mate_rr_output_info_get_active (MateRROutputInfo *self);
+gboolean mate_rr_output_info_is_active  (MateRROutputInfo *self);
 void     mate_rr_output_info_set_active (MateRROutputInfo *self, gboolean active);
 
 
@@ -74,7 +74,7 @@ void mate_rr_output_info_set_refresh_rate (MateRROutputInfo *self, int rate);
 MateRRRotation mate_rr_output_info_get_rotation (MateRROutputInfo *self);
 void            mate_rr_output_info_set_rotation (MateRROutputInfo *self, MateRRRotation rotation);
 
-gboolean mate_rr_output_info_get_connected    (MateRROutputInfo *self);
+gboolean mate_rr_output_info_is_connected     (MateRROutputInfo *self);
 void     mate_rr_output_info_get_vendor       (MateRROutputInfo *self, gchar* vendor);
 guint    mate_rr_output_info_get_product      (MateRROutputInfo *self);
 guint    mate_rr_output_info_get_serial       (MateRROutputInfo *self);
