@@ -1,6 +1,8 @@
 #ifndef MATE_RR_PRIVATE_H
 #define MATE_RR_PRIVATE_H
 
+#include <X11/Xlib.h>
+
 #ifdef HAVE_RANDR
 #include <X11/extensions/Xrandr.h>
 #endif
