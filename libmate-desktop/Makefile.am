@@ -66,6 +66,7 @@ libmate_desktop_2_la_LIBADD =	\
 
 libmate_desktop_2_la_LDFLAGS = \
 	-version-info $(LT_VERSION) \
+	-export-symbols-regex "^mate_.*" \
 	-no-undefined
 
 test_SOURCES = \
