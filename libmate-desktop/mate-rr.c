@@ -958,6 +958,7 @@ mate_rr_screen_get_timestamps (MateRRScreen *screen,
 static gboolean
 force_timestamp_update (MateRRScreen *screen)
 {
+#ifdef HAVE_RANDR
     MateRRScreenPrivate *priv = screen->priv;
     MateRRCrtc *crtc;
     XRRCrtcInfo *current_info;
@@ -1000,6 +1001,9 @@ force_timestamp_update (MateRRScreen *screen)
 	timestamp_updated = TRUE;
 out:
     return timestamp_updated;
+#else
+    return FALSE;
+#endif
 }
 
 /**
