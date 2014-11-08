@@ -60,6 +60,14 @@ typedef int Rotation;
 #define RR_Reflect_Y		32
 #endif
 
+#ifdef HAVE_RANDR
+#define RANDR_LIBRARY_IS_AT_LEAST_1_3 (RANDR_MAJOR > 1 || (RANDR_MAJOR == 1 && RANDR_MINOR >= 3))
+#else
+#define RANDR_LIBRARY_IS_AT_LEAST_1_3 0
+#endif
+
+#define SERVERS_RANDR_IS_AT_LEAST_1_3(priv) (priv->rr_major_version > 1 || (priv->rr_major_version == 1 && priv->rr_minor_version >= 3))
+
 enum {
     SCREEN_PROP_0,
     SCREEN_PROP_GDK_SCREEN,
@@ -454,9 +462,8 @@ fill_out_screen_info (Display *xdisplay,
 	 * XRRGetScreenResources, however it is available only
 	 * in RandR 1.3 or higher
 	 */
-#if (RANDR_MAJOR > 1 || (RANDR_MAJOR == 1 && RANDR_MINOR >= 3))
-        /* Runtime check for RandR 1.3 or higher */
-        if (priv->rr_major_version == 1 && priv->rr_minor_version >= 3)
+#if RANDR_LIBRARY_IS_AT_LEAST_1_3
+        if (SERVERS_RANDR_IS_AT_LEAST_1_3 (priv))
             resources = XRRGetScreenResourcesCurrent (xdisplay, xroot);
         else
             resources = XRRGetScreenResources (xdisplay, xroot);
@@ -514,9 +521,8 @@ fill_out_screen_info (Display *xdisplay,
     }
 
     info->primary = None;
-#if (RANDR_MAJOR > 1 || (RANDR_MAJOR == 1 && RANDR_MINOR >= 3))
-    /* Runtime check for RandR 1.3 or higher */
-    if (priv->rr_major_version == 1 && priv->rr_minor_version >= 3) {
+#if RANDR_LIBRARY_IS_AT_LEAST_1_3
+    if (SERVERS_RANDR_IS_AT_LEAST_1_3 (priv)) {
         gdk_error_trap_push ();
         info->primary = XRRGetOutputPrimary (xdisplay, xroot);
       #if GTK_CHECK_VERSION (3, 0, 0)
@@ -702,7 +708,7 @@ mate_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **
         priv->randr_event_base = event_base;
 
         XRRQueryVersion (dpy, &priv->rr_major_version, &priv->rr_minor_version);
-        if (priv->rr_major_version > 1 || (priv->rr_major_version == 1 && priv->rr_minor_version < 2)) {
+        if (priv->rr_major_version < 1 || (priv->rr_major_version == 1 && priv->rr_minor_version < 2)) {
             g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_NO_RANDR_EXTENSION,
                 "RANDR extension is too old (must be at least 1.2)");
             return FALSE;
@@ -1614,8 +1620,7 @@ mate_rr_screen_set_primary_output (MateRRScreen *screen,
 
     priv = screen->priv;
 
-#ifdef HAVE_RANDR
-#if (RANDR_MAJOR > 1 || (RANDR_MAJOR == 1 && RANDR_MINOR >= 3))
+#if RANDR_LIBRARY_IS_AT_LEAST_1_3
     RROutput id;
 
     if (output)
@@ -1623,11 +1628,9 @@ mate_rr_screen_set_primary_output (MateRRScreen *screen,
     else
         id = None;
 
-    /* Runtime check for RandR 1.3 or higher */
-    if (priv->rr_major_version > 1  || (priv->rr_major_version == 1 && priv->rr_minor_version >= 3))
+    if (SERVERS_RANDR_IS_AT_LEAST_1_3 (priv))
         XRRSetOutputPrimary (priv->xdisplay, priv->xroot, id);
 #endif
-#endif /* HAVE_RANDR */
 }
 
 /* MateRRCrtc */
