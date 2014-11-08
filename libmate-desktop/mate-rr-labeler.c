@@ -175,7 +175,7 @@ mate_rr_labeler_set_property (GObject *gobject, guint property_id, const GValue 
 
 	switch (property_id) {
 	case PROP_CONFIG:
-		self->priv->config = MATE_RR_CONFIG (g_value_get_object (value));
+		self->priv->config = MATE_RR_CONFIG (g_value_dup_object (value));
 		return;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (gobject, property_id, param_spec);
