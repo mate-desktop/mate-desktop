@@ -756,7 +756,8 @@ void
 
     gdk_window_remove_filter (screen->priv->gdk_root, screen_on_event, screen);
 
-    screen_info_free (screen->priv->info);
+    if (screen->priv->info)
+      screen_info_free (screen->priv->info);
 
     G_OBJECT_CLASS (mate_rr_screen_parent_class)->finalize (gobject);
 }
