@@ -695,7 +695,8 @@ mate_rr_config_load_filename (MateRRConfig *result, const char *filename, GError
 
 		array = g_ptr_array_new ();
 		for (j = 0; configs[i]->priv->outputs[j] != NULL; j++) {
-		    g_ptr_array_add (array, configs[i]->priv->outputs[i]);
+		    g_object_ref (configs[i]->priv->outputs[j]);
+		    g_ptr_array_add (array, configs[i]->priv->outputs[j]);
 		}
 		g_ptr_array_add (array, NULL);
 		result->priv->outputs = (MateRROutputInfo **) g_ptr_array_free (array, FALSE);
