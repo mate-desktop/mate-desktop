@@ -2855,9 +2855,14 @@ handle_text (GMarkupParseContext *context,
 	     GError             **err)
 {
 	SlideShow *parser = user_data;
-	Slide *slide = parser->slides->tail? parser->slides->tail->data : NULL;
 	FileSize *fs;
 	gint i;
+
+	g_return_if_fail (parser != NULL);
+	g_return_if_fail (parser->slides != NULL);
+	g_return_if_fail (parser->slides->tail != NULL);
+
+	Slide *slide = parser->slides->tail->data;
 
 	if (stack_is (parser, "year", "starttime", "background", NULL)) {
 		parser->start_tm.tm_year = parse_int (text) - 1900;
