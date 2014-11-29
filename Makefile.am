@@ -6,7 +6,7 @@ endif
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
-DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc --disable-scrollkeeper --enable-mpaste
+DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc --enable-mpaste
 
 if MATE_ABOUT_ENABLED
 versiondir = $(datadir)/mate-about
