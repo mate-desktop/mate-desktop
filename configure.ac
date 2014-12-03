@@ -335,5 +335,6 @@ mate-desktop $VERSION
     Use external pnp.ids:         ${EXTERNAL_PNP_IDS}
     Startup notification support: ${have_startup_notification}
     XRandr support:               ${have_randr}
+    Build introspection support:  ${found_introspection}
     Build gtk-doc documentation:  ${enable_gtk_doc}
 "
