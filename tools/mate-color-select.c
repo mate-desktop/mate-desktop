@@ -45,6 +45,7 @@ copy_color (GtkWidget *widget, GdkEvent  *event, MateColorSelectionDialog *color
     gtk_clipboard_set_text (gtk_clipboard_get (GDK_SELECTION_CLIPBOARD), color_string, -1);
 
     g_free (color_string);
+    return 0;
 }
 
 int
@@ -85,4 +86,5 @@ main (int argc, char **argv)
 
     /* start application */
     gtk_main ();
+    return 0;
 }
