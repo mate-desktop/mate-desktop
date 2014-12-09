@@ -773,7 +773,7 @@ mate_rr_screen_set_property (GObject *gobject, guint property_id, const GValue *
     case SCREEN_PROP_GDK_SCREEN:
         priv->gdk_screen = g_value_get_object (value);
         priv->gdk_root = gdk_screen_get_root_window (priv->gdk_screen);
-        priv->xroot = gdk_x11_drawable_get_xid (priv->gdk_root);
+        priv->xroot = GDK_WINDOW_XID (priv->gdk_root);
         priv->xdisplay = GDK_SCREEN_XDISPLAY (priv->gdk_screen);
         priv->xscreen = gdk_x11_screen_get_xscreen (priv->gdk_screen);
         return;
