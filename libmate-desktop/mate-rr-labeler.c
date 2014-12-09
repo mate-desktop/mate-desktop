@@ -549,7 +549,7 @@ mate_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateRROutputInfo *o
 	MateRROutputInfo **outputs;
 
 	g_return_if_fail (MATE_IS_RR_LABELER (labeler));
-	g_return_if_fail (MATE_IS_RR_OUTPUT_INFO (output))
+	g_return_if_fail (MATE_IS_RR_OUTPUT_INFO (output));
 	g_return_if_fail (color_out != NULL);
 
 	outputs = mate_rr_config_get_outputs (labeler->priv->config);
