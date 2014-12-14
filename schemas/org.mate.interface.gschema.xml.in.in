@@ -155,5 +155,10 @@
       <_summary>Titlebar layout of GTK3 client-side decorated windows</_summary>
       <_description>This setting determines which buttons should be put in the titlebar of client-side decorated windows, and whether they should be placed at the left of right. See https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout.</_description>
     </key>
+    <key name="automatic-mnemonics" type="b">
+      <default>true</default>
+      <_summary>Only show mnemonics on when the Alt key is pressed</_summary>
+      <_description>Whether mnemonics should be automatically shown and hidden when the user presses the Alt key.</_description>
+    </key>
   </schema>
 </schemalist>
