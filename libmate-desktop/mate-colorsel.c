@@ -1641,26 +1641,21 @@ palette_popup (GtkWidget *widget,
 static GtkWidget*
 palette_new (MateColorSelection *colorsel)
 {
-  GtkWidget *retval;
-  ColorSelectionPrivate *priv;
-  
   static const GtkTargetEntry targets[] = {
     { "application/x-color", 0 }
   };
 
-  priv = colorsel->private_data;
-  
-  retval = gtk_drawing_area_new ();
+  GtkWidget *retval = gtk_drawing_area_new ();
 
   gtk_widget_set_can_focus (retval, TRUE);
-  
+
   g_object_set_data (G_OBJECT (retval), "color_set", GINT_TO_POINTER (0)); 
   gtk_widget_set_events (retval, GDK_BUTTON_PRESS_MASK
                          | GDK_BUTTON_RELEASE_MASK
                          | GDK_EXPOSURE_MASK
                          | GDK_ENTER_NOTIFY_MASK
                          | GDK_LEAVE_NOTIFY_MASK);
-  
+
 #if GTK_CHECK_VERSION (3, 0, 0)
   g_signal_connect (retval, "draw",
 		    G_CALLBACK (palette_draw), colorsel);
@@ -1680,14 +1675,14 @@ palette_new (MateColorSelection *colorsel)
 		    G_CALLBACK (palette_activate), colorsel);
   g_signal_connect (retval, "popup-menu",
 		    G_CALLBACK (palette_popup), colorsel);
-  
+
   gtk_drag_dest_set (retval,
 		     GTK_DEST_DEFAULT_HIGHLIGHT |
 		     GTK_DEST_DEFAULT_MOTION |
 		     GTK_DEST_DEFAULT_DROP,
 		     targets, 1,
 		     GDK_ACTION_COPY);
-  
+
   g_signal_connect (retval, "drag-end",
                     G_CALLBACK (palette_drag_end), NULL);
   g_signal_connect (retval, "drag-data-received",
