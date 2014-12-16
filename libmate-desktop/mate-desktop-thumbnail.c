@@ -50,7 +50,11 @@
 struct _MateDesktopThumbnailFactoryPrivate {
   MateDesktopThumbnailSize size;
 
+#if GLIB_CHECK_VERSION(2, 31, 0)
   GMutex lock;
+#else
+  GMutex* lock;
+#endif
 
   GList *thumbnailers;
   GHashTable *mime_types_map;
@@ -493,7 +497,15 @@ mate_desktop_thumbnail_factory_finalize (GObject *object)
       priv->monitors = NULL;
     }
 
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_clear (&priv->lock);
+#else
+  if (priv->lock)
+    {
+      g_mutex_free (priv->lock);
+      priv->lock = NULL;
+    }
+#endif
 
   if (priv->disabled_types)
     {
@@ -578,7 +590,11 @@ update_or_create_thumbnailer (MateDesktopThumbnailFactory *factory,
   Thumbnailer *thumb;
   gboolean found = FALSE;
 
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_lock (&priv->lock);
+#else
+  g_mutex_lock (priv->lock);
+#endif
 
   for (l = priv->thumbnailers; l && !found; l = g_list_next (l))
     {
@@ -606,7 +622,11 @@ update_or_create_thumbnailer (MateDesktopThumbnailFactory *factory,
         mate_desktop_thumbnail_factory_add_thumbnailer (factory, thumb);
     }
 
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_unlock (&priv->lock);
+#else
+  g_mutex_unlock (priv->lock);
+#endif
 }
 
 static void
@@ -617,7 +637,11 @@ remove_thumbnailer (MateDesktopThumbnailFactory *factory,
   GList *l;
   Thumbnailer *thumb;
 
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_lock (&priv->lock);
+#else
+  g_mutex_lock (priv->lock);
+#endif
 
   for (l = priv->thumbnailers; l; l = g_list_next (l))
     {
@@ -635,7 +659,11 @@ remove_thumbnailer (MateDesktopThumbnailFactory *factory,
         }
     }
 
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_unlock (&priv->lock);
+#else
+  g_mutex_unlock (priv->lock);
+#endif
 }
 
 static void
@@ -737,7 +765,11 @@ external_thumbnailers_disabled_all_changed_cb (GSettings                    *set
 {
   MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
 
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_lock (&priv->lock);
+#else
+  g_mutex_lock (priv->lock);
+#endif
 
   priv->disabled = g_settings_get_boolean (priv->settings, "disable-all");
   if (priv->disabled)
@@ -751,7 +783,11 @@ external_thumbnailers_disabled_all_changed_cb (GSettings                    *set
       mate_desktop_thumbnail_factory_load_thumbnailers (factory);
     }
 
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_unlock (&priv->lock);
+#else
+  g_mutex_unlock (priv->lock);
+#endif
 }
 
 static void
@@ -761,14 +797,22 @@ external_thumbnailers_disabled_changed_cb (GSettings                    *setting
 {
   MateDesktopThumbnailFactoryPrivate *priv = factory->priv;
 
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_lock (&priv->lock);
+#else
+  g_mutex_lock (priv->lock);
+#endif
 
   if (priv->disabled)
     return;
   g_strfreev (priv->disabled_types);
   priv->disabled_types = g_settings_get_strv (priv->settings, "disable");
 
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_unlock (&priv->lock);
+#else
+  g_mutex_unlock (priv->lock);
+#endif
 }
 
 static void
@@ -787,7 +831,11 @@ mate_desktop_thumbnail_factory_init (MateDesktopThumbnailFactory *factory)
                                                 (GDestroyNotify)g_free,
                                                 (GDestroyNotify)thumbnailer_unref);
 
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_init (&priv->lock);
+#else
+  priv->lock = g_mutex_new ();
+#endif
 
   priv->settings = g_settings_new ("org.mate.thumbnailers");
   priv->disabled = g_settings_get_boolean (priv->settings, "disable-all");
@@ -879,8 +927,13 @@ mate_desktop_thumbnail_factory_lookup (MateDesktopThumbnailFactory *factory,
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
   
+#if GLIB_CHECK_VERSION (2, 34, 0)
   path = g_build_filename (g_get_user_cache_dir (),
                            "thumbnails",
+#else
+  path = g_build_filename (g_get_home_dir (),
+                           ".thumbnails",
+#endif
                            (priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
                            file,
                            NULL);
@@ -940,8 +993,13 @@ mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailF
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
+#if GLIB_CHECK_VERSION (2, 34, 0)
   path = g_build_filename (g_get_user_cache_dir (),
                            "thumbnails/fail",
+#else
+  path = g_build_filename (g_get_home_dir (),
+                           ".thumbnails/fail",
+#endif
                            appname,
                            file,
                            NULL);
@@ -1043,7 +1101,11 @@ mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *facto
   if (!mime_type)
     return FALSE;
 
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_lock (&factory->priv->lock);
+#else
+  g_mutex_lock (factory->priv->lock);
+#endif
   if (!mate_desktop_thumbnail_factory_is_disabled (factory, mime_type))
     {
       Thumbnailer *thumb;
@@ -1051,7 +1113,11 @@ mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *facto
       thumb = g_hash_table_lookup (factory->priv->mime_types_map, mime_type);
       have_script = thumbnailer_try_exec (thumb);
     }
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_unlock (&factory->priv->lock);
+#else
+  g_mutex_unlock (factory->priv->lock);
+#endif
 
   if (have_script || mimetype_supported_by_gdk_pixbuf (mime_type))
     {
@@ -1174,7 +1240,11 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
   pixbuf = NULL;
 
   script = NULL;
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_lock (&factory->priv->lock);
+#else
+  g_mutex_lock (factory->priv->lock);
+#endif
   if (!mate_desktop_thumbnail_factory_is_disabled (factory, mime_type))
     {
       Thumbnailer *thumb;
@@ -1183,7 +1253,11 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
       if (thumb)
         script = g_strdup (thumb->command);
     }
+#if GLIB_CHECK_VERSION(2, 31, 0)
   g_mutex_unlock (&factory->priv->lock);
+#else
+  g_mutex_unlock (factory->priv->lock);
+#endif
   
   if (script)
     {
@@ -1283,8 +1357,13 @@ make_thumbnail_dirs (MateDesktopThumbnailFactory *factory)
 
   res = FALSE;
 
+#if GLIB_CHECK_VERSION (2, 34, 0)
   thumbnail_dir = g_build_filename (g_get_user_cache_dir (),
                                     "thumbnails",
+#else
+  thumbnail_dir = g_build_filename (g_get_home_dir (),
+                                    ".thumbnails",
+#endif
                                     NULL);
   if (!g_file_test (thumbnail_dir, G_FILE_TEST_IS_DIR))
     {
@@ -1317,8 +1396,13 @@ make_thumbnail_fail_dirs (MateDesktopThumbnailFactory *factory)
 
   res = FALSE;
 
+#if GLIB_CHECK_VERSION (2, 34, 0)
   thumbnail_dir = g_build_filename (g_get_user_cache_dir (),
                                     "thumbnails",
+#else
+  thumbnail_dir = g_build_filename (g_get_home_dir (),
+                                    ".thumbnails",
+#endif
                                     NULL);
   if (!g_file_test (thumbnail_dir, G_FILE_TEST_IS_DIR))
     {
@@ -1392,8 +1476,13 @@ mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *fact
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
+#if GLIB_CHECK_VERSION (2, 34, 0)
   path = g_build_filename (g_get_user_cache_dir (),
                            "thumbnails",
+#else
+  path = g_build_filename (g_get_home_dir (),
+                           ".thumbnails",
+#endif
                            (priv->size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
                            file,
                            NULL);
@@ -1500,8 +1589,13 @@ mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFact
 
   file = g_strconcat (g_checksum_get_string (checksum), ".png", NULL);
 
+#if GLIB_CHECK_VERSION (2, 34, 0)
   path = g_build_filename (g_get_user_cache_dir (),
                            "thumbnails/fail",
+#else
+  path = g_build_filename (g_get_home_dir (),
+                           ".thumbnails/fail",
+#endif
                            appname,
                            file,
                            NULL);
@@ -1591,8 +1685,13 @@ mate_desktop_thumbnail_path_for_uri (const char         *uri,
   file = g_strconcat (md5, ".png", NULL);
   g_free (md5);
   
+#if GLIB_CHECK_VERSION (2, 34, 0)
   path = g_build_filename (g_get_user_cache_dir (),
                            "thumbnails",
+#else
+  path = g_build_filename (g_get_home_dir (),
+                           ".thumbnails",
+#endif
                            (size == MATE_DESKTOP_THUMBNAIL_SIZE_NORMAL)?"normal":"large",
                            file,
                            NULL);
