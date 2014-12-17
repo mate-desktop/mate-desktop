@@ -1,10 +1,15 @@
-mate-desktop 1.9.3
+mate-desktop 1.9.4
 
-  * Updated mpaste for website change
   * Turn MateRRScreen, GnomeRRConfig and GnomeOutputInfo into a GObject.
     Thanks to monsta for helping to test this.
   * Add gobject introspection
   * Many RANDR fixes
+  * interface: add automatic-mnemonics key for Gtk xsetting
+  * use GDK_WINDOW_XID for inter-GTK compatibility
+
+mate-desktop 1.9.3
+
+  * Updated mpaste for website change
 
 mate-desktop 1.9.2
 
