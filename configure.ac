@@ -77,22 +77,22 @@ fi
 # Should we build mate-about? Useful for people who need to build
 # two mate-desktop using two different versions of GTK+
 AC_ARG_ENABLE([mate-about],
-	[AS_HELP_STRING([--disable-mate-about],[dont build mate-about])],
-	[],[enable_mate_about=yes])
+	[AS_HELP_STRING([--disable-mate-about],[dont build mate-about])],,
+	[enable_mate_about=yes])
 AM_CONDITIONAL(MATE_ABOUT_ENABLED, test "x$enable_mate_about" = "xyes")
 
 
 # Install tool to migrate 1.4 MateConf settings
 AC_ARG_ENABLE([mate-conf-import],
-	[AS_HELP_STRING([--enable-mate-conf-import],[install mate-conf-import tool])],
-	[enable_mate_conf_import=yes],[enable_mate_conf_import=no])
+	[AS_HELP_STRING([--enable-mate-conf-import],[install mate-conf-import tool])],,
+	[enable_mate_conf_import=no])
 AM_CONDITIONAL(MATE_CONF_IMPORT_ENABLED, test "x$enable_mate_conf_import" = "xyes")
 
 
 # Install tool to paste text to paste.mate-desktop.org
 AC_ARG_ENABLE([mpaste],
-	[AS_HELP_STRING([--enable-mpaste],[install mpaste tool])],
-	[enable_mpaste=yes],[enable_mpaste=no])
+	[AS_HELP_STRING([--enable-mpaste],[install mpaste tool])],,
+	[enable_mpaste=no])
 AM_CONDITIONAL(MPASTE_ENABLED, test "x$enable_mpaste" = "xyes")
 
 
