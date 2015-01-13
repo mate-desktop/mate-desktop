@@ -92,6 +92,8 @@ const char* authors[] = {
     "Mike Gabriel <sunweaver@debian.org>",
     "Willy Sudiarto Raharjo <willysr@slackware-id.org>",
     "Chess Griffin <chess.griffin@gmail.com>",
+    "Vlad Orlov <monsta@inbox.ru>",
+    "Abel McClendon <hcmmac@hosscomm.com>",
     /* MATE Google Summer of Code students */
     "Alexander van der Meij <alexandervdm@gliese.me>",
     "Avishkar Gupta <avishkar_gupta@outlook.com>",
