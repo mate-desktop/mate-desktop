@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ivar Smolin <okul@linux.ee>, 2014
+# Ivar Smolin <okul@linux.ee>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-14 19:55+0200\n"
-"PO-Revision-Date: 2014-11-05 21:56+0000\n"
+"PO-Revision-Date: 2015-01-19 21:53+0000\n"
 "Last-Translator: Ivar Smolin <okul@linux.ee>\n"
 "Language-Team: Estonian (http://www.transifex.com/projects/p/MATE/language/et/)\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,7 @@ msgid ""
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
-msgstr ""
+msgstr "MATE on GNOME2 jätk. Sajad inimesed on alates 1997. aastast panustanud GNOME arengusse ja paljud teised on aidanud kaasa muul moel: tõlkides, dokumenteerides või kvaliteedikontrolli läbi viies."
 
 #: ../mate-about/mate-about.h:59
 msgid ""
@@ -142,7 +142,7 @@ msgstr "Veebisaidi silt"
 msgid ""
 "The label for the link to the website of the program. If this is not set, it"
 " defaults to the URL"
-msgstr ""
+msgstr "Programmi veebisaidi URL-i silt. Kui seda pole määratud, siis vaikimis on selleks URL ise"
 
 #: ../libmate-desktop/mate-aboutdialog.c:356
 msgid "Authors"
@@ -162,11 +162,11 @@ msgstr "Programmi dokumenteerijate nimekiri"
 
 #: ../libmate-desktop/mate-aboutdialog.c:390
 msgid "Artists"
-msgstr ""
+msgstr "Kunstnikud"
 
 #: ../libmate-desktop/mate-aboutdialog.c:391
 msgid "List of people who have contributed artwork to the program"
-msgstr ""
+msgstr "Programmile kunstiloomingu teinud autorite nimekiri"
 
 #: ../libmate-desktop/mate-aboutdialog.c:408
 msgid "Translator credits"
@@ -185,7 +185,7 @@ msgstr "Logo"
 msgid ""
 "A logo for the about box. If this is not set, it defaults to "
 "gtk_window_get_default_icon_list()"
-msgstr ""
+msgstr "Programmi andmete kasti logo. Kui määrata, siis on vaikimisi selleks gtk_window_get_default_icon_list()"
 
 #: ../libmate-desktop/mate-aboutdialog.c:440
 msgid "Logo Icon Name"
@@ -193,15 +193,15 @@ msgstr "Logo ikooni nimi"
 
 #: ../libmate-desktop/mate-aboutdialog.c:441
 msgid "A named icon to use as the logo for the about box."
-msgstr ""
+msgstr "Programmi andmete kastis kasutatav nimeline ikoon."
 
 #: ../libmate-desktop/mate-aboutdialog.c:454
 msgid "Wrap license"
-msgstr ""
+msgstr "Litsensiridade murdmine"
 
 #: ../libmate-desktop/mate-aboutdialog.c:455
 msgid "Whether to wrap the license text."
-msgstr ""
+msgstr "Kas litsentsi tekstu murtakse või mitte."
 
 #. Add the credits button
 #: ../libmate-desktop/mate-aboutdialog.c:547
@@ -236,15 +236,15 @@ msgstr "Tõlge"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2135
 msgid "Artwork by"
-msgstr ""
+msgstr "Kunstilooming:"
 
 #: ../libmate-desktop/mate-colorbutton.c:154
 msgid "Use alpha"
-msgstr ""
+msgstr "Läbipaistvuse kasutamine"
 
 #: ../libmate-desktop/mate-colorbutton.c:155
 msgid "Whether or not to give the color an alpha value"
-msgstr ""
+msgstr "Kas värvus on läbipaistev või mitte"
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
@@ -271,7 +271,7 @@ msgstr "Valitud värvus"
 #: ../libmate-desktop/mate-colorbutton.c:199
 #: ../libmate-desktop/mate-colorsel.c:344
 msgid "Current Alpha"
-msgstr ""
+msgstr "Praegune läbipaistvus"
 
 #: ../libmate-desktop/mate-colorbutton.c:200
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
@@ -283,19 +283,19 @@ msgstr "Võeti vastu vigased värvuse andmed\n"
 
 #: ../libmate-desktop/mate-colorsel.c:323
 msgid "Has Opacity Control"
-msgstr ""
+msgstr "Koos katvuse määramisega"
 
 #: ../libmate-desktop/mate-colorsel.c:324
 msgid "Whether the color selector should allow setting opacity"
-msgstr ""
+msgstr "Kas värvuse valijaga on võimalik katvust määrata või mitte"
 
 #: ../libmate-desktop/mate-colorsel.c:330
 msgid "Has palette"
-msgstr ""
+msgstr "Paletiga"
 
 #: ../libmate-desktop/mate-colorsel.c:331
 msgid "Whether a palette should be used"
-msgstr ""
+msgstr "Kas paletti kasutatakse või mitte"
 
 #: ../libmate-desktop/mate-colorsel.c:338
 msgid "The current color"
@@ -319,7 +319,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorsel.c:431
 msgid "_Hue:"
-msgstr ""
+msgstr "_Toon:"
 
 #: ../libmate-desktop/mate-colorsel.c:432
 msgid "Position on the color wheel."
@@ -327,7 +327,7 @@ msgstr "Asukoht värvirattal."
 
 #: ../libmate-desktop/mate-colorsel.c:434
 msgid "_Saturation:"
-msgstr ""
+msgstr "_Küllastus:"
 
 #: ../libmate-desktop/mate-colorsel.c:435
 msgid "\"Deepness\" of the color."
@@ -367,7 +367,7 @@ msgstr "Sinise valguse hulk värvuses:"
 
 #: ../libmate-desktop/mate-colorsel.c:446
 msgid "Op_acity:"
-msgstr ""
+msgstr "_Läbipaistvus:"
 
 #: ../libmate-desktop/mate-colorsel.c:453
 #: ../libmate-desktop/mate-colorsel.c:463
@@ -421,7 +421,7 @@ msgstr "gtk-color-sel"
 
 #: ../libmate-desktop/mate-colorsel.c:1519
 msgid "_Save color here"
-msgstr ""
+msgstr "_Salvesta värv siia"
 
 #: ../libmate-desktop/mate-colorsel.c:1749
 msgid ""
@@ -436,7 +436,7 @@ msgstr "Värvuse valimine"
 
 #: ../libmate-desktop/mate-colorseldialog.c:100
 msgid "The color selection embedded in the dialog."
-msgstr ""
+msgstr "Dialoogiga põimitud värvusevalik."
 
 #: ../libmate-desktop/mate-colorseldialog.c:106
 msgid "OK Button"
@@ -448,11 +448,11 @@ msgstr "Dialoogi Olgu-nupp."
 
 #: ../libmate-desktop/mate-colorseldialog.c:113
 msgid "Cancel Button"
-msgstr ""
+msgstr "Loobumise nupp"
 
 #: ../libmate-desktop/mate-colorseldialog.c:114
 msgid "The cancel button of the dialog."
-msgstr ""
+msgstr "Teatedialoogi loobumise nupp."
 
 #: ../libmate-desktop/mate-colorseldialog.c:120
 msgid "Help Button"
@@ -662,7 +662,7 @@ msgstr "Ekraanid on peegeldatud"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:1
 msgid "minimum interval in milliseconds"
-msgstr ""
+msgstr "vähim intervall millisekundites"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
@@ -674,7 +674,7 @@ msgstr "Piksleid sekundis"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr ""
+msgstr "Kui palju piksleid sekundis liigutakse maksimumkiirusel."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:5
 msgid "How long to accelerate in milliseconds"
@@ -843,7 +843,7 @@ msgstr "Kas MATE joonistab töölaua tausta."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:3
 msgid "Show Desktop Icons"
-msgstr ""
+msgstr "Näita töölaua ikoone"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
@@ -851,13 +851,13 @@ msgstr "Kas MATE failihaldur (Caja) joonistab töölaua ikoonid."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:5
 msgid "Fade the background on change"
-msgstr ""
+msgstr "Taustapildi tuhmistamine selle vahetamisel"
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:6
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
-msgstr ""
+msgstr "Kui määratud, siis kasutab MATE töölaua taustapildi vahetamisel tuhmumise efekti."
 
 #: ../schemas/org.mate.background.gschema.xml.in.in.h:7
 msgid "Picture Options"
@@ -1152,7 +1152,7 @@ msgstr "Kas kirjete ja tekstivaadete kontekstimenüüd peavad pakkuma juhtmärki
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:55
 msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr ""
+msgstr "GTK3 kliendipoolsete dekoreeritud akende tiitliriba paigutus"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:56
 msgid ""

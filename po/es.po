@@ -3,9 +3,10 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2013
-# Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2014
+# Adolfo Jayme Barrientos <fito@libreoffice.org>, 2013
+# Adolfo Jayme Barrientos <fito@libreoffice.org>, 2014
 # ebray187 <ebray187@gmail.com>, 2014
+# Emiliano Fascetti, 2015
 # Lluís Tusquellas <lutusq@gmail.com>, 2012
 # Lluís Tusquellas <lutusq@gmail.com>, 2012
 # elio <micta2003@hotmail.com>, 2014
@@ -16,8 +17,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-14 19:55+0200\n"
-"PO-Revision-Date: 2014-07-06 19:36+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitoschido@ubuntu.com>\n"
+"PO-Revision-Date: 2015-01-05 01:57+0000\n"
+"Last-Translator: Emiliano Fascetti\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/MATE/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -522,12 +523,12 @@ msgstr "No es un elemento que pueda abrirse"
 #: ../libmate-desktop/mate-desktop-item.c:2088
 #, c-format
 msgid "No command (Exec) to launch"
-msgstr "No hay ninguna orden (Exec) que ejecutar"
+msgstr "No hay ningún comando (Exec) que lanzar"
 
 #: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Bad command (Exec) to launch"
-msgstr "Orden incorrecta (Exec) para ejecutar"
+msgstr "Comando incorrecto (Exec) para lanzar"
 
 #: ../libmate-desktop/mate-desktop-item.c:3584
 #, c-format
@@ -735,7 +736,7 @@ msgstr "Aplicación preferida de tecnología de asistencia de movilidad"
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr "Aplicación preferida de tecnología de asistencia de movilidad para ser usada al inicio, en el menú o en la línea de comados."
+msgstr "Aplicación de tecnología de asistencia móvil preferida para ser usada al inicio, menú, o línea de comandos."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:3
 msgid "Start preferred Mobility assistive technology application"
@@ -755,7 +756,7 @@ msgstr "Aplicación preferida de tecnología de asistencia visual"
 msgid ""
 "Preferred Visual assistive technology application be used for login, menu, "
 "or command line."
-msgstr "Aplicación preferida de tecnología de asistencia visual para ser usada al inicio, en el menú o en la línea de comados."
+msgstr "Aplicación de tecnología de asistencia visual preferida para ser usada al inicio, menú, o línea de comandos."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:3
 msgid "Start preferred Visual assistive technology application"
@@ -1056,11 +1057,11 @@ msgstr "Una lista separada por '\\n' de \"nombre: color\" como se define en la o
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:31
 msgid "Default font"
-msgstr "Tipo de letra predeterminado"
+msgstr "Tipografía predeterminada"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:32
 msgid "Name of the default font used by gtk+."
-msgstr "Nombre del tipo de letra predeterminado que usará gtk+."
+msgstr "Nombre de la tipografía predeterminada que usará gtk+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:33
 msgid "GTK IM Preedit Style"
@@ -1088,28 +1089,28 @@ msgstr "Nombre del método  de entrada del módulo GTK+ usado por gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
 msgid "Document font"
-msgstr "Tipo de letra para documentos"
+msgstr "Tipografía para documentos"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
 msgid "Name of the default font used for reading documents."
-msgstr "Nombre del tipo de letra predeterminado que se usará para leer documentos."
+msgstr "Nombre de la tipografía predeterminada que se usará para leer documentos."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
 msgid "Monospace font"
-msgstr "Tipo de letra monoespaciado"
+msgstr "Tipografía monoespaciada"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
-msgstr "Nombre del tipo de letra monoespaciado (de anchura fija) que usar en lugares como el terminal."
+msgstr "Nombre de la tipografía monoespaciada (de anchura fija) que usar en lugares como el terminal."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
 msgid "Use Custom Font"
-msgstr "Usar tipo de letra personalizado"
+msgstr "Usar tipografía personalizada"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Si hay que usar una fuente personalizada en la aplicaciones gtk+"
+msgstr "Indica si hay que usar una tipografía personalizada en las aplicaciones gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
 msgid "Status Bar on Right"
@@ -1172,14 +1173,14 @@ msgstr "Este ajuste determina qué botones deben ser puestos en la cabecera en v
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
 msgid "Disable command line"
-msgstr "Desactivar la línea de órdenes"
+msgstr "Desactivar línea de comandos"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:2
 msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr "Impedir que el usuario acceda al terminal o especifique una línea de órdenes para su ejecución. Por ejemplo, esto desactivaría el acceso al diálogo «Ejecutar una aplicación» del panel."
+msgstr "Impedir que el usuario acceda al terminal o especifique una línea de comandos para su ejecución. Por ejemplo, esto desactivaría el acceso al diálogo «Ejecutar una aplicación» del panel."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:3
 msgid "Disable saving files to disk"
@@ -1345,14 +1346,14 @@ msgstr "Resalta la posición actual del puntero si la tecla de control se presio
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
 msgid "Cursor font"
-msgstr "Fuente del cursor"
+msgstr "Tipografía del cursor"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
-msgstr "Nombre de fuente del cursor. Si no está activado, se utiliza la fuente predeterminada. Este valor sólo se propaga al servidor X al inicio de cada sesión, por lo que cambiar a mediados de sesión no tendrá efecto hasta la próxima vez que inicie sesión"
+msgstr "Nombre de la tipografía del cursor. Si no esta definida se utiliza la tipografía predeterminada. El valor solo se propaga al servidor X al inicio de cada sesión, por lo cual si cambia este valor en medio de una sesión este no surtirá efecto hasta la próxima vez que inicie su sesión."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
 msgid "Cursor theme"
