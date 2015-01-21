@@ -99,6 +99,7 @@ const char* authors[] = {
     "Avishkar Gupta <avishkar_gupta@outlook.com>",
     "Laszlo Boros <iamsemmu@gmail.com>",
     "Michal Ratajsky <michal.ratajsky@gmail.com>",
+    "",
     /* GNOME developers */
     "GNOME:",
     "Jérôme Abela",
