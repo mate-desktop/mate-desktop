@@ -790,15 +790,18 @@ mate_desktop_thumbnail_factory_init (MateDesktopThumbnailFactory *factory)
   g_mutex_init (&priv->lock);
 
   priv->settings = g_settings_new ("org.mate.thumbnailers");
-  priv->disabled = g_settings_get_boolean (priv->settings, "disable-all");
-  if (!priv->disabled)
-    priv->disabled_types = g_settings_get_strv (priv->settings, "disable");
+
   g_signal_connect (priv->settings, "changed::disable-all",
                     G_CALLBACK (external_thumbnailers_disabled_all_changed_cb),
                     factory);
   g_signal_connect (priv->settings, "changed::disable",
                     G_CALLBACK (external_thumbnailers_disabled_changed_cb),
                     factory);
+
+  priv->disabled = g_settings_get_boolean (priv->settings, "disable-all");
+
+  if (!priv->disabled)
+    priv->disabled_types = g_settings_get_strv (priv->settings, "disable");
 
   if (!priv->disabled)
     mate_desktop_thumbnail_factory_load_thumbnailers (factory);
