@@ -1721,6 +1721,17 @@ make_environment_for_screen (GdkScreen  *screen,
 	return retval;
 }
 
+static void
+dummy_child_watch (GPid         pid,
+		   gint         status,
+		   gpointer user_data)
+{
+	/* Nothing, this is just to ensure we don't double fork
+	 * and break pkexec:
+	 * https://bugzilla.gnome.org/show_bug.cgi?id=675789
+	 */
+}
+
 static int
 ditem_execute (const MateDesktopItem *item,
 	       const char *exec,
@@ -1749,6 +1760,7 @@ ditem_execute (const MateDesktopItem *item,
 	char *new_exec, *uris, *temp;
 	char *exec_locale;
 	int launched = 0;
+	GPid pid;
 #ifdef HAVE_STARTUP_NOTIFICATION
 	GdkDisplay *gdkdisplay;
 	SnLauncherContext *sn_context;
@@ -1957,14 +1969,17 @@ ditem_execute (const MateDesktopItem *item,
 				      (do_not_reap_child ? G_SPAWN_DO_NOT_REAP_CHILD : 0) | G_SPAWN_SEARCH_PATH /* flags */,
 				      NULL, /* child_setup_func */
 				      NULL, /* child_setup_func_data */
-				      &ret /* child_pid */,
+				      (do_not_reap_child ? &pid : NULL) /* child_pid */,
 				      error)) {
 			/* The error was set for us,
 			 * we just can't launch this thingie */
 			ret = -1;
 			g_strfreev (real_argv);
 			break;
+		} else if (do_not_reap_child) {
+			g_child_watch_add (pid, dummy_child_watch, NULL);
 		}
+
 		launched ++;
 
 		g_strfreev (real_argv);
