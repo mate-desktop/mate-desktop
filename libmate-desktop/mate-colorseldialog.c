@@ -185,24 +185,6 @@ mate_color_selection_dialog_new (const gchar *title)
   return GTK_WIDGET (colorseldiag);
 }
 
-// since 1.9.1
-#if GTK_CHECK_VERSION (3, 12, 0)
-GtkWidget*
-mate_color_selection_dialog_new_with_header_bar (const gchar *title)
-{
-  MateColorSelectionDialog *colorseldiag;
-  
-  colorseldiag = g_object_new (MATE_TYPE_COLOR_SELECTION_DIALOG, "use-header-bar", TRUE, NULL);
-
-  if (title)
-    gtk_window_set_title (GTK_WINDOW (colorseldiag), title);
-
-  gtk_window_set_resizable (GTK_WINDOW (colorseldiag), FALSE);
-  
-  return GTK_WIDGET (colorseldiag);
-}
-#endif
-
 /**
  * mate_color_selection_dialog_get_color_selection:
  * @colorsel: a #MateColorSelectionDialog
