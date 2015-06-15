@@ -1,0 +1,50 @@
+.\"
+.\" mpaste manual page.
+.\" (C) 2015 Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+.\"
+.TH MPASTE 1 "MATE"
+.SH NAME
+mpaste \- command\-line client for https://paste.mate\-desktop.org
+.SH SYNOPSIS
+.B mpaste [<OPTIONS>] [<INFILE>]
+.SH DESCRIPTION
+The \fBmpaste\fR program reads text from file or STDIN and sends it to
+
+    \fIhttps://paste.mate\-desktop.org\fR, 
+
+a pastebin site run by the MATE Desktop project. After pasting some text,
+\fBmpaste\fR returns the URL of the pasted text to the user.
+
+If \fI<INFILE>\fR is omitted, \fBmpaste\fR waits for incoming text on STDIN.
+
+.SH OPTIONS
+The following options are supported:
+.TP
+.I "\-t, \-\-title <TITLE>"
+Title of the paste.
+.\" .TP
+.\" .I "\-a, \-\-author"
+.\" Author of the paste.
+.TP
+.I "\-p, \-\-private"
+Should this paste be private?
+.TP
+.I "\-pwd, \-\-password <PASSWORD>"
+Protect paste with a given password.
+.TP
+.I "\-lang, \-\-language <LANG>"
+Language that the paste is in.
+.TP
+.I "\-ll, \-\-language\-list"
+List all supported languages.
+.TP
+.I "\-e, \-\-expire <MINUTES>"
+Paste expires in a given number of minutes.
+
+.SH BUGS
+If you find bugs in the \fImpaste\fP program, please report
+these on https://github.com/mate\-desktop/mate\-desktop/issues.
+
+.SH AUTHOR
+This manual page has been written for the Debian project by Mike Gabriel
+<mike.gabriel@das\-netzwerkteam.de> and maybe used by others.
