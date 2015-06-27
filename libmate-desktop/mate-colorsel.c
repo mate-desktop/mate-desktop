@@ -88,8 +88,6 @@ enum {
   COLORSEL_NUM_CHANNELS
 };
 
-typedef struct _ColorSelectionPrivate ColorSelectionPrivate;
-
 struct _ColorSelectionPrivate
 {
   guint has_opacity : 1;
