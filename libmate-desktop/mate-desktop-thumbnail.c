@@ -964,52 +964,74 @@ mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailF
   return res;
 }
 
+/* forbidden/buggy GdkPixbufFormat names */
+const char *forbidden[] = { "tga", "icns", "jpeg2000" };
+
+static gboolean
+type_is_forbidden (const gchar *name)
+{
+    gint i = 0;
+    for (i = 0; i < G_N_ELEMENTS (forbidden); i++) {
+        if (g_strcmp0 (forbidden[i], name) == 0) {
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
 static gboolean
 mimetype_supported_by_gdk_pixbuf (const char *mime_type)
 {
-        guint i;
-        static gsize formats_hash = 0;
-        gchar *key;
-        gboolean result;
+    guint i;
+    static gsize formats_hash = 0;
+    gchar *key;
+    gboolean result;
 
-	if (g_once_init_enter (&formats_hash)) {
-                GSList *formats, *list;
-		GHashTable *hash;
+    if (g_once_init_enter (&formats_hash)) {
+        GSList *formats, *list;
+        GHashTable *hash;
 
-                hash = g_hash_table_new_full (g_str_hash,
-					      (GEqualFunc) g_content_type_equals,
-					      g_free, NULL);
+        hash = g_hash_table_new_full (g_str_hash,
+                                      (GEqualFunc) g_content_type_equals,
+                                      g_free, NULL);
 
-                formats = gdk_pixbuf_get_formats ();
-                list = formats;
+        formats = gdk_pixbuf_get_formats ();
+        list = formats;
 
-                while (list) {
-                        GdkPixbufFormat *format = list->data;
-                        gchar **mime_types;
+        while (list) {
+            GdkPixbufFormat *format = list->data;
+            gchar **mime_types;
 
-                        mime_types = gdk_pixbuf_format_get_mime_types (format);
+            if (type_is_forbidden (format->name)) {
+                gdk_pixbuf_format_set_disabled (format, TRUE);
+                list = list->next;
+                continue;
+            }
 
-                        for (i = 0; mime_types[i] != NULL; i++)
-                                g_hash_table_insert (hash,
-                                                     (gpointer) g_content_type_from_mime_type (mime_types[i]),
-                                                     GUINT_TO_POINTER (1));	
+            mime_types = gdk_pixbuf_format_get_mime_types (format);
 
-                        g_strfreev (mime_types);
-                        list = list->next;
-                }
-                g_slist_free (formats);
+            for (i = 0; mime_types[i] != NULL; i++)
+                g_hash_table_insert (hash,
+                                     (gpointer) g_content_type_from_mime_type (mime_types[i]),
+                                     GUINT_TO_POINTER (1));
 
-		g_once_init_leave (&formats_hash, (gsize) hash);
+            g_strfreev (mime_types);
+            list = list->next;
         }
 
-        key = g_content_type_from_mime_type (mime_type);
-        if (g_hash_table_lookup ((void*)formats_hash, key))
-                result = TRUE;
-        else
-                result = FALSE;
-        g_free (key);
+        g_slist_free (formats);
 
-        return result;
+        g_once_init_leave (&formats_hash, (gsize) hash);
+    }
+
+    key = g_content_type_from_mime_type (mime_type);
+    if (g_hash_table_lookup ((void*)formats_hash, key))
+            result = TRUE;
+    else
+            result = FALSE;
+    g_free (key);
+
+    return result;
 }
 
 /**
