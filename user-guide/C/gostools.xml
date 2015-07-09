@@ -935,25 +935,24 @@ a screenshot of the entire screen.</para>
               <para>Use this URI when you want to access a file with
               yelp, for example:</para>
 
-              <screen><userinput>yelp file:///usr/share/mate/help/gcalctool/C/gcalctool.xml</userinput></screen>
+              <screen><userinput>yelp file:///usr/share/help/C/mate-control-center/config-mouse.xml</userinput></screen>
 
             </listitem>
           </varlistentry>
 
           <varlistentry>
-            <term><option>help:</option> or
-            <option>mate-help:</option></term>
+            <term><option>help:</option></term>
 
             <listitem>
               <para>Use this URI when you want to access MATE help documents,
               which are typically written in DocBook format.</para>
 
-              <screen><userinput>yelp help:gcalctool</userinput></screen>
+              <screen><userinput>yelp help:mate-terminal</userinput></screen>
 
               <para>If you want to open the help document at a particular section,
-              append a question mark to the end of the URI, followed by the section id.</para>
+              append a slash to the end of the URI, followed by the section id.</para>
               
-              <screen><userinput>yelp help:user-guide?yelp-advanced-cmdline</userinput></screen>
+              <screen><userinput>yelp help:mate-user-guide/yelp-advanced-cmdline</userinput></screen>
             </listitem>
           </varlistentry>
 
@@ -968,7 +967,7 @@ a screenshot of the entire screen.</para>
               therefore it may be necessary to escape the argument so that the
               shell does not interpret the parenthesis.</para>
 
-              <screen><userinput>yelp man:gcalctool</userinput></screen>
+              <screen><userinput>yelp man:mate-panel</userinput></screen>
               
               <para>or</para>
 
