@@ -850,10 +850,10 @@ mate_rr_screen_init (MateRRScreen *self)
 
 /**
  * mate_rr_screen_new:
- * Creates a new #MateRRScreen instance
- *
  * @screen: the #GdkScreen on which to operate
  * @error: will be set if XRandR is not supported
+ *
+ * Creates a new #MateRRScreen instance
  *
  * Returns: a new #MateRRScreen instance or NULL if screen could not be created,
  * for instance if the driver does not support Xrandr 1.2
@@ -890,13 +890,13 @@ mate_rr_screen_set_size (MateRRScreen *screen,
 
 /**
  * mate_rr_screen_get_ranges:
- *
- * Get the ranges of the screen
  * @screen: a #MateRRScreen
  * @min_width: (out): the minimum width
  * @max_width: (out): the maximum width
  * @min_height: (out): the minimum height
  * @max_height: (out): the maximum height
+ *
+ * Get the ranges of the screen
  */
 void
 mate_rr_screen_get_ranges (MateRRScreen *screen,
@@ -1427,7 +1427,7 @@ mate_rr_output_get_edid_data (MateRROutput *output)
 }
 
 /**
- * mate_rr_screen_get_output_by_id:
+ * mate_rr_screen_get_output_by_name:
  *
  * Returns: (transfer none): the output identified by @name
  */

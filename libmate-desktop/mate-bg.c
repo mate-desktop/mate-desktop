@@ -1149,7 +1149,7 @@ mate_bg_get_pixmap_size (MateBG   *bg,
  * @window:
  * @width:
  * @height:
- * @is_root:
+ * @root:
  *
  * Create a surface that can be set as background for @window. If @is_root is
  * TRUE, the surface created will be created by a temporary X server connection
@@ -1166,7 +1166,7 @@ mate_bg_create_pixmap  (MateBG      *bg,
 		 	GdkWindow   *window,
 			int	     width,
 			int	     height,
-			gboolean     is_root)
+			gboolean     root)
 {
 	int pm_width, pm_height;
 
@@ -1187,7 +1187,7 @@ mate_bg_create_pixmap  (MateBG      *bg,
 	mate_bg_get_pixmap_size (bg, width, height, &pm_width, &pm_height);
 
 
-	if (is_root)
+	if (root)
 	{
 		surface = make_root_pixmap (window, pm_width, pm_height);
 	}
@@ -1211,7 +1211,7 @@ mate_bg_create_pixmap  (MateBG      *bg,
 
 		pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8,
 					 width, height);
-		mate_bg_draw (bg, pixbuf, gdk_window_get_screen (window), is_root);
+		mate_bg_draw (bg, pixbuf, gdk_window_get_screen (window), root);
 		gdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
 		g_object_unref (pixbuf);
 	}

@@ -58,14 +58,14 @@ hls_to_rgb (gdouble *h,
  * @argc: a pointer to the vector size
  * @argv: a pointer to the vector
  *
- * Description:  Prepends a terminal (either the one configured as default in
- * the user's MATE setup, or one of the common xterm emulators) to the passed
- * in vector, modifying it in the process.  The vector should be allocated with
- * #g_malloc, as this will #g_free the original vector.  Also all elements must
- * have been allocated separately.  That is the standard glib/MATE way of
- * doing vectors however.  If the integer that @argc points to is negative, the
- * size will first be computed.  Also note that passing in pointers to a vector
- * that is empty, will just create a new vector for you.
+ * Prepends a terminal (either the one configured as default in the user's
+ * MATE setup, or one of the common xterm emulators) to the passed in vector,
+ * modifying it in the process.  The vector should be allocated with #g_malloc,
+ * as this will #g_free the original vector.  Also all elements must have been
+ * allocated separately.  That is the standard glib/MATE way of doing vectors
+ * however.  If the integer that @argc points to is negative, the size will
+ * first be computed.  Also note that passing in pointers to a vector that is
+ * empty, will just create a new vector for you.
  **/
 void
 mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
@@ -245,13 +245,14 @@ _mate_desktop_init_i18n (void) {
 #if GTK_CHECK_VERSION (3, 0, 0)
 
 /**
+ * gtk_style_shade:
+ * @a:  the starting colour
+ * @b:  [out] the resulting colour
+ * @k:  amount to scale lightness and saturation by
+ *
  * Takes a colour "a", scales the lightness and saturation by a certain amount,
  * and sets "b" to the resulting colour.
  * gtkstyle.c cut-and-pastage.
- *
- * \param a  the starting colour
- * \param b  [out] the resulting colour
- * \param k  amount to scale lightness and saturation by
  */
 static void
 gtk_style_shade (GdkRGBA *a,
@@ -288,11 +289,12 @@ gtk_style_shade (GdkRGBA *a,
 }
 
 /**
- * Converts a red/green/blue triplet to a hue/lightness/saturation triplet.
+ * rgb_to_hls:
+ * @r:  on input, red; on output, hue
+ * @g:  on input, green; on output, lightness
+ * @b:  on input, blue; on output, saturation
  *
- * \param r  on input, red; on output, hue
- * \param g  on input, green; on output, lightness
- * \param b  on input, blue; on output, saturation
+ * Converts a red/green/blue triplet to a hue/lightness/saturation triplet.
  */
 static void
 rgb_to_hls (gdouble *r,
@@ -366,11 +368,12 @@ rgb_to_hls (gdouble *r,
 }
 
 /**
- * Converts a hue/lightness/saturation triplet to a red/green/blue triplet.
+ * hls_to_rgb:
+ * @h: on input, hue; on output, red
+ * @l: on input, lightness; on output, green
+ * @s  on input, saturation; on output, blue
  *
- * \param h  on input, hue; on output, red
- * \param l  on input, lightness; on output, green
- * \param s  on input, saturation; on output, blue
+ * Converts a hue/lightness/saturation triplet to a red/green/blue triplet.
  */
 static void
 hls_to_rgb (gdouble *h,

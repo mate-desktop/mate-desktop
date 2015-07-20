@@ -96,7 +96,6 @@ void mate_rr_output_info_set_active (MateRROutputInfo *self, gboolean active)
 
 /**
  * mate_rr_output_info_get_geometry:
- *
  * @self: a #MateRROutputInfo
  * @x: (out) (allow-none):
  * @y: (out) (allow-none):
@@ -169,7 +168,6 @@ gboolean mate_rr_output_info_is_connected (MateRROutputInfo *self)
 
 /**
  * mate_rr_output_info_get_vendor:
- *
  * @self: a #MateRROutputInfo
  * @vendor: (out caller-allocates) (array fixed-size=4):
  */
