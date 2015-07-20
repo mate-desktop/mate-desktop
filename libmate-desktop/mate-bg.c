@@ -858,8 +858,7 @@ draw_color_area (MateBG       *bg,
 
 static void
 draw_color (MateBG    *bg,
-	    GdkPixbuf *dest,
-	    GdkScreen *screen)
+	    GdkPixbuf *dest)
 {
 	GdkRectangle rect;
 
@@ -1025,7 +1024,6 @@ draw_image_for_thumb (MateBG     *bg,
 static void
 draw_once (MateBG    *bg,
 	   GdkPixbuf *dest,
-	   GdkScreen *screen,
 	   gboolean   is_root)
 {
 	GdkRectangle rect;
@@ -1086,9 +1084,9 @@ mate_bg_draw (MateBG     *bg,
 			draw_each_monitor (bg, dest, screen);
 		}
 	} else {
-		draw_color (bg, dest, screen);
+		draw_color (bg, dest);
 		if (bg->filename) {
-			draw_once (bg, dest, screen, is_root);
+			draw_once (bg, dest, is_root);
 		}
 	}
 }
@@ -1413,7 +1411,7 @@ mate_bg_create_thumbnail (MateBG               *bg,
 
 	result = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
 
-	draw_color (bg, result, screen);
+	draw_color (bg, result);
 
 	if (bg->filename) {
 		thumb = create_img_thumbnail (bg, factory, screen, dest_width, dest_height, -1);
@@ -3277,7 +3275,7 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 
 	result = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
 
-	draw_color (bg, result, screen);
+	draw_color (bg, result);
 
 	if (bg->filename) {
 		thumb = create_img_thumbnail (bg, factory, screen,
