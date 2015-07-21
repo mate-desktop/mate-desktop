@@ -2857,9 +2857,13 @@ handle_text (GMarkupParseContext *context,
 	     GError             **err)
 {
 	SlideShow *parser = user_data;
-	Slide *slide = parser->slides->tail? parser->slides->tail->data : NULL;
 	FileSize *fs;
 	gint i;
+
+	g_return_if_fail (parser != NULL);
+	g_return_if_fail (parser->slides != NULL);
+
+	Slide *slide = parser->slides->tail ? parser->slides->tail->data : NULL;
 
 	if (stack_is (parser, "year", "starttime", "background", NULL)) {
 		parser->start_tm.tm_year = parse_int (text) - 1900;
@@ -2881,11 +2885,15 @@ handle_text (GMarkupParseContext *context,
 	}
 	else if (stack_is (parser, "duration", "static", "background", NULL) ||
 		 stack_is (parser, "duration", "transition", "background", NULL)) {
+		g_return_if_fail (slide != NULL);
+
 		slide->duration = g_strtod (text, NULL);
 		parser->total_duration += slide->duration;
 	}
 	else if (stack_is (parser, "file", "static", "background", NULL) ||
 		 stack_is (parser, "from", "transition", "background", NULL)) {
+		g_return_if_fail (slide != NULL);
+
 		for (i = 0; text[i]; i++) {
 			if (!g_ascii_isspace (text[i]))
 				break;
@@ -2902,12 +2910,16 @@ handle_text (GMarkupParseContext *context,
 	}
 	else if (stack_is (parser, "size", "file", "static", "background", NULL) ||
 		 stack_is (parser, "size", "from", "transition", "background", NULL)) {
+		g_return_if_fail (slide != NULL);
+
 		fs = slide->file1->data;
 		fs->file = g_strdup (text);
 		if (slide->file1->next != NULL)
 			parser->has_multiple_sizes = TRUE;
 	}
 	else if (stack_is (parser, "to", "transition", "background", NULL)) {
+		g_return_if_fail (slide != NULL);
+
 		for (i = 0; text[i]; i++) {
 			if (!g_ascii_isspace (text[i]))
 				break;
@@ -2923,6 +2935,8 @@ handle_text (GMarkupParseContext *context,
 			parser->has_multiple_sizes = TRUE;
 	}
 	else if (stack_is (parser, "size", "to", "transition", "background", NULL)) {
+		g_return_if_fail (slide != NULL);
+
 		fs = slide->file2->data;
 		fs->file = g_strdup (text);
 		if (slide->file2->next != NULL)
