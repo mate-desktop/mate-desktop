@@ -1750,7 +1750,8 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
 	for (i = 0; i < n_outputs; ++i)
 	    g_array_append_val (output_ids, outputs[i]->id);
     }
-    
+
+    gdk_error_trap_push ();
     status = XRRSetCrtcConfig (DISPLAY (crtc), info->resources, crtc->id,
 			       timestamp, 
 			       x, y,
@@ -1761,16 +1762,16 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
     
     g_array_free (output_ids, TRUE);
 
-    if (status == RRSetConfigSuccess)
-	result = TRUE;
-    else {
-	result = FALSE;
-	/* Translators: CRTC is a CRT Controller (this is X terminology).
-	 * It is *very* unlikely that you'll ever get this error, so it is
-	 * only listed for completeness. */
-	g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_RANDR_ERROR,
-		     _("could not set the configuration for CRTC %d"),
-		     (int) crtc->id);
+    if (gdk_error_trap_pop () || status != RRSetConfigSuccess) {
+        /* Translators: CRTC is a CRT Controller (this is X terminology).
+         * It is *very* unlikely that you'll ever get this error, so it is
+         * only listed for completeness. */
+        g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_RANDR_ERROR,
+                     _("could not set the configuration for CRTC %d"),
+                     (int) crtc->id);
+        return FALSE;
+    } else {
+        result = TRUE;
     }
     
     return result;
