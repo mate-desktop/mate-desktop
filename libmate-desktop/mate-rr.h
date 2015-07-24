@@ -123,8 +123,6 @@ void            mate_rr_screen_get_timestamps     (MateRRScreen         *screen,
 void            mate_rr_screen_set_primary_output (MateRRScreen         *screen,
                                                     MateRROutput         *output);
 
-MateRRMode   **mate_rr_screen_create_clone_modes (MateRRScreen *screen);
-
 /* MateRROutput */
 guint32         mate_rr_output_get_id             (MateRROutput         *output);
 const char *    mate_rr_output_get_name           (MateRROutput         *output);
