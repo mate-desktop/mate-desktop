@@ -3106,7 +3106,7 @@ read_slideshow_file (const char *filename,
 		/* one slide, there's no transition */
 		} else if (len == 1) {
 			Slide *slide = show->slides->head->data;
-			slide->duration = G_MAXUINT;
+			slide->duration = show->total_duration = G_MAXUINT;
 		}
 	}
 
