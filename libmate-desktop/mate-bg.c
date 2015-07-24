@@ -3210,6 +3210,9 @@ mate_bg_changes_with_time (MateBG *bg)
 
 	g_return_val_if_fail (bg != NULL, FALSE);
 
+	if (!bg->filename)
+		return FALSE;
+
 	show = get_as_slideshow (bg, bg->filename);
 	if (show)
 		return g_queue_get_length (show->slides) > 1;
