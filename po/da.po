@@ -9,15 +9,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-14 19:55+0200\n"
-"PO-Revision-Date: 2014-10-04 11:35+0000\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"POT-Creation-Date: 2015-07-28 18:04+0200\n"
+"PO-Revision-Date: 2015-07-28 16:04+0000\n"
+"Last-Translator: infirit <infirit@gmail.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/MATE/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Translators should localize the following string which will be
+#. * displayed in the about box to give credit to the translator(s).
+#: ../mate-about/mate-about.c:106
+msgid "translator-credits"
+msgstr "\"Joe Hansen, 2012, 2013, 2014.\\n\"\n\"\\n\"\n\"Dansk-gruppen <dansk@dansk-gruppen.dk>\\n\"\n\"Mere info: http://www.dansk-gruppen.dk\""
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -26,12 +32,6 @@ msgstr "Om Mate"
 #: ../mate-about/mate-about.desktop.in.in.h:2
 msgid "Learn more about MATE"
 msgstr "Læs mere om Mate"
-
-#. Translators should localize the following string which will be
-#. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:106
-msgid "translator-credits"
-msgstr "\"Joe Hansen, 2012, 2013, 2014.\\n\"\n\"\\n\"\n\"Dansk-gruppen <dansk@dansk-gruppen.dk>\\n\"\n\"Mere info: http://www.dansk-gruppen.dk\""
 
 #: ../mate-about/mate-about.h:46
 msgid ""
@@ -80,162 +80,162 @@ msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Ukendt"
 
-#: ../libmate-desktop/mate-aboutdialog.c:184
+#: ../libmate-desktop/mate-aboutdialog.c:180
 msgid "Could not show link"
 msgstr "Kunne ikke vise henvisning"
 
-#: ../libmate-desktop/mate-aboutdialog.c:240
+#: ../libmate-desktop/mate-aboutdialog.c:236
 msgid "Program name"
 msgstr "Programnavn"
 
-#: ../libmate-desktop/mate-aboutdialog.c:241
+#: ../libmate-desktop/mate-aboutdialog.c:237
 msgid ""
 "The name of the program. If this is not set, it defaults to "
 "g_get_application_name()"
 msgstr "Programmets navn. Hvis dette ikke er angivet er standarden g_get_application_name()"
 
-#: ../libmate-desktop/mate-aboutdialog.c:255
+#: ../libmate-desktop/mate-aboutdialog.c:251
 msgid "Program version"
 msgstr "Programversion"
 
-#: ../libmate-desktop/mate-aboutdialog.c:256
+#: ../libmate-desktop/mate-aboutdialog.c:252
 msgid "The version of the program"
 msgstr "Programmets version"
 
-#: ../libmate-desktop/mate-aboutdialog.c:270
+#: ../libmate-desktop/mate-aboutdialog.c:266
 msgid "Copyright string"
 msgstr "Ophavsretsstreng"
 
-#: ../libmate-desktop/mate-aboutdialog.c:271
+#: ../libmate-desktop/mate-aboutdialog.c:267
 msgid "Copyright information for the program"
 msgstr "Ophavsretsoplysninger for programmet"
 
-#: ../libmate-desktop/mate-aboutdialog.c:288
+#: ../libmate-desktop/mate-aboutdialog.c:284
 msgid "Comments string"
 msgstr "Kommentartekst"
 
-#: ../libmate-desktop/mate-aboutdialog.c:289
+#: ../libmate-desktop/mate-aboutdialog.c:285
 msgid "Comments about the program"
 msgstr "Kommentarer om programmet"
 
-#: ../libmate-desktop/mate-aboutdialog.c:307
-#: ../libmate-desktop/mate-aboutdialog.c:2164
+#: ../libmate-desktop/mate-aboutdialog.c:303
+#: ../libmate-desktop/mate-aboutdialog.c:2161
 msgid "License"
 msgstr "Licens"
 
-#: ../libmate-desktop/mate-aboutdialog.c:308
+#: ../libmate-desktop/mate-aboutdialog.c:304
 msgid "The license of the program"
 msgstr "Programmets licens"
 
-#: ../libmate-desktop/mate-aboutdialog.c:323
+#: ../libmate-desktop/mate-aboutdialog.c:319
 msgid "Website URL"
 msgstr "Webstedets adresse"
 
-#: ../libmate-desktop/mate-aboutdialog.c:324
+#: ../libmate-desktop/mate-aboutdialog.c:320
 msgid "The URL for the link to the website of the program"
 msgstr "Adressen for henvisningen til programmets websted"
 
-#: ../libmate-desktop/mate-aboutdialog.c:339
+#: ../libmate-desktop/mate-aboutdialog.c:335
 msgid "Website label"
 msgstr "Etikette for websted"
 
-#: ../libmate-desktop/mate-aboutdialog.c:340
+#: ../libmate-desktop/mate-aboutdialog.c:336
 msgid ""
 "The label for the link to the website of the program. If this is not set, it"
 " defaults to the URL"
 msgstr "Etikken for henvisning til programmets websted. Hvis denne ikke angives, så vises adressen som standard."
 
-#: ../libmate-desktop/mate-aboutdialog.c:356
+#: ../libmate-desktop/mate-aboutdialog.c:352
 msgid "Authors"
 msgstr "Forfattere"
 
-#: ../libmate-desktop/mate-aboutdialog.c:357
+#: ../libmate-desktop/mate-aboutdialog.c:353
 msgid "List of authors of the program"
 msgstr "Oversigt over forfattere af programmet"
 
-#: ../libmate-desktop/mate-aboutdialog.c:373
+#: ../libmate-desktop/mate-aboutdialog.c:369
 msgid "Documenters"
 msgstr "Personer bag dokumentationen"
 
-#: ../libmate-desktop/mate-aboutdialog.c:374
+#: ../libmate-desktop/mate-aboutdialog.c:370
 msgid "List of people documenting the program"
 msgstr "Oversigt over personer som har udarbejdet programmets dokumentation"
 
-#: ../libmate-desktop/mate-aboutdialog.c:390
+#: ../libmate-desktop/mate-aboutdialog.c:386
 msgid "Artists"
 msgstr "Kunstnere"
 
-#: ../libmate-desktop/mate-aboutdialog.c:391
+#: ../libmate-desktop/mate-aboutdialog.c:387
 msgid "List of people who have contributed artwork to the program"
 msgstr "Oversigt over personer som har bidraget med kunst til programmet"
 
-#: ../libmate-desktop/mate-aboutdialog.c:408
+#: ../libmate-desktop/mate-aboutdialog.c:404
 msgid "Translator credits"
 msgstr "Oversættelsesbidrag"
 
-#: ../libmate-desktop/mate-aboutdialog.c:409
+#: ../libmate-desktop/mate-aboutdialog.c:405
 msgid ""
 "Credits to the translators. This string should be marked as translatable"
 msgstr "Oversættelsesbidrag. Der bør angives at denne tekststreng kan oversættes"
 
-#: ../libmate-desktop/mate-aboutdialog.c:424
+#: ../libmate-desktop/mate-aboutdialog.c:420
 msgid "Logo"
 msgstr "Logo"
 
-#: ../libmate-desktop/mate-aboutdialog.c:425
+#: ../libmate-desktop/mate-aboutdialog.c:421
 msgid ""
 "A logo for the about box. If this is not set, it defaults to "
 "gtk_window_get_default_icon_list()"
 msgstr "Et logo til Om-rammen. Hvis der ikke er angivet noget, så vælges gtk_window_get_default_icon_list() som standard"
 
-#: ../libmate-desktop/mate-aboutdialog.c:440
+#: ../libmate-desktop/mate-aboutdialog.c:436
 msgid "Logo Icon Name"
 msgstr "Navn på logoikon"
 
-#: ../libmate-desktop/mate-aboutdialog.c:441
+#: ../libmate-desktop/mate-aboutdialog.c:437
 msgid "A named icon to use as the logo for the about box."
 msgstr "Et navngivet ikon som bruges som logoet for Om-rammen."
 
-#: ../libmate-desktop/mate-aboutdialog.c:454
+#: ../libmate-desktop/mate-aboutdialog.c:450
 msgid "Wrap license"
 msgstr "Ombrydning af licens"
 
-#: ../libmate-desktop/mate-aboutdialog.c:455
+#: ../libmate-desktop/mate-aboutdialog.c:451
 msgid "Whether to wrap the license text."
 msgstr "Om licenstekst skal ombrydes eller ej."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:547
+#: ../libmate-desktop/mate-aboutdialog.c:544
 msgid "C_redits"
 msgstr "_Bidrag"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:561
+#: ../libmate-desktop/mate-aboutdialog.c:558
 msgid "_License"
 msgstr "_Licens"
 
-#: ../libmate-desktop/mate-aboutdialog.c:841
+#: ../libmate-desktop/mate-aboutdialog.c:838
 #, c-format
 msgid "About %s"
 msgstr "Om %s"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2088
+#: ../libmate-desktop/mate-aboutdialog.c:2085
 msgid "Credits"
 msgstr "Bidrag"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2116
+#: ../libmate-desktop/mate-aboutdialog.c:2113
 msgid "Written by"
 msgstr "Skrevet af"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2119
+#: ../libmate-desktop/mate-aboutdialog.c:2116
 msgid "Documented by"
 msgstr "Dokumenteret af"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2131
+#: ../libmate-desktop/mate-aboutdialog.c:2128
 msgid "Translated by"
 msgstr "Oversat af"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2135
+#: ../libmate-desktop/mate-aboutdialog.c:2132
 msgid "Artwork by"
 msgstr "Kunstværker af"
 
@@ -261,7 +261,7 @@ msgid "Pick a Color"
 msgstr "Vælg en farve"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:337
+#: ../libmate-desktop/mate-colorsel.c:318
 msgid "Current Color"
 msgstr "Nuværende farve"
 
@@ -270,7 +270,7 @@ msgid "The selected color"
 msgstr "Den valgte farve"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:344
+#: ../libmate-desktop/mate-colorsel.c:325
 msgid "Current Alpha"
 msgstr "Nuværende alfa"
 
@@ -282,149 +282,157 @@ msgstr "Den valgte værdi for uigennemsighed  (0 for komplet gennemsigtig, 65535
 msgid "Received invalid color data\n"
 msgstr "Modtog ugyldig farvedata\n"
 
-#: ../libmate-desktop/mate-colorsel.c:323
+#: ../libmate-desktop/mate-colorsel.c:304
 msgid "Has Opacity Control"
 msgstr "Har kontrol af uigennemsigtighed"
 
-#: ../libmate-desktop/mate-colorsel.c:324
+#: ../libmate-desktop/mate-colorsel.c:305
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Om farvevælgeren skal tillade angivelse af uigennemsigtighed"
 
-#: ../libmate-desktop/mate-colorsel.c:330
+#: ../libmate-desktop/mate-colorsel.c:311
 msgid "Has palette"
 msgstr "Har palet"
 
-#: ../libmate-desktop/mate-colorsel.c:331
+#: ../libmate-desktop/mate-colorsel.c:312
 msgid "Whether a palette should be used"
 msgstr "Om der skal bruges palet eller ej"
 
-#: ../libmate-desktop/mate-colorsel.c:338
+#: ../libmate-desktop/mate-colorsel.c:319
 msgid "The current color"
 msgstr "Den nuværende farve"
 
-#: ../libmate-desktop/mate-colorsel.c:345
+#: ../libmate-desktop/mate-colorsel.c:326
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Den nuværende uigennemsigtighedsværdi (0 for komplet gennemsigtighed, 65535 for fuld uigennmesigtighed)"
 
-#: ../libmate-desktop/mate-colorsel.c:398
+#: ../libmate-desktop/mate-colorsel.c:332
+msgid "HEX String"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:333
+msgid "The hexadecimal string of current color"
+msgstr ""
+
+#: ../libmate-desktop/mate-colorsel.c:383
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "Vælg farven du ønsker for den ydre ring. Vælg graden af mørke eller lys for farven på den indre trekant."
 
-#: ../libmate-desktop/mate-colorsel.c:422
+#: ../libmate-desktop/mate-colorsel.c:407
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "Klik på pipetten, og klik derefter på en farve hvor som helst på skærmen for at vælge den farve."
 
-#: ../libmate-desktop/mate-colorsel.c:431
+#: ../libmate-desktop/mate-colorsel.c:416
 msgid "_Hue:"
 msgstr "_Farvetone:"
 
-#: ../libmate-desktop/mate-colorsel.c:432
+#: ../libmate-desktop/mate-colorsel.c:417
 msgid "Position on the color wheel."
 msgstr "Placering på farvehjulet."
 
-#: ../libmate-desktop/mate-colorsel.c:434
+#: ../libmate-desktop/mate-colorsel.c:419
 msgid "_Saturation:"
 msgstr "_Mætning:"
 
-#: ../libmate-desktop/mate-colorsel.c:435
+#: ../libmate-desktop/mate-colorsel.c:420
 msgid "\"Deepness\" of the color."
 msgstr "\"Dybden\" på farven:"
 
-#: ../libmate-desktop/mate-colorsel.c:436
+#: ../libmate-desktop/mate-colorsel.c:421
 msgid "_Value:"
 msgstr "_Værdi:"
 
-#: ../libmate-desktop/mate-colorsel.c:437
+#: ../libmate-desktop/mate-colorsel.c:422
 msgid "Brightness of the color."
 msgstr "Lysstyrke for farven"
 
-#: ../libmate-desktop/mate-colorsel.c:438
+#: ../libmate-desktop/mate-colorsel.c:423
 msgid "_Red:"
 msgstr "_Rød:"
 
-#: ../libmate-desktop/mate-colorsel.c:439
+#: ../libmate-desktop/mate-colorsel.c:424
 msgid "Amount of red light in the color."
 msgstr "Mængden af rødt lys i farven."
 
-#: ../libmate-desktop/mate-colorsel.c:440
+#: ../libmate-desktop/mate-colorsel.c:425
 msgid "_Green:"
 msgstr "_Grøn:"
 
-#: ../libmate-desktop/mate-colorsel.c:441
+#: ../libmate-desktop/mate-colorsel.c:426
 msgid "Amount of green light in the color."
 msgstr "Mængden af grønt lys i farven."
 
-#: ../libmate-desktop/mate-colorsel.c:442
+#: ../libmate-desktop/mate-colorsel.c:427
 msgid "_Blue:"
 msgstr "_Blå:"
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:428
 msgid "Amount of blue light in the color."
 msgstr "Mængden af blåt lys i farven."
 
-#: ../libmate-desktop/mate-colorsel.c:446
+#: ../libmate-desktop/mate-colorsel.c:431
 msgid "Op_acity:"
 msgstr "_Uigennemsigtighed:"
 
-#: ../libmate-desktop/mate-colorsel.c:453
-#: ../libmate-desktop/mate-colorsel.c:463
+#: ../libmate-desktop/mate-colorsel.c:438
+#: ../libmate-desktop/mate-colorsel.c:448
 msgid "Transparency of the color."
 msgstr "Gennemsigtigheden af farven."
 
-#: ../libmate-desktop/mate-colorsel.c:470
+#: ../libmate-desktop/mate-colorsel.c:455
 msgid "Color _name:"
 msgstr "_Navn på farve:"
 
-#: ../libmate-desktop/mate-colorsel.c:484
+#: ../libmate-desktop/mate-colorsel.c:469
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "Du kan angive en farveværdi i hexadecimal HTML-stil, eller blot et navn på farven såsom 'orange' i denne post."
 
-#: ../libmate-desktop/mate-colorsel.c:514
+#: ../libmate-desktop/mate-colorsel.c:499
 msgid "_Palette:"
 msgstr "_Palet:"
 
-#: ../libmate-desktop/mate-colorsel.c:543
+#: ../libmate-desktop/mate-colorsel.c:528
 msgid "Color Wheel"
 msgstr "Farvehjul"
 
-#: ../libmate-desktop/mate-colorsel.c:1057
+#: ../libmate-desktop/mate-colorsel.c:1027
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "De tidligere valgte farve, for sammenligning med farven du vælger nu. Du kan trække denne farve til en paletpost, eller vælge denne farve som nuværende ved at trække den til den anden farveprøve ved siden af."
 
-#: ../libmate-desktop/mate-colorsel.c:1060
+#: ../libmate-desktop/mate-colorsel.c:1030
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "Farven du har valgt. Du kan trække denne farve til en paletpost for at gemme den til fremtidig brug."
 
-#: ../libmate-desktop/mate-colorsel.c:1065
+#: ../libmate-desktop/mate-colorsel.c:1035
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Den tidligere valgte farve, for sammenligning med farven du vælger nu."
 
-#: ../libmate-desktop/mate-colorsel.c:1068
+#: ../libmate-desktop/mate-colorsel.c:1038
 msgid "The color you've chosen."
 msgstr "Farven du har valgt."
 
-#: ../libmate-desktop/mate-colorsel.c:1514
+#: ../libmate-desktop/mate-colorsel.c:1460
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1519
+#: ../libmate-desktop/mate-colorsel.c:1465
 msgid "_Save color here"
 msgstr "_Gem farve her"
 
-#: ../libmate-desktop/mate-colorsel.c:1749
+#: ../libmate-desktop/mate-colorsel.c:1690
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -479,7 +487,7 @@ msgstr "Fejl ved tilbagespoling af filen \"%s\": %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3527
+#: ../libmate-desktop/mate-desktop-item.c:3542
 msgid "No name"
 msgstr "Intet navn"
 
@@ -498,62 +506,62 @@ msgstr "Kan ikke finde filen \"%s\""
 msgid "No filename to save to"
 msgstr "Intet filnavn at gemme som"
 
-#: ../libmate-desktop/mate-desktop-item.c:1828
+#: ../libmate-desktop/mate-desktop-item.c:1840
 #, c-format
 msgid "Starting %s"
 msgstr "Starter %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2062
+#: ../libmate-desktop/mate-desktop-item.c:2077
 #, c-format
 msgid "No URL to launch"
 msgstr "Ingen adresse at starte"
 
-#: ../libmate-desktop/mate-desktop-item.c:2078
+#: ../libmate-desktop/mate-desktop-item.c:2093
 #, c-format
 msgid "Not a launchable item"
 msgstr "Ikke et opstartsbart punkt"
 
-#: ../libmate-desktop/mate-desktop-item.c:2088
+#: ../libmate-desktop/mate-desktop-item.c:2103
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Ingen kommando (Exec) at starte"
 
-#: ../libmate-desktop/mate-desktop-item.c:2101
+#: ../libmate-desktop/mate-desktop-item.c:2116
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Ugyldig startkommando (Exec)"
 
-#: ../libmate-desktop/mate-desktop-item.c:3584
+#: ../libmate-desktop/mate-desktop-item.c:3599
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Ukendt kodning af: %s"
 
-#: ../libmate-desktop/mate-desktop-utils.c:133
+#: ../libmate-desktop/mate-desktop-utils.c:152
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "Kan ikke finde et terminalprogram. Bruger xterm, selvom om det måske ikke virker"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:444
+#: ../libmate-desktop/mate-rr.c:484
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "kunne ikke hente skærmresourcerne (CRTC'er, uddataene, tilstandende)"
 
-#: ../libmate-desktop/mate-rr.c:464
+#: ../libmate-desktop/mate-rr.c:504
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "uhåndterbar X-fejl under hentning af tabeller til skærmstørrelser"
 
-#: ../libmate-desktop/mate-rr.c:470
+#: ../libmate-desktop/mate-rr.c:510
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "kunne ikke hente tabeller til skærmstørrelser"
 
-#: ../libmate-desktop/mate-rr.c:723
+#: ../libmate-desktop/mate-rr.c:737
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "RANDR-udvidelsen er ikke tilstede"
 
-#: ../libmate-desktop/mate-rr.c:1104
+#: ../libmate-desktop/mate-rr.c:1295
 #, c-format
 msgid "could not get information about output %d"
 msgstr "kunne ikke hente information om uddata %d"
@@ -561,49 +569,49 @@ msgstr "kunne ikke hente information om uddata %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1491
+#: ../libmate-desktop/mate-rr.c:1737
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "anmodet placering/størrelse til CRTC %d er uden for de tilladte grænser: Position=(%d, %d), størrelse=(%d, %d), maksimum=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1527
+#: ../libmate-desktop/mate-rr.c:1771
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "kunne ikke sætte indstillinger til CRTC %d"
 
-#: ../libmate-desktop/mate-rr.c:1643
+#: ../libmate-desktop/mate-rr.c:1923
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "kunne ikke hente information om CRTC %d"
 
-#: ../libmate-desktop/mate-rr-config.c:501
+#: ../libmate-desktop/mate-rr-config.c:555
 msgid "Laptop"
 msgstr "Bærbar"
 
-#: ../libmate-desktop/mate-rr-config.c:1162
+#: ../libmate-desktop/mate-rr-config.c:713
 #, c-format
 msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "ingen af de gemte skærmindstillinger stemmer overens med nuværende indstilling"
 
-#: ../libmate-desktop/mate-rr-config.c:1423
+#: ../libmate-desktop/mate-rr-config.c:1501
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d kan ikke drive output %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1430
+#: ../libmate-desktop/mate-rr-config.c:1508
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "output %s understøtter ikke tilstanden %dx%d@%dHz"
 
-#: ../libmate-desktop/mate-rr-config.c:1441
+#: ../libmate-desktop/mate-rr-config.c:1519
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d understøtter ikke rotation=%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1455
+#: ../libmate-desktop/mate-rr-config.c:1533
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -612,29 +620,29 @@ msgid ""
 "existing rotation = %s, new rotation = %s"
 msgstr "output %s har ikke de samme parametre som et andet klonet output:\neksisterende tilstand = %d, ny tilstand = %d\neksisterende koordinater = (%d, %d), nye koordinater = (%d, %d)\neksisterende rotation = %s, ny rotation = %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1470
+#: ../libmate-desktop/mate-rr-config.c:1548
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "kan ikke klone til output %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1639
+#: ../libmate-desktop/mate-rr-config.c:1717
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Prøver tilstande for CRTC %d\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1663
+#: ../libmate-desktop/mate-rr-config.c:1741
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr "CRTC %d: prøver tilstand %dx%d@%dHz med output på %dx%d@%dHz (gennemløb %d)\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1710
+#: ../libmate-desktop/mate-rr-config.c:1788
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
 msgstr "kunne ikke tildele CTRC'er til output:\n%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1714
+#: ../libmate-desktop/mate-rr-config.c:1792
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -644,7 +652,7 @@ msgstr "ingen af de valgte tilstande var kompatible med de mulige tilstande:\n%s
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1796
+#: ../libmate-desktop/mate-rr-config.c:1874
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -657,7 +665,7 @@ msgstr "anmodet virtuel størrelse passer ikke til tilgængelige størrelse: Anm
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:353
+#: ../libmate-desktop/mate-rr-labeler.c:454
 msgid "Mirror Screens"
 msgstr "Klonede skærme"
 
@@ -1081,81 +1089,101 @@ msgid "Name of the input method module used by GTK+."
 msgstr "Navn på indtastningsmetode-modulet, der bruges af GTK+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
+msgid "Use GTK3 header bar"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
+msgid ""
+"Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
+"the font chooser will use a header bar at the top to show action widgets, or"
+" an action area at the bottom. This setting does not affect custom dialogs "
+"using GtkDialog directly, or message dialogs."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
+msgid "Enable Gtk toolkit-wide animations"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
+msgid "Whether to enable toolkit-wide animations."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
 msgid "Document font"
 msgstr "Dokumentskrift"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
 msgid "Name of the default font used for reading documents."
 msgstr "Navn på den forvalgte skrifttype der benyttes til dokumenter."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
 msgid "Monospace font"
 msgstr "Fast bredde-skrifttype"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:46
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr "Navn på fast bredde-skrifttype til brug i f.eks. terminaler."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:47
 msgid "Use Custom Font"
 msgstr "Brug tilpasset skrifttype"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:48
 msgid "Whether to use a custom font in gtk+ applications."
 msgstr "Hvorvidt der skal bruges en tilpasset skrifttype i gtk+-programmer."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:49
 msgid "Status Bar on Right"
 msgstr "Statusbjælke til højre"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:46
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:50
 msgid "Whether to display a status bar meter on the right."
 msgstr "Hvorvidt der skal vises en statusbjælke til højre."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:47
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:51
 msgid "Module for GtkFileChooser"
 msgstr "Modul for GtkFileChooser"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:48
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:52
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
 msgstr "Modul der skal bruges som filsystemmodul for GtkFileChooser-kontrollen. Mulige værdier er »gio« og »gtk+«."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:49
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:53
 msgid "Menubar accelerator"
 msgstr "Acceleratorer for menubjælker"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:50
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:54
 msgid "Keyboard shortcut to open the menu bars."
 msgstr "Genvejstast til at åbne menubjælker."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:51
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:55
 msgid "Show the 'Input Methods' menu"
 msgstr "Vis menuen »Inddatametoder«"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:52
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:56
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr "Hvorvidt kontekstmenuerne for punkter og tekstfremviser skal tilbyde at ændre inddatametoden."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:53
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:57
 msgid "Show the 'Unicode Control Character' menu"
 msgstr "Vis menuen »Unicode-kontroltegn«"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:54
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr "Hvorvidt konteksmenuerne for punkter og tekstfremviser skal tilbyde at indsætte kontroltegn."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:55
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:59
 msgid "Titlebar layout of GTK3 client-side decorated windows"
 msgstr "Titelbjælkelayout for GTK3-klientside dekorerede vinduer."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:56
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:60
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
@@ -1163,6 +1191,16 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
 msgstr "Denne indstilling bestemmer hvilke knapper, der skal placeres i titelbjælken for klientside dekorerede vinduer, og hvorvidt de skal placeres til venstre eller til højre. Se https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:61
+msgid "Only show mnemonics on when the Alt key is pressed"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.in.h:62
+msgid ""
+"Whether mnemonics should be automatically shown and hidden when the user "
+"presses the Alt key."
+msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
 msgid "Disable command line"
@@ -1238,6 +1276,14 @@ msgstr "Deaktiver temaindstillinger"
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
 msgid "Prevent the user from changing theme settings."
 msgstr "Forhindr brugeren i at ændre temaindstillinger."
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:17
+msgid "Disable log out"
+msgstr ""
+
+#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:18
+msgid "Prevent the user from logging out."
+msgstr ""
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
@@ -1479,7 +1525,7 @@ msgstr "Hvorvidt tastaturlås er aktiveret"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Hvorvidt tastaturlås er aktiveret."
 
-#: ../tools/mate-color-select.c:46 ../tools/mate-color-select.c:49
+#: ../tools/mate-color-select.c:62
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
 msgstr "MATE-farvevalg"
@@ -1499,3 +1545,11 @@ msgstr "Migrer MATE 1.4-indstillinger"
 #: ../tools/mate-conf-import.desktop.in.in.h:2
 msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
 msgstr "Værktøj til at migrere MATE 1.4-indstillinger til MATE 1.6"
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:1
+msgid "Help"
+msgstr ""
+
+#: ../user-guide/mate-user-guide.desktop.in.in.h:2
+msgid "Get help with MATE"
+msgstr ""
