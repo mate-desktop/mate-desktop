@@ -58,6 +58,7 @@ main (int argc, char **argv)
 
     /* initialize GTK+ */
     gtk_init (&argc, &argv);
+    gtk_window_set_default_icon_name ("gtk-select-color");
 
     color_dialog = mate_color_selection_dialog_new (_("MATE Color Selection"));
     mate_color_selection_set_has_palette (MATE_COLOR_SELECTION_DIALOG (color_dialog)->colorsel, TRUE);

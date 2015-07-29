@@ -1,4 +1,4 @@
-SUBDIRS = libmate-desktop man docs po schemas tools
+SUBDIRS = libmate-desktop man docs po schemas tools icons
 
 if MATE_ABOUT_ENABLED
 SUBDIRS += mate-about

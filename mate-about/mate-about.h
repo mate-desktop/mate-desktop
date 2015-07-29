@@ -31,7 +31,6 @@
 const char* program_name = "MATE Desktop Environment";
 const char* version = PACKAGE_VERSION;
 const char* icon = "mate";
-const char* desktop_icon = "desktop";
 const char* website = "http://www.mate-desktop.org/";
 
 const char* copyright =  ""
