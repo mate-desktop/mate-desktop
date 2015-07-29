@@ -69,18 +69,8 @@ void mate_about_run(void)
 {
     mate_about_dialog = (MateAboutDialog*) mate_about_dialog_new();
 
-    GtkIconTheme* icon_theme = gtk_icon_theme_get_default();
-
-    if (gtk_icon_theme_has_icon(icon_theme, icon))
-    {
-        gtk_window_set_default_icon_name(icon);
-        mate_about_dialog_set_logo_icon_name(mate_about_dialog, icon);
-    }
-    else
-    {
-        gtk_window_set_default_icon_name(desktop_icon);
-        mate_about_dialog_set_logo_icon_name(mate_about_dialog, desktop_icon);
-    }
+    gtk_window_set_default_icon_name(icon);
+    mate_about_dialog_set_logo_icon_name(mate_about_dialog, icon);
 
     // name
     mate_about_dialog_set_program_name(mate_about_dialog, gettext(program_name));

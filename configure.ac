@@ -333,6 +333,7 @@ tools/mate-conf-import.desktop.in
 tools/Makefile
 user-guide/Makefile
 user-guide/mate-user-guide.desktop.in
+icons/Makefile
 ])
 
 AC_OUTPUT
