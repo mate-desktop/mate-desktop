@@ -14,8 +14,13 @@ public_icons = \
 	hicolor_apps_scalable_mate-symbolic.svg \
 	$(NULL)
 
+noinst_DATA = \
+	mate.svg \
+	$(NULL)
+
 EXTRA_DIST = \
 	$(public_icons)		\
+	$(noinst_DATA)		\
 	$(NULL)
 
 ###############################################################################
