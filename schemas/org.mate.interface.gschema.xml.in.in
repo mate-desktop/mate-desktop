@@ -105,6 +105,11 @@
       <_summary>Use GTK3 header bar</_summary>
       <_description>Whether builtin GTK+ dialogs such as the file chooser, the color chooser or the font chooser will use a header bar at the top to show action widgets, or an action area at the bottom. This setting does not affect custom dialogs using GtkDialog directly, or message dialogs.</_description>
     </key>
+    <key name="gtk-overlay-scrolling" type="b">
+      <default>false</default>
+      <_summary>Use GTK3 overlay scrolling</_summary>
+      <_description>Whether builtin GTK+ scrolled windows will use overlay scrolling. Overlay scrolling hides and reduces the size of the scrollbar untill it get's focus.</_description>
+    </key>
     <key name="gtk-enable-animations" type="b">
       <default>true</default>
       <_summary>Enable Gtk toolkit-wide animations</_summary>
