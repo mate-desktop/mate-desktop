@@ -1,3 +1,14 @@
+mate-desktop 1.10.2
+
+  * Check for NULL pointers in slideshow
+  * Fix crash when system date is earlier than start date
+  * Fix crash when XRRSetCrtcConfig fails
+  * Drop non-existent mate_rr_screen_create_clone_modes from headers
+  * Embedded Display Port outputs are considered a laptop built-in
+    display
+  * Add annotations and fix documentation syntax warnings
+  * Update translations
+
 mate-desktop 1.10.1
 
   * Restore docbook user-guide
