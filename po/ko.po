@@ -5,6 +5,7 @@
 # Translators:
 # Alan Lee <bkrhlim@aol.com>, 2013
 # Jinkyu Yi <jincreator@jincreator.net>, 2013
+# 박정규(Jung Kyu Park) <bagjunggyu@gmail.com>, 2015
 # Alan Lee <bkrhlim@aol.com>, 2013
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2014
 msgid ""
@@ -12,9 +13,9 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-28 18:04+0200\n"
-"PO-Revision-Date: 2015-07-28 16:04+0000\n"
-"Last-Translator: infirit <infirit@gmail.com>\n"
-"Language-Team: Korean (http://www.transifex.com/projects/p/MATE/language/ko/)\n"
+"PO-Revision-Date: 2015-07-30 02:40+0000\n"
+"Last-Translator: 박정규(Jung Kyu Park) <bagjunggyu@gmail.com>\n"
+"Language-Team: Korean (http://www.transifex.com/mate/MATE/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -310,11 +311,11 @@ msgstr "현재 불투명 값(0: 완전 투명, 65535: 완전 불투명)"
 
 #: ../libmate-desktop/mate-colorsel.c:332
 msgid "HEX String"
-msgstr ""
+msgstr "16진수 문자열"
 
 #: ../libmate-desktop/mate-colorsel.c:333
 msgid "The hexadecimal string of current color"
-msgstr ""
+msgstr "현재 색상의 16진수 문자열 "
 
 #: ../libmate-desktop/mate-colorsel.c:383
 msgid ""
@@ -1092,7 +1093,7 @@ msgstr "GTK+에서 사용하는 입력기 모듈의 이름입니다."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "GTK3 제목 표시줄 사용"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
 msgid ""
@@ -1100,15 +1101,15 @@ msgid ""
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr ""
+msgstr "파일 선택기, 색상 선택기, 또는 글꼴 선택기와 같은 빌트인 GTK+ 도구들의 상부의 동작 위젯, 하부의 동작을 보여 줄 제목 표시줄을 사용할 것인지를 결정합니다. 이 설정은 대화창 GtkDialog를 직접 사용하는 사용하는 사용자 설정 대화창, 또는 메시지 대화창에는 영향을 주지 않습니다."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "GTK 툴킷-확장 애니메이션 사용"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "툴킷-확장 애니메이션 사용 여부"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
 msgid "Document font"
@@ -1196,13 +1197,13 @@ msgstr "이 설정은 어떤 단추를 클라이언트 창 장식의 제목 표�
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:61
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "Alt 키가 눌렸을 때 니모닉만 보이기"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:62
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr ""
+msgstr "사용자가 Alt 키를 누르면 자동으로 니모닉을 표시할 것인지 숨길 것 인지를 결정합니다."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
 msgid "Disable command line"
@@ -1281,11 +1282,11 @@ msgstr "사용자가 테마 설정을 바꾸지 못하게 합니다."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:17
 msgid "Disable log out"
-msgstr ""
+msgstr "로그아웃 비활성화"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:18
 msgid "Prevent the user from logging out."
-msgstr ""
+msgstr "사용자가 로그아웃을 하지 못하게 합니다."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
@@ -1550,8 +1551,8 @@ msgstr "마테 1.4 설정을 마테 1.6으로 옮기는 도구"
 
 #: ../user-guide/mate-user-guide.desktop.in.in.h:1
 msgid "Help"
-msgstr ""
+msgstr "도움말"
 
 #: ../user-guide/mate-user-guide.desktop.in.in.h:2
 msgid "Get help with MATE"
-msgstr ""
+msgstr "MATE 도움말 사용하기"

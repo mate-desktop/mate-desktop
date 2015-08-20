@@ -3,20 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Friedrich Herbst <friedrich-herbst@gmx.de>, 2015
 # crazyd <lebendig2002@yahoo.de>, 2012
 # peaceman <nixalio@gmail.com>, 2012
 # Chris <ppt23@lkj.hopto.org>, 2012
 # qazwsxedc <qazwsxedc@gmx.net>, 2014
 # Forecast <taisto@web.de>, 2012
 # Tobias Bannert <tobannert@gmail.com>, 2014-2015
+# Xpistian <xpistianbecker2@web.de>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-28 18:04+0200\n"
-"PO-Revision-Date: 2015-07-28 16:04+0000\n"
-"Last-Translator: infirit <infirit@gmail.com>\n"
-"Language-Team: German (http://www.transifex.com/projects/p/MATE/language/de/)\n"
+"PO-Revision-Date: 2015-08-04 14:23+0000\n"
+"Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
+"Language-Team: German (http://www.transifex.com/mate/MATE/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -312,11 +314,11 @@ msgstr "Der aktuelle Deckkraftwert (0 vollständig transparent, 65535 völlig de
 
 #: ../libmate-desktop/mate-colorsel.c:332
 msgid "HEX String"
-msgstr ""
+msgstr "HEX-Zeichenkette"
 
 #: ../libmate-desktop/mate-colorsel.c:333
 msgid "The hexadecimal string of current color"
-msgstr ""
+msgstr "HEX-Zeichenkette der aktuellen Farbe"
 
 #: ../libmate-desktop/mate-colorsel.c:383
 msgid ""
@@ -1094,7 +1096,7 @@ msgstr "Name des Eingabemethodenmoduls das durch GTK+ verwendet wird."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "Gtk3-Kopfleiste benutzen"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
 msgid ""
@@ -1102,15 +1104,15 @@ msgid ""
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr ""
+msgstr "Ob Gtk+-Standarddialoge wie z. B. Datei-, Farb- oder Schriftartenwähler eine Gtk-Kopfleiste auf der Oberseite oder einen Aktionsbereich auf der Unterseite zur Anzeige der Aktionswidgets nutzen. Das betrifft nicht benutzerdefinierte Dialoge oder Meldungsfenster."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "Animationen für den gesamten GTK-Werkzeugsatz aktivieren"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "Legt fest, ob Animationen für  den gesamten GTK-Werkzeugsatz aktiviert werden sollen."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
 msgid "Document font"
@@ -1198,13 +1200,13 @@ msgstr "Diese Einstellung legt fest, welche Knöpfe in der Titelleiste des klien
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:61
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "Mnemonics nur anzeigen, wenn die Alt-Taste gedrückt ist"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:62
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr ""
+msgstr "Legt fest, ob Tastenkürzel automatisch angezeigt werden sollen, wenn der Nutzer die Alt-Taste drückt."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
 msgid "Disable command line"
@@ -1283,11 +1285,11 @@ msgstr "Verhindern, dass der Benutzer die Themeneinstellungen ändern kann."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:17
 msgid "Disable log out"
-msgstr ""
+msgstr "Abmelden deaktivieren"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:18
 msgid "Prevent the user from logging out."
-msgstr ""
+msgstr "Verhindern, dass der Benutzer sich abmelden kann."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
@@ -1552,8 +1554,8 @@ msgstr "Werkzeug, um die Einstellungen von MATE 1.4 zu MATE 1.6 zu migrieren"
 
 #: ../user-guide/mate-user-guide.desktop.in.in.h:1
 msgid "Help"
-msgstr ""
+msgstr "Hilfe"
 
 #: ../user-guide/mate-user-guide.desktop.in.in.h:2
 msgid "Get help with MATE"
-msgstr ""
+msgstr "Hilfe für MATE erhalten"

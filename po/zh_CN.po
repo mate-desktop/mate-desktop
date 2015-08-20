@@ -10,14 +10,16 @@
 # liushuyu011 <liushuyu_011@163.com>, 2014
 # Wylmer Wang <wantinghard@gmail.com>, 2013-2014
 # liulitchi <xingzuo88@qq.com>, 2013
+# 玉堂白鹤 <yjwork@qq.com>, 2015
+# 白铭骢 <jeffbaichina@members.fsf.org>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-28 18:04+0200\n"
-"PO-Revision-Date: 2015-07-28 16:04+0000\n"
-"Last-Translator: infirit <infirit@gmail.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/MATE/language/zh_CN/)\n"
+"PO-Revision-Date: 2015-08-05 12:05+0000\n"
+"Last-Translator: 白铭骢 <jeffbaichina@members.fsf.org>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/mate/MATE/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -313,11 +315,11 @@ msgstr "目前的不透明度值(0表示完全透明, 65535表示完全不透明
 
 #: ../libmate-desktop/mate-colorsel.c:332
 msgid "HEX String"
-msgstr ""
+msgstr "十六进制字符串"
 
 #: ../libmate-desktop/mate-colorsel.c:333
 msgid "The hexadecimal string of current color"
-msgstr ""
+msgstr "十六进制字符串当前颜色"
 
 #: ../libmate-desktop/mate-colorsel.c:383
 msgid ""
@@ -1095,7 +1097,7 @@ msgstr "GTK+ 使用的输入法模块的名称。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "使用 GTK3 标题栏"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
 msgid ""
@@ -1103,15 +1105,15 @@ msgid ""
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr ""
+msgstr "是否在 GTK+ 内置对话框，如文件选择器、颜色选择器以及字体选择器中使用带有各类操作的顶栏以及底栏按钮。该设置不影响任何使用 GtkDialog 的自定义对话框或消息框。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "启用 Gtk 图形库动画"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "是否启用 Gtk 图形库的动画。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
 msgid "Document font"
@@ -1199,13 +1201,13 @@ msgstr "此设置确定哪些按钮应放在客户端窗口标题栏, 以及它�
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:61
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "只在 Alt 键按下时显示助记符"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:62
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr ""
+msgstr "助记符是否应该在用户按下 Alt 键时自动显示或隐藏。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
 msgid "Disable command line"
@@ -1284,11 +1286,11 @@ msgstr "阻止用户更改主题设置"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:17
 msgid "Disable log out"
-msgstr ""
+msgstr "禁止注销"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:18
 msgid "Prevent the user from logging out."
-msgstr ""
+msgstr "阻止用户注销。"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
@@ -1553,8 +1555,8 @@ msgstr "用于将 MATE 1.4 设置迁入 MATE 1.6 的工具"
 
 #: ../user-guide/mate-user-guide.desktop.in.in.h:1
 msgid "Help"
-msgstr ""
+msgstr "帮助"
 
 #: ../user-guide/mate-user-guide.desktop.in.in.h:2
 msgid "Get help with MATE"
-msgstr ""
+msgstr "获取 MATE 帮助"

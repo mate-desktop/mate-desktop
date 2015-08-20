@@ -15,9 +15,9 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-28 18:04+0200\n"
-"PO-Revision-Date: 2015-07-28 16:04+0000\n"
-"Last-Translator: infirit <infirit@gmail.com>\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/MATE/language/ja/)\n"
+"PO-Revision-Date: 2015-07-31 12:48+0000\n"
+"Last-Translator: ABE Tsunehiko\n"
+"Language-Team: Japanese (http://www.transifex.com/mate/MATE/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -313,11 +313,11 @@ msgstr "現在の透明度(0で完全に透明、65535で完全に不透明)"
 
 #: ../libmate-desktop/mate-colorsel.c:332
 msgid "HEX String"
-msgstr ""
+msgstr "16 進文字列"
 
 #: ../libmate-desktop/mate-colorsel.c:333
 msgid "The hexadecimal string of current color"
-msgstr ""
+msgstr "現在の色の 16 進文字列"
 
 #: ../libmate-desktop/mate-colorsel.c:383
 msgid ""
@@ -1095,7 +1095,7 @@ msgstr "GTK+ が使用する GTK+ 入力メソッドのモジュール名です�
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "GTK3 のヘッダーバーを使用する"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
 msgid ""
@@ -1103,15 +1103,15 @@ msgid ""
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr ""
+msgstr "ファイル選択、色選択、フォント選択などの GTK+ 組み込みダイアログが、アクションウィジェットを表示するために、上部のヘッダーバーや下部のアクションエリアを使用するかどうかを設定します。この設定は GtkDialog を直接使用するカスタムダイアログやメッセージダイアログには効果がありません。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "GTK ツールキット全体でアニメーションを有効にする"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "ツールキット全体でアニメーションを有効にするかどうか"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
 msgid "Document font"
@@ -1199,13 +1199,13 @@ msgstr "クライアント側で装飾されたウィンドウのタイトルバ
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:61
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "Alt キーが押された時だけニーモニックを表示する"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.in.h:62
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr ""
+msgstr "ユーザーが Alt キーを押している間だけニーモニックを表示するかどうかを設定します。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
 msgid "Disable command line"
@@ -1284,11 +1284,11 @@ msgstr "テーマの設定を変更できないようにします。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:17
 msgid "Disable log out"
-msgstr ""
+msgstr "ログアウトの無効化"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:18
 msgid "Prevent the user from logging out."
-msgstr ""
+msgstr "ログアウトできないようにします。"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
@@ -1553,8 +1553,8 @@ msgstr "MATE 1.4 の設定を MATE 1.6 に適用するツール"
 
 #: ../user-guide/mate-user-guide.desktop.in.in.h:1
 msgid "Help"
-msgstr ""
+msgstr "ヘルプ"
 
 #: ../user-guide/mate-user-guide.desktop.in.in.h:2
 msgid "Get help with MATE"
-msgstr ""
+msgstr "MATE のヘルプを取得"
