@@ -37,11 +37,7 @@
 static DConfClient *
 mate_dconf_client_get (void)
 {
-#ifdef HAVE_DCONF_0_13
     return dconf_client_new ();
-#else
-    return dconf_client_new (NULL, NULL, NULL, NULL);
-#endif
 }
 
 /**
@@ -62,11 +58,7 @@ mate_dconf_write_sync (const gchar  *key,
     gboolean     ret;
     DConfClient *client = mate_dconf_client_get ();
 
-#ifdef HAVE_DCONF_0_13
     ret = dconf_client_write_sync (client, key, value, NULL, NULL, error);
-#else
-    ret = dconf_client_write (client, key, value, NULL, NULL, error);
-#endif
 
     g_object_unref (client);
 
@@ -89,11 +81,7 @@ mate_dconf_recursive_reset (const gchar  *dir,
     gboolean     ret;
     DConfClient *client = mate_dconf_client_get ();
 
-#ifdef HAVE_DCONF_0_13
     ret = dconf_client_write_sync (client, dir, NULL, NULL, NULL, error);
-#else
-    ret = dconf_client_write (client, dir, NULL, NULL, NULL, error);
-#endif
 
     g_object_unref (client);
 
@@ -153,9 +141,7 @@ mate_dconf_list_subdirs (const gchar *dir,
  */
 void mate_dconf_sync (void)
 {
-#ifdef HAVE_DCONF_0_13
     DConfClient  *client = mate_dconf_client_get ();
     dconf_client_sync (client);
     g_object_unref (client);
-#endif
 }
