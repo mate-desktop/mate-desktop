@@ -126,8 +126,6 @@ dnl it too, or it will never make it into the spec file!
 dnl ----------------------------------------------------------------------------
 dnl GTK library version
 dnl ----------------------------------------------------------------------------
-GTK_API_VERSION=2.0
-GTK_REQUIRED=2.24.0
 
 AC_MSG_CHECKING([which gtk+ version to compile against])
 AC_ARG_WITH([gtk],
