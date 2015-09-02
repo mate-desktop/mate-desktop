@@ -437,12 +437,9 @@ fill_out_screen_info (Display *xdisplay,
 {
 #ifdef HAVE_RANDR
     XRRScreenResources *resources;
-    MateRRScreenPrivate *priv;
     
     g_assert (xdisplay != NULL);
     g_assert (info != NULL);
-
-    priv = info->screen->priv;
 
     /* First update the screen resources */
 
