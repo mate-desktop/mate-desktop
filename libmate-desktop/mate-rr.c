@@ -1434,6 +1434,14 @@ mate_rr_output_get_crtc (MateRROutput *output)
     return output->current_crtc;
 }
 
+MateRRCrtc **
+mate_rr_output_get_possible_crtcs (MateRROutput *output)
+{
+    g_return_val_if_fail (output != NULL, NULL);
+
+    return output->possible_crtcs;
+}
+
 /* Returns NULL if the ConnectorType property is not available */
 const char *
 mate_rr_output_get_connector_type (MateRROutput *output)
