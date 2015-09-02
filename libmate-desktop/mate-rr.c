@@ -1462,34 +1462,34 @@ mate_rr_output_get_connector_type (MateRROutput *output)
 }
 
 gboolean
+_mate_rr_output_name_is_laptop (const char *name)
+{
+    if (!name)
+        return FALSE;
+
+    if (strstr (name, "lvds") || /* Most drivers use an "LVDS" prefix... */
+        strstr (name, "LVDS") ||
+        strstr (name, "Lvds") ||
+        strstr (name, "LCD")  || /* ... but fglrx uses "LCD" in some versions.  Shoot me now, kthxbye. */
+        strstr (name, "eDP"))    /* eDP is for internal laptop panel connections */
+        return TRUE;
+
+    return FALSE;
+}
+
+gboolean
 mate_rr_output_is_laptop (MateRROutput *output)
 {
-    const char *connector_type;
-
     g_return_val_if_fail (output != NULL, FALSE);
 
     if (!output->connected)
-	return FALSE;
+        return FALSE;
 
-    /* The ConnectorType property is present in RANDR 1.3 and greater */
+    if (g_strcmp0 (output->connector_type, MATE_RR_CONNECTOR_TYPE_PANEL) == 0)
+        return TRUE;
 
-    connector_type = mate_rr_output_get_connector_type (output);
-    if (connector_type && strcmp (connector_type, MATE_RR_CONNECTOR_TYPE_PANEL) == 0)
-	return TRUE;
-
-    /* Older versions of RANDR - this is a best guess, as @#$% RANDR doesn't have standard output names,
-     * so drivers can use whatever they like.
-     */
-
-    if (output->name
-	&& (strstr (output->name, "lvds") ||  /* Most drivers use an "LVDS" prefix... */
-	    strstr (output->name, "LVDS") ||
-	    strstr (output->name, "Lvds") ||
-	    strstr (output->name, "LCD")  ||  /* ... but fglrx uses "LCD" in some versions.  Shoot me now, kthxbye. */
-	    strstr (output->name, "eDP")))    /* eDP is for internal laptop panel connections */
-	return TRUE;
-
-    return FALSE;
+    /* Fallback (see https://bugs.freedesktop.org/show_bug.cgi?id=26736) */
+    return _mate_rr_output_name_is_laptop (output->name);
 }
 
 /**
