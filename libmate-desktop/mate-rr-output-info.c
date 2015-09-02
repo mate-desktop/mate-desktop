@@ -116,6 +116,16 @@ void mate_rr_output_info_get_geometry (MateRROutputInfo *self, int *x, int *y, i
 	*height = self->priv->height;
 }
 
+/**
+ * mate_rr_output_info_set_geometry:
+ * @self: a #MateRROutputInfo
+ * @x: x offset for monitor
+ * @y: y offset for monitor
+ * @width: monitor width
+ * @height: monitor height
+ *
+ * Set the geometry for the monitor connected to the specified output.
+ */
 void mate_rr_output_info_set_geometry (MateRROutputInfo *self, int  x, int  y, int  width, int  height)
 {
     g_return_if_fail (MATE_IS_RR_OUTPUT_INFO (self));

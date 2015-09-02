@@ -1426,6 +1426,11 @@ mate_rr_screen_get_output_by_name (MateRRScreen *screen,
     return NULL;
 }
 
+/**
+ * mate_rr_output_get_crtc:
+ * @output: a #MateRROutput
+ * Returns: (transfer none):
+ */
 MateRRCrtc *
 mate_rr_output_get_crtc (MateRROutput *output)
 {
@@ -1434,6 +1439,11 @@ mate_rr_output_get_crtc (MateRROutput *output)
     return output->current_crtc;
 }
 
+/**
+ * mate_rr_output_get_possible_crtcs:
+ * @output: a #MateRROutput
+ * Returns: (array zero-terminated=1) (transfer none):
+ */
 MateRRCrtc **
 mate_rr_output_get_possible_crtcs (MateRROutput *output)
 {
@@ -1482,6 +1492,11 @@ mate_rr_output_is_laptop (MateRROutput *output)
     return FALSE;
 }
 
+/**
+ * mate_rr_output_get_current_mode:
+ * @output: a #MateRROutput
+ * Returns: (transfer none): the current mode of this output
+ */
 MateRRMode *
 mate_rr_output_get_current_mode (MateRROutput *output)
 {
@@ -1495,6 +1510,12 @@ mate_rr_output_get_current_mode (MateRROutput *output)
     return NULL;
 }
 
+/**
+ * mate_rr_output_get_position:
+ * @output: a #MateRROutput
+ * @x: (out) (allow-none):
+ * @y: (out) (allow-none):
+ */
 void
 mate_rr_output_get_position (MateRROutput   *output,
 			      int             *x,
@@ -1529,6 +1550,11 @@ mate_rr_output_get_height_mm (MateRROutput *output)
     return output->height_mm;
 }
 
+/**
+ * mate_rr_output_get_preferred_mode:
+ * @output: a #MateRROutput
+ * Returns: (transfer none):
+ */
 MateRRMode *
 mate_rr_output_get_preferred_mode (MateRROutput *output)
 {
@@ -1538,6 +1564,12 @@ mate_rr_output_get_preferred_mode (MateRROutput *output)
     
     return NULL;
 }
+
+/**
+ * mate_rr_output_list_modes:
+ * @output: a #MateRROutput
+ * Returns: (array zero-terminated=1) (transfer none):
+ */
 
 MateRRMode **
 mate_rr_output_list_modes (MateRROutput *output)
@@ -1763,6 +1795,11 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
 #endif /* HAVE_RANDR */
 }
 
+/**
+ * mate_rr_crtc_get_current_mode:
+ * @crtc: a #MateRRCrtc
+ * Returns: (transfer none): the current mode of this crtc
+ */
 MateRRMode *
 mate_rr_crtc_get_current_mode (MateRRCrtc *crtc)
 {
@@ -1798,6 +1835,13 @@ mate_rr_crtc_can_drive_output (MateRRCrtc   *crtc,
 }
 
 /* FIXME: merge with get_mode()? */
+
+/**
+ * mate_rr_crtc_get_position:
+ * @crtc: a #MateRRCrtc
+ * @x: (out) (allow-none):
+ * @y: (out) (allow-none):
+ */
 void
 mate_rr_crtc_get_position (MateRRCrtc *crtc,
 			    int         *x,
@@ -2064,6 +2108,16 @@ mate_rr_crtc_set_gamma (MateRRCrtc *crtc, int size,
 #endif /* HAVE_RANDR */
 }
 
+/**
+ * mate_rr_crtc_get_gamma:
+ * @crtc: a #MateRRCrtc
+ * @size:
+ * @red: (out): the minimum width
+ * @green: (out): the maximum width
+ * @blue: (out): the minimum height
+ *
+ * Returns: %TRUE for success
+ */
 gboolean
 mate_rr_crtc_get_gamma (MateRRCrtc *crtc, int *size,
 			 unsigned short **red, unsigned short **green,
