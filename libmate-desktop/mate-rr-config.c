@@ -1171,19 +1171,6 @@ mate_rr_config_sanitize (MateRRConfig *config)
     }
 }
 
-static gboolean
-output_info_is_laptop (MateRROutputInfo *info)
-{
-        if (info->priv->name
-            && (strstr (info->priv->name, "lvds") ||  /* Most drivers use an "LVDS" prefix... */
-                strstr (info->priv->name, "LVDS") ||
-                strstr (info->priv->name, "Lvds") ||
-                strstr (info->priv->name, "LCD")))    /* ... but fglrx uses "LCD" in some versions.  Shoot me now, kthxbye. */
-                return TRUE;
-
-        return FALSE;
-}
-
 gboolean
 mate_rr_config_ensure_primary (MateRRConfig *configuration)
 {
@@ -1223,9 +1210,7 @@ mate_rr_config_ensure_primary (MateRRConfig *configuration)
                         top_left = info;
                 }
                 if (laptop == NULL
-                    && output_info_is_laptop (info)) {
-                        /* shame we can't find the connector type
-                           as with gnome_rr_output_is_laptop */
+                    && _mate_rr_output_name_is_laptop (info->priv->name)) {
                         laptop = info;
                 }
         }

@@ -60,14 +60,6 @@ typedef int Rotation;
 #define RR_Reflect_Y		32
 #endif
 
-#ifdef HAVE_RANDR
-#define RANDR_LIBRARY_IS_AT_LEAST_1_3 (RANDR_MAJOR > 1 || (RANDR_MAJOR == 1 && RANDR_MINOR >= 3))
-#else
-#define RANDR_LIBRARY_IS_AT_LEAST_1_3 0
-#endif
-
-#define SERVERS_RANDR_IS_AT_LEAST_1_3(priv) (priv->rr_major_version > 1 || (priv->rr_major_version == 1 && priv->rr_minor_version >= 3))
-
 enum {
     SCREEN_PROP_0,
     SCREEN_PROP_GDK_SCREEN,
@@ -445,32 +437,16 @@ fill_out_screen_info (Display *xdisplay,
 {
 #ifdef HAVE_RANDR
     XRRScreenResources *resources;
-    MateRRScreenPrivate *priv;
     
     g_assert (xdisplay != NULL);
     g_assert (info != NULL);
-
-    priv = info->screen->priv;
 
     /* First update the screen resources */
 
     if (needs_reprobe)
         resources = XRRGetScreenResources (xdisplay, xroot);
     else
-    {
-	/* XRRGetScreenResourcesCurrent is less expensive than
-	 * XRRGetScreenResources, however it is available only
-	 * in RandR 1.3 or higher
-	 */
-#if RANDR_LIBRARY_IS_AT_LEAST_1_3
-        if (SERVERS_RANDR_IS_AT_LEAST_1_3 (priv))
-            resources = XRRGetScreenResourcesCurrent (xdisplay, xroot);
-        else
-            resources = XRRGetScreenResources (xdisplay, xroot);
-#else
-        resources = XRRGetScreenResources (xdisplay, xroot);
-#endif
-    }
+        resources = XRRGetScreenResourcesCurrent (xdisplay, xroot);
 
     if (resources)
     {
@@ -521,17 +497,13 @@ fill_out_screen_info (Display *xdisplay,
     }
 
     info->primary = None;
-#if RANDR_LIBRARY_IS_AT_LEAST_1_3
-    if (SERVERS_RANDR_IS_AT_LEAST_1_3 (priv)) {
-        gdk_error_trap_push ();
-        info->primary = XRRGetOutputPrimary (xdisplay, xroot);
-      #if GTK_CHECK_VERSION (3, 0, 0)
+    gdk_error_trap_push ();
+    info->primary = XRRGetOutputPrimary (xdisplay, xroot);
+#if GTK_CHECK_VERSION (3, 0, 0)
 	gdk_error_trap_pop_ignored ();
-      #else
+#else
 	gdk_flush ();
 	gdk_error_trap_pop (); /* ignore error */
-      #endif
-    }
 #endif
 
     return TRUE;
@@ -708,9 +680,9 @@ mate_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **
         priv->randr_event_base = event_base;
 
         XRRQueryVersion (dpy, &priv->rr_major_version, &priv->rr_minor_version);
-        if (priv->rr_major_version < 1 || (priv->rr_major_version == 1 && priv->rr_minor_version < 2)) {
+        if (priv->rr_major_version < 1 || (priv->rr_major_version == 1 && priv->rr_minor_version < 3)) {
             g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_NO_RANDR_EXTENSION,
-                "RANDR extension is too old (must be at least 1.2)");
+                "RANDR extension is too old (must be at least 1.3)");
             return FALSE;
         }
 
@@ -1451,12 +1423,30 @@ mate_rr_screen_get_output_by_name (MateRRScreen *screen,
     return NULL;
 }
 
+/**
+ * mate_rr_output_get_crtc:
+ * @output: a #MateRROutput
+ * Returns: (transfer none):
+ */
 MateRRCrtc *
 mate_rr_output_get_crtc (MateRROutput *output)
 {
     g_return_val_if_fail (output != NULL, NULL);
     
     return output->current_crtc;
+}
+
+/**
+ * mate_rr_output_get_possible_crtcs:
+ * @output: a #MateRROutput
+ * Returns: (array zero-terminated=1) (transfer none):
+ */
+MateRRCrtc **
+mate_rr_output_get_possible_crtcs (MateRROutput *output)
+{
+    g_return_val_if_fail (output != NULL, NULL);
+
+    return output->possible_crtcs;
 }
 
 /* Returns NULL if the ConnectorType property is not available */
@@ -1469,36 +1459,41 @@ mate_rr_output_get_connector_type (MateRROutput *output)
 }
 
 gboolean
-mate_rr_output_is_laptop (MateRROutput *output)
+_mate_rr_output_name_is_laptop (const char *name)
 {
-    const char *connector_type;
+    if (!name)
+        return FALSE;
 
-    g_return_val_if_fail (output != NULL, FALSE);
-
-    if (!output->connected)
-	return FALSE;
-
-    /* The ConnectorType property is present in RANDR 1.3 and greater */
-
-    connector_type = mate_rr_output_get_connector_type (output);
-    if (connector_type && strcmp (connector_type, MATE_RR_CONNECTOR_TYPE_PANEL) == 0)
-	return TRUE;
-
-    /* Older versions of RANDR - this is a best guess, as @#$% RANDR doesn't have standard output names,
-     * so drivers can use whatever they like.
-     */
-
-    if (output->name
-	&& (strstr (output->name, "lvds") ||  /* Most drivers use an "LVDS" prefix... */
-	    strstr (output->name, "LVDS") ||
-	    strstr (output->name, "Lvds") ||
-	    strstr (output->name, "LCD")  ||  /* ... but fglrx uses "LCD" in some versions.  Shoot me now, kthxbye. */
-	    strstr (output->name, "eDP")))    /* eDP is for internal laptop panel connections */
-	return TRUE;
+    if (strstr (name, "lvds") || /* Most drivers use an "LVDS" prefix... */
+        strstr (name, "LVDS") ||
+        strstr (name, "Lvds") ||
+        strstr (name, "LCD")  || /* ... but fglrx uses "LCD" in some versions.  Shoot me now, kthxbye. */
+        strstr (name, "eDP"))    /* eDP is for internal laptop panel connections */
+        return TRUE;
 
     return FALSE;
 }
 
+gboolean
+mate_rr_output_is_laptop (MateRROutput *output)
+{
+    g_return_val_if_fail (output != NULL, FALSE);
+
+    if (!output->connected)
+        return FALSE;
+
+    if (g_strcmp0 (output->connector_type, MATE_RR_CONNECTOR_TYPE_PANEL) == 0)
+        return TRUE;
+
+    /* Fallback (see https://bugs.freedesktop.org/show_bug.cgi?id=26736) */
+    return _mate_rr_output_name_is_laptop (output->name);
+}
+
+/**
+ * mate_rr_output_get_current_mode:
+ * @output: a #MateRROutput
+ * Returns: (transfer none): the current mode of this output
+ */
 MateRRMode *
 mate_rr_output_get_current_mode (MateRROutput *output)
 {
@@ -1512,6 +1507,12 @@ mate_rr_output_get_current_mode (MateRROutput *output)
     return NULL;
 }
 
+/**
+ * mate_rr_output_get_position:
+ * @output: a #MateRROutput
+ * @x: (out) (allow-none):
+ * @y: (out) (allow-none):
+ */
 void
 mate_rr_output_get_position (MateRROutput   *output,
 			      int             *x,
@@ -1546,6 +1547,11 @@ mate_rr_output_get_height_mm (MateRROutput *output)
     return output->height_mm;
 }
 
+/**
+ * mate_rr_output_get_preferred_mode:
+ * @output: a #MateRROutput
+ * Returns: (transfer none):
+ */
 MateRRMode *
 mate_rr_output_get_preferred_mode (MateRROutput *output)
 {
@@ -1555,6 +1561,12 @@ mate_rr_output_get_preferred_mode (MateRROutput *output)
     
     return NULL;
 }
+
+/**
+ * mate_rr_output_list_modes:
+ * @output: a #MateRROutput
+ * Returns: (array zero-terminated=1) (transfer none):
+ */
 
 MateRRMode **
 mate_rr_output_list_modes (MateRROutput *output)
@@ -1620,13 +1632,13 @@ void
 mate_rr_screen_set_primary_output (MateRRScreen *screen,
                                     MateRROutput *output)
 {
+#ifdef HAVE_RANDR
     MateRRScreenPrivate *priv;
 
     g_return_if_fail (MATE_IS_RR_SCREEN (screen));
 
     priv = screen->priv;
 
-#if RANDR_LIBRARY_IS_AT_LEAST_1_3
     RROutput id;
 
     if (output)
@@ -1634,8 +1646,7 @@ mate_rr_screen_set_primary_output (MateRRScreen *screen,
     else
         id = None;
 
-    if (SERVERS_RANDR_IS_AT_LEAST_1_3 (priv))
-        XRRSetOutputPrimary (priv->xdisplay, priv->xroot, id);
+    XRRSetOutputPrimary (priv->xdisplay, priv->xroot, id);
 #endif
 }
 
@@ -1781,6 +1792,11 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
 #endif /* HAVE_RANDR */
 }
 
+/**
+ * mate_rr_crtc_get_current_mode:
+ * @crtc: a #MateRRCrtc
+ * Returns: (transfer none): the current mode of this crtc
+ */
 MateRRMode *
 mate_rr_crtc_get_current_mode (MateRRCrtc *crtc)
 {
@@ -1816,6 +1832,13 @@ mate_rr_crtc_can_drive_output (MateRRCrtc   *crtc,
 }
 
 /* FIXME: merge with get_mode()? */
+
+/**
+ * mate_rr_crtc_get_position:
+ * @crtc: a #MateRRCrtc
+ * @x: (out) (allow-none):
+ * @y: (out) (allow-none):
+ */
 void
 mate_rr_crtc_get_position (MateRRCrtc *crtc,
 			    int         *x,
@@ -2082,6 +2105,16 @@ mate_rr_crtc_set_gamma (MateRRCrtc *crtc, int size,
 #endif /* HAVE_RANDR */
 }
 
+/**
+ * mate_rr_crtc_get_gamma:
+ * @crtc: a #MateRRCrtc
+ * @size:
+ * @red: (out): the minimum width
+ * @green: (out): the maximum width
+ * @blue: (out): the minimum height
+ *
+ * Returns: %TRUE for success
+ */
 gboolean
 mate_rr_crtc_get_gamma (MateRRCrtc *crtc, int *size,
 			 unsigned short **red, unsigned short **green,
