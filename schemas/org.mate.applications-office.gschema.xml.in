@@ -6,25 +6,25 @@
   <schema id="org.mate.applications-office.calendar" path="/org/mate/desktop/applications/calendar/">
     <key name="exec" type="s">
       <default>'evolution'</default>
-      <_summary>Default calendar</_summary>
-      <_description>Default calendar application</_description>
+      <summary>Default calendar</summary>
+      <description>Default calendar application</description>
     </key>
     <key name="needs-term" type="b">
       <default>false</default>
-      <_summary>Calendar needs terminal</_summary>
-      <_description>Whether the default calendar application needs a terminal to run</_description>
+      <summary>Calendar needs terminal</summary>
+      <description>Whether the default calendar application needs a terminal to run</description>
     </key>
   </schema>
   <schema id="org.mate.applications-office.tasks" path="/org/mate/desktop/applications/tasks/">
     <key name="exec" type="s">
       <default>'evolution'</default>
-      <_summary>Default tasks</_summary>
-      <_description>Default tasks application</_description>
+      <summary>Default tasks</summary>
+      <description>Default tasks application</description>
     </key>
     <key name="needs-term" type="b">
       <default>false</default>
-      <_summary>Tasks needs terminal</_summary>
-      <_description>Whether the default tasks application needs a terminal to run</_description>
+      <summary>Tasks needs terminal</summary>
+      <description>Whether the default tasks application needs a terminal to run</description>
     </key>
   </schema>
 </schemalist>

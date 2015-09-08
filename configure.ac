@@ -30,7 +30,7 @@ AC_SUBST(LT_VERSION)
 
 AM_MAINTAINER_MODE
 
-IT_PROG_INTLTOOL([0.40.0])
+IT_PROG_INTLTOOL([0.50.1])
 
 AC_PROG_CC
 AC_STDC_HEADERS
@@ -303,6 +303,24 @@ docs/reference/mate-desktop/Makefile
 mate-version.xml.in
 po/Makefile.in
 schemas/Makefile
+schemas/org.mate.accessibility-keyboard.gschema.xml
+schemas/org.mate.accessibility-startup.gschema.xml
+schemas/org.mate.applications-at-mobility.gschema.xml
+schemas/org.mate.applications-at-visual.gschema.xml
+schemas/org.mate.applications-browser.gschema.xml
+schemas/org.mate.applications-office.gschema.xml
+schemas/org.mate.applications-terminal.gschema.xml
+schemas/org.mate.background.gschema.xml
+schemas/org.mate.debug.gschema.xml
+schemas/org.mate.file-views.gschema.xml
+schemas/org.mate.interface.gschema.xml
+schemas/org.mate.lockdown.gschema.xml
+schemas/org.mate.peripherals-keyboard.gschema.xml
+schemas/org.mate.peripherals-mouse.gschema.xml
+schemas/org.mate.sound.gschema.xml
+schemas/org.mate.thumbnail-cache.gschema.xml
+schemas/org.mate.thumbnailers.gschema.xml
+schemas/org.mate.typing-break.gschema.xml
 man/Makefile
 tools/mate-color-select.desktop.in
 tools/mate-conf-import.desktop.in

@@ -22,7 +22,7 @@
     </key>
     <key name="bell-mode" type="s">
       <default>'on'</default>
-      <_description>possible values are "on", "off", and "custom".</_description>
+      <description>possible values are "on", "off", and "custom".</description>
     </key>
     <key name="bell-pitch" type="i">
       <default>400</default>
@@ -32,18 +32,18 @@
     </key>
     <key name="bell-custom-file" type="s">
       <default>''</default>
-      <_summary>Keyboard Bell Custom Filename</_summary>
-      <_description>File name of the bell sound to be played.</_description>
+      <summary>Keyboard Bell Custom Filename</summary>
+      <description>File name of the bell sound to be played.</description>
     </key>
     <key name="remember-numlock-state" type="b">
       <default>true</default>
-      <_summary>Remember NumLock state</_summary>
-      <_description>When set to true, MATE will remember the state of the NumLock LED between sessions.</_description>
+      <summary>Remember NumLock state</summary>
+      <description>When set to true, MATE will remember the state of the NumLock LED between sessions.</description>
     </key>
     <key name="numlock-state" enum="org.mate.peripherals-keyboard.NumLockState">
       <default>'unknown'</default>
-      <_summary>NumLock state</_summary>
-      <_description>The remembered state of the NumLock LED.</_description>
+      <summary>NumLock state</summary>
+      <description>The remembered state of the NumLock LED.</description>
     </key>
   </schema>
 </schemalist>

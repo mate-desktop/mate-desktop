@@ -1,0 +1,169 @@
+<schemalist gettext-domain="@GETTEXT_PACKAGE@">
+  <schema id="org.mate.interface" path="/org/mate/desktop/interface/">
+    <key name="accessibility" type="b">
+      <default>false</default>
+      <summary>Enable Accessibility</summary>
+      <description>Whether Applications should have accessibility support.</description>
+    </key>
+    <key name="enable-animations" type="b">
+      <default>true</default>
+      <summary>Enable Animations</summary>
+      <description>Whether animations should be displayed. Note: This is a global key, it changes the behaviour of the window manager, the panel etc.</description>
+    </key>
+    <key name="menus-have-tearoff" type="b">
+      <default>false</default>
+      <summary>Menus Have Tearoff</summary>
+      <description>Whether menus should have a tearoff.</description>
+    </key>
+    <key name="can-change-accels" type="b">
+      <default>false</default>
+      <summary>Can Change Accels</summary>
+      <description>Whether the user can dynamically type a new accelerator when  positioned over an active menuitem.</description>
+    </key>
+    <key name="toolbar-style" type="s">
+      <default>'both-horiz'</default>
+      <summary>Toolbar Style</summary>
+      <description>Toolbar Style. Valid values are "both", "both-horiz", "icons", and "text".</description>
+    </key>
+    <key name="menus-have-icons" type="b">
+      <default>true</default>
+      <summary>Menus Have Icons</summary>
+      <description>Whether menus may display an icon next to a menu entry.</description>
+    </key>
+    <key name="buttons-have-icons" type="b">
+      <default>true</default>
+      <summary>Buttons Have Icons</summary>
+      <description>Whether buttons may display an icon in addition to the button text.</description>
+    </key>
+    <key name="menubar-detachable" type="b">
+      <default>false</default>
+      <summary>Menubar Detachable</summary>
+      <description>Whether the user can detach menubars and move them around.</description>
+    </key>
+    <key name="toolbar-detachable" type="b">
+      <default>false</default>
+      <summary>Toolbar Detachable</summary>
+      <description>Whether the user can detach toolbars and move them around.</description>
+    </key>
+    <key name="toolbar-icons-size" type="s">
+      <default>'large-toolbar'</default>
+      <summary>Toolbar Icon Size</summary>
+      <description>Size of icons in toolbars, either "small-toolbar" or "large-toolbar".</description>
+    </key>
+    <key name="cursor-blink" type="b">
+      <default>true</default>
+      <summary>Cursor Blink</summary>
+      <description>Whether the cursor should blink.</description>
+    </key>
+    <key name="cursor-blink-time" type="i">
+      <default>1200</default>
+      <summary>Cursor Blink Time</summary>
+      <description>Length of the cursor blink cycle, in milliseconds.</description>
+    </key>
+    <key name="icon-theme" type="s">
+      <default>'menta'</default>
+      <summary>Icon Theme</summary>
+      <description>Icon theme to use for the panel, caja etc.</description>
+    </key>
+    <key name="gtk-theme" type="s">
+      <default>'Menta'</default>
+      <summary>Gtk+ Theme</summary>
+      <description>Basename of the default theme used by gtk+.</description>
+    </key>
+    <key name="gtk-key-theme" type="s">
+      <default>'Default'</default>
+      <summary>Gtk+ Theme</summary>
+      <description>Basename of the default theme used by gtk+.</description>
+    </key>
+    <key name="gtk-color-scheme" type="s">
+      <default>''</default>
+      <summary>List of symbolic names and color equivalents</summary>
+      <description>A '\n' separated list of "name:color" as defined by the 'gtk-color-scheme' setting</description>
+    </key>
+    <key name="font-name" type="s">
+      <default>'Sans 10'</default>
+      <summary>Default font</summary>
+      <description>Name of the default font used by gtk+.</description>
+    </key>
+    <key name="gtk-im-preedit-style" type="s">
+      <default>'callback'</default>
+      <summary>GTK IM Preedit Style</summary>
+      <description>Name of the GTK+ input method Preedit Style used by gtk+.</description>
+    </key>
+    <key name="gtk-im-status-style" type="s">
+      <default>'callback'</default>
+      <summary>GTK IM Status Style</summary>
+      <description>Name of the GTK+ input method Status Style used by gtk+.</description>
+    </key>
+    <key name="gtk-im-module" type="s">
+      <default>''</default>
+      <summary>GTK IM Module</summary>
+      <description>Name of the input method module used by GTK+.</description>
+    </key>
+    <key name="gtk-dialogs-use-header" type="b">
+      <default>false</default>
+      <summary>Use GTK3 header bar</summary>
+      <description>Whether builtin GTK+ dialogs such as the file chooser, the color chooser or the font chooser will use a header bar at the top to show action widgets, or an action area at the bottom. This setting does not affect custom dialogs using GtkDialog directly, or message dialogs.</description>
+    </key>
+    <key name="gtk-overlay-scrolling" type="b">
+      <default>false</default>
+      <summary>Use GTK3 overlay scrolling</summary>
+      <description>Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay scrolling hides and reduces the size of the scrollbar until it gets focus.</description>
+    </key>
+    <key name="gtk-enable-animations" type="b">
+      <default>true</default>
+      <summary>Enable Gtk toolkit-wide animations</summary>
+      <description>Whether to enable toolkit-wide animations.</description>
+    </key>
+    <key name="document-font-name" type="s">
+      <default>'Sans 10'</default>
+      <summary>Document font</summary>
+      <description>Name of the default font used for reading documents.</description>
+    </key>
+    <key name="monospace-font-name" type="s">
+      <default>'Monospace 10'</default>
+      <summary>Monospace font</summary>
+      <description>Name of a monospaced (fixed-width) font for use in locations like terminals.</description>
+    </key>
+    <key name="use-custom-font" type="b">
+      <default>false</default>
+      <summary>Use Custom Font</summary>
+      <description>Whether to use a custom font in gtk+ applications.</description>
+    </key>
+    <key name="status-bar-meter-on-right" type="b">
+      <default>false</default>
+      <summary>Status Bar on Right</summary>
+      <description>Whether to display a status bar meter on the right.</description>
+    </key>
+    <key name="file-chooser-backend" type="s">
+      <default>'gio'</default>
+      <summary>Module for GtkFileChooser</summary>
+      <description>Module to use as the filesystem model for the GtkFileChooser widget.  Possible values are "gio" and "gtk+".</description>
+    </key>
+    <key name="menubar-accel" type="s">
+      <default>'F10'</default>
+      <summary>Menubar accelerator</summary>
+      <description>Keyboard shortcut to open the menu bars.</description>
+    </key>
+    <key name="show-input-method-menu" type="b">
+      <default>true</default>
+      <summary>Show the 'Input Methods' menu</summary>
+      <description>Whether the context menus of entries and text views  should offer to change the input method.</description>
+    </key>
+    <key name="show-unicode-menu" type="b">
+      <default>true</default>
+      <summary>Show the 'Unicode Control Character' menu</summary>
+      <description>Whether the context menus of entries and text views  should offer to insert control characters.</description>
+    </key>
+    <key name="gtk-decoration-layout" type="s">
+      <default>'menu:minimize,maximize,close'</default>
+      <summary>Titlebar layout of GTK3 client-side decorated windows</summary>
+      <description>This setting determines which buttons should be put in the titlebar of client-side decorated windows, and whether they should be placed at the left of right. See https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout.</description>
+    </key>
+    <key name="automatic-mnemonics" type="b">
+      <default>true</default>
+      <summary>Only show mnemonics on when the Alt key is pressed</summary>
+      <description>Whether mnemonics should be automatically shown and hidden when the user presses the Alt key.</description>
+    </key>
+  </schema>
+</schemalist>
