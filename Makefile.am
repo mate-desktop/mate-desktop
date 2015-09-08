@@ -3,9 +3,6 @@ SUBDIRS = libmate-desktop man docs po schemas tools
 if MATE_ABOUT_ENABLED
 SUBDIRS += mate-about
 endif
-if USER_GUIDE_ENABLED
-SUBDIRS += user-guide
-endif
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
