@@ -25,21 +25,6 @@ EXTRA_DIST = \
 
 ###############################################################################
 
-gtk_update_icon_cache = gtk-update-icon-cache -f -t
-
-update-icon-cache:
-	@-if test -z "$(DESTDIR)"; then \
-		echo "Updating Gtk icon cache."; \
-		for theme in $(public_icons_themes); do \
-			$(gtk_update_icon_cache) $(datadir)/icons/$$theme; \
-		done; \
-	else \
-		echo "*** Icon cache not updated.  After (un)install, run this:"; \
-		for theme in $(public_icons_themes); do \
-			echo "***   $(gtk_update_icon_cache) $(datadir)/icons/$$theme"; \
-		done; \
-	fi
-
 install-icons:
 	for icon in $(public_icons); do \
 		THEME=`echo $$icon | cut -d_ -f1`; \
@@ -59,6 +44,6 @@ uninstall-icons:
 		rm -f $(DESTDIR)$(datadir)/icons/$$THEME/$$SIZE/$$CONTEXT/$$ICONFILE; \
 	done
 
-install-data-local: install-icons update-icon-cache
+install-data-local: install-icons
 
-uninstall-local: uninstall-icons update-icon-cache
+uninstall-local: uninstall-icons
