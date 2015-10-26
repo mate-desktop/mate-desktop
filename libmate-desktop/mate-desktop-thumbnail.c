@@ -763,10 +763,11 @@ external_thumbnailers_disabled_changed_cb (GSettings                    *setting
 
   g_mutex_lock (&priv->lock);
 
-  if (priv->disabled)
-    return;
-  g_strfreev (priv->disabled_types);
-  priv->disabled_types = g_settings_get_strv (priv->settings, "disable");
+  if (!priv->disabled)
+    {
+      g_strfreev (priv->disabled_types);
+      priv->disabled_types = g_settings_get_strv (priv->settings, "disable");
+    }
 
   g_mutex_unlock (&priv->lock);
 }
