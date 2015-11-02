@@ -257,26 +257,24 @@ mate_color_button_get_checkered (void)
 }
 
 /* Handle exposure events for the color picker's drawing area */
-#if GTK_CHECK_VERSION (3, 0, 0)
 static gboolean
+#if GTK_CHECK_VERSION (3, 0, 0)
 draw (GtkWidget      *widget, 
       cairo_t        *cr, 
       gpointer        data)
 #else
-static gint
 expose_event (GtkWidget      *widget, 
               GdkEventExpose *event, 
               gpointer        data)
 #endif
 {
   MateColorButton *color_button = MATE_COLOR_BUTTON (data);
-  GtkAllocation allocation;
   cairo_pattern_t *checkered;
+
 #if !GTK_CHECK_VERSION (3, 0, 0)
-  cairo_t *cr;
+  cairo_t *cr = gdk_cairo_create (event->window);
 
-  cr = gdk_cairo_create (event->window);
-
+  GtkAllocation allocation;
   gtk_widget_get_allocation (widget, &allocation);
   gdk_cairo_rectangle (cr, &allocation);
   cairo_clip (cr);
