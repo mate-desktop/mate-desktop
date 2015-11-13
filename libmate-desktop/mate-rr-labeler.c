@@ -451,7 +451,7 @@ create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkColor 
 		 * used as an adjective, not as a verb.  For example, the Spanish
 		 * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 		 */
-		display_name = _("Mirror Screens");
+		display_name = g_strdup_printf (_("Mirror Screens"));
 		str = g_strdup_printf ("<b>%s</b>", display_name);
 	} else {
 		display_name = g_strdup_printf ("<b>%s</b>\n<small>%s</small>", mate_rr_output_info_get_display_name (output), mate_rr_output_info_get_name (output));
