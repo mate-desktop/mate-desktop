@@ -689,6 +689,7 @@ mate_color_button_set_rgba (MateColorButton *color_button,
   color_button->priv->color.red = color->red * 65535;
   color_button->priv->color.green = color->green * 65535;
   color_button->priv->color.blue = color->blue * 65535;
+  color_button->priv->alpha = color->alpha * 65535;
 
   gtk_widget_queue_draw (color_button->priv->draw_area);
   
@@ -757,6 +758,7 @@ mate_color_button_get_rgba (MateColorButton *color_button,
   color->red = color_button->priv->color.red / 65535.;
   color->green = color_button->priv->color.green / 65535.;
   color->blue = color_button->priv->color.blue / 65535.;
+  color->alpha = color_button->priv->alpha / 65535.;
 }
 #endif
 
