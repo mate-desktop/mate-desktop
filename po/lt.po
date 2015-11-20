@@ -5,14 +5,15 @@
 # Translators:
 # Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2014
 # brennus <jonas.ska@gmail.com>, 2014
+# Moo, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-28 18:04+0200\n"
-"PO-Revision-Date: 2015-07-28 16:04+0000\n"
-"Last-Translator: infirit <infirit@gmail.com>\n"
-"Language-Team: Lithuanian (http://www.transifex.com/projects/p/MATE/language/lt/)\n"
+"POT-Creation-Date: 2015-11-06 15:16+0300\n"
+"PO-Revision-Date: 2015-11-06 12:19+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,9 +22,9 @@ msgstr ""
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:106
+#: ../mate-about/mate-about.c:96
 msgid "translator-credits"
-msgstr "Vertėjai"
+msgstr "Vertėjai\nAlgimantas Markevičius <margevicius.algimantas@gmail.com>\nAurimas Černius <aurisc4@gmail.com>\nRimas Kudelis <rq@akl.lt>\nŽygimantas Beručka <uid0@akl.lt>\nJustina Klingaitė <justina.klingaite@gmail.com>\nGintautas Miliauskas <gintas@akl.lt>\nTomas Kuliavas <tokul@users.sourceforge.net>\nGediminas Paulauskas <menesis@chatsubo.lt>\nMoo"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -33,25 +34,25 @@ msgstr "Apie MATE"
 msgid "Learn more about MATE"
 msgstr "Sužinokite daugiau apie MATE"
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE suteikia „Linux“ naudotojams patrauklią ir nuoseklią tradicinę darbo aplinką."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
-msgstr "MATE yra dauguma to, ką matote kompiuteryje – failų tvarkyklė, dokumentų žiūryklė, paveikslėlių rodymo programa, meniu punktai ir gausybė kitų programų."
+msgstr "MATE yra dauguma to, ką matote kompiuteryje – failų tvarkytuvė, dokumentų žiūryklė, paveikslėlių rodymo programa, meniu punktai ir gausybė kitų programų."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE – laisva, patogi ir stabili darbalaukio aplinka UNIX giminiškų operacinių sistemų grupei. "
 
-#: ../mate-about/mate-about.h:55
+#: ../mate-about/mate-about.h:54
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -59,13 +60,13 @@ msgid ""
 "assurance."
 msgstr "MATE yra GNOME 2 tęsinys. Šimtai žmonių prisidėjo prie GNOME kodo, pradėto 1997; dar daugiau prisidėjo kitokiais būdais – vertimais, dokumentacija ir kokybės priežiūra."
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 buvo populiariausia „Linux“ darbalaukio aplinka, tačiau nebeprieinama... MATE Jums suteiks tą patį!"
 
-#: ../mate-about/mate-about.h:62
+#: ../mate-about/mate-about.h:61
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -80,137 +81,137 @@ msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Nežinomas"
 
-#: ../libmate-desktop/mate-aboutdialog.c:180
+#: ../libmate-desktop/mate-aboutdialog.c:179
 msgid "Could not show link"
 msgstr "Nepavyko parodyti nuorodos"
 
-#: ../libmate-desktop/mate-aboutdialog.c:236
+#: ../libmate-desktop/mate-aboutdialog.c:235
 msgid "Program name"
 msgstr "Programos pavadinimas"
 
-#: ../libmate-desktop/mate-aboutdialog.c:237
+#: ../libmate-desktop/mate-aboutdialog.c:236
 msgid ""
 "The name of the program. If this is not set, it defaults to "
 "g_get_application_name()"
 msgstr "Programos pavadinimas. Jeigu nenustatyta, naudojamas g_get_application_name()"
 
-#: ../libmate-desktop/mate-aboutdialog.c:251
+#: ../libmate-desktop/mate-aboutdialog.c:250
 msgid "Program version"
 msgstr "Programos versija"
 
-#: ../libmate-desktop/mate-aboutdialog.c:252
+#: ../libmate-desktop/mate-aboutdialog.c:251
 msgid "The version of the program"
 msgstr "Programos versija"
 
-#: ../libmate-desktop/mate-aboutdialog.c:266
+#: ../libmate-desktop/mate-aboutdialog.c:265
 msgid "Copyright string"
 msgstr "Autorinės teisės"
 
-#: ../libmate-desktop/mate-aboutdialog.c:267
+#: ../libmate-desktop/mate-aboutdialog.c:266
 msgid "Copyright information for the program"
 msgstr "Autorinių teisių informacija apie programą"
 
-#: ../libmate-desktop/mate-aboutdialog.c:284
+#: ../libmate-desktop/mate-aboutdialog.c:283
 msgid "Comments string"
 msgstr "Paaiškinimai"
 
-#: ../libmate-desktop/mate-aboutdialog.c:285
+#: ../libmate-desktop/mate-aboutdialog.c:284
 msgid "Comments about the program"
 msgstr "Informacija apie programą"
 
-#: ../libmate-desktop/mate-aboutdialog.c:303
+#: ../libmate-desktop/mate-aboutdialog.c:302
 #: ../libmate-desktop/mate-aboutdialog.c:2161
 msgid "License"
 msgstr "Licencija"
 
-#: ../libmate-desktop/mate-aboutdialog.c:304
+#: ../libmate-desktop/mate-aboutdialog.c:303
 msgid "The license of the program"
 msgstr "Programos licencija"
 
-#: ../libmate-desktop/mate-aboutdialog.c:319
+#: ../libmate-desktop/mate-aboutdialog.c:318
 msgid "Website URL"
 msgstr "Svetainės adresas"
 
-#: ../libmate-desktop/mate-aboutdialog.c:320
+#: ../libmate-desktop/mate-aboutdialog.c:319
 msgid "The URL for the link to the website of the program"
 msgstr "Programos svetainės nuorodos adresas"
 
-#: ../libmate-desktop/mate-aboutdialog.c:335
+#: ../libmate-desktop/mate-aboutdialog.c:334
 msgid "Website label"
 msgstr "Programos etiketė"
 
-#: ../libmate-desktop/mate-aboutdialog.c:336
+#: ../libmate-desktop/mate-aboutdialog.c:335
 msgid ""
 "The label for the link to the website of the program. If this is not set, it"
 " defaults to the URL"
 msgstr "Programos svetainės nuorodos etiketė. Jeigu nenustatyta, naudojamas adresas"
 
-#: ../libmate-desktop/mate-aboutdialog.c:352
+#: ../libmate-desktop/mate-aboutdialog.c:351
 msgid "Authors"
 msgstr "Autoriai"
 
-#: ../libmate-desktop/mate-aboutdialog.c:353
+#: ../libmate-desktop/mate-aboutdialog.c:352
 msgid "List of authors of the program"
 msgstr "Programos autorių sąrašas"
 
-#: ../libmate-desktop/mate-aboutdialog.c:369
+#: ../libmate-desktop/mate-aboutdialog.c:368
 msgid "Documenters"
 msgstr "Dokumentuotojai"
 
-#: ../libmate-desktop/mate-aboutdialog.c:370
+#: ../libmate-desktop/mate-aboutdialog.c:369
 msgid "List of people documenting the program"
 msgstr "Sąrašas žmonių, dokumentavusių programą"
 
-#: ../libmate-desktop/mate-aboutdialog.c:386
+#: ../libmate-desktop/mate-aboutdialog.c:385
 msgid "Artists"
 msgstr "Menininkai"
 
-#: ../libmate-desktop/mate-aboutdialog.c:387
+#: ../libmate-desktop/mate-aboutdialog.c:386
 msgid "List of people who have contributed artwork to the program"
 msgstr "Sąrašas žmonių, kūrusių programos išvaizdą"
 
-#: ../libmate-desktop/mate-aboutdialog.c:404
+#: ../libmate-desktop/mate-aboutdialog.c:403
 msgid "Translator credits"
 msgstr "Vertėjai"
 
-#: ../libmate-desktop/mate-aboutdialog.c:405
+#: ../libmate-desktop/mate-aboutdialog.c:404
 msgid ""
 "Credits to the translators. This string should be marked as translatable"
 msgstr "Padėkos vertėjams. Ši eilutė turi būti pažymėta kaip verčiama"
 
-#: ../libmate-desktop/mate-aboutdialog.c:420
+#: ../libmate-desktop/mate-aboutdialog.c:419
 msgid "Logo"
 msgstr "Logotipas"
 
-#: ../libmate-desktop/mate-aboutdialog.c:421
+#: ../libmate-desktop/mate-aboutdialog.c:420
 msgid ""
 "A logo for the about box. If this is not set, it defaults to "
 "gtk_window_get_default_icon_list()"
 msgstr "„Apie“ lango logotipas. Jeigu nenustatyta, naudojama gtk_window_get_default_icon_list()"
 
-#: ../libmate-desktop/mate-aboutdialog.c:436
+#: ../libmate-desktop/mate-aboutdialog.c:435
 msgid "Logo Icon Name"
 msgstr "Logotipo piktogramos pavadinimas"
 
-#: ../libmate-desktop/mate-aboutdialog.c:437
+#: ../libmate-desktop/mate-aboutdialog.c:436
 msgid "A named icon to use as the logo for the about box."
 msgstr "Logotipas „apie“ langui"
 
-#: ../libmate-desktop/mate-aboutdialog.c:450
+#: ../libmate-desktop/mate-aboutdialog.c:449
 msgid "Wrap license"
 msgstr "Apgaubtoji licencija"
 
-#: ../libmate-desktop/mate-aboutdialog.c:451
+#: ../libmate-desktop/mate-aboutdialog.c:450
 msgid "Whether to wrap the license text."
 msgstr "Ar apgaubti licencijos tekstą"
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:544
+#: ../libmate-desktop/mate-aboutdialog.c:543
 msgid "C_redits"
 msgstr "_Padėkos"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:558
+#: ../libmate-desktop/mate-aboutdialog.c:557
 msgid "_License"
 msgstr "_Licencija"
 
@@ -308,11 +309,11 @@ msgstr "Esama dengiamumo vertė (0 perregimų, 65535 visiškai neskaidrių)"
 
 #: ../libmate-desktop/mate-colorsel.c:332
 msgid "HEX String"
-msgstr ""
+msgstr "Šešioliktainė eilutė"
 
 #: ../libmate-desktop/mate-colorsel.c:333
 msgid "The hexadecimal string of current color"
-msgstr ""
+msgstr "Esamos spalvos šešioliktainė eilutė"
 
 #: ../libmate-desktop/mate-colorsel.c:383
 msgid ""
@@ -541,27 +542,27 @@ msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "Nepavyko rasti terminalo, naudojamas xterm, nors jis gali neveikti"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:484
+#: ../libmate-desktop/mate-rr.c:460
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "nepavyko gauti ekrano resursų (CRTC, išvedimų, veiksenų)"
 
-#: ../libmate-desktop/mate-rr.c:504
+#: ../libmate-desktop/mate-rr.c:480
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "neapdorota X klaida gaunant ekrano dydžių ruožą"
 
-#: ../libmate-desktop/mate-rr.c:510
+#: ../libmate-desktop/mate-rr.c:486
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "nepavyko gauti ekrano dydžių ruožo"
 
-#: ../libmate-desktop/mate-rr.c:737
+#: ../libmate-desktop/mate-rr.c:709
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "nėra RANDR plėtinio"
 
-#: ../libmate-desktop/mate-rr.c:1295
+#: ../libmate-desktop/mate-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "nepavyko gauti informacijos apie išvestį %d"
@@ -569,19 +570,19 @@ msgstr "nepavyko gauti informacijos apie išvestį %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1737
+#: ../libmate-desktop/mate-rr.c:1748
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "prašoma pozicija/dydis CRTC %d už leistinos ribos: pozicija=(%d, %d), dydis=(%d, %d), maksimumas=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1771
+#: ../libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "nepavyko nustatyti CRTC %d konfigūracijos"
 
-#: ../libmate-desktop/mate-rr.c:1923
+#: ../libmate-desktop/mate-rr.c:1946
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "nepavyko gauti informacijos apie CRTC %d"
@@ -596,22 +597,22 @@ msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "jokia iš įrašytų ekranų konfigūracijų neatitiko aktyvios konfigūracijos"
 
-#: ../libmate-desktop/mate-rr-config.c:1501
+#: ../libmate-desktop/mate-rr-config.c:1486
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d nepavyksta išvesti %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1508
+#: ../libmate-desktop/mate-rr-config.c:1493
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "išvestis %s nepalaiko %dx%d@%dHz"
 
-#: ../libmate-desktop/mate-rr-config.c:1519
+#: ../libmate-desktop/mate-rr-config.c:1504
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d nepalaiko rotation=%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1533
+#: ../libmate-desktop/mate-rr-config.c:1518
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -620,29 +621,29 @@ msgid ""
 "existing rotation = %s, new rotation = %s"
 msgstr "išvestis %s neturi tų pačių parametrų, kaip kita klonuota išvestis:\nesamas režimas = %d, naujas režimas %d\nesamos koordinatės = (%d, %d), naujos koordinatės = (%d, %d)\nesamas pastūmimas = %s, naujas pastūmimas = %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1548
+#: ../libmate-desktop/mate-rr-config.c:1533
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "Nepavyksta klonuoti į išvestį %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1717
+#: ../libmate-desktop/mate-rr-config.c:1702
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Bandomi CRTC režimai %d\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1741
+#: ../libmate-desktop/mate-rr-config.c:1726
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr "CRTC %d: bandomas režimas %dx%d@%dHz, išvestis %dx%d@%dHz (pass %d)\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1788
+#: ../libmate-desktop/mate-rr-config.c:1773
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
 msgstr "Nepavyksta išvestims priskirti CRTC:\n%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1792
+#: ../libmate-desktop/mate-rr-config.c:1777
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -652,7 +653,7 @@ msgstr "Nė vienas iš pasirinktų režimų nesuderinamas su galimais režimais:
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1874
+#: ../libmate-desktop/mate-rr-config.c:1859
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -669,863 +670,869 @@ msgstr "prašomas virtualus dydis netelpa: prašoma=(%d, %d), minimalus=(%d, %d)
 msgid "Mirror Screens"
 msgstr "Dublikuoti ekranai"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
-msgstr "minimali trukmė milisekundėmis"
+msgstr "mažiausias intervalas milisekundėmis"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
 msgstr "Ignoruoti pasikartojančius _to paties_ klavišo paspaudimus, įvykstančius @delay millisekundžių intervale."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
 msgstr "Pikseliai per sekundę"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr "Kiek pikselių per sekundę turi būti įveikiama maksimaliu judėjimo greičiu."
+msgstr "Kiek taškų per sekundę turi būti įveikiama maksimaliu judėjimo greičiu."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
 msgid "How long to accelerate in milliseconds"
 msgstr "Akseleracijos laikas milisekundėmis"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
 msgstr "Per kiek milisekundžių pasiekiamas maksimalus žymeklio judėjimo greitis."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
 msgid "Initial delay in milliseconds"
-msgstr "Pradinė pauzė milisekundėmis"
+msgstr "Pradinė delsa milisekundėmis"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
 msgstr "Po kiek milisekundžių turi pradėti veikti pelės judėjimo klavišai."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
 msgid "Minimum interval in milliseconds"
-msgstr "Mažiausia trukmė milisekundėmis"
+msgstr "Mažiausias intervalas milisekundėmis"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
 msgstr "Nereaguoti į klavišo paspaudimą, jei jis paspaustas trumpiau nei @delay milisekundžių."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
 msgstr "Atjungti, jei du klavišai paspaudžiami vienu metu."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Beep when a modifier is pressed."
 msgstr "Pyptelėti, kai paspaustas specialus klavišas."
 
-#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
 msgstr "Paleisti pagalbinių technologijų programas"
 
-#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
 msgstr "Pagalbinių technologijų programų, kurios yra paleidžiamos pradedant darbą MATE aplinkoje, sąrašas."
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
 msgstr "Pageidaujama Mobility pagalbinių technologijų programa"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
 msgstr "Pageidaujama Mobility pagalbinių technologijų programa naudotina prisijungimui, meniu arba komandų eilutei."
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
 msgstr "Paleisti pageidaujamą Mobility pagalbinių technologijų programą"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
 msgstr "MATE paleidžia Mobility pagalbinių technologijų programą prisijungimo metu."
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
 msgstr "Pageidaujama Vizualių pagalbinių technologijų programa"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
 "Preferred Visual assistive technology application be used for login, menu, "
 "or command line."
 msgstr "Pageidaujama Vizualių pagalbinių technologijų programa naudotina prisijungimui, meniu ar komandų eilutei."
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
 msgstr "Paleisti pageidaujamą Vizualinių pagalbinių technologijų programą"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
 msgstr "MATE paleidžia Vizualių pagalbinių technologijų programą prisijungimo metu."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
 msgstr "Numatytoji naršyklė"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
-msgstr "Numatytoji naršyklė visiems adresams."
+msgstr "Numatytoji naršyklė, apdorojanti visus adresus."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
 msgid "Browser needs terminal"
 msgstr "Naršyklei reikia terminalo"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:4
 msgid "Whether the default browser needs a terminal to run."
 msgstr "Ar naršyklei veikti reikia terminalo."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:5
 msgid "Browser understands remote"
-msgstr "Naršyklė gali apdoroti nutolusius adresus"
+msgstr "Naršyklė gali apdoroti nuotolinius adresus"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
 msgid "Whether the default browser understands netscape remote."
-msgstr "Ar numatytoji naršyklė gali apdoroti netscape nutolusias komandas."
+msgstr "Ar numatytoji naršyklė gali apdoroti netscape nuotolines komandas."
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
 msgstr "Numatytasis kalendorius"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:2
 msgid "Default calendar application"
 msgstr "Numatytoji kalendoriaus programa"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:3
 msgid "Calendar needs terminal"
 msgstr "Kalendoriui reikia terminalo"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
 msgstr "Ar numatytajai kalendoriaus programai veikti reikia terminalo"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
 msgstr "Numatytosios užduotys"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
 msgid "Default tasks application"
 msgstr "Numatytoji užduočių programa"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:7
 msgid "Tasks needs terminal"
 msgstr "Užduotims reikia terminalo"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
 msgstr "Ar numatytajai užduočių programai veikti reikia terminalo"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
 msgstr "Terminalo programa"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr "Terminalo programa, naudotina paleidžiant jos reikalaujančias programas"
+msgstr "Terminalo programa, naudojama paleidžiant terminalo reikalaujančias programas."
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
-msgstr "Paleidimo parametrai"
+msgstr "Paleidimo argumentai"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr "Parametras, naudojamas paleisti programas terminale, nurodytame „exec“ raktu."
+msgstr "Argumentas, naudojamas paleisti programas terminale, nurodytame „exec“ raktu."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
 msgstr "Piešti darbalaukio foną"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.background.gschema.xml.in.h:2
 msgid "Have MATE draw the desktop background."
 msgstr "Ar MATE turi piešti darbalaukio foną."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
 msgstr "Rodyti darbalaukio piktogramas"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "Ar turi MATE failų tvarkyklė (Caja) piešti darbalaukio piktogramas."
+msgstr "Ar MATE failų tvarkytuvė (Caja) turi piešti darbalaukio piktogramas."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
-msgstr "Išblukinti foną keičiant"
+msgstr "Išblukinti foną, keičiant"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.background.gschema.xml.in.h:6
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
 msgstr "Jeigu įjungta, MATE pakeis ekrano foną su stelbimo efektu."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
-msgstr "Paveikslėlių parinktys"
+msgstr "Paveikslo parinktys"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.background.gschema.xml.in.h:8
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr "Nustato, kaip turi būti apdorojamas fono paveikslėlis, nurodytas wallpaper_filename raktu. Galimos reikšmės: „none“, „wallpaper“, „centered“, „scaled“, „stretched“, „zoom“ ir „spanned“."
+msgstr "Nustato, kaip turi būti apdorojamas fono paveikslėlis, nurodytas wallpaper_filename raktu. Galimos reikšmės: \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", \"spanned\"."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
-msgstr "Paveikslėlio failo pavadinimas"
+msgstr "Paveikslo failo pavadinimas"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
-msgstr "Atvaizdo failas darbalaukio fonui"
+msgstr "Failas, naudotinas fono paveikslui."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.background.gschema.xml.in.h:11
 msgid "Picture Opacity"
-msgstr "Paveikslėlio nepermatomumas"
+msgstr "Paveikslo nepermatomumas"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
-msgstr "Fono paveikslėlio nepermatomumas."
+msgstr "Foninio paveikslo nepermatomumas."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
-msgstr "Pagrindinė spalva"
+msgstr "Pirminė spalva"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
 msgstr "Kairė arba viršutinė spalva (kai naudojami persiliejimai), arba vientisa spalva."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
 msgstr "Antrinė spalva"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr "Dešinė arba apatinė spalva kai naudojami persiliejimai; vientisai spalvai nenaudojama."
+msgstr "Dešinė arba apatinė spalva, kai naudojami persiliejimai; vientisai spalvai nenaudojama."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
 msgstr "Spalvos šešėlių tipas"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.background.gschema.xml.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr "Kaip keisti fono spalvos šešėlį. Galimos reikšmės yra \"horizontal-gradient\", \"vertical-gradient\" ir \"solid\"."
 
-#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
-msgstr "Failų piktogramų stilius"
+msgstr "Failų piktogramų tema"
 
-#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr "Failų piktogramų stilius."
+msgstr "Tema, naudojama rodyti failų piktogramas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
-msgstr "Įjungti pritaikymą neįgaliesiems"
+msgstr "Įjungti prieinamumą"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr "Ar programos turėtų turėti pritaikymo neįgaliesiems palaikymą."
+msgstr "Ar programos turėtų turėti prieinamumo įrankių palaikymą."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
 msgstr "Įjungti animacijas"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr "Ar animacijos turi būti rodomos? Pastaba: šis raktas galioja visiems, jis keičia langų tvarkyklės, skydelio ir kitų aplinkos elementų elgseną."
+msgstr "Ar animacijos turi būti rodomos? Pastaba: šis raktas galioja visiems, jis keičia langų tvarkytuvės, skydelio ir kitų aplinkos elementų elgseną."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
 msgstr "Meniu atkabinami"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.interface.gschema.xml.in.h:6
 msgid "Whether menus should have a tearoff."
 msgstr "Ar meniu gali būti atkabinami."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Can Change Accels"
 msgstr "Gali keisti sparčiuosius klavišus"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid ""
 "Whether the user can dynamically type a new accelerator when positioned over"
 " an active menuitem."
 msgstr "Ar naudotojas gali dinamiškai įvesti naują trumpą klavišą, kai pažymėtas meniu punktas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Toolbar Style"
 msgstr "Įrankių juostos stilius"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
 msgstr "Įrankių juostos stilius. Galimos reikšmės yra „both“, „both_horiz“, „icons“ ir „text“."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Menus Have Icons"
 msgstr "Meniu turi piktogramas"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr "Ar meniu gali rodyti piktogramas šalia meniu įrašų."
+msgstr "Ar meniu, šalia meniu įrašų, gali rodyti piktogramas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Buttons Have Icons"
 msgstr "Mygtukai turi piktogramas"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr "Ar mygtukuose rodyti piktogramas šalia mygtuko užrašo."
+msgstr "Ar mygtukuose, šalia mygtuko užrašo, rodyti piktogramas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Menubar Detachable"
 msgstr "Meniu juosta atkabinama"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach menubars and move them around."
 msgstr "Ar naudotojas gali atkabinti meniu juostas ir jas stumdyti."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Detachable"
 msgstr "Įrankių juosta atkabinama"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Whether the user can detach toolbars and move them around."
 msgstr "Ar naudotojas gali atkabinti įrankių juostas ir jas stumdyti."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Toolbar Icon Size"
 msgstr "Įrankių juostos piktogramų dydis"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:20
+#: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr "Piktogramų įrankių juostose dydis: arba „small-toolbar“, arba „large-toolbar“."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:21
+#: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink"
 msgstr "Mirksintis žymeklis"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:22
+#: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Whether the cursor should blink."
 msgstr "Ar žymeklis turi mirksėti."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:23
+#: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Cursor Blink Time"
 msgstr "Žymeklio mirksėjimo laikas"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:24
+#: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Length of the cursor blink cycle, in milliseconds."
 msgstr "Žymeklio mirksėjimo ciklo trukmė milisekundėmis."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:25
+#: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Icon Theme"
-msgstr "Piktogramų stilius"
+msgstr "Piktogramų tema"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:26
+#: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Icon theme to use for the panel, caja etc."
-msgstr "Piktogramų stilius, naudotinas skydeliui, failų naršyklei ir t.t."
+msgstr "Piktogramų tema, naudotina skydeliui, failų tvarkytuvei ir t.t."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:27
+#: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
-msgstr "Gtk+ stilius"
+msgstr "Gtk+ tema"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:28
+#: ../schemas/org.mate.interface.gschema.xml.in.h:28
 msgid "Basename of the default theme used by gtk+."
-msgstr "Gtk+ naudojamo numatytojo stiliaus bazinis pavadinimas."
+msgstr "Gtk+ naudojamos numatytosios temos bazinis pavadinimas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:29
+#: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "List of symbolic names and color equivalents"
 msgstr "Simbolinių pavadinimų ir jų spalvų atitikmenų sąrašas"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:30
+#: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
-msgstr "\\n atskirtas „name:color“ sąrašas, apibūdintas „gtk-color-scheme“ parametre"
+msgstr "\\n atskirtas „name:color“ sąrašas, apibūdintas „gtk-color-scheme“ nustatyme"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:31
+#: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "Default font"
 msgstr "Numatytasis šriftas"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:32
+#: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the default font used by gtk+."
 msgstr "Numatytojo gtk+ naudojamo šrifto pavadinimas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:33
+#: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Preedit Style"
 msgstr "GTK IM Preedit stilius"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:34
+#: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr "GTK+ įvedimo metodo, kurį naudos gtk+ su Preedit stiliumi, pavadinimas."
+msgstr "GTK+ įvedimo metodo, kurį naudos gtk+ su Preedit Stiliumi, pavadinimas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:35
+#: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Status Style"
 msgstr "GTK IM būsenos stilius"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:36
+#: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr "GTK+ įvedimo metodo, kurį naudos gtk+ su Būsenos stiliumi, pavadinimas."
+msgstr "GTK+ įvedimo metodo, kurį naudos gtk+ su Būsenos Stiliumi, pavadinimas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:37
+#: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "GTK IM Module"
 msgstr "GTK IM modulis"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:38
+#: ../schemas/org.mate.interface.gschema.xml.in.h:38
 msgid "Name of the input method module used by GTK+."
 msgstr "GTK+ įvedimo metodo modulio pavadinimas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
+#: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "Naudoti GTK3 antraštės juostą"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
+#: ../schemas/org.mate.interface.gschema.xml.in.h:40
 msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr ""
+msgstr "Ar tokie įtaisyti GTK+ dialogai, kaip failų pasirinkimo, spalvos pasirinkimo ar šrifto pasirinkimo, naudos viršuje antraštės juostą, kad rodytų veiksmų valdiklius ar veiksmų sritį apačioje. Šis nustatymas neįtakoja tinkintų dialogų, tiesiogiai naudojančių GtkDialog, ar pranešimų dialogų."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
+#: ../schemas/org.mate.interface.gschema.xml.in.h:41
+msgid "Use GTK3 overlay scrolling"
+msgstr "Naudoti GTK3 perdengiamą slinkimą"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:42
+msgid ""
+"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"scrolling hides and reduces the size of the scrollbar until it gets focus."
+msgstr "Ar įtaisyti GTK+ slenkami langai naudos perdengiamą slinkimą. Perdengiamas slinkimas slepia ir sumažina slinkimo juostų dydį tol, kol jos nėra fokusuojamos."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "Įjungti Gtk priemonių komplekto animacijas"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
+#: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "Ar įjungti priemonių komplekto animacijas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
+#: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Document font"
-msgstr "Dokumentų šriftas"
+msgstr "Dokumento šriftas"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
+#: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid "Name of the default font used for reading documents."
 msgstr "Numatytojo dokumentų skaitymui naudojamo šrifto pavadinimas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
+#: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Monospace font"
 msgstr "Lygiaplotis šriftas"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:46
+#: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr "Lygiapločio (turinčio vienodą raidžių plotį) šrifto, naudojamo terminaluose bei kitose vietose, pavadinimas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:47
+#: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Use Custom Font"
-msgstr "Naudoti pasirinktinį šriftą"
+msgstr "Naudoti naudotojo parinktą šriftą"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:48
+#: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Ar su gtk+ programomis naudoti vartotojo parinktą šriftą."
+msgstr "Ar su gtk+ programomis naudoti naudotojo parinktą šriftą."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:49
+#: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Status Bar on Right"
 msgstr "Būklės juosta dešinėje"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:50
+#: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid "Whether to display a status bar meter on the right."
 msgstr "Ar rodyti būsenos juostą dešinėje pusėje."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:51
+#: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Module for GtkFileChooser"
 msgstr "GtkFileChooser modulis"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:52
+#: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
 msgstr "Modulis naudojamas kaip failų sistemos modelis GtkFileChooser valdymo elementui. Galimos reikšmės yra „gio“ ir „gtk+“."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:53
+#: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Menubar accelerator"
 msgstr "Meniu juostos spartusis klavišas"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:54
+#: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid "Keyboard shortcut to open the menu bars."
 msgstr "Klavišų susiejimas, atveriantis meniu juostas."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:55
+#: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Input Methods' menu"
 msgstr "Rodyti meniu „Įvesties metodai“"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:56
+#: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr "Ar įrašų kontekstiniuose meniu ir teksto rodiniuose turėtų pasiūlyti pakeisti įvesties metodą."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:57
+#: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Show the 'Unicode Control Character' menu"
 msgstr "Rodyti meniu „Unicode valdymo simboliai“"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:58
+#: ../schemas/org.mate.interface.gschema.xml.in.h:60
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr "Ar įrašų kontekstiniuose meniu ir teksto rodiniuose turėtų pasiūlyti įterpti valdymo simbolius."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:59
+#: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Titlebar layout of GTK3 client-side decorated windows"
 msgstr "GTK3 kliento dekoruotų langų antraštės juostos išdėstymas"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:60
+#: ../schemas/org.mate.interface.gschema.xml.in.h:62
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
-msgstr "Mia numatoma, kokie mygtukai turėtų būti rodomi kliento dekoruojamiems langams, ir ar jie turėtų būti kairėje, ar dešinėje, Daugiau informacijos https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout."
+msgstr "Čia numatoma, kokie mygtukai turėtų būti rodomi kliento dekoruojamiems langams, ir ar jie turėtų būti kairėje, ar dešinėje, Daugiau informacijos https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:61
+#: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "Rodyti mnemoniką tik tuomet, kai yra nuspaustas Alt klavišas"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:62
+#: ../schemas/org.mate.interface.gschema.xml.in.h:64
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr ""
+msgstr "Ar, naudotojui nuspaudus Alt klavišą, mnemonika turėtų būti automatiškai rodoma ir slėpiama"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
 msgstr "Išjungti komandinę eilutę"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr "Užkirsti kelią naudotojui pasiekti terminalą arba nurodyti vykdomą komandinę eilutę. Pvz., naudojant šį nustatymą priėjimas prie skydelio dialogo „Paleisti programą“ bus uždraustas."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
 msgstr "Išjungti failų išsaugojimą diske"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
 msgstr "Užkirsti kelią naudotojui išsaugoti failus į diską. Pvz., naudojant šį nustatymą visose programose dialogas „Išsaugoti kaip“ bus neprieinamas."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
 msgstr "Išjungti spausdinimą"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
 msgstr "Užkirsti kelią naudotojui spausdinti. Pvz., naudojant šį nustatymą, visose programose dialogas „Spausdinti“ bus neprieinamas."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
-msgstr "Išjungti spausdinimo diegimą"
+msgstr "Išjungti spausdinimo sąranką"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr "Užkirsti kelią naudotojui keisti spausdinimo nustatymus. Pvz., naudojant šį nustatymą visose programose langas „Spausdinimo nustatymai“ bus neprieinamas."
+msgstr "Užkirsti kelią naudotojui keisti spausdinimo nustatymus. Pvz., naudojant šį nustatymą visose programose dialogas „Spausdinimo nustatymai“ bus neprieinamas."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
 msgstr "Išjungti naudotojo perjungimą"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:10
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
 msgstr "Neleisti naudotojui persijungti prie kito abonento, kol jo sesija aktyvi."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
 msgstr "Išjungti ekrano užraktą"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
-msgstr "Neleisti naudotojui užrakinti jo ekrano."
+msgstr "Neleisti naudotojui užrakinti savo ekrano."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:13
 msgid "Disable URL and MIME type handlers"
 msgstr "Išjungti URL ir MIME tipo dorokles"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr "Neleisti vykdyti URL ar MIME tipų apdorojimo programų."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
-msgstr "Atjungia temų nustatymus"
+msgstr "Išjungia temų nustatymus"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:16
 msgid "Prevent the user from changing theme settings."
 msgstr "Neleisti naudotojui keisti temų nustatymų."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:17
 msgid "Disable log out"
-msgstr ""
+msgstr "Išjungti atsijungimą iš Mate"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:18
 msgid "Prevent the user from logging out."
-msgstr ""
+msgstr "Neleisti naudotojui atsijungti."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
 msgstr "galimos reikšmės yra „on“, „off“ ir „custom“."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:2
 msgid "Keyboard Bell Custom Filename"
-msgstr "Klaviatūros varpelio pasirinktinis failas"
+msgstr "Klaviatūros signalo pasirinktinis failas"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:3
 msgid "File name of the bell sound to be played."
-msgstr "Skambučio garso signalo failo vardas."
+msgstr "Signalo garso signalo failo pavadinimas."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:4
 msgid "Remember NumLock state"
 msgstr "Atsiminti NumLock būseną"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
 msgstr "Kai reikšmė teigiama, MATE atsimins NumLock LED būseną tarp seansų."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
 msgstr "NumLock būsena"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:7
 msgid "The remembered state of the NumLock LED."
 msgstr "Įsiminta NumLock LED būsena."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:1
 msgid "Mouse button orientation"
 msgstr "Pelės mygtukų padėtis"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "Kairiarankiams skirtoje pelėje sukeisti kairį ir dešinį pelės klavišą vietomis."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Single Click"
-msgstr "Paprastas _spustelėjimas:"
+msgstr "Vienkartis spragtelėjimas"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:4
-msgid "Single click to open icons."
-msgstr "Atverti elementus _vienu pelės mygtuko spustelėjimu"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
 msgstr "Pelės greitėjimo koeficientas. Numatytoji sistemos reikšmė yra -1."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
-msgstr "Traukos riba"
+msgstr "Traukos slenkstis"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:6
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
 msgstr "Atstumas pikseliais, kurį turi įveikti pelės žymeklis, kad įsijungtų greito pelės judėjimo veiksena. Sistemos numatytoji reikšmė yra -1."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
 msgstr "Tempimo slenkstis"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:8
 msgid "Distance before a drag is started."
 msgstr "Atstumas, po kurio prasideda tempimas."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr "Dvigubo spustelėjimo trukmė"
+msgstr "Dvikarčio spragtelėjimo laikas"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
-msgstr "Dvigubo spragtelėjimo trukmė."
+msgstr "Dvikarčio spragtelėjimo trukmė."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:11
 msgid "Middle button emulation"
 msgstr "Vidurinio mygtuko emuliavimas"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:12
 msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
 msgstr "Leidžia vidurinio pelės mygtuko emuliavimą, spaudžiant kairįjį ir dešinįjį pelės mygtukus kartu."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
 msgstr "Rasti žymeklį"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
 msgstr "Parodo dabartinę žymeklio padėtį, jei paspaudžiamas ir atleidžiamas Control klavišas."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor font"
 msgstr "Žymeklio šriftas"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
-msgstr "Žymeklio šrifto pavadinimas. Nenustačius, naudojamas numatytasis šriftas. Reikšmė perduodama X serveriui sesijos pradžioje, jos pakeitimas įsigalios tik kitą kartą prisijungus."
+msgstr "Žymeklio šrifto pavadinimas. Nenustačius, naudojamas numatytasis šriftas. Reikšmė perduodama X serveriui seanso pradžioje, jos pakeitimas įsigalios tik kitą kartą prisijungus."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "Žymeklio tema"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
 msgstr "Žymeklio temos pavadinimas. Naudojama tik tų Xserverių, kurie palaiko Xcursor; tai pvz., XFree86 4.3 ir naujesni."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
 msgid "Cursor size"
 msgstr "Žymeklio dydis"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:21
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
 msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Žymeklio kursoriaus, nurodyto cursor_theme rakte, dydis."
+msgstr "Žymeklio, nurodyto cursor_theme rakte, dydis."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.sound.gschema.xml.in.h:1
 msgid "Default mixer device"
-msgstr "Numatytasis mikšerio įrenginys"
+msgstr "Numatytasis maišiklio įrenginys"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.sound.gschema.xml.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr "Numatytasis mikšerio įrenginys naudojamas multimedijos klavišų susiejimų."
+msgstr "Numatytasis maišiklio įrenginys, naudojamas multimedijos klavišų susiejimų."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.sound.gschema.xml.in.h:3
 msgid "Default mixer tracks"
-msgstr "Numatytieji mikšerio takeliai"
+msgstr "Numatytieji maišiklio takeliai"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.sound.gschema.xml.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr "Numatytieji mikšerio takeliai naudojami multimedijos klavišų susiejimų."
+msgstr "Numatytieji maišiklio takeliai, naudojami multimedijos klavišų susiejimų."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
 msgstr "Įjungti ESD"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
 msgstr "Naudoti garsų serverį."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
 msgstr "Įvykių garsai"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.sound.gschema.xml.in.h:8
 msgid "Whether to play sounds on user events."
 msgstr "Ar leisti garsus, susietus su naudotojo atliekamais veiksmais"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
-msgstr "Garso temos pavadinimas"
+msgstr "Garsų temos pavadinimas"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.sound.gschema.xml.in.h:10
 msgid "The XDG sound theme to use for event sounds."
 msgstr "XDG garsų tema įvykių garsams."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.sound.gschema.xml.in.h:11
 msgid "Input feedback sounds"
 msgstr "Įvedimo grįžtamojo ryšio garsai"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.sound.gschema.xml.in.h:12
 msgid "Whether to play sounds on input events."
 msgstr "Ar leisti garsus, susietus su įvedimo įvykiais."
 
-#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
-msgstr "Maksimalus miniatiūrų amžius kaupe dienomis.  Nustatykite -1, jei norite išjungti kaupo valymą."
+msgstr "Maksimalus miniatiūrų amžius podėlyje dienomis.  Nustatykite -1, jei norite išjungti podėlio valymą."
 
-#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr "Maksimalus miniatiūrų kaupo dydis megabaitais.  Nustatykite -1, jei norite išjungti kaupo valymą."
+msgstr "Maksimalus miniatiūrų podėlio dydis megabaitais.  Nustatykite -1, jei norite išjungti podėlio valymą."
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
-msgstr "Atjungti visus išorinius miniatiūrų generatorius"
+msgstr "Išjungti visus išorinius miniatiūrų generatorius"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:2
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
 msgstr "Nustatykite teigiamai, jei norite blokuoti visas išorines miniatiūrų generavimo peržiūros programas, nepriklausomai nuo to, ar jos yra atskirai įjungtos/išjungtos."
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
 msgstr "MIME tipų sąrašas, kuriems bus išjungtos išorinės miniatiūrų kūrimo programos"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:4
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
 msgstr "Miniatiūros nebus kuriamos failams, kurių MIME tipas yra šiame sąraše"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"
-msgstr "Spausdinimo laikas"
+msgstr "Teksto rinkimo laikas"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr "Po kiek minučių teksto vedimo turi prasidėti spausdinimo pertraukėlės."
+msgstr "Po kiek minučių teksto rinkimo, turi prasidėti spausdinimo pertraukėlės."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"
 msgstr "Pertraukos laikas"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
 msgid "Number of minutes that the typing break should last."
-msgstr "Spausdinimo pertraukėlės trukmė minutėmis."
+msgstr "Teksto rinkimo pertraukėlės trukmė, minutėmis."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:5
 msgid "Allow postponing of breaks"
 msgstr "Leisti atidėti pertraukėles"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
-msgstr "Ar spausdinimo pertraukėlės ekranas gali būti atidėtas."
+msgstr "Ar teksto rinkimo pertraukėlės ekranas gali būti atidėtas."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
 msgid "Whether or not keyboard locking is enabled"
-msgstr "Ar klaviatūros užraktas įjungtas."
+msgstr "Ar naudojamas klaviatūros blokavimas"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:8
 msgid "Whether or not keyboard locking is enabled."
-msgstr "Ar klaviatūros užraktas įjungtas."
+msgstr "Ar naudojamas klaviatūros blokavimas."
 
-#: ../tools/mate-color-select.c:62
+#: ../tools/mate-color-select.c:63
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
 msgstr "MATE spalvų pasirinkimas"
@@ -1545,11 +1552,3 @@ msgstr "Perkelti MATE 1.4 nustatymus"
 #: ../tools/mate-conf-import.desktop.in.in.h:2
 msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
 msgstr "Įrankis perkelti MATE 1.4 nustatymus į MATE 1.6"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:1
-msgid "Help"
-msgstr ""
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:2
-msgid "Get help with MATE"
-msgstr ""

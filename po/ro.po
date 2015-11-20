@@ -5,15 +5,16 @@
 # Translators:
 # corneliu.e <corneliueva@yahoo.com>, 2014
 # Daniel <danny34ever@yahoo.com>, 2015
+# Jobava <jobaval10n@gmail.com>, 2015
 # sidro <slacky2005@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-28 18:04+0200\n"
-"PO-Revision-Date: 2015-07-28 16:04+0000\n"
-"Last-Translator: infirit <infirit@gmail.com>\n"
-"Language-Team: Romanian (http://www.transifex.com/projects/p/MATE/language/ro/)\n"
+"POT-Creation-Date: 2015-11-06 15:16+0300\n"
+"PO-Revision-Date: 2015-11-12 11:47+0000\n"
+"Last-Translator: Daniel <danny34ever@yahoo.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/mate/MATE/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,9 +23,9 @@ msgstr ""
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:106
+#: ../mate-about/mate-about.c:96
 msgid "translator-credits"
-msgstr "traduceri - mulțumiri"
+msgstr "Daniel Alămiță <danny3@tutanota.com>"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -34,44 +35,44 @@ msgstr "Despre MATE"
 msgid "Learn more about MATE"
 msgstr "Aflați mai multe despre MATE"
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
-msgstr ""
+msgstr "MATE oferă un desktop intuitiv și atractiv utilizatorilor de Linux care folosesc metafore tradiționale."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
-msgstr ""
+msgstr "MATE include cea mai mare parte din ce vedeți pe calculator, inclusiv un administrator de fișiere, vizualizator de documente, vizualizator de imagini, meniuri și multe aplicații."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
-msgstr ""
+msgstr "MATE este un mediu desktop liber, ușor de utilizat, stabil și accesibil pentru familia de sisteme de operare asemănătoare cu Unix."
 
-#: ../mate-about/mate-about.h:55
+#: ../mate-about/mate-about.h:54
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
-msgstr ""
+msgstr "MATE este continuarea lui GNOME 2. Sute de oameni au contribuit cod la GNOME de când a început în 1997; mulți mai mulți au contribuit pe alte căi importante, incluzând traduceri, documentație și asigurarea calității."
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
-msgstr ""
+msgstr "GNOME 2 a fost cea mai populară interfață pentru Linux, dar nu mai este disponibilă... MATE este aici să vă ofere aceeași interfață!"
 
-#: ../mate-about/mate-about.h:62
+#: ../mate-about/mate-about.h:61
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
-msgstr ""
+msgstr "Numele „MATE” vine de la yerba maté, o specie de plantă nativă în America de Sud subtropicală. Frunzele ei conțin cafeină și sunt folosite pentru a face infuzii și o băutură numită mate."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -81,137 +82,137 @@ msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: ../libmate-desktop/mate-aboutdialog.c:180
+#: ../libmate-desktop/mate-aboutdialog.c:179
 msgid "Could not show link"
-msgstr ""
+msgstr "Legătura nu poate fi afișată"
 
-#: ../libmate-desktop/mate-aboutdialog.c:236
+#: ../libmate-desktop/mate-aboutdialog.c:235
 msgid "Program name"
 msgstr "Nume program"
 
-#: ../libmate-desktop/mate-aboutdialog.c:237
+#: ../libmate-desktop/mate-aboutdialog.c:236
 msgid ""
 "The name of the program. If this is not set, it defaults to "
 "g_get_application_name()"
-msgstr ""
+msgstr "Numele programului. Dacă nu este definit, vine implicit din to g_get_application_name()"
 
-#: ../libmate-desktop/mate-aboutdialog.c:251
+#: ../libmate-desktop/mate-aboutdialog.c:250
 msgid "Program version"
 msgstr "Versiune program"
 
-#: ../libmate-desktop/mate-aboutdialog.c:252
+#: ../libmate-desktop/mate-aboutdialog.c:251
 msgid "The version of the program"
 msgstr "Versiunea programului"
 
-#: ../libmate-desktop/mate-aboutdialog.c:266
+#: ../libmate-desktop/mate-aboutdialog.c:265
 msgid "Copyright string"
-msgstr ""
+msgstr "Text drept de autor"
 
-#: ../libmate-desktop/mate-aboutdialog.c:267
+#: ../libmate-desktop/mate-aboutdialog.c:266
 msgid "Copyright information for the program"
-msgstr ""
+msgstr "Detalii despre drepturile de autor pentru acest program"
+
+#: ../libmate-desktop/mate-aboutdialog.c:283
+msgid "Comments string"
+msgstr "Text comentarii"
 
 #: ../libmate-desktop/mate-aboutdialog.c:284
-msgid "Comments string"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:285
 msgid "Comments about the program"
-msgstr ""
+msgstr "Comentarii despre program"
 
-#: ../libmate-desktop/mate-aboutdialog.c:303
+#: ../libmate-desktop/mate-aboutdialog.c:302
 #: ../libmate-desktop/mate-aboutdialog.c:2161
 msgid "License"
 msgstr "Licență"
 
-#: ../libmate-desktop/mate-aboutdialog.c:304
+#: ../libmate-desktop/mate-aboutdialog.c:303
 msgid "The license of the program"
 msgstr "Licența programului"
 
-#: ../libmate-desktop/mate-aboutdialog.c:319
+#: ../libmate-desktop/mate-aboutdialog.c:318
 msgid "Website URL"
 msgstr "URL site web"
 
-#: ../libmate-desktop/mate-aboutdialog.c:320
+#: ../libmate-desktop/mate-aboutdialog.c:319
 msgid "The URL for the link to the website of the program"
-msgstr ""
+msgstr "Adresa URL pentru legătura către site-ul web al programului"
+
+#: ../libmate-desktop/mate-aboutdialog.c:334
+msgid "Website label"
+msgstr "Etichetă site web"
 
 #: ../libmate-desktop/mate-aboutdialog.c:335
-msgid "Website label"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:336
 msgid ""
 "The label for the link to the website of the program. If this is not set, it"
 " defaults to the URL"
-msgstr ""
+msgstr "Eticheta legăturii către saitul web al programului. Dacă aceasta nu e definită, va fi implicit URL-ul"
 
-#: ../libmate-desktop/mate-aboutdialog.c:352
+#: ../libmate-desktop/mate-aboutdialog.c:351
 msgid "Authors"
 msgstr "Autori"
 
-#: ../libmate-desktop/mate-aboutdialog.c:353
+#: ../libmate-desktop/mate-aboutdialog.c:352
 msgid "List of authors of the program"
-msgstr ""
+msgstr "Lista autorilor programului"
+
+#: ../libmate-desktop/mate-aboutdialog.c:368
+msgid "Documenters"
+msgstr "Documentatori"
 
 #: ../libmate-desktop/mate-aboutdialog.c:369
-msgid "Documenters"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:370
 msgid "List of people documenting the program"
-msgstr ""
+msgstr "Lista persoanelor ce au documentat programul"
 
-#: ../libmate-desktop/mate-aboutdialog.c:386
+#: ../libmate-desktop/mate-aboutdialog.c:385
 msgid "Artists"
 msgstr "Artiști"
 
-#: ../libmate-desktop/mate-aboutdialog.c:387
+#: ../libmate-desktop/mate-aboutdialog.c:386
 msgid "List of people who have contributed artwork to the program"
-msgstr ""
+msgstr "Lista persoanelor ce au contribuit cu creații artistice pentru program"
+
+#: ../libmate-desktop/mate-aboutdialog.c:403
+msgid "Translator credits"
+msgstr "Echipa de traducători"
 
 #: ../libmate-desktop/mate-aboutdialog.c:404
-msgid "Translator credits"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:405
 msgid ""
 "Credits to the translators. This string should be marked as translatable"
-msgstr ""
+msgstr "Echipa de traducători. Acest text ar trebui marcat pentru traducere"
 
-#: ../libmate-desktop/mate-aboutdialog.c:420
+#: ../libmate-desktop/mate-aboutdialog.c:419
 msgid "Logo"
 msgstr "Siglă"
 
-#: ../libmate-desktop/mate-aboutdialog.c:421
+#: ../libmate-desktop/mate-aboutdialog.c:420
 msgid ""
 "A logo for the about box. If this is not set, it defaults to "
 "gtk_window_get_default_icon_list()"
-msgstr ""
+msgstr "O siglă pentru căsuța despre. Dacă nu este definită, va fi aleasă implicit de gtk_window_get_default_icon_list()"
 
-#: ../libmate-desktop/mate-aboutdialog.c:436
+#: ../libmate-desktop/mate-aboutdialog.c:435
 msgid "Logo Icon Name"
 msgstr "Nume pictogramă siglă"
 
-#: ../libmate-desktop/mate-aboutdialog.c:437
+#: ../libmate-desktop/mate-aboutdialog.c:436
 msgid "A named icon to use as the logo for the about box."
-msgstr ""
+msgstr "O pictogramă denumită de utilizat pentru fereastra despre."
+
+#: ../libmate-desktop/mate-aboutdialog.c:449
+msgid "Wrap license"
+msgstr "Încadrează licența"
 
 #: ../libmate-desktop/mate-aboutdialog.c:450
-msgid "Wrap license"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:451
 msgid "Whether to wrap the license text."
-msgstr ""
+msgstr "Specifică dacă textul licenței să fie încadrat."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:544
+#: ../libmate-desktop/mate-aboutdialog.c:543
 msgid "C_redits"
-msgstr ""
+msgstr "_Mulțumiri"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:558
+#: ../libmate-desktop/mate-aboutdialog.c:557
 msgid "_License"
 msgstr "_Licență"
 
@@ -222,7 +223,7 @@ msgstr "Despre %s"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2085
 msgid "Credits"
-msgstr ""
+msgstr "Mulțumiri"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2113
 msgid "Written by"
@@ -246,7 +247,7 @@ msgstr "Folosește alpha"
 
 #: ../libmate-desktop/mate-colorbutton.c:155
 msgid "Whether or not to give the color an alpha value"
-msgstr ""
+msgstr "Dacă să fie dată culorii o valoare alfa"
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
@@ -254,12 +255,12 @@ msgstr "Titlu"
 
 #: ../libmate-desktop/mate-colorbutton.c:170
 msgid "The title of the color selection dialog"
-msgstr ""
+msgstr "Titlul dialogului de selecție a culorii"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
 #: ../libmate-desktop/mate-colorbutton.c:470
 msgid "Pick a Color"
-msgstr "Alege o culoare"
+msgstr "Alegeți o culoare"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
 #: ../libmate-desktop/mate-colorsel.c:318
@@ -277,27 +278,27 @@ msgstr "Alpha curent"
 
 #: ../libmate-desktop/mate-colorbutton.c:200
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr ""
+msgstr "Valoarea selectată a opacității (0 complet transparentă, 65535 complet opacă)"
 
 #: ../libmate-desktop/mate-colorbutton.c:356
 msgid "Received invalid color data\n"
-msgstr ""
+msgstr "S-au primit date invalide despre culoarea\n"
 
 #: ../libmate-desktop/mate-colorsel.c:304
 msgid "Has Opacity Control"
-msgstr ""
+msgstr "Are control opacitate"
 
 #: ../libmate-desktop/mate-colorsel.c:305
 msgid "Whether the color selector should allow setting opacity"
-msgstr ""
+msgstr "Dacă selectorul de culoare să permită definirea opacității"
 
 #: ../libmate-desktop/mate-colorsel.c:311
 msgid "Has palette"
-msgstr ""
+msgstr "Are paletă"
 
 #: ../libmate-desktop/mate-colorsel.c:312
 msgid "Whether a palette should be used"
-msgstr ""
+msgstr "Dacă să fie utilizată o paletă"
 
 #: ../libmate-desktop/mate-colorsel.c:319
 msgid "The current color"
@@ -305,35 +306,35 @@ msgstr "Culoarea curentă"
 
 #: ../libmate-desktop/mate-colorsel.c:326
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr ""
+msgstr "Valoarea curentă a opacității (0 transparență maximă, 65535 opacitate maximă)"
 
 #: ../libmate-desktop/mate-colorsel.c:332
 msgid "HEX String"
-msgstr ""
+msgstr "Șir de caractere hexazecimal"
 
 #: ../libmate-desktop/mate-colorsel.c:333
 msgid "The hexadecimal string of current color"
-msgstr ""
+msgstr "Șirul de caractere hexazecimal al culorii curente"
 
 #: ../libmate-desktop/mate-colorsel.c:383
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
-msgstr ""
+msgstr "Selectați culoarea pe care o doriți din cercul exterior. Selectați luminozitatea culorii utilizând triunghiul interior."
 
 #: ../libmate-desktop/mate-colorsel.c:407
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
-msgstr ""
+msgstr "Dați clic pe pipetă, apoi dați clic pe o culoare oriunde pe ecran pentru a selecta acea culoare."
 
 #: ../libmate-desktop/mate-colorsel.c:416
 msgid "_Hue:"
-msgstr ""
+msgstr "_Nuanță:"
 
 #: ../libmate-desktop/mate-colorsel.c:417
 msgid "Position on the color wheel."
-msgstr ""
+msgstr "Poziția pe cercul culorilor."
 
 #: ../libmate-desktop/mate-colorsel.c:419
 msgid "_Saturation:"
@@ -341,7 +342,7 @@ msgstr "_Saturație:"
 
 #: ../libmate-desktop/mate-colorsel.c:420
 msgid "\"Deepness\" of the color."
-msgstr "„Adâncime” a culorii."
+msgstr "„Adâncimea” culorii."
 
 #: ../libmate-desktop/mate-colorsel.c:421
 msgid "_Value:"
@@ -349,7 +350,7 @@ msgstr "_Valoare:"
 
 #: ../libmate-desktop/mate-colorsel.c:422
 msgid "Brightness of the color."
-msgstr "Luminozitate a culorii"
+msgstr "Luminozitatea culorii"
 
 #: ../libmate-desktop/mate-colorsel.c:423
 msgid "_Red:"
@@ -357,7 +358,7 @@ msgstr "_Roșu:"
 
 #: ../libmate-desktop/mate-colorsel.c:424
 msgid "Amount of red light in the color."
-msgstr "Cantitate de lumină roșie în culoare."
+msgstr "Cantitatea de lumină roșie în culoare."
 
 #: ../libmate-desktop/mate-colorsel.c:425
 msgid "_Green:"
@@ -365,7 +366,7 @@ msgstr "_Verde:"
 
 #: ../libmate-desktop/mate-colorsel.c:426
 msgid "Amount of green light in the color."
-msgstr "Cantitate de verde în culoare"
+msgstr "Cantitatea de lumină verde în culoare"
 
 #: ../libmate-desktop/mate-colorsel.c:427
 msgid "_Blue:"
@@ -373,7 +374,7 @@ msgstr "Al_bastru:"
 
 #: ../libmate-desktop/mate-colorsel.c:428
 msgid "Amount of blue light in the color."
-msgstr "Cantitate de albastru în culoare."
+msgstr "Cantitatea de lumină albastră în culoare."
 
 #: ../libmate-desktop/mate-colorsel.c:431
 msgid "Op_acity:"
@@ -392,7 +393,7 @@ msgstr "_Nume culoare:"
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
-msgstr ""
+msgstr "Puteți introduce o valoare hexazecimală a culorii ca în HTML, sau un nume de culoare în engleză, precum „orange” în această intrare."
 
 #: ../libmate-desktop/mate-colorsel.c:499
 msgid "_Palette:"
@@ -407,19 +408,19 @@ msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
-msgstr ""
+msgstr "Culoarea selectată anterior, pentru a o compara cu culoarea pe care o selectați acum. Puteți trage această culoare într-o intrare din paletă, sau o puteți selecta ca și culoare curentă trăgând-o în cealaltă mostră de lângă."
 
 #: ../libmate-desktop/mate-colorsel.c:1030
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
-msgstr ""
+msgstr "Culoarea pe care ați ales-o. Puteți trage această culoare întro intrare din paletă pentru a o salva pentru utilizarea pe viitor."
 
 #: ../libmate-desktop/mate-colorsel.c:1035
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
-msgstr ""
+msgstr "Culoarea selectată anterior, pentru a o compara cu culoarea pe care o selectați acum."
 
 #: ../libmate-desktop/mate-colorsel.c:1038
 msgid "The color you've chosen."
@@ -431,13 +432,13 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorsel.c:1465
 msgid "_Save color here"
-msgstr ""
+msgstr "_Salvează culoarea aici"
 
 #: ../libmate-desktop/mate-colorsel.c:1690
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
-msgstr ""
+msgstr "Dați clic pe această intrare din paletă pentru a o face culoarea curentă. Pentru a schimba această intrare, trageți o mostră de culoare aici sau dați clic dreapta pe ea și selectați „Salvează culoarea aici.”"
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
 #: ../libmate-desktop/mate-colorseldialog.c:168
@@ -446,15 +447,15 @@ msgstr "Selecție culoare"
 
 #: ../libmate-desktop/mate-colorseldialog.c:100
 msgid "The color selection embedded in the dialog."
-msgstr ""
+msgstr "Selectorul de culoare integrat în dialog."
 
 #: ../libmate-desktop/mate-colorseldialog.c:106
 msgid "OK Button"
-msgstr ""
+msgstr "Buton de confirmare"
 
 #: ../libmate-desktop/mate-colorseldialog.c:107
 msgid "The OK button of the dialog."
-msgstr ""
+msgstr "Butonul de confirmare al dialogului."
 
 #: ../libmate-desktop/mate-colorseldialog.c:113
 msgid "Cancel Button"
@@ -462,7 +463,7 @@ msgstr "Buton renunțare"
 
 #: ../libmate-desktop/mate-colorseldialog.c:114
 msgid "The cancel button of the dialog."
-msgstr ""
+msgstr "Butonul de renunțare al dialogului."
 
 #: ../libmate-desktop/mate-colorseldialog.c:120
 msgid "Help Button"
@@ -470,7 +471,7 @@ msgstr "Buton ajutor"
 
 #: ../libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
-msgstr ""
+msgstr "Butonul de ajutor al dialogului."
 
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -515,7 +516,7 @@ msgstr "Se pornește %s"
 #: ../libmate-desktop/mate-desktop-item.c:2077
 #, c-format
 msgid "No URL to launch"
-msgstr "Nici un URL de deschis"
+msgstr "Niciun URL de deschis"
 
 #: ../libmate-desktop/mate-desktop-item.c:2093
 #, c-format
@@ -542,27 +543,27 @@ msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "Nu s-a găsit un terminal, se utilizează xterm, deși s-ar putea să nu meargă"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:484
+#: ../libmate-desktop/mate-rr.c:460
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "nu s-au putut obține resursele ecranului (CRTC, ieșiri, moduri)"
 
-#: ../libmate-desktop/mate-rr.c:504
+#: ../libmate-desktop/mate-rr.c:480
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "eroare X negestionată la obținerea gamei dimensiunilor ecranului"
 
-#: ../libmate-desktop/mate-rr.c:510
+#: ../libmate-desktop/mate-rr.c:486
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "nu s-a putut obține gama dimensiunilor ecranului"
 
-#: ../libmate-desktop/mate-rr.c:737
+#: ../libmate-desktop/mate-rr.c:709
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "Extensia RANDR nu este prezentă"
 
-#: ../libmate-desktop/mate-rr.c:1295
+#: ../libmate-desktop/mate-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "nu s-au putut obține informații despre ieșirea %d"
@@ -570,19 +571,19 @@ msgstr "nu s-au putut obține informații despre ieșirea %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1737
+#: ../libmate-desktop/mate-rr.c:1748
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "dimensiunea/poziția cerută pentru CRTC %d este în afara limitei admise: poziție=(%d, %d), dimensiune=(%d, %d), maxim=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1771
+#: ../libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "nu s-a putut defini configurația pentru CRTC %d"
 
-#: ../libmate-desktop/mate-rr.c:1923
+#: ../libmate-desktop/mate-rr.c:1946
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "nu s-au putut obține informații despre CRTC %d"
@@ -597,22 +598,22 @@ msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "nici una din configurările ecranelor salvate nu se potrivește cu configurația curentă"
 
-#: ../libmate-desktop/mate-rr-config.c:1501
+#: ../libmate-desktop/mate-rr-config.c:1486
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d nu poate comanda ieșirea %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1508
+#: ../libmate-desktop/mate-rr-config.c:1493
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "ieșirea %s nu suportă modul %dx%d@%dHz"
 
-#: ../libmate-desktop/mate-rr-config.c:1519
+#: ../libmate-desktop/mate-rr-config.c:1504
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d nu suportă rotație=%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1533
+#: ../libmate-desktop/mate-rr-config.c:1518
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -621,29 +622,29 @@ msgid ""
 "existing rotation = %s, new rotation = %s"
 msgstr "ieșirea %s nu are aceiași parametru ca o altă ieșire clonată:\nmodul existent = %d, mod nou = %d\ncoordonate existente = (%d, %d), coordonate noi = (%d, %d)\nrotire existentă = %s, rotire nouă = %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1548
+#: ../libmate-desktop/mate-rr-config.c:1533
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "nu se poate clona ieșirea %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1717
+#: ../libmate-desktop/mate-rr-config.c:1702
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Se încearcă moduri pentru CRTC %d\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1741
+#: ../libmate-desktop/mate-rr-config.c:1726
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr "CRTC %d: se încearcă module %dx%d@%dHz cu eșire la %dx%d@%dHz (pasul %d)\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1788
+#: ../libmate-desktop/mate-rr-config.c:1773
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
 msgstr "nu s-a putut atribui CRTC la ieșiri:\n%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1792
+#: ../libmate-desktop/mate-rr-config.c:1777
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -653,7 +654,7 @@ msgstr "niciunul dintre modurile selectate nu au fost compatibile cu modurile po
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1874
+#: ../libmate-desktop/mate-rr-config.c:1859
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -670,430 +671,430 @@ msgstr "dimensiunea virtuală cerută nu se potrivește dimensiunii disponibile:
 msgid "Mirror Screens"
 msgstr "Ecrane oglindite"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
-msgstr ""
+msgstr "interval minim în milisecunde"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr ""
+msgstr "Ignoră apăsările multiple ale aceleiași taste într-un interval de @delay milisecunde."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
 msgstr "Pixeli pe secundă"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr ""
+msgstr "Număr de pixeli pe secundă la viteza maximă."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr ""
+msgstr "Cât timp se accelerează în milisecunde"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr ""
+msgstr "În câte milisecunde se ajunge de la 0 la viteza maximă."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
 msgid "Initial delay in milliseconds"
-msgstr "Pauză inițială în milisecunde"
+msgstr "Întârziere inițială în milisecunde"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
-msgstr ""
+msgstr "Milisecunde de așteptare înainte ca tastele pentru mutarea cursorului de maus să fie operaționale."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
 msgid "Minimum interval in milliseconds"
 msgstr "Interval minim în milisecunde"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr ""
+msgstr "Nu se acceptă apăsarea unei taste decât dacă este ținută „@delay” milisecunde."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
-msgstr ""
+msgstr "Dezactivează la apăsarea concomitentă a două taste."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Beep when a modifier is pressed."
 msgstr "Bip la apăsarea unui modificator."
 
-#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr ""
+msgstr "Pornire aplicații tehnologice de asistență"
 
-#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
-msgstr ""
+msgstr "Lista aplicațiilor tehnologice de asistență ce pornesc automat la autentificarea în mediul MATE."
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Aplicația tehnologică preferată pentru asistență mobilitate"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr ""
+msgstr "Aplicația  tehnologică de asistență mobilitate preferată care să fie folosită pentru autentificare, meniu, sau linia de comandă."
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Pornește aplicația tehnologie de asistență mobilitate preferată"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr ""
+msgstr "Pornește aplicația tehnologie de asistență mobilitate preferată în timpul autentificării."
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "Aplicația tehnologie de asistență vizuală preferată"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
 "Preferred Visual assistive technology application be used for login, menu, "
 "or command line."
-msgstr ""
+msgstr "Aplicația tehnologie de asistență vizuală preferată care să fie folosită pentru autentificare, meniu, sau linie de comandă."
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "Pornește aplicația tehnologie de asistență vizuală preferată"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr ""
+msgstr "Pornește aplicația tehnologie de asistență vizuală preferată în timpul autentificării."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
 msgstr "Navigator implicit"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
-msgstr ""
+msgstr "Navigatorul implicit pentru toate URL-urile."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
 msgid "Browser needs terminal"
-msgstr ""
+msgstr "Navigatorul necesită terminal"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:4
 msgid "Whether the default browser needs a terminal to run."
-msgstr ""
+msgstr "Specifică dacă navigatorul implicit are nevoie de un terminal pentru a rula."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:5
 msgid "Browser understands remote"
-msgstr ""
+msgstr "Navigatorul recunoaște comenzile la distanță"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
 msgid "Whether the default browser understands netscape remote."
-msgstr ""
+msgstr "Specifică dacă navigatorul implicit înțelege comenzile la distanță Netscape."
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
 msgstr "Calendar implicit"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:2
 msgid "Default calendar application"
 msgstr "Aplicație implicită pentru calendar"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:3
 msgid "Calendar needs terminal"
-msgstr ""
+msgstr "Calendarul necesită terminal"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr ""
+msgstr "Specifică dacă aplicația calendar implicită are nevoie de un terminal pentru a rula"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
-msgstr "Sarcini implicite"
+msgstr "Organizatorul implicit"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
 msgid "Default tasks application"
-msgstr "Aplicație implicită pentru sarcini"
+msgstr "Aplicație implicită de organizare"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:7
 msgid "Tasks needs terminal"
-msgstr ""
+msgstr "Organizatorul necesită terminal"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr ""
+msgstr "Specifică dacă aplicația de sarcini implicită are nevoie de un terminal pentru a rula"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
 msgstr "Aplicație terminal"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr ""
+msgstr "Programul terminal de utilizat când se pornesc aplicații care necesită unul."
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
-msgstr ""
+msgstr "Argumente „exec”"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr ""
+msgstr "Argument folosit pentru lansarea în execuție a programelor în terminalul definit de tasta „exec”."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
 msgstr "Desenează fundal desktop"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.background.gschema.xml.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr ""
+msgstr "Mediul MATE gestionează fundalul desktopului."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
-msgstr "Arată pictograme desktop"
+msgstr "Arată pictograme spațiu de lucru"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr ""
+msgstr "Permite ca administratorul de fișiere (Caja) să deseneze pictogramele de pe desktop."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
-msgstr ""
+msgstr "Aplică transluciditate fundalului la schimbare"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.background.gschema.xml.in.h:6
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
-msgstr ""
+msgstr "Dacă este adevărată, atunci MATE va schimba fundalul desktopului aplicând un efect de transluciditate."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
 msgstr "Opțiuni imagine"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.background.gschema.xml.in.h:8
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
 msgstr ""
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
 msgstr "Nume fișier imagine"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
-msgstr ""
+msgstr "Fișier de utilizat ca imagine de fundal."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.background.gschema.xml.in.h:11
 msgid "Picture Opacity"
 msgstr "Opacitate imagine"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
-msgstr ""
+msgstr "Opacitatea cu care se va afișa imaginea de fundal."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
 msgstr "Culoare primară"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr ""
+msgstr "Culoarea din stânga sau de sus când se desenează degradeuri, nu este folosită la culori solide."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
 msgstr "Culoare secundară"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr ""
+msgstr "Culoarea din dreapta sau de jos când se desenează degradeuri, nu este folosită la culori solide."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
-msgstr ""
+msgstr "Tip umbrire culoare"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.background.gschema.xml.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
-msgstr ""
+msgstr "Cum să fie umbrită culoarea de fundal. Valorile posibile sunt „horizontal-gradient”, „vertical-gradient” și „solid”."
 
-#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
-msgstr ""
+msgstr "Temă pictograme fișiere"
 
-#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr ""
+msgstr "Temă utilizată pentru a afișa pictogramele fișierelor."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
 msgstr "Activare accesibilitate"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr "Specifică dacă aplicațiile ar trebui să aibă suport pentru accesibilitate."
+msgstr "Specifică dacă aplicațiile ar trebui să sprijine accesibilitatea."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
 msgstr "Activare animații"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
-msgstr ""
+msgstr "Meniurile pot fi desprinse"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.interface.gschema.xml.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr ""
+msgstr "Specifică dacă meniurile pot fi desprinse."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Can Change Accels"
-msgstr ""
+msgstr "Acceleratorii pot fi schimbați"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid ""
 "Whether the user can dynamically type a new accelerator when positioned over"
 " an active menuitem."
-msgstr ""
+msgstr "Specifică dacă utilizatorul poate tasta dinamic un nou accelerator când este poziționat deasupra unui element activ dintr-un meniu."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Toolbar Style"
-msgstr "Stilul barei cu unelte"
+msgstr "Stil bară de unelte"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr ""
+msgstr "Stilul barei cu unelte. Valorile posibile sunt „both”, „both_horiz”, „icons” și „text”."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Menus Have Icons"
 msgstr "Meniurile au pictograme"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr ""
+msgstr "Specifică dacă meniurile pot afișa o pictogramă lângă o intrare din meniu."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Buttons Have Icons"
 msgstr "Butoanele au pictograme"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr ""
+msgstr "Specifică dacă butoanele pot afișa o pictogramă în plus față de textul butonului."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Menubar Detachable"
 msgstr "Bară de meniu detașabilă"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach menubars and move them around."
 msgstr "Specifică dacă utilizatorul poate desprinde și muta barele de meniuri."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Detachable"
-msgstr "Bară cu unelte detașabilă"
+msgstr "Bară de unelte detașabilă"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Whether the user can detach toolbars and move them around."
 msgstr "Specifică dacă utilizatorul poate desprinde și muta barele cu unelte."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Toolbar Icon Size"
-msgstr "Mărimea pictogramelor din bara cu unelte"
+msgstr "Dimensiune pictograme bară de unelte"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:20
+#: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr ""
+msgstr "Dimensiunea pictogramelor în barele de unelte, fie „small-toolbar”, ori „large-toolbar”."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:21
+#: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink"
-msgstr "Cursor clipitor"
+msgstr "Clipire cursor"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:22
+#: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Whether the cursor should blink."
 msgstr "Specifică dacă ar trebui să clipească cursorul."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:23
+#: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Cursor Blink Time"
 msgstr "Timp clipire cursor"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:24
+#: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr ""
+msgstr "Durata în milisecunde a ciclului de clipire al cursorului."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:25
+#: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Icon Theme"
 msgstr "Temă pictograme"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:26
+#: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Icon theme to use for the panel, caja etc."
-msgstr ""
+msgstr "Temă pictograme  utilizată pentru panou, caja etc."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:27
+#: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
 msgstr "Temă Gtk+"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:28
+#: ../schemas/org.mate.interface.gschema.xml.in.h:28
 msgid "Basename of the default theme used by gtk+."
-msgstr "Nume de bază al temei implicite Gtk+"
+msgstr "Nume de bază al temei implicite utilizate de gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:29
+#: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "List of symbolic names and color equivalents"
-msgstr ""
+msgstr "Listă de nume simbolice și culorile echivalente"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:30
+#: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
-msgstr ""
+msgstr "O listă de valori „name:color” separate de caracterul „\\n” cum este definită de configurarea „gtk-color-scheme”"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:31
+#: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "Default font"
 msgstr "Font implicit"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:32
+#: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the default font used by gtk+."
-msgstr "Numele fontului implicit folosit de gtk+."
+msgstr "Numele fontului implicit utilizat de gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:33
+#: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Preedit Style"
-msgstr ""
+msgstr "Stil metodă de intrareGTK înainte de editare"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:34
+#: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr ""
+msgstr "Numele stilului metodei de intrare GTK+ înainte de editare folosit de gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:35
+#: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Status Style"
-msgstr ""
+msgstr "Stil stare metodă de intrare GTK"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:36
+#: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr ""
+msgstr "Numele stilului stare metodă de intrare GTK+ folosit de gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:37
+#: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "GTK IM Module"
-msgstr "Modul GTK IM"
+msgstr "Modul metodă de intrare GTK"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:38
+#: ../schemas/org.mate.interface.gschema.xml.in.h:38
 msgid "Name of the input method module used by GTK+."
-msgstr ""
+msgstr "Numele modulului metodei de intrare utilizat de GTK+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
+#: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "Folosește bara antet GTK3"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
+#: ../schemas/org.mate.interface.gschema.xml.in.h:40
 msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
@@ -1101,90 +1102,100 @@ msgid ""
 "using GtkDialog directly, or message dialogs."
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
+#: ../schemas/org.mate.interface.gschema.xml.in.h:41
+msgid "Use GTK3 overlay scrolling"
+msgstr "Folosește derulare detașată GTK3"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:42
+msgid ""
+"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"scrolling hides and reduces the size of the scrollbar until it gets focus."
+msgstr "Dacă ferestrele integrate GTK+ care pot fi derulate vor folosi derularea detașată. Derularea detașată ascunde și reduce dimensiunea barei de derulare până ce bara de derulare este focalizată."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "Activează animațiile pentru tot setul de unelte Gtk"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
+#: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "Dacă să fie activate animațiile pentru tot setul de unelte."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
+#: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Document font"
 msgstr "Font document"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
+#: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid "Name of the default font used for reading documents."
-msgstr "Numele fontului implicit folosit pentru citirea documentelor"
+msgstr "Numele fontului implicit utilizat pentru citirea documentelor."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
+#: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Monospace font"
-msgstr "Font monospațial"
+msgstr "Font monospațiat"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:46
+#: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
-msgstr ""
+msgstr "Numele unui font monospațiat (cu caractere de lățime fixă) pentru utilizarea în aplicații precum terminalele."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:47
+#: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Use Custom Font"
-msgstr "Utilizează un font personalizat"
+msgstr "Utilizează font personalizat"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:48
+#: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr ""
+msgstr "Specifică dacă să fie utilizat un font personalizat în aplicațiile gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:49
+#: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Status Bar on Right"
 msgstr "Bară de stare pe dreapta"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:50
+#: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid "Whether to display a status bar meter on the right."
-msgstr ""
+msgstr "Specifică dacă să fie afișat un contor bară de stare pe dreapta."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:51
+#: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Module for GtkFileChooser"
-msgstr "Modul GtkFileChooser"
+msgstr "Modul pentru GtkFileChooser"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:52
+#: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:53
+#: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Menubar accelerator"
 msgstr "Accelerator bară de meniu"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:54
+#: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid "Keyboard shortcut to open the menu bars."
-msgstr ""
+msgstr "Combinație de taste pentru accesarea barelor de meniu."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:55
+#: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Input Methods' menu"
-msgstr ""
+msgstr "Arată meniul „Metode de intrare”"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:56
+#: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
-msgstr ""
+msgstr "Specifică dacă meniurile contextuale ale intrărilor și ale vizualizărilor de text ar trebui să ofere opțiunea de schimbare a metodei de intrare."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:57
+#: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Show the 'Unicode Control Character' menu"
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:58
+#: ../schemas/org.mate.interface.gschema.xml.in.h:60
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
-msgstr ""
+msgstr "Specifică dacă meniurile contextuale ale intrărilor și ale vizualizărilor de text conțin opțiunea de inserare de caractere de control."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:59
+#: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr ""
+msgstr "Aranjament bară de titlu pentru ferestrele GTK3 decorate de client"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:60
+#: ../schemas/org.mate.interface.gschema.xml.in.h:62
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
@@ -1193,364 +1204,352 @@ msgid ""
 "decoration-layout."
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:61
+#: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "Arată doar mnemonice când tasta Alt este apăsată"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:62
+#: ../schemas/org.mate.interface.gschema.xml.in.h:64
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr ""
+msgstr "Dacă mnemonicele să fie afișate și ascunse automant când utilizatorul apasă tasta Alt."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
 msgstr "Dezactivare linie de comandă"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
-msgstr "Dezactivare salvare fișiere"
+msgstr "Dezactivare salvare fișiere pe disc"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr ""
+msgstr "Împiedică utilizatorul să salveze fișiere pe disc. De exemplu, aceasta va dezactiva accesul la dialogurile „Salvează ca” al tuturor aplicațiilor."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
 msgstr "Dezactivare tipărire"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr ""
+msgstr "Împiedică utilizatorul să tipărească. De exemplu, aceasta va dezactiva accesul către toate dialogurile „Tipărește” al aplicațiilor."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
-msgstr "Dezactivează instalare imprimantă"
+msgstr "Dezactivare configurare tipărire"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr ""
+msgstr "Împiedică utilizatorul să modifice configurările de tipărire. De exemplu, aceasta va dezactiva accesul la dialogurile „Configurare tipărire” al tuturor aplicațiilor."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
-msgstr "Dezactivează comutare utilizatori"
+msgstr "Dezactivare schimbare utilizator"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:10
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr ""
+msgstr "Împiedică utilizatorul să treacă pe un alt cont cât timp sesiunea este activă."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
-msgstr "Dezactivează blocare ecran"
+msgstr "Dezactivare blocare ecran"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
-msgstr ""
+msgstr "Împiedică utilizatorul să blocheze ecranul."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:13
 msgid "Disable URL and MIME type handlers"
-msgstr ""
+msgstr "Dezactivează gestionarii pentru URL și tip MIME"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr ""
+msgstr "Împiedică rularea oricărei aplicații de gestionare URL și tip MIME."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
-msgstr ""
+msgstr "Dezactivează configurări temă"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:16
 msgid "Prevent the user from changing theme settings."
-msgstr ""
+msgstr "Împiedică utilizatorul să modifice configurările temei."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:17
 msgid "Disable log out"
-msgstr ""
+msgstr "Dezactivare deconectare"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:18
 msgid "Prevent the user from logging out."
-msgstr ""
+msgstr "Împiedică utilizatorul să se deconecteze"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr ""
+msgstr "valorile posibile sunt „on”, „off”, și „custom”."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:2
 msgid "Keyboard Bell Custom Filename"
-msgstr ""
+msgstr "Fișier personalizat pentru bipul tastaturii"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:3
 msgid "File name of the bell sound to be played."
-msgstr ""
+msgstr "Numele fișierului cu sunetul bipului."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:4
 msgid "Remember NumLock state"
-msgstr "Memorează stare tastă NumLock"
+msgstr "Reține starea tastei „NumLock”"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr ""
+msgstr "La activare, MATE va reține de la o sesiune la alta starea tastei „NumLock”."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
 msgstr "Stare tastă NumLock"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:7
 msgid "The remembered state of the NumLock LED."
-msgstr ""
+msgstr "Starea memorată a tastei „NumLock”."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:1
 msgid "Mouse button orientation"
-msgstr "Orientare butoane mouse"
+msgstr "Orientare butoane maus"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr ""
+msgstr "Schimbă pentru stângaci butoanele stânga și dreapta ale mausului."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Single Click"
-msgstr ""
+msgstr "Clic simplu"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:4
-msgid "Single click to open icons."
-msgstr ""
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
-msgstr ""
+msgstr "Multiplicator accelerare la mișcarea mausului. „-1” este valoarea implicită a sistemului."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
-msgstr ""
+msgstr "Prag mișcare"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:6
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
-msgstr ""
+msgstr "Distanța în pixeli parcursă de cursor înainte de a activa mișcarea accelerată a mausului. „-1” este valoarea implicită a sistemului."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
-msgstr ""
+msgstr "Prag tragere fișiere"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:8
 msgid "Distance before a drag is started."
-msgstr ""
+msgstr "Distanța parcursă de maus înainte de a începe o tragere."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr ""
+msgstr "Timp clic dublu"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
-msgstr ""
+msgstr "Lungimea unui clic dublu"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:11
 msgid "Middle button emulation"
-msgstr ""
+msgstr "Emulare buton mijlociu"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:12
 msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
-msgstr ""
+msgstr "Activează emularea butonului mijlociu al mausului prin apăsarea simultană a butonului stâng și drep al mausului."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
-msgstr ""
+msgstr "Localizează indicatorul"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr ""
+msgstr "Evidențiază locația curentă a indicatorului de maus când tasta Ctrl este apăsată și eliberată."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor font"
 msgstr "Font cursor"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
 msgstr ""
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "Temă cursor"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
 msgstr ""
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
 msgid "Cursor size"
-msgstr "Mărime cursor"
+msgstr "Dimensiune cursor"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:21
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
 msgid "Size of the cursor referenced by cursor_theme."
-msgstr ""
+msgstr "Dimensiunea cursorului precizată în „cursor_theme”."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.sound.gschema.xml.in.h:1
 msgid "Default mixer device"
-msgstr ""
+msgstr "Dispozitiv mixer implicit"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.sound.gschema.xml.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr ""
+msgstr "Dispozitiv mixer implicit de utilizat pentru asocierea tastelor multimedia."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.sound.gschema.xml.in.h:3
 msgid "Default mixer tracks"
-msgstr ""
+msgstr "Piste implicite mixer"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.sound.gschema.xml.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr ""
+msgstr "Piste mixer implicite de utilizat pentru asocierea tastelor multimedia."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
-msgstr ""
+msgstr "Activare ESD"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
-msgstr ""
+msgstr "Activează pornirea serverului de sunet."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
 msgstr "Sunete pentru evenimente"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.sound.gschema.xml.in.h:8
 msgid "Whether to play sounds on user events."
-msgstr ""
+msgstr "Specifică dacă se redau sunete pentru evenimentele utilizator."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
-msgstr ""
+msgstr "Nume temă de sunete"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.sound.gschema.xml.in.h:10
 msgid "The XDG sound theme to use for event sounds."
-msgstr ""
+msgstr "Temă XDG de sunete utilizată pentru sunete evenimente."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.sound.gschema.xml.in.h:11
 msgid "Input feedback sounds"
-msgstr ""
+msgstr "Sunete de reacție la intrare"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.sound.gschema.xml.in.h:12
 msgid "Whether to play sounds on input events."
-msgstr ""
+msgstr "Specifică dacă să fie redate sunete de reacție la introducere."
 
-#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
-msgstr ""
+msgstr "Vârsta maximă în zile a miniaturilor în cache. Definiți ca -1 pentru a dezactiva curățarea."
 
-#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr ""
+msgstr "Dimensiunea maximă în megaocteți a miniaturilor în cache. Definiți ca -1 pentru a dezactiva curățarea."
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
-msgstr ""
+msgstr "Dezactivează toți creatorii de miniaturi externi"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:2
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
-msgstr ""
+msgstr "Definiți această valoare ca „true” pentru a dezactiva toate programele externe creatorare de miniaturi, independent dacă ele sunt activate sau dezactivate."
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
-msgstr ""
+msgstr "Listă de tipuri „mime” pentru care programele externe de creare miniaturi vor fi dezactivate"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:4
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr ""
+msgstr "Miniaturi nu vor fi create pentru fișiere ale căror tip „mime” este conținut în listă."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"
-msgstr ""
+msgstr "Durată scriere"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr ""
+msgstr "Număr de minute pentru timpul de lucru înaintea activării pauzei."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"
-msgstr ""
+msgstr "Durată pauză"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
 msgid "Number of minutes that the typing break should last."
-msgstr ""
+msgstr "Număr de minute pentru durata unei pauze de tastare."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:5
 msgid "Allow postponing of breaks"
-msgstr ""
+msgstr "Permite amânarea pauzelor"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
-msgstr ""
+msgstr "Specifică dacă ecranul pauzei de tastare permite amânarea acesteia."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
 msgid "Whether or not keyboard locking is enabled"
-msgstr ""
+msgstr "Specifică dacă blocarea tastaturii este activată sau nu"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:8
 msgid "Whether or not keyboard locking is enabled."
-msgstr ""
+msgstr "Specifică dacă blocarea tastaturii este activată sau nu."
 
-#: ../tools/mate-color-select.c:62
+#: ../tools/mate-color-select.c:63
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
-msgstr ""
+msgstr "Selecție culoare MATE"
 
 #: ../tools/mate-color-select.desktop.in.in.h:2
 msgid "Color selection dialog"
-msgstr ""
+msgstr "Dialog de selectare a culorii"
 
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
-msgstr ""
+msgstr "Alegeți culori din paleta de pe ecran"
 
 #: ../tools/mate-conf-import.desktop.in.in.h:1
 msgid "Migrate MATE 1.4 settings"
-msgstr ""
+msgstr "Migrare configurări MATE 1.4"
 
 #: ../tools/mate-conf-import.desktop.in.in.h:2
 msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr ""
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:1
-msgid "Help"
-msgstr ""
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:2
-msgid "Get help with MATE"
-msgstr ""
+msgstr "Unealtă pentru migrarea configurărilor MATE 1.4 la MATE 1.6"

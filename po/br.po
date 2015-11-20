@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Alan Monfort <alan.monfort@free.fr>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-28 18:04+0200\n"
-"PO-Revision-Date: 2015-07-28 16:04+0000\n"
-"Last-Translator: infirit <infirit@gmail.com>\n"
-"Language-Team: Breton (http://www.transifex.com/projects/p/MATE/language/br/)\n"
+"POT-Creation-Date: 2015-11-06 15:16+0300\n"
+"PO-Revision-Date: 2015-11-15 18:05+0000\n"
+"Last-Translator: Alan Monfort <alan.monfort@free.fr>\n"
+"Language-Team: Breton (http://www.transifex.com/mate/MATE/language/br/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,9 +20,9 @@ msgstr ""
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:106
+#: ../mate-about/mate-about.c:96
 msgid "translator-credits"
-msgstr ""
+msgstr "Troet eo bet gant"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -31,44 +32,44 @@ msgstr "Diwar-benn MATE"
 msgid "Learn more about MATE"
 msgstr "Gouzout hiroc'h diwar-benn MATE"
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
-msgstr ""
+msgstr "MATE a bourchas un amva burev plijus hag nadek da arveriaded Linux en ur ober gant al leterc'hadoù boaz."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
-msgstr ""
+msgstr "E-kreiz MATE e kavot an darn vrasañ eus ar pezh a welot gant hoc'h urzhiataer, en o zouez un ardoer restroù, ur welerez teuliadoù hag unan evit ar skeudennoù ha kalz arloadoù."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
-msgstr ""
+msgstr "MATE a dalv d'un amva burev digor, stabil, digoust, aes da arverañ evit ar reizhiadoù korvoiñ heñvel ouzh Unix."
 
-#: ../mate-about/mate-about.h:55
+#: ../mate-about/mate-about.h:54
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
-msgstr ""
+msgstr "MATE a zeu diouzh GNOME2. Kantadoù a dud o deus kemeret perzh e boneg GNOME abaoe ma'z eo bet lañset e 1997 ; kalz muioc'h a dud c'hoazh o deus labouret evitañ dre doareoù pouezhus all, en o zouez an treiñ, ar sevel kelennskridoù ha teurel evezh ouzh ar berzhded."
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
-msgstr ""
+msgstr "Ar burev anvekañ evit Linux e oa GNOME 2, n'eo ket mui hegerz avat... MATE zo bet krouet evit kinnig an hevelep burev deoc'h ! "
 
-#: ../mate-about/mate-about.h:62
+#: ../mate-about/mate-about.h:61
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
-msgstr ""
+msgstr "Eus \" yerba maté\" e teu an anv MATE, ur spesad kelenn bet ganet e Amerika ar Su goudrovanel. Kafein ez eus en he deil ha graet e vez gante evit prientiñ bervadurioù hag un died anvet mate."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -78,406 +79,406 @@ msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Dianav"
 
-#: ../libmate-desktop/mate-aboutdialog.c:180
+#: ../libmate-desktop/mate-aboutdialog.c:179
 msgid "Could not show link"
-msgstr ""
+msgstr "N'hall ket diskouez an ere"
+
+#: ../libmate-desktop/mate-aboutdialog.c:235
+msgid "Program name"
+msgstr "Anv ar goulev"
 
 #: ../libmate-desktop/mate-aboutdialog.c:236
-msgid "Program name"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:237
 msgid ""
 "The name of the program. If this is not set, it defaults to "
 "g_get_application_name()"
-msgstr ""
+msgstr "Anv ar goulev. Ma n'eo ket erspizet ez ay dre ziouer da g_get_application_name()"
+
+#: ../libmate-desktop/mate-aboutdialog.c:250
+msgid "Program version"
+msgstr "Handelv ar goulev"
 
 #: ../libmate-desktop/mate-aboutdialog.c:251
-msgid "Program version"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:252
 msgid "The version of the program"
-msgstr ""
+msgstr "Handelv ar goulev"
+
+#: ../libmate-desktop/mate-aboutdialog.c:265
+msgid "Copyright string"
+msgstr "Hedad ar c'hopyright"
 
 #: ../libmate-desktop/mate-aboutdialog.c:266
-msgid "Copyright string"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:267
 msgid "Copyright information for the program"
-msgstr ""
+msgstr "Titouroù Copyright evit ar goulev"
+
+#: ../libmate-desktop/mate-aboutdialog.c:283
+msgid "Comments string"
+msgstr "Hedad an askelennoù"
 
 #: ../libmate-desktop/mate-aboutdialog.c:284
-msgid "Comments string"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:285
 msgid "Comments about the program"
-msgstr ""
+msgstr "Askelennoù diwar-benn ar goulev"
 
-#: ../libmate-desktop/mate-aboutdialog.c:303
+#: ../libmate-desktop/mate-aboutdialog.c:302
 #: ../libmate-desktop/mate-aboutdialog.c:2161
 msgid "License"
-msgstr ""
+msgstr "Lañvaz"
 
-#: ../libmate-desktop/mate-aboutdialog.c:304
+#: ../libmate-desktop/mate-aboutdialog.c:303
 msgid "The license of the program"
-msgstr ""
+msgstr "Lañvaz ar goulev"
+
+#: ../libmate-desktop/mate-aboutdialog.c:318
+msgid "Website URL"
+msgstr "URL al lec'hienn"
 
 #: ../libmate-desktop/mate-aboutdialog.c:319
-msgid "Website URL"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:320
 msgid "The URL for the link to the website of the program"
-msgstr ""
+msgstr "An URL evit an ere betek lec'hienn ar goulev"
+
+#: ../libmate-desktop/mate-aboutdialog.c:334
+msgid "Website label"
+msgstr "Skritellig al lec'hienn"
 
 #: ../libmate-desktop/mate-aboutdialog.c:335
-msgid "Website label"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:336
 msgid ""
 "The label for the link to the website of the program. If this is not set, it"
 " defaults to the URL"
-msgstr ""
+msgstr "Ar skritell evit an ere betek lec'hienn ar goulev. Ma n'eo ket erspizet ez ay dre ziouer d'an URL"
+
+#: ../libmate-desktop/mate-aboutdialog.c:351
+msgid "Authors"
+msgstr "Aozerion"
 
 #: ../libmate-desktop/mate-aboutdialog.c:352
-msgid "Authors"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:353
 msgid "List of authors of the program"
-msgstr ""
+msgstr "Roll aozerion ar goulev"
+
+#: ../libmate-desktop/mate-aboutdialog.c:368
+msgid "Documenters"
+msgstr "Paotred an teuliadurioù"
 
 #: ../libmate-desktop/mate-aboutdialog.c:369
-msgid "Documenters"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:370
 msgid "List of people documenting the program"
-msgstr ""
+msgstr "Roll an dud o deus savet teuliadur ar goulev"
+
+#: ../libmate-desktop/mate-aboutdialog.c:385
+msgid "Artists"
+msgstr "Arzourion"
 
 #: ../libmate-desktop/mate-aboutdialog.c:386
-msgid "Artists"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:387
 msgid "List of people who have contributed artwork to the program"
-msgstr ""
+msgstr "Roll an dud o deus savet oberennoù arz ar goulev"
+
+#: ../libmate-desktop/mate-aboutdialog.c:403
+msgid "Translator credits"
+msgstr "Trugarez d'an droourien"
 
 #: ../libmate-desktop/mate-aboutdialog.c:404
-msgid "Translator credits"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:405
 msgid ""
 "Credits to the translators. This string should be marked as translatable"
-msgstr ""
+msgstr "Roll an droourion. An hedad-mañ a zlefe bezañ troet "
+
+#: ../libmate-desktop/mate-aboutdialog.c:419
+msgid "Logo"
+msgstr "Siell"
 
 #: ../libmate-desktop/mate-aboutdialog.c:420
-msgid "Logo"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:421
 msgid ""
 "A logo for the about box. If this is not set, it defaults to "
 "gtk_window_get_default_icon_list()"
-msgstr ""
+msgstr "Ur siell evit ar voestad diwar-benn. Ma n'eo ket erspizet ez ay dre ziouer da gtk_window_get_default_icon_list()"
+
+#: ../libmate-desktop/mate-aboutdialog.c:435
+msgid "Logo Icon Name"
+msgstr "Anv arlun ar siell"
 
 #: ../libmate-desktop/mate-aboutdialog.c:436
-msgid "Logo Icon Name"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:437
 msgid "A named icon to use as the logo for the about box."
-msgstr ""
+msgstr "Un arlun gant un anv da arverañ evel ur siell evit ar voestad diwar-benn"
+
+#: ../libmate-desktop/mate-aboutdialog.c:449
+msgid "Wrap license"
+msgstr "Lakaat l lañvaz da zibunañ"
 
 #: ../libmate-desktop/mate-aboutdialog.c:450
-msgid "Wrap license"
-msgstr ""
-
-#: ../libmate-desktop/mate-aboutdialog.c:451
 msgid "Whether to wrap the license text."
-msgstr ""
+msgstr "Mard eo ret dibunañ testenn al lañvaz."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:544
+#: ../libmate-desktop/mate-aboutdialog.c:543
 msgid "C_redits"
-msgstr ""
+msgstr "Pe_rzhourion"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:558
+#: ../libmate-desktop/mate-aboutdialog.c:557
 msgid "_License"
-msgstr ""
+msgstr "_Lañvaz"
 
 #: ../libmate-desktop/mate-aboutdialog.c:838
 #, c-format
 msgid "About %s"
-msgstr ""
+msgstr "Diwar-benn %s"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2085
 msgid "Credits"
-msgstr ""
+msgstr "Perzhourion"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2113
 msgid "Written by"
-msgstr ""
+msgstr "Skrivet gant"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2116
 msgid "Documented by"
-msgstr ""
+msgstr "Teuliadur savet gant"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2128
 msgid "Translated by"
-msgstr ""
+msgstr "Troet gant"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2132
 msgid "Artwork by"
-msgstr ""
+msgstr "Oberennoù arz gant "
 
 #: ../libmate-desktop/mate-colorbutton.c:154
 msgid "Use alpha"
-msgstr ""
+msgstr "Ober gant alfa"
 
 #: ../libmate-desktop/mate-colorbutton.c:155
 msgid "Whether or not to give the color an alpha value"
-msgstr ""
+msgstr "Mar bez roet pe get ur werzh mod alfa (boullder) d'al liv"
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
-msgstr ""
+msgstr "Titl"
 
 #: ../libmate-desktop/mate-colorbutton.c:170
 msgid "The title of the color selection dialog"
-msgstr ""
+msgstr "Titl ar voestad da zibab livioù"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
 #: ../libmate-desktop/mate-colorbutton.c:470
 msgid "Pick a Color"
-msgstr ""
+msgstr "Tapout ul liv"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
 #: ../libmate-desktop/mate-colorsel.c:318
 msgid "Current Color"
-msgstr ""
+msgstr "Liv bremanel"
 
 #: ../libmate-desktop/mate-colorbutton.c:185
 msgid "The selected color"
-msgstr ""
+msgstr "Al liv diuzet"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
 #: ../libmate-desktop/mate-colorsel.c:325
 msgid "Current Alpha"
-msgstr ""
+msgstr "Alfa bremanel"
 
 #: ../libmate-desktop/mate-colorbutton.c:200
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr ""
+msgstr "Gwerzh an demerez bet diuzet (0 boull penn da benn, 65535 demer penn da benn)"
 
 #: ../libmate-desktop/mate-colorbutton.c:356
 msgid "Received invalid color data\n"
-msgstr ""
+msgstr " Roadennoù liv didlvoudek zo bet degemeret\n"
 
 #: ../libmate-desktop/mate-colorsel.c:304
 msgid "Has Opacity Control"
-msgstr ""
+msgstr "Emañ reolerezh al liv gantañ"
 
 #: ../libmate-desktop/mate-colorsel.c:305
 msgid "Whether the color selector should allow setting opacity"
-msgstr ""
+msgstr "Mar dlefe bezañ aotren arventennoù an demerez gant an diuzer liv "
 
 #: ../libmate-desktop/mate-colorsel.c:311
 msgid "Has palette"
-msgstr ""
+msgstr "Emañ al livaoueg gantañ"
 
 #: ../libmate-desktop/mate-colorsel.c:312
 msgid "Whether a palette should be used"
-msgstr ""
+msgstr "Mar dlefe bezañ arveret ul livaoueg"
 
 #: ../libmate-desktop/mate-colorsel.c:319
 msgid "The current color"
-msgstr ""
+msgstr "Al liv bremanel"
 
 #: ../libmate-desktop/mate-colorsel.c:326
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr ""
+msgstr "Gwerzh an demerez bremanel (0 boull penn da benn, 65535 demer penn da benn)"
 
 #: ../libmate-desktop/mate-colorsel.c:332
 msgid "HEX String"
-msgstr ""
+msgstr "Hedad mod HEX"
 
 #: ../libmate-desktop/mate-colorsel.c:333
 msgid "The hexadecimal string of current color"
-msgstr ""
+msgstr "Hedad c'hwezekredel al liv bremanel"
 
 #: ../libmate-desktop/mate-colorsel.c:383
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
-msgstr ""
+msgstr "Diuzit al liv a fell deoc'h diwar ar walenn diavaez. Diuzit teñvalder pe sklaerder al liv-mañ gant an tric'horn diabarzh."
 
 #: ../libmate-desktop/mate-colorsel.c:407
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
-msgstr ""
+msgstr "Klikit war ar gorzennig ha klikit ne vern pelec'h war ho skramm da ziuzañ al liv-mañ."
 
 #: ../libmate-desktop/mate-colorsel.c:416
 msgid "_Hue:"
-msgstr ""
+msgstr "_Arliv"
 
 #: ../libmate-desktop/mate-colorsel.c:417
 msgid "Position on the color wheel."
-msgstr ""
+msgstr "Lec'hiadur war rodad al livioù"
 
 #: ../libmate-desktop/mate-colorsel.c:419
 msgid "_Saturation:"
-msgstr ""
+msgstr "_Peurvec'hiañ"
 
 #: ../libmate-desktop/mate-colorsel.c:420
 msgid "\"Deepness\" of the color."
-msgstr ""
+msgstr "Donder al liv"
 
 #: ../libmate-desktop/mate-colorsel.c:421
 msgid "_Value:"
-msgstr ""
+msgstr "_Gwerzh"
 
 #: ../libmate-desktop/mate-colorsel.c:422
 msgid "Brightness of the color."
-msgstr ""
+msgstr "Lintr al liv"
 
 #: ../libmate-desktop/mate-colorsel.c:423
 msgid "_Red:"
-msgstr ""
+msgstr "_Ruz :"
 
 #: ../libmate-desktop/mate-colorsel.c:424
 msgid "Amount of red light in the color."
-msgstr ""
+msgstr "Kementad a c'houloù ruz el liv."
 
 #: ../libmate-desktop/mate-colorsel.c:425
 msgid "_Green:"
-msgstr ""
+msgstr "_Gwer :"
 
 #: ../libmate-desktop/mate-colorsel.c:426
 msgid "Amount of green light in the color."
-msgstr ""
+msgstr "Kementad a c'houloù gwer el liv."
 
 #: ../libmate-desktop/mate-colorsel.c:427
 msgid "_Blue:"
-msgstr ""
+msgstr "Gl_as :"
 
 #: ../libmate-desktop/mate-colorsel.c:428
 msgid "Amount of blue light in the color."
-msgstr ""
+msgstr "Kementad a c'houloù glas el liv."
 
 #: ../libmate-desktop/mate-colorsel.c:431
 msgid "Op_acity:"
-msgstr ""
+msgstr "De_merez :"
 
 #: ../libmate-desktop/mate-colorsel.c:438
 #: ../libmate-desktop/mate-colorsel.c:448
 msgid "Transparency of the color."
-msgstr ""
+msgstr "Boullder al liv."
 
 #: ../libmate-desktop/mate-colorsel.c:455
 msgid "Color _name:"
-msgstr ""
+msgstr "A_nv al liv :"
 
 #: ../libmate-desktop/mate-colorsel.c:469
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
-msgstr ""
+msgstr "Enanket e vez ur werzh liv gant ur stil HTML c'hwezekredel pe enankit un anv liv evel 'mouk' er vaezienn-mañ."
 
 #: ../libmate-desktop/mate-colorsel.c:499
 msgid "_Palette:"
-msgstr ""
+msgstr "_Livaoueg :"
 
 #: ../libmate-desktop/mate-colorsel.c:528
 msgid "Color Wheel"
-msgstr ""
+msgstr "Rodad al livioù"
 
 #: ../libmate-desktop/mate-colorsel.c:1027
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
-msgstr ""
+msgstr "Al liv bet diuzet a-raok evit bezañ keñveriet gant al liv diuzet bremañ. Al liv mañ a c'hallit riklañ betek enankad ul livaoueg pe diuzit al liv-mañ evel al liv bremanel en ur e riklañ betek ar standilhonoù a zo war ar gostez."
 
 #: ../libmate-desktop/mate-colorsel.c:1030
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
-msgstr ""
+msgstr "Al liv dibabet ganeoc'h. Riklit al liv-mañ betek un enankad liv d'e enrollañ evit un arver diwezhatoc'h."
 
 #: ../libmate-desktop/mate-colorsel.c:1035
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
-msgstr ""
+msgstr "Al liv dibabet ganeoc'h a-raok da vezañ keñveriet gant al liv diuzet bremañ."
 
 #: ../libmate-desktop/mate-colorsel.c:1038
 msgid "The color you've chosen."
-msgstr ""
+msgstr "Al liv dibabet ganeoc'h."
 
 #: ../libmate-desktop/mate-colorsel.c:1460
 msgid "gtk-color-sel"
-msgstr ""
+msgstr "gtk-color-sel"
 
 #: ../libmate-desktop/mate-colorsel.c:1465
 msgid "_Save color here"
-msgstr ""
+msgstr "_Enrollañ al liv amañ"
 
 #: ../libmate-desktop/mate-colorsel.c:1690
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
-msgstr ""
+msgstr "Klikit war an enankad-livaoueg-mañ d'e lakaat da vezañ al liv bremanel. A-benn kemmañ an enankad-mañ, riklit ur standilhon liv amañ pe klikit a-zehou warnañ ha diuzit \"Enrollañ al liv amañ.\""
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
 #: ../libmate-desktop/mate-colorseldialog.c:168
 msgid "Color Selection"
-msgstr ""
+msgstr "Diuzadur ul liv"
 
 #: ../libmate-desktop/mate-colorseldialog.c:100
 msgid "The color selection embedded in the dialog."
-msgstr ""
+msgstr "An diuzadur liv enkorfet er voestad emziviz"
 
 #: ../libmate-desktop/mate-colorseldialog.c:106
 msgid "OK Button"
-msgstr ""
+msgstr "Afell Mat eo"
 
 #: ../libmate-desktop/mate-colorseldialog.c:107
 msgid "The OK button of the dialog."
-msgstr ""
+msgstr "Afell Mat eo ar voestad emziviz."
 
 #: ../libmate-desktop/mate-colorseldialog.c:113
 msgid "Cancel Button"
-msgstr ""
+msgstr "An afell Nullañ"
 
 #: ../libmate-desktop/mate-colorseldialog.c:114
 msgid "The cancel button of the dialog."
-msgstr ""
+msgstr "An afell Nullañ eus ar voestad emziviz."
 
 #: ../libmate-desktop/mate-colorseldialog.c:120
 msgid "Help Button"
-msgstr ""
+msgstr "An afell Skoazell"
 
 #: ../libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
-msgstr ""
+msgstr "Afell Skoazell ar voestad emziviz."
 
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
-msgstr "Fazi o lenn restr '%s': %s"
+msgstr "Fazi e-pad ma oa o lenn ar restr '%s': %s"
 
 #: ../libmate-desktop/mate-desktop-item.c:288
 #, c-format
 msgid "Error rewinding file '%s': %s"
-msgstr "Fazi o lenn restr '%s': %s"
+msgstr "Fazi e-pad ma oa oc'h adenbeniañ ar restr '%s': %s"
 
 #. Translators: the "name" mentioned
 #. * here is the name of an application or
@@ -492,17 +493,17 @@ msgstr "Anv ebet"
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
-msgstr "Ar restr '%s' n'eo ket ur restr pe un teuliad reizh."
+msgstr "Ar restr '%s' n'eo ket ur restr pe ur c'havlec'hiad reizh."
 
 #: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
 msgid "Cannot find file '%s'"
-msgstr ""
+msgstr "N'hall ket kavout ar restr '%s'"
 
 #: ../libmate-desktop/mate-desktop-item.c:837
 #, c-format
 msgid "No filename to save to"
-msgstr "Anv restr ebet a-benn enrollañ anezhañ"
+msgstr "Anv restr ebet a-benn e enrollañ gantañ"
 
 #: ../libmate-desktop/mate-desktop-item.c:1840
 #, c-format
@@ -512,77 +513,77 @@ msgstr "O loc'hañ %s"
 #: ../libmate-desktop/mate-desktop-item.c:2077
 #, c-format
 msgid "No URL to launch"
-msgstr "URL ebet da zigeriñ"
+msgstr "URL ebet da loc'hañ"
 
 #: ../libmate-desktop/mate-desktop-item.c:2093
 #, c-format
 msgid "Not a launchable item"
-msgstr "N'eo ket un dra da zigeriñ"
+msgstr "N'eo ket un dra da loc'hañ"
 
 #: ../libmate-desktop/mate-desktop-item.c:2103
 #, c-format
 msgid "No command (Exec) to launch"
-msgstr "Urzhiad ebet da loc'hañ (Exec)"
+msgstr "Arc'had ebet da loc'hañ (Exec)"
 
 #: ../libmate-desktop/mate-desktop-item.c:2116
 #, c-format
 msgid "Bad command (Exec) to launch"
-msgstr "Urzhiad fall da loc'hañ (Exec)"
+msgstr "Arc'had fall da loc'hañ (Exec)"
 
 #: ../libmate-desktop/mate-desktop-item.c:3599
 #, c-format
 msgid "Unknown encoding of: %s"
-msgstr "Kodadur %s a zo dianav"
+msgstr "Enbonegañ %s a zo dianav"
 
 #: ../libmate-desktop/mate-desktop-utils.c:152
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr "Dibosupl eo kavout un dermenell, implijet e vo xterm met n'ez aio ket en-dro marteze"
+msgstr "N'eus ket tu da gaout un dermenell, implijet e vo xterm, Met ne c'hallfe ket labourat"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:484
+#: ../libmate-desktop/mate-rr.c:460
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
-msgstr "Dibosupl eo kaout al loazioù skramm (CRTCoù, ezkasoù, modoù)"
+msgstr "dibosupl eo kaout al loazioù skramm (CRTCoù, ec'hankadoù, modoù)"
 
-#: ../libmate-desktop/mate-rr.c:504
+#: ../libmate-desktop/mate-rr.c:480
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
-msgstr "fazi X dianav en ur adtapout al listennad mentoù skramm"
+msgstr "fazi X dic'hortoz en ur adtapout ledad ar mentoù skramm"
 
-#: ../libmate-desktop/mate-rr.c:510
+#: ../libmate-desktop/mate-rr.c:486
 #, c-format
 msgid "could not get the range of screen sizes"
-msgstr "Dibosupl eo kaout al listennad mentoù skramm"
+msgstr "dibosupl eo kaout ledad ar mentoù skramm"
 
-#: ../libmate-desktop/mate-rr.c:737
+#: ../libmate-desktop/mate-rr.c:709
 #, c-format
 msgid "RANDR extension is not present"
-msgstr "N'eo ket amañ an askouezh RANDR"
+msgstr "N'emañ ket amañ an askouezh RANDR"
 
-#: ../libmate-desktop/mate-rr.c:1295
+#: ../libmate-desktop/mate-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
-msgstr "Dibosupl eo kaout titouroù diwar-benn an ezkas %d"
+msgstr "dibosupl eo kaout titouroù diwar-benn an ec'hankad %d"
 
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1737
+#: ../libmate-desktop/mate-rr.c:1748
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr "Ar ment hag al lec'hiadur goulennet evit ar CRTC %d zo er-maez termenoù aotret: lec'hiadur=(%d, %d), ment=(%d, %d), uc'hek=(%d, %d)"
+msgstr "ar vent hag al lec'hiadur goulennet evit ar CRTC %d zo er-maez eus ar vevenn aotret : lec'hiadur=(%d, %d), ment=(%d, %d), uc'hek=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1771
+#: ../libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
-msgstr "Dibosupl eo termeniñ ar c'hefluniadur evit CRTC %d"
+msgstr "dibosupl eo termeniñ ar c'hefluniadur evit CRTC %d"
 
-#: ../libmate-desktop/mate-rr.c:1923
+#: ../libmate-desktop/mate-rr.c:1946
 #, c-format
 msgid "could not get information about CRTC %d"
-msgstr "Dibosupl eo kaout titouroù diwar-benn CRTC %d"
+msgstr "dibosupl eo kaout titouroù diwar-benn CRTC %d"
 
 #: ../libmate-desktop/mate-rr-config.c:555
 msgid "Laptop"
@@ -592,24 +593,24 @@ msgstr "Urzhiataer hezoug"
 #, c-format
 msgid ""
 "none of the saved display configurations matched the active configuration"
-msgstr ""
+msgstr "kefluniadur ebet e-touez ar c'hefluniadurioù enrollet ne glot gant ar c'hefluniadur oberiant"
 
-#: ../libmate-desktop/mate-rr-config.c:1501
+#: ../libmate-desktop/mate-rr-config.c:1486
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr ""
 
-#: ../libmate-desktop/mate-rr-config.c:1508
+#: ../libmate-desktop/mate-rr-config.c:1493
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr ""
 
-#: ../libmate-desktop/mate-rr-config.c:1519
+#: ../libmate-desktop/mate-rr-config.c:1504
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr ""
 
-#: ../libmate-desktop/mate-rr-config.c:1533
+#: ../libmate-desktop/mate-rr-config.c:1518
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -618,29 +619,29 @@ msgid ""
 "existing rotation = %s, new rotation = %s"
 msgstr ""
 
-#: ../libmate-desktop/mate-rr-config.c:1548
+#: ../libmate-desktop/mate-rr-config.c:1533
 #, c-format
 msgid "cannot clone to output %s"
 msgstr ""
 
-#: ../libmate-desktop/mate-rr-config.c:1717
+#: ../libmate-desktop/mate-rr-config.c:1702
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr ""
 
-#: ../libmate-desktop/mate-rr-config.c:1741
+#: ../libmate-desktop/mate-rr-config.c:1726
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 
-#: ../libmate-desktop/mate-rr-config.c:1788
+#: ../libmate-desktop/mate-rr-config.c:1773
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
 msgstr ""
 
-#: ../libmate-desktop/mate-rr-config.c:1792
+#: ../libmate-desktop/mate-rr-config.c:1777
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -650,7 +651,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1874
+#: ../libmate-desktop/mate-rr-config.c:1859
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -667,887 +668,885 @@ msgstr "N'eo ket mat ar ment galloudel goulennet war ar ment posubl: goulenn=(%d
 msgid "Mirror Screens"
 msgstr "Skrammoù klon"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
-msgstr ""
+msgstr "etremez izek e milieilennoù"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr ""
+msgstr "Leuskel a-gostez mar bez pouezet war the _same_ key e-korf @delay milieilenn."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
-msgstr ""
+msgstr "Pikselioù dre eilenn"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr ""
+msgstr "Pet piksel dre eilenn evit an dilec'hiañ gant an tizh uc'hek."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr ""
+msgstr "Pe hir evit an herrekaat e milieilennoù"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr ""
+msgstr "Pet milieilenn ez eus ezhomm da vont eus 0 betek an tizh uc'hekañ."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
 msgid "Initial delay in milliseconds"
-msgstr ""
+msgstr "Dale en derou e milieilennoù"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
-msgstr ""
+msgstr "Pet milieilenn zo da c'hortoz kent ma krogo dilec'hidur al logodenn da vezañ efedus."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
 msgid "Minimum interval in milliseconds"
-msgstr ""
+msgstr "Etremez izek e milieilennoù"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr ""
+msgstr "Ne vo ket asantet ma vo pouezet ur stokell warni anez ma vefe dalc'het @delay milieilenn."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
-msgstr ""
+msgstr "Diweredekaat mar befe pouezet war div stokell diouzh an dro."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Beep when a modifier is pressed."
-msgstr ""
+msgstr "Bipañ pa vo pouezet war un daskemmer."
 
-#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr ""
+msgstr "Loc'hañ an arloadoù dre galvezouriezh ameilañ"
 
-#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
-msgstr ""
+msgstr "Roll an arloadoù dre galvezouriezh ameilañ da loc'hañ pa vez kennasket ouzh burev MATE"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Arloadoù dre galvezouriezh ameilañ evit an hefiñvder plijet gwell ganeoc'h"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr ""
+msgstr "Arloadoù dre galvezouriezh ameilañ evit an hefiñvder plijet gwell ganeoc'h da vezañ arveret evit ar c'hennaskañ, al lañserioù pe an arc'hadoù."
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Loc'hañ an arloadoù dre galvezouriezh ameilañ evit an hefiñvder plijet gwell ganeoc'h"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr ""
+msgstr "MATE da loc'hañ an arloadoù dre galvezouriezh ameilañ evit an hefiñvder e-pad ar c'hennaskañ."
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "Arloadoù dre galvezouriezh ameilañ evit ar gweled plijet gwell ganeoc'h"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
 "Preferred Visual assistive technology application be used for login, menu, "
 "or command line."
-msgstr ""
+msgstr "Arloadoù dre galvezouriezh ameilañ evit ar gweled plijet gwell ganeoc'h da vezañ arveret evit ar c'hennaskañ, al lañserioù pe an arc'hadoù."
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "Loc'hañ an arloadoù dre galvezouriezh ameilañ evit ar gweled plijet gwell ganeoc'h"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr ""
+msgstr "MATE da loc'hañ an arloadoù dre galvezouriezh ameilañ evit ar gweled e-pad ar c'hennaskañ."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
-msgstr ""
+msgstr "Merdeer dre ziouer"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
-msgstr ""
+msgstr "Merdeer dre ziouer evit an holl URLioù."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
 msgid "Browser needs terminal"
-msgstr ""
+msgstr "Eus un dermenell ez eus ezhomm gant ar merdeer"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:4
 msgid "Whether the default browser needs a terminal to run."
-msgstr ""
+msgstr "Mar befe ezhomm eus un dermenell gant ar merdeer dre ziouer."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:5
 msgid "Browser understands remote"
 msgstr ""
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
 msgid "Whether the default browser understands netscape remote."
 msgstr ""
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
-msgstr ""
+msgstr "Deiziataer dre ziouer"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:2
 msgid "Default calendar application"
-msgstr ""
+msgstr "Arload dre ziouer evit an deiziataer"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:3
 msgid "Calendar needs terminal"
-msgstr ""
+msgstr "Un dermenell ez eus ezhomm gant an deiziataer"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr ""
+msgstr "Mar bez ezhomm un dermenell evit ma vo erounezet an deiziataer"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
-msgstr ""
+msgstr "Trevelloù dre ziouer"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
 msgid "Default tasks application"
-msgstr ""
+msgstr "Arloadoù an trevelloù dre ziouer"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:7
 msgid "Tasks needs terminal"
-msgstr ""
+msgstr "An trevelloù o deus ezhomm eus un dermenell"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr ""
+msgstr "Mar befe ezhomm eus un dermenell gant ar merdeer da vont en-dro"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
-msgstr ""
+msgstr "Arload an dermenell"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr ""
+msgstr "Goulev an dermenell da arverañ pa vez loc'het an arloadoù a azgoulenn unan."
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
-msgstr ""
+msgstr "Arguzennoù Erounit"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr ""
+msgstr "Arguzenn arveret da erounit goulevioù en dermenell despizet gant an alc'hwez 'exec/erounit'"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
-msgstr ""
+msgstr "Kempenn drekleur ar burev"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.background.gschema.xml.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr ""
+msgstr "Lakaat MATE da gempenn drekleur ar burev."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
-msgstr ""
+msgstr "Diskouez arlunioù ar burev"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr ""
+msgstr "Lakaet eo bet ardoer restroù MATE (Caja) da gempenn arlunioù ar burev."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
-msgstr ""
+msgstr "Lakaat arveuz gant kemm an drekleur"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.background.gschema.xml.in.h:6
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
-msgstr ""
+msgstr "Mar erspizet da wir e vo lakaet un arveuz gant MATE pa vo kemmet drekleur ar burev."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
-msgstr ""
+msgstr "Dibarzhioù ar skeudennoù"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.background.gschema.xml.in.h:8
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr ""
+msgstr "Despizañ a ra penaos e vo lakaet deouez war skeudennoù arventennet gant wallpaper_filename. Ar gwerzhioù a c'hall talvezout da \"papervoger\", \"kreizet\", \"skeuliadet\" \"astennet\", \"zoum\", \"ledanaet\"."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
-msgstr ""
+msgstr "Anv restr ar skeudenn"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
-msgstr ""
+msgstr "Ar restr da arverañ evit skeudenn an drekleur."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.background.gschema.xml.in.h:11
 msgid "Picture Opacity"
-msgstr ""
+msgstr "Demerez ar skeudenn"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
-msgstr ""
+msgstr "An demerez ma vo kempennet skeudenn an drekleur gantañ."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
-msgstr ""
+msgstr "Liv kentael"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr ""
+msgstr "Liv a-gleiz pe e krec'h pa saver ilrezennoù pe al liv unvan."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
-msgstr ""
+msgstr "Liv eilvedel"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr ""
+msgstr "Liv a-zehou pe en traoñ pa saver ilrezennoù, ne vez ket arveret evit ul liv unvan."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
-msgstr ""
+msgstr "Rizh an anneuenn liv"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.background.gschema.xml.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
-msgstr ""
+msgstr "Penaos lakaat un anneuenn d'al liv drekleur. Ar gwerzhioù a c'hall talvezout da \"ilrezenn a-blaen\", \"ilrezenn aserzh\" hag \"unvan\"."
 
-#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
-msgstr ""
+msgstr "Neuz arlun ar restr"
 
-#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr ""
+msgstr "Neuz arveret evit skrammañ arlunioù ar restroù."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
-msgstr ""
+msgstr "Gweredekaat an haezadusted"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr ""
+msgstr "Mar befe bezañ skor a-fet haezadusted gant an arloadoù."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
-msgstr ""
+msgstr "Gweredekaat ar bliverezhioù"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr ""
+msgstr "Mar befe skrammet ar bliverezhioù. Notenn : un alc'hwez hollek eo homañ, kemmet e vo emzalc'h ardoer ar prenestroù, ar penel h.a."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.interface.gschema.xml.in.h:6
 msgid "Whether menus should have a tearoff."
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Can Change Accels"
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid ""
 "Whether the user can dynamically type a new accelerator when positioned over"
 " an active menuitem."
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Toolbar Style"
-msgstr ""
+msgstr "Stil ar varrennad ostilhoù"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr ""
+msgstr "Stil ar varrennad ostilhoù. Ar gwrzhioù talvoudek a dalv da \"an eil hag egile\", \"an eil hag egile a-blaen\", \"arlunioù\" ha \"testenn\"."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Menus Have Icons"
-msgstr ""
+msgstr "Arlunioù ez eus gant al lañserioù"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr ""
+msgstr "Mar bez skrammet testenn an arlun gant al lañserioù evit un enankad lañser."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Buttons Have Icons"
-msgstr ""
+msgstr "Arlunioù ez eus gant an afelloù"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr ""
+msgstr "Mar bez skrammet un arlun ouzhpenn da destenn an afell gant an afelloù."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Menubar Detachable"
-msgstr ""
+msgstr "Barrennad al lañserioù a c'hall bezañ distaget"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach menubars and move them around."
-msgstr ""
+msgstr "Mar bez distaget barrennadoù al lañserioù gant an arveriad ha dilec'hiet tro dro dezho."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Detachable"
-msgstr ""
+msgstr "Barrennad an ostilhoù a c'hall bezañ distaget"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Whether the user can detach toolbars and move them around."
-msgstr ""
+msgstr "Mar bez distaget barrennadoù an ostilhoù gant an arveriad ha dilec'hiet tro dro dezho."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Toolbar Icon Size"
-msgstr ""
+msgstr "Ment arlun ar varrennad ostilhoù"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:20
+#: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr ""
+msgstr "Ment an arlunioù war ar varrennad ostilhoù, pe \"barrennad ostilhoù vihan\" pe \"barrennad ostilhoù vras\"."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:21
+#: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink"
-msgstr ""
+msgstr "Blinkata ar reti"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:22
+#: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Whether the cursor should blink."
-msgstr ""
+msgstr "Mar dlefe ar reti blinkata."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:23
+#: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Cursor Blink Time"
-msgstr ""
+msgstr "Talm blinkata ar reti"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:24
+#: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr ""
+msgstr "Pad kelc'hiad blinkata ar reti, e milieilennoù."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:25
+#: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Icon Theme"
-msgstr ""
+msgstr "Neuz an arlun"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:26
+#: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Icon theme to use for the panel, caja etc."
-msgstr ""
+msgstr "Neuz evit an arlunioù da arverañ evit ar penel, Caja, h.a."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:27
+#: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
-msgstr ""
+msgstr "Neuz mod Gtk+"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:28
+#: ../schemas/org.mate.interface.gschema.xml.in.h:28
 msgid "Basename of the default theme used by gtk+."
-msgstr ""
+msgstr "Anv an neuz dre ziouer arveret gant Gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:29
+#: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "List of symbolic names and color equivalents"
-msgstr ""
+msgstr "Roll an anvioù arouezel ha kevatalioù d'al livioù"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:30
+#: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
-msgstr ""
+msgstr "Ur roll dispartiet gant '\\n' eus \"anvioù:livioù\" evel ma'z eo bet erspizet gant arventennoù 'livaoueg-gtk'"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:31
+#: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "Default font"
-msgstr ""
+msgstr "Nodrezh dre ziouer"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:32
+#: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the default font used by gtk+."
-msgstr ""
+msgstr "Anv an nodrezh dre ziouer arveret gant gtk+"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:33
+#: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Preedit Style"
-msgstr ""
+msgstr "Stil ragembann HE GTK"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:34
+#: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr ""
+msgstr "Anv stil ragembann hentenn enankañ GTK+ arveret gant gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:35
+#: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Status Style"
-msgstr ""
+msgstr "Stil stad HE GTK"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:36
+#: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr ""
+msgstr "Anv stil stad hentenn enankañ GTK+ arveret gant gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:37
+#: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "GTK IM Module"
-msgstr ""
+msgstr "Mollad HE GTK"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:38
+#: ../schemas/org.mate.interface.gschema.xml.in.h:38
 msgid "Name of the input method module used by GTK+."
-msgstr ""
+msgstr "Anv mollad hentenn enankañ GTK+ arveret gant GTK+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
+#: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "Arverañ barrenn ditl GTK3"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
+#: ../schemas/org.mate.interface.gschema.xml.in.h:40
 msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr ""
+msgstr "Hag-eñ e vo arveret ur varrenn ditl el lein da ziskouez gwered ar widjed pe ur maez gwered en traoñ gant boestadoù emziviz GTK+ evel an dibaber restroù, an dibaber livioù pe an dibaber nodrezhoù. Ne dizho ket an arventennoù-mañ ar boestadoù emziviz personelaet oc'h ober gant GtkDialog end-eeun pe voestad emziviz ar c'hemennadennoù."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
+#: ../schemas/org.mate.interface.gschema.xml.in.h:41
+msgid "Use GTK3 overlay scrolling"
+msgstr "Arverañ dibunañ dre ziguzhat GTK3"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:42
+msgid ""
+"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"scrolling hides and reduces the size of the scrollbar until it gets focus."
+msgstr "Hag-eñ e vo arveret prenestroù dibunet GTK+ enframmet an dibunañ dre ziguzhat. Gantañ e vez kuzhet ha bihanaet ment ar varrenn dibunañ betek ma vo lakaet evezh warni."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "Gweredekaat bliverezhioù mod toolkit-wide GTK"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
+#: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "Hag-eñ e vo gweredekaet bliverezhioù mod toolkit-wide GTK."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
+#: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Document font"
-msgstr ""
+msgstr "Nodrezh an teul"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
+#: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid "Name of the default font used for reading documents."
-msgstr ""
+msgstr "Anv an nodrezh dre ziouer arveret evit lenn an teul."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
+#: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Monospace font"
-msgstr ""
+msgstr "Nodrezh e led fest"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:46
+#: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
-msgstr ""
+msgstr "Anv un nodrezh e led fest da vezañ arveret e lec'hiadurioù evel an temenelloù."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:47
+#: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Use Custom Font"
-msgstr ""
+msgstr "Arverañ un nodrezh personelaet"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:48
+#: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr ""
+msgstr "Mar bez arveret un nodrezh personelaet e arloadoù mod gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:49
+#: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Status Bar on Right"
-msgstr ""
+msgstr "Barrennad ar stad war an tu dehou"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:50
+#: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid "Whether to display a status bar meter on the right."
-msgstr ""
+msgstr "Mar bez skrammet ur varrennad stad war an tu dehou."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:51
+#: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Module for GtkFileChooser"
-msgstr ""
+msgstr "Mollad evit GtkFileChooser"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:52
+#: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
-msgstr ""
+msgstr "Ar mollad da arverañ evel patrom ar reizhiad restroù evit widjed GtkFileChooser. Ar gwerzhioù a vez \"gio\" ha \"gtk+\"."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:53
+#: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Menubar accelerator"
-msgstr ""
+msgstr "Herrekaell barrennad ar stad"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:54
+#: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid "Keyboard shortcut to open the menu bars."
-msgstr ""
+msgstr "Berradennoù klavier da zigeriñ barrennoù al lañserioù."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:55
+#: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Input Methods' menu"
-msgstr ""
+msgstr "Diskouez al lañser 'Hentennoù enankañ'"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:56
+#: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
-msgstr ""
+msgstr "Hag-eñ e vefe kinniget kemmañ an hentenn enankañ gant lañserioù kemperzhel an enankadoù ha gweloù an testennoù."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:57
+#: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Show the 'Unicode Control Character' menu"
-msgstr ""
+msgstr "Diskouez al lañser 'arouezenn reoliñ mod Unicode'"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:58
+#: ../schemas/org.mate.interface.gschema.xml.in.h:60
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
-msgstr ""
+msgstr "Hag-eñ e vefe enlakaet arouezennoù reoliñ mod Unicode gant lañserioù kemperzhel an enankadoù ha gweloù an testennoù."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:59
+#: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr ""
+msgstr "Aozadur barrenn ditl prenestroù kinklet diouzh tu an arveriaded"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:60
+#: ../schemas/org.mate.interface.gschema.xml.in.h:62
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
-msgstr ""
+msgstr "Gant an arvetenn-mañ e tespizer peseurt afelloù a vo lakaet war war warrenn didl prenestroù kinklet diouzh tu an arveriaded ha hag-eñ e vo lakaet war an tu kleiz pe zehou. Lennit https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:61
+#: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "Diskouez an arouezioù kouneiat pa vez pouezet war ar stokell Alt hepken"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:62
+#: ../schemas/org.mate.interface.gschema.xml.in.h:64
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr ""
+msgstr "Hag-eñ e vefe diskouezet ha kuzhet ent-emgefreek an arouezioù kouneiat pa vez pouezet war ar stokell Alt gant an arveriad."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
-msgstr ""
+msgstr "Diweredekaat an arc'had"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr ""
+msgstr "Mirout an arveriad ouzh tihout an dermenell pe ouzh erspizañ un arc'had a rank bezañ erounezet. Da skouer, an dra-mañ a ziweredekafe haezhiñ boestad emziviz ar penel \"Erounit an arload\"."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
-msgstr ""
+msgstr "Diweredekaat enrolladur ar restroù war ar gantenn"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr ""
+msgstr "Mirout an arveriad ouzh enrollañ restroù war ar gantenn. Da skouer, an dra-mañ a ziweredekafe haezhiñ ouzh holl voestadoù emziviz \"Enrollañ evel\" en arloadoù."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
-msgstr ""
+msgstr "Diweredekaat ar moullañ"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr ""
+msgstr "Mirout an arveriad ouzh enrollañ. Da skouer, an dra-mañ a ziweredekafe haezhiñ ouzh holl voestadoù emziviz \"Moullañ\" en arloadoù."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
-msgstr ""
+msgstr "Diweredekaat kefluniadur ar moullañ"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr ""
+msgstr "Mirout an arveriad ouzh daskemmañ arventennoù ar moullañ. Da skouer, an dra-mañ a ziweredekafe haezhiñ ouzh holl voestadoù emziviz \"Kefluniadur ar moullañ\" en arloadoù."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
-msgstr ""
+msgstr "Diweredekaat ar c'hemm-arveriad(ez)"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:10
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr ""
+msgstr "Mirout un arveriad ouzh mont d'un gont all e-pad m'emañ an estez oberiant."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
-msgstr ""
+msgstr "Diweredekaat prennañ ar skramm"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
-msgstr ""
+msgstr "Mirout ouzh an arveriad prennañ ar skramm."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:13
 msgid "Disable URL and MIME type handlers"
-msgstr ""
+msgstr "Diweredekaat an dornelloù o rizhoù MIME hag an URLioù"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr ""
+msgstr "Mirout ouzh erounezadur eus an holl zornelloù o rizhoù MIME hag an URLioù."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
-msgstr ""
+msgstr "Diweredekaat arventennoù an neuz"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:16
 msgid "Prevent the user from changing theme settings."
-msgstr ""
+msgstr "Mirout ouzh an arveriad kemmañ arventennoù an neuz."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:17
 msgid "Disable log out"
-msgstr ""
+msgstr "Diweredekaat an digennaskañ"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:18
 msgid "Prevent the user from logging out."
-msgstr ""
+msgstr "Mirout ouzh an arveriad digennaskañ."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr ""
+msgstr "ar gwerzhioù a c'hall bezañ \"gweredekaat\", \"diweredekaat\" ha \"personelaet\"."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:2
 msgid "Keyboard Bell Custom Filename"
-msgstr ""
+msgstr "Anv restr personelaet kloc'h ar c'hlavier"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:3
 msgid "File name of the bell sound to be played."
-msgstr ""
+msgstr "Anv restr son ar c'hloc'h a vo sonet."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:4
 msgid "Remember NumLock state"
-msgstr ""
+msgstr "Derc'hel soñj e stad PrennañNiveroù"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr ""
+msgstr "Mar gwir e vo dalc'het soñj e stad LED ar PrennañNiveroù etre an estezioù."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
-msgstr ""
+msgstr "Stad PrennañNiveroù"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:7
 msgid "The remembered state of the NumLock LED."
-msgstr ""
+msgstr "Stad chomet e koun eus LED PrennañNiveroù"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:1
 msgid "Mouse button orientation"
-msgstr ""
+msgstr "Reteradur afell al logodenn"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr ""
+msgstr "Kevamsaviñ afelloù kleiz pe zehou al logodenn evit al logodennoù evit ar re gleizat."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Single Click"
-msgstr ""
+msgstr "Klik eeun"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:4
-msgid "Single click to open icons."
-msgstr ""
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
 msgstr ""
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
-msgstr ""
+msgstr "Gwehin ar fiñv"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:6
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
-msgstr ""
+msgstr "Pellder e pikselioù a vo ret d'ar reti en em zilec'hiañ drezañ kent ma vo gweredekaet dilec'hiadur herrekaet ar logodenn. Un werzh -1 a dalv da arventenn dre ziouer ar reizhiad."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
-msgstr ""
+msgstr "Gwehin ar riklañ"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:8
 msgid "Distance before a drag is started."
-msgstr ""
+msgstr "Pellder kent ma vo loc'het ar riklañ."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr ""
+msgstr "Pad an daouglikañ"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
-msgstr ""
+msgstr "Hirder un daouglikañ."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:11
 msgid "Middle button emulation"
-msgstr ""
+msgstr "Darvanañ an afell greiz"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:12
 msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
-msgstr ""
+msgstr "Gweredekaat a ra darvanañ afell greiz al logodenn dre glikañ war an afell gleiz ha dehou war un dro."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
-msgstr ""
+msgstr "Usskediñ lec'hiadur ar biz"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr ""
+msgstr "Usskediñ a ra lec'hiadur bremanel ar biz pa vez pouezet ha dibouezet an afell Ctrl."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor font"
-msgstr ""
+msgstr "Nodrezh ar reti"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
-msgstr ""
+msgstr "Anv nodrezh ar reti. Mar diarventennet e vo arveret an nodrezh dre ziouer. Strewet eo ar werzh-mañ hepken gant loc'hadur pep estez an dafariad X, neuze mar bez kemmet e kreiz un estez ne vo ket efedus ar c'hemm kent ma vo kennasket en-dro ganeoc'h."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
-msgstr ""
+msgstr "Neuz ar reti"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
-msgstr ""
+msgstr "Anv neuz ar reti. Arveret e vez gant an dafariadoùX a skor ar retioùX, evel XFree86 4.3 ha nevesoc'h."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
 msgid "Cursor size"
-msgstr ""
+msgstr "Ment ar reti"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:21
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
 msgid "Size of the cursor referenced by cursor_theme."
-msgstr ""
+msgstr "Ment ar reti lakaet da zaveenn gant cursor_theme."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.sound.gschema.xml.in.h:1
 msgid "Default mixer device"
-msgstr ""
+msgstr "Trevnad kemmeskañ dre ziouer"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.sound.gschema.xml.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr ""
+msgstr "An trevnad kemmeskañ dre ziouer arveret gant ar berradennoù klavier liesvedia."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.sound.gschema.xml.in.h:3
 msgid "Default mixer tracks"
-msgstr ""
+msgstr "Meziant kemmeskañ al loabroù dre ziouer"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.sound.gschema.xml.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr ""
+msgstr "Ar meziant kemmeskañ al loabroù dre ziouer arveret gant ar berradennoù klavier liesvedia."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
-msgstr ""
+msgstr "Gweredekaat ESD"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
-msgstr ""
+msgstr "Gweredekaat loc'hadur dafariad ar sonioù"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
-msgstr ""
+msgstr "Sonioù evit an degouezhioù"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.sound.gschema.xml.in.h:8
 msgid "Whether to play sounds on user events."
-msgstr ""
+msgstr "Hag-eñ e vo sonet sonioù gant degouezhioù an arveriad."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
-msgstr ""
+msgstr "Anv dodenn ar sonioù"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.sound.gschema.xml.in.h:10
 msgid "The XDG sound theme to use for event sounds."
-msgstr ""
+msgstr "Dodenn ar sonioù mod XDG da arverañ evit sonioù an degouezhioù."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.sound.gschema.xml.in.h:11
 msgid "Input feedback sounds"
 msgstr ""
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.sound.gschema.xml.in.h:12
 msgid "Whether to play sounds on input events."
-msgstr ""
+msgstr "Hag-eñ e vo sonet sonioù gant an degouezhioù enankañ."
 
-#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
-msgstr ""
+msgstr "Oad uc'hek eus ar melvennoù er grubuilh, e deizioù. Lakaat da -1 evit diweredekaat ar skarzhañ."
 
-#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr ""
+msgstr "Ment uc'hek eus ar melvennoù er grubuilh, e megaeizhbitoù. Lakaat da -1 evit diweredekaat ar skarzhañ."
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
-msgstr ""
+msgstr "Diweredekaat an holl arloadoù diavaez da ardeiñ ar malvennoù"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:2
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
-msgstr ""
+msgstr "Lakaat da wir da ziweredekaat an holl arloadoù diavaez da ardeiñ ar malvennoù, dizalc'h diouzh ar fed emaint gweredekaet/diweredekaet pep hini diouzh e du."
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
-msgstr ""
+msgstr "Roll ar rizhoù MIME ma vo gweredekaet an arloadoù diavaez da ardeiñ ar melvennoù evitañ"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:4
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr ""
+msgstr "Ar melvennoù ne vint ket krouet evit ar restroù o rizhoù MIME a zo war ar roll-mañ."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"
-msgstr ""
+msgstr "Pad biziata"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr ""
+msgstr "Niver a vunutennvezhioù biziata kent ma loc'ho ar mod arsaviñ."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"
-msgstr ""
+msgstr "Pad arsaviñ"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
 msgid "Number of minutes that the typing break should last."
-msgstr ""
+msgstr "Niver a vunutennoù a rankfe padout arsav ar biziata."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:5
 msgid "Allow postponing of breaks"
-msgstr ""
+msgstr "Aotren daleañ an arsavioù"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
-msgstr ""
+msgstr "Hag-eñ e vo daleet pe get skramm arsav ar biziata."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
 msgid "Whether or not keyboard locking is enabled"
-msgstr ""
+msgstr "Hag-eñ e vo gweredekaet pe get prennañ ar c'hlavier"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:8
 msgid "Whether or not keyboard locking is enabled."
-msgstr ""
+msgstr "Hag-eñ e vo gweredekaet pe get prennañ ar c'hlavier."
 
-#: ../tools/mate-color-select.c:62
+#: ../tools/mate-color-select.c:63
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
-msgstr ""
+msgstr "Diuzadur livioù MATE"
 
 #: ../tools/mate-color-select.desktop.in.in.h:2
 msgid "Color selection dialog"
-msgstr ""
+msgstr "Boestad emziviz diuzadur al livioù"
 
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
-msgstr ""
+msgstr "Dibab livioù diwar al livaoueg pe ar skramm"
 
 #: ../tools/mate-conf-import.desktop.in.in.h:1
 msgid "Migrate MATE 1.4 settings"
-msgstr ""
+msgstr "Treuztiriañ arventennoù MATE 1.4"
 
 #: ../tools/mate-conf-import.desktop.in.in.h:2
 msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr ""
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:1
-msgid "Help"
-msgstr ""
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:2
-msgid "Get help with MATE"
-msgstr ""
+msgstr "Ostilh da dreuztiriañ arventennoù MATE 1.4 betek MATE 1.6"

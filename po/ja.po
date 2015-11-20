@@ -7,6 +7,7 @@
 # BALLOON a.k.a. Fu-sen., 2014
 # BALLOON a.k.a. Fu-sen., 2014
 # negativezero <blackhole89@gmail.com>, 2014
+# Ikuru Kanum <kanumaiku@gmail.com>, 2015
 # Mika Kobayashi, 2014
 # Mika Kobayashi, 2014
 # negativezero <blackhole89@gmail.com>, 2014
@@ -14,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-28 18:04+0200\n"
-"PO-Revision-Date: 2015-07-31 12:48+0000\n"
-"Last-Translator: ABE Tsunehiko\n"
+"POT-Creation-Date: 2015-11-06 15:16+0300\n"
+"PO-Revision-Date: 2015-11-06 12:19+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Japanese (http://www.transifex.com/mate/MATE/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +27,7 @@ msgstr ""
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:106
+#: ../mate-about/mate-about.c:96
 msgid "translator-credits"
 msgstr "翻訳者のクレジット"
 
@@ -38,25 +39,25 @@ msgstr "MATE について"
 msgid "Learn more about MATE"
 msgstr "MATE についてもっとよく知るには?"
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE は伝統的なメタファーを用いた、直感的かつ魅力的な、Linux ユーザーのためのデスクトップです。"
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "MATE は、ファイルマネージャー、ドキュメントビューワー、イメージビューワー、メニューなど、コンピューター上でよく見かけるほとんどのアプリケーションを含んでいます。"
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE は Unix ライクなOS向けの、フリーで、使いやすく、安定していて、身近なデスクトップ環境です。"
 
-#: ../mate-about/mate-about.h:55
+#: ../mate-about/mate-about.h:54
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -64,13 +65,13 @@ msgid ""
 "assurance."
 msgstr "MATEはGNOME2への貢献の1つです。1997年以来、何百人もの人々がコードを寄贈し、更に多くの人々が翻訳、文書作成、品質向上などの様々な貢献を行ってきました。"
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 は最もポピュラーな Linux のデスクトップ環境でしたが、もう入手できません。 MATE は同様のデスクトップ環境をあなたに提供します！"
 
-#: ../mate-about/mate-about.h:62
+#: ../mate-about/mate-about.h:61
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -85,137 +86,137 @@ msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "不明"
 
-#: ../libmate-desktop/mate-aboutdialog.c:180
+#: ../libmate-desktop/mate-aboutdialog.c:179
 msgid "Could not show link"
 msgstr "リンクを表示できませんでした"
 
-#: ../libmate-desktop/mate-aboutdialog.c:236
+#: ../libmate-desktop/mate-aboutdialog.c:235
 msgid "Program name"
 msgstr "プログラム名"
 
-#: ../libmate-desktop/mate-aboutdialog.c:237
+#: ../libmate-desktop/mate-aboutdialog.c:236
 msgid ""
 "The name of the program. If this is not set, it defaults to "
 "g_get_application_name()"
 msgstr "プログラム名。未設定の場合には、初期値としてg_get_application_name()が使用されます。"
 
-#: ../libmate-desktop/mate-aboutdialog.c:251
+#: ../libmate-desktop/mate-aboutdialog.c:250
 msgid "Program version"
 msgstr "プログラムのバージョン"
 
-#: ../libmate-desktop/mate-aboutdialog.c:252
+#: ../libmate-desktop/mate-aboutdialog.c:251
 msgid "The version of the program"
 msgstr "プログラムのバージョンです"
 
-#: ../libmate-desktop/mate-aboutdialog.c:266
+#: ../libmate-desktop/mate-aboutdialog.c:265
 msgid "Copyright string"
 msgstr "著作権表示の文字列"
 
-#: ../libmate-desktop/mate-aboutdialog.c:267
+#: ../libmate-desktop/mate-aboutdialog.c:266
 msgid "Copyright information for the program"
 msgstr "プログラムの著作権情報です"
 
-#: ../libmate-desktop/mate-aboutdialog.c:284
+#: ../libmate-desktop/mate-aboutdialog.c:283
 msgid "Comments string"
 msgstr "コメントの文字列"
 
-#: ../libmate-desktop/mate-aboutdialog.c:285
+#: ../libmate-desktop/mate-aboutdialog.c:284
 msgid "Comments about the program"
 msgstr "プログラムについてのコメントです"
 
-#: ../libmate-desktop/mate-aboutdialog.c:303
+#: ../libmate-desktop/mate-aboutdialog.c:302
 #: ../libmate-desktop/mate-aboutdialog.c:2161
 msgid "License"
 msgstr "ライセンス"
 
-#: ../libmate-desktop/mate-aboutdialog.c:304
+#: ../libmate-desktop/mate-aboutdialog.c:303
 msgid "The license of the program"
 msgstr "プログラムのライセンス"
 
-#: ../libmate-desktop/mate-aboutdialog.c:319
+#: ../libmate-desktop/mate-aboutdialog.c:318
 msgid "Website URL"
 msgstr "ウェブサイト URL"
 
-#: ../libmate-desktop/mate-aboutdialog.c:320
+#: ../libmate-desktop/mate-aboutdialog.c:319
 msgid "The URL for the link to the website of the program"
 msgstr "プログラムのウェブサイトへのリンクするためのURL"
 
-#: ../libmate-desktop/mate-aboutdialog.c:335
+#: ../libmate-desktop/mate-aboutdialog.c:334
 msgid "Website label"
 msgstr "Webサイトラベル"
 
-#: ../libmate-desktop/mate-aboutdialog.c:336
+#: ../libmate-desktop/mate-aboutdialog.c:335
 msgid ""
 "The label for the link to the website of the program. If this is not set, it"
 " defaults to the URL"
 msgstr "プログラムのWebサイトへのリンクを表示するラベル。未設定の場合には、初期値としてURLが使用されます。"
 
-#: ../libmate-desktop/mate-aboutdialog.c:352
+#: ../libmate-desktop/mate-aboutdialog.c:351
 msgid "Authors"
 msgstr "作者"
 
-#: ../libmate-desktop/mate-aboutdialog.c:353
+#: ../libmate-desktop/mate-aboutdialog.c:352
 msgid "List of authors of the program"
 msgstr "プログラムの作者一覧"
 
-#: ../libmate-desktop/mate-aboutdialog.c:369
+#: ../libmate-desktop/mate-aboutdialog.c:368
 msgid "Documenters"
 msgstr "文書の著者"
 
-#: ../libmate-desktop/mate-aboutdialog.c:370
+#: ../libmate-desktop/mate-aboutdialog.c:369
 msgid "List of people documenting the program"
 msgstr "このプログラムのドキュメントを作成した方々の一覧です"
 
-#: ../libmate-desktop/mate-aboutdialog.c:386
+#: ../libmate-desktop/mate-aboutdialog.c:385
 msgid "Artists"
 msgstr "アーティスト"
 
-#: ../libmate-desktop/mate-aboutdialog.c:387
+#: ../libmate-desktop/mate-aboutdialog.c:386
 msgid "List of people who have contributed artwork to the program"
 msgstr "このプログラムのアートワークを作成した方々の一覧です"
 
-#: ../libmate-desktop/mate-aboutdialog.c:404
+#: ../libmate-desktop/mate-aboutdialog.c:403
 msgid "Translator credits"
 msgstr "翻訳者のクレジット"
 
-#: ../libmate-desktop/mate-aboutdialog.c:405
+#: ../libmate-desktop/mate-aboutdialog.c:404
 msgid ""
 "Credits to the translators. This string should be marked as translatable"
 msgstr "翻訳者のクレジット。この文字列は翻訳可能である必要があります。"
 
-#: ../libmate-desktop/mate-aboutdialog.c:420
+#: ../libmate-desktop/mate-aboutdialog.c:419
 msgid "Logo"
 msgstr "ロゴ"
 
-#: ../libmate-desktop/mate-aboutdialog.c:421
+#: ../libmate-desktop/mate-aboutdialog.c:420
 msgid ""
 "A logo for the about box. If this is not set, it defaults to "
 "gtk_window_get_default_icon_list()"
 msgstr "情報画面に表示するロゴ。未設定の場合には、初期値としてgtk_window_get_default_icon_list()が使用されます。"
 
-#: ../libmate-desktop/mate-aboutdialog.c:436
+#: ../libmate-desktop/mate-aboutdialog.c:435
 msgid "Logo Icon Name"
 msgstr "ロゴアイコン名"
 
-#: ../libmate-desktop/mate-aboutdialog.c:437
+#: ../libmate-desktop/mate-aboutdialog.c:436
 msgid "A named icon to use as the logo for the about box."
 msgstr "情報画面にロゴとして表示するアイコン。"
 
-#: ../libmate-desktop/mate-aboutdialog.c:450
+#: ../libmate-desktop/mate-aboutdialog.c:449
 msgid "Wrap license"
 msgstr "ライセンスの改行"
 
-#: ../libmate-desktop/mate-aboutdialog.c:451
+#: ../libmate-desktop/mate-aboutdialog.c:450
 msgid "Whether to wrap the license text."
 msgstr "ライセンスの文章を改行するかどうかです。"
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:544
+#: ../libmate-desktop/mate-aboutdialog.c:543
 msgid "C_redits"
 msgstr "クレジット(_R)"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:558
+#: ../libmate-desktop/mate-aboutdialog.c:557
 msgid "_License"
 msgstr "ライセンス(_L)"
 
@@ -546,27 +547,27 @@ msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "端末が見つからなかったので強制的に xterm を使用します (正しく動作しないかもしれません)"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:484
+#: ../libmate-desktop/mate-rr.c:460
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "画面のリソース (いろいろな CRTC、出力、モード等) を取得できませんでした"
 
-#: ../libmate-desktop/mate-rr.c:504
+#: ../libmate-desktop/mate-rr.c:480
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "画面の解像度を取得する際にXサーバで原因不明のエラーが発生しました"
 
-#: ../libmate-desktop/mate-rr.c:510
+#: ../libmate-desktop/mate-rr.c:486
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "画面の解像度を取得できませんでした"
 
-#: ../libmate-desktop/mate-rr.c:737
+#: ../libmate-desktop/mate-rr.c:709
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "RANDR 拡張がインストールされていません"
 
-#: ../libmate-desktop/mate-rr.c:1295
+#: ../libmate-desktop/mate-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "出力 %d に関する情報を取得できませんでした"
@@ -574,19 +575,19 @@ msgstr "出力 %d に関する情報を取得できませんでした"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1737
+#: ../libmate-desktop/mate-rr.c:1748
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "要求した CRTC %d の位置やサイズが許容範囲を超えました: 位置 (%d, %d)、サイズ (%d, %d) / 許容範囲 (%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1771
+#: ../libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "CRTC %d の設定をセットできませんでした"
 
-#: ../libmate-desktop/mate-rr.c:1923
+#: ../libmate-desktop/mate-rr.c:1946
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "CRTC %d に関する情報を取得できませんでした"
@@ -601,22 +602,22 @@ msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "保存したディスプレイの設定に一致する現在の設定はありません"
 
-#: ../libmate-desktop/mate-rr-config.c:1501
+#: ../libmate-desktop/mate-rr-config.c:1486
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d は出力 %s をドライブできません"
 
-#: ../libmate-desktop/mate-rr-config.c:1508
+#: ../libmate-desktop/mate-rr-config.c:1493
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "出力 %s は %dx%d@%dHz のモードをサポートしていません"
 
-#: ../libmate-desktop/mate-rr-config.c:1519
+#: ../libmate-desktop/mate-rr-config.c:1504
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d は rotation=%s をサポートしていません"
 
-#: ../libmate-desktop/mate-rr-config.c:1533
+#: ../libmate-desktop/mate-rr-config.c:1518
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -625,29 +626,29 @@ msgid ""
 "existing rotation = %s, new rotation = %s"
 msgstr "出力 %s は他のクローン出力と同じパラメータを持っていません:\n現在 mode = %d, 新 mode = %d\n現在 coordinates = (%d, %d), 新 coordinates = (%d, %d)\n現在 rotation = %s, 新 rotation = %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1548
+#: ../libmate-desktop/mate-rr-config.c:1533
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "出力 %s をクローンできません"
 
-#: ../libmate-desktop/mate-rr-config.c:1717
+#: ../libmate-desktop/mate-rr-config.c:1702
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "CRTC %d のモードを試します\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1741
+#: ../libmate-desktop/mate-rr-config.c:1726
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr "CRTC %d: %dx%d@%dHz のモードを %dx%d@%dHz (%d パス) の出力で試します\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1788
+#: ../libmate-desktop/mate-rr-config.c:1773
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
 msgstr "CRTC を出力に割り当てできませんでした:\n%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1792
+#: ../libmate-desktop/mate-rr-config.c:1777
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -657,7 +658,7 @@ msgstr "選択したモードはどれも利用可能なモードと互換性が
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1874
+#: ../libmate-desktop/mate-rr-config.c:1859
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -674,430 +675,430 @@ msgstr "要求した仮想サイズと実際のサイズがマッチしません
 msgid "Mirror Screens"
 msgstr "複数の画面をミラーする"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
 msgstr "最小の間隔 (ミリ秒単位)"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr "@delay ミリ秒内に同じキーが複数回押されても無視します。"
+msgstr "@delay ミリ秒以内に同じキーを複数回叩いても無視します。"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
-msgstr "単位秒あたりのピクセル数"
+msgstr "ピクセル毎秒"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr "最高速度の時にどれくらい移動させるか"
+msgstr "最高速時に1秒あたり何ピクセル移動するかを指定します。"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr "加速するまでに何ミリ秒遅延するか"
+msgstr "加速にかかる時間 (ミリ秒単位)"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr "速さが0から最大値になるまで何ミリ秒かかるか"
+msgstr "停止状態から最高速まで加速するのに何ミリ秒かかるかを設定します。"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
 msgid "Initial delay in milliseconds"
-msgstr "初期の遅延 (ミリ秒単位)"
+msgstr "動作開始時の遅延 (ミリ秒単位)"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
-msgstr "マウス・キーでマウスが移動するまでに何ミリ秒遅延させるか"
+msgstr "マウスキーでマウスが移動を開始するまでに遅延させる時間をミリ秒で指定します。"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
 msgid "Minimum interval in milliseconds"
-msgstr "最小の間隔 (ミリ秒単位)"
+msgstr "最小間隔 (ミリ秒単位)"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr "@deley ミリ秒間押し続けるまでキー入力を無視します。"
+msgstr "@delay ミリ秒間キーを押し続けるまで入力を受け付けなくします。"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
-msgstr "同時に二つのキーを押下したら無効にします。"
+msgstr "同時に二つのキーが押された場合無効にします。"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Beep when a modifier is pressed."
 msgstr "修飾キーが押されたらビープ音を鳴らします。"
 
-#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr "支援技術のアプリケーションを起動する"
+msgstr "スタートアップ時の支援技術アプリケーション"
 
-#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
-msgstr "MATE デスクトップにログインした後に起動する支援技術 (Assistive Technology) アプリケーションの並びです。"
+msgstr "MATE デスクトップにログインした直後に自動的に起動する支援技術アプリケーションの一覧です。"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr "起動する移動性支援技術のアプリケーション"
+msgstr "起動する移動性支援技術アプリケーション"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr "ログインやメニュー、あるいはコマンドラインで利用する移動性支援技術 (Mobility Assistive Technology) をサポートしたアプリケーションです。"
+msgstr "ログインやメニュー、あるいはコマンドラインで利用する移動性支援技術アプリケーションです。"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr "移動性支援技術をサポートしたアプリケーションを起動する"
+msgstr "移動性支援技術アプリケーションを起動する"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr "ログインしたら移動性支援技術 (Mobility Assistive Technology) をサポートするアプリケーションを優先して起動するかどうかです。"
+msgstr "ログイン中に移動性支援技術アプリケーションを起動します。"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
 msgstr "起動する視覚支援技術のアプリケーション"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
 "Preferred Visual assistive technology application be used for login, menu, "
 "or command line."
-msgstr "ログインやメニュー、あるいはコマンドラインで利用する視覚支援技術 (Visual Assistive Technology) をサポートしたアプリケーションです。"
+msgstr "ログインやメニュー、あるいはコマンドラインで利用する視覚支援技術アプリケーションです。"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr "視覚支援技術をサポートしたアプリケーションを起動する"
+msgstr "視覚支援技術アプリケーションを起動する"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr "ログインしたら視覚支援技術 (Visual Assistive Technology) をサポートするアプリケーションを優先して起動するかどうかです。"
+msgstr "ログイン中に視覚支援技術アプリケーションを起動します。"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
-msgstr "デフォルトのブラウザ"
+msgstr "標準のブラウザー"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
-msgstr "すべての URL で利用するデフォルトのブラウザです。"
+msgstr "全ての URL に対して使用する標準のブラウザーです。"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
 msgid "Browser needs terminal"
-msgstr "ブラウザを端末から起動する"
+msgstr "ブラウザーを端末から起動する"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:4
 msgid "Whether the default browser needs a terminal to run."
-msgstr "デフォルトのブラウザを実行するのに端末が必要かどうかです。"
+msgstr "標準のブラウザを起動する際端末が必要かどうかを設定します。"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:5
 msgid "Browser understands remote"
-msgstr "ブラウザはリモートを理解する"
+msgstr "remote を利用できるブラウザー"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
 msgid "Whether the default browser understands netscape remote."
-msgstr "デフォルトのブラウザが Netscape リモートを理解するかどうかです。"
+msgstr "標準のブラウザーが Netscape remote を利用できるかどうかを設定します。"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
-msgstr "デフォルトのカレンダ"
+msgstr "標準のカレンダー"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:2
 msgid "Default calendar application"
-msgstr "デフォルトのカレンダ・アプリケーションです。"
+msgstr "標準のカレンダーアプリケーションです。"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:3
 msgid "Calendar needs terminal"
-msgstr "カレンダを端末から起動する"
+msgstr "カレンダーを端末から起動する"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr "デフォルトのカレンダ・アプリケーションを実行するのに端末が必要かどうかです。"
+msgstr "標準のカレンダーアプリケーションを起動する際端末が必要かどうかを設定します。"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
-msgstr "デフォルトのタスク"
+msgstr "標準のタスク管理"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
 msgid "Default tasks application"
-msgstr "デフォルトのタスク管理アプリケーションです"
+msgstr "標準のタスク管理アプリケーション"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:7
 msgid "Tasks needs terminal"
-msgstr "タスクを端末から起動する"
+msgstr "タスク管理を端末から起動する"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr "デフォルトのタスク管理アプリケーションを実行するのに端末が必要かどうかです。"
+msgstr "標準のタスク管理アプリケーションを起動する際端末が必要かどうかを設定します。"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
 msgstr "端末アプリケーション"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr "端末から起動する必要のあるアプリケーションから利用される端末プログラムです。"
+msgstr "アプリケーションを端末から起動する場合に使用する端末を設定します。"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
 msgstr "実行時の引数"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
 msgstr "'exec' キーで定義された、端末でプログラムを実行するために利用する引数です。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
 msgstr "デスクトップの背景を描画する"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.background.gschema.xml.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr "MATE にデスクトップの背景を描画させるかどうかです。"
+msgstr "MATE がデスクトップの背景を描画するかを設定します。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
 msgstr "デスクトップのアイコンを表示する"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "MATE ファイルマネージャ (Caja) にデスクトップアイコンを描画させます。"
+msgstr "MATE ファイルマネージャ (Caja) がデスクトップのアイコンを描画するかを設定します。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
-msgstr "切替時にフェードする"
+msgstr "背景を変更する際にフェードする"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.background.gschema.xml.in.h:6
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
-msgstr "TRUEにすると、デスクトップの背景を切り替える際にフェード効果を付与します。"
+msgstr "TRUE にすると、デスクトップの背景を切り替える際にフェード効果を付与します。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
 msgstr "画像のオプション"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.background.gschema.xml.in.h:8
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr "wallpaper_filename で指定した画像をどのように描画するか設定します。設定可能な値: \"none\"、\"wallpaper\"、\"centered\"、\"scaled\"、\"stretched\"、\"zoom\"、\"spanned\""
+msgstr "wallpaper_filename で指定した画像をどのように描画するか設定します。設定可能な値: \"wallpaper\"、\"centered\"、\"scaled\"、\"stretched\"、\"zoom\"、\"spanned\""
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
 msgstr "画像のファイル名"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
 msgstr "背景の画像に使用するファイルです。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.background.gschema.xml.in.h:11
 msgid "Picture Opacity"
 msgstr "画像の透明度"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
 msgstr "背景の画像に適用する透明度です。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
 msgstr "一番目の色"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
 msgstr "グラデーション時の左側もしくは上側の色、あるいは単色時の色です。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
 msgstr "二番目の色"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr "グラデーション時の右側もしくは下側の色、あるいは単色時の色です。"
+msgstr "グラデーション時の右側もしくは下側の色です。単色の時には使用しません。"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
 msgstr "色調の変化"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.background.gschema.xml.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr "背景の色調をどのように変化させるか設定します。設定可能な値: \"horizontal-gradient\"、\"vertical-gradient\"、\"solid\""
 
-#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
-msgstr "ファイル・アイコンのテーマ"
+msgstr "ファイルアイコンのテーマ"
 
-#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr "ファイルのアイコンに適用するテーマです。"
+msgstr "ファイルアイコンを表図する際に使用するテーマです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
 msgstr "アクセシビリティを有効にする"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr "アプリケーションにアクセシビリティをサポートさせるかどうかです。"
+msgstr "アプリケーションがアクセシビリティをサポートするかどうかを設定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
 msgstr "アニメーションを有効にする"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr "アニメーションを有効にするかどうかを設定します。[注意] これはグローバルな設定なので、ウィンドウ・マネージャやパネルなどの挙動に影響します。"
+msgstr "アニメーションを有効にするかどうかを設定します。[注意] これはグローバルな設定なので、ウィンドウマネージャーやパネルなどの挙動に影響します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
-msgstr "メニューに可動メニューを表示する"
+msgstr "メニューを可動にする"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.interface.gschema.xml.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr "メニューを切り離せるようにするかどうかです。"
+msgstr "メニューを切り離せるようにするかどうかを設定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Can Change Accels"
-msgstr "アクセラレーション・キーを変更できるようにする"
+msgstr "アクセラレーションキーを変更できるようにする"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid ""
 "Whether the user can dynamically type a new accelerator when positioned over"
 " an active menuitem."
-msgstr "メニューアイテムを利用可能な状態にして、新しいアクセラレータを直接入力し登録することができるかどうかです。"
+msgstr "利用可能なメニューアイテムを選択した状態でキーを入力した際、新しいアクセラレータを登録できるようにするかを設定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Toolbar Style"
 msgstr "ツールバーの形式"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr "ツールバーのスタイルです。設定可能な値: \"both\"、\"both-horiz\"、\"icons\"、\"text\""
+msgstr "ツールバーの表示形式を設定します。設定可能な値: \"both\"、\"both-horiz\"、\"icons\"、\"text\""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Menus Have Icons"
 msgstr "メニューにアイコンを表示する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
 msgstr "メニュー項目の隣にアイコンを表示するかどうかです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Buttons Have Icons"
 msgstr "ボタンにアイコンを表示するかどうか"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether buttons may display an icon in addition to the button text."
 msgstr "ボタンにラベルとアイコンの両方を表示するかどうかです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Menubar Detachable"
 msgstr "メニューバーを取り外せるようにする"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach menubars and move them around."
 msgstr "メニューバーを取り外して移動できるようにするかどうかです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Detachable"
 msgstr "ツールバーを取り外せるようにする"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Whether the user can detach toolbars and move them around."
 msgstr "ツールバーを取り外して移動できるようにするかどうかです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Toolbar Icon Size"
 msgstr "ツールバーのアイコンのサイズ"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:20
+#: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr "ツールバーに表示するアイコンの大きさです。設定可能な値: \"small-toolbar\" または \"large-toolbar\""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:21
+#: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink"
-msgstr "カーソルの点滅"
+msgstr "カーソルを点滅するかどうか"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:22
+#: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Whether the cursor should blink."
 msgstr "カーソルを点滅させるかどうかです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:23
+#: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Cursor Blink Time"
 msgstr "カーソルの点滅間隔"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:24
+#: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr "カーソルが点滅する間隔です (ミリ秒単位)。"
+msgstr "カーソルが点滅する間隔を、ミリ秒単位で指定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:25
+#: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Icon Theme"
 msgstr "アイコンのテーマ"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:26
+#: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Icon theme to use for the panel, caja etc."
 msgstr "パネルや Caja などで使用するアイコンのテーマです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:27
+#: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
 msgstr "GTK+ テーマ"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:28
+#: ../schemas/org.mate.interface.gschema.xml.in.h:28
 msgid "Basename of the default theme used by gtk+."
-msgstr "GTK+ が使用するデフォルトのテーマの名前 (basename) です。"
+msgstr "GTK+ が使用するデフォルトのテーマの名前です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:29
+#: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "List of symbolic names and color equivalents"
-msgstr "記号名とそれに対する色調のリスト"
+msgstr "色と色名のリスト"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:30
+#: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
-msgstr "'gtk-color-scheme' で定義された \"name:color\" の改行区切りのリスト"
+msgstr "'gtk-color-scheme' で定義された \"色名:色\" の '\\n' 区切りのリストです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:31
+#: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "Default font"
 msgstr "デフォルトのフォント"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:32
+#: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the default font used by gtk+."
-msgstr "gtk+で使用するデフォルトのフォント名"
+msgstr "GTK+ が使用するデフォルトのフォント名です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:33
+#: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Preedit Style"
 msgstr "GTK IM プレエディット形式"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:34
+#: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
 msgstr "GTK+ が使用する GTK+ IM プレエディット形式の名前です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:35
+#: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Status Style"
 msgstr "GTK IM ステータス形式"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:36
+#: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the GTK+ input method Status Style used by gtk+."
 msgstr "GTK+ が使用する GTK+ IM ステータス形式の名前です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:37
+#: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "GTK IM Module"
 msgstr "GTK IM モジュール"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:38
+#: ../schemas/org.mate.interface.gschema.xml.in.h:38
 msgid "Name of the input method module used by GTK+."
 msgstr "GTK+ が使用する GTK+ 入力メソッドのモジュール名です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
+#: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 header bar"
 msgstr "GTK3 のヘッダーバーを使用する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
+#: ../schemas/org.mate.interface.gschema.xml.in.h:40
 msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
@@ -1105,432 +1106,438 @@ msgid ""
 "using GtkDialog directly, or message dialogs."
 msgstr "ファイル選択、色選択、フォント選択などの GTK+ 組み込みダイアログが、アクションウィジェットを表示するために、上部のヘッダーバーや下部のアクションエリアを使用するかどうかを設定します。この設定は GtkDialog を直接使用するカスタムダイアログやメッセージダイアログには効果がありません。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
+#: ../schemas/org.mate.interface.gschema.xml.in.h:41
+msgid "Use GTK3 overlay scrolling"
+msgstr "GTK3 オーバーレイスクロールを使用する"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:42
+msgid ""
+"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"scrolling hides and reduces the size of the scrollbar until it gets focus."
+msgstr "GTK+ のスクロールウィンドウでオーバーレイスクロールを使用するかどうかを設定します。オーバーレイスクロールを使用すると、フォーカスが当たるまでスクロールバーを隠して表示領域を節約します。"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Enable Gtk toolkit-wide animations"
 msgstr "GTK ツールキット全体でアニメーションを有効にする"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
+#: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Whether to enable toolkit-wide animations."
-msgstr "ツールキット全体でアニメーションを有効にするかどうか"
+msgstr "ツールキット全体でアニメーションを有効にするかどうかを設定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
+#: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Document font"
-msgstr "文書のフォント"
+msgstr "ドキュメントのフォント"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
+#: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid "Name of the default font used for reading documents."
-msgstr "文書を読む際に使用されるデフォルトのフォント名"
+msgstr "ドキュメントで使用するデフォルトのフォント名です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
+#: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Monospace font"
-msgstr "等幅のフォント"
+msgstr "等幅フォント"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:46
+#: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr "端末などで使用する等幅 (固定幅) フォントの名前です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:47
+#: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Use Custom Font"
 msgstr "カスタムフォントを使用する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:48
+#: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr "GTK+ アプリケーションでカスタム・フォントを使用するかどうかです。"
+msgstr "GTK+ アプリケーションでカスタムフォントを使用するかどうかを設定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:49
+#: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Status Bar on Right"
-msgstr "ステータス・バーを右側に表示する"
+msgstr "ステータスバーを右側に表示する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:50
+#: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid "Whether to display a status bar meter on the right."
-msgstr "右側にステータス・バーのメータを表示するかどうかです。"
+msgstr "右側にステータスバーを表示するかどうかを指定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:51
+#: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Module for GtkFileChooser"
 msgstr "GtkFileChooser のモジュール"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:52
+#: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
-msgstr "GtkFileChooser ウィジェットのファイルシステム・モデルとして使用するモジュールです。設定可能な値: \"gio\"、\"gtk+\""
+msgstr "GtkFileChooser ウィジェットがファイルシステムモデルとして使用するモジュールです。設定可能な値: \"gio\"、\"gtk+\""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:53
+#: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Menubar accelerator"
-msgstr "メニューバーのアクセラレータ"
+msgstr "メニューバーのアクセラレーター"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:54
+#: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid "Keyboard shortcut to open the menu bars."
-msgstr "メニューバーを開くキーボード・ショートカット"
+msgstr "メニューバーを開くキーボードショートカットです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:55
+#: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Input Methods' menu"
-msgstr "'入力メソッド' のメニューを表示"
+msgstr "'入力メソッド' のメニューを表示する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:56
+#: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
-msgstr "入力エントリとテキスト・ビューのコンテキスト・メニューで入力メソッドを切り替えるメニュー項目を提供するかどうかです。"
+msgstr "入力エントリーとテキストビューのコンテキストメニューに入力メソッドを切り替えるメニュー項目を追加するかどうかを指定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:57
+#: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Show the 'Unicode Control Character' menu"
-msgstr "'Unicode 制御文字' メニューを表示"
+msgstr "'Unicode 制御文字の挿入' メニューを表示する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:58
+#: ../schemas/org.mate.interface.gschema.xml.in.h:60
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
-msgstr "入力エントリとテキスト・ビューのコンテキスト・メニューで制御文字を挿入するメニュー項目を提供するかどうかです。"
+msgstr "入力エントリーとテキストビューのコンテキストメニューに制御文字を挿入するメニュー項目を追加するかどうかを指定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:59
+#: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Titlebar layout of GTK3 client-side decorated windows"
 msgstr "GTK3 クライアントで装飾されたウィンドウのタイトルバーのレイアウト"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:60
+#: ../schemas/org.mate.interface.gschema.xml.in.h:62
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
-msgstr "クライアント側で装飾されたウィンドウのタイトルバーにどのボタンを表示するかの設定です。また、ボタンを左右どちらに描画するかも設定できます。https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layoutを確認してください。"
+msgstr "クライアント側で装飾されたウィンドウのタイトルバーにどのボタンを表示するかの設定です。また、ボタンを左右どちらに描画するかも設定できます。https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout を確認してください。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:61
+#: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Only show mnemonics on when the Alt key is pressed"
 msgstr "Alt キーが押された時だけニーモニックを表示する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:62
+#: ../schemas/org.mate.interface.gschema.xml.in.h:64
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
 msgstr "ユーザーが Alt キーを押している間だけニーモニックを表示するかどうかを設定します。"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
-msgstr "コマンドラインを無効にする"
+msgstr "コマンドラインを利用不可にする"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr "ユーザからの端末のアクセス、または実行コマンド・ラインの指定を利用不可にします。たとえば、これはパネルの \"アプリケーションの実行\" ダイアログへのアクセスを利用できなくします。"
+msgstr "ユーザーの端末やコマンドラインの実行を不可能にします。たとえば、これはパネルの \"アプリケーションの実行\" ダイアログへのアクセスを禁止します。"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
 msgstr "ファイルをディスクに保存しない"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr "ユーザによるファイルの保存を不可にします。たとえば、すべてのアプリケーションが提供する \"別名で保存\" ダイアログへのアクセスを利用できなくします。"
+msgstr "ユーザーによるファイルの保存を不可能にします。たとえば、すべてのアプリケーションが提供する \"別名で保存\" ダイアログへのアクセスを禁止します。"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
-msgstr "印刷機能を利用不可にする"
+msgstr "印刷を利用不可にする"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr "ユーザからの印刷実行を不可にします。たとえば、すべてのアプリケーションが提供する \"印刷\" ダイアログへのアクセスを利用できなくします。"
+msgstr "ユーザーからの印刷実行を不可能にします。たとえば、すべてのアプリケーションが提供する \"印刷\" ダイアログへのアクセスを禁止します。"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
-msgstr "印刷設定の利用禁止"
+msgstr "印刷設定を利用不可にする"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr "ユーザによる印刷設定の変更を不可にします。たとえば、これはすべてのアプリケーションが提供する \"印刷設定\" ダイアログへのアクセスを利用できなくします。"
+msgstr "ユーザーによる印刷設定の変更を不可能にします。たとえば、すべてのアプリケーションが提供する \"印刷設定\" ダイアログへのアクセスを禁止します。"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
-msgstr "アカウントの切り換えを無効にする"
+msgstr "ユーザーの切り換えを利用不可にする"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:10
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr "ユーザが使用しているセッションが有効な間は他のアカウントへ切り換えることができないようにします"
+msgstr "ユーザーのセッションが有効な間は他のアカウントへ切り換えることを禁止します。"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
 msgstr "画面のロックを利用不可にする"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
-msgstr "画面をロックできないようにします。"
+msgstr "ユーザーが画面をロックできないようにします。"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:13
 msgid "Disable URL and MIME type handlers"
-msgstr "URL と MIME 型のハンドラを無効にする"
+msgstr "URL と MIME 型のハンドラーを無効にする"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr "URL または MIME 型に対応したハンドラのアプリケーションを起動しないようにします。"
+msgstr "URL または MIME 型に対応したハンドラーのアプリケーションを起動しないようにします。"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
 msgstr "テーマの設定を無効にする"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:16
 msgid "Prevent the user from changing theme settings."
-msgstr "テーマの設定を変更できないようにします。"
+msgstr "ユーザーがテーマの設定を変更できないようにします。"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:17
 msgid "Disable log out"
-msgstr "ログアウトの無効化"
+msgstr "ログアウトを無効にする"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:18
 msgid "Prevent the user from logging out."
-msgstr "ログアウトできないようにします。"
+msgstr "ユーザーがログアウトできないようにします。"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "有効な値は \"on\"、\"off\"、\"custom\" のいずれかです"
+msgstr "有効な値は \"on\"、\"off\"、\"custom\" です。"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:2
 msgid "Keyboard Bell Custom Filename"
-msgstr "キーボード・ベルのファイル名"
+msgstr "キーボードベルのファイル名"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:3
 msgid "File name of the bell sound to be played."
 msgstr "キーボードのベル音として再生するファイルの名前です。"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:4
 msgid "Remember NumLock state"
-msgstr "NumLock キーの状態を保存する"
+msgstr "NumLock の状態を保存する"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr "TRUE にすると、MATE が NumLock キーの LED の状態をセッションをまたいで記憶します。"
+msgstr "TRUE にすると、MATE が NumLock の LED の状態をセッションをまたいで記憶します。"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
-msgstr "NumLock キーの状態"
+msgstr "NumLock の状態"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:7
 msgid "The remembered state of the NumLock LED."
-msgstr "記憶した NumLock LED の状態です。"
+msgstr "記憶した NumLock の LED の状態です。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:1
 msgid "Mouse button orientation"
-msgstr "マウス・ボタンの向き"
+msgstr "マウスボタンの向き"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "左利き用のマウスのためにマウスの左ボタンと右ボタンを入れ替えるかどうかです。"
+msgstr "左利き用のマウスのためにマウスの左と右のボタンを入れ替えるかどうかです。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Single Click"
-msgstr "シングル・クリック"
+msgstr "シングルクリック"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:4
-msgid "Single click to open icons."
-msgstr "シングルクリックでアイコンを開くかどうかです。"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
-msgstr "マウスの動きを加速させる値を設定します。システムのデフォルト値は -1 です。"
+msgstr "マウスの動きを加速させる倍率を設定します。システムのデフォルト値は -1 です。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
 msgstr "移動時のしきい値"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:6
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
-msgstr "マウスの動きが加速されるまでのマウスポインタが動く距離を指定します。システムのデフォルト値は -1 です。"
+msgstr "マウスの動きが加速されるまでのポインターが動く距離を指定します。システムのデフォルト値は -1 です。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
 msgstr "ドラッグのしきい値"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:8
 msgid "Distance before a drag is started."
 msgstr "ドラッグが開始されるまでの距離です。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr "ダブル・クリックの間隔"
+msgstr "ダブルクリックの間隔"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
-msgstr "ダブルクリックの長さ"
+msgstr "ダブルクリックの長さです。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:11
 msgid "Middle button emulation"
 msgstr "中央マウスボタンのエミュレーション"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:12
 msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
-msgstr "マウスの右ボタンと左ボタンを同時押しすると中クリックをエミュレートします。"
+msgstr "マウスの右と左のボタンを同時に押すと中クリックをエミュレートします。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
-msgstr "ポインタの位置表示"
+msgstr "ポインターの位置を表示する"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr "コントロールキーを押して離した際、ポインタの現在位置をハイライトします。"
+msgstr "コントロールキーを押して離した際、ポインターの現在位置を強調表示します。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor font"
 msgstr "カーソルのフォント"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
-msgstr "カーソルのフォント名を設定します。未設定の場合はデフォルトのフォントを使用します。この値は各セッションの起動時にXサーバへ引き渡されるので、セッション中に値を変更しても次回ログインするまで何の効果もありません。"
+msgstr "カーソルのフォント名を設定します。未設定の場合はデフォルトのフォントを使用します。この値は各セッションの起動時に X サーバーへ引き渡されるので、セッション中に値を変更しても次回ログインするまで何の効果もありません。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "カーソルのテーマ"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
-msgstr "カーソルのテーマ名です。XFree86 4.3以降などのXcursorをサポートしたXserverでのみ利用できます。"
+msgstr "カーソルのテーマ名です。XFree86 4.3 以降などの Xcursor をサポートした X サーバーでのみ利用できます。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
 msgid "Cursor size"
-msgstr "カーソルの大きさ"
+msgstr "カーソルのサイズ"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:21
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "cursor_theme で参照するカーソルの大きさです。"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.sound.gschema.xml.in.h:1
 msgid "Default mixer device"
 msgstr "デフォルトミキサーデバイス"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.sound.gschema.xml.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
 msgstr "マルチメディアキーの割り当てで使用するデフォルトのミキサーデバイスです。"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.sound.gschema.xml.in.h:3
 msgid "Default mixer tracks"
 msgstr "デフォルトミキサートラック"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.sound.gschema.xml.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
 msgstr "マルチメディアキーの割り当てで使用するデフォルトのミキサートラックです。"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
 msgstr "ESD を有効にする"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
-msgstr "サウンド・サーバを起動します。"
+msgstr "起動時にサウンドサーバーを有効にします。"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
-msgstr "イベント発生時にサウンドを鳴らす"
+msgstr "イベント発生時に音を鳴らす"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.sound.gschema.xml.in.h:8
 msgid "Whether to play sounds on user events."
-msgstr "ユーザのイベントでサウンドを演奏するかどうかです。"
+msgstr "ユーザーのイベント発生時に音を鳴らすかどうかです。"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
 msgstr "サウンドテーマの名前"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.sound.gschema.xml.in.h:10
 msgid "The XDG sound theme to use for event sounds."
-msgstr "イベント毎に演奏する XDG のサウンド・テーマです。"
+msgstr "イベント音として利用する XDG サウンドテーマです。"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.sound.gschema.xml.in.h:11
 msgid "Input feedback sounds"
-msgstr "入力フィードバックとしてのサウンド効果"
+msgstr "入力フィードバック音"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.sound.gschema.xml.in.h:12
 msgid "Whether to play sounds on input events."
-msgstr "入力イベントでサウンドを演奏するかどうかです。"
+msgstr "入力イベント発生時に音を鳴らすかどうかです。"
 
-#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
-msgstr "サムネイルのキャッシュの最大寿命 (日単位) です。キャッシュのクリアを無効にする場合は -1 を指定します。"
+msgstr "サムネイルのキャッシュの最大寿命を日単位で指定します。-1 を指定するとクリアを無効にします。"
 
-#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr "サムネイルのキャッシュの最大サイズ (Mバイト単位) です。キャッシュのクリアを無効にする場合は -1 を指定します。"
+msgstr "サムネイルのキャッシュの最大サイズをメガバイト単位で指定します。-1 を指定するとキャッシュのクリアを無効にします。"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
 msgstr "サムネイル表示する外部のプログラムをすべて無効にする"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:2
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
-msgstr "TRUE にすると、サムネイル表示する外部プログラムを (外部プログラムの有効/無効に関わらず) すべて無効にします。"
+msgstr "TRUE にすると、サムネイル表示する外部プログラムを、外部プログラムの有効/無効に関わらずすべて無効にします。"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
 msgstr "サムネイルを作成するために外部ソフトを利用しない MIME の一覧です。"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:4
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
 msgstr "このリストに含まれる MIME についてはサムネイルは生成されません。"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"
 msgstr "一休み前のキーボード入力時間"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr "一休みの警告を出すまでの時間 (分) を指定します。"
+msgstr "一休みの警告を出すまでの時間を分単位で指定します。"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"
-msgstr "ブレイクタイム"
+msgstr "一休みする時間"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
 msgid "Number of minutes that the typing break should last."
-msgstr "一休みする時間 (分) を指定します。"
+msgstr "一休みする時間を分単位で指定します。"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:5
 msgid "Allow postponing of breaks"
 msgstr "一休みする時間を延長できるようにする"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
 msgstr "一休みする時間を延長できるかどうかです。"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
 msgid "Whether or not keyboard locking is enabled"
-msgstr "キーボードのロックを有効にするかどうかです。"
+msgstr "キーボードのロックを有効にする"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:8
 msgid "Whether or not keyboard locking is enabled."
 msgstr "キーボードのロックを有効にするかどうかです。"
 
-#: ../tools/mate-color-select.c:62
+#: ../tools/mate-color-select.c:63
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
 msgstr "MATE色選択"
@@ -1550,11 +1557,3 @@ msgstr "MATE 1.4の設定をマイグレーションする"
 #: ../tools/mate-conf-import.desktop.in.in.h:2
 msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
 msgstr "MATE 1.4 の設定を MATE 1.6 に適用するツール"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:1
-msgid "Help"
-msgstr "ヘルプ"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:2
-msgid "Get help with MATE"
-msgstr "MATE のヘルプを取得"

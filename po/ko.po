@@ -7,14 +7,14 @@
 # Jinkyu Yi <jincreator@jincreator.net>, 2013
 # 박정규(Jung Kyu Park) <bagjunggyu@gmail.com>, 2015
 # Alan Lee <bkrhlim@aol.com>, 2013
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2014
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-28 18:04+0200\n"
-"PO-Revision-Date: 2015-07-30 02:40+0000\n"
-"Last-Translator: 박정규(Jung Kyu Park) <bagjunggyu@gmail.com>\n"
+"POT-Creation-Date: 2015-11-06 15:16+0300\n"
+"PO-Revision-Date: 2015-11-06 12:19+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Korean (http://www.transifex.com/mate/MATE/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:106
+#: ../mate-about/mate-about.c:96
 msgid "translator-credits"
 msgstr "번역자들"
 
@@ -36,44 +36,44 @@ msgstr "마테 정보"
 msgid "Learn more about MATE"
 msgstr "마테에 대해 더 알아보기"
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "마테는  전통적인 방식을 사용해 직관적이고  아름다운 데스크톱을 리눅스 사용자에게 제공합니다. "
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "마테는  파일 관리자, 문서 보기, 이미지 보기,  메뉴,  많은 응용프로그램을 포함해 사용자가 컴퓨터에서 볼 수 있는 대부분을 포함하고 있습니다."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "마테는 유닉스 계열 운영 체제에서 사용하는 자유롭고 안정적이며 일상에서 사용 가능한  데스크톱 환경입니다."
 
-#: ../mate-about/mate-about.h:55
+#: ../mate-about/mate-about.h:54
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
-msgstr "MATE는 GNOME 2의 연장 프로젝트입니다. 수백명의 기여자가 1997년도부터 시작된 GNOME 프로젝트에 코드를 기여하고 있습니다. 번역, 문서화, 품질 향상 등의 다른 중요한 방법으로도 기여하고 있습니다."
+msgstr "MATE는 그놈 2의 연장 프로젝트입니다. 수백명의 기여자가 1997년도부터 시작된 그놈 프로젝트에 코드를 기여하고 있습니다. 번역, 문서화, 품질 향상 등의 다른 중요한 방법으로도 기여하고 있습니다."
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
-msgstr "그놈 2는 가장 인기있는 리눅스 데스크톱이었지만 지금은 개발이 중단되었습니다. 여기 마테가 그놈 2와 똑같은 데스크톱을 사용자에게 제공할 것입니다!"
+msgstr "그놈 2는 가장 인기있는 리눅스 데스크톱이었지만 지금은 개발을 중단했습니다. 마테는 그놈 2와 똑같은 데스크톱을 제공합니다!"
 
-#: ../mate-about/mate-about.h:62
+#: ../mate-about/mate-about.h:61
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
-msgstr "“마테”라는 이름은 yerba maté라는  남미 아열대 고유의  호랑가시나무 종에서 유래했습니다.  그 잎은 카페인을 함유하여  주입물과 마테라는 음료를 만드는 데 사용됩니다. "
+msgstr "“마테”라는 이름은 yerba maté라는 남미 아열대 고유의  호랑가시나무 종에서 유래했습니다.  그 잎은 카페인을 함유하여 주입물과 마테라는 음료를 만드는 데 사용합니다. "
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -83,137 +83,137 @@ msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: ../libmate-desktop/mate-aboutdialog.c:180
+#: ../libmate-desktop/mate-aboutdialog.c:179
 msgid "Could not show link"
 msgstr "링크를 표시할 수 없습니다"
 
-#: ../libmate-desktop/mate-aboutdialog.c:236
+#: ../libmate-desktop/mate-aboutdialog.c:235
 msgid "Program name"
 msgstr "프로그램 이름"
 
-#: ../libmate-desktop/mate-aboutdialog.c:237
+#: ../libmate-desktop/mate-aboutdialog.c:236
 msgid ""
 "The name of the program. If this is not set, it defaults to "
 "g_get_application_name()"
 msgstr "프로그램의 이름입니다. 설정하지 않으면, g_get_application_name() 값이 기본입니다"
 
-#: ../libmate-desktop/mate-aboutdialog.c:251
+#: ../libmate-desktop/mate-aboutdialog.c:250
 msgid "Program version"
 msgstr "프로그램 버전"
 
-#: ../libmate-desktop/mate-aboutdialog.c:252
+#: ../libmate-desktop/mate-aboutdialog.c:251
 msgid "The version of the program"
 msgstr "프로그램의 버전입니다"
 
-#: ../libmate-desktop/mate-aboutdialog.c:266
+#: ../libmate-desktop/mate-aboutdialog.c:265
 msgid "Copyright string"
 msgstr "Copyright 문자열"
 
-#: ../libmate-desktop/mate-aboutdialog.c:267
+#: ../libmate-desktop/mate-aboutdialog.c:266
 msgid "Copyright information for the program"
 msgstr "프로그램의 저작권 정보입니다"
 
-#: ../libmate-desktop/mate-aboutdialog.c:284
+#: ../libmate-desktop/mate-aboutdialog.c:283
 msgid "Comments string"
 msgstr "설명 문자열"
 
-#: ../libmate-desktop/mate-aboutdialog.c:285
+#: ../libmate-desktop/mate-aboutdialog.c:284
 msgid "Comments about the program"
 msgstr "프로그램 설명입니다"
 
-#: ../libmate-desktop/mate-aboutdialog.c:303
+#: ../libmate-desktop/mate-aboutdialog.c:302
 #: ../libmate-desktop/mate-aboutdialog.c:2161
 msgid "License"
 msgstr "라이선스"
 
-#: ../libmate-desktop/mate-aboutdialog.c:304
+#: ../libmate-desktop/mate-aboutdialog.c:303
 msgid "The license of the program"
 msgstr "프로그램의 라이선스입니다"
 
-#: ../libmate-desktop/mate-aboutdialog.c:319
+#: ../libmate-desktop/mate-aboutdialog.c:318
 msgid "Website URL"
 msgstr "웹사이트 URL"
 
-#: ../libmate-desktop/mate-aboutdialog.c:320
+#: ../libmate-desktop/mate-aboutdialog.c:319
 msgid "The URL for the link to the website of the program"
 msgstr "프로그램 웹사이트의 URL 링크입니다"
 
-#: ../libmate-desktop/mate-aboutdialog.c:335
+#: ../libmate-desktop/mate-aboutdialog.c:334
 msgid "Website label"
 msgstr "웹사이트 레이블"
 
-#: ../libmate-desktop/mate-aboutdialog.c:336
+#: ../libmate-desktop/mate-aboutdialog.c:335
 msgid ""
 "The label for the link to the website of the program. If this is not set, it"
 " defaults to the URL"
 msgstr "프로그램 웹사이트 링크의 레이블입니다. 설정하지 않으면 URL이 기본입니다"
 
-#: ../libmate-desktop/mate-aboutdialog.c:352
+#: ../libmate-desktop/mate-aboutdialog.c:351
 msgid "Authors"
 msgstr "작성자"
 
-#: ../libmate-desktop/mate-aboutdialog.c:353
+#: ../libmate-desktop/mate-aboutdialog.c:352
 msgid "List of authors of the program"
 msgstr "프로그램의 작성자 목록입니다"
 
-#: ../libmate-desktop/mate-aboutdialog.c:369
+#: ../libmate-desktop/mate-aboutdialog.c:368
 msgid "Documenters"
 msgstr "문서 작성자"
 
-#: ../libmate-desktop/mate-aboutdialog.c:370
+#: ../libmate-desktop/mate-aboutdialog.c:369
 msgid "List of people documenting the program"
 msgstr "프로그램의 문서를 작성한 사람의 목록입니다"
 
-#: ../libmate-desktop/mate-aboutdialog.c:386
+#: ../libmate-desktop/mate-aboutdialog.c:385
 msgid "Artists"
 msgstr "아티스트"
 
-#: ../libmate-desktop/mate-aboutdialog.c:387
+#: ../libmate-desktop/mate-aboutdialog.c:386
 msgid "List of people who have contributed artwork to the program"
 msgstr "프로그램 아트워크에 기여한 사람 목록입니다."
 
-#: ../libmate-desktop/mate-aboutdialog.c:404
+#: ../libmate-desktop/mate-aboutdialog.c:403
 msgid "Translator credits"
 msgstr "번역 참여자"
 
-#: ../libmate-desktop/mate-aboutdialog.c:405
+#: ../libmate-desktop/mate-aboutdialog.c:404
 msgid ""
 "Credits to the translators. This string should be marked as translatable"
 msgstr "번역 참여자 목록입니다. 이 문자열은 번역할 수 있게 표시합니다."
 
-#: ../libmate-desktop/mate-aboutdialog.c:420
+#: ../libmate-desktop/mate-aboutdialog.c:419
 msgid "Logo"
 msgstr "로고"
 
-#: ../libmate-desktop/mate-aboutdialog.c:421
+#: ../libmate-desktop/mate-aboutdialog.c:420
 msgid ""
 "A logo for the about box. If this is not set, it defaults to "
 "gtk_window_get_default_icon_list()"
 msgstr "정보 상자의 로고입니다. 설정하지 않으면 gtk_window_get_default_icon_list()값이 기본입니다"
 
-#: ../libmate-desktop/mate-aboutdialog.c:436
+#: ../libmate-desktop/mate-aboutdialog.c:435
 msgid "Logo Icon Name"
 msgstr "로고 아이콘 이름"
 
-#: ../libmate-desktop/mate-aboutdialog.c:437
+#: ../libmate-desktop/mate-aboutdialog.c:436
 msgid "A named icon to use as the logo for the about box."
 msgstr "정보 상자의 로고에 사용하는 아이콘 이름입니다."
 
-#: ../libmate-desktop/mate-aboutdialog.c:450
+#: ../libmate-desktop/mate-aboutdialog.c:449
 msgid "Wrap license"
 msgstr "라이선스 래핑"
 
-#: ../libmate-desktop/mate-aboutdialog.c:451
+#: ../libmate-desktop/mate-aboutdialog.c:450
 msgid "Whether to wrap the license text."
 msgstr "라이선스를 래핑할지 여부."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:544
+#: ../libmate-desktop/mate-aboutdialog.c:543
 msgid "C_redits"
 msgstr "참여자(_R)"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:558
+#: ../libmate-desktop/mate-aboutdialog.c:557
 msgid "_License"
 msgstr "라이선스(_L)"
 
@@ -544,27 +544,27 @@ msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "터미널을 찾을 수  없어  xterm이 작동하지 않더라도 사용합니다"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:484
+#: ../libmate-desktop/mate-rr.c:460
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "화면 정보를 읽어 올 수 없습니다 (CRTC, 출력, 모드)"
 
-#: ../libmate-desktop/mate-rr.c:504
+#: ../libmate-desktop/mate-rr.c:480
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "스크린 크기의 범위를 가져오는 데 처리하지 못하는 X 오류가 발생했습니다"
 
-#: ../libmate-desktop/mate-rr.c:510
+#: ../libmate-desktop/mate-rr.c:486
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "화면 크기 범위를  읽어 올 수 없습니다"
 
-#: ../libmate-desktop/mate-rr.c:737
+#: ../libmate-desktop/mate-rr.c:709
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "RANDR 확장 기능이 없습니다"
 
-#: ../libmate-desktop/mate-rr.c:1295
+#: ../libmate-desktop/mate-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "출력 %d번에 대한 정보를 읽어 올 수 없습니다"
@@ -572,19 +572,19 @@ msgstr "출력 %d번에 대한 정보를 읽어 올 수 없습니다"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1737
+#: ../libmate-desktop/mate-rr.c:1748
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "CRTC %d번의 요청한 위치/크기가 허용하는 크기 제한을 넘어갑니다. 위치=(%d, %d), 크기=(%d, %d), 최대=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1771
+#: ../libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "CRTC %d번을 설정할 수 없습니다"
 
-#: ../libmate-desktop/mate-rr.c:1923
+#: ../libmate-desktop/mate-rr.c:1946
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "CRTC %d번에 대한 정보를 읽어 올 수 없습니다"
@@ -599,22 +599,22 @@ msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "저장한 화면 설정은 사용 가능한 설정 중에 일치하는 설정이 없습니다."
 
-#: ../libmate-desktop/mate-rr-config.c:1501
+#: ../libmate-desktop/mate-rr-config.c:1486
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d번은 %s 출력을 할 수 없습니다"
 
-#: ../libmate-desktop/mate-rr-config.c:1508
+#: ../libmate-desktop/mate-rr-config.c:1493
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "%s 출력은 %dx%d@%dHz 모드를 지원하지 않습니다"
 
-#: ../libmate-desktop/mate-rr-config.c:1519
+#: ../libmate-desktop/mate-rr-config.c:1504
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d번은 %s 회전을 지원하지 않습니다"
 
-#: ../libmate-desktop/mate-rr-config.c:1533
+#: ../libmate-desktop/mate-rr-config.c:1518
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -623,29 +623,29 @@ msgid ""
 "existing rotation = %s, new rotation = %s"
 msgstr "%s 출력에 복사한 출력과 같은 파라미터가 없습니다:\n현재 모드 = %d, 새 모드 = %d\n현재 좌표 = (%d, %d), 새 좌표 = (%d, %d)\n현재 회전 = %s, 새 회전 = %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1548
+#: ../libmate-desktop/mate-rr-config.c:1533
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "%s 출력에 복사할 수 없습니다"
 
-#: ../libmate-desktop/mate-rr-config.c:1717
+#: ../libmate-desktop/mate-rr-config.c:1702
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "CRTC %d번에 화면 모드 시도\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1741
+#: ../libmate-desktop/mate-rr-config.c:1726
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr "CRTC %d: %dx%d@%dHz 모드를 %dx%d@%dHz 출력에 시도 (패스 %d)\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1788
+#: ../libmate-desktop/mate-rr-config.c:1773
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
 msgstr "CRTC를 출력에 할당할 수 없습니다:\n%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1792
+#: ../libmate-desktop/mate-rr-config.c:1777
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -655,7 +655,7 @@ msgstr "선택한 모드 중에 어느 모드도 가능한 모드와 호환되�
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1874
+#: ../libmate-desktop/mate-rr-config.c:1859
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -672,863 +672,869 @@ msgstr "필요한 가상 화면 크기가 가능한 크기에 맞지 않습니�
 msgid "Mirror Screens"
 msgstr "동일한 화면"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
-msgstr "최소 시차(단위 ms)"
+msgstr "밀리초 단위의 최소 시간 간격"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr "@delay ms 이내의 the _same_ key의 다중 처리를 무시"
+msgstr "@delay 밀리초 이내에 _같은_ 키를 여러 번 눌렀을 때 무시."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
-msgstr "초당 픽셀"
+msgstr "초당 픽셀 수"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr "최대 속도로 이동할 초당 최대 픽셀"
+msgstr "최대 속도에서 초당 이동하는 픽셀수."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr "가속 시간(단위 ms)"
+msgstr "밀리초 단위의 가속 시간"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr "0에서 최대 속도까지 걸리는 시간(단위  ms)"
+msgstr "0에서 최대 속도에 이르는 밀리초 단위의 시간."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
 msgid "Initial delay in milliseconds"
-msgstr "초기 지연 시간(단위 ms)"
+msgstr "밀리초 단위의 초기 지연시간"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
-msgstr "마우스 이동 키가 작동하기에 앞서 대기 시간(단위 ms)"
+msgstr "마우스 키 움직임 동작을 시작하기 전 기다릴 밀리초 단위 시간입니다."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
 msgid "Minimum interval in milliseconds"
-msgstr "최소 시차(단위 ms)"
+msgstr "밀리초 단위의 최소 주기"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr "키를 @delay  ms 동안 누르고 있지 않으면  누른 것으로 인식하지 않기."
+msgstr "@delay 밀리초 동안 키를 누르기 전까지 허용하지 않습니다."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
-msgstr "동시에 두 개의 키를 누르면 비활성화함."
+msgstr "동시에 키 두개 누르는 동작을 비활성화합니다."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Beep when a modifier is pressed."
-msgstr "변경 키를 누르면 비프음을 냄."
+msgstr "단축키용 특수키를 눌렀을 때 알림음을 냅니다."
 
-#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr "시작 보조 기술 프로그램 "
+msgstr "보조 기술 프로그램 시작"
 
-#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
-msgstr "마테 데스크톱에 로그인할 때 시작할 보조 기술 프로그램 목록. "
+msgstr "마테 데스크톱에 로그인할 때 시작할 보조 기술 프로그램 목록입니다."
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr "선호하는 이동 보조 기술 프로그램"
+msgstr "선호하는 휴대형 보조 기술 프로그램"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr "로그인, 메뉴, 명령 줄에서 사용할 선호하는 이동 보조 기술 프로그램"
+msgstr "로그인, 메뉴, 명령줄에 사용할 선호하는 휴대형 보조 기술 프로그램입니다."
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr "선호하는 이동 보조 기술 프로그램 시작하기 "
+msgstr "선호하는 휴대형 보조 기술 프로그램 시작"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr "마테에서  로그인 시 선호하는 이동 보조 기술 프로그램을 시작하기."
+msgstr "로그인하는 동안 마테에서 선호하는 휴대형 보조 기술 프로그램을 시작합니다."
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
 msgstr "선호하는 시각 보조 기술 프로그램"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
 "Preferred Visual assistive technology application be used for login, menu, "
 "or command line."
-msgstr "로그인, 메뉴, 명령 줄에서 사용할 선호하는 시각 보조 기술 프로그램"
+msgstr "로그인, 메뉴, 명령줄에 사용할 선호하는 시각 보조 기술 프로그램입니다."
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr "선호하는 시각 보조 기술 프로그램 시작하기"
+msgstr "선호하는 시각 보조 기술 프로그램 시작"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr "마테에서 로그인 시 선호하는 시각 보조 기술 프로그램을 시작하기"
+msgstr "로그인 하는 동안 마테에서 선호하는 시각 보조 기술 프로그램을 시작합니다."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
-msgstr "기본 브라우저 "
+msgstr "기본 브라우저"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
-msgstr "모든 URL을 열 기본 브라우저"
+msgstr "모든 URL을 열 기본 브라우저입니다."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
 msgid "Browser needs terminal"
-msgstr "브라우저에서 터미널을 필요로 합니다"
+msgstr "브라우저에서 터미널이 필요함"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:4
 msgid "Whether the default browser needs a terminal to run."
-msgstr "기본 브라우저에서 실행할 터미널의 필요 여부"
+msgstr "기본 브라우저를 실행할 터미널이 필요한지 여부입니다."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:5
 msgid "Browser understands remote"
-msgstr "브라우저에서  원격 지원"
+msgstr "원격 제어를 인지하는 브라우저"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
 msgid "Whether the default browser understands netscape remote."
-msgstr "기본 브라우저에서 넷스케이프 원격 지원 여부"
+msgstr "기본 브라우저가 넷스케이프 원격 제어를 인지하는지 여부입니다."
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
 msgstr "기본 달력"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:2
 msgid "Default calendar application"
-msgstr "기본 달력 프로그램"
+msgstr "기본 달력 프로그램입니다"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:3
 msgid "Calendar needs terminal"
-msgstr "달력에서 터미널을 필요로 함"
+msgstr "달력에서 터미널이 필요함"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr "기본 달력에서 실행할 터미널의 필요 여부"
+msgstr "기본 달력을 실행할 터미널이 필요한 지 여부입니다"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
-msgstr "기본 작업"
+msgstr "기본 작업 관리"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
 msgid "Default tasks application"
-msgstr "기본 작업 프로그램 "
+msgstr "기본 작업 관리 프로그램입니다"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:7
 msgid "Tasks needs terminal"
-msgstr "작업에서 터미널을 필요로 함 "
+msgstr "작업 관리에서 터미널이 필요함"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr "기본 작업 프로그램에서 실행할 터미널의 필요 여부 "
+msgstr "작업 관리 프로그램을 실행할 터미널이 필요한 지 여부입니다"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
-msgstr "터미널 프로그램 "
+msgstr "터미널 프로그램"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr "터미널을 필요로하는 프로그램을 시작할 때 사용할 터미널 프로그램 "
+msgstr "터미널이 필요한 프로그램을 실행할 때 활용할 터미널 프로그램입니다."
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
-msgstr "Exec 인수 "
+msgstr "실행 인자"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr " 'exec' 키에서 정의된 터미널에서 프로그램을 실행할 때 사용되는 인수"
+msgstr "'exec' 키에 정의하여 터미널에서 프로그램을 실행할 때 사용할 인자입니다."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
-msgstr "데스크톱 배경을 그리기 "
+msgstr "데스크톱 배경 그리기"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.background.gschema.xml.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr "마테에서 데스크톱 배경을 그리게 함."
+msgstr "마테가 데스크톱 배경을 그립니다."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
-msgstr "데스크톱 아이콘 표시"
+msgstr "데스크톱에 아이콘 표시"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "마테 파일 관리자(카자)에서 데스크톱 아이콘을 그립니다."
+msgstr "마데 파일 관리자(Caja)에서 데스크톱 아이콘을 그립니다."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
-msgstr "배경 바뀔 때 서서히 나타내기"
+msgstr "배경 바꿀 때 페이딩"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.background.gschema.xml.in.h:6
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
-msgstr "참이면 마테에서 데스크톱 배경을 페이딩 효과를 주어 바꿉니다."
+msgstr "참이면, 마테에서 데스크톱 배경을 바꿀 때 페이딩 효과를 줍니다."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
 msgstr "그림 옵션"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.background.gschema.xml.in.h:8
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr "배경 화면 파일명(_F)으로 지정된 이미지가 어떻게 표현될지 결정합니다. 가능한 선택 항목은 \"배경 화면\", \"가운데로\", \"비율대로 확대\", \"늘리기\", \"확대\", \"걸치기\"입니다."
+msgstr "wallpaper_filename으로 설정한대로 어떻게 그림을 표현할 지 결정합니다. 가능한 값은 \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", \"spanned\" 입니다."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
-msgstr "그림 파일명"
+msgstr "그림 파일 이름"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
-msgstr "배경 그림으로 사용할 파일 "
+msgstr "배경 그림으로 사용할 파일입니다."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.background.gschema.xml.in.h:11
 msgid "Picture Opacity"
-msgstr "그림 불투명도 "
+msgstr "그림 불투명도"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
-msgstr "배경 그림 불투명도 "
+msgstr "배경 그림을 그릴때 적용할 불투명도입니다."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
-msgstr "원색 "
+msgstr "초기 색상"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr "그레이디언트나 순색을 그릴 때 왼쪽이나 위쪽 색"
+msgstr "그레디언트 또는 단색을 채울 때 좌측 또는 상단에 나타낼 색상입니다."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
-msgstr "등화색 "
+msgstr "두번째 색상"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr "그레이디언트를 그릴 때 오른쪽 또는 아래쪽 색(순색일 때는 적용 안 됨)"
+msgstr "그레디언트를 채울 때 우측 또는 하단에 나타낼 색상이며, 단색 표현시 사용하지 않습니다."
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
-msgstr "색 음영 유형 "
+msgstr "색상 그림자 형식"
 
-#: ../schemas/org.mate.background.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.background.gschema.xml.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
-msgstr "형"
+msgstr "배경색에 그림자를 주는 방식입니다. 가능한 값은 \"horizontal-gradient\", \"vertical-gradient\", \"solid\" 입니다."
 
-#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
-msgstr "파일 아이콘 테마 "
+msgstr "파일 아이콘 테마"
 
-#: ../schemas/org.mate.file-views.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr "파일 아이콘을 나타내는 테마 "
+msgstr "파일 아이콘을 표시할 때 사용할 테마입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
 msgstr "접근성 활성화"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr "프로그램에서 접근성 지원 여부 "
+msgstr "프로그램에서 접근성을 지원할지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
-msgstr "애니메이션 활성화 "
+msgstr "애니메이션 활성화"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr "애니메이션 표시 여부. 참고:  이것은 전역 키이므로 창 관리자, 패널 등의 작동 방식도 변경합니다."
+msgstr "애니메이션을 표현할 지 여부입니다. 참고: 전역 키이며, 창 관리자, 패널 등의 동작을 바꿉니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
-msgstr "이동 팝업 메뉴 "
+msgstr "메뉴 떼어 놓음"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.interface.gschema.xml.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr "이동 팝업 메뉴 유무"
+msgstr "메뉴를 떼어 놓을 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Can Change Accels"
-msgstr "가속키 변경 가능 "
+msgstr "가속 변경 가능"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid ""
 "Whether the user can dynamically type a new accelerator when positioned over"
 " an active menuitem."
-msgstr "사용자가 활성화된 매뉴 항목 위에 있을 때 새로운 가속키를 동적으로 지정 여부 "
+msgstr "활성 메뉴 항목 위로 위치할 때 새 가속기를 동적으로 바꿀 수 있는 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Toolbar Style"
-msgstr "도구 모음 양식 "
+msgstr "도구 모음 방식"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr "도구 모음 양식. 가능한 항목은  \"둘 모두\", \"둘 모두-수평\", \"이이콘\", \"텍스트\"입니다."
+msgstr "도구 모음 방식입니다. 가능한 값은 \"both\", \"both-horiz\", \"icons\", \"text\" 입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Menus Have Icons"
 msgstr "메뉴에 아이콘 표시"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr "메뉴 항목 옆에 아이콘 표시 여부 "
+msgstr "메뉴 항목 옆에 아이콘을 표시할 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Buttons Have Icons"
-msgstr "버튼에 아이콘 표시 "
+msgstr "단추에 아이콘 표시"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr "버튼 텍스트 외에 아이콘 표시 여부 "
+msgstr "단추 옆에 아이콘을 추가로 표시할 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Menubar Detachable"
-msgstr "메뉴막대 분리"
+msgstr "메뉴 표시줄 분리 가능"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach menubars and move them around."
-msgstr "메뉴막대를 분리해 이동 여부 "
+msgstr "메뉴 표시줄을 떼내어 이리저리 이동 가능한 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Detachable"
-msgstr "도구 모음 분리 "
+msgstr "도구 모음 분리 가능"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Whether the user can detach toolbars and move them around."
-msgstr "도구 모음 분리 및 이동 여부 "
+msgstr "도구 모음을 떼내어 이리저리 이동 가능한 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Toolbar Icon Size"
-msgstr "도구 모음 아이콘 크기 "
+msgstr "도구 모음 아이콘 크기"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:20
+#: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr "도구 모음 아이콘 크기,  \"작은 도구 모음\"  또는 \"큰 도구 모음\" 중 하나"
+msgstr "도구 모음의 아이콘 크기입니다.  \"small-toolbar\", \"large-toolbar\" 둘 중 하나입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:21
+#: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink"
-msgstr "커서 깜빡임 "
+msgstr "커서 깜빡임"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:22
+#: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Whether the cursor should blink."
-msgstr "커서 깜빡임  여부 "
+msgstr "커서를 깜빡일 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:23
+#: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Cursor Blink Time"
-msgstr "커서 깜빡임 시간 "
+msgstr "커서 깜빡임 시간"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:24
+#: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr "커서 깜빡임 주기(단위 ms) "
+msgstr "밀리초 단위의 커서 깜빡임 주기 시간입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:25
+#: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Icon Theme"
-msgstr "아이콘 테마 "
+msgstr "아이콘 테마"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:26
+#: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Icon theme to use for the panel, caja etc."
-msgstr "패널, 카하 등에 사용할 아이콘 테마 "
+msgstr "패널, caja에서 사용할 아이콘 테마입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:27
+#: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
-msgstr "Gtk+ 테마 "
+msgstr "Gtk+ 테마"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:28
+#: ../schemas/org.mate.interface.gschema.xml.in.h:28
 msgid "Basename of the default theme used by gtk+."
-msgstr "gtk+ 기본 테마의 파일명"
+msgstr "gtk+에서 사용할 기본 테마 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:29
+#: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "List of symbolic names and color equivalents"
-msgstr "상징 이름과 색상 일치 목록"
+msgstr "심볼 이름 및 대응 색상 목록"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:30
+#: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
-msgstr "'\\n'은 'gtk-color-scheme'에서 정의한 \"name:color\"의 목록을 나눕니다"
+msgstr "'gtk-color-scheme' 에서 설정한 대로 '\\n' 개행 문자로 구분한 \"name:color\" 목록"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:31
+#: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "Default font"
 msgstr "기본 글꼴"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:32
+#: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the default font used by gtk+."
 msgstr "gtk+에서 사용하는 기본 글꼴 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:33
+#: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Preedit Style"
-msgstr "GTK 입력기 조합중 글자 모양"
+msgstr "GTK 입력기 입력 사전 모양새"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:34
+#: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr "gtk+에서 사용하는 GTK+ 입력기의 입력중 글자 모양의 이름입니다."
+msgstr "gtk+에서 사용하는 GTK+ 입력기 입력 사전 모양새의 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:35
+#: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Status Style"
-msgstr "GTK IM 상태 모양"
+msgstr "GTK 입력기 상태 모양새"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:36
+#: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr "gtk+에서 사용하는 GTK+ 입력기 상태 모양의 이름입니다."
+msgstr "gtk+에서 사용할 GTK+ 입력기 상태 모양새의 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:37
+#: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "GTK IM Module"
 msgstr "GTK 입력기 모듈"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:38
+#: ../schemas/org.mate.interface.gschema.xml.in.h:38
 msgid "Name of the input method module used by GTK+."
-msgstr "GTK+에서 사용하는 입력기 모듈의 이름입니다."
+msgstr "gtk+에서 사용하는 입력기 모듈의 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:39
+#: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 header bar"
-msgstr "GTK3 제목 표시줄 사용"
+msgstr "gtk3 헤더 표시줄 사용"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:40
+#: ../schemas/org.mate.interface.gschema.xml.in.h:40
 msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr "파일 선택기, 색상 선택기, 또는 글꼴 선택기와 같은 빌트인 GTK+ 도구들의 상부의 동작 위젯, 하부의 동작을 보여 줄 제목 표시줄을 사용할 것인지를 결정합니다. 이 설정은 대화창 GtkDialog를 직접 사용하는 사용하는 사용자 설정 대화창, 또는 메시지 대화창에는 영향을 주지 않습니다."
+msgstr "파일 선택 대화상자, 색상 선택 대화상자, 또는 글꼴 선택 대화상자 같은 내장 gtk+ 대화상자 상단에 동작 위젯을 보여주려 헤더 표시줄을 나타낼지, 아니면 하단의 동작영역에 나타낼지 여부입니다. 이 설정은 GtkDialog를 직접 사용하는  개별 설정 대화상자, 또는 메시지 대화상자에 영향을 주지 않습니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:41
+#: ../schemas/org.mate.interface.gschema.xml.in.h:41
+msgid "Use GTK3 overlay scrolling"
+msgstr "gtk3 오버레이 스크롤 사용"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:42
+msgid ""
+"Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
+"scrolling hides and reduces the size of the scrollbar until it gets focus."
+msgstr "내장 gtk+ 스크롤 창에 오버레이 스크롤을 사용할 지 여부입니다. 오버레이 스크롤은 마우스 커서를 가져다 올려놓기 전에는 숨기고 크기를 줄입니다."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Enable Gtk toolkit-wide animations"
-msgstr "GTK 툴킷-확장 애니메이션 사용"
+msgstr "gtk 도구 키트 애니메이션 활성화"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:42
+#: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Whether to enable toolkit-wide animations."
-msgstr "툴킷-확장 애니메이션 사용 여부"
+msgstr "도구 키트에서 제공하는 애니메이션을 활성화할 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:43
+#: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Document font"
 msgstr "문서 글꼴"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:44
+#: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid "Name of the default font used for reading documents."
-msgstr "문서를 읽는데 사용하는 기본 글꼴 이름입니다."
+msgstr "문서를 표현할 떄 사용할 기본 글꼴 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:45
+#: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Monospace font"
 msgstr "고정폭 글꼴"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:46
+#: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
-msgstr "터미널 같은 위치에서 사용할 고정폭(폭이 일정한) 글꼴의 이름입니다."
+msgstr "터미널과 같은 위치에서 사용할 단일 폭(고정 폭) 글꼴의 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:47
+#: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Use Custom Font"
-msgstr "사용자 정의 글꼴 사용"
+msgstr "사용자 정의 글꼴"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:48
+#: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr "gtk+ 프로그램에서 사용자 정의 글꼴을 사용할지 여부입니다."
+msgstr "gtk+ 프로그램에서 사용할 사용자 정의 글꼴입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:49
+#: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Status Bar on Right"
-msgstr "우측에 상태 표시줄 표시"
+msgstr "우측 상태 표시줄"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:50
+#: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid "Whether to display a status bar meter on the right."
-msgstr "우측에 상태 표시줄 측정기를 표시할지 여부입니다."
+msgstr "우측에 상태 표시줄을 표시할 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:51
+#: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Module for GtkFileChooser"
 msgstr "GtkFileChooser용 모듈"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:52
+#: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
-msgstr "GtkFileChooser 위젯에서 파일 시스템 모델로 사용할 모듈입니다. 가능한 값은 \"gio\"와 \"gtk+\"가 있습니다."
+msgstr "GtkFileChooser 위젯용 파일시스템 모델로 사용할 모듈입니다. 가능한 값은 \"gio\", \"gtk+\" 입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:53
+#: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Menubar accelerator"
-msgstr "메뉴 표시줄 가속기"
+msgstr "메뉴 표시줄 가속 수단"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:54
+#: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid "Keyboard shortcut to open the menu bars."
-msgstr "메뉴 표시줄을 열 떄 사용하는 키보드 단축키입니다."
+msgstr "메뉴 표시줄을 열 단축키입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:55
+#: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Input Methods' menu"
 msgstr "'입력기' 메뉴 표시"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:56
+#: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
-msgstr "항목의 상태 메뉴와 텍스트 뷰에서 입력기 상태를 바꿀 수 있게 할지의 여부입니다."
+msgstr "항목의 단축 메뉴와 텍스트 뷰에서 입력기를 바꿀 수 있는 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:57
+#: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Show the 'Unicode Control Character' menu"
 msgstr "'유니코드 제어 문자' 메뉴 표시"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:58
+#: ../schemas/org.mate.interface.gschema.xml.in.h:60
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
-msgstr "항목의 상태 메뉴와 텍스트 뷰에서 제어 문자 삽입 수단을 제공할지 여부입니다."
+msgstr "항목의 단축 메뉴 또는 텍스트 뷰에서 제어 문자 삽입 기능을 제공할 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:59
+#: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "GTK3 클라이언트 방식으로 꾸민 창의 제목 표시줄 배치"
+msgstr "gtk3 클라이언트 장식 창의 제목 표시줄 배치"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:60
+#: ../schemas/org.mate.interface.gschema.xml.in.h:62
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
 " of right. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
-msgstr "이 설정은 어떤 단추를 클라이언트 창 장식의 제목 표시줄에 놓을지를 결정하며, 이 단추를 좌측에 놓을지 우측에 놓을지도 결정합니다. https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout 을 참고하십시오."
+msgstr "이 설정은 클라이언트 장식 창의 제목 표시줄에 어떤 단추를 배치할 지 결정하며, 좌측, 우측 두 위치중 어떤 곳에 놓을지도 결정합니다. https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout 를 참고하십시오."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:61
+#: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr "Alt 키가 눌렸을 때 니모닉만 보이기"
+msgstr "Alt 키를 눌렀을 때만 니모닉 표시"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.in.h:62
+#: ../schemas/org.mate.interface.gschema.xml.in.h:64
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr "사용자가 Alt 키를 누르면 자동으로 니모닉을 표시할 것인지 숨길 것 인지를 결정합니다."
+msgstr "Alt 키를 눌렀을 때 단축키 니모닉을 자동으로 표시하고 숨길지 여부입니다."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
-msgstr "명령행 비활성화"
+msgstr "명령줄 비활성화"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr "사용자가 터미널에 접근하거나 명령행에서 실행하도록 지정하지 못하게 합니다. 예를 들어, 이 동작은 \"프로그램 실행\" 대화 상자를 띄우지 못하게 합니다."
+msgstr "사용자가 터미널에 접근하거나 실행할 명령줄을 지정하는 행위를 막습니다. 예를 들여, 패널의 \"프로그램 실행\" 대화상자로의 접근을 막습니다."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
 msgstr "디스크에 파일 저장 비활성화"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr "사용자가 디스크에 파일을 저장하지 못하게 합니다. 예를 들어, 이 설정은 모든 프로그램의 \"다른 이름으로 저장 \" 대화 상자를 띄우지 못하게 합니다."
+msgstr "사용자의 디스크 파일 저장 동작을 막습니다. 예를 들어, 모든 프로그램의 \"다른 이름으로 저장\" 대화상자로의 접근을 막습니다."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
 msgstr "인쇄 비활성화"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr "사용자가 인쇄 기능을 사용하지 못하게 합니다. 예를 들어, 이 설정은 모든 프로그램의 \"인쇄\" 대화 상자를 띄우지 못하게 합니다."
+msgstr "사용자의 인쇄 동작을 막습니다. 예를 들어, 모든 프로그램의 \"인쇄\" 대화 상자로의 접근을 막습니다."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
 msgstr "인쇄 설정 비활성화"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr "사용자가 인쇄 설정을 수정하지 못하게 합니다. 예를 들어 이 설정은 모든 프로그램에서 \"인쇄 설정\" 대화 상자를 띄우지 못하게 합니다."
+msgstr "사용자의 인쇄 설정 수정을 막습니다. 예를 들어, 모든 프로그램의 \"인쇄 설정\" 대화상자로의 접근을 막습니다."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
 msgstr "사용자 전환 비활성화"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:10
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr "사용자의 세션이 활성화 중일 동안 다른 계정으로 전환하지 못하게 합니다."
+msgstr "사용자 세션이 활성 상태인 동안 다른 계정으로 넘어가는 동작을 막습니다."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
-msgstr "화면 잠금 비활성화"
+msgstr "잠금 화면 비활성화"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
-msgstr "사용자가 화면을 잠그지 못하게 합니다."
+msgstr "사용자의 잠금 화면 진입을 막습니다."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:13
 msgid "Disable URL and MIME type handlers"
-msgstr "URL과 MIME 형식 처리자 비활성화"
+msgstr "URL 및 MIME 형식 처리자 비활성화"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr "URL 또는 MIME 형식 처리자 프로그램 실행을 막습니다."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
 msgstr "테마 설정 비활성화"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:16
 msgid "Prevent the user from changing theme settings."
-msgstr "사용자가 테마 설정을 바꾸지 못하게 합니다."
+msgstr "사용자의 테마 설정 바꾸기 동작을 막습니다."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:17
 msgid "Disable log out"
 msgstr "로그아웃 비활성화"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.lockdown.gschema.xml.in.h:18
 msgid "Prevent the user from logging out."
-msgstr "사용자가 로그아웃을 하지 못하게 합니다."
+msgstr "사용자의 로그아웃을 막습니다."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "가능한 값은 \"on\", \"off\", \"custom\"이 있습니다."
+msgstr "가능한 값은 \"on\", \"off\", \"custom\" 입니다."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:2
 msgid "Keyboard Bell Custom Filename"
-msgstr "키보드 알람 소리 사용자 정의 파일 이름"
+msgstr "키보드 알림 개별 파일 이름"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:3
 msgid "File name of the bell sound to be played."
 msgstr "재생할 알림 소리의 파일 이름입니다."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:4
 msgid "Remember NumLock state"
 msgstr "NumLock 상태 기억"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr "참이면, 세션이 활성화 중일 때 마테에서 NumLock 표시등 상태를 기억합니다."
+msgstr "참으로 설정하면, 마테에서 세션이 바뀌어도 NumLock 표시등의 상태를 기억합니다."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
 msgstr "NumLock 상태"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:7
 msgid "The remembered state of the NumLock LED."
-msgstr "기억한 NumLock 표시등 상태입니다."
+msgstr "NumLock 표시등의 상태를 기억합니다."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:1
 msgid "Mouse button orientation"
 msgstr "마우스 단추 방향"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "왼손잡이를 위해 왼쪽 단추와 오른쪽 단추의 방향을 바꿉니다."
+msgstr "왼손잡이 마우스를 구성하려 왼쪽과 오른쪽의 마우스 단추기능을 바꿉니다."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Single Click"
-msgstr "한 번 누름"
+msgstr "한 번만 클릭"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:4
-msgid "Single click to open icons."
-msgstr "아이콘을 열 때 한 번 누릅니다."
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
-msgstr "마우스를 움직일 가속 곱셈 인수입니다. -1 값은 시스템 기본값입니다."
+msgstr "마우스 움직임을 배로 가속합니다. -1을 설정하면 시스템 기본값을 사용합니다."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
-msgstr "움직임 임계값"
+msgstr "움직임 임계"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:6
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
-msgstr "마우스 움직임 가속을 활성화 하기 전 포인터를 움직여야 할 픽셀 단위 거리입니다. -1 값은 시스템 기본값입니다."
+msgstr "마우스 가속 움직임을 활성화 하기 전 마우스 포인터가 움직일 픽셀 단위 거리입니다. -1을 설정하면 시스템 기본값을 사용합니다."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
-msgstr "드래그 임계값"
+msgstr "끌기 임계"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:8
 msgid "Distance before a drag is started."
-msgstr "드래그를 시작하기 전의 거리입니다."
+msgstr "끌기 동작을 시작하기 전 거리입니다."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr "두번 누르는 시간"
+msgstr "두 번 누르기 시간"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
-msgstr "두번 누르는 시간의 길이입니다."
+msgstr "두 번 누르기 간격시간입니다."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:11
 msgid "Middle button emulation"
-msgstr "가운데 버튼 흉내내기"
+msgstr "가운데 단추 흉내"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:13
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:12
 msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
-msgstr "왼쪽 단추와 오른쪽 단추를 동시에 누르는 가운데 마우스 단추를 흉내내기를 활성화 합니다."
+msgstr "왼쪽 단추와 오른쪽 단추를 동시에 누르는 가운데 마우스 단추 흉내를 활성화합니다."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:14
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
-msgstr "포인터 지시"
+msgstr "포인터 가리키기"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:15
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr "Ctrl 키를 눌렀다 뗐을 때 현재 위치의 포인터를 강조합니다."
+msgstr "컨트롤 키를 눌렀다 뗐을 때 포인터의 현재 위치를 강조합니다."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:16
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor font"
 msgstr "커서 글꼴"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:17
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
-msgstr "커서의 글꼴 이름입니다. 설정하지 않으면 기본 글꼴을 사용합니다. 이 값은 각 세션을 시작할때 X 서버에 전달하여 세션 도중에 바꾼 내용은 다음에 로그인하기 전까지는 적용되지 않습니다."
+msgstr "커서의 글꼴 이름입니다. 설정하지 않으면, 기본 글꼴을 사용합니다. 이 값은 각 세션을 시작한 X 서버에만 전달하므로 다음에 다시 로그인 하기 전에는 세션 도중에 영향을 미치지 않습니다."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:18
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "커서 테마"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
-msgstr "커서 테마 이름입니다. Xcursor를 지원하는 XFree86 4.3 이상의 X 서버에서 사용합니다."
+msgstr "커서 테마 이름입니다. Xcursor를 지원하는 XFree86 4.3 이상의 X 서버에서만 사용합니다."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
 msgid "Cursor size"
 msgstr "커서 크기"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.in.h:21
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
 msgid "Size of the cursor referenced by cursor_theme."
-msgstr "cursor_theme로 참조하는 커서 크기입니다."
+msgstr "cursor_name에서 참고할 커서 크기입니다."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.sound.gschema.xml.in.h:1
 msgid "Default mixer device"
 msgstr "기본 음량 조절 장치"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.sound.gschema.xml.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr "멀티미디어 단축키로 활용하는 기본 음량 조절 장치입니다."
+msgstr "멀티미디어 단축키로 사용할 기본 음량 조절 장치입니다."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.sound.gschema.xml.in.h:3
 msgid "Default mixer tracks"
-msgstr "기본  음량 조절 트랙"
+msgstr "기본 음량 조절 트랙"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.sound.gschema.xml.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr "멀티미디어 단축키로 사용할 기본 음량 조절 트랙입니다."
+msgstr "멀티미디어 단축키로 사용할 기본 음량 조절 트랙입니다. "
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
 msgstr "ESD 활성화"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
-msgstr "사운드 서버 시작을 활성화 합니다."
+msgstr "사운드 서버 시작을 활성화합니다."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
-msgstr "이벤트 소리"
+msgstr "이벤트 소리 재생"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.sound.gschema.xml.in.h:8
 msgid "Whether to play sounds on user events."
-msgstr "사용자 이벤트에 소리를 재생할지 여부입니다."
+msgstr "사용자 이벤트에 소리를 재생할 지 여부입니다."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:9
+#: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
 msgstr "소리 테마 이름"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:10
+#: ../schemas/org.mate.sound.gschema.xml.in.h:10
 msgid "The XDG sound theme to use for event sounds."
-msgstr "이벤트 소리에 사용할 XDG 소리 테마 입니다."
+msgstr "이벤트 소리에 사용할 XDG 소리 테마입니다."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:11
+#: ../schemas/org.mate.sound.gschema.xml.in.h:11
 msgid "Input feedback sounds"
-msgstr "입력 피드백 소리"
+msgstr "입력 반응 소리"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.in.h:12
+#: ../schemas/org.mate.sound.gschema.xml.in.h:12
 msgid "Whether to play sounds on input events."
-msgstr "입력 이벤트 발생시 소리를 재생할지 여부입니다."
+msgstr "입력 이벤트에 재생할 소리입니다."
 
-#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
-msgstr "미리 보기를 캐시에 저장할 일 단위의 최대 기간입니다. -1 값으로 설정하면 미리 보기를 지우지 않습니다."
+msgstr "캐시에 미리 보기 그림을 저장할 최대 시간으로, -1을 설정하면 비우기 기능을 비활성화합니다."
 
-#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr "메가바이트 단위의 미리 보기 캐시 최대 크기입니다. -1 값으로 설정하면 미리 보기를 지우지 않습니다."
+msgstr "미리 보기 그림 캐시의 메가바이트 단위 최대 용량이며, -1을 설정하면 비우기 기능을 비활성화합니다."
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
-msgstr "모든 외부 미리보기 비활성화"
+msgstr "모든 외부 미리 보기 그림 표시 비활성화"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:2
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
-msgstr "각 미리 보기 프로그램이 활성화 됐든 비활성화 됐든 관계 없이, 참이면 모든 외부 미리 보기 프로그램을 비활성화합니다."
+msgstr "참이면 모든 외부 미리 보기 그림 표시를 비활성화하며, 각 요소별 미리 보기 그림 표시 여부 활성화/비활성화 설정과는 무관합니다."
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
-msgstr "외부 미리 보기 프로그램을 비활성화 할 MIME 형식 목록입니다."
+msgstr "외부 미리 보기 그림 표시 프로그램을 비활성화 할 MIME 형식 목록"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:4
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr "이 목록에 들어있는 MIME 형식을 지닌 파일에 대해서는 미리 보기를 만들지 않습니다."
+msgstr "목록의 MIME 형식에 해당하는 파일에 대해서는 미리 보기 그림을 만들지 않습니다."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:1
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"
 msgstr "입력 시간"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:2
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr "쉬는 시간 모드 시작 전 입력 시간의 분 단위 시간입니다."
+msgstr "쉬는 시간을 시작하기 전 분 단위 입력 시간입니다."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:3
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"
 msgstr "쉬는 시간"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:4
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
 msgid "Number of minutes that the typing break should last."
-msgstr "입력 멈춤을 지속해야 할 분 단위 시간입니다."
+msgstr "휴식을 지속하기 위해 입력을 멈출 분 단위 시간입니다."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:5
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:5
 msgid "Allow postponing of breaks"
-msgstr "쉬는 시간 연기 허용"
+msgstr "쉬는 시간 지연 허용"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:6
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
-msgstr "입력 휴식 화면을 연기할 수 있을지의 여부입니다."
+msgstr "입력 방지 화면을 좀 더 표시할 지 여부입니다."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:7
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
 msgid "Whether or not keyboard locking is enabled"
-msgstr "키보드 잠금 활성 여부"
+msgstr "키보드 잠금 활성화 여부"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.in.h:8
+#: ../schemas/org.mate.typing-break.gschema.xml.in.h:8
 msgid "Whether or not keyboard locking is enabled."
-msgstr "키보드 잠금을 활성화 할 지 여부입니다."
+msgstr "키보드 잠금을 활성화할 지 여부입니다."
 
-#: ../tools/mate-color-select.c:62
+#: ../tools/mate-color-select.c:63
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
 msgstr "MATE 색상 선택"
@@ -1548,11 +1554,3 @@ msgstr "마테 1.4 설정 옮기기"
 #: ../tools/mate-conf-import.desktop.in.in.h:2
 msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
 msgstr "마테 1.4 설정을 마테 1.6으로 옮기는 도구"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:1
-msgid "Help"
-msgstr "도움말"
-
-#: ../user-guide/mate-user-guide.desktop.in.in.h:2
-msgid "Get help with MATE"
-msgstr "MATE 도움말 사용하기"
