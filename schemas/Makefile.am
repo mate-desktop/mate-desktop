@@ -24,11 +24,7 @@ gsettings_SCHEMAS = $(desktop_gschemas_in:.xml.in=.xml)
 
 @GSETTINGS_RULES@
 
-convertdir = $(datadir)/MateConf/gsettings
-convert_DATA = mate-desktop.convert
-
 EXTRA_DIST = \
-	$(convert_DATA) \
 	$(desktop_gschemas_in)
 
 CLEANFILES = \
