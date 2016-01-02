@@ -20,18 +20,12 @@ mate_color_select_LDADD = \
 desktopdir = $(datadir)/applications
 desktop_in_files = mate-color-select.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-if MATE_CONF_IMPORT_ENABLED
-desktop_in_files += mate-conf-import.desktop.in
-bin_SCRIPTS += mate-conf-import
-endif
 
 if MPASTE_ENABLED
 bin_SCRIPTS += mpaste
 endif
 
 EXTRA_DIST = \
-	mate-conf-import.desktop.in.in \
-	mate-conf-import \
 	mpaste
 
 CLEANFILES = *.desktop *.desktop.in

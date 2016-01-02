@@ -92,13 +92,6 @@ AC_ARG_ENABLE([mate-about],
 AM_CONDITIONAL(MATE_ABOUT_ENABLED, test "x$enable_mate_about" = "xyes")
 
 
-# Install tool to migrate 1.4 MateConf settings
-AC_ARG_ENABLE([mate-conf-import],
-	[AS_HELP_STRING([--enable-mate-conf-import],[install mate-conf-import tool])],,
-	[enable_mate_conf_import=no])
-AM_CONDITIONAL(MATE_CONF_IMPORT_ENABLED, test "x$enable_mate_conf_import" = "xyes")
-
-
 # Install tool to paste text to paste.mate-desktop.org
 AC_ARG_ENABLE([mpaste],
 	[AS_HELP_STRING([--enable-mpaste],[install mpaste tool])],,
@@ -317,7 +310,6 @@ schemas/org.mate.thumbnailers.gschema.xml
 schemas/org.mate.typing-break.gschema.xml
 man/Makefile
 tools/mate-color-select.desktop.in
-tools/mate-conf-import.desktop.in
 tools/Makefile
 icons/Makefile
 ])
@@ -348,7 +340,6 @@ mate-desktop $VERSION
 
     Gtk+ version:                 ${GTK_API_VERSION}
     Build mate-about:             ${enable_mate_about}
-    Install mate-conf-import:     ${enable_mate_conf_import}
     Install mpaste:               ${enable_mpaste}
     Use external pnp.ids:         ${EXTERNAL_PNP_IDS}
     Startup notification support: ${have_startup_notification}
