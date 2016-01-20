@@ -54,7 +54,7 @@ typedef void (* MateColorSelectionChangePaletteWithScreenFunc) (GdkScreen       
 
 struct _MateColorSelection
 {
-  GtkVBox parent_instance;
+  GtkBox parent_instance;
 
   /* < private_data > */
   ColorSelectionPrivate *private_data;
@@ -62,7 +62,7 @@ struct _MateColorSelection
 
 struct _MateColorSelectionClass
 {
-  GtkVBoxClass parent_class;
+  GtkBoxClass parent_class;
 
   void (*color_changed)	(MateColorSelection *color_selection);
 

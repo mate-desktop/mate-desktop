@@ -277,7 +277,7 @@ static const guchar dropper_mask[] = {
   0x02, 0x00, 0x00, 0x00 };
 #endif
 
-G_DEFINE_TYPE (MateColorSelection, mate_color_selection, GTK_TYPE_VBOX)
+G_DEFINE_TYPE (MateColorSelection, mate_color_selection, GTK_TYPE_BOX)
 
 static void
 mate_color_selection_class_init (MateColorSelectionClass *klass)
@@ -369,10 +369,18 @@ mate_color_selection_init (MateColorSelection *colorsel)
   priv->default_set = FALSE;
   priv->default_alpha_set = FALSE;
   
+#if GTK_CHECK_VERSION (3, 0, 0)
+  top_hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+#else
   top_hbox = gtk_hbox_new (FALSE, 12);
+#endif
   gtk_box_pack_start (GTK_BOX (colorsel), top_hbox, FALSE, FALSE, 0);
   
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+#else
   vbox = gtk_vbox_new (FALSE, 6);
+#endif
   priv->triangle_colorsel = gtk_hsv_new ();
   g_signal_connect (priv->triangle_colorsel, "changed",
                     G_CALLBACK (hsv_changed), colorsel);
@@ -382,7 +390,11 @@ mate_color_selection_init (MateColorSelection *colorsel)
   gtk_widget_set_tooltip_text (priv->triangle_colorsel,
                         _("Select the color you want from the outer ring. Select the darkness or lightness of that color using the inner triangle."));
   
+#if GTK_CHECK_VERSION (3, 0, 0)
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+#else
   hbox = gtk_hbox_new (FALSE, 6);
+#endif
   gtk_box_pack_end (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
   
   frame = gtk_frame_new (NULL);
@@ -406,7 +418,11 @@ mate_color_selection_init (MateColorSelection *colorsel)
   gtk_widget_set_tooltip_text (button,
                         _("Click the eyedropper, then click a color anywhere on your screen to select that color."));
   
+#if GTK_CHECK_VERSION (3, 0, 0)
+  top_right_vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+#else
   top_right_vbox = gtk_vbox_new (FALSE, 6);
+#endif
   gtk_box_pack_start (GTK_BOX (top_hbox), top_right_vbox, FALSE, FALSE, 0);
   table = gtk_table_new (8, 6, FALSE);
   gtk_box_pack_start (GTK_BOX (top_right_vbox), table, FALSE, FALSE, 0);
@@ -495,7 +511,11 @@ mate_color_selection_init (MateColorSelection *colorsel)
 	}
     }
   set_selected_palette (colorsel, 0, 0);
+#if GTK_CHECK_VERSION (3, 0, 0)
+  priv->palette_frame = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+#else
   priv->palette_frame = gtk_vbox_new (FALSE, 6);
+#endif
   label = gtk_label_new_with_mnemonic (_("_Palette:"));
   gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
   gtk_box_pack_start (GTK_BOX (priv->palette_frame), label, FALSE, FALSE, 0);
@@ -1045,8 +1065,12 @@ color_sample_new (MateColorSelection *colorsel)
   ColorSelectionPrivate *priv;
   
   priv = colorsel->private_data;
-  
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+  priv->sample_area = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+#else
   priv->sample_area = gtk_hbox_new (FALSE, 0);
+#endif
   priv->old_sample = gtk_drawing_area_new ();
   priv->cur_sample = gtk_drawing_area_new ();
 
@@ -2424,7 +2448,7 @@ mate_color_selection_new (void)
   color[2] = 1.0;
   color[3] = 1.0;
   
-  colorsel = g_object_new (MATE_TYPE_COLOR_SELECTION, NULL);
+  colorsel = g_object_new (MATE_TYPE_COLOR_SELECTION, "orientation", GTK_ORIENTATION_VERTICAL, NULL);
   priv = colorsel->private_data;
   set_color_internal (colorsel, color);
   mate_color_selection_set_has_opacity_control (colorsel, TRUE);

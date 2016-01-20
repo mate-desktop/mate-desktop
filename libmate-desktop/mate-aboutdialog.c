@@ -492,7 +492,11 @@ mate_about_dialog_init (MateAboutDialog *about)
   /* Widgets */
   gtk_widget_push_composite_child ();
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 8);
+#else
   vbox = gtk_vbox_new (FALSE, 8);
+#endif
   gtk_container_set_focus_chain (GTK_CONTAINER (vbox), NULL);
   gtk_container_set_border_width (GTK_CONTAINER (vbox), 5);
   gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (dialog)), vbox, TRUE, TRUE, 0);
@@ -519,7 +523,11 @@ mate_about_dialog_init (MateAboutDialog *about)
   gtk_label_set_justify (GTK_LABEL (priv->copyright_label), GTK_JUSTIFY_CENTER);
   gtk_box_pack_start (GTK_BOX (vbox), priv->copyright_label, FALSE, FALSE, 0);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+#else
   hbox = gtk_hbox_new (TRUE, 0);
+#endif
   gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, FALSE, 0);
 
   priv->website_label = button = gtk_label_new ("");
