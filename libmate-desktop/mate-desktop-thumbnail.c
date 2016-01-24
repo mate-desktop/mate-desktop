@@ -467,52 +467,6 @@ _gdk_pixbuf_new_from_uri_at_scale (const char *uri,
     return pixbuf;
 }
 
-static void
-mate_desktop_thumbnail_factory_finalize (GObject *object)
-{
-  MateDesktopThumbnailFactory *factory;
-  MateDesktopThumbnailFactoryPrivate *priv;
-
-  factory = MATE_DESKTOP_THUMBNAIL_FACTORY (object);
-
-  priv = factory->priv;
-
-  if (priv->thumbnailers)
-    {
-      g_list_free_full (priv->thumbnailers, (GDestroyNotify)thumbnailer_unref);
-      priv->thumbnailers = NULL;
-    }
-
-  if (priv->mime_types_map)
-    {
-      g_hash_table_destroy (priv->mime_types_map);
-      priv->mime_types_map = NULL;
-    }
-
-  if (priv->monitors)
-    {
-      g_list_free_full (priv->monitors, (GDestroyNotify)g_object_unref);
-      priv->monitors = NULL;
-    }
-
-  g_mutex_clear (&priv->lock);
-
-  if (priv->disabled_types)
-    {
-      g_strfreev (priv->disabled_types);
-      priv->disabled_types = NULL;
-    }
-
-  if (priv->settings)
-    {
-      g_object_unref (priv->settings);
-      priv->settings = NULL;
-    }
-
-  if (G_OBJECT_CLASS (parent_class)->finalize)
-    (* G_OBJECT_CLASS (parent_class)->finalize) (object);
-}
-
 /* These should be called with the lock held */
 static void
 mate_desktop_thumbnail_factory_register_mime_types (MateDesktopThumbnailFactory *factory,
@@ -863,6 +817,49 @@ mate_desktop_thumbnail_factory_init (MateDesktopThumbnailFactory *factory)
 
   if (!priv->disabled)
     mate_desktop_thumbnail_factory_load_thumbnailers (factory);
+}
+
+static void
+mate_desktop_thumbnail_factory_finalize (GObject *object)
+{
+  MateDesktopThumbnailFactory *factory;
+  MateDesktopThumbnailFactoryPrivate *priv;
+  
+  factory = MATE_DESKTOP_THUMBNAIL_FACTORY (object);
+
+  priv = factory->priv;
+
+  if (priv->thumbnailers)
+    {
+      g_list_free_full (priv->thumbnailers, (GDestroyNotify)thumbnailer_unref);
+      priv->thumbnailers = NULL;
+    }
+
+  g_clear_pointer (&priv->mime_types_map, g_hash_table_destroy);
+
+  if (priv->monitors)
+    {
+      g_list_free_full (priv->monitors, (GDestroyNotify)g_object_unref);
+      priv->monitors = NULL;
+    }
+
+  g_mutex_clear (&priv->lock);
+
+  g_clear_pointer (&priv->disabled_types, g_strfreev);
+
+  if (priv->settings)
+    {
+      g_signal_handlers_disconnect_by_func (priv->settings,
+                                            external_thumbnailers_disabled_all_changed_cb,
+                                            factory);
+      g_signal_handlers_disconnect_by_func (priv->settings,
+                                            external_thumbnailers_disabled_changed_cb,
+                                            factory);
+      g_clear_object (&priv->settings);
+    }
+
+  if (G_OBJECT_CLASS (parent_class)->finalize)
+    (* G_OBJECT_CLASS (parent_class)->finalize) (object);
 }
 
 static void
