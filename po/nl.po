@@ -5,6 +5,7 @@
 # Translators:
 # dragnadh <dragnadh@gmail.com>, 2015
 # infirit <inactive+infirit@transifex.com>, 2014-2015
+# Kees Lijkendijk <clkndk@gmail.com>, 2016
 # Michael Steenbeek <m.o.steenbeek@gmail.com>, 2012,2014-2015
 # closeddoors1559 <mrvnp@msn.com>, 2014
 # Tom van den Brink <tomracing79@hotmail.com>, 2014
@@ -13,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-06 12:19+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-01-02 18:28+0300\n"
+"PO-Revision-Date: 2016-01-22 14:15+0000\n"
+"Last-Translator: Kees Lijkendijk <clkndk@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/mate/MATE/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -260,7 +261,7 @@ msgid "The title of the color selection dialog"
 msgstr "De titel van de kleurkiezer dialoog"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "Kies een kleur"
 
@@ -282,7 +283,7 @@ msgstr "Huidige alpha"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "De geselecteerde doorzichtigheid (0 volledig transparant, 65535 volledig ondoorzichtig)"
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr "Ongeldige kleurdata ontvangen \n"
 
@@ -670,6 +671,7 @@ msgstr "vereiste virtuele afmeting past niet binnen de beschikbare afmeting: aan
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr "Schermen spiegelen"
 
@@ -759,8 +761,8 @@ msgstr "Geprefereerde assisterende technologie-toepassing voor visuele hulp"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
 msgstr "Geprefereerde assisterende technologie-toepassing voor visuele hulp die bij inloggen, het menu en de opdrachtregel gebruikt moet worden."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
@@ -1547,11 +1549,3 @@ msgstr "Kleur selectie dialoog"
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
 msgstr "Kies kleuren van het palet of het scherm"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr "Instellingen van MATE 1.4 migreren"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr "Hulpmiddel om instellingen van MATE 1.4 (en eerder) te migreren naar MATE 1.6 (en hoger)"

@@ -3,19 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Balázs Meskó <meskobalazs@gmail.com>, 2016
 # Egy Játékos <mcserver131@gmail.com>, 2015
 # Falu.Me, 2015
+# Faludi Zoltán, 2015
 # kami911 <kami911@gmail.com>, 2014
+# kami911 <kami911@gmail.com>, 2014-2015
 # Nagy Gábor <jackson.gabor@gmail.com>, 2014
-# Rezső Páder <rezso@rezso.net>, 2013-2015
+# Rezső Páder <rezso@rezso.net>, 2013-2016
 # Takler Tamás <taklertamas@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-06 12:19+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-01-02 18:28+0300\n"
+"PO-Revision-Date: 2016-02-10 19:47+0000\n"
+"Last-Translator: Balázs Meskó <meskobalazs@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/mate/MATE/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -190,7 +193,7 @@ msgstr "Logó"
 msgid ""
 "A logo for the about box. If this is not set, it defaults to "
 "gtk_window_get_default_icon_list()"
-msgstr ""
+msgstr "Logó a névjegy mezőhöz. Ha nincs beállítva, alapértelmezett értéke a gtk_window_get_default_icon_list()"
 
 #: ../libmate-desktop/mate-aboutdialog.c:435
 msgid "Logo Icon Name"
@@ -198,7 +201,7 @@ msgstr "Logónév"
 
 #: ../libmate-desktop/mate-aboutdialog.c:436
 msgid "A named icon to use as the logo for the about box."
-msgstr ""
+msgstr "Egy megnevezett ikon a névjegy mező logójának."
 
 #: ../libmate-desktop/mate-aboutdialog.c:449
 msgid "Wrap license"
@@ -249,7 +252,7 @@ msgstr "Alfa verziót használ"
 
 #: ../libmate-desktop/mate-colorbutton.c:155
 msgid "Whether or not to give the color an alpha value"
-msgstr ""
+msgstr "Kapjon-e a szín alfa-értéket"
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
@@ -260,7 +263,7 @@ msgid "The title of the color selection dialog"
 msgstr "A színválasztó ablak címkéje"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "Válasszon egy színt"
 
@@ -282,7 +285,7 @@ msgstr "Jelenleg Alfa "
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "A kiválasztott átlátszatlanság érték (0: teljesen átlátszó, 65535: teljesen átlátszatlan)"
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr "Érvénytelen színadat\n"
 
@@ -292,7 +295,7 @@ msgstr "Átlátszóság beállítása"
 
 #: ../libmate-desktop/mate-colorsel.c:305
 msgid "Whether the color selector should allow setting opacity"
-msgstr ""
+msgstr "A színválasztóban lehessen-e megadni az átlátszóságot"
 
 #: ../libmate-desktop/mate-colorsel.c:311
 msgid "Has palette"
@@ -410,13 +413,13 @@ msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
-msgstr ""
+msgstr "Az előzőleg kiválasztott szín, összehasonlításként a most kiválasztottal. Áthúzhatja ezt a színt egy palettabejegyzéshez, vagy kiválaszthatja mint jelenlegit a mellette lévő mezőbe húzással."
 
 #: ../libmate-desktop/mate-colorsel.c:1030
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
-msgstr ""
+msgstr "Az Ön által kiválasztott szín. Ezt a színt egy palettabejegyzésbe áthúzva elmentheti későbbi felhasználásra."
 
 #: ../libmate-desktop/mate-colorsel.c:1035
 msgid ""
@@ -434,13 +437,13 @@ msgstr "gtk-color-sel"
 
 #: ../libmate-desktop/mate-colorsel.c:1465
 msgid "_Save color here"
-msgstr ""
+msgstr "_Szín mentése ide"
 
 #: ../libmate-desktop/mate-colorsel.c:1690
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
-msgstr ""
+msgstr "Kattintson erre a palettabejegyzésre, hogy ez legyen a jelenlegi szín. A bejegyzés megváltoztatásához húzzon ide egy színt a pipetta melletti színmezőből vagy a jobb gombos menüben kattintson a „Szín mentése ide” pontra."
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
 #: ../libmate-desktop/mate-colorseldialog.c:168
@@ -670,108 +673,109 @@ msgstr "A kért virtuális méret nem illeszkedik az elérhető méretre: kért=
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr "Képernyők tükrözése"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
-msgstr ""
+msgstr "minimális időköz ezredmásodpercben"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr ""
+msgstr "Ugyanazon billentyű többszöri lenyomásának figyelmen kívül hagyása @delay ezredmásodpercen belül."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
-msgstr ""
+msgstr "Képpont másodpercenként"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr ""
+msgstr "Hány képpontot mozduljon másodpercenként maximális sebességnél."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr ""
+msgstr "Meddig gyorsítson, ezredmásodpercben"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr ""
+msgstr "Hány ezredmásodpercig tart a 0-ról maximális sebességre gyorsulás."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
 msgid "Initial delay in milliseconds"
-msgstr ""
+msgstr "Kezdő késleltetés ezredmásodpercben"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
-msgstr ""
+msgstr "Hány másodpercet várjon mielőtt az egérmozgató billentyűk működni kezdenek."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
 msgid "Minimum interval in milliseconds"
-msgstr ""
+msgstr "minimális időköz ezredmásodpercben"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr ""
+msgstr "Ne fogadja el a billentyű lenyomását, hacsak nincs @delay ezredmásodpercig lenyomva."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
-msgstr ""
+msgstr "Kikapcsolás két gomb egyidejű lenyomásakor."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Beep when a modifier is pressed."
-msgstr ""
+msgstr "Hangjelzés egy módosító megnyomásakor."
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr ""
+msgstr "Bejelentkezéskor elindítandó akadálymentesítési alkalmazások"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
-msgstr ""
+msgstr "A MATE asztalra bejelentkezéskor elindítandó akadálymentesítési alkalmazások listája."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Előnyben részesített mobilitási akadálymentesítő alkalmazás"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr ""
+msgstr "Előnyben részesített mobilitási akadálymentesítő alkalmazás a bejelentkezéshez, menükhöz vagy parancssorhoz."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Előnyben részesített mobilitási akadálymentesítő alkalmazás elindítása"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr ""
+msgstr "A MATE elindítsa-e bejelentkezéskor az előnyben részesített mobilitási akadálymentesítő alkalmazást?"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "Előnyben részesített vizuális akadálymentesítő alkalmazás"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
-msgstr ""
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
+msgstr "Előnyben részesített vizuális akadálymentesítő alkalmazás a bejelentkezéshez, menükhöz vagy parancssorhoz."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "Előnyben részesített vizuális akadálymentesítő alkalmazás indítása"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr ""
+msgstr "A MATE elindítsa-e bejelentkezéskor az előnyben részesített vizuális akadálymentesítő alkalmazást?"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
@@ -779,7 +783,7 @@ msgstr "Alapértelmezett böngésző"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
-msgstr ""
+msgstr "Alapértelmezett böngésző minden URL címhez."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
 msgid "Browser needs terminal"
@@ -787,314 +791,314 @@ msgstr "A böngésző terminálban fut"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:4
 msgid "Whether the default browser needs a terminal to run."
-msgstr ""
+msgstr "Ha a böngésző terminált igényel a futtatáshoz."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:5
 msgid "Browser understands remote"
-msgstr ""
+msgstr "A böngésző távirányítható-e?"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
 msgid "Whether the default browser understands netscape remote."
-msgstr ""
+msgstr "Az alapértelmezett böngésző távirányítható-e „netscape remote” segítségével?"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
-msgstr ""
+msgstr "Alapértelmezett naptár"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:2
 msgid "Default calendar application"
-msgstr ""
+msgstr "Alapértelmezett naptár alkalmazás"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:3
 msgid "Calendar needs terminal"
-msgstr ""
+msgstr "A naptárnak szüksége van-e terminálra."
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr ""
+msgstr "Ha a böngésző terminált igényel a futtatáshoz."
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
-msgstr ""
+msgstr "Alapértelmezett feladatkezelő"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
 msgid "Default tasks application"
-msgstr ""
+msgstr "Alapértelmezett feladatkezelő alkalmazás"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:7
 msgid "Tasks needs terminal"
-msgstr ""
+msgstr "A feladatkezelőnek szüksége van-e terminálra."
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr ""
+msgstr "Ha a feladatkezelő alkalmazás terminált igényel a futtatáshoz."
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
-msgstr ""
+msgstr "Terminál alkalmazás"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr ""
+msgstr "Terminált igénylő alkalmazások indításakor használandó terminál."
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
-msgstr ""
+msgstr "Végrehajtási paraméterek"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr ""
+msgstr "Az „exec” kulcsban megadott terminálban a programok végrehajtására használt paraméter."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
-msgstr ""
+msgstr "Asztalháttér megjelenítése"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr ""
+msgstr "A MATE megrajzolja-e az asztal hátterét?"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
-msgstr ""
+msgstr "Asztal ikonok megjelenítése"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr ""
+msgstr "A MATE fájlkezelő (Caja) megrajzolja az asztal ikonokat."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
-msgstr ""
+msgstr "A háttér elhalványítása változtatáskor"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:6
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
-msgstr ""
+msgstr "Ha ez igazra van állítva, akkor a MATE elhalványítási effektust használ az asztalháttér megváltoztatásához."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
-msgstr ""
+msgstr "Kép beállításai"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:8
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr ""
+msgstr "Meghatározza a wallpaper_filename kulcsban beállított kép megjelenését. Lehetséges értékek:  „wallpaper” (mozaik), „centered” (középre igazított), „scaled” (kifeszített), „stretched” (nyújtott), „zoom” (nagyítás), „spanned” (kiterjesztett)."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
-msgstr ""
+msgstr "Kép fájlneve"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
-msgstr ""
+msgstr "A háttérképként használandó fájl."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:11
 msgid "Picture Opacity"
-msgstr ""
+msgstr "Kép átlátszatlansága"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
-msgstr ""
+msgstr "A háttérkép rajzolásához használandó átlátszatlanság."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
-msgstr ""
+msgstr "Elsődleges szín"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr ""
+msgstr "Színátmenet rajzolásánál a bal vagy a felső szín, vagy az egyszínű háttér színe."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
-msgstr ""
+msgstr "Másodlagos szín"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr ""
+msgstr "Színátmenet rajzolásánál a jobb vagy az alsó szín, egyszínű háttér esetén nem használt."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
-msgstr ""
+msgstr "Színárnyalat típusa"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
-msgstr ""
+msgstr "Hogyan legyen árnyalva a háttérszín. Lehetséges értékek: „horizontal-gradient” (vízszintes színátmenet), „vertical-gradient” (függőleges színátmenet), és „solid” (egyszínű)."
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
-msgstr ""
+msgstr "Fájlikon téma"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr ""
+msgstr "A fájlikonok megjelenítéséhez használandó téma."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
-msgstr ""
+msgstr "Akadálymentesítés engedélyezése"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr ""
+msgstr "Az alkalmazások támogassák-e az akadálymentesítést?"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
-msgstr ""
+msgstr "Animáció engedélyezése"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr ""
+msgstr "Megjelenjenek-e az animációk. Megjegyzés: Ez egy globális kulcs, megváltoztatja az ablakkezelő, a panel, stb. viselkedését."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
-msgstr ""
+msgstr "Menükben van leválasztó"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr ""
+msgstr "A menükben legyen-e leválasztó."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Can Change Accels"
-msgstr ""
+msgstr "Módosítható gyorsbillentyűk"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid ""
 "Whether the user can dynamically type a new accelerator when positioned over"
 " an active menuitem."
-msgstr ""
+msgstr "A felhasználó beüthet-e új gyorsbillentyűt egy aktív menüre mutatva."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Toolbar Style"
-msgstr ""
+msgstr "Eszköztár stílusa"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr ""
+msgstr "Eszköztár stílusa. Lehetséges értékek: „both” (mindkettő), „both_horiz” (mindkettő vízszintesen), „icon” (ikon), és „text” (szöveg)."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Menus Have Icons"
-msgstr ""
+msgstr "A menükben vannak ikonok"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr ""
+msgstr "A menükben megjelenjenek-e ikonok a menüelemek mellett."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Buttons Have Icons"
-msgstr ""
+msgstr "A gomboknak vannak ikonjaik"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr ""
+msgstr "A gombokon megjelenjenek-e ikonok a gombok szövege mellett."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Menubar Detachable"
-msgstr ""
+msgstr "Leválasztható menüsor"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach menubars and move them around."
-msgstr ""
+msgstr "A felhasználó leválaszthatja és elmozdíthatja-e a menüsorokat."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Detachable"
-msgstr ""
+msgstr "Leválasztható eszköztár "
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Whether the user can detach toolbars and move them around."
-msgstr ""
+msgstr "A felhasználó leválaszthatja és elmozdíthatja-e az eszköztárakat."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Toolbar Icon Size"
-msgstr ""
+msgstr "Eszköztárikonok mérete"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr ""
+msgstr "Az eszköztárikonok mérete, a „small-toolbar” (kicsi) vagy „large-toolbar” (nagy) egyike."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink"
-msgstr ""
+msgstr "Villogó kurzor"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Whether the cursor should blink."
-msgstr ""
+msgstr "A kurzor villogjon-e."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Cursor Blink Time"
-msgstr ""
+msgstr "Kurzor villogás időköze"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr ""
+msgstr "A kurzor villogási ciklusának hossza ezredmásodpercben."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Icon Theme"
-msgstr ""
+msgstr "Ikon téma"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Icon theme to use for the panel, caja etc."
-msgstr ""
+msgstr "Ikon téma a panelhez, caja-hoz stb."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
-msgstr ""
+msgstr "GTK+ téma"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:28
 msgid "Basename of the default theme used by gtk+."
-msgstr ""
+msgstr "A GTK+ által használt alapértelmezett téma neve."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "List of symbolic names and color equivalents"
-msgstr ""
+msgstr "Szimbolikus nevek és színegyenértékek listája"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
-msgstr ""
+msgstr "A „gtk-color-scheme” által meghatározott „name:color” „\\n” karakterrel elválasztott listája"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "Default font"
-msgstr ""
+msgstr "Alapértelmezett betűtípus"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the default font used by gtk+."
-msgstr ""
+msgstr "A GTK+ által használt alapértelmezett betűkészlet neve."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Preedit Style"
-msgstr ""
+msgstr "GTK beviteli mód előszerkesztési stílusa"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr ""
+msgstr "A GTK+ által használt GTK+ beviteli mód előszerkesztési stílusának neve."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Status Style"
-msgstr ""
+msgstr "GTK bevitelimód-állapot stílusa"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr ""
+msgstr "A GTK+ által használt GTK+ bevitelimód-állapot stílus neve."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "GTK IM Module"
-msgstr ""
+msgstr "GTK beviteli mód modul"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:38
 msgid "Name of the input method module used by GTK+."
-msgstr ""
+msgstr "A GTK+ által használt beviteli mód modul neve."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "GTK3 fejléc használata"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:40
 msgid ""
@@ -1102,11 +1106,11 @@ msgid ""
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr ""
+msgstr "A beépített GTK+ párbeszédablakok, mint a fájlválasztó, a színválasztó vagy betűkészlet-választó a fenti címsort használják-e a műveleti ablakelemekhez vagy a lenti műveleti területet. A beállítás nem érinti az egyedi párbeszédablakokat, amelyek a GtkDialog-ot vagy üzenetablakokat használnak."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:41
 msgid "Use GTK3 overlay scrolling"
-msgstr ""
+msgstr "GTK3 átfedő görgetés használata"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:42
 msgid ""
@@ -1116,86 +1120,86 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "GTK eszközkészlet szintű animációk engedélyezése"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "Használja-e az eszközkészlet szintű animációkat."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Document font"
-msgstr ""
+msgstr "Dokumentum betűtípusa"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid "Name of the default font used for reading documents."
-msgstr ""
+msgstr "A dokumentumok olvasásához használt alapértelmezett betűkészlet neve."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Monospace font"
-msgstr ""
+msgstr "Rögzített szélességű betűtípus"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
-msgstr ""
+msgstr "A terminálokhoz hasonló helyeken használandó rögzített szélességű (monospace) betűkészlet neve."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Use Custom Font"
-msgstr ""
+msgstr "Egyéni betűkészlet használata"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr ""
+msgstr "Használjon-e egyéni betűkészletet a GTK+ alkalmazásokban."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Status Bar on Right"
-msgstr ""
+msgstr "Állapotsor a jobb oldalon"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid "Whether to display a status bar meter on the right."
-msgstr ""
+msgstr "Megjelenjen-e egy állapotsor a jobb oldalon."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Module for GtkFileChooser"
-msgstr ""
+msgstr "Modul a GtkFileChooser elemhez"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
-msgstr ""
+msgstr "A GtkFileChooser elemhez fájlrendszermodellként használandó modul. Lehetséges értékek: „gio” és „gtk+”."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Menubar accelerator"
-msgstr ""
+msgstr "Menüsor gyorsbillentyű"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid "Keyboard shortcut to open the menu bars."
-msgstr ""
+msgstr "Gyorsbillentyű a menü megnyitásához."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Input Methods' menu"
-msgstr ""
+msgstr "A „Beviteli módok” menü megjelenítése"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
-msgstr ""
+msgstr "A beviteli mezők és szövegnézetek helyi menüi felajánlják-e a beviteli módszer megváltoztatását."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Show the 'Unicode Control Character' menu"
-msgstr ""
+msgstr "A „Unicode vezérlőkarakter beszúrása” menü megjelenítése"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:60
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
-msgstr ""
+msgstr "A beviteli mezők és szövegnézetek felajánlják-e vezérlőkarakterek beszúrását."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr ""
+msgstr "Címsor elrendezés a GTK3 kliensoldalon díszített ablakokon"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:62
 msgid ""
@@ -1208,332 +1212,332 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "Csak az Alt billentyű lenyomásakor jelenítse meg a hívóbetűket"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:64
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr ""
+msgstr "A hívóbetűk automatikusan megjelenjenek és eltűnjenek-e, amikor a felhasználó megnyomja az Alt billentyűt."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
-msgstr ""
+msgstr "Parancssor letiltása"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr ""
+msgstr "A felhasználó megakadályozása a terminálhoz való hozzáférésben vagy egy végrehajtandó parancssor végrehajtásában. Például, ez letiltja a hozzáférést a panel „Alkalmazás futtatása” párbeszédablakához."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
-msgstr ""
+msgstr "Fájlok lemezre mentésének letiltása"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr ""
+msgstr "A felhasználó megakadályozása fájlok lemezre mentésében. Például, ez letiltja a hozzáférést az alkalmazások „Mentés másként” párbeszédablakaihoz."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
-msgstr ""
+msgstr "Nyomtatás letiltása"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr ""
+msgstr "A felhasználó megakadályozása a nyomtatásban. Például, ez letiltja a hozzáférést az alkalmazások „Nyomtatás” párbeszédablakaihoz."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
-msgstr ""
+msgstr "Nyomtatóbeállítás letiltása"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr ""
+msgstr "A felhasználó megakadályozása a nyomtatás beállításainak módosításában. Például, ez letiltja a hozzáférést az alkalmazások „Nyomtatás beállításai” párbeszédablakaihoz."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
-msgstr ""
+msgstr "Felhasználóváltás letiltása"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:10
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr ""
+msgstr "A felhasználó ne válthasson más fiókra, miközben saját munkamenete aktív."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
-msgstr ""
+msgstr "Képernyő zárolásának letiltása"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
-msgstr ""
+msgstr "A felhasználó nem zárolhatja a képernyőt."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:13
 msgid "Disable URL and MIME type handlers"
-msgstr ""
+msgstr "URL és MIME kezelők letiltása"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr ""
+msgstr "Az URL vagy MIME-típus kezelő alkalmazások futtatásának megakadályozása."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
-msgstr ""
+msgstr "Téma beállítások letiltása"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:16
 msgid "Prevent the user from changing theme settings."
-msgstr ""
+msgstr "A felhasználó nem módosíthatja a téma beállításokat."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:17
 msgid "Disable log out"
-msgstr ""
+msgstr "Kijelentkezés letiltása"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:18
 msgid "Prevent the user from logging out."
-msgstr ""
+msgstr "A felhasználó nem jelentkezhet ki."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr ""
+msgstr "lehetséges értékek: „on” (be), „off” (ki), és „custom” (egyéni)."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:2
 msgid "Keyboard Bell Custom Filename"
-msgstr ""
+msgstr "Billentyűzetcsengő egyéni fájlneve"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:3
 msgid "File name of the bell sound to be played."
-msgstr ""
+msgstr "A lejátszandó hangjelzés fájlneve."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:4
 msgid "Remember NumLock state"
-msgstr ""
+msgstr "A NumLock állapotának megjegyzése"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr ""
+msgstr "Ha be van állítva, a MATE megjegyzi a NumLock LED állapotát a munkamenetek között."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
-msgstr ""
+msgstr "NumLock állapota"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:7
 msgid "The remembered state of the NumLock LED."
-msgstr ""
+msgstr "A NumLock LED megjegyzett állapota"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:1
 msgid "Mouse button orientation"
-msgstr ""
+msgstr "Egérgombok elhelyezkedése"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr ""
+msgstr "A bal és jobb egérgombok felcserélése balkezes egerekhez."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Single Click"
-msgstr ""
+msgstr "Egyszeres kattintás"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
-msgstr ""
+msgstr "Gyorsítási szorzó az egér mozgatásához. A -1 érték a rendszer alapértelmezése."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
-msgstr ""
+msgstr "Mozgási küszöbérték"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:6
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
-msgstr ""
+msgstr "Az a távolság képpontokban, amit az egérnek meg kell tennie, mielőtt a gyorsított egérmozgatás aktivizálódik. A -1 érték a rendszer alapértelmezése."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
-msgstr ""
+msgstr "Húzási küszöbérték"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:8
 msgid "Distance before a drag is started."
-msgstr ""
+msgstr "Húzás indítása előtti távolság."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr ""
+msgstr "Dupla kattintás időköze"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
-msgstr ""
+msgstr "A dupla kattintás hossza."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:11
 msgid "Middle button emulation"
-msgstr ""
+msgstr "Középső gomb emulációja"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:12
 msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
-msgstr ""
+msgstr "Középső egérgomb emulációjának engedélyezése a bal és jobb gomb együttes megnyomásával."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
-msgstr ""
+msgstr "Mutató kiemelése"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr ""
+msgstr "Az egérmutató jelenlegi helyének kiemelése a Control billentyű lenyomásakor és felengedésekor."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor font"
-msgstr ""
+msgstr "Kurzor betűkészlet"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
-msgstr ""
+msgstr "A kurzorbetűkészlet neve. Ha nincs beállítva, akkor az alapértelmezett betűkészletet használja. Ez az érték csak az egyes munkamenetek indításakor kerül átadásra az X-kiszolgálónak, így megváltoztatása egy munkamenet közepén semmilyen hatással sincs a következő bejelentkezésig."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
-msgstr ""
+msgstr "Kurzortéma"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
-msgstr ""
+msgstr "A kurzortéma neve. Csak az Xcursor-t támogató X kiszolgálók használják, mint például az XFree86 4.3 és újabbak."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
 msgid "Cursor size"
-msgstr ""
+msgstr "Kurzorméret"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
 msgid "Size of the cursor referenced by cursor_theme."
-msgstr ""
+msgstr "A cursor_theme kulcs által hivatkozott kurzor mérete."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:1
 msgid "Default mixer device"
-msgstr ""
+msgstr "Alapértelmezett keverőeszköz"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr ""
+msgstr "A multimédia billentyűtársítások által használandó alapértelmezett keverőeszköz."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:3
 msgid "Default mixer tracks"
-msgstr ""
+msgstr "Alapértelmezett keverősávok"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr ""
+msgstr "A multimédia billentyűtársítások által használandó alapértelmezett keverősávok."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
-msgstr ""
+msgstr "ESD engedélyezése"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
-msgstr ""
+msgstr "Hangszerver elindításának engedélyezése."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
-msgstr ""
+msgstr "Hangok az eseményekhez"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:8
 msgid "Whether to play sounds on user events."
-msgstr ""
+msgstr "Legyen-e hanglejátszás felhasználói eseményekkor."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
-msgstr ""
+msgstr "Hangtéma neve"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:10
 msgid "The XDG sound theme to use for event sounds."
-msgstr ""
+msgstr "Az eseményhangokhoz használandó XDG hangtéma."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:11
 msgid "Input feedback sounds"
-msgstr ""
+msgstr "Beviteli visszajelzés hangja"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:12
 msgid "Whether to play sounds on input events."
-msgstr ""
+msgstr "Legyen-e hanglejátszás beviteli eseményekkor."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
-msgstr ""
+msgstr "Bélyegképek maximális kora a gyorsítótárban, napokban. A tisztítás letiltásához állítsa -1-re."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr ""
+msgstr "Bélyegképek maximális mérete a gyorsítótárban, megabájtokban. A tisztítás letiltásához állítsa -1-re."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
-msgstr ""
+msgstr "Minden külső előnézet-program kikapcsolása"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:2
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
-msgstr ""
+msgstr "Állítsa igazra az összes külső előnézet-program kikapcsolásához, függetlenül attól, hogy ezek egyenként ki vagy be vannak-e kapcsolva."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
-msgstr ""
+msgstr "MIME-típusok listája ahhoz, hogy mely külső bélyegképkészítő programok lesznek letiltva"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:4
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr ""
+msgstr "Nem lesznek bélyegképek létrehozva azokhoz a fájlokhoz, amelyek MIME-típusát tartalmazza a lista."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"
-msgstr ""
+msgstr "Gépelési idő"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr ""
+msgstr "Gépelési idő – percben megadva – a szünet előtt."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"
-msgstr ""
+msgstr "Szünet ideje"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
 msgid "Number of minutes that the typing break should last."
-msgstr ""
+msgstr "Ennyi percig tartson a gépelési szünet."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:5
 msgid "Allow postponing of breaks"
-msgstr ""
+msgstr "Szünetek felfüggeszthetők"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
-msgstr ""
+msgstr "A gépelési szünet felfüggeszthető legyen-e."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
 msgid "Whether or not keyboard locking is enabled"
-msgstr ""
+msgstr "Engedélyezve legyen-e a billentyűzetzárolás vagy sem"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:8
 msgid "Whether or not keyboard locking is enabled."
-msgstr ""
+msgstr "Engedélyezve legyen-e a billentyűzetzárolás vagy sem."
 
 #: ../tools/mate-color-select.c:63
 #: ../tools/mate-color-select.desktop.in.in.h:1
@@ -1547,11 +1551,3 @@ msgstr "Szín párbeszédablak"
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
 msgstr "Válassza ki a színt a palettáról, vagy a képernyőről"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr "MATE 1.4 beállítások migrálása"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr "MATE 1.4 beállítások migrálása 1.6-ba"

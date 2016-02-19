@@ -10,7 +10,7 @@
 # nyanyh <rebuilty@gmail.com>, 2013
 # liulitchi <xingzuo88@qq.com>, 2013
 # liushuyu011 <liushuyu_011@163.com>, 2014-2015
-# Mingye Wang <arthur200126@gmail.com>, 2015
+# Mingye Wang <arthur200126@gmail.com>, 2015-2016
 # nyanyh <rebuilty@gmail.com>, 2013
 # Wylmer Wang <wantinghard@gmail.com>, 2013-2014
 # liulitchi <xingzuo88@qq.com>, 2013
@@ -21,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-19 15:54+0000\n"
-"Last-Translator: 白铭骢 <jeffbai@aosc.xyz>\n"
+"POT-Creation-Date: 2016-01-02 18:28+0300\n"
+"PO-Revision-Date: 2016-01-08 21:21+0000\n"
+"Last-Translator: Mingye Wang <arthur200126@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/mate/MATE/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -268,7 +268,7 @@ msgid "The title of the color selection dialog"
 msgstr "颜色选择对话框标题"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "拾取颜色"
 
@@ -290,7 +290,7 @@ msgstr "当前 Alpha 值"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "目前的不透明度值(0表示完全透明, 65535表示完全不透明)"
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr "接收到非法颜色数据\n"
 
@@ -678,6 +678,7 @@ msgstr "需要的虚拟大小大于可用大小：需求=(%d, %d)，最小=(%d, 
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr "镜像屏幕"
 
@@ -767,8 +768,8 @@ msgstr "首选的视觉辅助技术应用程序"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
 msgstr "用于登录、菜单或命令行的首选视觉辅助技术应用程序。"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
@@ -1555,11 +1556,3 @@ msgstr "颜色选择对话框"
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
 msgstr "在调色板或屏幕上选取颜色"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr "导入 MATE 1.4 设置"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr "用于将 MATE 1.4 设置迁入 MATE 1.6 的工具"

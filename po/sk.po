@@ -3,17 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Dušan Kazik <prescott66@gmail.com>, 2015
-# Ján Ďanovský <dagsoftware@yahoo.com>, 2013-2015
+# Dušan Kazik <prescott66@gmail.com>, 2015-2016
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2013-2016
 # Tibor Kaputa <tibbbi2@gmail.com>, 2014
 # Tibor Kaputa <tibbbi2@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-06 12:19+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-01-02 18:28+0300\n"
+"PO-Revision-Date: 2016-02-13 18:35+0000\n"
+"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/mate/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +25,11 @@ msgstr ""
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:96
 msgid "translator-credits"
-msgstr "Ján Ďanovský <dagsoftware@yahoo.com>\nTibor Kaputa <tibbbi2@gmail.com>"
+msgstr "Ján Ďanovský <dagsoftware@yahoo.com>\nTibor Kaputa <tibbbi2@gmail.com>\nDušan Kazik <prescott66@gmail.com>"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
-msgstr "O MATE"
+msgstr "O prostredí MATE"
 
 #: ../mate-about/mate-about.desktop.in.in.h:2
 msgid "Learn more about MATE"
@@ -204,7 +204,7 @@ msgstr "Zalamovať licenciu"
 
 #: ../libmate-desktop/mate-aboutdialog.c:450
 msgid "Whether to wrap the license text."
-msgstr "Či sa má text licencie zalamovať"
+msgstr "Určuje, či sa má text licencie zalamovať"
 
 #. Add the credits button
 #: ../libmate-desktop/mate-aboutdialog.c:543
@@ -247,7 +247,7 @@ msgstr "Použiť priesvitnosť"
 
 #: ../libmate-desktop/mate-colorbutton.c:155
 msgid "Whether or not to give the color an alpha value"
-msgstr "Či má byť farbe pridelená hodnota priesvitnosti"
+msgstr "Určuje, či má byť farbe pridelená hodnota priesvitnosti"
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
@@ -258,7 +258,7 @@ msgid "The title of the color selection dialog"
 msgstr "Názov farby v okne výberu"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "Zvoľte farbu"
 
@@ -280,7 +280,7 @@ msgstr "Súčasná hodnota priesvitnosti"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Vybraná hodnota krytia (0 plne priehľadná, 65535 plne nepriehľadná)"
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr "Bol prijatý neplatný údaj o farbe\n"
 
@@ -290,7 +290,7 @@ msgstr "Má kontrolu nepriehľadnosti"
 
 #: ../libmate-desktop/mate-colorsel.c:305
 msgid "Whether the color selector should allow setting opacity"
-msgstr "Či má Výber farby povoliť nastavenie úrovne priehľadnosti"
+msgstr "Určuje, či má Výber farby povoliť nastavenie úrovne priehľadnosti"
 
 #: ../libmate-desktop/mate-colorsel.c:311
 msgid "Has palette"
@@ -298,7 +298,7 @@ msgstr "Má paletu"
 
 #: ../libmate-desktop/mate-colorsel.c:312
 msgid "Whether a palette should be used"
-msgstr "Či má byť použitá paleta"
+msgstr "Určuje, či má byť použitá paleta"
 
 #: ../libmate-desktop/mate-colorsel.c:319
 msgid "The current color"
@@ -310,11 +310,11 @@ msgstr "Súčasná hodnota krytia (0 plne priehľadná, 65535 plne nepriehľadn�
 
 #: ../libmate-desktop/mate-colorsel.c:332
 msgid "HEX String"
-msgstr ""
+msgstr "HEX reťazec"
 
 #: ../libmate-desktop/mate-colorsel.c:333
 msgid "The hexadecimal string of current color"
-msgstr ""
+msgstr "Hexadecimálny reťazec aktuálnej farby"
 
 #: ../libmate-desktop/mate-colorsel.c:383
 msgid ""
@@ -476,12 +476,12 @@ msgstr "Tlačidlo Pomocník dialógového okna."
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
-msgstr "Chyba pri čítaní súboru '%s': %s"
+msgstr "Chyba pri čítaní súboru „%s“: %s"
 
 #: ../libmate-desktop/mate-desktop-item.c:288
 #, c-format
 msgid "Error rewinding file '%s': %s"
-msgstr "Chyba pri presune v súbore '%s': %s"
+msgstr "Chyba pri presune v súbore „%s“: %s"
 
 #. Translators: the "name" mentioned
 #. * here is the name of an application or
@@ -496,12 +496,12 @@ msgstr "Bez názvu"
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
-msgstr "Súbor '%s' nie je normálny súbor alebo priečinok."
+msgstr "Súbor „%s“ nie je normálny súbor alebo priečinok."
 
 #: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
 msgid "Cannot find file '%s'"
-msgstr "Nepodarilo sa nájsť súbor '%s'"
+msgstr "Nepodarilo sa nájsť súbor „%s“"
 
 #: ../libmate-desktop/mate-desktop-item.c:837
 #, c-format
@@ -668,6 +668,7 @@ msgstr "vyžadovaná virtuálna veľkosť nezodpovedá dostupnej veľkosti: vyž
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr "Zrkadlené obrazovky"
 
@@ -723,77 +724,77 @@ msgstr "Pípnuť pri stlačení modifikátora."
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr "Štartovacie aplikácie pomocných technológií"
+msgstr "Spúšťané programy pomocných technológií"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
-msgstr "Zoznam aplikácií pomocných technológií, ktoré sa majú spustiť pri prihlásení do pracovného prostredia MATE."
+msgstr "Zoznam programov pomocných technológií, ktoré sa majú spustiť pri prihlásení do pracovného prostredia MATE."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr "Uprednostňovaná aplikácia pomocných technológií pohyblivosti"
+msgstr "Preferovaný program pomocných technológií pohyblivosti"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr ""
+msgstr "Preferovaný program pomocných technológií pohyblivosti, ktorý bude použitý pre prihlásenie, menu, alebo príkazový riadok."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Spustiť preferovaný program pomocných technológií pohyblivosti"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr ""
+msgstr "MATE má spustiť preferovaný program pomocných technológií pohyblivosti počas prihlásenia."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "Preferovaný program zrakových pomocných technológií"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
-msgstr ""
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
+msgstr "Preferovaný program zrakových pomocných technológií bude použitý pre prihlásenie, menu, alebo príkazový riadok."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "Spustiť preferovaný program zrakových pomocných technológií"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr ""
+msgstr "MATE má spustiť preferovaný program zrakových pomocných technológií počas prihlásenia."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
-msgstr ""
+msgstr "Predvolený prehliadač"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
-msgstr ""
+msgstr "Predvolený prehliadač pre všetky URL."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
 msgid "Browser needs terminal"
-msgstr ""
+msgstr "Prehliadač vyžaduje terminál"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:4
 msgid "Whether the default browser needs a terminal to run."
-msgstr ""
+msgstr "Určuje, či predvolený prehliadač vyžaduje terminál pre svoj beh."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:5
 msgid "Browser understands remote"
-msgstr ""
+msgstr "Prehliadač vie pracovať vzdialene"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
 msgid "Whether the default browser understands netscape remote."
-msgstr ""
+msgstr "Určuje, či predvolený prehliadač rozumie netscape remote."
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
@@ -809,7 +810,7 @@ msgstr "Kalendár potrebuje terminál"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr "Či predvolená aplikácia kalendára potrebuje terminál pre svoj beh"
+msgstr "Určuje, či predvolený program kalendára potrebuje terminál pre svoj beh"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
@@ -817,7 +818,7 @@ msgstr "Predvolené úlohy"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
 msgid "Default tasks application"
-msgstr "Predvolená aplikácia úloh"
+msgstr "Predvolený program úloh"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:7
 msgid "Tasks needs terminal"
@@ -825,54 +826,54 @@ msgstr "Úlohy potrebujú terminál"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr "Či predvolená aplikácia úloh potrebuje terminál pre svoj beh"
+msgstr "Určuje, či predvolený program úloh potrebuje terminál pre svoj beh"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
-msgstr "Aplikácia terminálu"
+msgstr "Program terminálu"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr ""
+msgstr "Terminálový program, ktorý sa má použiť, ak spúšťaný program vyžaduje terminál."
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
-msgstr ""
+msgstr "Parametre spustenia"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr ""
+msgstr "Parameter použitý na spustenie programov v termináli definovaný kľúčom „exec“."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
-msgstr ""
+msgstr "Vykresliť pozadie pracovnej plochy"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr ""
+msgstr "Má MATE vykresliť pozadie pracovnej plochy."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
-msgstr ""
+msgstr "Zobraziť ikony na ploche"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr ""
+msgstr "Poveriť správcu súborov MATE (Caja) nakreslením ikoniek na ploche."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
-msgstr ""
+msgstr "Zoslabiť pozadie pri zmene"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:6
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
-msgstr ""
+msgstr "Ak je táto možnosť vybraná, MATE zmení nastavenie s efektom zoslabnutia."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
-msgstr ""
+msgstr "Možnosti obrázka"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:8
 msgid ""
@@ -883,40 +884,40 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
-msgstr ""
+msgstr "Názov súboru obrázka"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
-msgstr ""
+msgstr "Súbor, ktorý použiť ako obrázok pozadia."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:11
 msgid "Picture Opacity"
-msgstr ""
+msgstr "Krytie obrázka"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
-msgstr ""
+msgstr "Krytie, pomocou ktorej vykresliť obrázok pozadia."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
-msgstr ""
+msgstr "Hlavná farba"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr ""
+msgstr "Ľavá alebo horná farba pri kreslení prechodov alebo jednoliata farba."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
-msgstr ""
+msgstr "Vedľajšia farba"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr ""
+msgstr "Pravá alebo dolná farba pri kreslení prechodov, nepoužité pre jednoliatu farbu."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
-msgstr ""
+msgstr "Typ farebného tieňovania"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:18
 msgid ""
@@ -926,131 +927,131 @@ msgstr ""
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
-msgstr ""
+msgstr "Téma ikon súborov"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr ""
+msgstr "Téma použitá pri zobrazovaní ikon súboru."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
-msgstr ""
+msgstr "Povoliť sprístupnenie"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr ""
+msgstr "Určuje, či majú mať programy podporu pre zjednodušenie ovládania."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
-msgstr ""
+msgstr "Povoliť animácie"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr ""
+msgstr "Určuje, či majú byť zobrazované animácie. Poznámka: Toto je globálne nastavenie a zmení správanie správcu okien, panelu atď."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
-msgstr ""
+msgstr "Menu majú úchyty"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr ""
+msgstr "Určuje, či majú mať menu úchytky."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Can Change Accels"
-msgstr ""
+msgstr "Možnosť zmeniť akcelerátory"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid ""
 "Whether the user can dynamically type a new accelerator when positioned over"
 " an active menuitem."
-msgstr ""
+msgstr "Určuje, či môže používateľ dynamicky zadať nový akcelerátor keď je jeho pozícia nad aktívnou položkou menu."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Toolbar Style"
-msgstr ""
+msgstr "Štýl panelu nástrojov"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr ""
+msgstr "Štýl panelu nástrojov. Platné hodnoty sú „both“(oboje), „both-horiz“(oboje horizontálne), „icons“(ikony) a „text“."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Menus Have Icons"
-msgstr ""
+msgstr "Položky menu majú ikony"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr ""
+msgstr "Určuje, či sa v menu môžu zobrazovať ikony vedľa položiek menu."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Buttons Have Icons"
-msgstr ""
+msgstr "Tlačidlá majú ikony"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr ""
+msgstr "Určuje, či sa na tlačidlách môžu okrem textu tlačidla zobrazovať aj ikony."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Menubar Detachable"
-msgstr ""
+msgstr "Odpojiteľný panel menu"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach menubars and move them around."
-msgstr ""
+msgstr "Určuje, či používateľ môže odpojiť panely menu a pohybovať nimi."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Detachable"
-msgstr ""
+msgstr "Odpojiteľný panel nástrojov"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Whether the user can detach toolbars and move them around."
-msgstr ""
+msgstr "Určuje, či používateľ môže odpojiť panely nástrojov a pohybovať nimi."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Toolbar Icon Size"
-msgstr ""
+msgstr "Veľkosť ikon na paneli nástrojov"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr ""
+msgstr "Veľkosť ikon v paneloch nástrojov, buď „small-toolbar“(malý panel nástrojov) alebo „large-toolbar“(veľký panel nástrojov)."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink"
-msgstr ""
+msgstr "Blikanie kurzora"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Whether the cursor should blink."
-msgstr ""
+msgstr "Určuje, či má kurzor blikať."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Cursor Blink Time"
-msgstr ""
+msgstr "Čas blikania kurzora"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr ""
+msgstr "Dĺžka cyklu blikania kurzora v milisekundách."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Icon Theme"
-msgstr ""
+msgstr "Téma ikon"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Icon theme to use for the panel, caja etc."
-msgstr ""
+msgstr "Téma ikon, ktorú používa panel, caja atď."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
-msgstr ""
+msgstr "Téma Gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:28
 msgid "Basename of the default theme used by gtk+."
-msgstr ""
+msgstr "Názov predvolenej témy používanej gtk+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "List of symbolic names and color equivalents"
-msgstr ""
+msgstr "Zoznam symbolických názvov a farebných ekvivalentov"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid ""
@@ -1060,39 +1061,39 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "Default font"
-msgstr ""
+msgstr "Predvolené písmo"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the default font used by gtk+."
-msgstr ""
+msgstr "Názov predvoleného písma používaného gtk+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Preedit Style"
-msgstr ""
+msgstr "Prededitovací štýl GTK IM"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr ""
+msgstr "Názov Prededitovacieho štýlu vstupnej metódy GTK+ použitého gtk+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Status Style"
-msgstr ""
+msgstr "Štýl GTK IM Status"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr ""
+msgstr "Názov Stavového štýlu vstupnej metódy GTK+ použitého gtk+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "GTK IM Module"
-msgstr ""
+msgstr "Modul GTK IM"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:38
 msgid "Name of the input method module used by GTK+."
-msgstr ""
+msgstr "Názov modulu vstupnej metódy používaného GTK+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "Použiť panel záhlavia GTK3"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:40
 msgid ""
@@ -1100,17 +1101,17 @@ msgid ""
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr ""
+msgstr "Určuje, či zabudované GTK+ dialógy, ako je výber súborov, farieb nebo písma, budú používať záhlavie navrchu, na zobrazenie akčných prvkov alebo akčného priestoru naspodku. Toto nastavení nemá priamo vplyv na vlastné dialógy pomocou GtkDialog nebo dialógy správ."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:41
 msgid "Use GTK3 overlay scrolling"
-msgstr ""
+msgstr "Používať GTK3 prekrývajúce skrolovanie"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:42
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
-msgstr ""
+msgstr "Určuje, či vstavané GTK+ skrolovacie okná budú používať prekryté skrolovanie. Prekrývajúce skrolovanie schováva a znižuje veľkosť posuvníka, ak nie je zameraný."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Enable Gtk toolkit-wide animations"
@@ -1118,82 +1119,82 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "Určuje, či povoliť toolkit-wide animácie"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Document font"
-msgstr ""
+msgstr "Písmo dokumentu"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid "Name of the default font used for reading documents."
-msgstr ""
+msgstr "Názov predvoleného písma používaného pre čítanie dokumentov."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Monospace font"
-msgstr ""
+msgstr "Písmo s pevnou šírkou"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
-msgstr ""
+msgstr "Názov písma s pevnou šírkou pre použitie na miestach ako terminály."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Use Custom Font"
-msgstr ""
+msgstr "Použiť vlastné písmo"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr ""
+msgstr "Určuje, či použiť používateľské písmo v gtk+ programoch."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Status Bar on Right"
-msgstr ""
+msgstr "Stavový riadok napravo"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid "Whether to display a status bar meter on the right."
-msgstr ""
+msgstr "Určuje, či zobraziť merač stavového riadku vpravo."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Module for GtkFileChooser"
-msgstr ""
+msgstr "Modul pre GtkFileChooser"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
-msgstr ""
+msgstr "Modul, ktorý sa má používať ako model systému súborov pre widget GtkFileChooser. Možné hodnoty sú „gio“, „mate-vfs“ a „gtk+“."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Menubar accelerator"
-msgstr ""
+msgstr "Klávesová skratka pre panel menu"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid "Keyboard shortcut to open the menu bars."
-msgstr ""
+msgstr "Klávesová skratka na otvorenie panela menu"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Input Methods' menu"
-msgstr ""
+msgstr "Zobraziť menu „Metódy vstupu“"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
-msgstr ""
+msgstr "Určuje, či majú kontextové menu vstupov a textových pohľadov ponúkať zmenu metódy vstupu."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Show the 'Unicode Control Character' menu"
-msgstr ""
+msgstr "Zobraziť menu „Riadiace znaky Unicode“"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:60
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
-msgstr ""
+msgstr "Určuje, či majú kontextové menu vstupov a textových pohľadov ponúkať vloženie riadiacich znakov."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr ""
+msgstr "Rozloženie záhlavia okien zdobených štýlom GTK3 stranou klienta."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:62
 msgid ""
@@ -1202,7 +1203,7 @@ msgid ""
 " of right. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
-msgstr ""
+msgstr "Toto nastavenie určí, ktoré tlačidlá by mali byť pridané do záhlavia okien zdobených klientom, a či by mali byť na ľavej, alebo pravej strane. Viď https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Only show mnemonics on when the Alt key is pressed"
@@ -1212,42 +1213,42 @@ msgstr ""
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr ""
+msgstr "Určuje, či sa majú mnemotechnické pomôcky automaticky zobraziť, a skryť, keď používateľ stlačí klávesu Alt."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
-msgstr ""
+msgstr "Zakázať príkazový riadok"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr ""
+msgstr "Nepovoliť používateľovi prístup k terminálu alebo zadať príkazový riadok na spustenie. Napríklad, toto by znemožnilo prístup k dialógovému oknu panela „Spustiť program“."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
-msgstr ""
+msgstr "Zakázať ukladanie súborov na disk"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr ""
+msgstr "Nepovoliť používateľovi ukladať súbory na disk. Napríklad, toto by znemožnilo prístup k dialógovým oknám „Uložiť ako“ všetkých programov."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
-msgstr ""
+msgstr "Zakázať tlač"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr ""
+msgstr "Nepovoliť používateľovi tlačiť. Napríklad, toto by znemožnilo prístup k dialógovým oknám „Tlačiť“ všetkých programov."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
-msgstr ""
+msgstr "Zakázať nastavenie tlače"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
@@ -1257,281 +1258,281 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
-msgstr ""
+msgstr "Zakázať prepínanie používateľov"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:10
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr ""
+msgstr "Zamedziť používateľovi prepnúť na iný účet, kým je jeho relácia aktívna."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
-msgstr ""
+msgstr "Zakázať zamykanie obrazovky"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
-msgstr ""
+msgstr "Zabrániť používateľovi v uzamknutí obrazovky."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:13
 msgid "Disable URL and MIME type handlers"
-msgstr ""
+msgstr "Zakázať ovládače URL a MIME typu"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr ""
+msgstr "Zabráni spusteniu ovládacieho programu pre URL alebo MIME typ."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
-msgstr ""
+msgstr "Zakázať nastavenia témy"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:16
 msgid "Prevent the user from changing theme settings."
-msgstr ""
+msgstr "Zabrániť používateľovi v zmene nastavení témy."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:17
 msgid "Disable log out"
-msgstr ""
+msgstr "Zakázať odhlásenie"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:18
 msgid "Prevent the user from logging out."
-msgstr ""
+msgstr "Zabrániť používateľovi v odhlásení."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr ""
+msgstr "možné hodnoty sú: „on“(zapnuté), „off“(vypnuté) a „custom“(vlastné)."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:2
 msgid "Keyboard Bell Custom Filename"
-msgstr ""
+msgstr "Názov súboru používateľského zvukového návestia klávesnice"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:3
 msgid "File name of the bell sound to be played."
-msgstr ""
+msgstr "Názov súboru zvukového návestia, ktorý má byť prehratý."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:4
 msgid "Remember NumLock state"
-msgstr ""
+msgstr "Pamätať si stav Num Locku"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr ""
+msgstr "Ak je nastavené na true, MATE si zapamätá stav NumLock LED medzi sedeniami."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
-msgstr ""
+msgstr "Stav NumLocku"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:7
 msgid "The remembered state of the NumLock LED."
-msgstr ""
+msgstr "Pamätať si stav NumLock LED."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:1
 msgid "Mouse button orientation"
-msgstr ""
+msgstr "Orientícia tlačidiel myši"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr ""
+msgstr "Vymeniť pravé a ľavé tlačítko myši pre myš pre ľavákov."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Single Click"
-msgstr ""
+msgstr "Jednoduché kliknutie"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
-msgstr ""
+msgstr "Urýchľovací násobok pre pohyb myši. Hodnota -1 nastaví systémom predvolenú hodnotu."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
-msgstr ""
+msgstr "Prah pohybu"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:6
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
-msgstr ""
+msgstr "Vzdialenosť v bodoch, o ktorú sa musí ukazovateľ posunúť, kým bude aktivovaný zrýchlený posun. Hodnota -1 nastaví predvolenú hodnotu systému."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
-msgstr ""
+msgstr "Prah ťahania"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:8
 msgid "Distance before a drag is started."
-msgstr ""
+msgstr "Vzdialenosť pred začatím ťahania."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr ""
+msgstr "Čas dvojitého kliknutia"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
-msgstr ""
+msgstr "Doba dvojitého kliknutia"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:11
 msgid "Middle button emulation"
-msgstr ""
+msgstr "Emulácia stredného tlačidla"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:12
 msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
-msgstr ""
+msgstr "Povolí emuláciu stredného tlačidla pomocou spoločného stlačenia ľavého a pravého tlačidla."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
-msgstr ""
+msgstr "Nájsť ukazovateľ"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr ""
+msgstr "Zvýrazní aktuálnu polohu ukazovateľa pri stlačení a uvoľnení klávesy Control."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor font"
-msgstr ""
+msgstr "Písmo kurzora"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid ""
 "Font name of the cursor. If unset, the default font is used. This value is "
 "only propagated to the X server start of each session, so changing it mid-"
 "session won't have an effect until the next time you log in."
-msgstr ""
+msgstr "Názov písma pre kurzor. Ak nie je nastavené, použije sa predvolené písmo. Táto hodnota je odovzdaná X serveru iba pri štarte každej relácie. Jej zmena počas relácie sa prejaví až pri vašom ďalšom prihlásení."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
-msgstr ""
+msgstr "Téma kurzora"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid ""
 "Cursor theme name. Used only by Xservers that support Xcursor, such as "
 "XFree86 4.3 and later."
-msgstr ""
+msgstr "Názov témy kurzora. Použité len Xservermi, ktoré podporujú Xcursor, ako sú XFree86 4.3 a novšie."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
 msgid "Cursor size"
-msgstr ""
+msgstr "Veľkosť kurzora"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
 msgid "Size of the cursor referenced by cursor_theme."
-msgstr ""
+msgstr "Veľkosť kurzora odkazovaného v cursor_theme."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:1
 msgid "Default mixer device"
-msgstr ""
+msgstr "Predvolené zariadenie zmiešavača"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr ""
+msgstr "Predvolené zariadenie zmiešavača použitého priradením multimediálnych kláves."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:3
 msgid "Default mixer tracks"
-msgstr ""
+msgstr "Predvolené stopy zmiešavača"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr ""
+msgstr "Predvolené stopy zmiešavača použitého priradením multimediálnych kláves."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
-msgstr ""
+msgstr "Povoliť ESD"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
-msgstr ""
+msgstr "Povoliť spustenie zvukového servera."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
-msgstr ""
+msgstr "Zvuky pre udalosti"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:8
 msgid "Whether to play sounds on user events."
-msgstr ""
+msgstr "Určuje, či prehrať zvuky pri používateľských udalostiach."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
-msgstr ""
+msgstr "Názov zvukovej témy"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:10
 msgid "The XDG sound theme to use for event sounds."
-msgstr ""
+msgstr "Téma zvuku XDG, ktorú použiť pre zvuky udalostí."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:11
 msgid "Input feedback sounds"
-msgstr ""
+msgstr "Zvuky spätnej väzby vstupu"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:12
 msgid "Whether to play sounds on input events."
-msgstr ""
+msgstr "Určuje, či prehrať zvuky pri udalostiach vstupu."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
-msgstr ""
+msgstr "Maximálny vek miniatúr vo vyrovnávacej pamäte v dňoch. Nastavením na -1 zakážete čistenie."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr ""
+msgstr "Maximálna veľkosť vyrovnávacej pamäte miniatúr v megabajtoch. Nastavením na -1 zakážete čistenie."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
-msgstr ""
+msgstr "Deaktivovať všetky externé vytvárače náhľadov"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:2
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
-msgstr ""
+msgstr "Nastaviť na true, aby sa deaktivovali všetky externé programy na tvorbu náhľadov, nezávisle od toho, či sú jednotlivo deaktivované/aktivované."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
-msgstr ""
+msgstr "Zoznam typov Mime, pre ktoré budú zakázané externé programy pre tvorbu miniatúr."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:4
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr ""
+msgstr "Miniatúry nebudú vytvárané pre súbory, ktorých Mime je v zozname."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"
-msgstr ""
+msgstr "Trvanie písania"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr ""
+msgstr "Dĺžka trvania písania v minútach pred spustením režimu prestávky."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"
-msgstr ""
+msgstr "Trvanie prestávky"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
 msgid "Number of minutes that the typing break should last."
-msgstr ""
+msgstr "Počet minút, po ktoré ma trvať prestávka v písaní."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:5
 msgid "Allow postponing of breaks"
-msgstr ""
+msgstr "Umožniť odloženie prestávok"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
-msgstr ""
+msgstr "Určuje, či môže byť alebo nemôže byť odložená obrazovka prestávky v písaní."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
 msgid "Whether or not keyboard locking is enabled"
-msgstr ""
+msgstr "Určuje, či je alebo nie je povolené uzamykanie klávesnice"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:8
 msgid "Whether or not keyboard locking is enabled."
-msgstr ""
+msgstr "Určuje, či je alebo nie je povolené uzamykanie klávesnice."
 
 #: ../tools/mate-color-select.c:63
 #: ../tools/mate-color-select.desktop.in.in.h:1
@@ -1545,11 +1546,3 @@ msgstr "Dialógové okno výberu farby"
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
 msgstr "Vyberte farby z palety, alebo obrazovky"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr "Premigrovať nastavenia MATE 1.4"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr "Nástroj na premigrovanie nastavení z MATE 1.4 do MATE 1.6"

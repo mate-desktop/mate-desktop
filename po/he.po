@@ -3,15 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Bar Bokovza <bokovzabox@gmail.com>, 2015
 # Dave Save <davesave@gmail.com>, 2015
+# Edward Sawyer <saoded@gmail.com>, 2016
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2012-2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-06 12:19+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-01-02 18:28+0300\n"
+"PO-Revision-Date: 2016-02-08 15:07+0000\n"
+"Last-Translator: Edward Sawyer <saoded@gmail.com>\n"
 "Language-Team: Hebrew (http://www.transifex.com/mate/MATE/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +25,7 @@ msgstr ""
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:96
 msgid "translator-credits"
-msgstr ""
+msgstr "קרדיט על תרגום"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -82,7 +84,7 @@ msgstr "לא ידוע"
 
 #: ../libmate-desktop/mate-aboutdialog.c:179
 msgid "Could not show link"
-msgstr ""
+msgstr "לא ניתן להציג את הקישור"
 
 #: ../libmate-desktop/mate-aboutdialog.c:235
 msgid "Program name"
@@ -92,7 +94,7 @@ msgstr "שם תוכנית"
 msgid ""
 "The name of the program. If this is not set, it defaults to "
 "g_get_application_name()"
-msgstr ""
+msgstr "שם התכנית. אם הוא לא מוגדר, ברירת המחדל היא g_get_application_name()"
 
 #: ../libmate-desktop/mate-aboutdialog.c:250
 msgid "Program version"
@@ -100,58 +102,58 @@ msgstr "גרסת תוכנית"
 
 #: ../libmate-desktop/mate-aboutdialog.c:251
 msgid "The version of the program"
-msgstr ""
+msgstr "גירסת התכנית"
 
 #: ../libmate-desktop/mate-aboutdialog.c:265
 msgid "Copyright string"
-msgstr ""
+msgstr "מחרוזת זכויות יוצרים"
 
 #: ../libmate-desktop/mate-aboutdialog.c:266
 msgid "Copyright information for the program"
-msgstr ""
+msgstr "מידע זכויות יוצרים עבור התכנית"
 
 #: ../libmate-desktop/mate-aboutdialog.c:283
 msgid "Comments string"
-msgstr ""
+msgstr "מחרוזת הערות"
 
 #: ../libmate-desktop/mate-aboutdialog.c:284
 msgid "Comments about the program"
-msgstr ""
+msgstr "הערות על גבי התכנית"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
 #: ../libmate-desktop/mate-aboutdialog.c:2161
 msgid "License"
-msgstr ""
+msgstr "רישיון"
 
 #: ../libmate-desktop/mate-aboutdialog.c:303
 msgid "The license of the program"
-msgstr ""
+msgstr "רישיון התכנית"
 
 #: ../libmate-desktop/mate-aboutdialog.c:318
 msgid "Website URL"
-msgstr ""
+msgstr "קישור לאתר"
 
 #: ../libmate-desktop/mate-aboutdialog.c:319
 msgid "The URL for the link to the website of the program"
-msgstr ""
+msgstr "כתובת ה-URL לאתר התכנית"
 
 #: ../libmate-desktop/mate-aboutdialog.c:334
 msgid "Website label"
-msgstr ""
+msgstr "תווית האתר"
 
 #: ../libmate-desktop/mate-aboutdialog.c:335
 msgid ""
 "The label for the link to the website of the program. If this is not set, it"
 " defaults to the URL"
-msgstr ""
+msgstr "התווית לקישור לאתר התכנית. אם היא לא מוגדרת, ברירת המחדל היא כתובת ה-URL."
 
 #: ../libmate-desktop/mate-aboutdialog.c:351
 msgid "Authors"
-msgstr ""
+msgstr "יוצרים"
 
 #: ../libmate-desktop/mate-aboutdialog.c:352
 msgid "List of authors of the program"
-msgstr ""
+msgstr "רשימת יוצרי התכנית"
 
 #: ../libmate-desktop/mate-aboutdialog.c:368
 msgid "Documenters"
@@ -159,24 +161,24 @@ msgstr "מתעדים"
 
 #: ../libmate-desktop/mate-aboutdialog.c:369
 msgid "List of people documenting the program"
-msgstr ""
+msgstr "רשימת אנשי תיעוד התכנית"
 
 #: ../libmate-desktop/mate-aboutdialog.c:385
 msgid "Artists"
-msgstr ""
+msgstr "אמנים"
 
 #: ../libmate-desktop/mate-aboutdialog.c:386
 msgid "List of people who have contributed artwork to the program"
-msgstr ""
+msgstr "רשימת האנשים שתרמו לתכנית"
 
 #: ../libmate-desktop/mate-aboutdialog.c:403
 msgid "Translator credits"
-msgstr ""
+msgstr "תודות מתרגם"
 
 #: ../libmate-desktop/mate-aboutdialog.c:404
 msgid ""
 "Credits to the translators. This string should be marked as translatable"
-msgstr ""
+msgstr "תודות עבור המתרגמים. המחרוזת צריכה להיות מסומנת כניתנת לתרגום"
 
 #: ../libmate-desktop/mate-aboutdialog.c:419
 msgid "Logo"
@@ -186,7 +188,7 @@ msgstr "לוגו"
 msgid ""
 "A logo for the about box. If this is not set, it defaults to "
 "gtk_window_get_default_icon_list()"
-msgstr ""
+msgstr "סמליל עבור חלון \"אודות\". אם הוא לא מוגדר, ברירת המחדל היא gtk_window_get_default_icon_list()"
 
 #: ../libmate-desktop/mate-aboutdialog.c:435
 msgid "Logo Icon Name"
@@ -256,7 +258,7 @@ msgid "The title of the color selection dialog"
 msgstr ""
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "בחר צבע"
 
@@ -278,7 +280,7 @@ msgstr ""
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr ""
 
@@ -666,6 +668,7 @@ msgstr "required virtual size does not fit available size: requested=(%d, %d), m
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr "תצוגת מראה בצגים"
 
@@ -755,8 +758,8 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
 msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
@@ -1542,12 +1545,4 @@ msgstr ""
 
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
-msgstr ""
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr ""
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
 msgstr ""

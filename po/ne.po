@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-06 12:19+0000\n"
+"POT-Creation-Date: 2016-01-02 18:28+0300\n"
+"PO-Revision-Date: 2016-01-10 23:29+0000\n"
 "Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Nepali (http://www.transifex.com/mate/MATE/language/ne/)\n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,7 @@ msgstr ""
 #: ../libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
-msgstr ""
+msgstr "अज्ञात"
 
 #: ../libmate-desktop/mate-aboutdialog.c:179
 msgid "Could not show link"
@@ -247,25 +247,25 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
-msgstr ""
+msgstr "शीर्षक"
 
 #: ../libmate-desktop/mate-colorbutton.c:170
 msgid "The title of the color selection dialog"
 msgstr ""
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
-msgstr ""
+msgstr "रंग छान्नुहोस्"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
 #: ../libmate-desktop/mate-colorsel.c:318
 msgid "Current Color"
-msgstr ""
+msgstr "हालको रंग"
 
 #: ../libmate-desktop/mate-colorbutton.c:185
 msgid "The selected color"
-msgstr ""
+msgstr "चयन गरिएको रंग"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
 #: ../libmate-desktop/mate-colorsel.c:325
@@ -276,7 +276,7 @@ msgstr ""
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr ""
 
@@ -664,6 +664,7 @@ msgstr ""
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr ""
 
@@ -753,8 +754,8 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
 msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
@@ -1540,12 +1541,4 @@ msgstr ""
 
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
-msgstr ""
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr ""
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
 msgstr ""

@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Aputsiaĸ Niels Janussen <aj@isit.gl>, 2014
-# Joe Hansen <joedalton2@yahoo.dk>, 2012,2014-2015
+# Joe Hansen <joedalton2@yahoo.dk>, 2012,2014-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-06 12:19+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-01-02 18:28+0300\n"
+"PO-Revision-Date: 2016-02-13 10:14+0000\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish (http://www.transifex.com/mate/MATE/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:96
 msgid "translator-credits"
-msgstr "\"Joe Hansen, 2012, 2013, 2014.\\n\"\n\"\\n\"\n\"Dansk-gruppen <dansk@dansk-gruppen.dk>\\n\"\n\"Mere info: http://www.dansk-gruppen.dk\""
+msgstr "Joe Hansen, 2012, 2013, 2014, 2105.\n\nDansk-gruppen <dansk@dansk-gruppen.dk>\nMere info: http://www.dansk-gruppen.dk"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -70,7 +70,7 @@ msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
-msgstr "Ordet MATE kommer fra yerba maté, en art kristtorn hjemmehørende i subtropisk Sydamerika. Dens blade indeholder koffein og bruges til at fremstille infusioner og en drik kaldt mate."
+msgstr "Ordet MATE kommer fra yerba mate, en art kristtorn hjemmehørende i subtropisk Sydamerika. Dens blade indeholder koffein og bruges til at fremstille infusioner og en drik kaldt mate."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -256,7 +256,7 @@ msgid "The title of the color selection dialog"
 msgstr "Titlen på vinduet til farvevalg"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "Vælg en farve"
 
@@ -278,7 +278,7 @@ msgstr "Nuværende alfa"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Den valgte værdi for uigennemsighed  (0 for komplet gennemsigtig, 65535 for komplet uigennemsig)"
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr "Modtog ugyldig farvedata\n"
 
@@ -340,7 +340,7 @@ msgstr "_Mætning:"
 
 #: ../libmate-desktop/mate-colorsel.c:420
 msgid "\"Deepness\" of the color."
-msgstr "\"Dybden\" på farven:"
+msgstr "»Dybden« på farven:"
 
 #: ../libmate-desktop/mate-colorsel.c:421
 msgid "_Value:"
@@ -457,11 +457,11 @@ msgstr "OK-knappen for vinduet."
 
 #: ../libmate-desktop/mate-colorseldialog.c:113
 msgid "Cancel Button"
-msgstr "Annullér-knap"
+msgstr "Annuller-knap"
 
 #: ../libmate-desktop/mate-colorseldialog.c:114
 msgid "The cancel button of the dialog."
-msgstr "Annullér-knappen for vinduet."
+msgstr "Annuller-knappen for vinduet."
 
 #: ../libmate-desktop/mate-colorseldialog.c:120
 msgid "Help Button"
@@ -474,12 +474,12 @@ msgstr "Hjælp-knappen for vinduet."
 #: ../libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
-msgstr "Fejl ved læsning af filen \"%s\": %s"
+msgstr "Fejl ved læsning af filen »%s«: %s"
 
 #: ../libmate-desktop/mate-desktop-item.c:288
 #, c-format
 msgid "Error rewinding file '%s': %s"
-msgstr "Fejl ved tilbagespoling af filen \"%s\": %s"
+msgstr "Fejl ved tilbagespoling af filen »%s«: %s"
 
 #. Translators: the "name" mentioned
 #. * here is the name of an application or
@@ -494,12 +494,12 @@ msgstr "Intet navn"
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
-msgstr "Filen \"%s\" er ikke en almindelig fil eller en mappe."
+msgstr "Filen »%s« er ikke en almindelig fil eller en mappe."
 
 #: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
 msgid "Cannot find file '%s'"
-msgstr "Kan ikke finde filen \"%s\""
+msgstr "Kan ikke finde filen »%s«"
 
 #: ../libmate-desktop/mate-desktop-item.c:837
 #, c-format
@@ -666,6 +666,7 @@ msgstr "anmodet virtuel størrelse passer ikke til tilgængelige størrelse: Anm
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr "Klonede skærme"
 
@@ -755,9 +756,9 @@ msgstr "Foretrukne program til visuelt assisterende teknologier"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
-msgstr "Foretrukne program til visuelt assisterende teknologier som bruges til logind, menu eller kommandolinje."
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
+msgstr "Foretrukne program til visuelt-assisterende teknologier som bruges til logind, menu eller kommandolinje."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
@@ -1543,11 +1544,3 @@ msgstr "Dialog for farvevalg"
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
 msgstr "Vælg farver fra paletten eller skærmen"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr "Migrer MATE 1.4-indstillinger"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr "Værktøj til at migrere MATE 1.4-indstillinger til MATE 1.6"

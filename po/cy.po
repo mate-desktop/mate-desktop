@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ciaran, 2014
+# ciaran, 2014-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-06 12:19+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-01-02 18:28+0300\n"
+"PO-Revision-Date: 2016-01-30 14:58+0000\n"
+"Last-Translator: ciaran\n"
 "Language-Team: Welsh (http://www.transifex.com/mate/MATE/language/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,7 +81,7 @@ msgstr "Anhysbys"
 
 #: ../libmate-desktop/mate-aboutdialog.c:179
 msgid "Could not show link"
-msgstr ""
+msgstr "Methu dangos y ddolen"
 
 #: ../libmate-desktop/mate-aboutdialog.c:235
 msgid "Program name"
@@ -240,7 +240,7 @@ msgstr "Gwaith celf gan"
 
 #: ../libmate-desktop/mate-colorbutton.c:154
 msgid "Use alpha"
-msgstr ""
+msgstr "Defnyddio alffa"
 
 #: ../libmate-desktop/mate-colorbutton.c:155
 msgid "Whether or not to give the color an alpha value"
@@ -255,7 +255,7 @@ msgid "The title of the color selection dialog"
 msgstr "Teitl y ddeialog i ddewis lliw"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "Dewiswch Liw"
 
@@ -271,13 +271,13 @@ msgstr ""
 #: ../libmate-desktop/mate-colorbutton.c:199
 #: ../libmate-desktop/mate-colorsel.c:325
 msgid "Current Alpha"
-msgstr ""
+msgstr "Yr alffa cyfredol"
 
 #: ../libmate-desktop/mate-colorbutton.c:200
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr ""
 
@@ -425,7 +425,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorsel.c:1460
 msgid "gtk-color-sel"
-msgstr ""
+msgstr "gtk-color-sel"
 
 #: ../libmate-desktop/mate-colorsel.c:1465
 msgid "_Save color here"
@@ -464,7 +464,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorseldialog.c:120
 msgid "Help Button"
-msgstr "Botwm Cymorth"
+msgstr "Botwm ymorth"
 
 #: ../libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
@@ -665,6 +665,7 @@ msgstr ""
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr ""
 
@@ -678,7 +679,7 @@ msgstr ""
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
-msgstr ""
+msgstr "picsel yr eiliad"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
@@ -754,8 +755,8 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
 msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
@@ -770,15 +771,15 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
-msgstr ""
+msgstr "Porwr rhagosodedig"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
-msgstr ""
+msgstr "Y porwr rhagosodedig ar gyfer pob URL."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
 msgid "Browser needs terminal"
-msgstr ""
+msgstr "Angen terfynell ar y porwr"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:4
 msgid "Whether the default browser needs a terminal to run."
@@ -794,7 +795,7 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
-msgstr ""
+msgstr "Calendr rhagosodedig"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:2
 msgid "Default calendar application"
@@ -810,7 +811,7 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
-msgstr ""
+msgstr "Tasgau rhagosodedig"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
 msgid "Default tasks application"
@@ -826,7 +827,7 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
-msgstr ""
+msgstr "Rhaglen terfynell"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
@@ -851,7 +852,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
-msgstr ""
+msgstr "Dangos eiconau'r bwrdd gwaith"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
@@ -869,7 +870,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
-msgstr ""
+msgstr "Dewisiadau'r llun"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:8
 msgid ""
@@ -880,7 +881,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
-msgstr ""
+msgstr "Enw ffeil y llun"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
@@ -888,7 +889,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:11
 msgid "Picture Opacity"
-msgstr ""
+msgstr "Didreiddiad y llun"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
@@ -896,7 +897,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
-msgstr ""
+msgstr "Lliw sylfaenol"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
@@ -904,7 +905,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
-msgstr ""
+msgstr "Lliw eilaidd"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
@@ -931,7 +932,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
-msgstr ""
+msgstr "Galluogi hygyrchedd"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
@@ -939,7 +940,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
-msgstr ""
+msgstr "Galluogi animeiddio"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
@@ -967,7 +968,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Toolbar Style"
-msgstr ""
+msgstr "Arddull y bar offer"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
@@ -975,7 +976,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Menus Have Icons"
-msgstr ""
+msgstr "Eiconau dewislenni"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
@@ -983,7 +984,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Buttons Have Icons"
-msgstr ""
+msgstr "Eiconau botymau"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether buttons may display an icon in addition to the button text."
@@ -991,7 +992,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Menubar Detachable"
-msgstr ""
+msgstr "Bar dewislenni datgysylltadwy"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach menubars and move them around."
@@ -999,7 +1000,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Detachable"
-msgstr ""
+msgstr "Bar offer datgysylltadwy"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Whether the user can detach toolbars and move them around."
@@ -1007,7 +1008,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Toolbar Icon Size"
-msgstr ""
+msgstr "Maint eiconau'r bar offer"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
@@ -1031,7 +1032,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Icon Theme"
-msgstr ""
+msgstr "Themau eiconau"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Icon theme to use for the panel, caja etc."
@@ -1039,7 +1040,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
-msgstr ""
+msgstr "Thema gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:28
 msgid "Basename of the default theme used by gtk+."
@@ -1057,7 +1058,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "Default font"
-msgstr ""
+msgstr "Ffont rhagosodedig"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the default font used by gtk+."
@@ -1119,7 +1120,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Document font"
-msgstr ""
+msgstr "Ffont dogfennau"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid "Name of the default font used for reading documents."
@@ -1127,7 +1128,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Monospace font"
-msgstr ""
+msgstr "Ffont unlled"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid ""
@@ -1136,7 +1137,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Use Custom Font"
-msgstr ""
+msgstr "Defnyddio ffont addasedig"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to use a custom font in gtk+ applications."
@@ -1144,7 +1145,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Status Bar on Right"
-msgstr ""
+msgstr "Bar statws ar y dde"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid "Whether to display a status bar meter on the right."
@@ -1213,7 +1214,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
-msgstr ""
+msgstr "Analluogi'r llinell orchymyn"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
@@ -1224,7 +1225,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
-msgstr ""
+msgstr "Analluogi cadw ffeiliau i ddisg"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
 msgid ""
@@ -1234,7 +1235,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
-msgstr ""
+msgstr "Analluogi argraffu"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
@@ -1244,7 +1245,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
-msgstr ""
+msgstr "Analluogi gosod argraffu"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
@@ -1254,7 +1255,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
-msgstr ""
+msgstr "Analluogi newid defyddwyr"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:10
 msgid ""
@@ -1264,7 +1265,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
-msgstr ""
+msgstr "Analluogi cloi'r sgrin"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
@@ -1280,7 +1281,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
-msgstr ""
+msgstr "Analluogi gosodiadau themâu"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:16
 msgid "Prevent the user from changing theme settings."
@@ -1288,7 +1289,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:17
 msgid "Disable log out"
-msgstr ""
+msgstr "Analluogi allgofnodi"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:18
 msgid "Prevent the user from logging out."
@@ -1334,7 +1335,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Single Click"
-msgstr ""
+msgstr "Clic sengl"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1362,7 +1363,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr ""
+msgstr "Amser clicio dwbl"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
@@ -1390,7 +1391,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor font"
-msgstr ""
+msgstr "Ffont y cyrchydd"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid ""
@@ -1411,7 +1412,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
 msgid "Cursor size"
-msgstr ""
+msgstr "Maint y cyrchydd"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
 msgid "Size of the cursor referenced by cursor_theme."
@@ -1435,7 +1436,7 @@ msgstr ""
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
-msgstr ""
+msgstr "Galluogi ESD"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
@@ -1533,7 +1534,7 @@ msgstr ""
 #: ../tools/mate-color-select.c:63
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
-msgstr ""
+msgstr "Dewisydd lliwiau MATE"
 
 #: ../tools/mate-color-select.desktop.in.in.h:2
 msgid "Color selection dialog"
@@ -1541,12 +1542,4 @@ msgstr ""
 
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
-msgstr ""
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr ""
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
 msgstr ""

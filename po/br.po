@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-15 18:05+0000\n"
-"Last-Translator: Alan Monfort <alan.monfort@free.fr>\n"
+"POT-Creation-Date: 2016-01-02 18:28+0300\n"
+"PO-Revision-Date: 2016-01-17 20:22+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Breton (http://www.transifex.com/mate/MATE/language/br/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -255,7 +255,7 @@ msgid "The title of the color selection dialog"
 msgstr "Titl ar voestad da zibab livioù"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "Tapout ul liv"
 
@@ -277,7 +277,7 @@ msgstr "Alfa bremanel"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Gwerzh an demerez bet diuzet (0 boull penn da benn, 65535 demer penn da benn)"
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr " Roadennoù liv didlvoudek zo bet degemeret\n"
 
@@ -665,6 +665,7 @@ msgstr "N'eo ket mat ar ment galloudel goulennet war ar ment posubl: goulenn=(%d
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr "Skrammoù klon"
 
@@ -708,7 +709,7 @@ msgstr "Etremez izek e milieilennoù"
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr "Ne vo ket asantet ma vo pouezet ur stokell warni anez ma vefe dalc'het @delay milieilenn."
+msgstr "Ne vo ket asantet mar bez pouezet ur stokell warni anez ma vefe dalc'het @delay milieilenn."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
@@ -754,9 +755,9 @@ msgstr "Arloadoù dre galvezouriezh ameilañ evit ar gweled plijet gwell ganeoc'
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
-msgstr "Arloadoù dre galvezouriezh ameilañ evit ar gweled plijet gwell ganeoc'h da vezañ arveret evit ar c'hennaskañ, al lañserioù pe an arc'hadoù."
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
+msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
@@ -1542,11 +1543,3 @@ msgstr "Boestad emziviz diuzadur al livioù"
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
 msgstr "Dibab livioù diwar al livaoueg pe ar skramm"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr "Treuztiriañ arventennoù MATE 1.4"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr "Ostilh da dreuztiriañ arventennoù MATE 1.4 betek MATE 1.6"
