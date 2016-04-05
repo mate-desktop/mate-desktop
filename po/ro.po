@@ -4,16 +4,16 @@
 # 
 # Translators:
 # corneliu.e <corneliueva@yahoo.com>, 2014
-# Daniel <danny34ever@yahoo.com>, 2015
-# Jobava <jobaval10n@gmail.com>, 2015
+# Daniel <danny34ever@yahoo.com>, 2015-2016
+# Baadur Jobava <jobaval10n@gmail.com>, 2015
 # sidro <slacky2005@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-12 11:47+0000\n"
-"Last-Translator: Daniel <danny34ever@yahoo.com>\n"
+"POT-Creation-Date: 2016-03-22 11:38+0300\n"
+"PO-Revision-Date: 2016-03-22 08:39+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Romanian (http://www.transifex.com/mate/MATE/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -121,7 +121,7 @@ msgid "Comments about the program"
 msgstr "Comentarii despre program"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2161
+#: ../libmate-desktop/mate-aboutdialog.c:2169
 msgid "License"
 msgstr "Licență"
 
@@ -207,37 +207,37 @@ msgid "Whether to wrap the license text."
 msgstr "Specifică dacă textul licenței să fie încadrat."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:543
+#: ../libmate-desktop/mate-aboutdialog.c:551
 msgid "C_redits"
 msgstr "_Mulțumiri"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:557
+#: ../libmate-desktop/mate-aboutdialog.c:565
 msgid "_License"
 msgstr "_Licență"
 
-#: ../libmate-desktop/mate-aboutdialog.c:838
+#: ../libmate-desktop/mate-aboutdialog.c:846
 #, c-format
 msgid "About %s"
 msgstr "Despre %s"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2085
+#: ../libmate-desktop/mate-aboutdialog.c:2093
 msgid "Credits"
 msgstr "Mulțumiri"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2113
+#: ../libmate-desktop/mate-aboutdialog.c:2121
 msgid "Written by"
 msgstr "Scris de"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2116
+#: ../libmate-desktop/mate-aboutdialog.c:2124
 msgid "Documented by"
 msgstr "Documentat de"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2128
+#: ../libmate-desktop/mate-aboutdialog.c:2136
 msgid "Translated by"
 msgstr "Tradus de"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2132
+#: ../libmate-desktop/mate-aboutdialog.c:2140
 msgid "Artwork by"
 msgstr "Creație artistică de"
 
@@ -258,14 +258,14 @@ msgid "The title of the color selection dialog"
 msgstr "Titlul dialogului de selecție a culorii"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "Alegeți o culoare"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
 #: ../libmate-desktop/mate-colorsel.c:318
 msgid "Current Color"
-msgstr "Culoarea curentă"
+msgstr "Culoarea actuală"
 
 #: ../libmate-desktop/mate-colorbutton.c:185
 msgid "The selected color"
@@ -274,13 +274,13 @@ msgstr "Culoarea aleasă"
 #: ../libmate-desktop/mate-colorbutton.c:199
 #: ../libmate-desktop/mate-colorsel.c:325
 msgid "Current Alpha"
-msgstr "Alpha curent"
+msgstr "Alpha actuală"
 
 #: ../libmate-desktop/mate-colorbutton.c:200
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Valoarea selectată a opacității (0 complet transparentă, 65535 complet opacă)"
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr "S-au primit date invalide despre culoarea\n"
 
@@ -302,11 +302,11 @@ msgstr "Dacă să fie utilizată o paletă"
 
 #: ../libmate-desktop/mate-colorsel.c:319
 msgid "The current color"
-msgstr "Culoarea curentă"
+msgstr "Culoarea actuală"
 
 #: ../libmate-desktop/mate-colorsel.c:326
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr "Valoarea curentă a opacității (0 transparență maximă, 65535 opacitate maximă)"
+msgstr "Valoarea actuală a opacității (0 transparență maximă, 65535 opacitate maximă)"
 
 #: ../libmate-desktop/mate-colorsel.c:332
 msgid "HEX String"
@@ -314,131 +314,131 @@ msgstr "Șir de caractere hexazecimal"
 
 #: ../libmate-desktop/mate-colorsel.c:333
 msgid "The hexadecimal string of current color"
-msgstr "Șirul de caractere hexazecimal al culorii curente"
+msgstr "Șirul de caractere hexazecimal al culorii actuale"
 
-#: ../libmate-desktop/mate-colorsel.c:383
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "Selectați culoarea pe care o doriți din cercul exterior. Selectați luminozitatea culorii utilizând triunghiul interior."
 
-#: ../libmate-desktop/mate-colorsel.c:407
+#: ../libmate-desktop/mate-colorsel.c:419
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "Dați clic pe pipetă, apoi dați clic pe o culoare oriunde pe ecran pentru a selecta acea culoare."
 
-#: ../libmate-desktop/mate-colorsel.c:416
+#: ../libmate-desktop/mate-colorsel.c:432
 msgid "_Hue:"
 msgstr "_Nuanță:"
 
-#: ../libmate-desktop/mate-colorsel.c:417
+#: ../libmate-desktop/mate-colorsel.c:433
 msgid "Position on the color wheel."
 msgstr "Poziția pe cercul culorilor."
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid "_Saturation:"
 msgstr "_Saturație:"
 
-#: ../libmate-desktop/mate-colorsel.c:420
+#: ../libmate-desktop/mate-colorsel.c:436
 msgid "\"Deepness\" of the color."
 msgstr "„Adâncimea” culorii."
 
-#: ../libmate-desktop/mate-colorsel.c:421
+#: ../libmate-desktop/mate-colorsel.c:437
 msgid "_Value:"
 msgstr "_Valoare:"
 
-#: ../libmate-desktop/mate-colorsel.c:422
+#: ../libmate-desktop/mate-colorsel.c:438
 msgid "Brightness of the color."
 msgstr "Luminozitatea culorii"
 
-#: ../libmate-desktop/mate-colorsel.c:423
+#: ../libmate-desktop/mate-colorsel.c:439
 msgid "_Red:"
 msgstr "_Roșu:"
 
-#: ../libmate-desktop/mate-colorsel.c:424
+#: ../libmate-desktop/mate-colorsel.c:440
 msgid "Amount of red light in the color."
 msgstr "Cantitatea de lumină roșie în culoare."
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:441
 msgid "_Green:"
 msgstr "_Verde:"
 
-#: ../libmate-desktop/mate-colorsel.c:426
+#: ../libmate-desktop/mate-colorsel.c:442
 msgid "Amount of green light in the color."
 msgstr "Cantitatea de lumină verde în culoare"
 
-#: ../libmate-desktop/mate-colorsel.c:427
+#: ../libmate-desktop/mate-colorsel.c:443
 msgid "_Blue:"
 msgstr "Al_bastru:"
 
-#: ../libmate-desktop/mate-colorsel.c:428
+#: ../libmate-desktop/mate-colorsel.c:444
 msgid "Amount of blue light in the color."
 msgstr "Cantitatea de lumină albastră în culoare."
 
-#: ../libmate-desktop/mate-colorsel.c:431
+#: ../libmate-desktop/mate-colorsel.c:447
 msgid "Op_acity:"
 msgstr "Op_acitate:"
 
-#: ../libmate-desktop/mate-colorsel.c:438
-#: ../libmate-desktop/mate-colorsel.c:448
+#: ../libmate-desktop/mate-colorsel.c:454
+#: ../libmate-desktop/mate-colorsel.c:464
 msgid "Transparency of the color."
 msgstr "Transparența culorii."
 
-#: ../libmate-desktop/mate-colorsel.c:455
+#: ../libmate-desktop/mate-colorsel.c:471
 msgid "Color _name:"
 msgstr "_Nume culoare:"
 
-#: ../libmate-desktop/mate-colorsel.c:469
+#: ../libmate-desktop/mate-colorsel.c:485
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "Puteți introduce o valoare hexazecimală a culorii ca în HTML, sau un nume de culoare în engleză, precum „orange” în această intrare."
 
-#: ../libmate-desktop/mate-colorsel.c:499
+#: ../libmate-desktop/mate-colorsel.c:519
 msgid "_Palette:"
 msgstr "_Paletă:"
 
-#: ../libmate-desktop/mate-colorsel.c:528
+#: ../libmate-desktop/mate-colorsel.c:548
 msgid "Color Wheel"
 msgstr "Roată de culori"
 
-#: ../libmate-desktop/mate-colorsel.c:1027
+#: ../libmate-desktop/mate-colorsel.c:1047
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
-msgstr "Culoarea selectată anterior, pentru a o compara cu culoarea pe care o selectați acum. Puteți trage această culoare într-o intrare din paletă, sau o puteți selecta ca și culoare curentă trăgând-o în cealaltă mostră de lângă."
+msgstr "Culoarea selectată anterior, pentru a o compara cu culoarea pe care o selectați acum. Puteți trage această culoare într-o intrare din paletă, sau o puteți selecta ca și culoare actuală trăgând-o în cealaltă mostră de lângă."
 
-#: ../libmate-desktop/mate-colorsel.c:1030
+#: ../libmate-desktop/mate-colorsel.c:1050
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "Culoarea pe care ați ales-o. Puteți trage această culoare întro intrare din paletă pentru a o salva pentru utilizarea pe viitor."
 
-#: ../libmate-desktop/mate-colorsel.c:1035
+#: ../libmate-desktop/mate-colorsel.c:1055
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Culoarea selectată anterior, pentru a o compara cu culoarea pe care o selectați acum."
 
-#: ../libmate-desktop/mate-colorsel.c:1038
+#: ../libmate-desktop/mate-colorsel.c:1058
 msgid "The color you've chosen."
 msgstr "Culoarea pe care ai ales-o."
 
-#: ../libmate-desktop/mate-colorsel.c:1460
+#: ../libmate-desktop/mate-colorsel.c:1484
 msgid "gtk-color-sel"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1465
+#: ../libmate-desktop/mate-colorsel.c:1489
 msgid "_Save color here"
 msgstr "_Salvează culoarea aici"
 
-#: ../libmate-desktop/mate-colorsel.c:1690
+#: ../libmate-desktop/mate-colorsel.c:1714
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
-msgstr "Dați clic pe această intrare din paletă pentru a o face culoarea curentă. Pentru a schimba această intrare, trageți o mostră de culoare aici sau dați clic dreapta pe ea și selectați „Salvează culoarea aici.”"
+msgstr "Dați clic pe această intrare din paletă pentru a o face culoarea actuală. Pentru a schimba această intrare, trageți o mostră de culoare aici sau dați clic dreapta pe ea și selectați „Salvează culoarea aici.”"
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
 #: ../libmate-desktop/mate-colorseldialog.c:168
@@ -596,7 +596,7 @@ msgstr "Laptop"
 #, c-format
 msgid ""
 "none of the saved display configurations matched the active configuration"
-msgstr "nici una din configurările ecranelor salvate nu se potrivește cu configurația curentă"
+msgstr "niciuna din configurările ecranelor salvate nu se potrivește cu configurația actuală"
 
 #: ../libmate-desktop/mate-rr-config.c:1486
 #, c-format
@@ -668,6 +668,7 @@ msgstr "dimensiunea virtuală cerută nu se potrivește dimensiunii disponibile:
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr "Ecrane oglindite"
 
@@ -757,9 +758,9 @@ msgstr "Aplicația tehnologie de asistență vizuală preferată"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
-msgstr "Aplicația tehnologie de asistență vizuală preferată care să fie folosită pentru autentificare, meniu, sau linie de comandă."
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
+msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
@@ -879,7 +880,7 @@ msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr ""
+msgstr "Determină cum este randată imaginiea stabilită de nume_fișier_tapet. Valorile posibile sunt „wallpaper”, „centered”, „scaled”, „stretched”, \"zoom\", \"spanned\"."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
@@ -1037,8 +1038,8 @@ msgid "Icon Theme"
 msgstr "Temă pictograme"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
-msgid "Icon theme to use for the panel, caja etc."
-msgstr "Temă pictograme  utilizată pentru panou, caja etc."
+msgid "Icon theme to use for the panel, Caja etc."
+msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
@@ -1389,7 +1390,7 @@ msgstr "Localizează indicatorul"
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr "Evidențiază locația curentă a indicatorului de maus când tasta Ctrl este apăsată și eliberată."
+msgstr "Evidențiază locația actuală a indicatorului de maus când tasta Ctrl este apăsată și eliberată."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor font"
@@ -1533,7 +1534,7 @@ msgstr "Specifică dacă blocarea tastaturii este activată sau nu"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Specifică dacă blocarea tastaturii este activată sau nu."
 
-#: ../tools/mate-color-select.c:63
+#: ../tools/mate-color-select.c:64
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
 msgstr "Selecție culoare MATE"
@@ -1545,11 +1546,3 @@ msgstr "Dialog de selectare a culorii"
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
 msgstr "Alegeți culori din paleta de pe ecran"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr "Migrare configurări MATE 1.4"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr "Unealtă pentru migrarea configurărilor MATE 1.4 la MATE 1.6"

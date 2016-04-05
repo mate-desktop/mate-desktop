@@ -5,7 +5,7 @@
 # Translators:
 # Abel Cheung <abel@oaka.org>, 2001-2003, 2007
 # Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>, 2008,2010
-# Jeff Huang <s8321414@gmail.com>, 2015
+# Jeff Huang <s8321414@gmail.com>, 2015-2016
 # 趙惟倫 <bluebat@member.fsf.org>, 2012-2013
 # Woodman Tuen <wmtuen@gmail.com>, 2007
 # Jeff Huang <s8321414@gmail.com>, 2014
@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-06 12:19+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-03-22 11:38+0300\n"
+"PO-Revision-Date: 2016-03-23 23:51+0000\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/mate/MATE/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -123,7 +123,7 @@ msgid "Comments about the program"
 msgstr "有關該程式的說明"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2161
+#: ../libmate-desktop/mate-aboutdialog.c:2169
 msgid "License"
 msgstr "授權條款"
 
@@ -209,37 +209,37 @@ msgid "Whether to wrap the license text."
 msgstr "是否包裝授權條款。"
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:543
+#: ../libmate-desktop/mate-aboutdialog.c:551
 msgid "C_redits"
 msgstr "鳴謝 (_R)"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:557
+#: ../libmate-desktop/mate-aboutdialog.c:565
 msgid "_License"
 msgstr "授權條款(_L)"
 
-#: ../libmate-desktop/mate-aboutdialog.c:838
+#: ../libmate-desktop/mate-aboutdialog.c:846
 #, c-format
 msgid "About %s"
 msgstr "關於 %s"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2085
+#: ../libmate-desktop/mate-aboutdialog.c:2093
 msgid "Credits"
 msgstr "鳴謝"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2113
+#: ../libmate-desktop/mate-aboutdialog.c:2121
 msgid "Written by"
 msgstr "程式編寫"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2116
+#: ../libmate-desktop/mate-aboutdialog.c:2124
 msgid "Documented by"
 msgstr "文件編寫"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2128
+#: ../libmate-desktop/mate-aboutdialog.c:2136
 msgid "Translated by"
 msgstr "翻譯"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2132
+#: ../libmate-desktop/mate-aboutdialog.c:2140
 msgid "Artwork by"
 msgstr "美工"
 
@@ -260,7 +260,7 @@ msgid "The title of the color selection dialog"
 msgstr "顏色選擇對話盒的標題"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "選取顏色"
 
@@ -282,7 +282,7 @@ msgstr "當前的 Alpha"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "選取的不透明度(0為完全透明，65535為完全不透明)"
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr "收到了無效的顏色資料\n"
 
@@ -318,125 +318,125 @@ msgstr "十六進位字串"
 msgid "The hexadecimal string of current color"
 msgstr "目前顏色的十六進位字串"
 
-#: ../libmate-desktop/mate-colorsel.c:383
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "從外面的環選取您想要的顏色。並用內部的三角形選取該顏色所要使用的明暗程度。"
 
-#: ../libmate-desktop/mate-colorsel.c:407
+#: ../libmate-desktop/mate-colorsel.c:419
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "點擊顏色吸管，然後在您的螢幕上的任一處點擊您想要使用的顏色以選取該顏色。"
 
-#: ../libmate-desktop/mate-colorsel.c:416
+#: ../libmate-desktop/mate-colorsel.c:432
 msgid "_Hue:"
 msgstr "色度(_H)："
 
-#: ../libmate-desktop/mate-colorsel.c:417
+#: ../libmate-desktop/mate-colorsel.c:433
 msgid "Position on the color wheel."
 msgstr "在色輪上的位置。"
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid "_Saturation:"
 msgstr "飽和度(_S)："
 
-#: ../libmate-desktop/mate-colorsel.c:420
+#: ../libmate-desktop/mate-colorsel.c:436
 msgid "\"Deepness\" of the color."
 msgstr "顏色的「濃度」"
 
-#: ../libmate-desktop/mate-colorsel.c:421
+#: ../libmate-desktop/mate-colorsel.c:437
 msgid "_Value:"
 msgstr "亮度(_V)："
 
-#: ../libmate-desktop/mate-colorsel.c:422
+#: ../libmate-desktop/mate-colorsel.c:438
 msgid "Brightness of the color."
 msgstr "顏色的明亮程度。"
 
-#: ../libmate-desktop/mate-colorsel.c:423
+#: ../libmate-desktop/mate-colorsel.c:439
 msgid "_Red:"
 msgstr "紅(_R)："
 
-#: ../libmate-desktop/mate-colorsel.c:424
+#: ../libmate-desktop/mate-colorsel.c:440
 msgid "Amount of red light in the color."
 msgstr "紅光在顏色中的多寡。"
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:441
 msgid "_Green:"
 msgstr "綠(_G)："
 
-#: ../libmate-desktop/mate-colorsel.c:426
+#: ../libmate-desktop/mate-colorsel.c:442
 msgid "Amount of green light in the color."
 msgstr "綠光在顏色中的多寡。"
 
-#: ../libmate-desktop/mate-colorsel.c:427
+#: ../libmate-desktop/mate-colorsel.c:443
 msgid "_Blue:"
 msgstr "藍(_B)："
 
-#: ../libmate-desktop/mate-colorsel.c:428
+#: ../libmate-desktop/mate-colorsel.c:444
 msgid "Amount of blue light in the color."
 msgstr "藍光在顏色中的多寡。"
 
-#: ../libmate-desktop/mate-colorsel.c:431
+#: ../libmate-desktop/mate-colorsel.c:447
 msgid "Op_acity:"
 msgstr "不透明(_A)："
 
-#: ../libmate-desktop/mate-colorsel.c:438
-#: ../libmate-desktop/mate-colorsel.c:448
+#: ../libmate-desktop/mate-colorsel.c:454
+#: ../libmate-desktop/mate-colorsel.c:464
 msgid "Transparency of the color."
 msgstr "顏色的透明程度。"
 
-#: ../libmate-desktop/mate-colorsel.c:455
+#: ../libmate-desktop/mate-colorsel.c:471
 msgid "Color _name:"
 msgstr "色彩名稱(_N)："
 
-#: ../libmate-desktop/mate-colorsel.c:469
+#: ../libmate-desktop/mate-colorsel.c:485
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "您可以輸入 HTML 風格的十六進位色彩值，或是簡單的輸入色彩的名稱，像是 'orange' 到這個格子裡。"
 
-#: ../libmate-desktop/mate-colorsel.c:499
+#: ../libmate-desktop/mate-colorsel.c:519
 msgid "_Palette:"
 msgstr "調色板(_P):"
 
-#: ../libmate-desktop/mate-colorsel.c:528
+#: ../libmate-desktop/mate-colorsel.c:548
 msgid "Color Wheel"
 msgstr "色輪"
 
-#: ../libmate-desktop/mate-colorsel.c:1027
+#: ../libmate-desktop/mate-colorsel.c:1047
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "先前選取的顏色，用來與您現在所選的比較。您可以將此顏色拖曳至調色板上，或是透過拖曳它到另外一個色樣旁來選擇這個顏色。"
 
-#: ../libmate-desktop/mate-colorsel.c:1030
+#: ../libmate-desktop/mate-colorsel.c:1050
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "您已選取的顏色。您可以拖曳這個顏色到調色板以為未來的使用儲存它。"
 
-#: ../libmate-desktop/mate-colorsel.c:1035
+#: ../libmate-desktop/mate-colorsel.c:1055
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "先前選取的顏色，用來與您現在所選的比較。"
 
-#: ../libmate-desktop/mate-colorsel.c:1038
+#: ../libmate-desktop/mate-colorsel.c:1058
 msgid "The color you've chosen."
 msgstr "您已選取的顏色。"
 
-#: ../libmate-desktop/mate-colorsel.c:1460
+#: ../libmate-desktop/mate-colorsel.c:1484
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1465
+#: ../libmate-desktop/mate-colorsel.c:1489
 msgid "_Save color here"
 msgstr "在這裡儲存顏色(_S)"
 
-#: ../libmate-desktop/mate-colorsel.c:1690
+#: ../libmate-desktop/mate-colorsel.c:1714
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -670,6 +670,7 @@ msgstr "要求的虛擬大小無法符合可用的大小：要求的 =(%d, %d)�
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr "鏡射螢幕"
 
@@ -759,8 +760,8 @@ msgstr "偏好的視覺輔助科技程式"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
 msgstr "用於登入、選單及命令列的偏好視覺輔助科技。"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
@@ -1039,8 +1040,8 @@ msgid "Icon Theme"
 msgstr "圖示主題"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
-msgid "Icon theme to use for the panel, caja etc."
-msgstr "在面板、caja 等等中使用的圖示主題"
+msgid "Icon theme to use for the panel, Caja etc."
+msgstr "在面板、Caja 等程式內使用的圖示主題"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
@@ -1535,7 +1536,7 @@ msgstr "是否鎖定鍵盤"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "是否鎖定鍵盤。"
 
-#: ../tools/mate-color-select.c:63
+#: ../tools/mate-color-select.c:64
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
 msgstr "MATE 顏色選擇區"
@@ -1547,11 +1548,3 @@ msgstr "顏色選擇區對話盒"
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
 msgstr "從調色板或螢幕上選擇顏色"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr "匯入 MATE 1.4 設定"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr "將 MATE 1.4 的設定匯入到 MATE 1.6 的工具"

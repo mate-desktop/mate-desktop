@@ -3,16 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ivica  Kolić <ikoli@yahoo.com>, 2013-2014
-# Mislav E. Lukšić <meluksic@yahoo.com>, 2014
+# Hotellook, 2014
+# Ivica  Kolić <ikoli@yahoo.com>, 2013-2015
+# Mislav E. Lukšić <meluksic@yahoo.com>, 2014,2016
 # Tomislav Krznar <tomislav.krznar@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-06 12:19+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-03-22 11:38+0300\n"
+"PO-Revision-Date: 2016-03-29 10:42+0000\n"
+"Last-Translator: Mislav E. Lukšić <meluksic@yahoo.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/mate/MATE/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,7 +45,7 @@ msgstr "MATE pruža korisnicima Linuxa shvatljivo i privlačno radno okruženje 
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
-msgstr "MATE uključuje većinu onoga što vidiš na vlastitom računalu, uključujući datotečnog upravitelja, prikaznike zapisa i slika, izbornike i niz drugih programa."
+msgstr "MATE uključuje većinu onoga što vidiš na vlastitom računalu, uključujući datotečnog upravitelja, prikaznike zapisa i slika, izbornike i niz drugih aplikacija."
 
 #: ../mate-about/mate-about.h:51
 msgid ""
@@ -87,13 +88,13 @@ msgstr "Nije bilo moguće prikazati poveznicu"
 
 #: ../libmate-desktop/mate-aboutdialog.c:235
 msgid "Program name"
-msgstr "Programsko ime"
+msgstr "Programski naziv"
 
 #: ../libmate-desktop/mate-aboutdialog.c:236
 msgid ""
 "The name of the program. If this is not set, it defaults to "
 "g_get_application_name()"
-msgstr "Ime programa. Ako ovo nije postavljeno, zadano je prema g_get_application_name()"
+msgstr "Naziv programa. Ako ovo nije postavljeno, zadano je prema g_get_application_name()"
 
 #: ../libmate-desktop/mate-aboutdialog.c:250
 msgid "Program version"
@@ -120,7 +121,7 @@ msgid "Comments about the program"
 msgstr "Napomene o programu"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2161
+#: ../libmate-desktop/mate-aboutdialog.c:2169
 msgid "License"
 msgstr "Dozvola"
 
@@ -195,7 +196,7 @@ msgstr "Naziv sličice zaštitnog znaka"
 
 #: ../libmate-desktop/mate-aboutdialog.c:436
 msgid "A named icon to use as the logo for the about box."
-msgstr "Imenovana  sličica koja se koristi kao zaštitni znak za opisni okvir."
+msgstr "Imenovana sličica koja se koristi kao zaštitni znak za opisni okvir."
 
 #: ../libmate-desktop/mate-aboutdialog.c:449
 msgid "Wrap license"
@@ -206,37 +207,37 @@ msgid "Whether to wrap the license text."
 msgstr "Treba li uključiti sadržaj dozvole za krajnjeg korisnika."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:543
+#: ../libmate-desktop/mate-aboutdialog.c:551
 msgid "C_redits"
 msgstr "Z_asluge"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:557
+#: ../libmate-desktop/mate-aboutdialog.c:565
 msgid "_License"
 msgstr "_Dozvola"
 
-#: ../libmate-desktop/mate-aboutdialog.c:838
+#: ../libmate-desktop/mate-aboutdialog.c:846
 #, c-format
 msgid "About %s"
 msgstr "O %s"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2085
+#: ../libmate-desktop/mate-aboutdialog.c:2093
 msgid "Credits"
 msgstr "Zasluge"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2113
+#: ../libmate-desktop/mate-aboutdialog.c:2121
 msgid "Written by"
 msgstr "Napisali"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2116
+#: ../libmate-desktop/mate-aboutdialog.c:2124
 msgid "Documented by"
 msgstr "Dokumentirali"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2128
+#: ../libmate-desktop/mate-aboutdialog.c:2136
 msgid "Translated by"
 msgstr "Prijevod"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2132
+#: ../libmate-desktop/mate-aboutdialog.c:2140
 msgid "Artwork by"
 msgstr "Umjetnički rad"
 
@@ -257,7 +258,7 @@ msgid "The title of the color selection dialog"
 msgstr "Naslov dijaloškog okvira za odabir boje"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "Izaberi boju"
 
@@ -279,7 +280,7 @@ msgstr "Trenutni alfa-kanal"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Odabrana vrijednost neprozirnosti (0 potpuno prozirno, 65535 potpuno neprozirno)"
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr "Primljeni neispravni podatci boje\n"
 
@@ -315,125 +316,125 @@ msgstr "HEX znakovni niz"
 msgid "The hexadecimal string of current color"
 msgstr "Šesnaestični znakovni niz trenutne boje"
 
-#: ../libmate-desktop/mate-colorsel.c:383
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "Odaberi boju koju želiš iz vanskog prstena. Odaberi tamnoću ili svjetlinu te boje koristeći unutarnji trokut."
 
-#: ../libmate-desktop/mate-colorsel.c:407
+#: ../libmate-desktop/mate-colorsel.c:419
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "Klikni kapaljku, a zatim klikni boju bilo gdje na svom zaslonu za odabir te boje."
 
-#: ../libmate-desktop/mate-colorsel.c:416
+#: ../libmate-desktop/mate-colorsel.c:432
 msgid "_Hue:"
 msgstr "_Nijansa:"
 
-#: ../libmate-desktop/mate-colorsel.c:417
+#: ../libmate-desktop/mate-colorsel.c:433
 msgid "Position on the color wheel."
 msgstr "Položaj na kružnici boje."
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid "_Saturation:"
 msgstr "_Zasićenost:"
 
-#: ../libmate-desktop/mate-colorsel.c:420
+#: ../libmate-desktop/mate-colorsel.c:436
 msgid "\"Deepness\" of the color."
 msgstr "\"Dubina\" boje."
 
-#: ../libmate-desktop/mate-colorsel.c:421
+#: ../libmate-desktop/mate-colorsel.c:437
 msgid "_Value:"
 msgstr "_Vrijednost:"
 
-#: ../libmate-desktop/mate-colorsel.c:422
+#: ../libmate-desktop/mate-colorsel.c:438
 msgid "Brightness of the color."
 msgstr "Svjetlina boje."
 
-#: ../libmate-desktop/mate-colorsel.c:423
+#: ../libmate-desktop/mate-colorsel.c:439
 msgid "_Red:"
 msgstr "_Crvena:"
 
-#: ../libmate-desktop/mate-colorsel.c:424
+#: ../libmate-desktop/mate-colorsel.c:440
 msgid "Amount of red light in the color."
 msgstr "Količina crvene svjetlosti u boji."
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:441
 msgid "_Green:"
 msgstr "_Zelena:"
 
-#: ../libmate-desktop/mate-colorsel.c:426
+#: ../libmate-desktop/mate-colorsel.c:442
 msgid "Amount of green light in the color."
 msgstr "Količina zelene svjetlosti u boji."
 
-#: ../libmate-desktop/mate-colorsel.c:427
+#: ../libmate-desktop/mate-colorsel.c:443
 msgid "_Blue:"
 msgstr "_Plava:"
 
-#: ../libmate-desktop/mate-colorsel.c:428
+#: ../libmate-desktop/mate-colorsel.c:444
 msgid "Amount of blue light in the color."
 msgstr "Količina plave svjetlosti u boji."
 
-#: ../libmate-desktop/mate-colorsel.c:431
+#: ../libmate-desktop/mate-colorsel.c:447
 msgid "Op_acity:"
 msgstr "Ne_prozirnost:"
 
-#: ../libmate-desktop/mate-colorsel.c:438
-#: ../libmate-desktop/mate-colorsel.c:448
+#: ../libmate-desktop/mate-colorsel.c:454
+#: ../libmate-desktop/mate-colorsel.c:464
 msgid "Transparency of the color."
 msgstr "Prozirnost boje."
 
-#: ../libmate-desktop/mate-colorsel.c:455
+#: ../libmate-desktop/mate-colorsel.c:471
 msgid "Color _name:"
 msgstr "Naziv _boje:"
 
-#: ../libmate-desktop/mate-colorsel.c:469
+#: ../libmate-desktop/mate-colorsel.c:485
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "Možeš unijeti šesnaestičnu vrijednost boje u HTML obliku ili jednostavno ovdje izvršiti unos naziva boje kao što je 'narančasta'."
 
-#: ../libmate-desktop/mate-colorsel.c:499
+#: ../libmate-desktop/mate-colorsel.c:519
 msgid "_Palette:"
 msgstr "_Paleta:"
 
-#: ../libmate-desktop/mate-colorsel.c:528
+#: ../libmate-desktop/mate-colorsel.c:548
 msgid "Color Wheel"
 msgstr "Kružnica boje"
 
-#: ../libmate-desktop/mate-colorsel.c:1027
+#: ../libmate-desktop/mate-colorsel.c:1047
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "Prethodno odabrana boja, za usporedbu s bojom koju odabireš sad. Ovu boju možeš povući na paletni unos ili odabrati ovu boju za trenutnu njenim dovlačenjem uz bok uzorka druge boje."
 
-#: ../libmate-desktop/mate-colorsel.c:1030
+#: ../libmate-desktop/mate-colorsel.c:1050
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "Boja koja je odabrana. Ovu boju možeš povući na paletni unos kako bi bila upamćena za buduće korištenje."
 
-#: ../libmate-desktop/mate-colorsel.c:1035
+#: ../libmate-desktop/mate-colorsel.c:1055
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Prethodno odabrana boja, za usporedbu s bojom koju odabireš sad."
 
-#: ../libmate-desktop/mate-colorsel.c:1038
+#: ../libmate-desktop/mate-colorsel.c:1058
 msgid "The color you've chosen."
 msgstr "Boja koja je odabrana."
 
-#: ../libmate-desktop/mate-colorsel.c:1460
+#: ../libmate-desktop/mate-colorsel.c:1484
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1465
+#: ../libmate-desktop/mate-colorsel.c:1489
 msgid "_Save color here"
 msgstr "_Spremi boju ovamo"
 
-#: ../libmate-desktop/mate-colorsel.c:1690
+#: ../libmate-desktop/mate-colorsel.c:1714
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -667,6 +668,7 @@ msgstr "tražena prividna veličina ne uklapa se u dostupnu veličinu: zatražen
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr "Zrcalni zasloni"
 
@@ -722,53 +724,53 @@ msgstr "Oglasi zvukom kada je izmjenjivač pritisnut."
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr "Programi pomoćne tehnologije za pokretanje"
+msgstr "Početne aplikacije pomoćnih tehnologija"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
-msgstr "Popis programa pomoćne tehnologije za pokretanje pri prijavi u radno okruženje MATE."
+msgstr "Popis aplikacija pomoćnih tehnologija za pokretanje pri prijavi u radno okruženje MATE."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr "Prvenstveni program pomoćne tehnologije pokretnosti"
+msgstr "Prvenstvena aplikacija pomoćne tehnologije pokretljivosti"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr "Prvenstveni program pomoćne tehnologije pokretnosti koji će se koristiti za prijavu, izbornik ili naredbeni redak."
+msgstr "Prvenstvena aplikacija pomoćne tehnologije pokretljivosti koja će se koristiti za prijavu, izbornik ili naredbeni redak."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr "Pokreni prvenstveni program pomoćne tehnologije pokretnosti"
+msgstr "Pokreni prvenstvenu aplikaciju pomoćne tehnologije pokretljivosti"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr "MATE ima pokrenuti prvenstveni program pomoćne tehnologije pokretnosti tijekom prijave."
+msgstr "MATE ima pokrenuti prvenstvenu aplikaciju pomoćne tehnologije pokretljivosti tijekom prijave."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr "Prvenstveni program vizualne pomoćne tehnologije"
+msgstr "Prvenstvena aplikacija pomoćne tehnologije čitljivosti"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
-msgstr "Prvenstveni program vizualne pomoćne tehnologije koji će se koristiti za prijavu, izbornik ili naredbeni redak."
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
+msgstr "Prvenstvena aplikacija pomoćne tehnologije čitljivosti koja se koristi za prijavu, izbornik ili naredbeni redak."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr "Pokreni prvenstveni program vizualne pomoćne tehnologije"
+msgstr "Pokreni prvenstvenu aplikaciju pomoćne tehnologije čitljivosti"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr "MATE ima pokrenuti prvenstveni program vizualne pomoćne tehnologije tijekom prijave."
+msgstr "MATE ima pokrenuti prvenstvenu aplikaciju pomoćne tehnologije čitljivosti tijekom prijave."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
@@ -800,7 +802,7 @@ msgstr "Zadani kalendar"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:2
 msgid "Default calendar application"
-msgstr "Zadani program kalendara"
+msgstr "Zadana kalendarska aplikacija"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:3
 msgid "Calendar needs terminal"
@@ -808,7 +810,7 @@ msgstr "Kalendar zahtijeva terminal"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr "Treba li zadani kalendarski program terminal za pokretanje."
+msgstr "Treba li zadana kalendarska aplikacija terminal za pokretanje"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
@@ -816,7 +818,7 @@ msgstr "Zadani zadatci"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
 msgid "Default tasks application"
-msgstr "Zadani program za zadatke"
+msgstr "Zadana aplikacija zadataka"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:7
 msgid "Tasks needs terminal"
@@ -824,15 +826,15 @@ msgstr "Zadatci zahtijevaju terminal"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr "Treba li zadani program zadataka terminal za pokretanje."
+msgstr "Treba li zadana aplikacija zadataka terminal za pokretanje"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
-msgstr "Terminalni program"
+msgstr "Terminalska aplikacija"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr "Teminalni program za korištenje kad se pokreću programi koji ga zahtijevaju."
+msgstr "Terminalski program za korištenje kad se pokreću aplikacije koje ga zahtijevaju."
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
@@ -937,7 +939,7 @@ msgstr "Omogući pristupačnost"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr "Trebaju li programi imati pristupnu podršku."
+msgstr "Trebaju li aplikacije imati podršku pristupačnosti."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
@@ -1036,7 +1038,7 @@ msgid "Icon Theme"
 msgstr "Tema sličica"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
-msgid "Icon theme to use for the panel, caja etc."
+msgid "Icon theme to use for the panel, Caja etc."
 msgstr "Tema sličica koja se koristi za ploču, Caju itd."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
@@ -1121,11 +1123,11 @@ msgstr "Treba li omogućiti animacije širom paketa programskog pribora."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Document font"
-msgstr "Pismo zapisa"
+msgstr "Pismo dokumenta"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid "Name of the default font used for reading documents."
-msgstr "Naziv zadanog pisma korištenog za čitanje zapisa."
+msgstr "Naziv zadanog pisma korištenog za čitanje dokumenata."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Monospace font"
@@ -1142,7 +1144,7 @@ msgstr "Koristi prilagođeno pismo"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Treba li koristiti zadano pismo u gtk+ programima."
+msgstr "Treba li koristiti zadano pismo u gtk+ aplikacijama."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Status Bar on Right"
@@ -1222,7 +1224,7 @@ msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr "Spriječi korisnika u spremanju datoteka na disk. Na primjer, ovo će onemogućiti pristup svim programskim dijaloškim okvirima koji sadrže \"Spremi kao\"."
+msgstr "Spriječi korisnika u pristupanju terminalu ili odabiru naredbenog retka za izvršenje. Na primjer, ovo će onemogućiti pristup dijaloškom okviru ploče \"Pokreni aplikaciju\"."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
@@ -1252,7 +1254,7 @@ msgstr "Onemogući postavljanje ispisa"
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr "Spriječi korisnika u mijenjanju postavki ispisa. Na primjer, ovo bi onemogućilo pristup svim programskim dijaloškim okvirima \"Postavljanje ispisa\"."
+msgstr "Spriječi korisnika u mijenjanju postavki ispisa. Na primjer, ovo bi onemogućilo pristup svim programskim dijaloškim okvirima koji sadrže \"Postavljanje ispisa\"."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
@@ -1278,7 +1280,7 @@ msgstr "Onemogući upravljačke programe za URL i MIME vrstu"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr "Spriječi izvođenje upravljačkih programa za URL ili MIME vrstu."
+msgstr "Spriječi izvođenje upravljačkih aplikacija za URL ili MIME vrstu."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
@@ -1532,7 +1534,7 @@ msgstr "Je li ili nije omogućeno zaključavanje tipkovnice"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Je li ili nije omogućeno zaključavanje tipkovnice."
 
-#: ../tools/mate-color-select.c:63
+#: ../tools/mate-color-select.c:64
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
 msgstr "Odabir boje MATE-a"
@@ -1544,11 +1546,3 @@ msgstr "Dijaloški okvir odabira boje"
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
 msgstr "Odaberi boje iz palete ili zaslona"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr "Preseli postavke MATE-a 1.4"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr "Pomagalo za prebacivanje postavki MATE-a 1.4 u MATE 1.6"

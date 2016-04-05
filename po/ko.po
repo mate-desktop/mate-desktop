@@ -5,16 +5,17 @@
 # Translators:
 # Alan Lee <bkrhlim@aol.com>, 2013
 # Jinkyu Yi <jincreator@jincreator.net>, 2013
-# 박정규(Jung Kyu Park) <bagjunggyu@gmail.com>, 2015
+# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2015
+# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2016
 # Alan Lee <bkrhlim@aol.com>, 2013
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-06 12:19+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2016-03-22 11:38+0300\n"
+"PO-Revision-Date: 2016-03-31 00:48+0000\n"
+"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/mate/MATE/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,7 +61,7 @@ msgid ""
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
-msgstr "MATE는 그놈 2의 연장 프로젝트입니다. 수백명의 기여자가 1997년도부터 시작된 그놈 프로젝트에 코드를 기여하고 있습니다. 번역, 문서화, 품질 향상 등의 다른 중요한 방법으로도 기여하고 있습니다."
+msgstr "마테는 그놈 2의 연장 프로젝트입니다. 수백명의 기여자가 1997년도부터 시작된 그놈 프로젝트에 코드를 기여하고 있습니다. 번역, 문서화, 품질 향상 등의 다른 중요한 방법으로도 기여하고 있습니다."
 
 #: ../mate-about/mate-about.h:58
 msgid ""
@@ -122,7 +123,7 @@ msgid "Comments about the program"
 msgstr "프로그램 설명입니다"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2161
+#: ../libmate-desktop/mate-aboutdialog.c:2169
 msgid "License"
 msgstr "라이선스"
 
@@ -208,37 +209,37 @@ msgid "Whether to wrap the license text."
 msgstr "라이선스를 래핑할지 여부."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:543
+#: ../libmate-desktop/mate-aboutdialog.c:551
 msgid "C_redits"
 msgstr "참여자(_R)"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:557
+#: ../libmate-desktop/mate-aboutdialog.c:565
 msgid "_License"
 msgstr "라이선스(_L)"
 
-#: ../libmate-desktop/mate-aboutdialog.c:838
+#: ../libmate-desktop/mate-aboutdialog.c:846
 #, c-format
 msgid "About %s"
 msgstr "%s 정보"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2085
+#: ../libmate-desktop/mate-aboutdialog.c:2093
 msgid "Credits"
 msgstr "참여자"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2113
+#: ../libmate-desktop/mate-aboutdialog.c:2121
 msgid "Written by"
 msgstr "작성자:"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2116
+#: ../libmate-desktop/mate-aboutdialog.c:2124
 msgid "Documented by"
 msgstr "문서 작성자:"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2128
+#: ../libmate-desktop/mate-aboutdialog.c:2136
 msgid "Translated by"
 msgstr "번역자:"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2132
+#: ../libmate-desktop/mate-aboutdialog.c:2140
 msgid "Artwork by"
 msgstr "아트워크:"
 
@@ -259,7 +260,7 @@ msgid "The title of the color selection dialog"
 msgstr "색상 선택 대화 상자 제목"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "색상 선택"
 
@@ -281,7 +282,7 @@ msgstr "현재 알파 값"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "선택한 불투명 값(0: 완전 투명, 65535: 완전 불투명)"
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr "잘못된 색상 데이터를 받았습니다\n"
 
@@ -317,125 +318,125 @@ msgstr "16진수 문자열"
 msgid "The hexadecimal string of current color"
 msgstr "현재 색상의 16진수 문자열 "
 
-#: ../libmate-desktop/mate-colorsel.c:383
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "링 외부에서 원하는 색상을 선택하십시오. 삼각형 안에서 어두움 또는 밝음을 선택하십시오."
 
-#: ../libmate-desktop/mate-colorsel.c:407
+#: ../libmate-desktop/mate-colorsel.c:419
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "스포이드를 누른 후, 선택할 색상이 있는 화면 어디든 누르십시오."
 
-#: ../libmate-desktop/mate-colorsel.c:416
+#: ../libmate-desktop/mate-colorsel.c:432
 msgid "_Hue:"
 msgstr "색상(_H):"
 
-#: ../libmate-desktop/mate-colorsel.c:417
+#: ../libmate-desktop/mate-colorsel.c:433
 msgid "Position on the color wheel."
 msgstr "색상 휠 위치입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid "_Saturation:"
 msgstr "채도(_S):"
 
-#: ../libmate-desktop/mate-colorsel.c:420
+#: ../libmate-desktop/mate-colorsel.c:436
 msgid "\"Deepness\" of the color."
 msgstr "색상의 \"깊이\" 입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:421
+#: ../libmate-desktop/mate-colorsel.c:437
 msgid "_Value:"
 msgstr "명도(_V):"
 
-#: ../libmate-desktop/mate-colorsel.c:422
+#: ../libmate-desktop/mate-colorsel.c:438
 msgid "Brightness of the color."
 msgstr "색상의 밝기입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:423
+#: ../libmate-desktop/mate-colorsel.c:439
 msgid "_Red:"
 msgstr "빨강(_R):"
 
-#: ../libmate-desktop/mate-colorsel.c:424
+#: ../libmate-desktop/mate-colorsel.c:440
 msgid "Amount of red light in the color."
 msgstr "적색 빛의 양입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:441
 msgid "_Green:"
 msgstr "초록(_G):"
 
-#: ../libmate-desktop/mate-colorsel.c:426
+#: ../libmate-desktop/mate-colorsel.c:442
 msgid "Amount of green light in the color."
 msgstr "녹색 빛의 양입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:427
+#: ../libmate-desktop/mate-colorsel.c:443
 msgid "_Blue:"
 msgstr "파랑(_B):"
 
-#: ../libmate-desktop/mate-colorsel.c:428
+#: ../libmate-desktop/mate-colorsel.c:444
 msgid "Amount of blue light in the color."
 msgstr "청색 빛의 양입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:431
+#: ../libmate-desktop/mate-colorsel.c:447
 msgid "Op_acity:"
 msgstr "불투명도(_A):"
 
-#: ../libmate-desktop/mate-colorsel.c:438
-#: ../libmate-desktop/mate-colorsel.c:448
+#: ../libmate-desktop/mate-colorsel.c:454
+#: ../libmate-desktop/mate-colorsel.c:464
 msgid "Transparency of the color."
 msgstr "색상의 투명도입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:455
+#: ../libmate-desktop/mate-colorsel.c:471
 msgid "Color _name:"
 msgstr "색상 이름(_N):"
 
-#: ../libmate-desktop/mate-colorsel.c:469
+#: ../libmate-desktop/mate-colorsel.c:485
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "이 항목에 HTML 방식 16진수 색상 값, 또는 'orange'와 같은 색상 이름을 입력할 수 있습니다."
 
-#: ../libmate-desktop/mate-colorsel.c:499
+#: ../libmate-desktop/mate-colorsel.c:519
 msgid "_Palette:"
 msgstr "팔레트(_P):"
 
-#: ../libmate-desktop/mate-colorsel.c:528
+#: ../libmate-desktop/mate-colorsel.c:548
 msgid "Color Wheel"
 msgstr "색상 휠"
 
-#: ../libmate-desktop/mate-colorsel.c:1027
+#: ../libmate-desktop/mate-colorsel.c:1047
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "현재 선택한 색상과 비교할 이전 선택 색상입니다. 이 색상을 팔레트 항목에 끌어다 놓거나, 다른 부분에 있는 컬러 스왓치에 현재 색상을 끌어다 놓을 수 있습니다."
 
-#: ../libmate-desktop/mate-colorsel.c:1030
+#: ../libmate-desktop/mate-colorsel.c:1050
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "선택한 색상입니다. 나중에 사용하려 저장하려면 팔레트 엔트리에 끌어다 놓을 수 있습니다."
 
-#: ../libmate-desktop/mate-colorsel.c:1035
+#: ../libmate-desktop/mate-colorsel.c:1055
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "현재 선택한 색상과 비교할 이전 선택 색상입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:1038
+#: ../libmate-desktop/mate-colorsel.c:1058
 msgid "The color you've chosen."
 msgstr "선택한 색상입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:1460
+#: ../libmate-desktop/mate-colorsel.c:1484
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1465
+#: ../libmate-desktop/mate-colorsel.c:1489
 msgid "_Save color here"
 msgstr "이 색상 저장(_S)"
 
-#: ../libmate-desktop/mate-colorsel.c:1690
+#: ../libmate-desktop/mate-colorsel.c:1714
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -669,6 +670,7 @@ msgstr "필요한 가상 화면 크기가 가능한 크기에 맞지 않습니�
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr "동일한 화면"
 
@@ -758,9 +760,9 @@ msgstr "선호하는 시각 보조 기술 프로그램"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
-msgstr "로그인, 메뉴, 명령줄에 사용할 선호하는 시각 보조 기술 프로그램입니다."
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
+msgstr "로그인, 메뉴, 명령 줄에서 사용할 선호하는 시각 보조 기술 프로그램"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
@@ -859,7 +861,7 @@ msgstr "데스크톱에 아이콘 표시"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "마데 파일 관리자(Caja)에서 데스크톱 아이콘을 그립니다."
+msgstr "마테 파일 관리자(카하)에서 데스크톱 아이콘을 그립니다."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
@@ -880,7 +882,7 @@ msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr "wallpaper_filename으로 설정한대로 어떻게 그림을 표현할 지 결정합니다. 가능한 값은 \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", \"spanned\" 입니다."
+msgstr "배경 화면 파일명(_F)으로 지정된 이미지가 어떻게 표현될지 결정합니다. 가능한 선택 항목은 \"배경 화면\", \"가운데로\", \"비율대로 확대\", \"늘리기\", \"확대\", \"걸치기\"입니다."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
@@ -923,7 +925,7 @@ msgstr "색상 그림자 형식"
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
-msgstr "배경색에 그림자를 주는 방식입니다. 가능한 값은 \"horizontal-gradient\", \"vertical-gradient\", \"solid\" 입니다."
+msgstr "배경색에 그림자를 주는 방식입니다. 가능한 값은 \"수평-그라데이션\", \"수직-그라데이션\", \"솔리드\" 입니다."
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
@@ -975,7 +977,7 @@ msgstr "도구 모음 방식"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr "도구 모음 방식입니다. 가능한 값은 \"both\", \"both-horiz\", \"icons\", \"text\" 입니다."
+msgstr "도구 모음 방식입니다. 가능한 값은 \"모두\", \"모두-수평\", \"아이콘\", \"텍스트\" 입니다."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Menus Have Icons"
@@ -1015,7 +1017,7 @@ msgstr "도구 모음 아이콘 크기"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr "도구 모음의 아이콘 크기입니다.  \"small-toolbar\", \"large-toolbar\" 둘 중 하나입니다."
+msgstr "도구 모음의 아이콘 크기입니다.  \"작은 도구 모음\", \"큰 도구 모음\" 둘 중 하나입니다."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink"
@@ -1038,8 +1040,8 @@ msgid "Icon Theme"
 msgstr "아이콘 테마"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
-msgid "Icon theme to use for the panel, caja etc."
-msgstr "패널, caja에서 사용할 아이콘 테마입니다."
+msgid "Icon theme to use for the panel, Caja etc."
+msgstr "패널, 카하 등에 사용할 아이콘 테마."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
@@ -1534,10 +1536,10 @@ msgstr "키보드 잠금 활성화 여부"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "키보드 잠금을 활성화할 지 여부입니다."
 
-#: ../tools/mate-color-select.c:63
+#: ../tools/mate-color-select.c:64
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
-msgstr "MATE 색상 선택"
+msgstr "마테 색상 선택"
 
 #: ../tools/mate-color-select.desktop.in.in.h:2
 msgid "Color selection dialog"
@@ -1546,11 +1548,3 @@ msgstr "색상 선택 대화 상자"
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
 msgstr "팔레트 또는 화면에서 색상을 선택합니다"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr "마테 1.4 설정 옮기기"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr "마테 1.4 설정을 마테 1.6으로 옮기는 도구"

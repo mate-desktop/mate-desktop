@@ -5,21 +5,22 @@
 # Translators:
 # jakubtalich, 2014
 # Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2013
-# Martin Kříž <slovanworks.czech@gmail.com>, 2015
+# Martin Kříž <liberte.czech@gmail.com>, 2016
+# Martin Kříž <liberte.czech@gmail.com>, 2015
 # Michal Procházka <mich.procha@seznam.cz>, 2012
 # Michal Procházka <mich.procha@seznam.cz>, 2012
 # Michal <sinope@seznam.cz>, 2014
 # Ondřej Kolín <ondrej.kolin@gmail.com>, 2012-2013
 # Radek kohout <radekpv@seznam.cz>, 2015
 # Scibex <kroupa@wvw.cz>, 2012
-# Stanislav Kučera <kacernator@quick.cz>, 2015
+# Stanislav Kučera <inactive+kacernator@transifex.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-06 15:16+0300\n"
-"PO-Revision-Date: 2015-11-17 09:26+0000\n"
-"Last-Translator: Martin Kříž <slovanworks.czech@gmail.com>\n"
+"POT-Creation-Date: 2016-03-22 11:38+0300\n"
+"PO-Revision-Date: 2016-03-22 08:39+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Czech (http://www.transifex.com/mate/MATE/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -127,7 +128,7 @@ msgid "Comments about the program"
 msgstr "Komentáře o programu"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2161
+#: ../libmate-desktop/mate-aboutdialog.c:2169
 msgid "License"
 msgstr "Licence"
 
@@ -213,37 +214,37 @@ msgid "Whether to wrap the license text."
 msgstr "Zda zalomit text s licencí."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:543
+#: ../libmate-desktop/mate-aboutdialog.c:551
 msgid "C_redits"
 msgstr "Tvůr_ci"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:557
+#: ../libmate-desktop/mate-aboutdialog.c:565
 msgid "_License"
 msgstr "_Licence"
 
-#: ../libmate-desktop/mate-aboutdialog.c:838
+#: ../libmate-desktop/mate-aboutdialog.c:846
 #, c-format
 msgid "About %s"
 msgstr "O %s"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2085
+#: ../libmate-desktop/mate-aboutdialog.c:2093
 msgid "Credits"
 msgstr "Zásluhy"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2113
+#: ../libmate-desktop/mate-aboutdialog.c:2121
 msgid "Written by"
 msgstr "Napsal"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2116
+#: ../libmate-desktop/mate-aboutdialog.c:2124
 msgid "Documented by"
 msgstr "Zdokumentoval"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2128
+#: ../libmate-desktop/mate-aboutdialog.c:2136
 msgid "Translated by"
 msgstr "Přeložil"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2132
+#: ../libmate-desktop/mate-aboutdialog.c:2140
 msgid "Artwork by"
 msgstr "Graficky zpracoval"
 
@@ -264,7 +265,7 @@ msgid "The title of the color selection dialog"
 msgstr "Název dialogu pro výběr barvy"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:468
 msgid "Pick a Color"
 msgstr "Vyberte si barvu"
 
@@ -286,7 +287,7 @@ msgstr "Aktuální alfa"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Zvolená hodnota průhlednosti (0 zcela průhledné, 65535 zcela neprůhledné)"
 
-#: ../libmate-desktop/mate-colorbutton.c:356
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr "Byly zadány neplatné hodnoty pro barvu\n"
 
@@ -322,125 +323,125 @@ msgstr "Hexadecimální řetězec"
 msgid "The hexadecimal string of current color"
 msgstr "Hexadecimální řetězec aktuální barvy"
 
-#: ../libmate-desktop/mate-colorsel.c:383
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "Vyberte barvu, kterou chcete z vnějšího prstence. Vyberte tmavost nebo světlost této barvy pomocí vnitřního trojúhelníku."
 
-#: ../libmate-desktop/mate-colorsel.c:407
+#: ../libmate-desktop/mate-colorsel.c:419
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "Klikněte na kapátko, k výběru barvy pak klikněte na požadovanou barvu kdekoliv na obrazovce."
 
-#: ../libmate-desktop/mate-colorsel.c:416
+#: ../libmate-desktop/mate-colorsel.c:432
 msgid "_Hue:"
 msgstr "_Odstín:"
 
-#: ../libmate-desktop/mate-colorsel.c:417
+#: ../libmate-desktop/mate-colorsel.c:433
 msgid "Position on the color wheel."
 msgstr "Pozice na barevném kruhu."
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid "_Saturation:"
 msgstr "_Saturace:"
 
-#: ../libmate-desktop/mate-colorsel.c:420
+#: ../libmate-desktop/mate-colorsel.c:436
 msgid "\"Deepness\" of the color."
 msgstr "\"Hloubka\" barvy."
 
-#: ../libmate-desktop/mate-colorsel.c:421
+#: ../libmate-desktop/mate-colorsel.c:437
 msgid "_Value:"
 msgstr "_Hodnota:"
 
-#: ../libmate-desktop/mate-colorsel.c:422
+#: ../libmate-desktop/mate-colorsel.c:438
 msgid "Brightness of the color."
 msgstr "Jas barvy."
 
-#: ../libmate-desktop/mate-colorsel.c:423
+#: ../libmate-desktop/mate-colorsel.c:439
 msgid "_Red:"
 msgstr "Če_rvená:"
 
-#: ../libmate-desktop/mate-colorsel.c:424
+#: ../libmate-desktop/mate-colorsel.c:440
 msgid "Amount of red light in the color."
 msgstr "Množství červeného odstínu v barvě."
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:441
 msgid "_Green:"
 msgstr "_Zelená:"
 
-#: ../libmate-desktop/mate-colorsel.c:426
+#: ../libmate-desktop/mate-colorsel.c:442
 msgid "Amount of green light in the color."
 msgstr "Množství zeleného odstínu v barvě."
 
-#: ../libmate-desktop/mate-colorsel.c:427
+#: ../libmate-desktop/mate-colorsel.c:443
 msgid "_Blue:"
 msgstr "_Modrá"
 
-#: ../libmate-desktop/mate-colorsel.c:428
+#: ../libmate-desktop/mate-colorsel.c:444
 msgid "Amount of blue light in the color."
 msgstr "Množství modrého odstínu v barvě."
 
-#: ../libmate-desktop/mate-colorsel.c:431
+#: ../libmate-desktop/mate-colorsel.c:447
 msgid "Op_acity:"
 msgstr "Průhl_ednost:"
 
-#: ../libmate-desktop/mate-colorsel.c:438
-#: ../libmate-desktop/mate-colorsel.c:448
+#: ../libmate-desktop/mate-colorsel.c:454
+#: ../libmate-desktop/mate-colorsel.c:464
 msgid "Transparency of the color."
 msgstr "Průhlednost barvy."
 
-#: ../libmate-desktop/mate-colorsel.c:455
+#: ../libmate-desktop/mate-colorsel.c:471
 msgid "Color _name:"
 msgstr "_Název barvy"
 
-#: ../libmate-desktop/mate-colorsel.c:469
+#: ../libmate-desktop/mate-colorsel.c:485
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "V této položce můžete zadat hexadecimální hodnotu barvy ve stylu HTML, nebo jednoduše název barvy, např. 'orange'."
 
-#: ../libmate-desktop/mate-colorsel.c:499
+#: ../libmate-desktop/mate-colorsel.c:519
 msgid "_Palette:"
 msgstr "_Paleta barev:"
 
-#: ../libmate-desktop/mate-colorsel.c:528
+#: ../libmate-desktop/mate-colorsel.c:548
 msgid "Color Wheel"
 msgstr "Barevný kruh"
 
-#: ../libmate-desktop/mate-colorsel.c:1027
+#: ../libmate-desktop/mate-colorsel.c:1047
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "Dříve vybraná barva, pro srovnání s aktuálně vybranou barvou. Můžete přetáhnout tuto barvu do palety, nebo zvolit jinou barvu jako aktuální přetažením ze vzorníku barev."
 
-#: ../libmate-desktop/mate-colorsel.c:1030
+#: ../libmate-desktop/mate-colorsel.c:1050
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "Barva, kterou jste si vybrali. Pro uložení a použití této barvy v budoucnu si ji můžete přetáhnout na paletu barev."
 
-#: ../libmate-desktop/mate-colorsel.c:1035
+#: ../libmate-desktop/mate-colorsel.c:1055
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Dříve vybraná barva, pro srovnání s aktuálně vybranou barvou."
 
-#: ../libmate-desktop/mate-colorsel.c:1038
+#: ../libmate-desktop/mate-colorsel.c:1058
 msgid "The color you've chosen."
 msgstr "Barva, kterou jste si vybral/a."
 
-#: ../libmate-desktop/mate-colorsel.c:1460
+#: ../libmate-desktop/mate-colorsel.c:1484
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1465
+#: ../libmate-desktop/mate-colorsel.c:1489
 msgid "_Save color here"
 msgstr "_Uložit barvu zde"
 
-#: ../libmate-desktop/mate-colorsel.c:1690
+#: ../libmate-desktop/mate-colorsel.c:1714
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -674,6 +675,7 @@ msgstr "požadovaná virtuální velikost přesahuje dostupnou velikost: požado
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: ../libmate-desktop/mate-rr-labeler.c:454
+#, c-format
 msgid "Mirror Screens"
 msgstr "Zrcadlící obrazovky"
 
@@ -763,8 +765,8 @@ msgstr "Preferovaná aplikace technologie usnadnění v oblasti zobrazování"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
-"Preferred Visual assistive technology application be used for login, menu, "
-"or command line."
+"Preferred Visual assistive technology application to be used for login, "
+"menu, or command line."
 msgstr "Preferovaná aplikace technologie usnadnění v oblasti zobrazování k použití při přihlášení, v nabídce či příkazovém řádku."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
@@ -1043,8 +1045,8 @@ msgid "Icon Theme"
 msgstr "Téma ikon"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
-msgid "Icon theme to use for the panel, caja etc."
-msgstr "Motiv ikon, které použít pro panely, Caja atd."
+msgid "Icon theme to use for the panel, Caja etc."
+msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
@@ -1098,7 +1100,7 @@ msgstr "Název modulu vstupní metody používaný v GTK+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "Použít GTK3 záhlaví"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:40
 msgid ""
@@ -1106,25 +1108,25 @@ msgid ""
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr ""
+msgstr "GTK+ zabudované dialogy, jako je výběr souborů, barev nebo písma, budou používat záhlaví v horním řádku, k zobrazení akčních widgetů nebo akčního prostoru na dně. Toto nastavení nemá přímo vliv na vlastní dialogy pomocí GtkDialog nebo dialogy zpráv."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:41
 msgid "Use GTK3 overlay scrolling"
-msgstr ""
+msgstr "Použijte GTK3 překrytí rolování"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:42
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
-msgstr ""
+msgstr "Vestavěné GTK+ rolování oken se bude používat k překrytí posouvání. Šablona rolování schovává a snižuje velikost posuvníku, až se dojde k zaostření."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "Povolit Gtk sadu nástrojů pro celou animaci"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "Slouží k zapnutí sady nástrojů pro celou animaci"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Document font"
@@ -1167,7 +1169,7 @@ msgstr "Modul pro GtkFileChooser"
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
-msgstr ""
+msgstr "Modul k použití jako modelu systému souborů pro nástroj GtkFileChooser. Možné hodnoty jsou \"gio\" a \"gtk+\"."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Menubar accelerator"
@@ -1212,13 +1214,13 @@ msgstr "Toto nastavení určuje, která tlačítka je třeba dát do titulní li
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "Zobrazovat pouze mnemotechnické pomůcky po stisknutí klávesu Alt"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:64
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr ""
+msgstr "Mnemotechnické pomůcky by se měly automaticky zobrazit, a skryt, když uživatel stiskne klávesu Alt."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
@@ -1539,7 +1541,7 @@ msgstr "Zda je povoleno zamknutí klávesnice"
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Zda je povoleno zamknutí klávesnice."
 
-#: ../tools/mate-color-select.c:63
+#: ../tools/mate-color-select.c:64
 #: ../tools/mate-color-select.desktop.in.in.h:1
 msgid "MATE Color Selection"
 msgstr "MATE výběr barev"
@@ -1551,11 +1553,3 @@ msgstr "Dialog pro výběr barev"
 #: ../tools/mate-color-select.desktop.in.in.h:3
 msgid "Choose colors from the palette or the screen"
 msgstr "Vyberte si barvy z palety, nebo na obrazovce"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:1
-msgid "Migrate MATE 1.4 settings"
-msgstr "Importovat nastavení z MATE 1.4"
-
-#: ../tools/mate-conf-import.desktop.in.in.h:2
-msgid "Tool to migrate MATE 1.4 settings to MATE 1.6"
-msgstr "Nástroj pro import nastavení z MATE 1.4 do MATE 1.6"
