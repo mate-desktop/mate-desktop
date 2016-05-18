@@ -1961,6 +1961,7 @@ get_as_pixbuf_for_size (MateBG    *bg,
 		GdkPixbufFormat *format;
 		GdkPixbuf *pixbuf = NULL;
 		gchar *tmp = NULL;
+		GdkPixbuf *tmp_pixbuf;
 
 		/* Try to hit local cache first if relevant */
 		if (monitor != -1)
@@ -1990,8 +1991,12 @@ get_as_pixbuf_for_size (MateBG    *bg,
 				g_free (tmp);
 		}
 
-		if (pixbuf)
+		if (pixbuf) {
+			tmp_pixbuf = gdk_pixbuf_apply_embedded_orientation (pixbuf);
+			g_object_unref (pixbuf);
+			pixbuf = tmp_pixbuf;
 			file_cache_add_pixbuf (bg, filename, pixbuf);
+		}
 
 		return pixbuf;
 	}
