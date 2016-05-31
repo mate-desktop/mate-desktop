@@ -231,16 +231,9 @@ color_to_string (const GdkColor *color)
 static gboolean
 do_changed (MateBG *bg)
 {
-	gboolean ignore_pending_change;
 	bg->changed_id = 0;
 
-	ignore_pending_change =
-		GPOINTER_TO_INT (g_object_get_data (G_OBJECT (bg),
-						    "ignore-pending-change"));
-
-	if (!ignore_pending_change) {
-		g_signal_emit (G_OBJECT (bg), signals[CHANGED], 0);
-	}
+	g_signal_emit (G_OBJECT (bg), signals[CHANGED], 0);
 
 	return FALSE;
 }
@@ -252,14 +245,6 @@ queue_changed (MateBG *bg)
 		g_source_remove (bg->changed_id);
 	}
 
-	/* We unset this here to allow apps to set it if they don't want
-	   to get the change event. This is used by caja when it
-	   gets the pixmap from the bg (due to a reason other than the changed
-	   event). Because if there is no other change after this time the
-	   pending changed event will just uselessly cause us to recreate
-	   the pixmap. */
-	g_object_set_data (G_OBJECT (bg), "ignore-pending-change",
-			   GINT_TO_POINTER (FALSE));
 	bg->changed_id = g_timeout_add_full (G_PRIORITY_LOW,
 					     100,
 					     (GSourceFunc)do_changed,
