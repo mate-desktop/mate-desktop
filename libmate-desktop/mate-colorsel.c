@@ -1956,7 +1956,7 @@ key_press (GtkWidget   *invisible,
       
       return TRUE;
 
-#if defined GDK_WINDOWING_X11 || defined GDK_WINDOWING_WIN32
+#if defined GDK_WINDOWING_X11
     case GDK_KEY_Up:
     case GDK_KEY_KP_Up:
       dy = state == GDK_MOD1_MASK ? -BIG_STEP : -1;

@@ -70,7 +70,6 @@ hls_to_rgb (gdouble *h,
 void
 mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 {
-#ifndef G_OS_WIN32
         char **real_argv;
         int real_argc;
         int i, j;
@@ -176,10 +175,6 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 	/* we use g_free here as we sucked all the inner strings
 	 * out from it into real_argv */
 	g_free (term_argv);
-#else
-	/* FIXME: Implement when needed */
-	g_warning ("mate_prepend_terminal_to_vector: Not implemented");
-#endif
 }
 
 /**
