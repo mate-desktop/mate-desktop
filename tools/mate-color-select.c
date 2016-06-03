@@ -70,7 +70,7 @@ main (int argc, char **argv)
 
     widget = gtk_button_new_from_stock (GTK_STOCK_COPY);
     gtk_container_add (GTK_CONTAINER (gtk_dialog_get_action_area (GTK_DIALOG (color_dialog))), widget);
-    g_signal_connect (widget, "button-release-event", copy_color, color_dialog);
+    g_signal_connect (widget, "button-release-event", G_CALLBACK (copy_color), color_dialog);
 
     widget = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
     gtk_container_add (GTK_CONTAINER (gtk_dialog_get_action_area (GTK_DIALOG (color_dialog))), widget);
