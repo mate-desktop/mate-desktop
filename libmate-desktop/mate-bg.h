@@ -102,8 +102,13 @@ void             mate_bg_set_placement         (MateBG               *bg,
 						 MateBGPlacement       placement);
 void             mate_bg_set_color             (MateBG               *bg,
 						 MateBGColorType       type,
+#if GTK_CHECK_VERSION(3, 0, 0)
+						 GdkRGBA              *primary,
+						 GdkRGBA              *secondary);
+#else
 						 GdkColor              *primary,
 						 GdkColor              *secondary);
+#endif
 void		 mate_bg_set_draw_background   (MateBG		     *bg,
 						gboolean	      draw_background);
 /* Getters */
@@ -111,8 +116,13 @@ gboolean	 mate_bg_get_draw_background   (MateBG		     *bg);
 MateBGPlacement  mate_bg_get_placement         (MateBG               *bg);
 void		 mate_bg_get_color             (MateBG               *bg,
 						 MateBGColorType      *type,
+#if GTK_CHECK_VERSION(3, 0, 0)
+						 GdkRGBA              *primary,
+						 GdkRGBA              *secondary);
+#else
 						 GdkColor              *primary,
 						 GdkColor              *secondary);
+#endif
 const gchar *    mate_bg_get_filename          (MateBG               *bg);
 
 /* Drawing and thumbnailing */
