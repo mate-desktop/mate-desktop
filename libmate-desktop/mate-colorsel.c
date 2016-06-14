@@ -37,6 +37,9 @@
 
 #if !GTK_CHECK_VERSION(3,0,0)
 #define gtk_widget_get_preferred_size(x,y,z) gtk_widget_size_request(x,y)
+# define gtk_separator_new(orientation) \
+  (((orientation) == GTK_ORIENTATION_HORIZONTAL) ? \
+    gtk_hseparator_new () : gtk_vseparator_new ())
 #endif
 
 #define DEFAULT_COLOR_PALETTE "#ef2929:#fcaf3e:#fce94f:#8ae234:#729fcf:#ad7fa8:#e9b96e:#888a85:#eeeeec:#cc0000:#f57900:#edd400:#73d216:#3465a4:#75507b:#c17d11:#555753:#d3d7cf:#a40000:#ce5c00:#c4a000:#4e9a06:#204a87:#5c3566:#8f5902:#2e3436:#babdb6:#000000:#2e3436:#555753:#888a85:#babdb6:#d3d7cf:#eeeeec:#f3f3f3:#ffffff"
@@ -448,7 +451,7 @@ mate_color_selection_init (MateColorSelection *colorsel)
                          _("Amount of green light in the color."));
   make_label_spinbutton (colorsel, &priv->blue_spinbutton, _("_Blue:"), table, 6, 2, COLORSEL_BLUE,
                          _("Amount of blue light in the color."));
-  gtk_table_attach_defaults (GTK_TABLE (table), gtk_hseparator_new (), 0, 8, 3, 4); 
+  gtk_table_attach_defaults (GTK_TABLE (table), gtk_separator_new (GTK_ORIENTATION_HORIZONTAL), 0, 8, 3, 4); 
 
   priv->opacity_label = gtk_label_new_with_mnemonic (_("Op_acity:"));
 #if GTK_CHECK_VERSION (3, 16, 0)
