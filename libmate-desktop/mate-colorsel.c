@@ -361,8 +361,10 @@ mate_color_selection_init (MateColorSelection *colorsel)
   GList *focus_chain = NULL;
   
   _mate_desktop_init_i18n ();
-  
+
+#if !GTK_CHECK_VERSION(3,0,0)
   gtk_widget_push_composite_child ();
+#endif
 
   priv = colorsel->private_data = G_TYPE_INSTANCE_GET_PRIVATE (colorsel, MATE_TYPE_COLOR_SELECTION, ColorSelectionPrivate);
   priv->changing = FALSE;
@@ -550,7 +552,9 @@ mate_color_selection_init (MateColorSelection *colorsel)
       make_all_relations (atk_obj, priv);
     } 
 
+#if !GTK_CHECK_VERSION(3,0,0)
   gtk_widget_pop_composite_child ();
+#endif
 }
 
 /* GObject methods */
