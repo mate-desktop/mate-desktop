@@ -490,7 +490,9 @@ mate_about_dialog_init (MateAboutDialog *about)
   gtk_container_set_border_width (GTK_CONTAINER (gtk_dialog_get_action_area (dialog)), 5);
 
   /* Widgets */
+#if !GTK_CHECK_VERSION(3,0,0)
   gtk_widget_push_composite_child ();
+#endif
 
 #if GTK_CHECK_VERSION (3, 0, 0)
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 8);
@@ -575,7 +577,9 @@ mate_about_dialog_init (MateAboutDialog *about)
 
   gtk_window_set_resizable (GTK_WINDOW (about), FALSE);
 
+#if !GTK_CHECK_VERSION(3,0,0)
   gtk_widget_pop_composite_child ();
+#endif
 
   gtk_widget_grab_default (close_button);
   gtk_widget_grab_focus (close_button);
