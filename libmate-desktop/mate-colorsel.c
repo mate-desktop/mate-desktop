@@ -450,8 +450,12 @@ mate_color_selection_init (MateColorSelection *colorsel)
                          _("Amount of blue light in the color."));
   gtk_table_attach_defaults (GTK_TABLE (table), gtk_hseparator_new (), 0, 8, 3, 4); 
 
-  priv->opacity_label = gtk_label_new_with_mnemonic (_("Op_acity:")); 
-  gtk_misc_set_alignment (GTK_MISC (priv->opacity_label), 0.0, 0.5); 
+  priv->opacity_label = gtk_label_new_with_mnemonic (_("Op_acity:"));
+#if GTK_CHECK_VERSION (3, 16, 0)
+  gtk_label_set_xalign (GTK_LABEL (priv->opacity_label), 0.0);
+#else
+  gtk_misc_set_alignment (GTK_MISC (priv->opacity_label), 0.0, 0.5);
+#endif
   gtk_table_attach_defaults (GTK_TABLE (table), priv->opacity_label, 0, 1, 4, 5); 
   adjust = GTK_ADJUSTMENT (gtk_adjustment_new (0.0, 0.0, 255.0, 1.0, 1.0, 0.0)); 
   g_object_set_data (G_OBJECT (adjust), "COLORSEL", colorsel); 
@@ -476,7 +480,11 @@ mate_color_selection_init (MateColorSelection *colorsel)
   
   label = gtk_label_new_with_mnemonic (_("Color _name:"));
   gtk_table_attach_defaults (GTK_TABLE (table), label, 0, 1, 5, 6);
+#if GTK_CHECK_VERSION (3, 16, 0)
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0);
+#else
   gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+#endif
   priv->hex_entry = gtk_entry_new ();
 
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), priv->hex_entry);
@@ -523,7 +531,11 @@ mate_color_selection_init (MateColorSelection *colorsel)
   priv->palette_frame = gtk_vbox_new (FALSE, 6);
 #endif
   label = gtk_label_new_with_mnemonic (_("_Palette:"));
+#if GTK_CHECK_VERSION (3, 16, 0)
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0);
+#else
   gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+#endif
   gtk_box_pack_start (GTK_BOX (priv->palette_frame), label, FALSE, FALSE, 0);
 
   gtk_label_set_mnemonic_widget (GTK_LABEL (label),
@@ -2277,7 +2289,11 @@ make_label_spinbutton (MateColorSelection *colorsel,
   label = gtk_label_new_with_mnemonic (text);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), *spinbutton);
 
+#if GTK_CHECK_VERSION (3, 16, 0)
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0);
+#else
   gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+#endif
   gtk_table_attach_defaults (GTK_TABLE (table), label, i, i+1, j, j+1);
   gtk_table_attach_defaults (GTK_TABLE (table), *spinbutton, i+1, i+2, j, j+1);
 }
