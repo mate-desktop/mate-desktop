@@ -35,6 +35,10 @@
 #include <glib/gi18n-lib.h>
 #include "mate-colorsel.h"
 
+#if !GTK_CHECK_VERSION(3,0,0)
+#define gtk_widget_get_preferred_size(x,y,z) gtk_widget_size_request(x,y)
+#endif
+
 #define DEFAULT_COLOR_PALETTE "#ef2929:#fcaf3e:#fce94f:#8ae234:#729fcf:#ad7fa8:#e9b96e:#888a85:#eeeeec:#cc0000:#f57900:#edd400:#73d216:#3465a4:#75507b:#c17d11:#555753:#d3d7cf:#a40000:#ce5c00:#c4a000:#4e9a06:#204a87:#5c3566:#8f5902:#2e3436:#babdb6:#000000:#2e3436:#555753:#888a85:#babdb6:#d3d7cf:#eeeeec:#f3f3f3:#ffffff"
 
 /* Number of elements in the custom palatte */
@@ -1445,7 +1449,7 @@ popup_position_func (GtkMenu   *menu,
 
   gdk_window_get_origin (gtk_widget_get_window (widget), &root_x, &root_y);
   
-  gtk_widget_size_request (GTK_WIDGET (menu), &req);
+  gtk_widget_get_preferred_size (GTK_WIDGET (menu), &req, NULL);
 
   /* Put corner of menu centered on color cell */
   gtk_widget_get_allocation (widget, &allocation);
