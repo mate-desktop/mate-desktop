@@ -435,7 +435,9 @@ mate_color_button_init (MateColorButton *color_button)
   /* Create the widgets */
   color_button->priv = MATE_COLOR_BUTTON_GET_PRIVATE (color_button);
 
+#if !GTK_CHECK_VERSION(3,0,0)
   gtk_widget_push_composite_child ();
+#endif
 
   alignment = gtk_alignment_new (0.5, 0.5, 0.5, 1.0);
   gtk_container_set_border_width (GTK_CONTAINER (alignment), 1);
@@ -491,7 +493,9 @@ mate_color_button_init (MateColorButton *color_button)
   g_signal_connect (color_button, "drag-data-get",
                     G_CALLBACK (mate_color_button_drag_data_get), color_button);
 
+#if !GTK_CHECK_VERSION(3,0,0)
   gtk_widget_pop_composite_child ();
+#endif
 }
 
 static void
