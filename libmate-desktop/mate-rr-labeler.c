@@ -467,7 +467,11 @@ create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkColor 
 	 * theme's colors, since the label is always shown against a light
 	 * pastel background.  See bgo#556050
 	 */
+#if GTK_CHECK_VERSION(3,0,0)
+	gtk_widget_modify_fg (widget, gtk_widget_get_state_flags (widget), &black);
+#else
 	gtk_widget_modify_fg (widget, gtk_widget_get_state (widget), &black);
+#endif
 
 	gtk_container_add (GTK_CONTAINER (window), widget);
 
