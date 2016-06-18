@@ -1306,12 +1306,13 @@ mate_bg_is_dark (MateBG *bg,
 	if (pixbuf) {
 #if GTK_CHECK_VERSION (3, 0, 0)
 		GdkRGBA argb;
+		guchar a, r, g, b;
 
 		pixbuf_average_value (pixbuf, &argb);
-		guchar a = argb.alpha * 0xff;
-		guchar r = argb.red * 0xff;
-		guchar g = argb.green * 0xff;
-		guchar b = argb.blue * 0xff;
+		a = argb.alpha * 0xff;
+		r = argb.red * 0xff;
+		g = argb.green * 0xff;
+		b = argb.blue * 0xff;
 #else
 		guint32 argb = pixbuf_average_value (pixbuf);
 		guchar a = (argb >> 24) & 0xff;
