@@ -18,8 +18,6 @@ endif
 EXTRA_DIST =			\
 	autogen.sh		\
 	COPYING-DOCS		\
-	HACKING			\
-	MAINTAINERS		\
 	mate-version.xml.in.in
 
 CLEANFILES = \
