@@ -77,16 +77,6 @@ G_DEFINE_TYPE_WITH_PRIVATE (MateDesktopThumbnailFactory,
 
 #define parent_class mate_desktop_thumbnail_factory_parent_class
 
-typedef struct {
-    gint width;
-    gint height;
-    gint input_width;
-    gint input_height;
-    gboolean preserve_aspect_ratio;
-} SizePrepareContext;
-
-#define LOAD_BUFFER_SIZE 4096
-
 #define THUMBNAILER_ENTRY_GROUP "Thumbnailer Entry"
 #define THUMBNAILER_EXTENSION   ".thumbnailer"
 
@@ -255,218 +245,6 @@ get_thumbnailers_dirs (void)
   return g_once (&once_init, init_thumbnailers_dirs, NULL);
 }
 
-static void
-size_prepared_cb (GdkPixbufLoader *loader,
-		  int              width,
-		  int              height,
-		  gpointer         data)
-{
-  SizePrepareContext *info = data;
-
-  g_return_if_fail (width > 0 && height > 0);
-
-  info->input_width = width;
-  info->input_height = height;
-
-  if (width < info->width && height < info->height) return;
-
-  if (info->preserve_aspect_ratio &&
-      (info->width > 0 || info->height > 0)) {
-    if (info->width < 0)
-      {
-	width = width * (double)info->height/(double)height;
-	height = info->height;
-      }
-    else if (info->height < 0)
-      {
-	height = height * (double)info->width/(double)width;
-	width = info->width;
-      }
-    else if ((double)height * (double)info->width >
-	     (double)width * (double)info->height) {
-      width = 0.5 + (double)width * (double)info->height / (double)height;
-      height = info->height;
-    } else {
-      height = 0.5 + (double)height * (double)info->width / (double)width;
-      width = info->width;
-    }
-  } else {
-    if (info->width > 0)
-      width = info->width;
-    if (info->height > 0)
-      height = info->height;
-  }
-
-  gdk_pixbuf_loader_set_size (loader, width, height);
-}
-
-static GdkPixbufLoader *
-create_loader (GFile        *file,
-               const guchar *data,
-               gsize         size)
-{
-  GdkPixbufLoader *loader = NULL;
-  GError *error = NULL;
-  char *mime_type;
-  char *filename;
-
-  /* need to specify the type here because the gdk_pixbuf_loader_write
-     doesn't have access to the filename in order to correct detect
-     the image type. */
-  filename = g_file_get_basename (file);
-  mime_type = g_content_type_guess (filename, data, size, NULL);
-  g_free (filename);
-
-  if (mime_type != NULL) {
-    loader = gdk_pixbuf_loader_new_with_mime_type (mime_type, &error);
-  }
-
-  if (loader == NULL && error != NULL) {
-    g_debug ("Unable to create loader for mime type %s: %s", mime_type, error->message);
-    g_clear_error (&error);
-    loader = gdk_pixbuf_loader_new ();
-  }
-  g_free (mime_type);
-
-  return loader;
-}
-
-static GdkPixbuf *
-_gdk_pixbuf_new_from_uri_at_scale (const char *uri,
-				   gint        width,
-				   gint        height,
-				   gboolean    preserve_aspect_ratio)
-{
-    gboolean result;
-    guchar buffer[LOAD_BUFFER_SIZE];
-    gsize bytes_read;
-    GdkPixbufLoader *loader = NULL;
-    GdkPixbuf *pixbuf;
-    GdkPixbufAnimation *animation;
-    GdkPixbufAnimationIter *iter;
-    gboolean has_frame;
-    SizePrepareContext info;
-    GFile *file;
-    GFileInfo *file_info;
-    GInputStream *input_stream;
-    GError *error = NULL;
-
-    g_return_val_if_fail (uri != NULL, NULL);
-
-    input_stream = NULL;
-
-    file = g_file_new_for_uri (uri);
-
-    /* First see if we can get an input stream via preview::icon  */
-    file_info = g_file_query_info (file,
-                                   G_FILE_ATTRIBUTE_PREVIEW_ICON,
-                                   G_FILE_QUERY_INFO_NONE,
-                                   NULL,  /* GCancellable */
-                                   NULL); /* return location for GError */
-    if (file_info != NULL) {
-        GObject *object;
-
-        object = g_file_info_get_attribute_object (file_info,
-                                                   G_FILE_ATTRIBUTE_PREVIEW_ICON);
-        if (object != NULL && G_IS_LOADABLE_ICON (object)) {
-            input_stream = g_loadable_icon_load (G_LOADABLE_ICON (object),
-                                                 0,     /* size */
-                                                 NULL,  /* return location for type */
-                                                 NULL,  /* GCancellable */
-                                                 NULL); /* return location for GError */
-        }
-        g_object_unref (file_info);
-    }
-
-    if (input_stream == NULL) {
-        input_stream = G_INPUT_STREAM (g_file_read (file, NULL, NULL));
-        if (input_stream == NULL) {
-            g_object_unref (file);
-            return NULL;
-        }
-    }
-
-    has_frame = FALSE;
-
-    result = FALSE;
-    while (!has_frame) {
-
-	bytes_read = g_input_stream_read (input_stream,
-					  buffer,
-					  sizeof (buffer),
-					  NULL,
-					  &error);
-        if (error != NULL) {
-            g_warning ("Error reading from %s: %s", uri, error->message);
-            g_clear_error (&error);
-        }
-	if (bytes_read == -1) {
-	    break;
-	}
-	result = TRUE;
-	if (bytes_read == 0) {
-	    break;
-	}
-
-        if (loader == NULL) {
-            loader = create_loader (file, buffer, bytes_read);
-            if (1 <= width || 1 <= height) {
-              info.width = width;
-              info.height = height;
-              info.input_width = info.input_height = 0;
-              info.preserve_aspect_ratio = preserve_aspect_ratio;
-              g_signal_connect (loader, "size-prepared", G_CALLBACK (size_prepared_cb), &info);
-            }
-            g_assert (loader != NULL);
-        }
-
-	if (!gdk_pixbuf_loader_write (loader,
-				      (unsigned char *)buffer,
-				      bytes_read,
-				      &error)) {
-            g_warning ("Error creating thumbnail for %s: %s", uri, error->message);
-            g_clear_error (&error);
-	    result = FALSE;
-	    break;
-	}
-
-	animation = gdk_pixbuf_loader_get_animation (loader);
-	if (animation) {
-		iter = gdk_pixbuf_animation_get_iter (animation, NULL);
-		if (!gdk_pixbuf_animation_iter_on_currently_loading_frame (iter)) {
-			has_frame = TRUE;
-		}
-		g_object_unref (iter);
-	}
-    }
-
-    gdk_pixbuf_loader_close (loader, NULL);
-
-    if (!result) {
-	g_object_unref (G_OBJECT (loader));
-	g_input_stream_close (input_stream, NULL, NULL);
-	g_object_unref (input_stream);
-	g_object_unref (file);
-	return NULL;
-    }
-
-    g_input_stream_close (input_stream, NULL, NULL);
-    g_object_unref (input_stream);
-    g_object_unref (file);
-
-    pixbuf = gdk_pixbuf_loader_get_pixbuf (loader);
-    if (pixbuf != NULL) {
-	g_object_ref (G_OBJECT (pixbuf));
-	g_object_set_data (G_OBJECT (pixbuf), "mate-original-width",
-			   GINT_TO_POINTER (info.input_width));
-	g_object_set_data (G_OBJECT (pixbuf), "mate-original-height",
-			   GINT_TO_POINTER (info.input_height));
-    }
-    g_object_unref (G_OBJECT (loader));
-
-    return pixbuf;
-}
-
 /* These should be called with the lock held */
 static void
 mate_desktop_thumbnail_factory_register_mime_types (MateDesktopThumbnailFactory *factory,
@@ -523,7 +301,6 @@ remove_thumbnailer_from_mime_type_map (gchar       *key,
 {
   return (strcmp (value->path, path) == 0);
 }
-
 
 static void
 update_or_create_thumbnailer (MateDesktopThumbnailFactory *factory,
@@ -1048,76 +825,6 @@ mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailF
   return TRUE;
 }
 
-/* forbidden/buggy GdkPixbufFormat names */
-const char *forbidden[] = { "tga", "icns", "jpeg2000" };
-
-static gboolean
-type_is_forbidden (const gchar *name)
-{
-    gint i = 0;
-    for (i = 0; i < G_N_ELEMENTS (forbidden); i++) {
-        if (g_strcmp0 (forbidden[i], name) == 0) {
-            return TRUE;
-        }
-    }
-    return FALSE;
-}
-
-static gboolean
-mimetype_supported_by_gdk_pixbuf (const char *mime_type)
-{
-    guint i;
-    static gsize formats_hash = 0;
-    gchar *key;
-    gboolean result;
-
-    if (g_once_init_enter (&formats_hash)) {
-        GSList *formats, *list;
-        GHashTable *hash;
-
-        hash = g_hash_table_new_full (g_str_hash,
-                                      (GEqualFunc) g_content_type_equals,
-                                      g_free, NULL);
-
-        formats = gdk_pixbuf_get_formats ();
-        list = formats;
-
-        while (list) {
-            GdkPixbufFormat *format = list->data;
-            gchar **mime_types;
-
-            if (type_is_forbidden (format->name)) {
-                gdk_pixbuf_format_set_disabled (format, TRUE);
-                list = list->next;
-                continue;
-            }
-
-            mime_types = gdk_pixbuf_format_get_mime_types (format);
-
-            for (i = 0; mime_types[i] != NULL; i++)
-                g_hash_table_insert (hash,
-                                     (gpointer) g_content_type_from_mime_type (mime_types[i]),
-                                     GUINT_TO_POINTER (1));
-
-            g_strfreev (mime_types);
-            list = list->next;
-        }
-
-        g_slist_free (formats);
-
-        g_once_init_leave (&formats_hash, (gsize) hash);
-    }
-
-    key = g_content_type_from_mime_type (mime_type);
-    if (g_hash_table_lookup ((void*)formats_hash, key))
-            result = TRUE;
-    else
-            result = FALSE;
-    g_free (key);
-
-    return result;
-}
-
 /**
  * mate_desktop_thumbnail_factory_can_thumbnail:
  * @factory: a #MateDesktopThumbnailFactory
@@ -1162,7 +869,7 @@ mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *facto
     }
   g_mutex_unlock (&factory->priv->lock);
 
-  if (uri && (have_script || mimetype_supported_by_gdk_pixbuf (mime_type)))
+  if (uri && (have_script ))
     {
       return !mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (factory,
                                                                           uri,
@@ -1261,13 +968,9 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
 						    const char            *uri,
 						    const char            *mime_type)
 {
-  GdkPixbuf *pixbuf, *scaled, *tmp_pixbuf;
+  GdkPixbuf *pixbuf;
   char *script, *expanded_script;
-  int width, height, size;
-  int original_width = 0;
-  int original_height = 0;
-  char dimension[12];
-  double scale;
+  int size;
   int exit_status;
   char *tmpname;
 
@@ -1320,65 +1023,6 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
 
       g_free (script);
     }
-
-  /* Fall back to gdk-pixbuf */
-  if (pixbuf == NULL)
-    {
-      pixbuf = _gdk_pixbuf_new_from_uri_at_scale (uri, size, size, TRUE);
-
-      if (pixbuf != NULL)
-        {
-          original_width = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (pixbuf),
-                                                               "mate-original-width"));
-          original_height = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (pixbuf),
-                                                                "mate-original-height"));
-        }
-    }
-
-  if (pixbuf == NULL)
-    return NULL;
-
-  /* The pixbuf loader may attach an "orientation" option to the pixbuf,
-     if the tiff or exif jpeg file had an orientation tag. Rotate/flip
-     the pixbuf as specified by this tag, if present. */
-  tmp_pixbuf = gdk_pixbuf_apply_embedded_orientation (pixbuf);
-  g_object_unref (pixbuf);
-  pixbuf = tmp_pixbuf;
-
-  width = gdk_pixbuf_get_width (pixbuf);
-  height = gdk_pixbuf_get_height (pixbuf);
-
-  if (width > size || height > size)
-    {
-      const gchar *orig_width, *orig_height;
-      scale = (double)size / MAX (width, height);
-
-      scaled = mate_desktop_thumbnail_scale_down_pixbuf (pixbuf,
-						  floor (width * scale + 0.5),
-						  floor (height * scale + 0.5));
-
-      orig_width = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::Image::Width");
-      orig_height = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::Image::Height");
-
-      if (orig_width != NULL) {
-	      gdk_pixbuf_set_option (scaled, "tEXt::Thumb::Image::Width", orig_width);
-      }
-      if (orig_height != NULL) {
-	      gdk_pixbuf_set_option (scaled, "tEXt::Thumb::Image::Height", orig_height);
-      }
-
-      g_object_unref (pixbuf);
-      pixbuf = scaled;
-    }
-
-  if (original_width > 0) {
-	  g_snprintf (dimension, sizeof (dimension), "%i", original_width);
-	  gdk_pixbuf_set_option (pixbuf, "tEXt::Thumb::Image::Width", dimension);
-  }
-  if (original_height > 0) {
-	  g_snprintf (dimension, sizeof (dimension), "%i", original_height);
-	  gdk_pixbuf_set_option (pixbuf, "tEXt::Thumb::Image::Height", dimension);
-  }
 
   return pixbuf;
 }
