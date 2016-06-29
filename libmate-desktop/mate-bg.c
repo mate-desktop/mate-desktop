@@ -2718,9 +2718,15 @@ create_gradient (const GdkColor *primary,
 	for (i = 0; i < n_pixels; ++i) {
 		double ratio = (i + 0.5) / n_pixels;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+		result[3 * i + 0] = (guchar) ((primary->red * (1 - ratio) + secondary->red * ratio) * 0x100);
+		result[3 * i + 1] = (guchar) ((primary->green * (1 - ratio) + secondary->green * ratio) * 0x100);
+		result[3 * i + 2] = (guchar) ((primary->blue * (1 - ratio) + secondary->blue * ratio) * 0x100);
+#else
 		result[3 * i + 0] = ((guint16) (primary->red * (1 - ratio) + secondary->red * ratio)) >> 8;
 		result[3 * i + 1] = ((guint16) (primary->green * (1 - ratio) + secondary->green * ratio)) >> 8;
 		result[3 * i + 2] = ((guint16) (primary->blue * (1 - ratio) + secondary->blue * ratio)) >> 8;
+#endif
 	}
 
 	return result;
