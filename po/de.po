@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 11:38+0300\n"
+"POT-Creation-Date: 2016-06-21 14:35+0300\n"
 "PO-Revision-Date: 2016-03-22 18:58+0000\n"
 "Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/mate/MATE/language/de/)\n"
@@ -130,7 +130,7 @@ msgid "Comments about the program"
 msgstr "Kommentare über das Programm"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2169
+#: ../libmate-desktop/mate-aboutdialog.c:2186
 msgid "License"
 msgstr "Lizenz"
 
@@ -216,37 +216,37 @@ msgid "Whether to wrap the license text."
 msgstr "Legt fest, ob der Lizenztext umgebrochen werden soll."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:551
+#: ../libmate-desktop/mate-aboutdialog.c:555
 msgid "C_redits"
 msgstr "_Mitwirkende"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:565
+#: ../libmate-desktop/mate-aboutdialog.c:569
 msgid "_License"
 msgstr "_Lizenz"
 
-#: ../libmate-desktop/mate-aboutdialog.c:846
+#: ../libmate-desktop/mate-aboutdialog.c:852
 #, c-format
 msgid "About %s"
 msgstr "Über %s"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2093
+#: ../libmate-desktop/mate-aboutdialog.c:2110
 msgid "Credits"
 msgstr "Mitwirkende"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2121
+#: ../libmate-desktop/mate-aboutdialog.c:2138
 msgid "Written by"
 msgstr "Geschrieben von"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2124
+#: ../libmate-desktop/mate-aboutdialog.c:2141
 msgid "Documented by"
 msgstr "Dokumentation von"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2136
+#: ../libmate-desktop/mate-aboutdialog.c:2153
 msgid "Translated by"
 msgstr "Übersetzung von"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2140
+#: ../libmate-desktop/mate-aboutdialog.c:2157
 msgid "Artwork by"
 msgstr "Künstlerische Gestaltung von"
 
@@ -267,12 +267,12 @@ msgid "The title of the color selection dialog"
 msgstr "Der Titel des Farbauswahldialoges"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:468
+#: ../libmate-desktop/mate-colorbutton.c:470
 msgid "Pick a Color"
 msgstr "Eine Farbe auswählen"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:318
+#: ../libmate-desktop/mate-colorsel.c:325
 msgid "Current Color"
 msgstr "Aktuelle Farbe"
 
@@ -281,7 +281,7 @@ msgid "The selected color"
 msgstr "Die gewählte Farbe"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:325
+#: ../libmate-desktop/mate-colorsel.c:332
 msgid "Current Alpha"
 msgstr "Aktuelle Alpha"
 
@@ -293,164 +293,164 @@ msgstr "Der ausgewählte Deckkraftwert (0 vollständig transparent, 65535 völli
 msgid "Received invalid color data\n"
 msgstr "Ungültige Farbdaten wurden empfangen\n"
 
-#: ../libmate-desktop/mate-colorsel.c:304
+#: ../libmate-desktop/mate-colorsel.c:311
 msgid "Has Opacity Control"
 msgstr "Hat Deckkraftsteuerung"
 
-#: ../libmate-desktop/mate-colorsel.c:305
+#: ../libmate-desktop/mate-colorsel.c:312
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Legt fest, ob die Farbauswahl, die Einstellung der Deckkraft ermöglichen soll"
 
-#: ../libmate-desktop/mate-colorsel.c:311
+#: ../libmate-desktop/mate-colorsel.c:318
 msgid "Has palette"
 msgstr "Hat eine Palette"
 
-#: ../libmate-desktop/mate-colorsel.c:312
+#: ../libmate-desktop/mate-colorsel.c:319
 msgid "Whether a palette should be used"
 msgstr "Legt fest, ob eine Palette verwendet werden soll"
 
-#: ../libmate-desktop/mate-colorsel.c:319
+#: ../libmate-desktop/mate-colorsel.c:326
 msgid "The current color"
 msgstr "Die aktuelle Farbe"
 
-#: ../libmate-desktop/mate-colorsel.c:326
+#: ../libmate-desktop/mate-colorsel.c:333
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Der aktuelle Deckkraftwert (0 vollständig transparent, 65535 völlig deckend)"
 
-#: ../libmate-desktop/mate-colorsel.c:332
+#: ../libmate-desktop/mate-colorsel.c:339
 msgid "HEX String"
 msgstr "HEX-Zeichenkette"
 
-#: ../libmate-desktop/mate-colorsel.c:333
+#: ../libmate-desktop/mate-colorsel.c:340
 msgid "The hexadecimal string of current color"
 msgstr "HEX-Zeichenkette der aktuellen Farbe"
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:400
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "Die gewünschte Farbe aus dem äußeren Ring auswählen. Die Helligkeit dieser Farbe aus dem inneren Dreieck auswählen."
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:428
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "Auf die Pipette klicken, dann auf eine Farbe irgendwo auf dem Bildschirm klicken, um diese Farbe auszuwählen."
 
-#: ../libmate-desktop/mate-colorsel.c:432
+#: ../libmate-desktop/mate-colorsel.c:441
 msgid "_Hue:"
 msgstr "_Farbton:"
 
-#: ../libmate-desktop/mate-colorsel.c:433
+#: ../libmate-desktop/mate-colorsel.c:442
 msgid "Position on the color wheel."
 msgstr "Position auf dem Farbrad."
 
-#: ../libmate-desktop/mate-colorsel.c:435
+#: ../libmate-desktop/mate-colorsel.c:444
 msgid "_Saturation:"
 msgstr "_Sättigung:"
 
-#: ../libmate-desktop/mate-colorsel.c:436
+#: ../libmate-desktop/mate-colorsel.c:445
 msgid "\"Deepness\" of the color."
 msgstr "Tiefe der Farbe."
 
-#: ../libmate-desktop/mate-colorsel.c:437
+#: ../libmate-desktop/mate-colorsel.c:446
 msgid "_Value:"
 msgstr "_Wert:"
 
-#: ../libmate-desktop/mate-colorsel.c:438
+#: ../libmate-desktop/mate-colorsel.c:447
 msgid "Brightness of the color."
 msgstr "Helligkeit der Farbe."
 
-#: ../libmate-desktop/mate-colorsel.c:439
+#: ../libmate-desktop/mate-colorsel.c:448
 msgid "_Red:"
 msgstr "_Rot:"
 
-#: ../libmate-desktop/mate-colorsel.c:440
+#: ../libmate-desktop/mate-colorsel.c:449
 msgid "Amount of red light in the color."
 msgstr "Menge an Rotlicht in der Farbe."
 
-#: ../libmate-desktop/mate-colorsel.c:441
+#: ../libmate-desktop/mate-colorsel.c:450
 msgid "_Green:"
 msgstr "_Grün:"
 
-#: ../libmate-desktop/mate-colorsel.c:442
+#: ../libmate-desktop/mate-colorsel.c:451
 msgid "Amount of green light in the color."
 msgstr "Menge an Grünlicht in der Farbe."
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:452
 msgid "_Blue:"
 msgstr "_Blau:"
 
-#: ../libmate-desktop/mate-colorsel.c:444
+#: ../libmate-desktop/mate-colorsel.c:453
 msgid "Amount of blue light in the color."
 msgstr "Menge an Blaulicht in der Farbe."
 
-#: ../libmate-desktop/mate-colorsel.c:447
+#: ../libmate-desktop/mate-colorsel.c:456
 msgid "Op_acity:"
 msgstr "_Deckkraft:"
 
-#: ../libmate-desktop/mate-colorsel.c:454
-#: ../libmate-desktop/mate-colorsel.c:464
+#: ../libmate-desktop/mate-colorsel.c:467
+#: ../libmate-desktop/mate-colorsel.c:477
 msgid "Transparency of the color."
 msgstr "Transparenz der Farbe."
 
-#: ../libmate-desktop/mate-colorsel.c:471
+#: ../libmate-desktop/mate-colorsel.c:484
 msgid "Color _name:"
 msgstr "_Farbname:"
 
-#: ../libmate-desktop/mate-colorsel.c:485
+#: ../libmate-desktop/mate-colorsel.c:502
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "Sie können in diesem Feld einen hexadezimalen Farbwert wie bei HTML oder einen Farbnamen wie »orange« eingeben."
 
-#: ../libmate-desktop/mate-colorsel.c:519
+#: ../libmate-desktop/mate-colorsel.c:536
 msgid "_Palette:"
 msgstr "_Palette:"
 
-#: ../libmate-desktop/mate-colorsel.c:548
+#: ../libmate-desktop/mate-colorsel.c:569
 msgid "Color Wheel"
 msgstr "Farbrad"
 
-#: ../libmate-desktop/mate-colorsel.c:1047
+#: ../libmate-desktop/mate-colorsel.c:1070
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "Die zuvor gewählte Farbe im Vergleich mit der Farbe, die Sie jetzt auswählen. Sie können diese Farbe auf einen Paletteneintrag ziehen oder sie als aktuell auswählen, indem Sie sie auf den anderen Farbfleck daneben ziehen."
 
-#: ../libmate-desktop/mate-colorsel.c:1050
+#: ../libmate-desktop/mate-colorsel.c:1073
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "Die von Ihnen gewählte Farbe. Sie können diese Farbe auf einen Paletteneintrag ziehen, um sie für den Gebrauch in der Zukunft speichern."
 
-#: ../libmate-desktop/mate-colorsel.c:1055
+#: ../libmate-desktop/mate-colorsel.c:1078
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Die zuvor ausgewählten Farbe, zum Vergleich mit der Farbe, die Sie jetzt ausgewählt haben."
 
-#: ../libmate-desktop/mate-colorsel.c:1058
+#: ../libmate-desktop/mate-colorsel.c:1081
 msgid "The color you've chosen."
 msgstr "Die Farbe, die Sie ausgewählt haben."
 
-#: ../libmate-desktop/mate-colorsel.c:1484
+#: ../libmate-desktop/mate-colorsel.c:1507
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1489
+#: ../libmate-desktop/mate-colorsel.c:1512
 msgid "_Save color here"
 msgstr "Farbe hier _speichern"
 
-#: ../libmate-desktop/mate-colorsel.c:1714
+#: ../libmate-desktop/mate-colorsel.c:1737
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr "Auf diesen Paletteneintrag klicken, um ihn zur aktuellen Farbe zu machen. Einen Farbfleck auf diesen Eintrag ziehen oder mit rechts darauf klicken und »Farbe hier speichern« auswählen, um ihn zu ändern."
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
-#: ../libmate-desktop/mate-colorseldialog.c:168
+#: ../libmate-desktop/mate-colorseldialog.c:170
 msgid "Color Selection"
 msgstr "Farbauswahl"
 
@@ -498,7 +498,7 @@ msgstr "Fehler beim Zurücksetzen von Datei »%s«: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3542
+#: ../libmate-desktop/mate-desktop-item.c:3546
 msgid "No name"
 msgstr "Namenlos"
 
@@ -517,37 +517,37 @@ msgstr "Datei »%s« konnte nicht gefunden werden"
 msgid "No filename to save to"
 msgstr "Kein Dateiname zum Speichern"
 
-#: ../libmate-desktop/mate-desktop-item.c:1840
+#: ../libmate-desktop/mate-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "%s wird gestartet"
 
-#: ../libmate-desktop/mate-desktop-item.c:2077
+#: ../libmate-desktop/mate-desktop-item.c:2081
 #, c-format
 msgid "No URL to launch"
 msgstr "Keine Adresse zum Starten"
 
-#: ../libmate-desktop/mate-desktop-item.c:2093
+#: ../libmate-desktop/mate-desktop-item.c:2097
 #, c-format
 msgid "Not a launchable item"
 msgstr "Kein ausführbarer Eintrag"
 
-#: ../libmate-desktop/mate-desktop-item.c:2103
+#: ../libmate-desktop/mate-desktop-item.c:2107
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Kein ausführbarer Startbefehl"
 
-#: ../libmate-desktop/mate-desktop-item.c:2116
+#: ../libmate-desktop/mate-desktop-item.c:2120
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Ausführbarer Startbefehl fehlerhaft"
 
-#: ../libmate-desktop/mate-desktop-item.c:3599
+#: ../libmate-desktop/mate-desktop-item.c:3603
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Zeichenkodierung von %s unbekannt"
 
-#: ../libmate-desktop/mate-desktop-utils.c:152
+#: ../libmate-desktop/mate-desktop-utils.c:151
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "Kein Terminal gefunden. xterm wird verwendet, auch wenn es gegebenenfalls nicht einsatzbereit ist."
 
