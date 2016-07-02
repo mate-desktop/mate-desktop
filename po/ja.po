@@ -7,7 +7,7 @@
 # BALLOON a.k.a. Fu-sen., 2014
 # BALLOON a.k.a. Fu-sen., 2014
 # negativezero <blackhole89@gmail.com>, 2014
-# Ikuru Kanum <kanumaiku@gmail.com>, 2015
+# Ikuru K <kanumaiku@gmail.com>, 2015
 # Mika Kobayashi, 2014
 # Mika Kobayashi, 2014
 # negativezero <blackhole89@gmail.com>, 2014
@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 11:38+0300\n"
+"POT-Creation-Date: 2016-06-21 14:35+0300\n"
 "PO-Revision-Date: 2016-04-19 12:14+0000\n"
 "Last-Translator: semicolon <mail@semicln.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/mate/MATE/language/ja/)\n"
@@ -126,7 +126,7 @@ msgid "Comments about the program"
 msgstr "プログラムについてのコメントです"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2169
+#: ../libmate-desktop/mate-aboutdialog.c:2186
 msgid "License"
 msgstr "ライセンス"
 
@@ -212,37 +212,37 @@ msgid "Whether to wrap the license text."
 msgstr "ライセンスの文章を改行するかどうかです。"
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:551
+#: ../libmate-desktop/mate-aboutdialog.c:555
 msgid "C_redits"
 msgstr "クレジット(_R)"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:565
+#: ../libmate-desktop/mate-aboutdialog.c:569
 msgid "_License"
 msgstr "ライセンス(_L)"
 
-#: ../libmate-desktop/mate-aboutdialog.c:846
+#: ../libmate-desktop/mate-aboutdialog.c:852
 #, c-format
 msgid "About %s"
 msgstr "%s について"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2093
+#: ../libmate-desktop/mate-aboutdialog.c:2110
 msgid "Credits"
 msgstr "クレジット"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2121
+#: ../libmate-desktop/mate-aboutdialog.c:2138
 msgid "Written by"
 msgstr "作者"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2124
+#: ../libmate-desktop/mate-aboutdialog.c:2141
 msgid "Documented by"
 msgstr "文書の著者"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2136
+#: ../libmate-desktop/mate-aboutdialog.c:2153
 msgid "Translated by"
 msgstr "翻訳者"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2140
+#: ../libmate-desktop/mate-aboutdialog.c:2157
 msgid "Artwork by"
 msgstr "アートワーク"
 
@@ -263,12 +263,12 @@ msgid "The title of the color selection dialog"
 msgstr "色の選択ダイアログに付与するタイトルです"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:468
+#: ../libmate-desktop/mate-colorbutton.c:470
 msgid "Pick a Color"
 msgstr "色の取得"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:318
+#: ../libmate-desktop/mate-colorsel.c:325
 msgid "Current Color"
 msgstr "現在の色"
 
@@ -277,7 +277,7 @@ msgid "The selected color"
 msgstr "選択した色"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:325
+#: ../libmate-desktop/mate-colorsel.c:332
 msgid "Current Alpha"
 msgstr "現在のアルファ値"
 
@@ -289,164 +289,164 @@ msgstr "選択された透明度(0で完全に透明、65535で完全に不透�
 msgid "Received invalid color data\n"
 msgstr "おかしな色データを受け取りました\n"
 
-#: ../libmate-desktop/mate-colorsel.c:304
+#: ../libmate-desktop/mate-colorsel.c:311
 msgid "Has Opacity Control"
 msgstr "透明度の設定"
 
-#: ../libmate-desktop/mate-colorsel.c:305
+#: ../libmate-desktop/mate-colorsel.c:312
 msgid "Whether the color selector should allow setting opacity"
 msgstr "カラーせレクターで透明度を設定できるかどうか"
 
-#: ../libmate-desktop/mate-colorsel.c:311
+#: ../libmate-desktop/mate-colorsel.c:318
 msgid "Has palette"
 msgstr "パレットの設定"
 
-#: ../libmate-desktop/mate-colorsel.c:312
+#: ../libmate-desktop/mate-colorsel.c:319
 msgid "Whether a palette should be used"
 msgstr "パレットが使用可能かどうか"
 
-#: ../libmate-desktop/mate-colorsel.c:319
+#: ../libmate-desktop/mate-colorsel.c:326
 msgid "The current color"
 msgstr "現在の色"
 
-#: ../libmate-desktop/mate-colorsel.c:326
+#: ../libmate-desktop/mate-colorsel.c:333
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "現在の透明度(0で完全に透明、65535で完全に不透明)"
 
-#: ../libmate-desktop/mate-colorsel.c:332
+#: ../libmate-desktop/mate-colorsel.c:339
 msgid "HEX String"
 msgstr "16 進文字列"
 
-#: ../libmate-desktop/mate-colorsel.c:333
+#: ../libmate-desktop/mate-colorsel.c:340
 msgid "The hexadecimal string of current color"
 msgstr "現在の色の 16 進文字列"
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:400
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "外の輪から色を選択して下さい。その後、中の三角形を使って明るさを選択して下さい。"
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:428
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "アイドロッパーをクリック後、任意の箇所をクリックすることで、その場所の色を取得できます。"
 
-#: ../libmate-desktop/mate-colorsel.c:432
+#: ../libmate-desktop/mate-colorsel.c:441
 msgid "_Hue:"
 msgstr "色相(_H):"
 
-#: ../libmate-desktop/mate-colorsel.c:433
+#: ../libmate-desktop/mate-colorsel.c:442
 msgid "Position on the color wheel."
 msgstr "色相環内の位置"
 
-#: ../libmate-desktop/mate-colorsel.c:435
+#: ../libmate-desktop/mate-colorsel.c:444
 msgid "_Saturation:"
 msgstr "彩度(_S):"
 
-#: ../libmate-desktop/mate-colorsel.c:436
+#: ../libmate-desktop/mate-colorsel.c:445
 msgid "\"Deepness\" of the color."
 msgstr "色の鮮やかさ"
 
-#: ../libmate-desktop/mate-colorsel.c:437
+#: ../libmate-desktop/mate-colorsel.c:446
 msgid "_Value:"
 msgstr "明度(_V):"
 
-#: ../libmate-desktop/mate-colorsel.c:438
+#: ../libmate-desktop/mate-colorsel.c:447
 msgid "Brightness of the color."
 msgstr "色の明るさ"
 
-#: ../libmate-desktop/mate-colorsel.c:439
+#: ../libmate-desktop/mate-colorsel.c:448
 msgid "_Red:"
 msgstr "赤(_R) :"
 
-#: ../libmate-desktop/mate-colorsel.c:440
+#: ../libmate-desktop/mate-colorsel.c:449
 msgid "Amount of red light in the color."
 msgstr "赤の強さ"
 
-#: ../libmate-desktop/mate-colorsel.c:441
+#: ../libmate-desktop/mate-colorsel.c:450
 msgid "_Green:"
 msgstr "緑(_G) :"
 
-#: ../libmate-desktop/mate-colorsel.c:442
+#: ../libmate-desktop/mate-colorsel.c:451
 msgid "Amount of green light in the color."
 msgstr "緑の強さ"
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:452
 msgid "_Blue:"
 msgstr "青(_B) :"
 
-#: ../libmate-desktop/mate-colorsel.c:444
+#: ../libmate-desktop/mate-colorsel.c:453
 msgid "Amount of blue light in the color."
 msgstr "青の強さ"
 
-#: ../libmate-desktop/mate-colorsel.c:447
+#: ../libmate-desktop/mate-colorsel.c:456
 msgid "Op_acity:"
 msgstr "透明度(_A) :"
 
-#: ../libmate-desktop/mate-colorsel.c:454
-#: ../libmate-desktop/mate-colorsel.c:464
+#: ../libmate-desktop/mate-colorsel.c:467
+#: ../libmate-desktop/mate-colorsel.c:477
 msgid "Transparency of the color."
 msgstr "色の透明度"
 
-#: ../libmate-desktop/mate-colorsel.c:471
+#: ../libmate-desktop/mate-colorsel.c:484
 msgid "Color _name:"
 msgstr "色の名前(_N):"
 
-#: ../libmate-desktop/mate-colorsel.c:485
+#: ../libmate-desktop/mate-colorsel.c:502
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "HTMLの16進数形式、または「orange」などの色名で色を指定できます。"
 
-#: ../libmate-desktop/mate-colorsel.c:519
+#: ../libmate-desktop/mate-colorsel.c:536
 msgid "_Palette:"
 msgstr "パレット(_P):"
 
-#: ../libmate-desktop/mate-colorsel.c:548
+#: ../libmate-desktop/mate-colorsel.c:569
 msgid "Color Wheel"
 msgstr "色相環"
 
-#: ../libmate-desktop/mate-colorsel.c:1047
+#: ../libmate-desktop/mate-colorsel.c:1070
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "選択中の色と比較するための前回選択した色です。カラーパレットにドラッグして再利用したり、この色を選択色として利用することができます。"
 
-#: ../libmate-desktop/mate-colorsel.c:1050
+#: ../libmate-desktop/mate-colorsel.c:1073
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "以前選択した色。色をパレットにドラッグすることで、色を保存しておくことができます。"
 
-#: ../libmate-desktop/mate-colorsel.c:1055
+#: ../libmate-desktop/mate-colorsel.c:1078
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "前回選択した色。現在選択中の色と比較することができます。"
 
-#: ../libmate-desktop/mate-colorsel.c:1058
+#: ../libmate-desktop/mate-colorsel.c:1081
 msgid "The color you've chosen."
 msgstr "今選択している色"
 
-#: ../libmate-desktop/mate-colorsel.c:1484
+#: ../libmate-desktop/mate-colorsel.c:1507
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1489
+#: ../libmate-desktop/mate-colorsel.c:1512
 msgid "_Save color here"
 msgstr "ここに色を保存(_S)"
 
-#: ../libmate-desktop/mate-colorsel.c:1714
+#: ../libmate-desktop/mate-colorsel.c:1737
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr "パレットをクリックすることでその色を選択できます。パレットの内容を変更するには、別の色をドラッグするか、右クリックして「ここに色を保存」を選択します。"
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
-#: ../libmate-desktop/mate-colorseldialog.c:168
+#: ../libmate-desktop/mate-colorseldialog.c:170
 msgid "Color Selection"
 msgstr "色の選択範囲"
 
@@ -494,7 +494,7 @@ msgstr "'%s' を戻している最中にエラーが発生しました: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3542
+#: ../libmate-desktop/mate-desktop-item.c:3546
 msgid "No name"
 msgstr "ここに名前を入力してください"
 
@@ -513,37 +513,37 @@ msgstr "ファイル '%s' が見つかりません"
 msgid "No filename to save to"
 msgstr "保存先のファイル名が不明です"
 
-#: ../libmate-desktop/mate-desktop-item.c:1840
+#: ../libmate-desktop/mate-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "%s の起動中"
 
-#: ../libmate-desktop/mate-desktop-item.c:2077
+#: ../libmate-desktop/mate-desktop-item.c:2081
 #, c-format
 msgid "No URL to launch"
 msgstr "起動する URL が不明です"
 
-#: ../libmate-desktop/mate-desktop-item.c:2093
+#: ../libmate-desktop/mate-desktop-item.c:2097
 #, c-format
 msgid "Not a launchable item"
 msgstr "起動可能なアイテムではありません"
 
-#: ../libmate-desktop/mate-desktop-item.c:2103
+#: ../libmate-desktop/mate-desktop-item.c:2107
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "起動するコマンドが指定されていません"
 
-#: ../libmate-desktop/mate-desktop-item.c:2116
+#: ../libmate-desktop/mate-desktop-item.c:2120
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "起動するコマンドの指定が正しくありません"
 
-#: ../libmate-desktop/mate-desktop-item.c:3599
+#: ../libmate-desktop/mate-desktop-item.c:3603
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "エンコーディングが不明です: %s"
 
-#: ../libmate-desktop/mate-desktop-utils.c:152
+#: ../libmate-desktop/mate-desktop-utils.c:151
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "端末が見つからなかったので強制的に xterm を使用します (正しく動作しないかもしれません)"
 

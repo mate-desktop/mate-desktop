@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-22 11:38+0300\n"
+"POT-Creation-Date: 2016-06-21 14:35+0300\n"
 "PO-Revision-Date: 2016-03-22 08:39+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Persian (http://www.transifex.com/mate/MATE/language/fa/)\n"
@@ -121,7 +121,7 @@ msgid "Comments about the program"
 msgstr "نظرات درباره برنامه"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2169
+#: ../libmate-desktop/mate-aboutdialog.c:2186
 msgid "License"
 msgstr "پروانه"
 
@@ -207,37 +207,37 @@ msgid "Whether to wrap the license text."
 msgstr "آیا متن پروانه پیچیده شود یا خیر."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:551
+#: ../libmate-desktop/mate-aboutdialog.c:555
 msgid "C_redits"
 msgstr "_دست اندر کاران"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:565
+#: ../libmate-desktop/mate-aboutdialog.c:569
 msgid "_License"
 msgstr "_پروانه"
 
-#: ../libmate-desktop/mate-aboutdialog.c:846
+#: ../libmate-desktop/mate-aboutdialog.c:852
 #, c-format
 msgid "About %s"
 msgstr "درباره ما %s"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2093
+#: ../libmate-desktop/mate-aboutdialog.c:2110
 msgid "Credits"
 msgstr "دست اندر کاران"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2121
+#: ../libmate-desktop/mate-aboutdialog.c:2138
 msgid "Written by"
 msgstr "نوشته‌ی"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2124
+#: ../libmate-desktop/mate-aboutdialog.c:2141
 msgid "Documented by"
 msgstr "مستندسازی از"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2136
+#: ../libmate-desktop/mate-aboutdialog.c:2153
 msgid "Translated by"
 msgstr "ترجمه از"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2140
+#: ../libmate-desktop/mate-aboutdialog.c:2157
 msgid "Artwork by"
 msgstr "اثر هنری از"
 
@@ -258,12 +258,12 @@ msgid "The title of the color selection dialog"
 msgstr "عنوان پنجره انتخاب رنگ"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:468
+#: ../libmate-desktop/mate-colorbutton.c:470
 msgid "Pick a Color"
 msgstr "یک رنگ انتخاب کنید"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:318
+#: ../libmate-desktop/mate-colorsel.c:325
 msgid "Current Color"
 msgstr "رنگ فعلی"
 
@@ -272,7 +272,7 @@ msgid "The selected color"
 msgstr "رنگ انتخابی"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:325
+#: ../libmate-desktop/mate-colorsel.c:332
 msgid "Current Alpha"
 msgstr "آلفای فعلی"
 
@@ -284,164 +284,164 @@ msgstr "مقدار کدری انتخابی (0 کاملا شفاف، 65535 کام
 msgid "Received invalid color data\n"
 msgstr "داده‌های رنگ نامعتبر دریافت شد\n"
 
-#: ../libmate-desktop/mate-colorsel.c:304
+#: ../libmate-desktop/mate-colorsel.c:311
 msgid "Has Opacity Control"
 msgstr "دارای کنترل شفافیت می‌باشد"
 
-#: ../libmate-desktop/mate-colorsel.c:305
+#: ../libmate-desktop/mate-colorsel.c:312
 msgid "Whether the color selector should allow setting opacity"
 msgstr "آیا انتخاب کننده رنگ اجازه تنظیم کدری را بدهد یا خیر"
 
-#: ../libmate-desktop/mate-colorsel.c:311
+#: ../libmate-desktop/mate-colorsel.c:318
 msgid "Has palette"
 msgstr "دارای پالت می‌باشد"
 
-#: ../libmate-desktop/mate-colorsel.c:312
+#: ../libmate-desktop/mate-colorsel.c:319
 msgid "Whether a palette should be used"
 msgstr "أیا باید از پالت استفاده شود یا خیر"
 
-#: ../libmate-desktop/mate-colorsel.c:319
+#: ../libmate-desktop/mate-colorsel.c:326
 msgid "The current color"
 msgstr "رنگ فعلی"
 
-#: ../libmate-desktop/mate-colorsel.c:326
+#: ../libmate-desktop/mate-colorsel.c:333
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "مقدار کدری فعلی (0 کاملا شفاف، 65535 کاملا کدر)"
 
-#: ../libmate-desktop/mate-colorsel.c:332
+#: ../libmate-desktop/mate-colorsel.c:339
 msgid "HEX String"
 msgstr "رشته هگز"
 
-#: ../libmate-desktop/mate-colorsel.c:333
+#: ../libmate-desktop/mate-colorsel.c:340
 msgid "The hexadecimal string of current color"
 msgstr "رشته هگز رنگ فعلی"
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:400
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "از حلقه بیرونی، رنگی را که میخواهید انتخاب کنید. از مثلث درونی نیز، تیرگی یا روشنی رنگ را انتخاب کنید."
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:428
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "بر روی قطره‌چکان کلیک کنید، و سپس روی هر نقطه ای در صفحه کلیک کنید تا رنگ آن نقطه انتخاب شود."
 
-#: ../libmate-desktop/mate-colorsel.c:432
+#: ../libmate-desktop/mate-colorsel.c:441
 msgid "_Hue:"
 msgstr "_پرده رنگ"
 
-#: ../libmate-desktop/mate-colorsel.c:433
+#: ../libmate-desktop/mate-colorsel.c:442
 msgid "Position on the color wheel."
 msgstr "موقعیت برروی چرخ رنگ"
 
-#: ../libmate-desktop/mate-colorsel.c:435
+#: ../libmate-desktop/mate-colorsel.c:444
 msgid "_Saturation:"
 msgstr "_غلظت رنگ"
 
-#: ../libmate-desktop/mate-colorsel.c:436
+#: ../libmate-desktop/mate-colorsel.c:445
 msgid "\"Deepness\" of the color."
 msgstr "«عمق» رنگ"
 
-#: ../libmate-desktop/mate-colorsel.c:437
+#: ../libmate-desktop/mate-colorsel.c:446
 msgid "_Value:"
 msgstr "_مقدار"
 
-#: ../libmate-desktop/mate-colorsel.c:438
+#: ../libmate-desktop/mate-colorsel.c:447
 msgid "Brightness of the color."
 msgstr "روشنایی رنگ"
 
-#: ../libmate-desktop/mate-colorsel.c:439
+#: ../libmate-desktop/mate-colorsel.c:448
 msgid "_Red:"
 msgstr "_قرمز"
 
-#: ../libmate-desktop/mate-colorsel.c:440
+#: ../libmate-desktop/mate-colorsel.c:449
 msgid "Amount of red light in the color."
 msgstr "مقدار نور قرمز در رنگ"
 
-#: ../libmate-desktop/mate-colorsel.c:441
+#: ../libmate-desktop/mate-colorsel.c:450
 msgid "_Green:"
 msgstr "_سبز"
 
-#: ../libmate-desktop/mate-colorsel.c:442
+#: ../libmate-desktop/mate-colorsel.c:451
 msgid "Amount of green light in the color."
 msgstr "مقدار نور سبز در رنگ"
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:452
 msgid "_Blue:"
 msgstr "_آبی"
 
-#: ../libmate-desktop/mate-colorsel.c:444
+#: ../libmate-desktop/mate-colorsel.c:453
 msgid "Amount of blue light in the color."
 msgstr "مقدار نور آبی در رنگ"
 
-#: ../libmate-desktop/mate-colorsel.c:447
+#: ../libmate-desktop/mate-colorsel.c:456
 msgid "Op_acity:"
 msgstr "_کدری"
 
-#: ../libmate-desktop/mate-colorsel.c:454
-#: ../libmate-desktop/mate-colorsel.c:464
+#: ../libmate-desktop/mate-colorsel.c:467
+#: ../libmate-desktop/mate-colorsel.c:477
 msgid "Transparency of the color."
 msgstr "شفافیت رنگ"
 
-#: ../libmate-desktop/mate-colorsel.c:471
+#: ../libmate-desktop/mate-colorsel.c:484
 msgid "Color _name:"
 msgstr "_نام رنگ"
 
-#: ../libmate-desktop/mate-colorsel.c:485
+#: ../libmate-desktop/mate-colorsel.c:502
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "در این ورودی، شما میتوانید مقدار رنگ هگز به شیوه HTML‌ بدهید، یا اینکه نام رنگ (مثلا «نارنجی») را وارد کنید."
 
-#: ../libmate-desktop/mate-colorsel.c:519
+#: ../libmate-desktop/mate-colorsel.c:536
 msgid "_Palette:"
 msgstr "_‌پالت:"
 
-#: ../libmate-desktop/mate-colorsel.c:548
+#: ../libmate-desktop/mate-colorsel.c:569
 msgid "Color Wheel"
 msgstr "چرخ رنگ"
 
-#: ../libmate-desktop/mate-colorsel.c:1047
+#: ../libmate-desktop/mate-colorsel.c:1070
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "رنگی که قبلا انتخاب کرده بودید، برای مقایسه با رنگ انتخابی فعلی. شما میتوانید این رنگ را بر روی ورودی پالت بکشید، یا رنگ فعلی را بکشید و آنرا با رنگ در نوار دیگر جایگزین کنید."
 
-#: ../libmate-desktop/mate-colorsel.c:1050
+#: ../libmate-desktop/mate-colorsel.c:1073
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "رنگی که انتخاب کرده‌اید. شما میتوانید این رنگ را بر روی یک ورودی پالت بکشید تا آنرا ذخیره کرده و در آینده استفاده نمائید."
 
-#: ../libmate-desktop/mate-colorsel.c:1055
+#: ../libmate-desktop/mate-colorsel.c:1078
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "رنگی که قبلا انتخاب کرده بودید، برای مقایسه با رنگ انتخابی فعلی."
 
-#: ../libmate-desktop/mate-colorsel.c:1058
+#: ../libmate-desktop/mate-colorsel.c:1081
 msgid "The color you've chosen."
 msgstr "رنگی که انتخاب کرده‌اید."
 
-#: ../libmate-desktop/mate-colorsel.c:1484
+#: ../libmate-desktop/mate-colorsel.c:1507
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1489
+#: ../libmate-desktop/mate-colorsel.c:1512
 msgid "_Save color here"
 msgstr "_رنگ را اینجا ذخیره کن"
 
-#: ../libmate-desktop/mate-colorsel.c:1714
+#: ../libmate-desktop/mate-colorsel.c:1737
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr "روی این ورودی پالت کلیک کنید تا به عنوان رنگ فعلی انتخاب شود. برای تغییر این ورودی، یک نوار رنگ را به اینجا بکشید، یا بر روی آن کلیک راست کرده و گزینه «رنگ را اینجا ذخیره کن» را انتخاب کنید."
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
-#: ../libmate-desktop/mate-colorseldialog.c:168
+#: ../libmate-desktop/mate-colorseldialog.c:170
 msgid "Color Selection"
 msgstr "انتخاب رنگ"
 
@@ -489,7 +489,7 @@ msgstr "خطا در برگرداندن پرونده‌ی «%s»: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3542
+#: ../libmate-desktop/mate-desktop-item.c:3546
 msgid "No name"
 msgstr "بدون نام"
 
@@ -508,37 +508,37 @@ msgstr "پرونده‌ی «%s» پیدا نشد"
 msgid "No filename to save to"
 msgstr "نام پرونده‌ای برای ذخیره کردن موجود نیست"
 
-#: ../libmate-desktop/mate-desktop-item.c:1840
+#: ../libmate-desktop/mate-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "در حال آغاز %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2077
+#: ../libmate-desktop/mate-desktop-item.c:2081
 #, c-format
 msgid "No URL to launch"
 msgstr "نشانی برای راه‌اندازی موجود نیست"
 
-#: ../libmate-desktop/mate-desktop-item.c:2093
+#: ../libmate-desktop/mate-desktop-item.c:2097
 #, c-format
 msgid "Not a launchable item"
 msgstr "شیء قابل راه‌اندازی نیست"
 
-#: ../libmate-desktop/mate-desktop-item.c:2103
+#: ../libmate-desktop/mate-desktop-item.c:2107
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "فرمان (Exec) برای راه‌اندازی موجود نیست"
 
-#: ../libmate-desktop/mate-desktop-item.c:2116
+#: ../libmate-desktop/mate-desktop-item.c:2120
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "فرمان (Exec) برای راه‌اندازی اشتباه است"
 
-#: ../libmate-desktop/mate-desktop-item.c:3599
+#: ../libmate-desktop/mate-desktop-item.c:3603
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "کدگذاری ناشناخته در: %s"
 
-#: ../libmate-desktop/mate-desktop-utils.c:152
+#: ../libmate-desktop/mate-desktop-utils.c:151
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "پایانه‌ای پیدا نشد. از xterm استفاده می‌شود، حتی اگر کار نکند"
 
