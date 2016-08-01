@@ -46,6 +46,7 @@ struct MateRRScreenPrivate
     int				rr_major_version;
     int				rr_minor_version;
     
+    GTimeVal			last_update_time;
     Atom                        connector_type_atom;
 };
 
