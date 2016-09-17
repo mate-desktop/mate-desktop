@@ -1,29 +1,11 @@
-mate-desktop 1.15.1
+mate-desktop 1.16.0
 
-  * Translations update
-  * GTK+-3 mate-bg: fix gradiant color creation
-  * GTK+-3 mate-bg: Don't use C99 declarations
-  * GTK+-3 mate-bg: have pixbuf_average_value return GdkRGBA
-  * GTK+-3 mate-bg-crossfade: port to GtkStyleContext
-  * GTK+3 mate-bg: port GdkColor to GdkRGBA
-  * remove ancient gnome files
-  * GTK+-3: do not use deprecated gtk_hseparator_new
-  * GTk+-3 mate-colorsel: do not use deprecated gtk_misc_set_alignment
-  * GTK+-3 mate-colorsel: do not use deprecated gtk_widget_size_request
-  * GTK+-3 mate-colorsel: Do not use deprecate composite-child API
-  * GTK+-3 about: do not use deprecated gdk_cursor_new and gdk_window_get_pointer
-  * GTK+-3.0 mate-about-dialog: Do not use deprecate composite-child API
-  * GTK+-3 mate-colorseldialog: do not use deprecated gtk_dialog_set_alternative_button_order
-  * GTK+3 mate-desktop-item: use gdk_error_trap_pop_ignored()
-  * GTK+-3 mate-color-button: Do not use deprecate composite-child API
-  * GTK+-3 mate-rr-labeler: don't use deprecated gtk_widget_get_state
-
-mate-desktop 1.15.0
-
-  * fix minor build warning
-  * remove usage of win32-related #define's
   * mate-bg: remove unneeded ignore-pending-change property
-
+    (not needed anymore since font color fix in Caja 1.14)
+  * GTK+3: fix various deprecations
+  * distcheck: explicitly use currently selected GTK+ version
+  * Some minor cleanups
+  * Translations update
 
 mate-desktop 1.14.1
 
