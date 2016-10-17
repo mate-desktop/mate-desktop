@@ -1327,9 +1327,15 @@ mate_bg_is_dark (MateBG *bg,
 		g_object_unref (pixbuf);
 	}
 
+#if GTK_CHECK_VERSION (3, 0, 0)
 	intensity = ((guint) (color.red * 65535) * 77 +
 		     (guint) (color.green * 65535) * 150 +
 		     (guint) (color.blue * 65535) * 28) >> 16;
+#else
+	intensity = (color.red * 77 +
+		     color.green * 150 +
+		     color.blue * 28) >> 16;
+#endif
 
 	return intensity < 160; /* biased slightly to be dark */
 }
