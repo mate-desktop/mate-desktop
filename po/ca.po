@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:35+0300\n"
-"PO-Revision-Date: 2016-08-23 13:57+0000\n"
-"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-10 12:27+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Catalan (http://www.transifex.com/mate/MATE/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -866,7 +866,7 @@ msgstr "Fes que el gestor de fitxers de MATE (Caja) dibuixi les icones de l'escr
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
-msgstr ""
+msgstr "Enfosqueix el fons amb el canvi"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:6
 msgid ""
@@ -1340,8 +1340,8 @@ msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "Intercanvia els botons esquerre i dret per a ratolins per a esquerrans."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
-msgid "Single Click"
-msgstr "Un sol clic"
+msgid "Motion Acceleration"
+msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1396,31 +1396,18 @@ msgid ""
 msgstr "Ressalta la ubicació actual del punter quan es premi i es deixi de prémer la tecla Control."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
-msgid "Cursor font"
-msgstr "Lletra del cursor"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
-msgid ""
-"Font name of the cursor. If unset, the default font is used. This value is "
-"only propagated to the X server start of each session, so changing it mid-"
-"session won't have an effect until the next time you log in."
-msgstr "El nom de la lletra del cursor. Si no s'estableix, s'utilitza la lletra predeterminada. Aquest valor només es propaga al servidor de les X a l'inici de cada sessió, així que canviar-ho en mig de la sessió no tindrà cap efecte fins que torneu a iniciar la sessió."
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "Tema del cursor"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
-msgid ""
-"Cursor theme name. Used only by Xservers that support Xcursor, such as "
-"XFree86 4.3 and later."
-msgstr "El nom del tema del cursor. Només s'utilitza per als servidors de les X que són compatibles amb Xcursor, com ara XFree86 4.3 o posteriors."
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+msgid "Cursor theme name."
+msgstr "Nom del tema de cursors."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
 msgstr "Mida del cursor"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Mida del cursor referit pel «cursor_theme»."
 
@@ -1458,7 +1445,7 @@ msgstr "Si es reprodueixen sons amb els esdeveniments de l'usuari."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
-msgstr "Nom del tema de so"
+msgstr "Nom del tema de sons"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:10
 msgid "The XDG sound theme to use for event sounds."

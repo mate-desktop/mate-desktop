@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:35+0300\n"
-"PO-Revision-Date: 2016-04-07 11:46+0000\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-11 17:40+0000\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/mate/MATE/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -1339,8 +1339,8 @@ msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "왼손잡이 마우스를 구성하려 왼쪽과 오른쪽의 마우스 단추기능을 바꿉니다."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
-msgid "Single Click"
-msgstr "한 번만 클릭"
+msgid "Motion Acceleration"
+msgstr "동작 가속"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1395,31 +1395,18 @@ msgid ""
 msgstr "컨트롤 키를 눌렀다 뗐을 때 포인터의 현재 위치를 강조합니다."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
-msgid "Cursor font"
-msgstr "커서 글꼴"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
-msgid ""
-"Font name of the cursor. If unset, the default font is used. This value is "
-"only propagated to the X server start of each session, so changing it mid-"
-"session won't have an effect until the next time you log in."
-msgstr "커서의 글꼴 이름입니다. 설정하지 않으면, 기본 글꼴을 사용합니다. 이 값은 각 세션을 시작한 X 서버에만 전달하므로 다음에 다시 로그인 하기 전에는 세션 도중에 영향을 미치지 않습니다."
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "커서 테마"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
-msgid ""
-"Cursor theme name. Used only by Xservers that support Xcursor, such as "
-"XFree86 4.3 and later."
-msgstr "커서 테마 이름입니다. Xcursor를 지원하는 XFree86 4.3 이상의 X 서버에서만 사용합니다."
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+msgid "Cursor theme name."
+msgstr "커서 테마 이름"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
 msgstr "커서 크기"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "cursor_name에서 참고할 커서 크기입니다."
 

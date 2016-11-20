@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:35+0300\n"
-"PO-Revision-Date: 2016-05-01 01:29+0000\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-19 14:42+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/mate/MATE/language/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -97,7 +97,7 @@ msgstr "Programnavn. Hvis dette ikke er valgt, er forvalget g_get_application_na
 
 #: ../libmate-desktop/mate-aboutdialog.c:250
 msgid "Program version"
-msgstr "Program versjon"
+msgstr "Programversjon"
 
 #: ../libmate-desktop/mate-aboutdialog.c:251
 msgid "The version of the program"
@@ -191,11 +191,11 @@ msgstr "En logo for Om-boksen. Hvis ikke valgt, er forvalget gtk_window_get_defa
 
 #: ../libmate-desktop/mate-aboutdialog.c:435
 msgid "Logo Icon Name"
-msgstr "Navn på logominiatyrbilde"
+msgstr "Ikonnavn for logo"
 
 #: ../libmate-desktop/mate-aboutdialog.c:436
 msgid "A named icon to use as the logo for the about box."
-msgstr "Et navngitt miniatyrbilde til bruk som logo for Om-boksen."
+msgstr "Et navngitt ikon til bruk som logo for Om-boksen."
 
 #: ../libmate-desktop/mate-aboutdialog.c:449
 msgid "Wrap license"
@@ -580,7 +580,7 @@ msgstr "forespurt posisjon/størrelse for CRTC %d er utenfor tillatt område: po
 #: ../libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
-msgstr "kunne ikke sette konfigurasjon for CRTC %d"
+msgstr "kunne ikke sette oppsettet for CRTC %d"
 
 #: ../libmate-desktop/mate-rr.c:1946
 #, c-format
@@ -595,7 +595,7 @@ msgstr "Bærbar"
 #, c-format
 msgid ""
 "none of the saved display configurations matched the active configuration"
-msgstr "ingen av de lagrede skjermkonfigurasjonene var lik aktiv konfigurasjon"
+msgstr "ingen av de lagrede skjermoppsettene var likt aktiv oppsett"
 
 #: ../libmate-desktop/mate-rr-config.c:1486
 #, c-format
@@ -854,11 +854,11 @@ msgstr "La MATE tegne skrivebordsbakgrunnen."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
-msgstr "Vis miniatyrbilder på skrivebordet"
+msgstr "Vis ikoner på skrivebordet"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "La MATE-filhåndtereren (Caja) tegne skrivebordsminiatyrbildene."
+msgstr "La MATE-filhåndtereren (Caja) tegne skrivebordsikonene."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
@@ -926,11 +926,11 @@ msgstr "Hvordan bakgrunnsfargen skal tegnes. Mulige verdier er \"horizontal-grad
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
-msgstr "Filminiatyrbildedrakt"
+msgstr "Filikonsdrakt"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr "Drakt til bruk for visning av filminiatyrbilder."
+msgstr "Drakt til bruk for visning av filikoner."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
@@ -978,7 +978,7 @@ msgstr "Stil for verktøylinje. Gyldige verdier er «both», «both-horiz», «i
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Menus Have Icons"
-msgstr "Menyer har miniatyrbilder"
+msgstr "Menyer har ikoner"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether menus may display an icon next to a menu entry."
@@ -986,11 +986,11 @@ msgstr "Om menyer skal vise et ikon ved siden av en menyoppføring."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Buttons Have Icons"
-msgstr "Knapper har miniatyrbilder"
+msgstr "Knapper har ikoner"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr "Om knapper kan vise et miniatyrbilde i tillegg til knappeteksten."
+msgstr "Om knapper kan vise et ikon i tillegg til knappeteksten."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Menubar Detachable"
@@ -1010,7 +1010,7 @@ msgstr "Om bruker kan ta løs verktøylinjer og flytte dem rundt."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Toolbar Icon Size"
-msgstr "Størrelse på verktøylinjens miniatyrbilder"
+msgstr "Størrelse på verktøylinjens ikoner"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
@@ -1034,11 +1034,11 @@ msgstr "Lengden på pekerblinkingens syklus, i millisekunder"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Icon Theme"
-msgstr "Miniatyrbildedrakt"
+msgstr "Ikondrakt"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Miniatyrbildedrakt som skal brukes for panelet, Caja osv."
+msgstr "Ikondrakt som skal brukes for panelet, Caja osv."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
@@ -1336,8 +1336,8 @@ msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "Bytt om høyre og venstre musknapp for venstrehendte mus."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
-msgid "Single Click"
-msgstr "Enkeltklikk"
+msgid "Motion Acceleration"
+msgstr "Bevegelsesakselerasjon"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1392,31 +1392,18 @@ msgid ""
 msgstr "Uthever pekerens nåværende plassering når Ctrl-tasten trykkes ned og slippes."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
-msgid "Cursor font"
-msgstr "Pekerstilskrift"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
-msgid ""
-"Font name of the cursor. If unset, the default font is used. This value is "
-"only propagated to the X server start of each session, so changing it mid-"
-"session won't have an effect until the next time you log in."
-msgstr "Stilskrift for pekeren. Hvis ikke satt vil forvalg brukes. Denne verdien blir kun sendt til X-tjeneren i begynnelsen av hver økt, så endring i økta trer først i kraft ved neste innlogging."
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "Pekerdrakt"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
-msgid ""
-"Cursor theme name. Used only by Xservers that support Xcursor, such as "
-"XFree86 4.3 and later."
-msgstr "Pekerdraktens navn. Brukes kun av X-tjenere som støtter Xcursor, slik som XFree86 4.3 og senere."
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+msgid "Cursor theme name."
+msgstr "Draktnavn for peker."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
 msgstr "Pekerstørrelse"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Størrelsen på peker det vises til av cursor_theme."
 

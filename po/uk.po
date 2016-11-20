@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:35+0300\n"
-"PO-Revision-Date: 2016-04-19 15:00+0000\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-16 18:01+0000\n"
 "Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/mate/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -50,7 +50,7 @@ msgstr "MATE надає інтуїтивно зрозуміле та прива�
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
-msgstr "MATE містить більшу частину того, что Ви бачите на своєму комп’ютері, включаючи керівник файлами, переглядачі документів та зображень, меню і багато иньших додатків"
+msgstr "MATE містить більшу частину того, що Ви бачите на своєму комп’ютері, включаючи керівник файлами, переглядачі документів та зображень, меню і багато иньших додатків"
 
 #: ../mate-about/mate-about.h:51
 msgid ""
@@ -1342,8 +1342,8 @@ msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "Змінити місцями ліву і праву кнопки для мишей для шульгів."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
-msgid "Single Click"
-msgstr "Одинарне клацання"
+msgid "Motion Acceleration"
+msgstr "Пришвидшення руху"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1398,31 +1398,18 @@ msgid ""
 msgstr "Підсвічує поточне розташування вказівника, коли клявішу Control натиснуто та відпущено."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
-msgid "Cursor font"
-msgstr "Шрифт вказівника"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
-msgid ""
-"Font name of the cursor. If unset, the default font is used. This value is "
-"only propagated to the X server start of each session, so changing it mid-"
-"session won't have an effect until the next time you log in."
-msgstr "Назва шрифту вказівника. Якщо не встановлено, буде використано типовий шрифт. Це значення передається X-серверу лише на початку сеансу, тож зміни, внесені під час сеансу, не будуть діяти до наступного входу у систему."
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "Тема вказівника"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
-msgid ""
-"Cursor theme name. Used only by Xservers that support Xcursor, such as "
-"XFree86 4.3 and later."
-msgstr "Назва теми вказівників. Використовується лише з X-серверами, які підтримують розширення Xcursor — такими, як XFree86 4.3 та пізніші."
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+msgid "Cursor theme name."
+msgstr "Ім’я теми вказівників."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
 msgstr "Розмір вказівника"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Розмір вказівника, на який посилається ключ cursor_theme."
 

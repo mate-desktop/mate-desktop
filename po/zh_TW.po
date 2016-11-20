@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:35+0300\n"
-"PO-Revision-Date: 2016-03-23 23:51+0000\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-14 00:10+0000\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/mate/MATE/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -1339,8 +1339,8 @@ msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "在左手滑鼠模式中，左右按鈕的功能會互換。"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
-msgid "Single Click"
-msgstr "單次點擊"
+msgid "Motion Acceleration"
+msgstr "動作加速"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1395,31 +1395,18 @@ msgid ""
 msgstr "當按下及放開 Control 鍵後，加強顯示目前游標的位置。"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
-msgid "Cursor font"
-msgstr "滑鼠游標字型檔"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
-msgid ""
-"Font name of the cursor. If unset, the default font is used. This value is "
-"only propagated to the X server start of each session, so changing it mid-"
-"session won't have an effect until the next time you log in."
-msgstr "載有滑鼠游標的字型檔案名稱。如果沒有設定，會使用預設的滑鼠游標字型。本設定值只會在作業階段開始時傳送至 X 伺服程式，因此使用 X Window 時更改設定是不會生效的，必須登出再登入後才會生效。"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "滑鼠游標主題"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
-msgid ""
-"Cursor theme name. Used only by Xservers that support Xcursor, such as "
-"XFree86 4.3 and later."
-msgstr "這個是滑鼠游標主題名稱，只適用於支援 Xcursor 的 X 伺服程式，例如 XFree86 4.3 或以後的版本。"
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+msgid "Cursor theme name."
+msgstr "滑鼠游標主題名稱。"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
 msgstr "滑鼠游標大小"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "cursor_theme 中指定的鼠標主題的大小。"
 

@@ -6,7 +6,7 @@
 # Balázs Meskó <meskobalazs@gmail.com>, 2016
 # Egy Játékos <mcserver131@gmail.com>, 2015
 # Falu.Me, 2015
-# Falu <info@falu.me>, 2015
+# Zoltán Faludi <info@falu.me>, 2015
 # István Nagy <kisbela@gmail.com>, 2016
 # kami911 <kami911@gmail.com>, 2014
 # kami911 <kami911@gmail.com>, 2014-2015
@@ -17,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:35+0300\n"
-"PO-Revision-Date: 2016-05-30 12:52+0000\n"
-"Last-Translator: István Nagy <kisbela@gmail.com>\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-10 12:27+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Hungarian (http://www.transifex.com/mate/MATE/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1343,8 +1343,8 @@ msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "A bal és jobb egérgombok felcserélése balkezes egerekhez."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
-msgid "Single Click"
-msgstr "Egyszeres kattintás"
+msgid "Motion Acceleration"
+msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1399,31 +1399,18 @@ msgid ""
 msgstr "Az egérmutató jelenlegi helyének kiemelése a Control billentyű lenyomásakor és felengedésekor."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
-msgid "Cursor font"
-msgstr "Kurzor betűkészlet"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
-msgid ""
-"Font name of the cursor. If unset, the default font is used. This value is "
-"only propagated to the X server start of each session, so changing it mid-"
-"session won't have an effect until the next time you log in."
-msgstr "A kurzorbetűkészlet neve. Ha nincs beállítva, akkor az alapértelmezett betűkészletet használja. Ez az érték csak az egyes munkamenetek indításakor kerül átadásra az X-kiszolgálónak, így megváltoztatása egy munkamenet közepén semmilyen hatással sincs a következő bejelentkezésig."
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "Kurzortéma"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
-msgid ""
-"Cursor theme name. Used only by Xservers that support Xcursor, such as "
-"XFree86 4.3 and later."
-msgstr "A kurzortéma neve. Csak az Xcursor-t támogató X kiszolgálók használják, mint például az XFree86 4.3 és újabbak."
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+msgid "Cursor theme name."
+msgstr ""
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
 msgstr "Kurzorméret"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "A cursor_theme kulcs által hivatkozott kurzor mérete."
 

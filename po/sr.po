@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2014
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2014,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:35+0300\n"
-"PO-Revision-Date: 2016-03-23 07:33+0000\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-11 18:14+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian (http://www.transifex.com/mate/MATE/language/sr/)\n"
 "MIME-Version: 1.0\n"
@@ -1334,8 +1334,8 @@ msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "Размените лево и десно дугме миша за леворуке кориснике."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
-msgid "Single Click"
-msgstr "Једноструки притисак"
+msgid "Motion Acceleration"
+msgstr "Убрзање кретања"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1390,31 +1390,18 @@ msgid ""
 msgstr "Истиче тренутно место показивача када се притисне и пусти тастер Контрол."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
-msgid "Cursor font"
-msgstr "Словолик курсора"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
-msgid ""
-"Font name of the cursor. If unset, the default font is used. This value is "
-"only propagated to the X server start of each session, so changing it mid-"
-"session won't have an effect until the next time you log in."
-msgstr "Назив словолика за курсор. Ако није постављено, користи се основни словолик. Ова вредност се преноси само на почетак Икс сервера сваке сесије, тако да његова промена усред сесије неће ступити у дејство све док се не пријавите следећи пут."
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "Тема курсора"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
-msgid ""
-"Cursor theme name. Used only by Xservers that support Xcursor, such as "
-"XFree86 4.3 and later."
-msgstr "Назив теме курсора. Користе је само Икс сервери који подржавају Икс курсора, као што је Икс Фри86 4.3 и каснији."
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+msgid "Cursor theme name."
+msgstr "Назив теме курсора."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
 msgstr "Величина курсора"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Величина курсора на који упућује тема курсора."
 

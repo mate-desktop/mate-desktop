@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:35+0300\n"
-"PO-Revision-Date: 2016-09-16 19:34+0000\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-10 19:33+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -689,7 +689,7 @@ msgstr "Kiek taškų per sekundę turi būti įveikiama maksimaliu judėjimo gre
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr "Akseleracijos laikas milisekundėmis"
+msgstr "Akceleracijos laikas milisekundėmis"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
@@ -1336,8 +1336,8 @@ msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "Kairiarankiams skirtoje pelėje sukeisti kairį ir dešinį pelės klavišą vietomis."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
-msgid "Single Click"
-msgstr "Vienkartis spragtelėjimas"
+msgid "Motion Acceleration"
+msgstr "Judesio greitėjimas"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1353,7 +1353,7 @@ msgstr "Traukos slenkstis"
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
-msgstr "Atstumas pikseliais, kurį turi įveikti pelės žymeklis, kad įsijungtų greito pelės judėjimo veiksena. Sistemos numatytoji reikšmė yra -1."
+msgstr "Atstumas pikseliais, kurį pelės žymeklis turi įveikti, kad įsijungtų greito pelės judėjimo veiksena. Sistemos numatytoji reikšmė yra -1."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
@@ -1392,31 +1392,18 @@ msgid ""
 msgstr "Parodo dabartinę žymeklio padėtį, jei paspaudžiamas ir atleidžiamas Control klavišas."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
-msgid "Cursor font"
-msgstr "Žymeklio šriftas"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
-msgid ""
-"Font name of the cursor. If unset, the default font is used. This value is "
-"only propagated to the X server start of each session, so changing it mid-"
-"session won't have an effect until the next time you log in."
-msgstr "Žymeklio šrifto pavadinimas. Nenustačius, naudojamas numatytasis šriftas. Reikšmė perduodama X serveriui seanso pradžioje, jos pakeitimas įsigalios tik kitą kartą prisijungus."
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "Žymeklio tema"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
-msgid ""
-"Cursor theme name. Used only by Xservers that support Xcursor, such as "
-"XFree86 4.3 and later."
-msgstr "Žymeklio temos pavadinimas. Naudojama tik tų Xserverių, kurie palaiko Xcursor; tai pvz., XFree86 4.3 ir naujesni."
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+msgid "Cursor theme name."
+msgstr "Žymeklio temos pavadinimas."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
 msgstr "Žymeklio dydis"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Žymeklio, nurodyto cursor_theme rakte, dydis."
 
@@ -1507,7 +1494,7 @@ msgstr "Teksto rinkimo laikas"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr "Po kiek minučių teksto rinkimo, turi prasidėti spausdinimo pertraukėlės."
+msgstr "Po kiek minučių rašymo, turi prasidėti teksto rinkimo pertraukėlės."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"

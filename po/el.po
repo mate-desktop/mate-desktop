@@ -26,9 +26,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:35+0300\n"
-"PO-Revision-Date: 2016-04-30 19:35+0000\n"
-"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-10 12:27+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Greek (http://www.transifex.com/mate/MATE/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -293,7 +293,7 @@ msgstr "Τρέχον άλφα"
 
 #: ../libmate-desktop/mate-colorbutton.c:200
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr ""
+msgstr "Η επιλεγμένη τιμή αδιαφάνειας (0 πλήρης διαφάνεια, 65535 πλήρης αδιαφάνεια)"
 
 #: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
@@ -301,11 +301,11 @@ msgstr "Ελήφθησαν μη έγκυρα δεδομένα χρώματος\n
 
 #: ../libmate-desktop/mate-colorsel.c:311
 msgid "Has Opacity Control"
-msgstr ""
+msgstr "Διαθέτει έλεγχο αδιαφάνειας"
 
 #: ../libmate-desktop/mate-colorsel.c:312
 msgid "Whether the color selector should allow setting opacity"
-msgstr ""
+msgstr "Εάν ο επιλογέας χρώματος θα επιτρέπει τον ορισμό της αδιαφάνειας"
 
 #: ../libmate-desktop/mate-colorsel.c:318
 msgid "Has palette"
@@ -329,7 +329,7 @@ msgstr "Αλφαριθμητικό HEX"
 
 #: ../libmate-desktop/mate-colorsel.c:340
 msgid "The hexadecimal string of current color"
-msgstr ""
+msgstr "Η δεκαεξαδική αλφαριθμητική συμβολοσειρά του τρέχοντος χρώματος"
 
 #: ../libmate-desktop/mate-colorsel.c:400
 msgid ""
@@ -341,7 +341,7 @@ msgstr "Επιλέξτε το χρώμα που επιθυμείτε από το
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
-msgstr ""
+msgstr "Κάντε κλικ στο σταγονόμετρο, έπειτα κάντε κλικ σε ένα χρώμα οπουδήποτε στην οθόνη σας,  για να επιλέξτε το χρώμα αυτό."
 
 #: ../libmate-desktop/mate-colorsel.c:441
 msgid "_Hue:"
@@ -349,7 +349,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorsel.c:442
 msgid "Position on the color wheel."
-msgstr ""
+msgstr "Θέση της ρόδας χρώματος."
 
 #: ../libmate-desktop/mate-colorsel.c:444
 msgid "_Saturation:"
@@ -423,7 +423,7 @@ msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
-msgstr ""
+msgstr "Το προηγουμένως επιλεγέν χρώμα για σύγκριση με το χρώμα που τώρα επιλέγετε. Μπορείτε να σύρετε αυτό το χρώμα σε κάποια θέση της παλέτας, είτε να επιλέξετε αυτό το χρώμα ως τρέχον σέρνοντάς το στο άλλο χρωματικό δείγμα παραδίπλα."
 
 #: ../libmate-desktop/mate-colorsel.c:1073
 msgid ""
@@ -462,7 +462,7 @@ msgstr "Επιλογή Χρώματος"
 
 #: ../libmate-desktop/mate-colorseldialog.c:100
 msgid "The color selection embedded in the dialog."
-msgstr ""
+msgstr "Η επιλογή χρώματος ενσωματωμένη στο διάλογο."
 
 #: ../libmate-desktop/mate-colorseldialog.c:106
 msgid "OK Button"
@@ -693,7 +693,7 @@ msgstr "ελάχιστο διάστημα σε χιλιοστά του δευτ�
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr ""
+msgstr "Αγνόηση πολλαπλών πατημάτων του _ίδιου_ πλήκτρου σε διάστημα @delay χιλιοστών του δευτερολ."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
@@ -701,7 +701,7 @@ msgstr "Εικονοστοιχεία ανά δευτερόλεπτα"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr ""
+msgstr "Αριθμός εικονοστοιχείων ανά δευτερόλεπτο, που θα μετακινούνται στη μέγιστη ταχύτητα."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
 msgid "How long to accelerate in milliseconds"
@@ -1352,8 +1352,8 @@ msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "Εναλλαγή αριστερού και δεξιού κουμπιού σε ποντίκια για αριστερόχειρες."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
-msgid "Single Click"
-msgstr "Μονό κλικ"
+msgid "Motion Acceleration"
+msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1408,31 +1408,18 @@ msgid ""
 msgstr "Επισημαίνει την τρέχουσα θέση του δρομέα όταν έχει πατηθεί και απελευθερωθεί το πλήκτρο Control."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
-msgid "Cursor font"
-msgstr "Γραμματοσειρά δρομέα"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
-msgid ""
-"Font name of the cursor. If unset, the default font is used. This value is "
-"only propagated to the X server start of each session, so changing it mid-"
-"session won't have an effect until the next time you log in."
-msgstr ""
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "Θέμα δρομέα"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
-msgid ""
-"Cursor theme name. Used only by Xservers that support Xcursor, such as "
-"XFree86 4.3 and later."
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+msgid "Cursor theme name."
 msgstr ""
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
 msgstr "Μέγεθος δρομέα "
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr ""
 

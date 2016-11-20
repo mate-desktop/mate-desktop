@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ettore Atalan <atalanttore@googlemail.com>, 2015
+# Ettore Atalan <atalanttore@googlemail.com>, 2015-2016
 # Franco Della-Monica <franco.della.monica@gmail.com>, 2015
 # Friedrich Herbst <friedrich-herbst@gmx.de>, 2015
 # crazyd <lebendig2002@yahoo.de>, 2012
@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:35+0300\n"
-"PO-Revision-Date: 2016-03-22 18:58+0000\n"
-"Last-Translator: Tobias Bannert <tobannert@gmail.com>\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-10 21:03+0000\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German (http://www.transifex.com/mate/MATE/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1346,8 +1346,8 @@ msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "Die linke und rechte Maustaste für Linkshändermäuse tauschen."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
-msgid "Single Click"
-msgstr "Einfacher Klick"
+msgid "Motion Acceleration"
+msgstr "Bewegungsbeschleunigung"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1402,31 +1402,18 @@ msgid ""
 msgstr "Hebt die aktuelle Position des Mauszeigers hervor, wenn die Strg-Taste gedrückt und wieder losgelassen wird."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
-msgid "Cursor font"
-msgstr "Mauszeigerschrift"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
-msgid ""
-"Font name of the cursor. If unset, the default font is used. This value is "
-"only propagated to the X server start of each session, so changing it mid-"
-"session won't have an effect until the next time you log in."
-msgstr "Schriftname des Zeigers. Falls dieser Schlüssel nicht eingestellt wurde, wird die Vorgabeschrift verwendet. Dieser Wert wird dem X-Server lediglich am Anfang jeder Sitzung mitgeteilt, daher werden Änderungen an diesem Schlüssel erst ausgewertet, wenn Sie sich das nächste Mal anmelden."
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "Mauszeigerhema"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
-msgid ""
-"Cursor theme name. Used only by Xservers that support Xcursor, such as "
-"XFree86 4.3 and later."
-msgstr "Name des Zeigerthemas. Nur von X-Servern verwendet, welche Xcursor unterstützen, wie XFree86 4.3 und höher."
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+msgid "Cursor theme name."
+msgstr "Mauszeigerthemenname."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
 msgstr "Mauszeigergröße"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Größe des Mauszeigers, durch »cursor-theme« Mauszeigerthema zugewiesen."
 

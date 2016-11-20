@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:35+0300\n"
-"PO-Revision-Date: 2016-03-22 08:39+0000\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-10 12:27+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Icelandic (http://www.transifex.com/mate/MATE/language/is/)\n"
 "MIME-Version: 1.0\n"
@@ -1335,8 +1335,8 @@ msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "Víxla vinstri og hægri músahnöppum fyrir örvhentar mýs."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
-msgid "Single Click"
-msgstr "Einfalt músarklikk"
+msgid "Motion Acceleration"
+msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1391,31 +1391,18 @@ msgid ""
 msgstr "Lýsir upp núverandi staðsetningu músarbendilsins þegar ýtt er snöggt á Ctrl-takkann."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
-msgid "Cursor font"
-msgstr "Letur bendils"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
-msgid ""
-"Font name of the cursor. If unset, the default font is used. This value is "
-"only propagated to the X server start of each session, so changing it mid-"
-"session won't have an effect until the next time you log in."
-msgstr "Heiti leturs í bendlinum. Þetta gildi er einungis sent áfram til X þjóns við ræsingu hverrar setu, þannig að breytingar í miðri setu munu ekki hafa áhrif fyrr en næst þegar þú skráir þig inn."
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "Þema bendils"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
-msgid ""
-"Cursor theme name. Used only by Xservers that support Xcursor, such as "
-"XFree86 4.3 and later."
-msgstr "Heiti bendilsþema. Aðeins notað af Xþjónum sem styðja Xbendil, svo sem XFree86 og síðari útgáfur."
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+msgid "Cursor theme name."
+msgstr ""
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
 msgstr "Stærð bendils"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Stærð bendilsins ákvarðað af bendil_þema."
 

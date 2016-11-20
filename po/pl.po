@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 14:35+0300\n"
-"PO-Revision-Date: 2016-03-22 23:21+0000\n"
-"Last-Translator: Darek Witkowski\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-10 12:27+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Polish (http://www.transifex.com/mate/MATE/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1346,8 +1346,8 @@ msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr "Zamień funkcje lewego klawisza myszy z prawym, w myszy dla osób leworęcznych."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
-msgid "Single Click"
-msgstr "Pojedyncze kliknięcie"
+msgid "Motion Acceleration"
+msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
@@ -1402,31 +1402,18 @@ msgid ""
 msgstr "Podświetl aktualną lokalizację wskaźnika gdy klawisz Control jest wciskany i zwalniany."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
-msgid "Cursor font"
-msgstr "Font kursora"
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
-msgid ""
-"Font name of the cursor. If unset, the default font is used. This value is "
-"only propagated to the X server start of each session, so changing it mid-"
-"session won't have an effect until the next time you log in."
-msgstr "Nazwa pliku fontu kursora. W przypadku braku jej ustawienia, używany jest font domyślny. Ta wartość jest propagowana do X serwera jedynie na początku każdej sesji, więc jej zmiana daje efekt dopiero podczas ponownego zalogowania się."
-
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor theme"
 msgstr "Motyw kursora"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
-msgid ""
-"Cursor theme name. Used only by Xservers that support Xcursor, such as "
-"XFree86 4.3 and later."
-msgstr "Nazwa motywu kursora. Używana wyłącznie przez Xservers które wspierają Xcursor, takie jak XFree86 4.3 i późniejsze."
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+msgid "Cursor theme name."
+msgstr ""
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:19
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
 msgstr "Rozmiar kursora"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:20
+#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Rozmiar kursora zwracany przez cursor_theme."
 
