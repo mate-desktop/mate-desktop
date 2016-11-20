@@ -500,10 +500,10 @@ fill_out_screen_info (Display *xdisplay,
     gdk_error_trap_push ();
     info->primary = XRRGetOutputPrimary (xdisplay, xroot);
 #if GTK_CHECK_VERSION (3, 0, 0)
-	gdk_error_trap_pop_ignored ();
+    gdk_error_trap_pop_ignored ();
 #else
-	gdk_flush ();
-	gdk_error_trap_pop (); /* ignore error */
+    gdk_flush ();
+    gdk_error_trap_pop (); /* ignore error */
 #endif
 
     return TRUE;

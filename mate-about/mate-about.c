@@ -95,9 +95,9 @@ void mate_about_run(void)
      * displayed in the about box to give credit to the translator(s). */
     mate_about_dialog_set_translator_credits(mate_about_dialog, _("translator-credits"));
 
-    #if GTK_CHECK_VERSION(3, 0, 0)
-        gtk_window_set_application(GTK_WINDOW(mate_about_dialog), mate_about_application);
-    #endif
+#if GTK_CHECK_VERSION(3, 0, 0)
+    gtk_window_set_application(GTK_WINDOW(mate_about_dialog), mate_about_application);
+#endif
 
     // start and destroy
     gtk_dialog_run((GtkDialog*) mate_about_dialog);
@@ -128,25 +128,21 @@ int main(int argc, char** argv)
     {
         gtk_init(&argc, &argv);
 
-        #if GTK_CHECK_VERSION(3, 0, 0)
+#if GTK_CHECK_VERSION(3, 0, 0)
+        mate_about_application = gtk_application_new("org.mate.about", 0);
+        g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
 
-            mate_about_application = gtk_application_new("org.mate.about", 0);
-            g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
+        status = g_application_run(G_APPLICATION(mate_about_application), argc, argv);
 
-            status = g_application_run(G_APPLICATION(mate_about_application), argc, argv);
+        g_object_unref(mate_about_application);
+#else
+        mate_about_application = g_application_new("org.mate.about", G_APPLICATION_FLAGS_NONE);
+        g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
 
-            g_object_unref(mate_about_application);
+        status = g_application_run(G_APPLICATION(mate_about_application), argc, argv);
 
-        #else
-
-            mate_about_application = g_application_new("org.mate.about", G_APPLICATION_FLAGS_NONE);
-            g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
-
-            status = g_application_run(G_APPLICATION(mate_about_application), argc, argv);
-
-            g_object_unref(mate_about_application);
-
-        #endif
+        g_object_unref(mate_about_application);
+#endif
     }
 
     return status;
