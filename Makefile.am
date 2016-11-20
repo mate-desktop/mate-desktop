@@ -8,8 +8,7 @@ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 DISTCHECK_CONFIGURE_FLAGS = \
 	--enable-gtk-doc \
-	--enable-mpaste \
-	--with-gtk=$(GTK_API_VERSION)
+	--enable-mpaste
 
 if MATE_ABOUT_ENABLED
 versiondir = $(datadir)/mate-about

@@ -36,7 +36,6 @@
 
 #include "private.h"
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 static void
 gtk_style_shade (GdkRGBA *a,
                  GdkRGBA *b,
@@ -51,7 +50,6 @@ static void
 hls_to_rgb (gdouble *h,
             gdouble *l,
             gdouble *s);
-#endif
 
 /**
  * mate_desktop_prepend_terminal_to_vector:
@@ -208,13 +206,7 @@ mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, 
 	appinfo = g_app_info_create_from_commandline (command, NULL, G_APP_INFO_CREATE_NONE, error);
 
 	if (appinfo) {
-#if GTK_CHECK_VERSION (3, 0, 0)
 		context = gdk_display_get_app_launch_context (gdk_screen_get_display (screen));
-#else
-		/* Deprecated in GDK 3.0 */
-		context = gdk_app_launch_context_new ();
-		gdk_app_launch_context_set_screen (context, screen);
-#endif
 		res = g_app_info_launch (appinfo, NULL, G_APP_LAUNCH_CONTEXT (context), error);
 		g_object_unref (context);
 		g_object_unref (appinfo);
@@ -235,9 +227,6 @@ _mate_desktop_init_i18n (void) {
 		initialized = TRUE;
 	}
 }
-
-
-#if GTK_CHECK_VERSION (3, 0, 0)
 
 /**
  * gtk_style_shade:
@@ -469,4 +458,3 @@ mate_desktop_gtk_style_get_dark_color (GtkStyleContext *style,
 	gtk_style_context_get_background_color (style, state, color);
 	gtk_style_shade (color, color, DARKNESS_MULT);
 }
-#endif

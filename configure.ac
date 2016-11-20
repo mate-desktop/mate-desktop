@@ -1,5 +1,5 @@
 m4_define([mate_platform], [1])
-m4_define([mate_minor], [16])
+m4_define([mate_minor], [17])
 m4_define([mate_micro], [0])
 
 m4_define(mate_version, [mate_platform.mate_minor.mate_micro]),
@@ -84,8 +84,7 @@ AC_DEFINE([GLIB_VERSION_MAX_ALLOWED], [GLIB_VERSION_2_36],
 AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_36],
 	[Warn on use of APIs deprecated before GLib 2.36])
 
-# Should we build mate-about? Useful for people who need to build
-# two mate-desktop using two different versions of GTK+
+# Whether to build mate-about
 AC_ARG_ENABLE([mate-about],
 	[AS_HELP_STRING([--disable-mate-about],[do not build mate-about])],,
 	[enable_mate_about=yes])
@@ -116,42 +115,10 @@ else
         EXTERNAL_PNP_IDS="$with_pnp_ids_path"
 fi
 
-dnl If you add a version number here, you *must* add an AC_SUBST line for
-dnl it too, or it will never make it into the spec file!
-
-dnl ----------------------------------------------------------------------------
-dnl GTK library version
-dnl ----------------------------------------------------------------------------
-
-AC_MSG_CHECKING([which gtk+ version to compile against])
-AC_ARG_WITH([gtk],
-  [AS_HELP_STRING([--with-gtk=2.0|3.0],[which gtk+ version to compile against (default: 2.0)])],
-  [case "$with_gtk" in
-     2.0|3.0) ;;
-     *) AC_MSG_ERROR([invalid gtk version specified]) ;;
-   esac],
-  [with_gtk=2.0])
-AC_MSG_RESULT([$with_gtk])
-
-case "$with_gtk" in
-  2.0) GTK_API_VERSION=2.0
-       GTK_REQUIRED=2.24.0
-       ;;
-  3.0) GTK_API_VERSION=3.0
-       GTK_REQUIRED=3.0.0
-       ;;
-esac
-
-GDK_PIXBUF_REQUIRED=2.4.0
 GLIB_REQUIRED=2.36.0
 GIO_REQUIRED=2.26.0
+GTK_REQUIRED=3.14.0
 XRANDR_REQUIRED=1.3
-
-AC_SUBST(GTK_API_VERSION)
-AC_SUBST(GLIB_REQUIRED)
-AC_SUBST(GDK_PIXBUF_REQUIRED)
-AC_SUBST(GIO_REQUIRED)
-AC_SUBST(XRANDR_REQUIRED)
 
 dnl ----------------------------------------------------------------------------
 dnl DCONF
@@ -239,9 +206,9 @@ AC_SUBST(RANDR_PACKAGE)
 
 dnl pkg-config dependency checks
 
-PKG_CHECK_MODULES(MATE_DESKTOP, gdk-pixbuf-2.0 >= $GDK_PIXBUF_REQUIRED gtk+-$GTK_API_VERSION >= $GTK_REQUIRED glib-2.0 >= $GLIB_REQUIRED gio-2.0 >= $GIO_REQUIRED $STARTUP_NOTIFICATION_PACKAGE $RANDR_PACKAGE)
+PKG_CHECK_MODULES(MATE_DESKTOP, gdk-pixbuf-2.0 gtk+-3.0 >= $GTK_REQUIRED glib-2.0 >= $GLIB_REQUIRED gio-2.0 >= $GIO_REQUIRED $STARTUP_NOTIFICATION_PACKAGE $RANDR_PACKAGE)
 
-PKG_CHECK_MODULES(MATE_ABOUT, gtk+-$GTK_API_VERSION >= $GTK_REQUIRED)
+PKG_CHECK_MODULES(MATE_ABOUT, gtk+-3.0 >= $GTK_REQUIRED)
 AC_SUBST(MATE_ABOUT_CFLAGS)
 AC_SUBST(MATE_ABOUT_LIBS)
 
@@ -338,7 +305,6 @@ mate-desktop $VERSION
     Maintainer mode:              ${USE_MAINTAINER_MODE}
     Use *_DISABLE_DEPRECATED:     ${enable_deprecation_flags}
 
-    Gtk+ version:                 ${GTK_API_VERSION}
     Build mate-about:             ${enable_mate_about}
     Install mpaste:               ${enable_mpaste}
     Use external pnp.ids:         ${EXTERNAL_PNP_IDS}

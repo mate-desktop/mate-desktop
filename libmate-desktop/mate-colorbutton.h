@@ -81,18 +81,14 @@ GtkWidget *mate_color_button_new            (void);
 GtkWidget *mate_color_button_new_with_color (const GdkColor *color);
 void       mate_color_button_set_color      (MateColorButton *color_button,
 					    const GdkColor *color);
-#if GTK_CHECK_VERSION(3, 0, 0)
 void       mate_color_button_set_rgba       (MateColorButton *color_button,
 					     const GdkRGBA   *color);
-#endif
 void       mate_color_button_set_alpha      (MateColorButton *color_button,
 					    guint16         alpha);
 void       mate_color_button_get_color      (MateColorButton *color_button,
 					    GdkColor       *color);
-#if GTK_CHECK_VERSION(3, 0, 0)
 void       mate_color_button_get_rgba       (MateColorButton *color_button,
 					     GdkRGBA         *color);
-#endif
 guint16    mate_color_button_get_alpha      (MateColorButton *color_button);
 void       mate_color_button_set_use_alpha  (MateColorButton *color_button,
 					    gboolean        use_alpha);

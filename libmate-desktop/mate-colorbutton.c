@@ -258,27 +258,12 @@ mate_color_button_get_checkered (void)
 
 /* Handle exposure events for the color picker's drawing area */
 static gboolean
-#if GTK_CHECK_VERSION (3, 0, 0)
 draw (GtkWidget      *widget, 
       cairo_t        *cr, 
       gpointer        data)
-#else
-expose_event (GtkWidget      *widget, 
-              GdkEventExpose *event, 
-              gpointer        data)
-#endif
 {
   MateColorButton *color_button = MATE_COLOR_BUTTON (data);
   cairo_pattern_t *checkered;
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  cairo_t *cr = gdk_cairo_create (event->window);
-
-  GtkAllocation allocation;
-  gtk_widget_get_allocation (widget, &allocation);
-  gdk_cairo_rectangle (cr, &allocation);
-  cairo_clip (cr);
-#endif
 
   if (mate_color_button_has_alpha (color_button))
     {
@@ -316,10 +301,6 @@ expose_event (GtkWidget      *widget,
       cairo_mask (cr, checkered);
       cairo_pattern_destroy (checkered);
     }
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  cairo_destroy (cr);
-#endif
 
   return FALSE;
 }
@@ -435,10 +416,6 @@ mate_color_button_init (MateColorButton *color_button)
   /* Create the widgets */
   color_button->priv = MATE_COLOR_BUTTON_GET_PRIVATE (color_button);
 
-#if !GTK_CHECK_VERSION(3,0,0)
-  gtk_widget_push_composite_child ();
-#endif
-
   alignment = gtk_alignment_new (0.5, 0.5, 0.5, 1.0);
   gtk_container_set_border_width (GTK_CONTAINER (alignment), 1);
   gtk_container_add (GTK_CONTAINER (color_button), alignment);
@@ -457,13 +434,8 @@ mate_color_button_init (MateColorButton *color_button)
   g_object_unref (layout);
 
   gtk_widget_set_size_request (color_button->priv->draw_area, rect.width - 2, rect.height - 2);
-#if GTK_CHECK_VERSION (3, 0, 0)
   g_signal_connect (color_button->priv->draw_area, "draw",
                     G_CALLBACK (draw), color_button);
-#else
-  g_signal_connect (color_button->priv->draw_area, "expose-event",
-                    G_CALLBACK (expose_event), color_button);
-#endif
   gtk_container_add (GTK_CONTAINER (frame), color_button->priv->draw_area);
   gtk_widget_show (color_button->priv->draw_area);
 
@@ -492,10 +464,6 @@ mate_color_button_init (MateColorButton *color_button)
                     G_CALLBACK (mate_color_button_drag_data_received), color_button);
   g_signal_connect (color_button, "drag-data-get",
                     G_CALLBACK (mate_color_button_drag_data_get), color_button);
-
-#if !GTK_CHECK_VERSION(3,0,0)
-  gtk_widget_pop_composite_child ();
-#endif
 }
 
 static void
@@ -673,7 +641,6 @@ mate_color_button_set_color (MateColorButton *color_button,
   g_object_notify (G_OBJECT (color_button), "color");
 }
 
-#if GTK_CHECK_VERSION(3, 0, 0)
 /**
  * mate_color_button_set_rgba:
  * @color_button: a #MateColorButton.
@@ -699,7 +666,6 @@ mate_color_button_set_rgba (MateColorButton *color_button,
   
   g_object_notify (G_OBJECT (color_button), "color");
 }
-#endif
 
 /**
  * mate_color_button_set_alpha:
@@ -743,7 +709,6 @@ mate_color_button_get_color (MateColorButton *color_button,
   color->blue = color_button->priv->color.blue;
 }
 
-#if GTK_CHECK_VERSION(3, 0, 0)
 /**
  * mate_color_button_get_rgba:
  * @color_button: a #MateColorButton.
@@ -764,7 +729,6 @@ mate_color_button_get_rgba (MateColorButton *color_button,
   color->blue = color_button->priv->color.blue / 65535.;
   color->alpha = color_button->priv->alpha / 65535.;
 }
-#endif
 
 /**
  * mate_color_button_get_alpha:

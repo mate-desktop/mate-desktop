@@ -43,7 +43,6 @@ void mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv);
 /* replace gdk_spawn_command_line_on_screen, not available in GTK3 */
 gboolean mate_gdk_spawn_command_line_on_screen (GdkScreen *screen, const gchar *command, GError **error);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 void
 mate_desktop_gtk_style_get_light_color (GtkStyleContext *style,
                                         GtkStateFlags    state,
@@ -53,7 +52,6 @@ void
 mate_desktop_gtk_style_get_dark_color (GtkStyleContext *style,
                                        GtkStateFlags    state,
                                        GdkRGBA         *color);
-#endif
 
 G_END_DECLS
 

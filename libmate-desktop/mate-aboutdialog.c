@@ -492,15 +492,7 @@ mate_about_dialog_init (MateAboutDialog *about)
   gtk_container_set_border_width (GTK_CONTAINER (gtk_dialog_get_action_area (dialog)), 5);
 
   /* Widgets */
-#if !GTK_CHECK_VERSION(3,0,0)
-  gtk_widget_push_composite_child ();
-#endif
-
-#if GTK_CHECK_VERSION (3, 0, 0)
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 8);
-#else
-  vbox = gtk_vbox_new (FALSE, 8);
-#endif
   gtk_container_set_focus_chain (GTK_CONTAINER (vbox), NULL);
   gtk_container_set_border_width (GTK_CONTAINER (vbox), 5);
   gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (dialog)), vbox, TRUE, TRUE, 0);
@@ -517,9 +509,7 @@ mate_about_dialog_init (MateAboutDialog *about)
   gtk_label_set_selectable (GTK_LABEL (priv->comments_label), TRUE);
   gtk_label_set_justify (GTK_LABEL (priv->comments_label), GTK_JUSTIFY_CENTER);
   gtk_label_set_line_wrap (GTK_LABEL (priv->comments_label), TRUE);
-#if GTK_CHECK_VERSION (3, 0, 0)
   gtk_label_set_max_width_chars (GTK_LABEL (priv->comments_label), 60);
-#endif
   gtk_box_pack_start (GTK_BOX (vbox), priv->comments_label, FALSE, FALSE, 0);
 
   priv->copyright_label = gtk_label_new (NULL);
@@ -527,11 +517,7 @@ mate_about_dialog_init (MateAboutDialog *about)
   gtk_label_set_justify (GTK_LABEL (priv->copyright_label), GTK_JUSTIFY_CENTER);
   gtk_box_pack_start (GTK_BOX (vbox), priv->copyright_label, FALSE, FALSE, 0);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-#else
-  hbox = gtk_hbox_new (TRUE, 0);
-#endif
   gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, FALSE, 0);
 
   priv->website_label = button = gtk_label_new ("");
@@ -579,10 +565,6 @@ mate_about_dialog_init (MateAboutDialog *about)
 
   gtk_window_set_resizable (GTK_WINDOW (about), FALSE);
 
-#if !GTK_CHECK_VERSION(3,0,0)
-  gtk_widget_pop_composite_child ();
-#endif
-
   gtk_widget_grab_default (close_button);
   gtk_widget_grab_focus (close_button);
 
@@ -613,13 +595,8 @@ mate_about_dialog_finalize (GObject *object)
   g_slist_foreach (priv->visited_links, (GFunc)g_free, NULL);
   g_slist_free (priv->visited_links);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   g_object_unref (priv->hand_cursor);
   g_object_unref (priv->regular_cursor);
-#else
-  gdk_cursor_unref (priv->hand_cursor);
-  gdk_cursor_unref (priv->regular_cursor);
-#endif
 
   G_OBJECT_CLASS (mate_about_dialog_parent_class)->finalize (object);
 }
@@ -1891,20 +1868,14 @@ text_view_visibility_notify_event (GtkWidget          *text_view,
                                    GdkEventVisibility *event,
                                    MateAboutDialog     *about)
 {
-#if GTK_CHECK_VERSION (3, 0, 0)
   GdkDeviceManager *device_manager;
   GdkDevice *device;
-#endif
   gint wx, wy, bx, by;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   device_manager = gdk_display_get_device_manager (gtk_widget_get_display(text_view));
   device = gdk_device_manager_get_client_pointer (device_manager);
 
   gdk_window_get_device_position (gtk_widget_get_window (text_view), device, &wx, &wy, NULL);
-#else
-  gdk_window_get_pointer (gtk_widget_get_window (text_view), &wx, &wy, NULL);
-#endif
 
   gtk_text_view_window_to_buffer_coords (GTK_TEXT_VIEW (text_view),
                                          GTK_TEXT_WINDOW_WIDGET,

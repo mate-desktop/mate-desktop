@@ -35,13 +35,6 @@
 #include <glib/gi18n-lib.h>
 #include "mate-colorsel.h"
 
-#if !GTK_CHECK_VERSION(3,0,0)
-#define gtk_widget_get_preferred_size(x,y,z) gtk_widget_size_request(x,y)
-# define gtk_separator_new(orientation) \
-  (((orientation) == GTK_ORIENTATION_HORIZONTAL) ? \
-    gtk_hseparator_new () : gtk_vseparator_new ())
-#endif
-
 #define DEFAULT_COLOR_PALETTE "#ef2929:#fcaf3e:#fce94f:#8ae234:#729fcf:#ad7fa8:#e9b96e:#888a85:#eeeeec:#cc0000:#f57900:#edd400:#73d216:#3465a4:#75507b:#c17d11:#555753:#d3d7cf:#a40000:#ce5c00:#c4a000:#4e9a06:#204a87:#5c3566:#8f5902:#2e3436:#babdb6:#000000:#2e3436:#555753:#888a85:#babdb6:#d3d7cf:#eeeeec:#f3f3f3:#ffffff"
 
 /* Number of elements in the custom palatte */
@@ -217,7 +210,6 @@ static guint color_selection_signals[LAST_SIGNAL] = { 0 };
 static MateColorSelectionChangePaletteFunc noscreen_change_palette_hook = default_noscreen_change_palette_func;
 static MateColorSelectionChangePaletteWithScreenFunc change_palette_hook = default_change_palette_func;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 static const guchar dropper_bits[] = {
   "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
   "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\377\377\377\377\377\377\377\377\377\377"
@@ -260,29 +252,6 @@ static const guchar dropper_bits[] = {
   "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\377\0\0\0\0\0"
   "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
   "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"};
-#else
-static const guchar dropper_bits[] = {
-  0xff, 0x8f, 0x01, 0x00,  0xff, 0x77, 0x01, 0x00,
-  0xff, 0xfb, 0x00, 0x00,  0xff, 0xf8, 0x00, 0x00,
-  0x7f, 0xff, 0x00, 0x00,  0xff, 0x7e, 0x01, 0x00,
-  0xff, 0x9d, 0x01, 0x00,  0xff, 0xd8, 0x01, 0x00,
-  0x7f, 0xd4, 0x01, 0x00,  0x3f, 0xee, 0x01, 0x00,
-  0x1f, 0xff, 0x01, 0x00,  0x8f, 0xff, 0x01, 0x00,
-  0xc7, 0xff, 0x01, 0x00,  0xe3, 0xff, 0x01, 0x00,
-  0xf3, 0xff, 0x01, 0x00,  0xfd, 0xff, 0x01, 0x00,
-  0xff, 0xff, 0x01, 0x00 };
-
-static const guchar dropper_mask[] = {
-  0x00, 0x70, 0x00, 0x00,  0x00, 0xf8, 0x00, 0x00,
-  0x00, 0xfc, 0x01, 0x00,  0x00, 0xff, 0x01, 0x00,
-  0x80, 0xff, 0x01, 0x00,  0x00, 0xff, 0x00, 0x00,
-  0x00, 0x7f, 0x00, 0x00,  0x80, 0x3f, 0x00, 0x00,
-  0xc0, 0x3f, 0x00, 0x00,  0xe0, 0x13, 0x00, 0x00,
-  0xf0, 0x01, 0x00, 0x00,  0xf8, 0x00, 0x00, 0x00,
-  0x7c, 0x00, 0x00, 0x00,  0x3e, 0x00, 0x00, 0x00,
-  0x1e, 0x00, 0x00, 0x00,  0x0d, 0x00, 0x00, 0x00,
-  0x02, 0x00, 0x00, 0x00 };
-#endif
 
 G_DEFINE_TYPE (MateColorSelection, mate_color_selection, GTK_TYPE_BOX)
 
@@ -369,27 +338,15 @@ mate_color_selection_init (MateColorSelection *colorsel)
   
   _mate_desktop_init_i18n ();
 
-#if !GTK_CHECK_VERSION(3,0,0)
-  gtk_widget_push_composite_child ();
-#endif
-
   priv = colorsel->private_data = G_TYPE_INSTANCE_GET_PRIVATE (colorsel, MATE_TYPE_COLOR_SELECTION, ColorSelectionPrivate);
   priv->changing = FALSE;
   priv->default_set = FALSE;
   priv->default_alpha_set = FALSE;
   
-#if GTK_CHECK_VERSION (3, 0, 0)
   top_hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-#else
-  top_hbox = gtk_hbox_new (FALSE, 12);
-#endif
   gtk_box_pack_start (GTK_BOX (colorsel), top_hbox, FALSE, FALSE, 0);
   
-#if GTK_CHECK_VERSION (3, 0, 0)
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-#else
-  vbox = gtk_vbox_new (FALSE, 6);
-#endif
   priv->triangle_colorsel = gtk_hsv_new ();
   g_signal_connect (priv->triangle_colorsel, "changed",
                     G_CALLBACK (hsv_changed), colorsel);
@@ -399,11 +356,7 @@ mate_color_selection_init (MateColorSelection *colorsel)
   gtk_widget_set_tooltip_text (priv->triangle_colorsel,
                         _("Select the color you want from the outer ring. Select the darkness or lightness of that color using the inner triangle."));
   
-#if GTK_CHECK_VERSION (3, 0, 0)
   hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
-#else
-  hbox = gtk_hbox_new (FALSE, 6);
-#endif
   gtk_box_pack_end (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
   
   frame = gtk_frame_new (NULL);
@@ -427,11 +380,7 @@ mate_color_selection_init (MateColorSelection *colorsel)
   gtk_widget_set_tooltip_text (button,
                         _("Click the eyedropper, then click a color anywhere on your screen to select that color."));
   
-#if GTK_CHECK_VERSION (3, 0, 0)
   top_right_vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-#else
-  top_right_vbox = gtk_vbox_new (FALSE, 6);
-#endif
   gtk_box_pack_start (GTK_BOX (top_hbox), top_right_vbox, FALSE, FALSE, 0);
   table = gtk_table_new (8, 6, FALSE);
   gtk_box_pack_start (GTK_BOX (top_right_vbox), table, FALSE, FALSE, 0);
@@ -528,11 +477,7 @@ mate_color_selection_init (MateColorSelection *colorsel)
 	}
     }
   set_selected_palette (colorsel, 0, 0);
-#if GTK_CHECK_VERSION (3, 0, 0)
   priv->palette_frame = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-#else
-  priv->palette_frame = gtk_vbox_new (FALSE, 6);
-#endif
   label = gtk_label_new_with_mnemonic (_("_Palette:"));
 #if GTK_CHECK_VERSION (3, 16, 0)
   gtk_label_set_xalign (GTK_LABEL (label), 0.0);
@@ -570,10 +515,6 @@ mate_color_selection_init (MateColorSelection *colorsel)
       atk_object_set_role (gtk_widget_get_accessible (GTK_WIDGET (colorsel)), ATK_ROLE_COLOR_CHOOSER);
       make_all_relations (atk_obj, priv);
     } 
-
-#if !GTK_CHECK_VERSION(3,0,0)
-  gtk_widget_pop_composite_child ();
-#endif
 }
 
 /* GObject methods */
@@ -718,11 +659,7 @@ mate_color_selection_grab_broken (GtkWidget          *widget,
  *
  */
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 static void color_sample_draw_sample (MateColorSelection *colorsel, cairo_t *cr, int which);
-#else
-static void color_sample_draw_sample (MateColorSelection *colorsel, int which);
-#endif
 static void color_sample_update_samples (MateColorSelection *colorsel);
 
 static void
@@ -881,18 +818,11 @@ color_sample_drag_handle (GtkWidget        *widget,
 
 /* which = 0 means draw old sample, which = 1 means draw new */
 static void
-#if GTK_CHECK_VERSION (3, 0, 0)
 color_sample_draw_sample (MateColorSelection *colorsel, cairo_t *cr, int which)
-#else
-color_sample_draw_sample (MateColorSelection *colorsel, int which)
-#endif
 {
   GtkWidget *da;
   gint x, y, wid, heig, goff;
   ColorSelectionPrivate *priv;
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  cairo_t *cr;
-#endif
   GtkAllocation allocation;
   
   g_return_if_fail (colorsel != NULL);
@@ -914,10 +844,6 @@ color_sample_draw_sample (MateColorSelection *colorsel, int which)
       goff =  allocation.width % 32;
     }
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  cr = gdk_cairo_create (gtk_widget_get_window (da));
-#endif
-  
   gtk_widget_get_allocation (da, &allocation);
   wid = allocation.width;
   heig = allocation.height;
@@ -961,10 +887,6 @@ color_sample_draw_sample (MateColorSelection *colorsel, int which)
 
   cairo_rectangle (cr, 0, 0, wid, heig);
   cairo_fill (cr);
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  cairo_destroy (cr);
-#endif
 }
 
 
@@ -976,7 +898,6 @@ color_sample_update_samples (MateColorSelection *colorsel)
   gtk_widget_queue_draw (priv->cur_sample);
 }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 static gboolean
 color_old_sample_draw (GtkWidget          *da,
                        cairo_t            *cr,
@@ -995,26 +916,6 @@ color_cur_sample_draw (GtkWidget          *da,
   color_sample_draw_sample (colorsel, cr, 1);
   return FALSE;
 }
-#else
-static gboolean
-color_old_sample_expose (GtkWidget         *da,
-			 GdkEventExpose    *event,
-			 MateColorSelection *colorsel)
-{
-  color_sample_draw_sample (colorsel, 0);
-  return FALSE;
-}
-
-
-static gboolean
-color_cur_sample_expose (GtkWidget         *da,
-			 GdkEventExpose    *event,
-			 MateColorSelection *colorsel)
-{
-  color_sample_draw_sample (colorsel, 1);
-  return FALSE;
-}
-#endif
 
 static void
 color_sample_setup_dnd (MateColorSelection *colorsel, GtkWidget *sample)
@@ -1089,11 +990,7 @@ color_sample_new (MateColorSelection *colorsel)
   
   priv = colorsel->private_data;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   priv->sample_area = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-#else
-  priv->sample_area = gtk_hbox_new (FALSE, 0);
-#endif
   priv->old_sample = gtk_drawing_area_new ();
   priv->cur_sample = gtk_drawing_area_new ();
 
@@ -1102,21 +999,12 @@ color_sample_new (MateColorSelection *colorsel)
   gtk_box_pack_start (GTK_BOX (priv->sample_area), priv->cur_sample,
 		      TRUE, TRUE, 0);
   
-#if GTK_CHECK_VERSION (3, 0, 0)
   g_signal_connect (priv->old_sample, "draw",
 		    G_CALLBACK (color_old_sample_draw),
 		    colorsel);
   g_signal_connect (priv->cur_sample, "draw",
 		    G_CALLBACK (color_cur_sample_draw),
 		    colorsel);
-#else
-  g_signal_connect (priv->old_sample, "expose-event",
-		    G_CALLBACK (color_old_sample_expose),
-		    colorsel);
-  g_signal_connect (priv->cur_sample, "expose-event",
-		    G_CALLBACK (color_cur_sample_expose),
-		    colorsel);
-#endif
   
   color_sample_setup_dnd (colorsel, priv->old_sample);
   color_sample_setup_dnd (colorsel, priv->cur_sample);
@@ -1159,16 +1047,9 @@ palette_get_color (GtkWidget *drawing_area, gdouble *color)
 
 static void
 palette_paint (GtkWidget    *drawing_area,
-#if GTK_CHECK_VERSION (3, 0, 0)
                cairo_t      *cr,
-#else
-               GdkRectangle *area,
-#endif
                gpointer      data)
 {
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  cairo_t *cr;
-#endif
   gint focus_width;
   GtkAllocation allocation;
     
@@ -1177,16 +1058,8 @@ palette_paint (GtkWidget    *drawing_area,
 
   gtk_widget_get_allocation (drawing_area, &allocation);
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  cr = gdk_cairo_create (gtk_widget_get_window (drawing_area));
-#endif
-
   gdk_cairo_set_source_color (cr, &gtk_widget_get_style (drawing_area)->bg[GTK_STATE_NORMAL]);
-#if GTK_CHECK_VERSION (3, 0, 0)
   cairo_rectangle (cr, 0, 0, allocation.width, allocation.height);
-#else
-  gdk_cairo_rectangle (cr, area);
-#endif
   cairo_fill (cr);
 
   if (gtk_widget_has_focus (drawing_area))
@@ -1199,10 +1072,6 @@ palette_paint (GtkWidget    *drawing_area,
 		       allocation.height - focus_width);
       cairo_stroke (cr);
     }
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-  cairo_destroy (cr);
-#endif
 }
 
 static void
@@ -1423,24 +1292,14 @@ palette_set_color (GtkWidget         *drawing_area,
 }
 
 static gboolean
-#if GTK_CHECK_VERSION (3, 0, 0)
 palette_draw (GtkWidget      *drawing_area,
 		cairo_t        *cr,
 		gpointer        data)
-#else
-palette_expose (GtkWidget      *drawing_area,
-		GdkEventExpose *event,
-		gpointer        data)
-#endif
 {
   if (gtk_widget_get_window (drawing_area) == NULL)
     return FALSE;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   palette_paint (drawing_area, cr, data);
-#else
-  palette_paint (drawing_area, &(event->area), data);
-#endif
 
   return FALSE;
 }
@@ -1701,13 +1560,8 @@ palette_new (MateColorSelection *colorsel)
                          | GDK_ENTER_NOTIFY_MASK
                          | GDK_LEAVE_NOTIFY_MASK);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   g_signal_connect (retval, "draw",
 		    G_CALLBACK (palette_draw), colorsel);
-#else
-  g_signal_connect (retval, "expose-event",
-		    G_CALLBACK (palette_expose), colorsel);
-#endif
   g_signal_connect (retval, "button-press-event",
 		    G_CALLBACK (palette_press), colorsel);
   g_signal_connect (retval, "button-release-event",
@@ -1755,7 +1609,6 @@ make_picker_cursor (GdkScreen *screen)
 
   if (!cursor)
     {
-#if GTK_CHECK_VERSION (3, 0, 0)
       GdkPixbuf *pixbuf;
 
       pixbuf = gdk_pixbuf_new_from_data (dropper_bits,
@@ -1767,54 +1620,7 @@ make_picker_cursor (GdkScreen *screen)
       cursor = gdk_cursor_new_from_pixbuf (gdk_screen_get_display (screen),
                                            pixbuf,
                                            DROPPER_X_HOT, DROPPER_Y_HOT);
-
       g_object_unref (pixbuf);
-#else
-      GdkColor bg = { 0, 0xffff, 0xffff, 0xffff };
-      GdkColor fg = { 0, 0x0000, 0x0000, 0x0000 };
-      GdkWindow *window;
-      GdkPixmap *pixmap, *mask;
-      cairo_surface_t *image;
-      cairo_t *cr;
-
-      window = gdk_screen_get_root_window (screen);
-      
-
-      pixmap = gdk_pixmap_new (window, DROPPER_WIDTH, DROPPER_HEIGHT, 1);
-
-      cr = gdk_cairo_create (pixmap);
-      cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
-      image = cairo_image_surface_create_for_data ((guchar *) dropper_bits,
-                                                   CAIRO_FORMAT_A1,
-                                                   DROPPER_WIDTH,
-                                                   DROPPER_HEIGHT,
-                                                   DROPPER_STRIDE);
-      cairo_set_source_surface (cr, image, 0, 0);
-      cairo_surface_destroy (image);
-      cairo_paint (cr);
-      cairo_destroy (cr);
-      
-
-      mask = gdk_pixmap_new (window, DROPPER_WIDTH, DROPPER_HEIGHT, 1);
-
-      cr = gdk_cairo_create (mask);
-      cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
-      image = cairo_image_surface_create_for_data ((guchar *) dropper_mask,
-                                                   CAIRO_FORMAT_A1,
-                                                   DROPPER_WIDTH,
-                                                   DROPPER_HEIGHT,
-                                                   DROPPER_STRIDE);
-      cairo_set_source_surface (cr, image, 0, 0);
-      cairo_surface_destroy (image);
-      cairo_paint (cr);
-      cairo_destroy (cr);
-      
-      cursor = gdk_cursor_new_from_pixmap (pixmap, mask, &fg, &bg,
-					   DROPPER_X_HOT, DROPPER_Y_HOT);
-      
-      g_object_unref (pixmap);
-      g_object_unref (mask);
-#endif
     }
       
   return cursor;
@@ -1835,16 +1641,9 @@ grab_color_at_mouse (GdkScreen *screen,
   
   priv = colorsel->private_data;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   pixbuf = gdk_pixbuf_get_from_window (root_window,
                                        x_root, y_root,
                                        1, 1);
-#else
-  pixbuf = gdk_pixbuf_get_from_drawable (NULL, root_window, NULL,
-                                         x_root, y_root,
-                                         0, 0,
-                                         1, 1);
-#endif
   if (!pixbuf)
     {
       gint x, y;
@@ -1852,16 +1651,9 @@ grab_color_at_mouse (GdkScreen *screen,
       GdkWindow *window = gdk_display_get_window_at_pointer (display, &x, &y);
       if (!window)
 	return;
-#if GTK_CHECK_VERSION (3, 0, 0)
       pixbuf = gdk_pixbuf_get_from_window (window,
                                            x, y,
                                            1, 1);
-#else
-      pixbuf = gdk_pixbuf_get_from_drawable (NULL, window, NULL,
-                                             x, y,
-                                             0, 0,
-                                             1, 1);
-#endif
       if (!pixbuf)
 	return;
     }
@@ -2086,11 +1878,7 @@ get_screen_color (GtkWidget *button)
 				  NULL,
 				  picker_cursor,
 				  time);
-#if GTK_CHECK_VERSION (3, 0, 0)
   g_object_unref (picker_cursor);
-#else
-  gdk_cursor_unref (picker_cursor);
-#endif
   
   if (grab_status != GDK_GRAB_SUCCESS)
     {

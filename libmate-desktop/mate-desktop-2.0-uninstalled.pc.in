@@ -5,7 +5,7 @@ includedir=@includedir@
 
 Name: mate-desktop-2.0
 Description: Utility library for loading .desktop files
-Requires: gtk+-@GTK_API_VERSION@ @STARTUP_NOTIFICATION_PACKAGE@
+Requires: gtk+-3.0 @STARTUP_NOTIFICATION_PACKAGE@
 Version: @VERSION@
 Libs: ${pc_top_builddir}/${pcfiledir}/libmate-desktop-2.la
 Cflags: -I${pc_top_builddir}/${pcfiledir}

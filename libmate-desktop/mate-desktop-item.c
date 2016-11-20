@@ -1480,11 +1480,7 @@ static void
 sn_error_trap_pop (SnDisplay *display,
 		   Display   *xdisplay)
 {
-#if GTK_CHECK_VERSION(3,0,0)
 	gdk_error_trap_pop_ignored ();
-#else
-	gdk_error_trap_pop ();
-#endif
 }
 
 static char **
@@ -2524,11 +2520,7 @@ mate_desktop_item_find_icon (GtkIconTheme *icon_theme,
 		full = NULL;
 		if (info) {
 			full = g_strdup (gtk_icon_info_get_filename (info));
-#if GTK_CHECK_VERSION (3, 8, 0)
 			g_object_unref (info);
-#else
-			gtk_icon_info_free (info);
-#endif
 		}
 		g_free (icon_no_extension);
 	}

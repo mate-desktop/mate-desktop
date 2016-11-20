@@ -651,11 +651,7 @@ const char* artists[] = {
 // widget for mate-about window
 MateAboutDialog* mate_about_dialog = FALSE;
 
-#if GTK_CHECK_VERSION(3, 0, 0)
 GtkApplication* mate_about_application;
-#else
-GApplication* mate_about_application;
-#endif
 
 /**
  * If this value is set to TRUE, then mate_about_dialog will not be called
@@ -666,11 +662,7 @@ gboolean mate_about_nogui = FALSE;
 void mate_about_run(void);
 void mate_about_release_version(void);
 
-#if GTK_CHECK_VERSION(3, 0, 0)
 static void mate_about_on_activate(GtkApplication* app);
-#else
-static void mate_about_on_activate(GApplication* app);
-#endif
 
 // arguments definitions
 static GOptionEntry command_entries[] = {

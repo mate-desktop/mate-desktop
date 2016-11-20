@@ -29,8 +29,6 @@
     textdomain(package);
 #endif
 
-#if GTK_CHECK_VERSION(3, 0, 0)
-
 static void mate_about_on_activate(GtkApplication* app)
 {
     GList* list;
@@ -47,23 +45,6 @@ static void mate_about_on_activate(GtkApplication* app)
         mate_about_run();
     }
 }
-
-#else
-
-// callback
-static void mate_about_on_activate(GApplication* app)
-{
-    if (!mate_about_dialog)
-    {
-        mate_about_run();
-    }
-    else
-    {
-        gtk_window_present(GTK_WINDOW(mate_about_dialog));
-    }
-}
-
-#endif
 
 void mate_about_run(void)
 {
@@ -95,9 +76,7 @@ void mate_about_run(void)
      * displayed in the about box to give credit to the translator(s). */
     mate_about_dialog_set_translator_credits(mate_about_dialog, _("translator-credits"));
 
-#if GTK_CHECK_VERSION(3, 0, 0)
     gtk_window_set_application(GTK_WINDOW(mate_about_dialog), mate_about_application);
-#endif
 
     // start and destroy
     gtk_dialog_run((GtkDialog*) mate_about_dialog);
@@ -110,14 +89,10 @@ int main(int argc, char** argv)
 
     mate_gettext(GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
 
-    /* http://www.gtk.org/api/2.6/glib/glib-Commandline-option-parser.html */
     GOptionContext* context = g_option_context_new(NULL);
     g_option_context_add_main_entries(context, command_entries, GETTEXT_PACKAGE);
     g_option_context_add_group(context, gtk_get_option_group(TRUE));
     g_option_context_parse(context, &argc, &argv, NULL);
-
-    /* Not necesary at all, program just run and die.
-     * But it free a little memory. */
     g_option_context_free(context);
 
     if (mate_about_nogui == TRUE)
@@ -128,21 +103,12 @@ int main(int argc, char** argv)
     {
         gtk_init(&argc, &argv);
 
-#if GTK_CHECK_VERSION(3, 0, 0)
         mate_about_application = gtk_application_new("org.mate.about", 0);
         g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
 
         status = g_application_run(G_APPLICATION(mate_about_application), argc, argv);
 
         g_object_unref(mate_about_application);
-#else
-        mate_about_application = g_application_new("org.mate.about", G_APPLICATION_FLAGS_NONE);
-        g_signal_connect(mate_about_application, "activate", G_CALLBACK(mate_about_on_activate), NULL);
-
-        status = g_application_run(G_APPLICATION(mate_about_application), argc, argv);
-
-        g_object_unref(mate_about_application);
-#endif
     }
 
     return status;

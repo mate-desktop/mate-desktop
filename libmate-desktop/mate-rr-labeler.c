@@ -44,11 +44,7 @@ struct _MateRRLabelerPrivate {
 
 	int num_outputs;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	GdkRGBA *palette;
-#else
-	GdkColor *palette;
-#endif
 	GtkWidget **windows;
 
 	GdkScreen  *screen;
@@ -302,11 +298,7 @@ make_palette (MateRRLabeler *labeler)
 
 	g_assert (labeler->priv->num_outputs > 0);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	labeler->priv->palette = g_new (GdkRGBA, labeler->priv->num_outputs);
-#else
-	labeler->priv->palette = g_new (GdkColor, labeler->priv->num_outputs);
-#endif
 
 	start_hue = 0.0; /* red */
 	end_hue   = 2.0/3; /* blue */
@@ -321,16 +313,10 @@ make_palette (MateRRLabeler *labeler)
 
 		gtk_hsv_to_rgb (h, s, v, &r, &g, &b);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 		labeler->priv->palette[i].red   = r;
 		labeler->priv->palette[i].green = g;
 		labeler->priv->palette[i].blue  = b;
 		labeler->priv->palette[i].alpha  = 1.0;
-#else
-		labeler->priv->palette[i].red   = (int) (65535 * r + 0.5);
-		labeler->priv->palette[i].green = (int) (65535 * g + 0.5);
-		labeler->priv->palette[i].blue  = (int) (65535 * b + 0.5);
-#endif
 	}
 }
 
@@ -338,25 +324,13 @@ make_palette (MateRRLabeler *labeler)
 #define LABEL_WINDOW_PADDING 12
 
 static gboolean
-#if GTK_CHECK_VERSION (3, 0, 0)
 label_window_draw_event_cb (GtkWidget *widget, cairo_t *cr, gpointer data)
-#else
-label_window_expose_event_cb (GtkWidget *widget, GdkEventExpose *event, gpointer data)
-#endif
 {
-#if GTK_CHECK_VERSION (3, 0, 0)
 	GdkRGBA *color;
-#else
-	GdkColor *color;
-#endif
 	GtkAllocation allocation;
 
 	color = g_object_get_data (G_OBJECT (widget), "color");
 	gtk_widget_get_allocation (widget, &allocation);
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	cairo_t *cr = gdk_cairo_create (gtk_widget_get_window (widget));
-#endif
 
 	/* edge outline */
 
@@ -370,21 +344,13 @@ label_window_expose_event_cb (GtkWidget *widget, GdkEventExpose *event, gpointer
 	cairo_stroke (cr);
 
 	/* fill */
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gdk_cairo_set_source_rgba (cr, color);
-#else
-	gdk_cairo_set_source_color (cr, color);
-#endif
 	cairo_rectangle (cr,
 			 LABEL_WINDOW_EDGE_THICKNESS,
 			 LABEL_WINDOW_EDGE_THICKNESS,
 			 allocation.width - LABEL_WINDOW_EDGE_THICKNESS * 2,
 			 allocation.height - LABEL_WINDOW_EDGE_THICKNESS * 2);
 	cairo_fill (cr);
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	cairo_destroy (cr);
-#endif
 
 	return FALSE;
 }
@@ -409,13 +375,8 @@ position_window (MateRRLabeler  *labeler,
 	gtk_window_move (GTK_WINDOW (window), workarea.x, workarea.y);
 }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 static GtkWidget *
 create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *color)
-#else
-static GtkWidget *
-create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkColor *color)
-#endif
 {
 	GtkWidget *window;
 	GtkWidget *widget;
@@ -435,13 +396,8 @@ create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkColor 
 	 */
 	g_object_set_data (G_OBJECT (window), "color", color);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	g_signal_connect (window, "draw",
 			  G_CALLBACK (label_window_draw_event_cb), labeler);
-#else
-	g_signal_connect (window, "expose-event",
-			  G_CALLBACK (label_window_expose_event_cb), labeler);
-#endif
 
 	if (mate_rr_config_get_clone (labeler->priv->config)) {
 		/* Keep this string in sync with mate-control-center/capplets/display/xrandr-capplet.c:get_display_name() */
@@ -467,11 +423,7 @@ create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkColor 
 	 * theme's colors, since the label is always shown against a light
 	 * pastel background.  See bgo#556050
 	 */
-#if GTK_CHECK_VERSION(3,0,0)
 	gtk_widget_modify_fg (widget, gtk_widget_get_state_flags (widget), &black);
-#else
-	gtk_widget_modify_fg (widget, gtk_widget_get_state (widget), &black);
-#endif
 
 	gtk_container_add (GTK_CONTAINER (window), widget);
 
@@ -565,7 +517,6 @@ mate_rr_labeler_hide (MateRRLabeler *labeler)
 	priv->windows = NULL;
 }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 /**
  * mate_rr_labeler_get_rgba_for_output:
  * @labeler: A #MateRRLabeler
@@ -598,44 +549,4 @@ mate_rr_labeler_get_rgba_for_output (MateRRLabeler *labeler, MateRROutputInfo *o
 	color_out->green = 0.0;
 	color_out->blue  = 1.0;
 	color_out->alpha = 1.0;
-}
-#endif
-
-/**
- * mate_rr_labeler_get_color_for_output:
- * @labeler: A #MateRRLabeler
- * @output: Output device (i.e. monitor) to query
- * @color_out: (out): Color of selected monitor.
- *
- * Get the color used for the label on a given output (monitor).
- */
-void
-mate_rr_labeler_get_color_for_output (MateRRLabeler *labeler, MateRROutputInfo *output, GdkColor *color_out)
-{
-	int i;
-	MateRROutputInfo **outputs;
-
-	g_return_if_fail (MATE_IS_RR_LABELER (labeler));
-	g_return_if_fail (MATE_IS_RR_OUTPUT_INFO (output));
-	g_return_if_fail (color_out != NULL);
-
-	outputs = mate_rr_config_get_outputs (labeler->priv->config);
-
-	for (i = 0; i < labeler->priv->num_outputs; i++)
-		if (outputs[i] == output) {
-#if GTK_CHECK_VERSION (3, 0, 0)
-			color_out->red = labeler->priv->palette[i].red * 0xffff;
-			color_out->green = labeler->priv->palette[i].green * 0xffff;
-			color_out->blue = labeler->priv->palette[i].blue * 0xffff;
-#else
-			*color_out = labeler->priv->palette[i];
-#endif
-			return;
-		}
-
-	g_warning ("trying to get the color for unknown MateOutputInfo %p; returning magenta!", output);
-
-	color_out->red   = 0xffff;
-	color_out->green = 0;
-	color_out->blue  = 0xffff;
 }
