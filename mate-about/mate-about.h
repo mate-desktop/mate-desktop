@@ -26,8 +26,6 @@
 #include <libintl.h> // for gettext
 #include <glib/gi18n.h>
 
-#include <libmate-desktop/mate-aboutdialog.h>
-
 const char* program_name = "MATE Desktop Environment";
 const char* version = PACKAGE_VERSION;
 const char* icon = "mate";
@@ -649,7 +647,7 @@ const char* artists[] = {
 };
 
 // widget for mate-about window
-MateAboutDialog* mate_about_dialog = FALSE;
+GtkAboutDialog* mate_about_dialog = FALSE;
 
 GtkApplication* mate_about_application;
 

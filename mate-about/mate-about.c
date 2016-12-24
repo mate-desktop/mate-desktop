@@ -48,33 +48,33 @@ static void mate_about_on_activate(GtkApplication* app)
 
 void mate_about_run(void)
 {
-    mate_about_dialog = (MateAboutDialog*) mate_about_dialog_new();
+    mate_about_dialog = (GtkAboutDialog*) gtk_about_dialog_new();
 
     gtk_window_set_default_icon_name(icon);
-    mate_about_dialog_set_logo_icon_name(mate_about_dialog, icon);
+    gtk_about_dialog_set_logo_icon_name(mate_about_dialog, icon);
 
     // name
-    mate_about_dialog_set_program_name(mate_about_dialog, gettext(program_name));
+    gtk_about_dialog_set_program_name(mate_about_dialog, gettext(program_name));
 
     // version
-    mate_about_dialog_set_version(mate_about_dialog, version);
+    gtk_about_dialog_set_version(mate_about_dialog, version);
 
     // credits and website
-    mate_about_dialog_set_copyright(mate_about_dialog, copyright);
-    mate_about_dialog_set_website(mate_about_dialog, website);
+    gtk_about_dialog_set_copyright(mate_about_dialog, copyright);
+    gtk_about_dialog_set_website(mate_about_dialog, website);
 
     /**
      * This generate a random message.
      * The comments index must not be more than comments_count - 1
      */
-    mate_about_dialog_set_comments(mate_about_dialog, gettext(comments_array[g_random_int_range(0, comments_count - 1)]));
+    gtk_about_dialog_set_comments(mate_about_dialog, gettext(comments_array[g_random_int_range(0, comments_count - 1)]));
 
-    mate_about_dialog_set_authors(mate_about_dialog, authors);
-    mate_about_dialog_set_artists(mate_about_dialog, artists);
-    mate_about_dialog_set_documenters(mate_about_dialog, documenters);
+    gtk_about_dialog_set_authors(mate_about_dialog, authors);
+    gtk_about_dialog_set_artists(mate_about_dialog, artists);
+    gtk_about_dialog_set_documenters(mate_about_dialog, documenters);
     /* Translators should localize the following string which will be
      * displayed in the about box to give credit to the translator(s). */
-    mate_about_dialog_set_translator_credits(mate_about_dialog, _("translator-credits"));
+    gtk_about_dialog_set_translator_credits(mate_about_dialog, _("translator-credits"));
 
     gtk_window_set_application(GTK_WINDOW(mate_about_dialog), mate_about_application);
 
