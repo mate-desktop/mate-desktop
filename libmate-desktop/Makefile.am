@@ -5,7 +5,6 @@ libmate_desktop_HEADERS = \
 	mate-desktop-item.h \
 	mate-dconf.h \
 	mate-gsettings.h \
-	mate-aboutdialog.h \
 	mate-bg.h			\
 	mate-bg-crossfade.h		\
 	mate-desktop-thumbnail.h	\
@@ -39,7 +38,6 @@ introspection_sources = \
 	mate-thumbnail-pixbuf-utils.c \
 	mate-dconf.c \
 	mate-gsettings.c \
-	mate-aboutdialog.c \
 	mate-bg.c		\
 	mate-bg-crossfade.c	\
 	display-name.c		\
