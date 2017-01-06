@@ -101,6 +101,13 @@ char *     mate_desktop_thumbnail_path_for_uri      (const char         *uri,
 
 /* Pixbuf utils */
 
+#ifndef __GTK_DOC_IGNORE__
+#define MATE_DESKTOP_DEPRECATED_IN_1_24_FOR(f) G_DEPRECATED_FOR(f) extern
+#else
+#define MATE_DESKTOP_DEPRECATED_IN_1_24_FOR(f) extern
+#endif
+
+MATE_DESKTOP_DEPRECATED_IN_1_24_FOR(gdk_pixbuf_scale_simple)
 GdkPixbuf *mate_desktop_thumbnail_scale_down_pixbuf (GdkPixbuf          *pixbuf,
 						      int                 dest_width,
 						      int                 dest_height);
