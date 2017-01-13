@@ -1,9 +1,9 @@
-mate-desktop 1.17.1
+### mate-desktop 1.17.1
 
   * mate-about: Update copyright year
   * Translations update
 
-mate-desktop 1.17.0
+### mate-desktop 1.17.0
 
   * Translations update
   * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
@@ -12,13 +12,13 @@ mate-desktop 1.17.0
   * schemas: correct cursor-theme key description
   * schemas: drop unused cursor-font key
 
-mate-desktop 1.16.1
+### mate-desktop 1.16.1
 
   * mate-bg: fix regression that caused font color in Caja to be
     always black (even on dark backgrounds)
   * Translations update
 
-mate-desktop 1.16.0
+### mate-desktop 1.16.0
 
   * mate-bg: remove unneeded ignore-pending-change property
     (not needed anymore since font color fix in Caja 1.14)
@@ -27,26 +27,26 @@ mate-desktop 1.16.0
   * Some minor cleanups
   * Translations update
 
-mate-desktop 1.14.1
+### mate-desktop 1.14.1
 
   * Translations update
   * Backgrounds: Take EXIF rotation tags into consideration
   * enable installation of mate.svg
 
-mate-desktop 1.14.0
+### mate-desktop 1.14.0
 
   * Drop MateConf migration script and ancient mate-conf-import tool
   * Fix deprecated usage of GtkHBox and GtkVBox in GTK+3 build
   * Translations update
   * Fix Changelog generation
 
-mate-desktop 1.12.1
+### mate-desktop 1.12.1
 
   * RR: fix crash
   * Fix color select in GTK+3
   * Translations update
 
-mate-desktop 1.12.0
+### mate-desktop 1.12.0
 
   * Require dconf 0.13.4
   * Require xrandr 1.3
@@ -61,7 +61,7 @@ mate-desktop 1.12.0
   * Dropped dependency on yelp (not needed after moving user guide)
   * Several fixes
 
-mate-desktop 1.10.2
+### mate-desktop 1.10.2
 
   * Check for NULL pointers in slideshow
   * Fix crash when system date is earlier than start date
@@ -72,11 +72,11 @@ mate-desktop 1.10.2
   * Add annotations and fix documentation syntax warnings
   * Update translations
 
-mate-desktop 1.10.1
+### mate-desktop 1.10.1
 
   * Restore docbook user-guide
 
-mate-desktop 1.10.0
+### mate-desktop 1.10.0
 
   * Turn MateRRScreen, GnomeRRConfig and GnomeOutputInfo into a GObject.
     Thanks to monsta for helping to test this.
@@ -94,7 +94,7 @@ mate-desktop 1.10.0
   * Added MateAboutDialog class to have traditional about dialog with
     GTK3 too
 
-mate-desktop 1.8.0
+### mate-desktop 1.8.0
 
   * Added helpers for dconf and GSettings
   * Fix build with GTK3
@@ -103,12 +103,12 @@ mate-desktop 1.8.0
   * Added mpaste tool
   * Added replacement for gdk_spawn_command_line_on_screen in GTK3
 
-mate-desktop 1.6.1
+### mate-desktop 1.6.1
 
   * Tarball built with 'make dist'
   * Added tool to migrate 1.4 settings (mate-conf-import)
 
-mate-desktop 1.6.0
+### mate-desktop 1.6.0
 
   * Port to new thumbnail spec (code from gnome-desktop 3.x)
   * Added gsettings schemas from now deprecated libmate
