@@ -91,13 +91,6 @@ AC_ARG_ENABLE([mate-about],
 AM_CONDITIONAL(MATE_ABOUT_ENABLED, test "x$enable_mate_about" = "xyes")
 
 
-# Install tool to paste text to paste.mate-desktop.org
-AC_ARG_ENABLE([mpaste],
-	[AS_HELP_STRING([--enable-mpaste],[install mpaste tool])],,
-	[enable_mpaste=no])
-AM_CONDITIONAL(MPASTE_ENABLED, test "x$enable_mpaste" = "xyes")
-
-
 # Path to the pnp.ids file -- to know if we use one shipped with another
 # package, or an internal file
 
@@ -306,7 +299,6 @@ mate-desktop $VERSION
     Use *_DISABLE_DEPRECATED:     ${enable_deprecation_flags}
 
     Build mate-about:             ${enable_mate_about}
-    Install mpaste:               ${enable_mpaste}
     Use external pnp.ids:         ${EXTERNAL_PNP_IDS}
     Startup notification support: ${have_startup_notification}
     XRandr support:               ${have_randr}
