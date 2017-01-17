@@ -2242,6 +2242,11 @@ find_best_size (GSList *sizes, gint width, gint height)
 		for (s = sizes; s; s = s->next) {
 			FileSize *size = s->data;
 
+			//Ensure sure best is never NULL
+			if  (best == NULL) {
+				best = size;
+			}
+
 			if (pass == 0 && (size->width < width || size->height < height))
 				continue;
 
