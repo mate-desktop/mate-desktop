@@ -21,11 +21,4 @@ desktopdir = $(datadir)/applications
 desktop_in_files = mate-color-select.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
-if MPASTE_ENABLED
-bin_SCRIPTS += mpaste
-endif
-
-EXTRA_DIST = \
-	mpaste
-
 CLEANFILES = *.desktop *.desktop.in
