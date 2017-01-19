@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-06 00:44+0300\n"
-"PO-Revision-Date: 2016-12-28 08:36+0000\n"
-"Last-Translator: abuyop <abuyop@gmail.com>\n"
+"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"PO-Revision-Date: 2016-11-10 12:27+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Malay (http://www.transifex.com/mate/MATE/language/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:77
+#: ../mate-about/mate-about.c:96
 msgid "translator-credits"
 msgstr "abuyop <abuyop@gmail.com>"
 
@@ -118,7 +118,7 @@ msgid "Comments about the program"
 msgstr "Ulasan mengenai program"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2157
+#: ../libmate-desktop/mate-aboutdialog.c:2186
 msgid "License"
 msgstr "Lesen"
 
@@ -204,37 +204,37 @@ msgid "Whether to wrap the license text."
 msgstr "Sama ada hendak lilit teks lesen."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:541
+#: ../libmate-desktop/mate-aboutdialog.c:555
 msgid "C_redits"
 msgstr "Peng_hargaan"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:555
+#: ../libmate-desktop/mate-aboutdialog.c:569
 msgid "_License"
 msgstr "_Lesen"
 
-#: ../libmate-desktop/mate-aboutdialog.c:829
+#: ../libmate-desktop/mate-aboutdialog.c:852
 #, c-format
 msgid "About %s"
 msgstr "Perihal %s"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2081
+#: ../libmate-desktop/mate-aboutdialog.c:2110
 msgid "Credits"
 msgstr "Penghargaan"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2109
+#: ../libmate-desktop/mate-aboutdialog.c:2138
 msgid "Written by"
 msgstr "Ditulis oleh"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2112
+#: ../libmate-desktop/mate-aboutdialog.c:2141
 msgid "Documented by"
 msgstr "Didokumen oleh"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2124
+#: ../libmate-desktop/mate-aboutdialog.c:2153
 msgid "Translated by"
 msgstr "Diterjemah oleh"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2128
+#: ../libmate-desktop/mate-aboutdialog.c:2157
 msgid "Artwork by"
 msgstr "Kerja seni oleh"
 
@@ -255,12 +255,12 @@ msgid "The title of the color selection dialog"
 msgstr "Tajuk bagi dialog pemilihan warna"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:442
+#: ../libmate-desktop/mate-colorbutton.c:470
 msgid "Pick a Color"
 msgstr "Ambil atau Warna"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:294
+#: ../libmate-desktop/mate-colorsel.c:325
 msgid "Current Color"
 msgstr "Warna Semasa"
 
@@ -269,7 +269,7 @@ msgid "The selected color"
 msgstr "Warna dipilih"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:301
+#: ../libmate-desktop/mate-colorsel.c:332
 msgid "Current Alpha"
 msgstr "Alfa Semasa"
 
@@ -277,168 +277,168 @@ msgstr "Alfa Semasa"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Nilai kelegapan terpilih (0 sepenuhnya lutsinar, 65535 sepenuhnya legap)"
 
-#: ../libmate-desktop/mate-colorbutton.c:335
+#: ../libmate-desktop/mate-colorbutton.c:354
 msgid "Received invalid color data\n"
 msgstr "Data warna tidak sah diterima\n"
 
-#: ../libmate-desktop/mate-colorsel.c:280
+#: ../libmate-desktop/mate-colorsel.c:311
 msgid "Has Opacity Control"
 msgstr "Mempunyai Kawalan Kelegapan"
 
-#: ../libmate-desktop/mate-colorsel.c:281
+#: ../libmate-desktop/mate-colorsel.c:312
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Sama ada pemilih warna seharusnya membenarkan tetapkan kelegapan"
 
-#: ../libmate-desktop/mate-colorsel.c:287
+#: ../libmate-desktop/mate-colorsel.c:318
 msgid "Has palette"
 msgstr "Mempunyai palet"
 
-#: ../libmate-desktop/mate-colorsel.c:288
+#: ../libmate-desktop/mate-colorsel.c:319
 msgid "Whether a palette should be used"
 msgstr "Sama ada palet seharusnya digunakan"
 
-#: ../libmate-desktop/mate-colorsel.c:295
+#: ../libmate-desktop/mate-colorsel.c:326
 msgid "The current color"
 msgstr "Warna semasa"
 
-#: ../libmate-desktop/mate-colorsel.c:302
+#: ../libmate-desktop/mate-colorsel.c:333
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Nilai kelegapan semasa (0 sepenuhnya lutsinar, 65535 sepenuhnya legap)"
 
-#: ../libmate-desktop/mate-colorsel.c:308
+#: ../libmate-desktop/mate-colorsel.c:339
 msgid "HEX String"
 msgstr "Rentetan HEX"
 
-#: ../libmate-desktop/mate-colorsel.c:309
+#: ../libmate-desktop/mate-colorsel.c:340
 msgid "The hexadecimal string of current color"
 msgstr "Rentetan heksadesimal bagi warna semasa"
 
-#: ../libmate-desktop/mate-colorsel.c:357
+#: ../libmate-desktop/mate-colorsel.c:400
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "Pilih warna yang anda mahu dari gelang luar. Pilih kegelapan atau kecerahan warna tersebut menggunakan segitiga dalaman."
 
-#: ../libmate-desktop/mate-colorsel.c:381
+#: ../libmate-desktop/mate-colorsel.c:428
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "Klik pada penitis, kemudian klik pada satu warna dimana sahaja pada skrin anda untuk memilih warna tersebut."
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: ../libmate-desktop/mate-colorsel.c:441
 msgid "_Hue:"
 msgstr "_Rona:"
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:442
 msgid "Position on the color wheel."
 msgstr "Kedudukan pada roda warna."
 
-#: ../libmate-desktop/mate-colorsel.c:393
+#: ../libmate-desktop/mate-colorsel.c:444
 msgid "_Saturation:"
 msgstr "K_etepuan:"
 
-#: ../libmate-desktop/mate-colorsel.c:394
+#: ../libmate-desktop/mate-colorsel.c:445
 msgid "\"Deepness\" of the color."
 msgstr "\"Kedalaman\" warna."
 
-#: ../libmate-desktop/mate-colorsel.c:395
+#: ../libmate-desktop/mate-colorsel.c:446
 msgid "_Value:"
 msgstr "_Nilai:"
 
-#: ../libmate-desktop/mate-colorsel.c:396
+#: ../libmate-desktop/mate-colorsel.c:447
 msgid "Brightness of the color."
 msgstr "Kecerahan warna."
 
-#: ../libmate-desktop/mate-colorsel.c:397
+#: ../libmate-desktop/mate-colorsel.c:448
 msgid "_Red:"
 msgstr "Merah:"
 
-#: ../libmate-desktop/mate-colorsel.c:398
+#: ../libmate-desktop/mate-colorsel.c:449
 msgid "Amount of red light in the color."
 msgstr "Amaun cahaya merah dalam warna."
 
-#: ../libmate-desktop/mate-colorsel.c:399
+#: ../libmate-desktop/mate-colorsel.c:450
 msgid "_Green:"
 msgstr "_Hijau:"
 
-#: ../libmate-desktop/mate-colorsel.c:400
+#: ../libmate-desktop/mate-colorsel.c:451
 msgid "Amount of green light in the color."
 msgstr "Amaun cahaya hijau dalam warna."
 
-#: ../libmate-desktop/mate-colorsel.c:401
+#: ../libmate-desktop/mate-colorsel.c:452
 msgid "_Blue:"
 msgstr "_Biru:"
 
-#: ../libmate-desktop/mate-colorsel.c:402
+#: ../libmate-desktop/mate-colorsel.c:453
 msgid "Amount of blue light in the color."
 msgstr "Amaun cahaya biru dalam warna."
 
-#: ../libmate-desktop/mate-colorsel.c:405
+#: ../libmate-desktop/mate-colorsel.c:456
 msgid "Op_acity:"
 msgstr "Kele_gapan:"
 
-#: ../libmate-desktop/mate-colorsel.c:416
-#: ../libmate-desktop/mate-colorsel.c:426
+#: ../libmate-desktop/mate-colorsel.c:467
+#: ../libmate-desktop/mate-colorsel.c:477
 msgid "Transparency of the color."
 msgstr "Kelutsinaran warna."
 
-#: ../libmate-desktop/mate-colorsel.c:433
+#: ../libmate-desktop/mate-colorsel.c:484
 msgid "Color _name:"
 msgstr "_Nama warna:"
 
-#: ../libmate-desktop/mate-colorsel.c:451
+#: ../libmate-desktop/mate-colorsel.c:502
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "Anda boleh masukkan nilai warna heksadesimal gaya-HTML, atau hanya nama warna seperti 'jingga' di dalam masukan ini."
 
-#: ../libmate-desktop/mate-colorsel.c:481
+#: ../libmate-desktop/mate-colorsel.c:536
 msgid "_Palette:"
 msgstr "_Palet:"
 
-#: ../libmate-desktop/mate-colorsel.c:514
+#: ../libmate-desktop/mate-colorsel.c:569
 msgid "Color Wheel"
 msgstr "Roda Warna"
 
-#: ../libmate-desktop/mate-colorsel.c:971
+#: ../libmate-desktop/mate-colorsel.c:1070
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "Warna dipilih-sebelum-ini, untuk perbandingan dengan warna yang anda pilih sekarang. Anda boleh seret warna ini ke masukan palet, atau pilih warna ini sebagai warna semasa dengan menyeretnya ke dalam warna lain."
 
-#: ../libmate-desktop/mate-colorsel.c:974
+#: ../libmate-desktop/mate-colorsel.c:1073
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "Warna yang anda pilih. Anda boleh seret warna ini ke masukan palet untuk menyimpannya bagi kegunaan akan datang."
 
-#: ../libmate-desktop/mate-colorsel.c:979
+#: ../libmate-desktop/mate-colorsel.c:1078
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Warna dipilih-sebelum-inim untuk perbandingan dengan warna yang anda pilih sekarang."
 
-#: ../libmate-desktop/mate-colorsel.c:982
+#: ../libmate-desktop/mate-colorsel.c:1081
 msgid "The color you've chosen."
 msgstr "Warna yang anda telah pilih."
 
-#: ../libmate-desktop/mate-colorsel.c:1366
+#: ../libmate-desktop/mate-colorsel.c:1507
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1371
+#: ../libmate-desktop/mate-colorsel.c:1512
 msgid "_Save color here"
 msgstr "_Simpan warna di sini"
 
-#: ../libmate-desktop/mate-colorsel.c:1591
+#: ../libmate-desktop/mate-colorsel.c:1737
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr "Klik masukan palet ini untuk jadikannya warna semasa. Untuk mengubah masukan ini, seret satu warna di sini atau klik kanan padanya dan pilih \"Simpan warna di sini\"."
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
-#: ../libmate-desktop/mate-colorseldialog.c:162
+#: ../libmate-desktop/mate-colorseldialog.c:170
 msgid "Color Selection"
 msgstr "Pemilihan Warna"
 
@@ -486,7 +486,7 @@ msgstr "Ralat mengundur semula fail '%s': %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3538
+#: ../libmate-desktop/mate-desktop-item.c:3546
 msgid "No name"
 msgstr "Tiada Nama"
 
@@ -505,37 +505,37 @@ msgstr "Tidak menemui fail '%s'"
 msgid "No filename to save to"
 msgstr "Tiada nama fail untuk disimpan"
 
-#: ../libmate-desktop/mate-desktop-item.c:1840
+#: ../libmate-desktop/mate-desktop-item.c:1844
 #, c-format
 msgid "Starting %s"
 msgstr "Memulakan %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2077
+#: ../libmate-desktop/mate-desktop-item.c:2081
 #, c-format
 msgid "No URL to launch"
 msgstr "Tiada URL untuk dilancarkan"
 
-#: ../libmate-desktop/mate-desktop-item.c:2093
+#: ../libmate-desktop/mate-desktop-item.c:2097
 #, c-format
 msgid "Not a launchable item"
 msgstr "Tiada item boleh dilancarkan"
 
-#: ../libmate-desktop/mate-desktop-item.c:2103
+#: ../libmate-desktop/mate-desktop-item.c:2107
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Tiada perintah (Exec) untuk dilancarkan"
 
-#: ../libmate-desktop/mate-desktop-item.c:2116
+#: ../libmate-desktop/mate-desktop-item.c:2120
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Perintah teruk (Exec) untuk dilancarkan"
 
-#: ../libmate-desktop/mate-desktop-item.c:3595
+#: ../libmate-desktop/mate-desktop-item.c:3603
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Pengekodan tidak diketahui: %s"
 
-#: ../libmate-desktop/mate-desktop-utils.c:149
+#: ../libmate-desktop/mate-desktop-utils.c:151
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "Tidak menemui terminal, menggunakan xterm meskipun ia mungkin tidak boleh dijalankan"
 
@@ -555,12 +555,12 @@ msgstr "ralat X tidak dapat dikendali semasa mendapatkan julat saiz skrin"
 msgid "could not get the range of screen sizes"
 msgstr "tidak mendapat julat saiz skrin"
 
-#: ../libmate-desktop/mate-rr.c:704
+#: ../libmate-desktop/mate-rr.c:709
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "Sambungan RANDR tidak hadir"
 
-#: ../libmate-desktop/mate-rr.c:1257
+#: ../libmate-desktop/mate-rr.c:1267
 #, c-format
 msgid "could not get information about output %d"
 msgstr "tidak dapat maklumat mengenai output %d"
@@ -568,19 +568,19 @@ msgstr "tidak dapat maklumat mengenai output %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1738
+#: ../libmate-desktop/mate-rr.c:1748
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "kedudukan/saiz CRTC %d yang diminta berada di luar had dibenarkan: kedudukan=(%d, %d), saiz=(%d, %d), maksimum=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1772
+#: ../libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "tidak dapat tetapkan konfigurasi untuk CRTC %d"
 
-#: ../libmate-desktop/mate-rr.c:1936
+#: ../libmate-desktop/mate-rr.c:1946
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "tidak dapat maklumat mengenai CRTC %d"
@@ -664,7 +664,7 @@ msgstr "saiz maya diperlukan tidak muat saiz sedia ada: diminta=(%d, %d), minimu
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:410
+#: ../libmate-desktop/mate-rr-labeler.c:454
 #, c-format
 msgid "Mirror Screens"
 msgstr "Skrin Cermin"
@@ -1335,7 +1335,7 @@ msgstr "Silih butang tetikus kiri dan kanan untuk tetikus kidal."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Motion Acceleration"
-msgstr "Pemecutan Gerakan"
+msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
 msgid ""
