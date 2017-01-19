@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"POT-Creation-Date: 2016-12-06 00:44+0300\n"
 "PO-Revision-Date: 2016-11-10 12:27+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Belarusian (http://www.transifex.com/mate/MATE/language/be/)\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:96
+#: ../mate-about/mate-about.c:77
 msgid "translator-credits"
 msgstr "Mikhas Varantsou <meequz@gmail.com>, 2014-2016"
 
@@ -120,7 +120,7 @@ msgid "Comments about the program"
 msgstr "Каментары пра праграму"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2186
+#: ../libmate-desktop/mate-aboutdialog.c:2157
 msgid "License"
 msgstr "Ліцэнзія"
 
@@ -206,37 +206,37 @@ msgid "Whether to wrap the license text."
 msgstr "Пераносіць радкі ў тэксце ліцэнзіі ці не."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:555
+#: ../libmate-desktop/mate-aboutdialog.c:541
 msgid "C_redits"
 msgstr "С_тваральнікі"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:569
+#: ../libmate-desktop/mate-aboutdialog.c:555
 msgid "_License"
 msgstr "_Ліцэнзія"
 
-#: ../libmate-desktop/mate-aboutdialog.c:852
+#: ../libmate-desktop/mate-aboutdialog.c:829
 #, c-format
 msgid "About %s"
 msgstr "Пра %s"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2110
+#: ../libmate-desktop/mate-aboutdialog.c:2081
 msgid "Credits"
 msgstr "Стваральнікі"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2138
+#: ../libmate-desktop/mate-aboutdialog.c:2109
 msgid "Written by"
 msgstr "Распрацоўнікі"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2141
+#: ../libmate-desktop/mate-aboutdialog.c:2112
 msgid "Documented by"
 msgstr "Дакументатары"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2153
+#: ../libmate-desktop/mate-aboutdialog.c:2124
 msgid "Translated by"
 msgstr "Перакладнікі"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2157
+#: ../libmate-desktop/mate-aboutdialog.c:2128
 msgid "Artwork by"
 msgstr "Мастакі"
 
@@ -257,12 +257,12 @@ msgid "The title of the color selection dialog"
 msgstr "Загаловак акна выбару колера"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:442
 msgid "Pick a Color"
 msgstr "Выбраць колер"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:325
+#: ../libmate-desktop/mate-colorsel.c:294
 msgid "Current Color"
 msgstr "Дзейны колер"
 
@@ -271,7 +271,7 @@ msgid "The selected color"
 msgstr "Выбраны колер"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:332
+#: ../libmate-desktop/mate-colorsel.c:301
 msgid "Current Alpha"
 msgstr "Дзейнае альфа"
 
@@ -279,168 +279,168 @@ msgstr "Дзейнае альфа"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Выбранае значэнне празрыстасці (0 цалкам празрыста, 65535 цалкам заліта)"
 
-#: ../libmate-desktop/mate-colorbutton.c:354
+#: ../libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
 msgstr "Атрыманы нядзейсныя даныя пра колер\n"
 
-#: ../libmate-desktop/mate-colorsel.c:311
+#: ../libmate-desktop/mate-colorsel.c:280
 msgid "Has Opacity Control"
 msgstr "Мае настáўленне празрыстасці"
 
-#: ../libmate-desktop/mate-colorsel.c:312
+#: ../libmate-desktop/mate-colorsel.c:281
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Ці дазволіць задаваць празрыстасць пры выбары колеру"
 
-#: ../libmate-desktop/mate-colorsel.c:318
+#: ../libmate-desktop/mate-colorsel.c:287
 msgid "Has palette"
 msgstr "Мае палітру"
 
-#: ../libmate-desktop/mate-colorsel.c:319
+#: ../libmate-desktop/mate-colorsel.c:288
 msgid "Whether a palette should be used"
 msgstr "Ці задзейнічаць палітру"
 
-#: ../libmate-desktop/mate-colorsel.c:326
+#: ../libmate-desktop/mate-colorsel.c:295
 msgid "The current color"
 msgstr "Дзейны колер"
 
-#: ../libmate-desktop/mate-colorsel.c:333
+#: ../libmate-desktop/mate-colorsel.c:302
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Дзейнае значэнне празрыстасці (0 цалкам празрыста, 65535 цалкам заліта)"
 
-#: ../libmate-desktop/mate-colorsel.c:339
+#: ../libmate-desktop/mate-colorsel.c:308
 msgid "HEX String"
 msgstr "HEX-радок"
 
-#: ../libmate-desktop/mate-colorsel.c:340
+#: ../libmate-desktop/mate-colorsel.c:309
 msgid "The hexadecimal string of current color"
 msgstr "Шаснаццатковы радок дзейнага колеру"
 
-#: ../libmate-desktop/mate-colorsel.c:400
+#: ../libmate-desktop/mate-colorsel.c:357
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "Вызначце пажаданы колер з дапамогай колца. Задайце яму цёмнасць або светласць ва ўпісаным трохкутніку."
 
-#: ../libmate-desktop/mate-colorsel.c:428
+#: ../libmate-desktop/mate-colorsel.c:381
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "Націсніце на піпетку, а затым пстрыкніце ў любым месцы экрана, каб абраць яго колер."
 
-#: ../libmate-desktop/mate-colorsel.c:441
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "_Hue:"
 msgstr "_Тон:"
 
-#: ../libmate-desktop/mate-colorsel.c:442
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "Position on the color wheel."
 msgstr "Пазіцыя колернага кола."
 
-#: ../libmate-desktop/mate-colorsel.c:444
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "_Saturation:"
 msgstr "_Насычанасць:"
 
-#: ../libmate-desktop/mate-colorsel.c:445
+#: ../libmate-desktop/mate-colorsel.c:394
 msgid "\"Deepness\" of the color."
 msgstr "Глыбіня колеру."
 
-#: ../libmate-desktop/mate-colorsel.c:446
+#: ../libmate-desktop/mate-colorsel.c:395
 msgid "_Value:"
 msgstr "_Значэнне:"
 
-#: ../libmate-desktop/mate-colorsel.c:447
+#: ../libmate-desktop/mate-colorsel.c:396
 msgid "Brightness of the color."
 msgstr "Яркасць колеру."
 
-#: ../libmate-desktop/mate-colorsel.c:448
+#: ../libmate-desktop/mate-colorsel.c:397
 msgid "_Red:"
 msgstr "_Чырвоны:"
 
-#: ../libmate-desktop/mate-colorsel.c:449
+#: ../libmate-desktop/mate-colorsel.c:398
 msgid "Amount of red light in the color."
 msgstr "Колькасць чырвонага складніка ў колеры."
 
-#: ../libmate-desktop/mate-colorsel.c:450
+#: ../libmate-desktop/mate-colorsel.c:399
 msgid "_Green:"
 msgstr "_Зялёны:"
 
-#: ../libmate-desktop/mate-colorsel.c:451
+#: ../libmate-desktop/mate-colorsel.c:400
 msgid "Amount of green light in the color."
 msgstr "Колькасць зялёнага складніка ў колеры."
 
-#: ../libmate-desktop/mate-colorsel.c:452
+#: ../libmate-desktop/mate-colorsel.c:401
 msgid "_Blue:"
 msgstr "_Сіні:"
 
-#: ../libmate-desktop/mate-colorsel.c:453
+#: ../libmate-desktop/mate-colorsel.c:402
 msgid "Amount of blue light in the color."
 msgstr "Колькасць сіняга складніка ў колеры."
 
-#: ../libmate-desktop/mate-colorsel.c:456
+#: ../libmate-desktop/mate-colorsel.c:405
 msgid "Op_acity:"
 msgstr "Не_празрыстасць:"
 
-#: ../libmate-desktop/mate-colorsel.c:467
-#: ../libmate-desktop/mate-colorsel.c:477
+#: ../libmate-desktop/mate-colorsel.c:416
+#: ../libmate-desktop/mate-colorsel.c:426
 msgid "Transparency of the color."
 msgstr "Бачнасць колеру."
 
-#: ../libmate-desktop/mate-colorsel.c:484
+#: ../libmate-desktop/mate-colorsel.c:433
 msgid "Color _name:"
 msgstr "Назва _колера:"
 
-#: ../libmate-desktop/mate-colorsel.c:502
+#: ../libmate-desktop/mate-colorsel.c:451
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "Можна ўвесці шаснаццатковае значэнне колеру ў стылі HTML або проста назву колера, напрыклад 'orange'."
 
-#: ../libmate-desktop/mate-colorsel.c:536
+#: ../libmate-desktop/mate-colorsel.c:481
 msgid "_Palette:"
 msgstr "_Палітра:"
 
-#: ../libmate-desktop/mate-colorsel.c:569
+#: ../libmate-desktop/mate-colorsel.c:514
 msgid "Color Wheel"
 msgstr "Колернае кола"
 
-#: ../libmate-desktop/mate-colorsel.c:1070
+#: ../libmate-desktop/mate-colorsel.c:971
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "Папярэдне выбраны колер, каб параўнаць з выбраным зараз. Яго можна перацягнуць на палітру, або зрабіць дзейным, перацягнуўшы на той, што збоку."
 
-#: ../libmate-desktop/mate-colorsel.c:1073
+#: ../libmate-desktop/mate-colorsel.c:974
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "Гэта абраны вамі колер. Можна перацягнуць яго на палітру, каб захаваць на будучыню."
 
-#: ../libmate-desktop/mate-colorsel.c:1078
+#: ../libmate-desktop/mate-colorsel.c:979
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Папярэдне выбраны колер, для параўнання з дзейным."
 
-#: ../libmate-desktop/mate-colorsel.c:1081
+#: ../libmate-desktop/mate-colorsel.c:982
 msgid "The color you've chosen."
 msgstr "Абраны колер"
 
-#: ../libmate-desktop/mate-colorsel.c:1507
+#: ../libmate-desktop/mate-colorsel.c:1366
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1512
+#: ../libmate-desktop/mate-colorsel.c:1371
 msgid "_Save color here"
 msgstr "_Захаваць колер тут"
 
-#: ../libmate-desktop/mate-colorsel.c:1737
+#: ../libmate-desktop/mate-colorsel.c:1591
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr "Пстрыкніце па гэтым элеменце палітры, каб зрабіць яго дзейным колерам. Каб змяніць гэты элемент, перацягніце на яе узор колера або пстрыкніце правай кнопкай і націсніце \"Захаваць колер тут\"."
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
-#: ../libmate-desktop/mate-colorseldialog.c:170
+#: ../libmate-desktop/mate-colorseldialog.c:162
 msgid "Color Selection"
 msgstr "Выбар колеру"
 
@@ -488,7 +488,7 @@ msgstr "Памылка пераматвання файла \"%s\": %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3546
+#: ../libmate-desktop/mate-desktop-item.c:3538
 msgid "No name"
 msgstr "Без назвы"
 
@@ -507,37 +507,37 @@ msgstr "Не знайшоўся файл '%s'"
 msgid "No filename to save to"
 msgstr "Не вызначана назва файла для запісу ў"
 
-#: ../libmate-desktop/mate-desktop-item.c:1844
+#: ../libmate-desktop/mate-desktop-item.c:1840
 #, c-format
 msgid "Starting %s"
 msgstr "Запуск %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2081
+#: ../libmate-desktop/mate-desktop-item.c:2077
 #, c-format
 msgid "No URL to launch"
 msgstr "Няма URL, каб запусціць"
 
-#: ../libmate-desktop/mate-desktop-item.c:2097
+#: ../libmate-desktop/mate-desktop-item.c:2093
 #, c-format
 msgid "Not a launchable item"
 msgstr "Незапускальны элемент"
 
-#: ../libmate-desktop/mate-desktop-item.c:2107
+#: ../libmate-desktop/mate-desktop-item.c:2103
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Няма загаду, які трэба запусціць"
 
-#: ../libmate-desktop/mate-desktop-item.c:2120
+#: ../libmate-desktop/mate-desktop-item.c:2116
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Кепскі загад"
 
-#: ../libmate-desktop/mate-desktop-item.c:3603
+#: ../libmate-desktop/mate-desktop-item.c:3595
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Невядомае кадаванне: %s"
 
-#: ../libmate-desktop/mate-desktop-utils.c:151
+#: ../libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "Тэрмінал не знойдзены. Будзе ўжыты xterm, нават калі ён не запрацуе"
 
@@ -557,12 +557,12 @@ msgstr "невядомая памылка X пры атрыманні магчы
 msgid "could not get the range of screen sizes"
 msgstr "не выйшла атрымаць магчымыя памеры экрана"
 
-#: ../libmate-desktop/mate-rr.c:709
+#: ../libmate-desktop/mate-rr.c:704
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "Няма пашырэння RANDR"
 
-#: ../libmate-desktop/mate-rr.c:1267
+#: ../libmate-desktop/mate-rr.c:1257
 #, c-format
 msgid "could not get information about output %d"
 msgstr "не выйшла атрымаць інфармацыю пра выхад %d"
@@ -570,19 +570,19 @@ msgstr "не выйшла атрымаць інфармацыю пра выха�
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1748
+#: ../libmate-desktop/mate-rr.c:1738
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr ""
 
-#: ../libmate-desktop/mate-rr.c:1782
+#: ../libmate-desktop/mate-rr.c:1772
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "не выйшла задаць канфігурацыю кантролера CRT %d"
 
-#: ../libmate-desktop/mate-rr.c:1946
+#: ../libmate-desktop/mate-rr.c:1936
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "не выйшла атрымаць інфармацыю пра кантролер CRT %d"
@@ -666,7 +666,7 @@ msgstr "патрэбны віртуальны памер не ўлазіць у 
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:454
+#: ../libmate-desktop/mate-rr-labeler.c:410
 #, c-format
 msgid "Mirror Screens"
 msgstr "Люстэрныя экраны"

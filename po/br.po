@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"POT-Creation-Date: 2016-12-06 00:44+0300\n"
 "PO-Revision-Date: 2016-11-10 12:27+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Breton (http://www.transifex.com/mate/MATE/language/br/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:96
+#: ../mate-about/mate-about.c:77
 msgid "translator-credits"
 msgstr "Troet eo bet gant"
 
@@ -119,7 +119,7 @@ msgid "Comments about the program"
 msgstr "Askelennoù diwar-benn ar goulev"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2186
+#: ../libmate-desktop/mate-aboutdialog.c:2157
 msgid "License"
 msgstr "Lañvaz"
 
@@ -205,37 +205,37 @@ msgid "Whether to wrap the license text."
 msgstr "Mard eo ret dibunañ testenn al lañvaz."
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:555
+#: ../libmate-desktop/mate-aboutdialog.c:541
 msgid "C_redits"
 msgstr "Pe_rzhourion"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:569
+#: ../libmate-desktop/mate-aboutdialog.c:555
 msgid "_License"
 msgstr "_Lañvaz"
 
-#: ../libmate-desktop/mate-aboutdialog.c:852
+#: ../libmate-desktop/mate-aboutdialog.c:829
 #, c-format
 msgid "About %s"
 msgstr "Diwar-benn %s"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2110
+#: ../libmate-desktop/mate-aboutdialog.c:2081
 msgid "Credits"
 msgstr "Perzhourion"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2138
+#: ../libmate-desktop/mate-aboutdialog.c:2109
 msgid "Written by"
 msgstr "Skrivet gant"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2141
+#: ../libmate-desktop/mate-aboutdialog.c:2112
 msgid "Documented by"
 msgstr "Teuliadur savet gant"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2153
+#: ../libmate-desktop/mate-aboutdialog.c:2124
 msgid "Translated by"
 msgstr "Troet gant"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2157
+#: ../libmate-desktop/mate-aboutdialog.c:2128
 msgid "Artwork by"
 msgstr "Oberennoù arz gant "
 
@@ -256,12 +256,12 @@ msgid "The title of the color selection dialog"
 msgstr "Titl ar voestad da zibab livioù"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:442
 msgid "Pick a Color"
 msgstr "Tapout ul liv"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:325
+#: ../libmate-desktop/mate-colorsel.c:294
 msgid "Current Color"
 msgstr "Liv bremanel"
 
@@ -270,7 +270,7 @@ msgid "The selected color"
 msgstr "Al liv diuzet"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:332
+#: ../libmate-desktop/mate-colorsel.c:301
 msgid "Current Alpha"
 msgstr "Alfa bremanel"
 
@@ -278,168 +278,168 @@ msgstr "Alfa bremanel"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Gwerzh an demerez bet diuzet (0 boull penn da benn, 65535 demer penn da benn)"
 
-#: ../libmate-desktop/mate-colorbutton.c:354
+#: ../libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
 msgstr " Roadennoù liv didlvoudek zo bet degemeret\n"
 
-#: ../libmate-desktop/mate-colorsel.c:311
+#: ../libmate-desktop/mate-colorsel.c:280
 msgid "Has Opacity Control"
 msgstr "Emañ reolerezh al liv gantañ"
 
-#: ../libmate-desktop/mate-colorsel.c:312
+#: ../libmate-desktop/mate-colorsel.c:281
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Mar dlefe bezañ aotren arventennoù an demerez gant an diuzer liv "
 
-#: ../libmate-desktop/mate-colorsel.c:318
+#: ../libmate-desktop/mate-colorsel.c:287
 msgid "Has palette"
 msgstr "Emañ al livaoueg gantañ"
 
-#: ../libmate-desktop/mate-colorsel.c:319
+#: ../libmate-desktop/mate-colorsel.c:288
 msgid "Whether a palette should be used"
 msgstr "Mar dlefe bezañ arveret ul livaoueg"
 
-#: ../libmate-desktop/mate-colorsel.c:326
+#: ../libmate-desktop/mate-colorsel.c:295
 msgid "The current color"
 msgstr "Al liv bremanel"
 
-#: ../libmate-desktop/mate-colorsel.c:333
+#: ../libmate-desktop/mate-colorsel.c:302
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Gwerzh an demerez bremanel (0 boull penn da benn, 65535 demer penn da benn)"
 
-#: ../libmate-desktop/mate-colorsel.c:339
+#: ../libmate-desktop/mate-colorsel.c:308
 msgid "HEX String"
 msgstr "Hedad mod HEX"
 
-#: ../libmate-desktop/mate-colorsel.c:340
+#: ../libmate-desktop/mate-colorsel.c:309
 msgid "The hexadecimal string of current color"
 msgstr "Hedad c'hwezekredel al liv bremanel"
 
-#: ../libmate-desktop/mate-colorsel.c:400
+#: ../libmate-desktop/mate-colorsel.c:357
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "Diuzit al liv a fell deoc'h diwar ar walenn diavaez. Diuzit teñvalder pe sklaerder al liv-mañ gant an tric'horn diabarzh."
 
-#: ../libmate-desktop/mate-colorsel.c:428
+#: ../libmate-desktop/mate-colorsel.c:381
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "Klikit war ar gorzennig ha klikit ne vern pelec'h war ho skramm da ziuzañ al liv-mañ."
 
-#: ../libmate-desktop/mate-colorsel.c:441
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "_Hue:"
 msgstr "_Arliv"
 
-#: ../libmate-desktop/mate-colorsel.c:442
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "Position on the color wheel."
 msgstr "Lec'hiadur war rodad al livioù"
 
-#: ../libmate-desktop/mate-colorsel.c:444
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "_Saturation:"
 msgstr "_Peurvec'hiañ"
 
-#: ../libmate-desktop/mate-colorsel.c:445
+#: ../libmate-desktop/mate-colorsel.c:394
 msgid "\"Deepness\" of the color."
 msgstr "Donder al liv"
 
-#: ../libmate-desktop/mate-colorsel.c:446
+#: ../libmate-desktop/mate-colorsel.c:395
 msgid "_Value:"
 msgstr "_Gwerzh"
 
-#: ../libmate-desktop/mate-colorsel.c:447
+#: ../libmate-desktop/mate-colorsel.c:396
 msgid "Brightness of the color."
 msgstr "Lintr al liv"
 
-#: ../libmate-desktop/mate-colorsel.c:448
+#: ../libmate-desktop/mate-colorsel.c:397
 msgid "_Red:"
 msgstr "_Ruz :"
 
-#: ../libmate-desktop/mate-colorsel.c:449
+#: ../libmate-desktop/mate-colorsel.c:398
 msgid "Amount of red light in the color."
 msgstr "Kementad a c'houloù ruz el liv."
 
-#: ../libmate-desktop/mate-colorsel.c:450
+#: ../libmate-desktop/mate-colorsel.c:399
 msgid "_Green:"
 msgstr "_Gwer :"
 
-#: ../libmate-desktop/mate-colorsel.c:451
+#: ../libmate-desktop/mate-colorsel.c:400
 msgid "Amount of green light in the color."
 msgstr "Kementad a c'houloù gwer el liv."
 
-#: ../libmate-desktop/mate-colorsel.c:452
+#: ../libmate-desktop/mate-colorsel.c:401
 msgid "_Blue:"
 msgstr "Gl_as :"
 
-#: ../libmate-desktop/mate-colorsel.c:453
+#: ../libmate-desktop/mate-colorsel.c:402
 msgid "Amount of blue light in the color."
 msgstr "Kementad a c'houloù glas el liv."
 
-#: ../libmate-desktop/mate-colorsel.c:456
+#: ../libmate-desktop/mate-colorsel.c:405
 msgid "Op_acity:"
 msgstr "De_merez :"
 
-#: ../libmate-desktop/mate-colorsel.c:467
-#: ../libmate-desktop/mate-colorsel.c:477
+#: ../libmate-desktop/mate-colorsel.c:416
+#: ../libmate-desktop/mate-colorsel.c:426
 msgid "Transparency of the color."
 msgstr "Boullder al liv."
 
-#: ../libmate-desktop/mate-colorsel.c:484
+#: ../libmate-desktop/mate-colorsel.c:433
 msgid "Color _name:"
 msgstr "A_nv al liv :"
 
-#: ../libmate-desktop/mate-colorsel.c:502
+#: ../libmate-desktop/mate-colorsel.c:451
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "Enanket e vez ur werzh liv gant ur stil HTML c'hwezekredel pe enankit un anv liv evel 'mouk' er vaezienn-mañ."
 
-#: ../libmate-desktop/mate-colorsel.c:536
+#: ../libmate-desktop/mate-colorsel.c:481
 msgid "_Palette:"
 msgstr "_Livaoueg :"
 
-#: ../libmate-desktop/mate-colorsel.c:569
+#: ../libmate-desktop/mate-colorsel.c:514
 msgid "Color Wheel"
 msgstr "Rodad al livioù"
 
-#: ../libmate-desktop/mate-colorsel.c:1070
+#: ../libmate-desktop/mate-colorsel.c:971
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "Al liv bet diuzet a-raok evit bezañ keñveriet gant al liv diuzet bremañ. Al liv mañ a c'hallit riklañ betek enankad ul livaoueg pe diuzit al liv-mañ evel al liv bremanel en ur e riklañ betek ar standilhonoù a zo war ar gostez."
 
-#: ../libmate-desktop/mate-colorsel.c:1073
+#: ../libmate-desktop/mate-colorsel.c:974
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "Al liv dibabet ganeoc'h. Riklit al liv-mañ betek un enankad liv d'e enrollañ evit un arver diwezhatoc'h."
 
-#: ../libmate-desktop/mate-colorsel.c:1078
+#: ../libmate-desktop/mate-colorsel.c:979
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Al liv dibabet ganeoc'h a-raok da vezañ keñveriet gant al liv diuzet bremañ."
 
-#: ../libmate-desktop/mate-colorsel.c:1081
+#: ../libmate-desktop/mate-colorsel.c:982
 msgid "The color you've chosen."
 msgstr "Al liv dibabet ganeoc'h."
 
-#: ../libmate-desktop/mate-colorsel.c:1507
+#: ../libmate-desktop/mate-colorsel.c:1366
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1512
+#: ../libmate-desktop/mate-colorsel.c:1371
 msgid "_Save color here"
 msgstr "_Enrollañ al liv amañ"
 
-#: ../libmate-desktop/mate-colorsel.c:1737
+#: ../libmate-desktop/mate-colorsel.c:1591
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr "Klikit war an enankad-livaoueg-mañ d'e lakaat da vezañ al liv bremanel. A-benn kemmañ an enankad-mañ, riklit ur standilhon liv amañ pe klikit a-zehou warnañ ha diuzit \"Enrollañ al liv amañ.\""
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
-#: ../libmate-desktop/mate-colorseldialog.c:170
+#: ../libmate-desktop/mate-colorseldialog.c:162
 msgid "Color Selection"
 msgstr "Diuzadur ul liv"
 
@@ -487,7 +487,7 @@ msgstr "Fazi e-pad ma oa oc'h adenbeniañ ar restr '%s': %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3546
+#: ../libmate-desktop/mate-desktop-item.c:3538
 msgid "No name"
 msgstr "Anv ebet"
 
@@ -506,37 +506,37 @@ msgstr "N'hall ket kavout ar restr '%s'"
 msgid "No filename to save to"
 msgstr "Anv restr ebet a-benn e enrollañ gantañ"
 
-#: ../libmate-desktop/mate-desktop-item.c:1844
+#: ../libmate-desktop/mate-desktop-item.c:1840
 #, c-format
 msgid "Starting %s"
 msgstr "O loc'hañ %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2081
+#: ../libmate-desktop/mate-desktop-item.c:2077
 #, c-format
 msgid "No URL to launch"
 msgstr "URL ebet da loc'hañ"
 
-#: ../libmate-desktop/mate-desktop-item.c:2097
+#: ../libmate-desktop/mate-desktop-item.c:2093
 #, c-format
 msgid "Not a launchable item"
 msgstr "N'eo ket un dra da loc'hañ"
 
-#: ../libmate-desktop/mate-desktop-item.c:2107
+#: ../libmate-desktop/mate-desktop-item.c:2103
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Arc'had ebet da loc'hañ (Exec)"
 
-#: ../libmate-desktop/mate-desktop-item.c:2120
+#: ../libmate-desktop/mate-desktop-item.c:2116
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Arc'had fall da loc'hañ (Exec)"
 
-#: ../libmate-desktop/mate-desktop-item.c:3603
+#: ../libmate-desktop/mate-desktop-item.c:3595
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Enbonegañ %s a zo dianav"
 
-#: ../libmate-desktop/mate-desktop-utils.c:151
+#: ../libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "N'eus ket tu da gaout un dermenell, implijet e vo xterm, Met ne c'hallfe ket labourat"
 
@@ -556,12 +556,12 @@ msgstr "fazi X dic'hortoz en ur adtapout ledad ar mentoù skramm"
 msgid "could not get the range of screen sizes"
 msgstr "dibosupl eo kaout ledad ar mentoù skramm"
 
-#: ../libmate-desktop/mate-rr.c:709
+#: ../libmate-desktop/mate-rr.c:704
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "N'emañ ket amañ an askouezh RANDR"
 
-#: ../libmate-desktop/mate-rr.c:1267
+#: ../libmate-desktop/mate-rr.c:1257
 #, c-format
 msgid "could not get information about output %d"
 msgstr "dibosupl eo kaout titouroù diwar-benn an ec'hankad %d"
@@ -569,19 +569,19 @@ msgstr "dibosupl eo kaout titouroù diwar-benn an ec'hankad %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1748
+#: ../libmate-desktop/mate-rr.c:1738
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "ar vent hag al lec'hiadur goulennet evit ar CRTC %d zo er-maez eus ar vevenn aotret : lec'hiadur=(%d, %d), ment=(%d, %d), uc'hek=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1782
+#: ../libmate-desktop/mate-rr.c:1772
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "dibosupl eo termeniñ ar c'hefluniadur evit CRTC %d"
 
-#: ../libmate-desktop/mate-rr.c:1946
+#: ../libmate-desktop/mate-rr.c:1936
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "dibosupl eo kaout titouroù diwar-benn CRTC %d"
@@ -665,7 +665,7 @@ msgstr "N'eo ket mat ar ment galloudel goulennet war ar ment posubl: goulenn=(%d
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:454
+#: ../libmate-desktop/mate-rr-labeler.c:410
 #, c-format
 msgid "Mirror Screens"
 msgstr "Skrammoù klon"

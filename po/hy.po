@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-10 15:23+0300\n"
+"POT-Creation-Date: 2016-12-06 00:44+0300\n"
 "PO-Revision-Date: 2016-11-10 12:27+0000\n"
 "Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Armenian (http://www.transifex.com/mate/MATE/language/hy/)\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:96
+#: ../mate-about/mate-about.c:77
 msgid "translator-credits"
 msgstr "թարգմանչի կրեդիտներ"
 
@@ -118,7 +118,7 @@ msgid "Comments about the program"
 msgstr "Ծրագրի մասին մեկնաբանություններ"
 
 #: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2186
+#: ../libmate-desktop/mate-aboutdialog.c:2157
 msgid "License"
 msgstr "Արտոնագիր "
 
@@ -204,37 +204,37 @@ msgid "Whether to wrap the license text."
 msgstr "Արդյոք պատել արտոնագրի տեքստը։"
 
 #. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:555
+#: ../libmate-desktop/mate-aboutdialog.c:541
 msgid "C_redits"
 msgstr "Երախտիք"
 
 #. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:569
+#: ../libmate-desktop/mate-aboutdialog.c:555
 msgid "_License"
 msgstr "_Լիցենզիա"
 
-#: ../libmate-desktop/mate-aboutdialog.c:852
+#: ../libmate-desktop/mate-aboutdialog.c:829
 #, c-format
 msgid "About %s"
 msgstr "Մասին %s"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2110
+#: ../libmate-desktop/mate-aboutdialog.c:2081
 msgid "Credits"
 msgstr "Երախտիք"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2138
+#: ../libmate-desktop/mate-aboutdialog.c:2109
 msgid "Written by"
 msgstr "Գրված է"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2141
+#: ../libmate-desktop/mate-aboutdialog.c:2112
 msgid "Documented by"
 msgstr "Փաստաթղթավորված է"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2153
+#: ../libmate-desktop/mate-aboutdialog.c:2124
 msgid "Translated by"
 msgstr "Թարգմանված է"
 
-#: ../libmate-desktop/mate-aboutdialog.c:2157
+#: ../libmate-desktop/mate-aboutdialog.c:2128
 msgid "Artwork by"
 msgstr "Նկարազարդված է"
 
@@ -255,12 +255,12 @@ msgid "The title of the color selection dialog"
 msgstr "Գույնի ընտրության երկխոսության վերնագիր"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:470
+#: ../libmate-desktop/mate-colorbutton.c:442
 msgid "Pick a Color"
 msgstr "Ընտրեք գույնը"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:325
+#: ../libmate-desktop/mate-colorsel.c:294
 msgid "Current Color"
 msgstr "Ընթացիկ Գույնը"
 
@@ -269,7 +269,7 @@ msgid "The selected color"
 msgstr "Ընտրված գույնը"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:332
+#: ../libmate-desktop/mate-colorsel.c:301
 msgid "Current Alpha"
 msgstr "Ընթացիկ Ալֆա"
 
@@ -277,168 +277,168 @@ msgstr "Ընթացիկ Ալֆա"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Ընտրված անթափանցիկության արժեքը (0 լիովին թափանցիկ, 65535 լրիվ անթափանց)"
 
-#: ../libmate-desktop/mate-colorbutton.c:354
+#: ../libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
 msgstr "Ստացվել է անվավեր գույնի տվյալներ\n"
 
-#: ../libmate-desktop/mate-colorsel.c:311
+#: ../libmate-desktop/mate-colorsel.c:280
 msgid "Has Opacity Control"
 msgstr "Ունի Անթափանցիկության Վերահսկում"
 
-#: ../libmate-desktop/mate-colorsel.c:312
+#: ../libmate-desktop/mate-colorsel.c:281
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Արդյոք գույնի սելեկտորը թույլատրում էր անթափանցիկություն դնել"
 
-#: ../libmate-desktop/mate-colorsel.c:318
+#: ../libmate-desktop/mate-colorsel.c:287
 msgid "Has palette"
 msgstr "ՈՒնի ներկապնակ"
 
-#: ../libmate-desktop/mate-colorsel.c:319
+#: ../libmate-desktop/mate-colorsel.c:288
 msgid "Whether a palette should be used"
 msgstr "Արդյոք ներկապնակ պետք է օգտագործել"
 
-#: ../libmate-desktop/mate-colorsel.c:326
+#: ../libmate-desktop/mate-colorsel.c:295
 msgid "The current color"
 msgstr "Ընթացիկ Գույնը"
 
-#: ../libmate-desktop/mate-colorsel.c:333
+#: ../libmate-desktop/mate-colorsel.c:302
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Ներկայիս անթափանցիկության արժեքը (0 լիովին թափանցիկ, 65535 լրիվ անթափանց)"
 
-#: ../libmate-desktop/mate-colorsel.c:339
+#: ../libmate-desktop/mate-colorsel.c:308
 msgid "HEX String"
 msgstr "HEX տող"
 
-#: ../libmate-desktop/mate-colorsel.c:340
+#: ../libmate-desktop/mate-colorsel.c:309
 msgid "The hexadecimal string of current color"
 msgstr "Ընթացիկ գույնի տասնվեցական տողը"
 
-#: ../libmate-desktop/mate-colorsel.c:400
+#: ../libmate-desktop/mate-colorsel.c:357
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "Ընտրել գույնը դուք ցանկանում եք արտաքին շրջանից։ Ընտրել այդ գույնի նթությունը և պայծառությունը օգտագործելով ներքին եռանկյունին։"
 
-#: ../libmate-desktop/mate-colorsel.c:428
+#: ../libmate-desktop/mate-colorsel.c:381
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "Սեղմեք Eyedropper, ապա սեղմեք մի գույն ցանկացած տեղ Ձեր էկրանին այդ գույնը ընտրելու համար։"
 
-#: ../libmate-desktop/mate-colorsel.c:441
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "_Hue:"
 msgstr "_Երանգ։"
 
-#: ../libmate-desktop/mate-colorsel.c:442
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "Position on the color wheel."
 msgstr "Գույնի անիվի դիրքը"
 
-#: ../libmate-desktop/mate-colorsel.c:444
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "_Saturation:"
 msgstr "_Հագեցվածություն:"
 
-#: ../libmate-desktop/mate-colorsel.c:445
+#: ../libmate-desktop/mate-colorsel.c:394
 msgid "\"Deepness\" of the color."
 msgstr "Գույնի \"Մգություն\""
 
-#: ../libmate-desktop/mate-colorsel.c:446
+#: ../libmate-desktop/mate-colorsel.c:395
 msgid "_Value:"
 msgstr "_Արժեք։"
 
-#: ../libmate-desktop/mate-colorsel.c:447
+#: ../libmate-desktop/mate-colorsel.c:396
 msgid "Brightness of the color."
 msgstr "Գույնի պայծառությունը"
 
-#: ../libmate-desktop/mate-colorsel.c:448
+#: ../libmate-desktop/mate-colorsel.c:397
 msgid "_Red:"
 msgstr "_Կարմիր։"
 
-#: ../libmate-desktop/mate-colorsel.c:449
+#: ../libmate-desktop/mate-colorsel.c:398
 msgid "Amount of red light in the color."
 msgstr "Գույնի մեջ կարմիր լույսի քանակը։"
 
-#: ../libmate-desktop/mate-colorsel.c:450
+#: ../libmate-desktop/mate-colorsel.c:399
 msgid "_Green:"
 msgstr "_Կանաչ։"
 
-#: ../libmate-desktop/mate-colorsel.c:451
+#: ../libmate-desktop/mate-colorsel.c:400
 msgid "Amount of green light in the color."
 msgstr "Գույնի մեջ կանաչ լույսի քանակը։"
 
-#: ../libmate-desktop/mate-colorsel.c:452
+#: ../libmate-desktop/mate-colorsel.c:401
 msgid "_Blue:"
 msgstr "_Կապույտ"
 
-#: ../libmate-desktop/mate-colorsel.c:453
+#: ../libmate-desktop/mate-colorsel.c:402
 msgid "Amount of blue light in the color."
 msgstr "Գույնի մեջ կապույտ լույսի քանակը։"
 
-#: ../libmate-desktop/mate-colorsel.c:456
+#: ../libmate-desktop/mate-colorsel.c:405
 msgid "Op_acity:"
 msgstr "Ան_թափանցիկություն:"
 
-#: ../libmate-desktop/mate-colorsel.c:467
-#: ../libmate-desktop/mate-colorsel.c:477
+#: ../libmate-desktop/mate-colorsel.c:416
+#: ../libmate-desktop/mate-colorsel.c:426
 msgid "Transparency of the color."
 msgstr "Գույնի թափանցիկություն:"
 
-#: ../libmate-desktop/mate-colorsel.c:484
+#: ../libmate-desktop/mate-colorsel.c:433
 msgid "Color _name:"
 msgstr "Գույնի _անունը։"
 
-#: ../libmate-desktop/mate-colorsel.c:502
+#: ../libmate-desktop/mate-colorsel.c:451
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "Դուք կարող եք մուտքագրել HTML ոճի գույնի տասնվեցական արժեքը, կամ պարզապես գույնի անունը, ինչպիսիք է 'նարնջագույն' այս մուտքում։"
 
-#: ../libmate-desktop/mate-colorsel.c:536
+#: ../libmate-desktop/mate-colorsel.c:481
 msgid "_Palette:"
 msgstr "_Ներկապնակ:"
 
-#: ../libmate-desktop/mate-colorsel.c:569
+#: ../libmate-desktop/mate-colorsel.c:514
 msgid "Color Wheel"
 msgstr "Գույնի Պտտում"
 
-#: ../libmate-desktop/mate-colorsel.c:1070
+#: ../libmate-desktop/mate-colorsel.c:971
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "Նախկինում ընտրված գույնը, համեմատելու համար այն գույնի հետ, որ ընտրում եք հիմա։ Դուք կարող եք քաշել այս գույն է գունապնակի մուտքում կամ ընտրեք այս գույնը, որպես ընթացիկ, տեղափոխելով այն մեկ այլ գույնի կողքին։"
 
-#: ../libmate-desktop/mate-colorsel.c:1073
+#: ../libmate-desktop/mate-colorsel.c:974
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "Դուք գույնը ընտրել եք։ Դուք կարող եք քաշել այս գույն ներկապնակի մուտք պահպանելու համար, այն ապագայում օգտագործելու համար։"
 
-#: ../libmate-desktop/mate-colorsel.c:1078
+#: ../libmate-desktop/mate-colorsel.c:979
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Նախկինում ընտրված գույնը, համեմատելու համար այն գույնի հետ, որ ընտրում եք հիմա։"
 
-#: ../libmate-desktop/mate-colorsel.c:1081
+#: ../libmate-desktop/mate-colorsel.c:982
 msgid "The color you've chosen."
 msgstr "Գույնը դու ընտրել ես:"
 
-#: ../libmate-desktop/mate-colorsel.c:1507
+#: ../libmate-desktop/mate-colorsel.c:1366
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1512
+#: ../libmate-desktop/mate-colorsel.c:1371
 msgid "_Save color here"
 msgstr "_Պահպանել գեւյնը այստեղ"
 
-#: ../libmate-desktop/mate-colorsel.c:1737
+#: ../libmate-desktop/mate-colorsel.c:1591
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr "Սեղմեք այս գունապանակի մուտքում այս գույնը ընթացիկ դարձնելու համար։ Այս մուտքում փոփոխության համար քաշել գույնը այստեղ կան այն right-click և ընտրել \"Save color here.\""
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
-#: ../libmate-desktop/mate-colorseldialog.c:170
+#: ../libmate-desktop/mate-colorseldialog.c:162
 msgid "Color Selection"
 msgstr "Գույնի Ընտություն"
 
@@ -486,7 +486,7 @@ msgstr "'%s': %s ֆայլի վերադարձման սխալ "
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3546
+#: ../libmate-desktop/mate-desktop-item.c:3538
 msgid "No name"
 msgstr "Անանուն"
 
@@ -505,37 +505,37 @@ msgstr "Չի կարող գտնել '%s' ֆայլը"
 msgid "No filename to save to"
 msgstr "Ֆայլի պահպանման համար անունը նշված չէ"
 
-#: ../libmate-desktop/mate-desktop-item.c:1844
+#: ../libmate-desktop/mate-desktop-item.c:1840
 #, c-format
 msgid "Starting %s"
 msgstr "Գործարկում%s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2081
+#: ../libmate-desktop/mate-desktop-item.c:2077
 #, c-format
 msgid "No URL to launch"
 msgstr "Գործարկման համար URL–ը չի ներկայացվել"
 
-#: ../libmate-desktop/mate-desktop-item.c:2097
+#: ../libmate-desktop/mate-desktop-item.c:2093
 #, c-format
 msgid "Not a launchable item"
 msgstr "Չգործարկվող տարր"
 
-#: ../libmate-desktop/mate-desktop-item.c:2107
+#: ../libmate-desktop/mate-desktop-item.c:2103
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Գործարկման համար (Exec) հրահանգը բացակայում է"
 
-#: ../libmate-desktop/mate-desktop-item.c:2120
+#: ../libmate-desktop/mate-desktop-item.c:2116
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Գործարկման համար (Exec)–ը անթույլատրելի է"
 
-#: ../libmate-desktop/mate-desktop-item.c:3603
+#: ../libmate-desktop/mate-desktop-item.c:3595
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Անհայտ կոդավորում %s –ի համար"
 
-#: ../libmate-desktop/mate-desktop-utils.c:151
+#: ../libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "Նույնիսկ չաշխատելու դեպքում, օգտագործելով xterm–ը, չի կարող գտնել տերմինալը "
 
@@ -555,12 +555,12 @@ msgstr "չգտնված X սխալ էկրանի չափերի տվյալները �
 msgid "could not get the range of screen sizes"
 msgstr "չի կարող գտնել էկրանի չափերի տիրույթը"
 
-#: ../libmate-desktop/mate-rr.c:709
+#: ../libmate-desktop/mate-rr.c:704
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "RANDR ընդլայնումը բացակայում է"
 
-#: ../libmate-desktop/mate-rr.c:1267
+#: ../libmate-desktop/mate-rr.c:1257
 #, c-format
 msgid "could not get information about output %d"
 msgstr "չի կարող գտնել տեղեկություն արտածում  %d–ի մասին "
@@ -568,19 +568,19 @@ msgstr "չի կարող գտնել տեղեկություն արտածում  %d
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1748
+#: ../libmate-desktop/mate-rr.c:1738
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "պահանջված դիրքը/չափսը CRTC %d–ի համար թույլատրելի սահմաններից դուրս է. դիրք=(%d, %d), չափս=(%d, %d), առավելագույն=(%d, %d) "
 
-#: ../libmate-desktop/mate-rr.c:1782
+#: ../libmate-desktop/mate-rr.c:1772
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "չի կարող կոնֆիգուրացնել CRTC %d–ի համար"
 
-#: ../libmate-desktop/mate-rr.c:1946
+#: ../libmate-desktop/mate-rr.c:1936
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "չի կարող CRTC %d–ի մասին տեղեկություն ստանալ"
@@ -664,7 +664,7 @@ msgstr "պահանջված վիրտուալ չափը չի համապատասխա
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:454
+#: ../libmate-desktop/mate-rr-labeler.c:410
 #, c-format
 msgid "Mirror Screens"
 msgstr "Հայելային էկրաններ"
