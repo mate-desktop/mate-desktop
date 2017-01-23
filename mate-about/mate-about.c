@@ -18,7 +18,7 @@
  * 02110-1301, USA.
  */
 
-#include "mate-about.h"
+#include "deeznutz-about.h"
 
 /* get text macro, this should be on the common macros. or not?
  */
