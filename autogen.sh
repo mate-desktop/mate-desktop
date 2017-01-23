@@ -4,16 +4,16 @@
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 
-PKG_NAME="mate-desktop"
+PKG_NAME="deeznutz-desktop"
 
 (test -f $srcdir/configure.ac) || {
-    echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"
+    echo -n "**Error**: Directory "\`$srcdir\'" does not look like deeznutz"
     echo " top-level $PKG_NAME directory"
     exit 1
 }
 
 which mate-autogen || {
-    echo "You need to install mate-common"
+    echo "You need to install deeznutz-common"
     exit 1
 }
 
