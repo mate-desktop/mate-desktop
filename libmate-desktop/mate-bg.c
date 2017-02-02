@@ -1495,7 +1495,7 @@ mate_bg_set_root_pixmap_id (GdkScreen       *screen,
 	Atom     atoms[G_N_ELEMENTS(atom_names)] = {0};
 
 	Atom     type;
-	int      format;
+	int      format, result;
 	unsigned long nitems, after;
 	unsigned char *data_root, *data_esetroot;
 
@@ -1503,20 +1503,24 @@ mate_bg_set_root_pixmap_id (GdkScreen       *screen,
 	 * This method is to avoid multiple round-trips to Xserver
 	 */
 	if (XInternAtoms (display, atom_names, G_N_ELEMENTS(atom_names), True, atoms) &&
-	    atoms[0] != None && atoms[1] != None)
-	{
-		XGetWindowProperty (display, xroot, atoms[0], 0L, 1L, False, AnyPropertyType,
-				    &type, &format, &nitems, &after, &data_root);
-		if (data_root && type == XA_PIXMAP && format == 32 && nitems == 1)
-		{
-			XGetWindowProperty (display, xroot, atoms[1], 0L, 1L, False, AnyPropertyType,
-					    &type, &format, &nitems, &after, &data_esetroot);
-			if (data_esetroot && type == XA_PIXMAP && format == 32 && nitems == 1)
-			{
+	    atoms[0] != None && atoms[1] != None) {
+		result = XGetWindowProperty (display, xroot, atoms[0], 0L, 1L,
+		                             False, AnyPropertyType,
+		                             &type, &format, &nitems, &after,
+		                             &data_root);
+
+		if (data_root != NULL && result == Success &&
+		    type == XA_PIXMAP && format == 32 && nitems == 1) {
+			result = XGetWindowProperty (display, xroot, atoms[1],
+			                             0L, 1L, False,
+			                             AnyPropertyType,
+			                             &type, &format, &nitems,
+			                             &after, &data_esetroot);
+
+			if (data_esetroot != NULL && result == Success &&
+			    type == XA_PIXMAP && format == 32 && nitems == 1) {
 				Pixmap xrootpmap = *((Pixmap *) data_root);
 				Pixmap esetrootpmap = *((Pixmap *) data_esetroot);
-				XFree (data_root);
-				XFree (data_esetroot);
 
 				gdk_error_trap_push ();
 				if (xrootpmap && xrootpmap == esetrootpmap) {
@@ -1527,6 +1531,12 @@ mate_bg_set_root_pixmap_id (GdkScreen       *screen,
 				}
 				gdk_error_trap_pop_ignored ();
 			}
+			if (data_esetroot != NULL) {
+				XFree (data_esetroot);
+			}
+		}
+		if (data_root != NULL) {
+			XFree (data_root);
 		}
 	}
 
