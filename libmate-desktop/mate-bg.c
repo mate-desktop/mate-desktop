@@ -879,9 +879,9 @@ draw_color_area (MateBG       *bg,
 	case MATE_BG_COLOR_SOLID:
 		/* not really a big deal to ignore the area of interest */
 #if GTK_CHECK_VERSION (3, 0, 0)
-		pixel = (((guint) bg->primary.red * 65535) >> 8) << 24      |
-			(((guint) bg->primary.green * 65535) >> 8) << 24    |
-			(((guint) bg->primary.blue * 65535) >> 8) << 24      |
+		pixel = ((guint) (bg->primary.red * 0xff) << 24)   |
+			((guint) (bg->primary.green * 0xff) << 16) |
+			((guint) (bg->primary.blue * 0xff) << 8)   |
 #else
 		pixel = ((bg->primary.red >> 8) << 24)      |
 			((bg->primary.green >> 8) << 16)    |
