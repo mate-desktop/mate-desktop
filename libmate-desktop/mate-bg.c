@@ -805,9 +805,9 @@ draw_color_area (MateBG       *bg,
 	switch (bg->color_type) {
 	case MATE_BG_COLOR_SOLID:
 		/* not really a big deal to ignore the area of interest */
-		pixel = (((guint) bg->primary.red * 65535) >> 8) << 24      |
-			(((guint) bg->primary.green * 65535) >> 8) << 24    |
-			(((guint) bg->primary.blue * 65535) >> 8) << 24      |
+		pixel = ((guint) (bg->primary.red * 0xff) << 24)   |
+			((guint) (bg->primary.green * 0xff) << 16) |
+			((guint) (bg->primary.blue * 0xff) << 8)   |
 			(0xff);
 
 		gdk_pixbuf_fill (dest, pixel);
