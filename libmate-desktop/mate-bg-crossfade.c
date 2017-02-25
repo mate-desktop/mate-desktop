@@ -382,6 +382,20 @@ animations_are_disabled (MateBGCrossfade *fade)
 }
 
 static void
+send_root_property_change_notification (MateBGCrossfade *fade)
+{
+        long zero_length_pixmap = 0;
+
+        /* We do a zero length append to force a change notification,
+         * without changing the value */
+        XChangeProperty (GDK_WINDOW_XDISPLAY (fade->priv->window),
+                         GDK_WINDOW_XID (fade->priv->window),
+                         gdk_x11_get_xatom_by_name ("_XROOTPMAP_ID"),
+                         XA_PIXMAP, 32, PropModeAppend,
+                         (unsigned char *) &zero_length_pixmap, 0);
+}
+
+static void
 draw_background (MateBGCrossfade *fade)
 {
 	if (gdk_window_get_window_type (fade->priv->window) == GDK_WINDOW_ROOT) {
@@ -391,6 +405,7 @@ draw_background (MateBGCrossfade *fade)
 			    gdk_window_get_width (fade->priv->window),
 			    gdk_window_get_height (fade->priv->window),
 			    False);
+		send_root_property_change_notification (fade);
 		gdk_flush ();
 	} else {
 		gdk_window_invalidate_rect (fade->priv->window, NULL, FALSE);
