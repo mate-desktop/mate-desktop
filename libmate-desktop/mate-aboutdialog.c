@@ -523,7 +523,7 @@ mate_about_dialog_init (MateAboutDialog *about)
   priv->website_label = button = gtk_label_new ("");
   gtk_widget_set_no_show_all (button, TRUE);
   gtk_label_set_selectable (GTK_LABEL (button), TRUE);
-  gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (hbox), button, TRUE, FALSE, 0);
   g_signal_connect_swapped (button, "activate-link",
                             G_CALLBACK (mate_about_dialog_activate_link), about);
 
