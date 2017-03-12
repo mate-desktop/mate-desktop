@@ -77,7 +77,9 @@ gboolean          mate_bg_crossfade_set_end_pixmap (MateBGCrossfade *fade,
 #endif
 
 void              mate_bg_crossfade_start (MateBGCrossfade *fade,
-                                            GdkWindow        *window);
+                                           GdkWindow       *window);
+void              mate_bg_crossfade_start_widget (MateBGCrossfade *fade,
+                                                  GtkWidget       *widget);
 gboolean          mate_bg_crossfade_is_started (MateBGCrossfade *fade);
 void              mate_bg_crossfade_stop (MateBGCrossfade *fade);
 
