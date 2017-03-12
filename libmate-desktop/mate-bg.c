@@ -1609,29 +1609,36 @@ MateBGCrossfade *
 mate_bg_set_surface_as_root_with_crossfade (GdkScreen       *screen,
 		 			    cairo_surface_t *surface)
 {
+	GdkWindow       *root_window;
+	int              width, height;
+	MateBGCrossfade *fade;
+	cairo_t         *cr;
+	cairo_surface_t *old_surface;
+
 	g_return_val_if_fail (screen != NULL, NULL);
 	g_return_val_if_fail (surface != NULL, NULL);
 
-	GdkWindow  *root_window  = gdk_screen_get_root_window (screen);
-	int         width        = gdk_screen_get_width (screen);
-	int         height       = gdk_screen_get_height (screen);
-
-	MateBGCrossfade *fade    = mate_bg_crossfade_new (width, height);
-
-	Display    *display      = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen));
-	Pixmap      pixmap_id    = cairo_xlib_surface_get_drawable (surface);
-
-	XGrabServer (display);
-	cairo_surface_t *old_surface = mate_bg_get_surface_from_root (screen);
-	mate_bg_set_root_pixmap_id (screen, display, pixmap_id);
+	root_window = gdk_screen_get_root_window (screen);
+	width       = gdk_window_get_width (root_window);
+	height      = gdk_window_get_height (root_window);
+	fade        = mate_bg_crossfade_new (width, height);
+	old_surface = mate_bg_get_surface_from_root (screen);
 
 	mate_bg_crossfade_set_start_surface (fade, old_surface);
-	cairo_surface_destroy (old_surface);
 	mate_bg_crossfade_set_end_surface (fade, surface);
 
-	XFlush (display);
-	XUngrabServer (display);
+	/* Before setting the surface as a root pixmap, let's have it draw
+	 * the old stuff, just so it won't be noticable
+	 * (crossfade will later get it back)
+	 */
+	cr = cairo_create (surface);
+	cairo_set_source_surface (cr, old_surface, 0, 0);
+	cairo_pattern_set_extend (cairo_get_source (cr), CAIRO_EXTEND_REPEAT);
+	cairo_paint (cr);
+	cairo_destroy (cr);
+	cairo_surface_destroy (old_surface);
 
+	mate_bg_set_surface_as_root (screen, surface);
 	mate_bg_crossfade_start (fade, root_window);
 
 	return fade;
