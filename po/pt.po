@@ -7,7 +7,8 @@
 # crolidge, 2014-2015
 # Diogo Oliveira <diogodesigns@gmail.com>, 2015
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2014
-# Luis Filipe Teixeira <lufilte@gmail.com>, 2016
+# Luis Filipe Teixeira <lufilte@gmail.com>, 2016-2017
+# Manel Tinoco <maneltinoco@gmail.com>, 2017
 # Manuela Silva <manuela.silva@sky.com>, 2016-2017
 # Mateus Pinho <mateusleitepinho@gmail.com>, 2015
 # Sérgio Marques <smarquespt@gmail.com>, 2012
@@ -15,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-06 00:44+0300\n"
-"PO-Revision-Date: 2017-01-13 02:40+0000\n"
-"Last-Translator: Manuela Silva <manuela.silva@sky.com>\n"
+"POT-Creation-Date: 2017-01-25 17:50+0300\n"
+"PO-Revision-Date: 2017-03-03 13:39+0000\n"
+"Last-Translator: Manel Tinoco <maneltinoco@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/mate/MATE/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,7 +89,7 @@ msgstr "Desconhecido"
 
 #: ../libmate-desktop/mate-aboutdialog.c:179
 msgid "Could not show link"
-msgstr "Não pôde mostrar a ligação"
+msgstr "Não foi possível mostrar a ligação"
 
 #: ../libmate-desktop/mate-aboutdialog.c:235
 msgid "Program name"
@@ -698,7 +699,7 @@ msgstr "Frequência para acelerar em milissegundos"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr ""
+msgstr "Quantos milissegundos demora ir de 0 até à velocidade máxima."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
 msgid "Initial delay in milliseconds"
@@ -716,7 +717,7 @@ msgstr "Intervalo mínimo em milissegundos"
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr ""
+msgstr "Não aceitar uma tecla como premida exceto se premida por mais de @delay milissegundos."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
@@ -728,7 +729,7 @@ msgstr "Emitir som ao premir um modificador"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr ""
+msgstr "Iniciar Aplicações de Tecnologia Assistiva"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
@@ -738,43 +739,43 @@ msgstr "Lista de aplicações de tecnologia assistiva a iniciar ao entrar numa s
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Aplicação preferida de tecnologia de assistência à Mobilidade"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr ""
+msgstr "Aplicação preferida de tecnologia de assistência à Mobilidade a ser usada para iniciar sessão, menu ou linha de comando."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Iniciar a aplicação preferida de tecnologia de assistência à mobilidade"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr ""
+msgstr "MATE irá iniciar a aplicação preferida de tecnologia de assistência à Mobilidade ao entrar na sessão. "
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "Aplicação preferida de tecnologia de assistência Visual"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
 "Preferred Visual assistive technology application to be used for login, "
 "menu, or command line."
-msgstr ""
+msgstr "Aplicação de assistência visual pré-definida no login, menu ou terminal"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "Iniciar aplicação pré-definida de assistência visual"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr ""
+msgstr "Deixar o MATE pré-definir a aplicação de assistência visual durante o login"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
@@ -798,7 +799,7 @@ msgstr "Navegador compreende remoto"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
 msgid "Whether the default browser understands netscape remote."
-msgstr ""
+msgstr "Se o navegador padrão aceita um netscape remoto"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
@@ -851,11 +852,11 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
-msgstr ""
+msgstr "Desenhar Fundo do Ambiente de Trabalho"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr ""
+msgstr "Deixar o MATE gerir o fundo do ambiente de trabalho"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
@@ -863,7 +864,7 @@ msgstr "Mostrar Ícones do Ambiente de Trabalho"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr ""
+msgstr "Deixar o Gestor de ficheiros do MATE (Caja) desenhar os ícones do ambiente de trabalho"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
@@ -873,7 +874,7 @@ msgstr "Atenuar o fundo ao mudar"
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
-msgstr ""
+msgstr "Se definido como Verdadeiro, o MATE vai mudar o fundo do ambiente de trabalho com um efeito de dissipação"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
@@ -892,7 +893,7 @@ msgstr "Nome de Ficheiro da Imagem"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
-msgstr ""
+msgstr "Ficheiros a utilizar para a imagem de fundo"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:11
 msgid "Picture Opacity"
@@ -900,7 +901,7 @@ msgstr "Opacidade da Imagem"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
-msgstr ""
+msgstr "Opacidade para trabalhar a imagem de fundo"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
@@ -908,7 +909,7 @@ msgstr "Cor Primária"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr ""
+msgstr "Cor da Esquerda ou do Top para desenhar gradientes, aplicáveis em cor sólida"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
@@ -917,7 +918,7 @@ msgstr "Cor Secundária"
 #: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr ""
+msgstr "Cor da Direita ou do Fundo para desenhar gradientes, não aplicáveis em cor sólida"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
@@ -927,7 +928,7 @@ msgstr "Tipo de Sombra da Cor"
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
-msgstr ""
+msgstr "Como sombrear a cor do fundo. Valores possíveis são \"gradiente-horizontal\", \"gradiente-vertical\", e \"sólida\""
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
@@ -935,7 +936,7 @@ msgstr "Tema de Ícone de Ficheiro"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr ""
+msgstr "Tema usado para mostrar os ícones de ficheiros"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
@@ -943,7 +944,7 @@ msgstr "Ativar Acessibilidade"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr ""
+msgstr "Se as Aplicações devem ter suporte de acessibilidade"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
@@ -953,15 +954,15 @@ msgstr "Ativar Animações"
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr ""
+msgstr "Se as animações devem ser mostradas. Atenção: esta é uma tecla importante que pode alterar o comportamento do gestor de janelas, do painel, etc."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
-msgstr ""
+msgstr "Menus são destacáveis e arrastáveis"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr ""
+msgstr "Se os menus podem ser destacáveis e arrastáveis"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Can Change Accels"
