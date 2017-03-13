@@ -1,22 +1,19 @@
-### mate-desktop 1.17.3
+### mate-desktop 1.18.0
 
-### mate-desktop 1.17.2
-
-  * Drop mpaste.
-
-### mate-desktop 1.17.1
-
-  * mate-about: Update copyright year
+  * NEWS: use consistent, project wide, markdown-like formatting to make
+    generating release announcements easier
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and --with-gtk
+    build option
+  * Drop mpaste tool (won't work without the website anyway)
+  * Background: fix crossfade issues with recent GTK+ versions
+  * Background: fix more graphics issues to allow Caja to use background
+    for directory windows
+  * Background: fix memleaks and other misc issues
+  * Color select: fix some GTK+ deprecations
+  * Schemas: some fixes and cleanups
+  * mate-about: update copyright year
+  * mate-about: fix URL centering
   * Translations update
-
-### mate-desktop 1.17.0
-
-  * Translations update
-  * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
-  * remove obsolete lib from mate-desktop-2.0-uninstalled.pc.in
-  * schemas: fix description of motion-acceleration key
-  * schemas: correct cursor-theme key description
-  * schemas: drop unused cursor-font key
 
 ### mate-desktop 1.16.1
 
