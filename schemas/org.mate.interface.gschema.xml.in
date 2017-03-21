@@ -160,6 +160,16 @@
       <summary>Titlebar layout of GTK3 client-side decorated windows</summary>
       <description>This setting determines which buttons should be put in the titlebar of client-side decorated windows, and whether they should be placed at the left of right. See https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout.</description>
     </key>
+    <key name="gtk-shell-shows-app-menu" type="b">
+      <default>false</default>
+      <summary>Use a global menubar for displaying application menus</summary>
+      <description> This setting determines where application menu will be displayed - in a window or on a panel with MenuModel protocol. See https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-app-menu.</description>
+    </key>
+    <key name="gtk-shell-shows-menubar" type="b">
+      <default>false</default>
+      <summary>Use a global menubar for displaying window menubars</summary>
+      <description> This setting determines where window menubars will be displayed - in a window or on a panel with MenuModel protocol. See https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-menubar.</description>
+    </key>
     <key name="automatic-mnemonics" type="b">
       <default>true</default>
       <summary>Only show mnemonics on when the Alt key is pressed</summary>
