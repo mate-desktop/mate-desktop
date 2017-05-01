@@ -1,0 +1,24 @@
+<schemalist gettext-domain="mate-desktop">
+  <schema id="org.mate.typing-break" path="/org/mate/desktop/typing-break/">
+    <key name="type-time" type="i">
+      <default>60</default>
+      <summary>Type time</summary>
+      <description>Number of minutes of typing time before break mode starts.</description>
+    </key>
+    <key name="break-time" type="i">
+      <default>3</default>
+      <summary>Break time</summary>
+      <description>Number of minutes that the typing break should last.</description>
+    </key>
+    <key name="allow-postpone" type="b">
+      <default>false</default>
+      <summary>Allow postponing of breaks</summary>
+      <description>Whether or not the typing break screen can be postponed.</description>
+    </key>
+    <key name="enabled" type="b">
+      <default>false</default>
+      <summary>Whether or not keyboard locking is enabled</summary>
+      <description>Whether or not keyboard locking is enabled.</description>
+    </key>
+  </schema>
+</schemalist>

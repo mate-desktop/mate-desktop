@@ -1,0 +1,62 @@
+<schemalist gettext-domain="mate-desktop">
+  <enum id="org.mate.background.picture-options-enum">
+	<value nick="wallpaper" value="0"/>
+	<value nick="zoom" value="1"/>
+	<value nick="centered" value="2"/>
+	<value nick="scaled" value="3"/>
+	<value nick="stretched" value="4"/>
+	<value nick="spanned" value="5"/>
+  </enum>
+  <enum id="org.mate.background.color-shading-type-enum">
+	<value nick="solid" value="0"/>
+	<value nick="horizontal-gradient" value="1"/>
+	<value nick="vertical-gradient" value="2"/>
+  </enum>
+  <schema id="org.mate.background" path="/org/mate/desktop/background/">
+    <key name="draw-background" type="b">
+      <default>true</default>
+      <summary>Draw Desktop Background</summary>
+      <description>Have MATE draw the desktop background.</description>
+    </key>
+    <key name="show-desktop-icons" type="b">
+      <default>true</default>
+      <summary>Show Desktop Icons</summary>
+      <description>Have MATE file manager (Caja) draw the desktop icons.</description>
+    </key>
+    <key name="background-fade" type="b">
+      <default>true</default>
+      <summary>Fade the background on change</summary>
+      <description>If set to true, then MATE will change the desktop background with a fading effect.</description>
+    </key>
+    <key name="picture-options" enum="org.mate.background.picture-options-enum">
+      <default>'zoom'</default>
+      <summary>Picture Options</summary>
+      <description>Determines how the image set by wallpaper_filename is rendered.  Possible values are "wallpaper", "centered", "scaled", "stretched", "zoom", "spanned".</description>
+    </key>
+    <key name="picture-filename" type="s">
+      <default>'${prefix}/share/backgrounds/mate/desktop/Stripes.png'</default>
+      <summary>Picture Filename</summary>
+      <description>File to use for the background image.</description>
+    </key>
+    <key name="picture-opacity" type="i">
+      <default>100</default>
+      <summary>Picture Opacity</summary>
+      <description>Opacity with which to draw the background picture.</description>
+    </key>
+    <key name="primary-color" type="s">
+      <default>'#5891BC'</default>
+      <summary>Primary Color</summary>
+      <description>Left or Top color when drawing gradients, or the solid color.</description>
+    </key>
+    <key name="secondary-color" type="s">
+      <default>'#3C8F25'</default>
+      <summary>Secondary Color</summary>
+      <description>Right or Bottom color when drawing gradients, not used for solid color.</description>
+    </key>
+    <key name="color-shading-type" enum="org.mate.background.color-shading-type-enum">
+      <default>'vertical-gradient'</default>
+      <summary>Color Shading Type</summary>
+      <description>How to shade the background color. Possible values are "horizontal-gradient", "vertical-gradient", and "solid".</description>
+    </key>
+  </schema>
+</schemalist>
