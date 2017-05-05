@@ -1,0 +1,14 @@
+<schemalist gettext-domain="mate-desktop">
+  <schema id="org.mate.applications-at-mobility" path="/org/mate/desktop/applications/at/mobility/">
+    <key name="exec" type="s">
+      <default>'dasher'</default>
+      <summary>Preferred Mobility assistive technology application</summary>
+      <description>Preferred Mobility assistive technology application to be used for login, menu, or command line.</description>
+    </key>
+    <key name="startup" type="b">
+      <default>false</default>
+      <summary>Start preferred Mobility assistive technology application</summary>
+      <description>MATE to start preferred Mobility assistive technology application during login.</description>
+    </key>
+  </schema>
+</schemalist>

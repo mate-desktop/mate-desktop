@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: mate-desktop-2.0
+Description: Utility library for loading .desktop files
+Requires: gtk+-3.0 libstartup-notification-1.0
+Version: 1.19.0
+Libs: ${pc_top_builddir}/${pcfiledir}/libmate-desktop-2.la
+Cflags: -I${pc_top_builddir}/${pcfiledir}

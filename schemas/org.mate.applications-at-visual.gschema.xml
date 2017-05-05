@@ -1,0 +1,14 @@
+<schemalist gettext-domain="mate-desktop">
+  <schema id="org.mate.applications-at-visual" path="/org/mate/desktop/applications/at/visual/">
+    <key name="exec" type="s">
+      <default>'orca'</default>
+      <summary>Preferred Visual assistive technology application</summary>
+      <description>Preferred Visual assistive technology application to be used for login, menu, or command line.</description>
+    </key>
+    <key name="startup" type="b">
+      <default>false</default>
+      <summary>Start preferred Visual assistive technology application</summary>
+      <description>MATE to start preferred Visual assistive technology application during login.</description>
+    </key>
+  </schema>
+</schemalist>

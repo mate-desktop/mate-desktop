@@ -1,0 +1,9 @@
+<schemalist gettext-domain="mate-desktop">
+  <schema id="org.mate.accessibility-startup" path="/org/mate/desktop/accessibility/startup/">
+    <key name="exec-ats" type="as">
+      <default>[]</default>
+      <summary>Startup Assistive Technology Applications</summary>
+      <description>List of assistive technology applications to start when logging into the MATE desktop.</description>
+    </key>
+  </schema>
+</schemalist>

@@ -1,0 +1,30 @@
+<schemalist gettext-domain="mate-desktop">
+  <schema id="org.mate.applications-office" path="/org/mate/desktop/applications/">
+    <child name="calendar" schema="org.mate.applications-office.calendar"/>
+    <child name="tasks" schema="org.mate.applications-office.tasks"/>
+  </schema>
+  <schema id="org.mate.applications-office.calendar" path="/org/mate/desktop/applications/calendar/">
+    <key name="exec" type="s">
+      <default>'evolution'</default>
+      <summary>Default calendar</summary>
+      <description>Default calendar application</description>
+    </key>
+    <key name="needs-term" type="b">
+      <default>false</default>
+      <summary>Calendar needs terminal</summary>
+      <description>Whether the default calendar application needs a terminal to run</description>
+    </key>
+  </schema>
+  <schema id="org.mate.applications-office.tasks" path="/org/mate/desktop/applications/tasks/">
+    <key name="exec" type="s">
+      <default>'evolution'</default>
+      <summary>Default tasks</summary>
+      <description>Default tasks application</description>
+    </key>
+    <key name="needs-term" type="b">
+      <default>false</default>
+      <summary>Tasks needs terminal</summary>
+      <description>Whether the default tasks application needs a terminal to run</description>
+    </key>
+  </schema>
+</schemalist>
