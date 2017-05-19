@@ -510,10 +510,35 @@ fill_out_screen_info (Display *xdisplay,
 static ScreenInfo *
 screen_info_new (MateRRScreen *screen, gboolean needs_reprobe, GError **error)
 {
+    GTimeVal   cur_time_val;
+    gint64     cur, prev;
+
+    g_assert (screen != NULL);
+
+    if ( screen->priv->info != NULL ) {
+        g_get_current_time(&cur_time_val);
+        cur = (gint64) cur_time_val.tv_sec * G_USEC_PER_SEC + cur_time_val.tv_usec;
+        prev =(gint64) screen->priv->last_update_time.tv_sec * G_USEC_PER_SEC + screen->priv->last_update_time.tv_usec;
+
+        /* Only referesh the info after 2 seconds have elapsed since last
+         * update, otherwise it will cause a lot of extra probing on the X
+         * server.
+         */
+        if (((cur - prev) < 0) || ((cur - prev) > 2000000)) {
+            screen->priv->last_update_time = cur_time_val;
+        }
+        else {
+            /* Don't return any update, which should result in caller using
+             * existing data
+             */
+            g_warning("Call to screen_info_new is too frequent, skipping...");
+            return( NULL );
+        }
+    }
+
     ScreenInfo *info = g_new0 (ScreenInfo, 1);
     MateRRScreenPrivate *priv;
 
-    g_assert (screen != NULL);
 
     priv = screen->priv;
 
@@ -682,6 +707,9 @@ mate_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **
         }
 
         priv->info = screen_info_new (self, TRUE, error);
+
+	/* Initialize the last udpate time */
+	g_get_current_time (&(priv->last_update_time));
 
         if (!priv->info) {
 	    return FALSE;
