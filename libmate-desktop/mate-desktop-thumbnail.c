@@ -828,7 +828,7 @@ mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailF
  * @mime_type: the mime type of the file
  * @mtime: the mtime of the file
  *
- * Returns TRUE if this MateIconFactory can (at least try) to thumbnail
+ * Returns TRUE if this MateDesktopThumbnail can (at least try) to thumbnail
  * this file. Thumbnails or files with failed thumbnails won't be thumbnailed.
  *
  * Usage of this function is threadsafe.
