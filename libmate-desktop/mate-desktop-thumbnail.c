@@ -44,8 +44,6 @@
 #include <glib/gstdio.h>
 #include <glib-unix.h>
 
-#define SECONDS_BETWEEN_STATS 10
-
 static void
 thumbnailers_directory_changed (GFileMonitor                 *monitor,
                                 GFile                        *file,
