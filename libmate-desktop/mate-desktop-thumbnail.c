@@ -37,7 +37,6 @@
 #include <glib.h>
 #include <stdio.h>
 
-#define GDK_PIXBUF_ENABLE_BACKEND
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
