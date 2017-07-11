@@ -28,7 +28,6 @@ sources = files(
   'mate-desktop-item.c',
   'mate-desktop-utils.c',
   'mate-desktop-thumbnail.c',
-  'mate-thumbnail-pixbuf-utils.c',
   'mate-dconf.c',
   'mate-gsettings.c',
   'mate-bg.c',
