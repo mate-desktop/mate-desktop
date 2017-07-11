@@ -220,19 +220,18 @@ static gpointer
 init_thumbnailers_dirs (gpointer data)
 {
   const gchar * const *data_dirs;
-  gchar **thumbs_dirs;
-  guint i, length;
+  GPtrArray *thumbs_dirs;
+  guint i;
 
   data_dirs = g_get_system_data_dirs ();
-  length = g_strv_length ((char **) data_dirs);
+  thumbs_dirs = g_ptr_array_new ();
 
-  thumbs_dirs = g_new (gchar *, length + 2);
-  thumbs_dirs[0] = g_build_filename (g_get_user_data_dir (), "thumbnailers", NULL);
-  for (i = 0; i < length; i++)
-    thumbs_dirs[i + 1] = g_build_filename (data_dirs[i], "thumbnailers", NULL);
-  thumbs_dirs[length + 1] = NULL;
+  g_ptr_array_add (thumbs_dirs, g_build_filename (g_get_user_data_dir (), "thumbnailers", NULL));
+  for (i = 0; data_dirs[i] != NULL; i++)
+    g_ptr_array_add (thumbs_dirs, g_build_filename (data_dirs[i], "thumbnailers", NULL));
+  g_ptr_array_add (thumbs_dirs, NULL);
 
-  return thumbs_dirs;
+  return g_ptr_array_free (thumbs_dirs, FALSE);
 }
 
 static const gchar * const *
