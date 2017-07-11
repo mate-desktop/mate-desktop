@@ -25,24 +25,15 @@
  */
 
 #include <config.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <sys/time.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <dirent.h>
-#include <time.h>
-#include <math.h>
-#include <string.h>
 #include <glib.h>
-#include <stdio.h>
+#include <glib/gstdio.h>
 
 #include <gdk-pixbuf/gdk-pixbuf.h>
+#include <string.h>
+#include <stdlib.h>
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
 #include "mate-desktop-thumbnail.h"
-#include <glib/gstdio.h>
-#include <glib-unix.h>
 
 static void
 thumbnailers_directory_changed (GFileMonitor                 *monitor,
