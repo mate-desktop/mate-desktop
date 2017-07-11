@@ -200,7 +200,7 @@ thumbnailer_try_exec (Thumbnailer *thumb)
   if (G_UNLIKELY (!thumb))
     return FALSE;
 
-  /* TryExec is optinal, but Exec isn't, so we assume
+  /* TryExec is optional, but Exec isn't, so we assume
    * the thumbnailer can be run when TryExec is not present
    */
   if (!thumb->try_exec)
