@@ -1276,10 +1276,7 @@ mate_desktop_thumbnail_has_uri (GdkPixbuf          *pixbuf,
   const char *thumb_uri;
 
   thumb_uri = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::URI");
-  if (!thumb_uri)
-    return FALSE;
-
-  return strcmp (uri, thumb_uri) == 0;
+  return (g_strcmp0 (uri, thumb_uri) == 0);
 }
 
 /**
@@ -1304,9 +1301,7 @@ mate_desktop_thumbnail_is_valid (GdkPixbuf          *pixbuf,
   time_t thumb_mtime;
 
   thumb_uri = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::URI");
-  if (!thumb_uri)
-    return FALSE;
-  if (strcmp (uri, thumb_uri) != 0)
+  if (g_strcmp0 (uri, thumb_uri) != 0)
     return FALSE;
 
   thumb_mtime_str = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::MTime");
