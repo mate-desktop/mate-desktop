@@ -1276,26 +1276,6 @@ mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFact
 }
 
 /**
- * mate_desktop_thumbnail_md5:
- * @uri: an uri
- *
- * Calculates the MD5 checksum of the uri. This can be useful
- * if you want to manually handle thumbnail files.
- *
- * Return value: A string with the MD5 digest of the uri string.
- *
- * Since: 2.2
- * Deprecated: 2.22: Use #GChecksum instead
- **/
-char *
-mate_desktop_thumbnail_md5 (const char *uri)
-{
-  return g_compute_checksum_for_data (G_CHECKSUM_MD5,
-                                      (const guchar *) uri,
-                                      strlen (uri));
-}
-
-/**
  * mate_desktop_thumbnail_path_for_uri:
  * @uri: an uri
  * @size: a thumbnail size
