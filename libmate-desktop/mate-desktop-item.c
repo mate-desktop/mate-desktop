@@ -1822,7 +1822,7 @@ ditem_execute (const MateDesktopItem *item,
 		const char *icon;
 
 		sn_context = sn_launcher_context_new (sn_display,
-						      screen ? gdk_screen_get_number (screen) :
+						      screen ? gdk_x11_screen_get_screen_number (screen) :
 						      DefaultScreen (GDK_DISPLAY_XDISPLAY (gdkdisplay)));
 
 		name = mate_desktop_item_get_localestring (item,
