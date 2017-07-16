@@ -359,14 +359,14 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 
 		/* Fallback to default BG if the filename set is non-existent */
 		if (filename != NULL && !g_file_test (filename, G_FILE_TEST_EXISTS)) {
-			
+
 			g_free (filename);
-			
+
 			g_settings_delay (settings);
 			g_settings_reset (settings, MATE_BG_KEY_PICTURE_FILENAME);
 			filename = g_settings_get_string (settings, MATE_BG_KEY_PICTURE_FILENAME);
 			g_settings_revert (settings);
-			
+
 			//* Check if default background exists, also */
 			if (filename != NULL && !g_file_test (filename, G_FILE_TEST_EXISTS)) {
 				g_free (filename);
@@ -1255,7 +1255,7 @@ make_root_pixmap (GdkWindow *window, gint width, gint height)
 		return NULL;
 	}
 
-	depth = DefaultDepth (display, gdk_screen_get_number (screen));
+	depth = DefaultDepth (display, gdk_x11_screen_get_screen_number (screen));
 	xpixmap = XCreatePixmap (display, GDK_WINDOW_XID (window), width, height, depth);
 
 	XFlush (display);
@@ -1409,7 +1409,7 @@ mate_bg_get_surface_from_root (GdkScreen *screen)
 	cairo_t *cr;
 
 	display = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen));
-	screen_num = gdk_screen_get_number (screen);
+	screen_num = gdk_x11_screen_get_screen_number (screen);
 
 	result = XGetWindowProperty (display,
 				     RootWindow (display, screen_num),
@@ -1490,7 +1490,7 @@ mate_bg_set_root_pixmap_id (GdkScreen       *screen,
 			    Display         *display,
 			    Pixmap           xpixmap)
 {
-	Window   xroot   = RootWindow (display, gdk_screen_get_number (screen));
+	Window   xroot   = RootWindow (display, gdk_x11_screen_get_screen_number (screen));
 	char    *atom_names[] = {"_XROOTPMAP_ID", "ESETROOT_PMAP_ID"};
 	Atom     atoms[G_N_ELEMENTS(atom_names)] = {0};
 
@@ -1581,7 +1581,7 @@ mate_bg_set_surface_as_root (GdkScreen *screen, cairo_surface_t *surface)
 	 */
 	Display    *display      = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen));
 	Pixmap      pixmap_id    = cairo_xlib_surface_get_drawable (surface);
-	Window      xroot        = RootWindow (display, gdk_screen_get_number (screen));
+	Window      xroot        = RootWindow (display, gdk_x11_screen_get_screen_number (screen));
 
 	XGrabServer (display);
 	mate_bg_set_root_pixmap_id (screen, display, pixmap_id);
