@@ -864,20 +864,20 @@ mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *facto
 }
 
 static char *
-expand_thumbnailing_script (const char *script,
-                            const int   size,
-                            const char *inuri,
-                            const char *outfile)
+expand_thumbnailing_elem (const char *elem,
+                          const int   size,
+                          const char *inuri,
+                          const char *outfile,
+                          gboolean   *got_input,
+                          gboolean   *got_output)
 {
   GString *str;
   const char *p, *last;
-  char *localfile, *quoted;
-  gboolean got_in;
+  char *localfile;
 
   str = g_string_new (NULL);
 
-  got_in = FALSE;
-  last = script;
+  last = elem;
   while ((p = strchr (last, '%')) != NULL)
     {
       g_string_append_len (str, last, p - last);
@@ -885,50 +885,95 @@ expand_thumbnailing_script (const char *script,
 
       switch (*p) {
       case 'u':
-    quoted = g_shell_quote (inuri);
-    g_string_append (str, quoted);
-    g_free (quoted);
-    got_in = TRUE;
-    p++;
-    break;
+       g_string_append (str, inuri);
+       *got_input = TRUE;
+       p++;
+       break;
       case 'i':
-    localfile = g_filename_from_uri (inuri, NULL, NULL);
-    if (localfile)
-      {
-        quoted = g_shell_quote (localfile);
-        g_string_append (str, quoted);
-        got_in = TRUE;
-        g_free (quoted);
-        g_free (localfile);
-      }
-    p++;
-    break;
+       localfile = g_filename_from_uri (inuri, NULL, NULL);
+       if (localfile)
+         {
+           g_string_append (str, localfile);
+           *got_input = TRUE;
+           g_free (localfile);
+         }
+       p++;
+       break;
       case 'o':
-    quoted = g_shell_quote (outfile);
-    g_string_append (str, quoted);
-    g_free (quoted);
-    p++;
-    break;
+       g_string_append (str, outfile);
+       *got_output = TRUE;
+       p++;
+       break;
       case 's':
-    g_string_append_printf (str, "%d", size);
-    p++;
-    break;
+       g_string_append_printf (str, "%d", size);
+       p++;
+       break;
       case '%':
-    g_string_append_c (str, '%');
-    p++;
-    break;
+       g_string_append_c (str, '%');
+       p++;
+       break;
       case 0:
       default:
-    break;
+        break;
       }
       last = p;
     }
   g_string_append (str, last);
 
-  if (got_in)
-    return g_string_free (str, FALSE);
+  return g_string_free (str, FALSE);
+}
 
-  g_string_free (str, TRUE);
+static char **
+expand_thumbnailing_script (const char  *script,
+                            const int    size,
+                            const char  *inuri,
+                            const char  *outfile,
+                            GError     **error)
+{
+  GPtrArray *array;
+  char **script_elems;
+  guint i;
+  gboolean got_in, got_out;
+
+  if (!g_shell_parse_argv (script, NULL, &script_elems, error))
+    return NULL;
+
+  array = g_ptr_array_new_with_free_func (g_free);
+
+  got_in = got_out = FALSE;
+  for (i = 0; script_elems[i] != NULL; i++)
+    {
+      char *expanded;
+
+      expanded = expand_thumbnailing_elem (script_elems[i],
+                                           size,
+                                           inuri,
+                                           outfile,
+                                           &got_in,
+                                           &got_out);
+
+      g_ptr_array_add (array, expanded);
+    }
+
+  if (!got_in)
+    {
+      g_set_error_literal (error, G_IO_ERROR, G_IO_ERROR_FAILED,
+                           "Input file could not be set");
+      goto bail;
+    }
+  else if (!got_out)
+    {
+      g_set_error_literal (error, G_IO_ERROR, G_IO_ERROR_FAILED,
+                           "Output file could not be set");
+      goto bail;
+    }
+
+  g_ptr_array_add (array, NULL);
+
+  return (char **) g_ptr_array_free (array, FALSE);
+
+bail:
+  g_ptr_array_free (array, TRUE);
   return NULL;
 }
 
@@ -1011,7 +1056,7 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
                                                    const char                  *mime_type)
 {
   GdkPixbuf *pixbuf;
-  char *script, *expanded_script;
+  char *script;
   int size;
   int exit_status;
   char *tmpname;
@@ -1051,18 +1096,29 @@ mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *
 
       if (fd != -1)
     {
+      char **expanded_script;
+      GError *error = NULL;
+
       close (fd);
 
-      expanded_script = expand_thumbnailing_script (script, size, uri, tmpname);
-      if (expanded_script != NULL &&
-          g_spawn_command_line_sync (expanded_script,
-                     NULL, NULL, &exit_status, NULL) &&
-          exit_status == 0)
+      expanded_script = expand_thumbnailing_script (script, size, uri, tmpname, &error);
+      if (expanded_script == NULL)
         {
-          pixbuf = gdk_pixbuf_new_from_file (tmpname, NULL);
+          g_warning ("Failed to expand script '%s': %s", script, error->message);
+          g_error_free (error);
+        }
+      else
+        {
+          gboolean ret;
+
+          ret = g_spawn_sync (NULL, expanded_script, NULL, G_SPAWN_SEARCH_PATH,
+                              NULL, NULL, NULL, NULL, &exit_status, NULL);
+          if (ret && exit_status == 0)
+            pixbuf = gdk_pixbuf_new_from_file (tmpname, NULL);
+
+          g_strfreev (expanded_script);
         }
 
-      g_free (expanded_script);
       g_unlink (tmpname);
       g_free (tmpname);
     }
