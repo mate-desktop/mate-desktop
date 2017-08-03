@@ -1678,11 +1678,12 @@ static char **
 make_environment_for_screen (GdkScreen  *screen,
 			     char      **envp)
 {
-	char **retval;
-	char **freeme;
-	char  *display_name;
-	int    display_index = -1;
-	int    i, env_len;
+	GdkDisplay *display;
+	char      **retval;
+	char      **freeme;
+	char       *display_name;
+	int         display_index = -1;
+	int         i, env_len;
 
 	g_return_val_if_fail (GDK_IS_SCREEN (screen), NULL);
 
@@ -1705,7 +1706,8 @@ make_environment_for_screen (GdkScreen  *screen,
 	retval = g_new (char *, env_len + 1);
 	retval [env_len] = NULL;
 
-	display_name = gdk_screen_make_display_name (screen);
+	display = gdk_screen_get_display (screen);
+	display_name = g_strdup (gdk_display_get_name (display));
 
 	for (i = 0; i < env_len; i++)
 		if (i == display_index)
