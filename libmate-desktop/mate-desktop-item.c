@@ -2080,10 +2080,17 @@ mate_desktop_item_launch_on_screen_with_env (
 			return -1;
 		}
 
+#if GTK_CHECK_VERSION (3, 22, 0)
+		retval = gtk_show_uri_on_window  (NULL,
+		                                  url,
+		                                  GDK_CURRENT_TIME,
+		                                  error);
+#else
 		retval = gtk_show_uri  (screen,
 					url,
 					GDK_CURRENT_TIME,
 					error);
+#endif
 		return retval ? 0 : -1;
 	}
 
