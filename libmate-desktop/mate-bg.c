@@ -1463,8 +1463,8 @@ mate_bg_get_surface_from_root (GdkScreen *screen)
 		gdk_error_trap_pop_ignored ();
 	}
 
-	width = gdk_screen_get_width (screen);
-	height = gdk_screen_get_height (screen);
+	gdk_window_get_geometry (gdk_screen_get_root_window (screen), NULL, NULL,
+				 &width, &height);
 
 	if (source_pixmap) {
 		surface = cairo_surface_create_similar (source_pixmap,
@@ -2109,10 +2109,14 @@ scale_thumbnail (MateBGPlacement placement,
 	if (get_thumb_annotations (thumb, &o_width, &o_height)		||
 	    (filename && get_original_size (filename, &o_width, &o_height))) {
 
-		int scr_height = gdk_screen_get_height (screen);
-		int scr_width = gdk_screen_get_width (screen);
+		int scr_height;
+		int scr_width;
 		int thumb_width = gdk_pixbuf_get_width (thumb);
 		int thumb_height = gdk_pixbuf_get_height (thumb);
+
+		gdk_window_get_geometry (gdk_screen_get_root_window (screen), NULL, NULL,
+					 &scr_width, &scr_height);
+
 		double screen_to_dest = fit_factor (scr_width, scr_height,
 						    dest_width, dest_height);
 		double thumb_to_orig  = fit_factor (thumb_width, thumb_height,

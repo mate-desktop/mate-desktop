@@ -1306,6 +1306,7 @@ popup_position_func (GtkMenu   *menu,
   GtkRequisition req;      
   gint root_x, root_y;
   GdkScreen *screen;
+  gint sc_width, sc_height;
   GtkAllocation allocation;
   
   widget = GTK_WIDGET (user_data);
@@ -1323,8 +1324,12 @@ popup_position_func (GtkMenu   *menu,
 
   /* Ensure sanity */
   screen = gtk_widget_get_screen (widget);
-  *x = CLAMP (*x, 0, MAX (0, gdk_screen_get_width (screen) - req.width));
-  *y = CLAMP (*y, 0, MAX (0, gdk_screen_get_height (screen) - req.height));
+
+  gdk_window_get_geometry (gdk_screen_get_root_window (screen), NULL, NULL,
+                           &sc_width, &sc_height);
+
+  *x = CLAMP (*x, 0, MAX (0, sc_width - req.width));
+  *y = CLAMP (*y, 0, MAX (0, sc_height - req.height));
 }
 
 static void
