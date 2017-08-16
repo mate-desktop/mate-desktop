@@ -11,7 +11,8 @@
 # gelldur, 2012
 # Marcin Kralka <marcink96@gmail.com>, 2014
 # Michal Herman <szalejot@gmail.com>, 2013
-# Piotr Strębski <strebski@o2.pl>, 2015
+# Piotr Drąg <piotrdrag@gmail.com>, 2017
+# Piotr Strębski <strebski@gmail.com>, 2015
 # Robert Strojec <ross606@gmail.com>, 2012
 # Szymon Porwolik <szporwolik@gmail.com>, 2012
 # Szymon Porwolik <szporwolik@gmail.com>, 2014
@@ -21,20 +22,20 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-25 17:50+0300\n"
-"PO-Revision-Date: 2016-11-30 00:02+0000\n"
-"Last-Translator: Darek Witkowski\n"
+"PO-Revision-Date: 2017-05-21 18:48+0000\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/mate/MATE/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:77
 msgid "translator-credits"
-msgstr "Zasługi tłumaczy"
+msgstr "Tłumacze środowiska MATE, 2012-2017\n\nTłumacze środowiska GNOME, 1998-2010"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -68,20 +69,20 @@ msgid ""
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
-msgstr "MATE to kontynuacja środowiska GNOME 2. Setki ludzi dokładało kod do GNOME od kiedy wystartowało w 1997; jeszcze więcej wnosiło wkład w inne możliwe sposoby, włączając tłumaczenia, dokumentację, i zapewnienie jakości."
+msgstr "MATE to kontynuacja środowiska GNOME 2. Setki ludzi dokładało kod do GNOME od kiedy wystartowało w 1997; jeszcze więcej wnosiło wkład w inne możliwe sposoby, w tym tłumaczenia, dokumentację i zapewnienie jakości."
 
 #: ../mate-about/mate-about.h:58
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
-msgstr "GNOME 2 jest bardzo znanym Linuksowym środowiskiem graficznym, ale już więcej nie będzie rozwijanym... MATE jest utworzony po to aby zapewnić kontynuacje tego środowiska graficznego dla ciebie! "
+msgstr "GNOME 2 jest bardzo znanym Linuksowym środowiskiem graficznym, ale już więcej nie będzie rozwijanym... MATE został utworzony po to, aby zapewnić kontynuację tego środowiska graficznego dla ciebie!"
 
 #: ../mate-about/mate-about.h:61
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
-msgstr "Nazwa „MATE” pochodzi z określenia  yerba maté jest to rodzimy gatunek ostrokrzewu  rosnącego w subtropikalnych regionalnych Ameryki Południowej. Jej liście zawierają kofeinę i są wykorzystywane do wytwarzania naparów oraz napój zwany mate."
+msgstr "Nazwa „MATE” pochodzi od określenia yerba maté — jest to rodzimy gatunek ostrokrzewu rosnącego w subtropikalnych regionalnych Ameryki Południowej. Jej liście zawierają kofeinę i są wykorzystywane do wytwarzania naparów oraz napoju zwanego mate."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -244,7 +245,7 @@ msgstr "Dokumentacja"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2124
 msgid "Translated by"
-msgstr "Lokalizacja"
+msgstr "Tłumaczenie"
 
 #: ../libmate-desktop/mate-aboutdialog.c:2128
 msgid "Artwork by"
@@ -256,7 +257,7 @@ msgstr "Użyj przezroczystości"
 
 #: ../libmate-desktop/mate-colorbutton.c:155
 msgid "Whether or not to give the color an alpha value"
-msgstr "Określa czy nadać kolorowi wartość przezroczystości"
+msgstr "Określa, czy nadać kolorowi wartość przezroczystości"
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
@@ -299,7 +300,7 @@ msgstr "Posiada kontrolę przezroczystości"
 
 #: ../libmate-desktop/mate-colorsel.c:281
 msgid "Whether the color selector should allow setting opacity"
-msgstr "Określa czy selektor koloru powinno pozwolić na ustawienie przezroczystości"
+msgstr "Określa, czy selektor koloru powinien pozwolić na ustawienie przezroczystości"
 
 #: ../libmate-desktop/mate-colorsel.c:287
 msgid "Has palette"
@@ -307,7 +308,7 @@ msgstr "Posiada paletę"
 
 #: ../libmate-desktop/mate-colorsel.c:288
 msgid "Whether a palette should be used"
-msgstr "Określa czy paleta powinna być użyta"
+msgstr "Określa, czy paleta powinna być użyta"
 
 #: ../libmate-desktop/mate-colorsel.c:295
 msgid "The current color"
@@ -335,7 +336,7 @@ msgstr "Wybierz kolor jaki chcesz z zewnętrznego pierścienia. Wybierz ciemnoś
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
-msgstr "Kliknij pipetę; następnie wskaż kolor w dowolnego miejsca ekranu, aby go wybrać."
+msgstr "Kliknij pipetę; następnie wskaż kolor w dowolnym miejscu ekranu, aby go wybrać."
 
 #: ../libmate-desktop/mate-colorsel.c:390
 msgid "_Hue:"
@@ -687,7 +688,7 @@ msgstr "przedział minimalny w milisekundach"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr "Ignoruj wielokrotne wciśnięcia klawisza _same_ w przedziale @delay milisekund."
+msgstr "Ignoruj wielokrotne wciśnięcia _tego samego_ klawisza w przedziale @delay milisekund."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
@@ -721,19 +722,19 @@ msgstr "Minimalne opóźnienie w milisekundach"
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr "Nie bierz pod uwagę naciśniętego klawisza o ile jest on wciskany przez @delay milisekund."
+msgstr "Nie bierz pod uwagę naciśniętego klawisza, o ile jest on wciskany przez @delay milisekund."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
-msgstr "Wyłącz jeśli dwa klawisze wciśnięte są równocześnie."
+msgstr "Wyłącz, jeśli dwa klawisze wciśnięte są równocześnie."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Beep when a modifier is pressed."
-msgstr "Wydaj dźwięk gdy modyfikator zostanie wciśnięty."
+msgstr "Wydaj dźwięk, gdy modyfikator zostanie wciśnięty."
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr "Aplikacje Technologii Wspierającej Start"
+msgstr "Startowe aplikacje technologii wspierających"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
@@ -743,27 +744,27 @@ msgstr "Lista aplikacji technologii wspierających, uruchamianych podczas logowa
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr "Preferowana Mobilna aplikacja technologii wspierającej"
+msgstr "Preferowana aplikacja technologii wspierającej mobilności"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr "Preferowana Mobilna aplikacja technologii wspierającej, która będzie używana do logowania, dla menu lub linii poleceń."
+msgstr "Preferowana aplikacja technologii wspierającej mobilności, która będzie używana do logowania, dla menu lub linii poleceń."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr "Uruchom preferowaną Mobilną aplikację technologii wspierającej"
+msgstr "Uruchom preferowaną aplikację technologii wspierającej mobilności"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr "MATE uruchomi preferowaną Mobilną aplikację technologii wspierającej podczas logowania."
+msgstr "MATE uruchomi preferowaną aplikację technologii wspierającej mobilności podczas logowania."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr "Preferowana Wizualna aplikacja technologii wspierającej"
+msgstr "Preferowana aplikacja wizualnej technologii wspierającej"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
@@ -773,13 +774,13 @@ msgstr "Preferowana wizualna aplikacja technologii wspierającej używana do log
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr "Uruchom preferowaną Wizualną aplikację technologii wspierającej"
+msgstr "Uruchom preferowaną aplikację wizualnej technologii wspierającej"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr "MATE uruchomi preferowaną Wizualną aplikację technologii wspierającej podczas logowania."
+msgstr "MATE uruchomi preferowaną aplikację wizualnej technologii wspierającej podczas logowania."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
@@ -787,7 +788,7 @@ msgstr "Domyślna przeglądarka"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
-msgstr "Domyślna przeglądarka dla wszystkich URLi."
+msgstr "Domyślna przeglądarka dla wszystkich URL-i."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
 msgid "Browser needs terminal"
@@ -868,7 +869,7 @@ msgstr "Pokaż ikony pulpitu"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "Czy menadżer plików MATE (Caja) rysuje ikony pulpitu."
+msgstr "Czy menedżer plików MATE (Caja) rysuje ikony pulpitu."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
@@ -905,7 +906,7 @@ msgstr "Przeźroczystość obrazka"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
-msgstr "Przeźroczystość z jaką rysowany jest obrazek tła."
+msgstr "Przezroczystość, z jaką rysowany jest obrazek tła."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
@@ -944,21 +945,21 @@ msgstr "Motyw używany do wyświetlania ikon plików."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
-msgstr "Włącz Dostępność"
+msgstr "Włącz dostępność"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr "Czy Aplikacje powinny posiadać wsparcie dostępności."
+msgstr "Czy aplikacje powinny posiadać wsparcie dostępności."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
-msgstr "Włącz Animacje"
+msgstr "Włącz animacje"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr "Czy animacje powinny być wyświetlane. Uwaga: jest to klucz globalny, zmieniający zachowanie menadżera okien, panelu itd."
+msgstr "Czy animacje powinny być wyświetlane. Uwaga: jest to klucz globalny, zmieniający zachowanie menedżera okien, panelu itd."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
@@ -976,7 +977,7 @@ msgstr "Czy można zmieniać akceleratory klawiszowe"
 msgid ""
 "Whether the user can dynamically type a new accelerator when positioned over"
 " an active menuitem."
-msgstr "Czy użytkownik może dynamicznie wpisać nowy akcelerator gdy kursor jest umieszczony ponad aktywnym elementem menu."
+msgstr "Czy użytkownik może dynamicznie wpisać nowy akcelerator, gdy kursor jest umieszczony ponad aktywnym elementem menu."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Toolbar Style"
@@ -1052,11 +1053,11 @@ msgstr "Motyw ikon używanych przez panel, Caja itd."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "Gtk+ Theme"
-msgstr "Motyw Gtk+"
+msgstr "Motyw GTK+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:28
 msgid "Basename of the default theme used by gtk+."
-msgstr "Nazwa bazowa domyślnego motywu używanego przez gtk+."
+msgstr "Nazwa bazowa domyślnego motywu używanego przez GTK+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "List of symbolic names and color equivalents"
@@ -1066,39 +1067,39 @@ msgstr "Lista nazw symbolicznych i odpowiedników koloru."
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
-msgstr "Separowana znakami '\\n' lista pozycji \"name:color\" zgodnie z ustawieniem 'gtk-color-scheme'"
+msgstr "Oddzielana znakami '\\n' lista pozycji \"name:color\" zgodnie z ustawieniem 'gtk-color-scheme'"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "Default font"
-msgstr "Domyślny font"
+msgstr "Domyślna czcionka"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the default font used by gtk+."
-msgstr "Nazwa domyślnego fontu używanego przez gtk+."
+msgstr "Nazwa domyślnej czcionki używanej przez GTK+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Preedit Style"
-msgstr "Styl Wstępnej Edycji dla Metody Wejścia GTK"
+msgstr "Styl wstępnej edycji dla metody wprowadzania GTK+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr "Nazwa GTK+ metody wejścia Stylu Wstępnej Edycji używanej przez gtk+."
+msgstr "Nazwa GTK+ metody wejścia stylu wstępnej edycji używanej przez GTK+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Status Style"
-msgstr "Style Statusu Metody Wejścia GTK"
+msgstr "Style stanu metody wprowadzania GTK+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr "Nazwa GTK+ metody wejścia Stylu Wstępnej Edycji używanej przez gtk+."
+msgstr "Nazwa GTK+ metody wejścia stylu wstępnej edycji używanej przez GTK+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "GTK IM Module"
-msgstr "Moduł Metody Wejścia GTK"
+msgstr "Moduł metody wprowadzania GTK+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:38
 msgid "Name of the input method module used by GTK+."
-msgstr "Nazwa metody wejścia modułu używana przez GTK+."
+msgstr "Nazwa modułu metody wprowadzania używana przez GTK+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 header bar"
@@ -1110,7 +1111,7 @@ msgid ""
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr "Czy wbudowane dialogi GTK+ takie jak wybór plików, kolorów lub fontów używają nagłówka w górnej części do pokazywania widżetów akcji, czy też obszaru akcji na dole. Ustawienie to nie zmienia zwyczajnych dialogów korzystających bezpośrednio z GtkDialog ani dialogów komunikatów."
+msgstr "Czy wbudowane dialogi GTK+, takie jak wybór plików, kolorów lub czcionek, używają nagłówka w górnej części do pokazywania widżetów akcji, czy też obszaru akcji na dole. Ustawienie to nie zmienia zwyczajnych dialogów korzystających bezpośrednio z GtkDialog ani dialogów komunikatów."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:41
 msgid "Use GTK3 overlay scrolling"
@@ -1124,36 +1125,36 @@ msgstr "Czy wbudowane okna przewijane GTK+ wykorzystują przewijanie nakładane.
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Enable Gtk toolkit-wide animations"
-msgstr "Włącz animacje w całym Gtk"
+msgstr "Włącz animacje w całym GTK+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Whether to enable toolkit-wide animations."
-msgstr "Czy włączyć animacje w całym Gtk."
+msgstr "Czy włączyć animacje w całym GTK+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Document font"
-msgstr "Font dokumentu"
+msgstr "Czcionka dokumentu"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid "Name of the default font used for reading documents."
-msgstr "Nazwa domyślnego fontu używanego w wyświetlanych dokumentach."
+msgstr "Nazwa domyślnej czcionki używanej w wyświetlanych dokumentach."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Monospace font"
-msgstr "Font o stałej szerokości znaków"
+msgstr "Czcionka o stałej szerokości znaków"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
-msgstr "Nazwa fontu monospaced (o stałej szerokości) używanego w miejscach takich jak terminal."
+msgstr "Nazwa czcionki monospaced (o stałej szerokości) używanej w miejscach takich jak terminal."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Use Custom Font"
-msgstr "Użyj własnej fontu"
+msgstr "Użyj własnej czcionki"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Czy używać własnego fontu w aplikacjach gtk+."
+msgstr "Czy używać własnej czcionki w aplikacjach GTK+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Status Bar on Right"
@@ -1183,7 +1184,7 @@ msgstr "Skrót klawiaturowy otwierający listwy menu."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Input Methods' menu"
-msgstr "Pokaż menu 'Metody Wprowadzania'"
+msgstr "Pokaż menu \"Metody wprowadzania\""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
@@ -1193,13 +1194,13 @@ msgstr "Czy menu kontekstowe dla wpisów i widoków tekstu powinny dawać możli
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Show the 'Unicode Control Character' menu"
-msgstr "Pokaż menu 'Unicode Control Character'"
+msgstr "Pokaż menu \"Znak sterowania Unicode\""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:60
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
-msgstr "Czy menu kontekstowe wpisów i widoków tekstu powinny dawać możliwość wstawiania znaków kontrolnych."
+msgstr "Czy menu kontekstowe wpisów i widoków tekstu powinny dawać możliwość wstawiania znaków sterowania."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Titlebar layout of GTK3 client-side decorated windows"
@@ -1212,7 +1213,7 @@ msgid ""
 " of right. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
-msgstr "To ustawienie determinuje które przyciski powinny zostać umieszczone na listwach tytułowych okien dekorowanych po stronie klientów i czy powinny być one umieszczane po stronie lewej czy prawej. Zobacz \"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout."
+msgstr "To ustawienie określa, które przyciski powinny zostać umieszczone na listwach tytułowych okien dekorowanych po stronie klientów i czy powinny być one umieszczane po stronie lewej czy prawej. Zobacz https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Only show mnemonics on when the Alt key is pressed"
@@ -1233,7 +1234,7 @@ msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr "Zablokuj użytkownikowi dostęp do terminala oraz uruchamiania poleceń z linii poleceń. Np. ustawienie tej opcji uniemożliwi dostęp do okna dialogowego \"Run Application\"."
+msgstr "Zablokuj użytkownikowi dostęp do terminala oraz uruchamiania poleceń z linii poleceń. Np. ustawienie tej opcji uniemożliwi dostęp do okna dialogowego \"Uruchom program\"."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
@@ -1243,7 +1244,7 @@ msgstr "Wyłącz zapis plików na dysk"
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr "Zablokuj użytkownikowi zapis plików na dysk. Np. ustawienie tej opcji wyłączy dostęp do okien dialogowych \"Save as\" we wszystkich aplikacjach."
+msgstr "Zablokuj użytkownikowi zapis plików na dysk. Np. ustawienie tej opcji wyłączy dostęp do okien dialogowych \"Zapisz jako\" we wszystkich aplikacjach."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
@@ -1253,7 +1254,7 @@ msgstr "Wyłącz drukowanie"
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr "Zablokuj użytkownikowi drukowanie. Np. ustawienie tej opcji wyłączy dostęp do okien dialogowych \"Print\" we wszystkich aplikacjach."
+msgstr "Zablokuj użytkownikowi drukowanie. Np. ustawienie tej opcji wyłączy dostęp do okien dialogowych \"Wydrukuj\" we wszystkich aplikacjach."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
@@ -1263,7 +1264,7 @@ msgstr "Wyłącz ustawienia drukowania"
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr "Zablokuj użytkownikowi modyfikację ustawień drukowania. Np. ustawienie tej opcji wyłączy dostęp do okien dialogowych \"Print Setup\" we wszystkich aplikacjach."
+msgstr "Zablokuj użytkownikowi modyfikację ustawień drukowania. Np. ustawienie tej opcji wyłączy dostęp do okien dialogowych \"Ustawienia wydruku\" we wszystkich aplikacjach."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
@@ -1273,7 +1274,7 @@ msgstr "Wyłącz przełączanie użytkowników"
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr "Zablokuj użytkownikowi przełączenie się na inne konto jeśli jego sesja jest aktywna."
+msgstr "Zablokuj użytkownikowi przełączenie się na inne konto, jeśli jego sesja jest aktywna."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
@@ -1399,7 +1400,7 @@ msgstr "Ustalaj położenie wskaźnika"
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr "Podświetl aktualną lokalizację wskaźnika gdy klawisz Control jest wciskany i zwalniany."
+msgstr "Podświetl obecne położenie wskaźnika, gdy klawisz Ctrl jest wciskany i zwalniany."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor theme"
@@ -1439,7 +1440,7 @@ msgstr "Włącz ESD"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
-msgstr "Włącz rozruch serwera dźwięku."
+msgstr "Włącz uruchamianie serwera dźwięku."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
@@ -1469,13 +1470,13 @@ msgstr "Czy odtwarzać dźwięki podczas zdarzeń wejścia."
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
-msgstr "Maksymalny wiek w dniach dla miniaturek w cache. Ustaw na -1 by wyłączyć czyszczenie."
+msgstr "Maksymalny wiek w dniach dla miniaturek w pamięci podręcznej. Ustaw na -1, by wyłączyć czyszczenie."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr "Maksymalna wielkość w megabajtach cache'u miniaturek. Ustaw na -1 by wyłączyć czyszczenie."
+msgstr "Maksymalna wielkość w megabajtach pamięci podręcznej miniaturek. Ustaw na -1, by wyłączyć czyszczenie."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
@@ -1485,7 +1486,7 @@ msgstr "Wyłącz wszystkie zewnętrzne programy tworzące miniatury."
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
-msgstr "Ustaw na true by wyłączyć zewnętrzne programy tworzące miniatury, bez względu na to, czy są one niezależnie włączone/wyłączone."
+msgstr "Ustaw na true, by wyłączyć zewnętrzne programy tworzące miniatury, bez względu na to, czy są one niezależnie włączone/wyłączone."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
