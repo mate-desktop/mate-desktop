@@ -364,13 +364,22 @@ position_window (MateRRLabeler  *labeler,
 {
 	GdkRectangle    workarea;
 	GdkRectangle    monitor;
+#if GTK_CHECK_VERSION (3, 22, 0)
+	GdkMonitor     *monitor_num;
+#else
 	int             monitor_num;
+#endif
 
 	get_work_area (labeler, &workarea);
+#if GTK_CHECK_VERSION (3, 22, 0)
+	monitor_num = gdk_display_get_monitor_at_point (gdk_screen_get_display (labeler->priv->screen), x, y);
+	gdk_monitor_get_geometry (monitor_num, &monitor);
+#else
 	monitor_num = gdk_screen_get_monitor_at_point (labeler->priv->screen, x, y);
 	gdk_screen_get_monitor_geometry (labeler->priv->screen,
                                          monitor_num,
                                          &monitor);
+#endif
 	gdk_rectangle_intersect (&monitor, &workarea, &workarea);
 
 	gtk_window_move (GTK_WINDOW (window), workarea.x, workarea.y);
