@@ -11,6 +11,7 @@
 # Felipe Rozelio <feliperozelio@gmail.com>, 2012
 # Felipe Rozelio <feliperozelio@gmail.com>, 2012,2016
 # Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2015
+# Jonatas da Silva Teixeira <jonatasteixeira@id.uff.br>, 2017
 # Lucas Mezêncio <lucas.mezencio@gmail.com>, 2015
 # Lucas Friederich <lucasalvarokedrines@gmail.com>, 2016
 # Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2014-2015
@@ -26,9 +27,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-25 17:50+0300\n"
-"PO-Revision-Date: 2017-09-19 11:02+0000\n"
-"Last-Translator: Felipe Rozelio <feliperozelio@gmail.com>\n"
+"POT-Creation-Date: 2017-11-28 10:24+0100\n"
+"PO-Revision-Date: 2017-11-01 22:09+0000\n"
+"Last-Translator: Jonatas da Silva Teixeira <jonatasteixeira@id.uff.br>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/mate/MATE/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,25 +51,25 @@ msgstr "Sobre o MATE"
 msgid "Learn more about MATE"
 msgstr "Saiba mais sobre o MATE"
 
-#: ../mate-about/mate-about.h:45
+#: ../mate-about/mate-about.h:43
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "O MATE provê um ambiente de trabalho intuitivo e atraente para os usuários do Linux usando metáforas tradicionais."
 
-#: ../mate-about/mate-about.h:48
+#: ../mate-about/mate-about.h:46
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "O MATE inclui a maior parte do que você vê no seu computador, incluindo o gerenciador de arquivos, visualizador de documentos, visualizador de imagens, menus, e muitos aplicativos."
 
-#: ../mate-about/mate-about.h:51
+#: ../mate-about/mate-about.h:49
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "O MATE é um ambiente de trabalho Livre, usável, estável e acessível para os sistemas operacionais derivados do Unix."
 
-#: ../mate-about/mate-about.h:54
+#: ../mate-about/mate-about.h:52
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -76,13 +77,13 @@ msgid ""
 "assurance."
 msgstr "O MATE é a continuação do projeto GNOME 2. Centenas de pessoas vêm contribuindo com código-fonte para o GNOME desde que ele foi iniciado em 1997; muitas mais vêm contribuindodo de outras maneiras importantes, incluindo traduções, documentação e controle de qualidade."
 
-#: ../mate-about/mate-about.h:58
+#: ../mate-about/mate-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "O GNOME 2 já foi o ambiente de trabalho mais popular para Linux, mas ele não está mais disponível... O MATE está aqui para prover aquele mesmo ambiente de trabalho para você!"
 
-#: ../mate-about/mate-about.h:61
+#: ../mate-about/mate-about.h:59
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -96,165 +97,6 @@ msgstr "O nome \"MATE\" vem da erva-mate, uma espécie de azevinho nativo das re
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Desconhecido"
-
-#: ../libmate-desktop/mate-aboutdialog.c:179
-msgid "Could not show link"
-msgstr "Não foi possível mostrar o link"
-
-#: ../libmate-desktop/mate-aboutdialog.c:235
-msgid "Program name"
-msgstr "Nome do programa"
-
-#: ../libmate-desktop/mate-aboutdialog.c:236
-msgid ""
-"The name of the program. If this is not set, it defaults to "
-"g_get_application_name()"
-msgstr "O nome do programa. Se não for definido, usa o padrão fornecido por g_get_application_name()"
-
-#: ../libmate-desktop/mate-aboutdialog.c:250
-msgid "Program version"
-msgstr "Versão do programa"
-
-#: ../libmate-desktop/mate-aboutdialog.c:251
-msgid "The version of the program"
-msgstr "A versão do programa"
-
-#: ../libmate-desktop/mate-aboutdialog.c:265
-msgid "Copyright string"
-msgstr "Texto de copyright"
-
-#: ../libmate-desktop/mate-aboutdialog.c:266
-msgid "Copyright information for the program"
-msgstr "Informações de copyright para o programa"
-
-#: ../libmate-desktop/mate-aboutdialog.c:283
-msgid "Comments string"
-msgstr "Comentários"
-
-#: ../libmate-desktop/mate-aboutdialog.c:284
-msgid "Comments about the program"
-msgstr "Comentários sobre o programa"
-
-#: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2157
-msgid "License"
-msgstr "Licença"
-
-#: ../libmate-desktop/mate-aboutdialog.c:303
-msgid "The license of the program"
-msgstr "A licença do programa"
-
-#: ../libmate-desktop/mate-aboutdialog.c:318
-msgid "Website URL"
-msgstr "URL do site"
-
-#: ../libmate-desktop/mate-aboutdialog.c:319
-msgid "The URL for the link to the website of the program"
-msgstr "A URL para o site do programa"
-
-#: ../libmate-desktop/mate-aboutdialog.c:334
-msgid "Website label"
-msgstr "Website"
-
-#: ../libmate-desktop/mate-aboutdialog.c:335
-msgid ""
-"The label for the link to the website of the program. If this is not set, it"
-" defaults to the URL"
-msgstr "O rótulo do link para o site do programa. Se não for definido, o padrão é a própria URL"
-
-#: ../libmate-desktop/mate-aboutdialog.c:351
-msgid "Authors"
-msgstr "Autores"
-
-#: ../libmate-desktop/mate-aboutdialog.c:352
-msgid "List of authors of the program"
-msgstr "Lista dos autores do programa"
-
-#: ../libmate-desktop/mate-aboutdialog.c:368
-msgid "Documenters"
-msgstr "Documentadores"
-
-#: ../libmate-desktop/mate-aboutdialog.c:369
-msgid "List of people documenting the program"
-msgstr "Lista de pessoas que documentaram o programa"
-
-#: ../libmate-desktop/mate-aboutdialog.c:385
-msgid "Artists"
-msgstr "Artistas"
-
-#: ../libmate-desktop/mate-aboutdialog.c:386
-msgid "List of people who have contributed artwork to the program"
-msgstr "Lista de pessoas que contribuíram com elementos de arte para o programa"
-
-#: ../libmate-desktop/mate-aboutdialog.c:403
-msgid "Translator credits"
-msgstr "Créditos de tradução"
-
-#: ../libmate-desktop/mate-aboutdialog.c:404
-msgid ""
-"Credits to the translators. This string should be marked as translatable"
-msgstr "Créditos aos tradutores. Esta frase deve ser marcada como traduzível"
-
-#: ../libmate-desktop/mate-aboutdialog.c:419
-msgid "Logo"
-msgstr "Logotipo"
-
-#: ../libmate-desktop/mate-aboutdialog.c:420
-msgid ""
-"A logo for the about box. If this is not set, it defaults to "
-"gtk_window_get_default_icon_list()"
-msgstr "Um logotipo para a caixa de diálogo Sobre. Se não for definido, usa o padrão fornecido por gtk_window_get_default_icon_list()"
-
-#: ../libmate-desktop/mate-aboutdialog.c:435
-msgid "Logo Icon Name"
-msgstr "Nome do ícone do logotipo"
-
-#: ../libmate-desktop/mate-aboutdialog.c:436
-msgid "A named icon to use as the logo for the about box."
-msgstr "Um ícone nomeado para ser usado como logotipo na caixa de diálogo Sobre."
-
-#: ../libmate-desktop/mate-aboutdialog.c:449
-msgid "Wrap license"
-msgstr "Quebrar o texto da licença"
-
-#: ../libmate-desktop/mate-aboutdialog.c:450
-msgid "Whether to wrap the license text."
-msgstr "Se o texto da licença deve ser quebrado em várias linhas."
-
-#. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:541
-msgid "C_redits"
-msgstr "C_réditos"
-
-#. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:555
-msgid "_License"
-msgstr "_Licença"
-
-#: ../libmate-desktop/mate-aboutdialog.c:829
-#, c-format
-msgid "About %s"
-msgstr "Sobre %s"
-
-#: ../libmate-desktop/mate-aboutdialog.c:2081
-msgid "Credits"
-msgstr "Créditos"
-
-#: ../libmate-desktop/mate-aboutdialog.c:2109
-msgid "Written by"
-msgstr "Escrito por"
-
-#: ../libmate-desktop/mate-aboutdialog.c:2112
-msgid "Documented by"
-msgstr "Documentado por"
-
-#: ../libmate-desktop/mate-aboutdialog.c:2124
-msgid "Translated by"
-msgstr "Traduzido por"
-
-#: ../libmate-desktop/mate-aboutdialog.c:2128
-msgid "Artwork by"
-msgstr "Elementos de arte por"
 
 #: ../libmate-desktop/mate-colorbutton.c:154
 msgid "Use alpha"
@@ -278,7 +120,7 @@ msgid "Pick a Color"
 msgstr "Escolha uma cor"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:294
+#: ../libmate-desktop/mate-colorsel.c:285
 msgid "Current Color"
 msgstr "Cor atual"
 
@@ -287,7 +129,7 @@ msgid "The selected color"
 msgstr "A cor selecionada"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:301
+#: ../libmate-desktop/mate-colorsel.c:292
 msgid "Current Alpha"
 msgstr "Canal alfa atual"
 
@@ -299,157 +141,157 @@ msgstr "O valor de opacidade selecionado (0 totalmente transparente, 65535 total
 msgid "Received invalid color data\n"
 msgstr "Foram recebidos dados inválidos de cor\n"
 
-#: ../libmate-desktop/mate-colorsel.c:280
+#: ../libmate-desktop/mate-colorsel.c:271
 msgid "Has Opacity Control"
 msgstr "Tem controle de opacidade"
 
-#: ../libmate-desktop/mate-colorsel.c:281
+#: ../libmate-desktop/mate-colorsel.c:272
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Se o seletor de cores deve permitir definir a opacidade"
 
-#: ../libmate-desktop/mate-colorsel.c:287
+#: ../libmate-desktop/mate-colorsel.c:278
 msgid "Has palette"
 msgstr "Tem paleta"
 
-#: ../libmate-desktop/mate-colorsel.c:288
+#: ../libmate-desktop/mate-colorsel.c:279
 msgid "Whether a palette should be used"
 msgstr "Se uma paleta deve ser usada"
 
-#: ../libmate-desktop/mate-colorsel.c:295
+#: ../libmate-desktop/mate-colorsel.c:286
 msgid "The current color"
 msgstr "A cor atual"
 
-#: ../libmate-desktop/mate-colorsel.c:302
+#: ../libmate-desktop/mate-colorsel.c:293
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "O valor atual de opacidade (0 totalmente transparente, 65535 totalmente opaco)"
 
-#: ../libmate-desktop/mate-colorsel.c:308
+#: ../libmate-desktop/mate-colorsel.c:299
 msgid "HEX String"
 msgstr "Texto Hexadecimal"
 
-#: ../libmate-desktop/mate-colorsel.c:309
+#: ../libmate-desktop/mate-colorsel.c:300
 msgid "The hexadecimal string of current color"
 msgstr "O texto hexadecimal para a cor atual"
 
-#: ../libmate-desktop/mate-colorsel.c:357
+#: ../libmate-desktop/mate-colorsel.c:348
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "Selecione a cor desejada no anel exterior. Selecione a escuridão ou luminosidade desta cor usando o triângulo no interior."
 
-#: ../libmate-desktop/mate-colorsel.c:381
+#: ../libmate-desktop/mate-colorsel.c:372
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "Clique no conta-gotas, e em seguida em uma cor em qualquer ponto da tela para selecionar aquela cor."
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: ../libmate-desktop/mate-colorsel.c:381
 msgid "_Hue:"
 msgstr "_Tonalidade:"
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:382
 msgid "Position on the color wheel."
 msgstr "Posição no disco de cores."
 
-#: ../libmate-desktop/mate-colorsel.c:393
+#: ../libmate-desktop/mate-colorsel.c:384
 msgid "_Saturation:"
 msgstr "_Saturação:"
 
-#: ../libmate-desktop/mate-colorsel.c:394
+#: ../libmate-desktop/mate-colorsel.c:385
 msgid "\"Deepness\" of the color."
 msgstr "\"Profundidade\" da cor."
 
-#: ../libmate-desktop/mate-colorsel.c:395
+#: ../libmate-desktop/mate-colorsel.c:386
 msgid "_Value:"
 msgstr "_Valor:"
 
-#: ../libmate-desktop/mate-colorsel.c:396
+#: ../libmate-desktop/mate-colorsel.c:387
 msgid "Brightness of the color."
 msgstr "Brilho da cor."
 
-#: ../libmate-desktop/mate-colorsel.c:397
+#: ../libmate-desktop/mate-colorsel.c:388
 msgid "_Red:"
 msgstr "_Vermelho:"
 
-#: ../libmate-desktop/mate-colorsel.c:398
+#: ../libmate-desktop/mate-colorsel.c:389
 msgid "Amount of red light in the color."
 msgstr "Quantidade de vermelho na cor."
 
-#: ../libmate-desktop/mate-colorsel.c:399
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "_Green:"
 msgstr "_Verde:"
 
-#: ../libmate-desktop/mate-colorsel.c:400
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "Amount of green light in the color."
 msgstr "Quantidade de verde na cor."
 
-#: ../libmate-desktop/mate-colorsel.c:401
+#: ../libmate-desktop/mate-colorsel.c:392
 msgid "_Blue:"
 msgstr "_Azul:"
 
-#: ../libmate-desktop/mate-colorsel.c:402
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "Amount of blue light in the color."
 msgstr "Quantidade de azul na cor."
 
-#: ../libmate-desktop/mate-colorsel.c:405
+#: ../libmate-desktop/mate-colorsel.c:396
 msgid "Op_acity:"
 msgstr "Op_acidade:"
 
-#: ../libmate-desktop/mate-colorsel.c:416
-#: ../libmate-desktop/mate-colorsel.c:426
+#: ../libmate-desktop/mate-colorsel.c:407
+#: ../libmate-desktop/mate-colorsel.c:417
 msgid "Transparency of the color."
 msgstr "Transparência da cor."
 
-#: ../libmate-desktop/mate-colorsel.c:433
+#: ../libmate-desktop/mate-colorsel.c:424
 msgid "Color _name:"
 msgstr "_Nome da cor:"
 
-#: ../libmate-desktop/mate-colorsel.c:451
+#: ../libmate-desktop/mate-colorsel.c:442
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "Você pode informar neste campo um valor hexadecimal de cor no estilo HTML, ou simplesmente um nome de cor tal como 'orange'."
 
-#: ../libmate-desktop/mate-colorsel.c:481
+#: ../libmate-desktop/mate-colorsel.c:472
 msgid "_Palette:"
 msgstr "_Paleta:"
 
-#: ../libmate-desktop/mate-colorsel.c:514
+#: ../libmate-desktop/mate-colorsel.c:505
 msgid "Color Wheel"
 msgstr "Disco de cores"
 
-#: ../libmate-desktop/mate-colorsel.c:971
+#: ../libmate-desktop/mate-colorsel.c:962
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "A cor selecionada anteriormente, para comparação com a cor que você está selecionando agora. Você pode arrastar essa cor para uma posição na paleta, ou selecioná-la como cor atual arrastando-a para a outra amostra de cor ao lado."
 
-#: ../libmate-desktop/mate-colorsel.c:974
+#: ../libmate-desktop/mate-colorsel.c:965
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "A cor que você escolheu. Você pode arrastar esta cor para uma posição na paleta, salvando-a para uso futuro."
 
-#: ../libmate-desktop/mate-colorsel.c:979
+#: ../libmate-desktop/mate-colorsel.c:970
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "A cor selecionada anteriormente, para comparação com a cor que você está selecionando agora."
 
-#: ../libmate-desktop/mate-colorsel.c:982
+#: ../libmate-desktop/mate-colorsel.c:973
 msgid "The color you've chosen."
 msgstr "A cor que você escolheu."
 
-#: ../libmate-desktop/mate-colorsel.c:1366
+#: ../libmate-desktop/mate-colorsel.c:1362
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1371
+#: ../libmate-desktop/mate-colorsel.c:1367
 msgid "_Save color here"
 msgstr "_Salvar cor aqui"
 
-#: ../libmate-desktop/mate-colorsel.c:1591
+#: ../libmate-desktop/mate-colorsel.c:1587
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -504,7 +346,7 @@ msgstr "Erro ao voltar no arquivo '%s': %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3538
+#: ../libmate-desktop/mate-desktop-item.c:3547
 msgid "No name"
 msgstr "Nenhum nome"
 
@@ -523,32 +365,32 @@ msgstr "Não foi possível localizar o arquivo '%s'"
 msgid "No filename to save to"
 msgstr "Nenhum nome de arquivo para salvar"
 
-#: ../libmate-desktop/mate-desktop-item.c:1840
+#: ../libmate-desktop/mate-desktop-item.c:1842
 #, c-format
 msgid "Starting %s"
 msgstr "Iniciando %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2077
+#: ../libmate-desktop/mate-desktop-item.c:2079
 #, c-format
 msgid "No URL to launch"
 msgstr "Nenhuma URL para abrir"
 
-#: ../libmate-desktop/mate-desktop-item.c:2093
+#: ../libmate-desktop/mate-desktop-item.c:2102
 #, c-format
 msgid "Not a launchable item"
 msgstr "Não é um item executável"
 
-#: ../libmate-desktop/mate-desktop-item.c:2103
+#: ../libmate-desktop/mate-desktop-item.c:2112
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Nenhum comando (Exec) para realizar"
 
-#: ../libmate-desktop/mate-desktop-item.c:2116
+#: ../libmate-desktop/mate-desktop-item.c:2125
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Comando (Exec) inválido para realizar"
 
-#: ../libmate-desktop/mate-desktop-item.c:3595
+#: ../libmate-desktop/mate-desktop-item.c:3604
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Codificação desconhecida de: %s"
@@ -682,7 +524,7 @@ msgstr "o tamanho virtual requisitado não se encaixa no tamanho disponível: re
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:410
+#: ../libmate-desktop/mate-rr-labeler.c:420
 #, c-format
 msgid "Mirror Screens"
 msgstr "Telas Espelhadas"
@@ -1221,10 +1063,34 @@ msgid ""
 msgstr "Esta configuração determina quais botões devem aparecer na barra de título de janelas decoradas no lado do cliente, e se eles devem ser posicionados do lado esquerdo ou direito. Consulte https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:63
+msgid "Use a global menubar for displaying application menus"
+msgstr "Use uma barra de menu global para exibir menus de aplicativos"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:64
+msgid ""
+"This setting determines where application menu will be displayed - in a "
+"window or on a panel with MenuModel protocol. See "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-app-menu."
+msgstr "Esta configuração determina onde o menu do aplicativo será exibido - em uma janela ou em um painel com o protocolo MenuModel (Modelo de menu). Veja https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-app-menu."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:65
+msgid "Use a global menubar for displaying window menubars"
+msgstr "Use uma barra de menu global para exibir uma janela de barras de menu"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:66
+msgid ""
+"This setting determines where window menubars will be displayed - in a "
+"window or on a panel with MenuModel protocol. See "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-menubar."
+msgstr "Esta configuração determina onde as barras do menu da janela serão exibidas - em uma janela ou em um painel com o protocolo MenuModel (Modelo de Menu). Veja https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-menubar."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:67
 msgid "Only show mnemonics on when the Alt key is pressed"
 msgstr "Exibir mnemônicos apenas quando a tecla Alt for pressionada"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:64
+#: ../schemas/org.mate.interface.gschema.xml.in.h:68
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."

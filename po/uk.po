@@ -11,13 +11,14 @@
 # zubr139, 2012
 # zubr139, 2012-2013
 # Микола Ткач <znadibnyk@gmail.com>, 2014-2016
+# Микола Ткач <znadibnyk@gmail.com>, 2017
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-25 17:50+0300\n"
-"PO-Revision-Date: 2017-09-19 11:02+0000\n"
+"POT-Creation-Date: 2017-11-28 10:24+0100\n"
+"PO-Revision-Date: 2017-10-23 17:30+0000\n"
 "Last-Translator: Микола Ткач <znadibnyk@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/mate/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -40,25 +41,25 @@ msgstr "Про MATE"
 msgid "Learn more about MATE"
 msgstr "Дізнайтеся більше про MATE"
 
-#: ../mate-about/mate-about.h:45
+#: ../mate-about/mate-about.h:43
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE надає інтуїтивно зрозуміле та привабливе робоче оточення для Linux користувачів, що використовують традиційну концепцію."
 
-#: ../mate-about/mate-about.h:48
+#: ../mate-about/mate-about.h:46
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr "MATE містить більшу частину того, що Ви бачите на своєму комп’ютері, включаючи керівник файлами, переглядачі документів та зображень, меню і багато иньших додатків"
 
-#: ../mate-about/mate-about.h:51
+#: ../mate-about/mate-about.h:49
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE - це Вільне, зручне та доступне робоче середовище для Unix-подібних операційних систем."
 
-#: ../mate-about/mate-about.h:54
+#: ../mate-about/mate-about.h:52
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -66,13 +67,13 @@ msgid ""
 "assurance."
 msgstr "MATE — відгалуження від розробки GNOME 2. Сотні людей вклали код у GNOME з миті його старту в 1997; а багато иньших добродіїв зробили внесок у иньші важливі напрямки, включаючи переклади, документацію та запоруку якости."
 
-#: ../mate-about/mate-about.h:58
+#: ../mate-about/mate-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 був найпопулярнішим робочим середовищем для Linux, але більше він не розробляється... Тепер є MATE для надання Вам того самого робочого середовища!"
 
-#: ../mate-about/mate-about.h:61
+#: ../mate-about/mate-about.h:59
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -86,165 +87,6 @@ msgstr "Ім’я «MATE» йде від мате́, виду падубу па�
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Невідомий"
-
-#: ../libmate-desktop/mate-aboutdialog.c:179
-msgid "Could not show link"
-msgstr "Не вдається відкрити посилання"
-
-#: ../libmate-desktop/mate-aboutdialog.c:235
-msgid "Program name"
-msgstr "Назва проґрами"
-
-#: ../libmate-desktop/mate-aboutdialog.c:236
-msgid ""
-"The name of the program. If this is not set, it defaults to "
-"g_get_application_name()"
-msgstr "Назва проґрами. Якщо це пропущено, то стандартно використовуватиметься g_get_application_name()"
-
-#: ../libmate-desktop/mate-aboutdialog.c:250
-msgid "Program version"
-msgstr "Версія проґрами"
-
-#: ../libmate-desktop/mate-aboutdialog.c:251
-msgid "The version of the program"
-msgstr "Версія проґрами"
-
-#: ../libmate-desktop/mate-aboutdialog.c:265
-msgid "Copyright string"
-msgstr "Авторські права"
-
-#: ../libmate-desktop/mate-aboutdialog.c:266
-msgid "Copyright information for the program"
-msgstr "Інформація про авторські права на проґраму"
-
-#: ../libmate-desktop/mate-aboutdialog.c:283
-msgid "Comments string"
-msgstr "Коментарі"
-
-#: ../libmate-desktop/mate-aboutdialog.c:284
-msgid "Comments about the program"
-msgstr "Коментарі про проґраму"
-
-#: ../libmate-desktop/mate-aboutdialog.c:302
-#: ../libmate-desktop/mate-aboutdialog.c:2157
-msgid "License"
-msgstr "Ліцензія"
-
-#: ../libmate-desktop/mate-aboutdialog.c:303
-msgid "The license of the program"
-msgstr "Ліцензія проґрами"
-
-#: ../libmate-desktop/mate-aboutdialog.c:318
-msgid "Website URL"
-msgstr "Адреса веб-сайту"
-
-#: ../libmate-desktop/mate-aboutdialog.c:319
-msgid "The URL for the link to the website of the program"
-msgstr "URL-адреса для посилання на веб-сайт проґрами"
-
-#: ../libmate-desktop/mate-aboutdialog.c:334
-msgid "Website label"
-msgstr "Мітка веб-сайту"
-
-#: ../libmate-desktop/mate-aboutdialog.c:335
-msgid ""
-"The label for the link to the website of the program. If this is not set, it"
-" defaults to the URL"
-msgstr "Мітка для посилання на веб-сайт застосунку. Якщо це не задано,використовуватиметься стандартна URL."
-
-#: ../libmate-desktop/mate-aboutdialog.c:351
-msgid "Authors"
-msgstr "Автори"
-
-#: ../libmate-desktop/mate-aboutdialog.c:352
-msgid "List of authors of the program"
-msgstr "Перелік авторів застосунку"
-
-#: ../libmate-desktop/mate-aboutdialog.c:368
-msgid "Documenters"
-msgstr "Автори документації"
-
-#: ../libmate-desktop/mate-aboutdialog.c:369
-msgid "List of people documenting the program"
-msgstr "Перелік авторів документації до застосунку"
-
-#: ../libmate-desktop/mate-aboutdialog.c:385
-msgid "Artists"
-msgstr "Митці"
-
-#: ../libmate-desktop/mate-aboutdialog.c:386
-msgid "List of people who have contributed artwork to the program"
-msgstr "Перелік людей, які брали участь в оздобленні проґрами"
-
-#: ../libmate-desktop/mate-aboutdialog.c:403
-msgid "Translator credits"
-msgstr "Інформація про перекладачів"
-
-#: ../libmate-desktop/mate-aboutdialog.c:404
-msgid ""
-"Credits to the translators. This string should be marked as translatable"
-msgstr "Інформація про перекладачів. Цей рядок має бути позначеним до перекладу"
-
-#: ../libmate-desktop/mate-aboutdialog.c:419
-msgid "Logo"
-msgstr "Емблема"
-
-#: ../libmate-desktop/mate-aboutdialog.c:420
-msgid ""
-"A logo for the about box. If this is not set, it defaults to "
-"gtk_window_get_default_icon_list()"
-msgstr "Лоґо для опису коробки. Якщо це не задано, стандартно використовуватиметься gtk_window_get_default_icon_list()"
-
-#: ../libmate-desktop/mate-aboutdialog.c:435
-msgid "Logo Icon Name"
-msgstr "Назва піктограми емблеми"
-
-#: ../libmate-desktop/mate-aboutdialog.c:436
-msgid "A named icon to use as the logo for the about box."
-msgstr "Названа піктограма, що використовується для показу емблеми опису про коробку."
-
-#: ../libmate-desktop/mate-aboutdialog.c:449
-msgid "Wrap license"
-msgstr "Обкладинка ліцензії"
-
-#: ../libmate-desktop/mate-aboutdialog.c:450
-msgid "Whether to wrap the license text."
-msgstr "Обернений текст ліцензії."
-
-#. Add the credits button
-#: ../libmate-desktop/mate-aboutdialog.c:541
-msgid "C_redits"
-msgstr "Т_ворці"
-
-#. Add the license button
-#: ../libmate-desktop/mate-aboutdialog.c:555
-msgid "_License"
-msgstr "_Ліцензія"
-
-#: ../libmate-desktop/mate-aboutdialog.c:829
-#, c-format
-msgid "About %s"
-msgstr "Про %s"
-
-#: ../libmate-desktop/mate-aboutdialog.c:2081
-msgid "Credits"
-msgstr "Інформація про творців"
-
-#: ../libmate-desktop/mate-aboutdialog.c:2109
-msgid "Written by"
-msgstr "Автори"
-
-#: ../libmate-desktop/mate-aboutdialog.c:2112
-msgid "Documented by"
-msgstr "Автори документації"
-
-#: ../libmate-desktop/mate-aboutdialog.c:2124
-msgid "Translated by"
-msgstr "Перекладачі"
-
-#: ../libmate-desktop/mate-aboutdialog.c:2128
-msgid "Artwork by"
-msgstr "Художники"
 
 #: ../libmate-desktop/mate-colorbutton.c:154
 msgid "Use alpha"
@@ -268,7 +110,7 @@ msgid "Pick a Color"
 msgstr "Виберіть колір"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:294
+#: ../libmate-desktop/mate-colorsel.c:285
 msgid "Current Color"
 msgstr "Поточний колір"
 
@@ -277,7 +119,7 @@ msgid "The selected color"
 msgstr "Обраний колір"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:301
+#: ../libmate-desktop/mate-colorsel.c:292
 msgid "Current Alpha"
 msgstr "Поточна прозорість кольору"
 
@@ -289,157 +131,157 @@ msgstr "Обране значення непрозорости (0 - повніс
 msgid "Received invalid color data\n"
 msgstr "Отримано некоректні дані кольору\n"
 
-#: ../libmate-desktop/mate-colorsel.c:280
+#: ../libmate-desktop/mate-colorsel.c:271
 msgid "Has Opacity Control"
 msgstr "Є контроль над прозорістю"
 
-#: ../libmate-desktop/mate-colorsel.c:281
+#: ../libmate-desktop/mate-colorsel.c:272
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Чи дозволяє обирач кольору встановлювати рівень непрозорости"
 
-#: ../libmate-desktop/mate-colorsel.c:287
+#: ../libmate-desktop/mate-colorsel.c:278
 msgid "Has palette"
 msgstr "Наявність палітри"
 
-#: ../libmate-desktop/mate-colorsel.c:288
+#: ../libmate-desktop/mate-colorsel.c:279
 msgid "Whether a palette should be used"
 msgstr "Чи використовувати палітру кольорів"
 
-#: ../libmate-desktop/mate-colorsel.c:295
+#: ../libmate-desktop/mate-colorsel.c:286
 msgid "The current color"
 msgstr "Поточний колір"
 
-#: ../libmate-desktop/mate-colorsel.c:302
+#: ../libmate-desktop/mate-colorsel.c:293
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Обране значення непрозорости (0 - повністю прозорий, 65535 - повністю непрозорий)"
 
-#: ../libmate-desktop/mate-colorsel.c:308
+#: ../libmate-desktop/mate-colorsel.c:299
 msgid "HEX String"
 msgstr "Шістнідцятковий рядок"
 
-#: ../libmate-desktop/mate-colorsel.c:309
+#: ../libmate-desktop/mate-colorsel.c:300
 msgid "The hexadecimal string of current color"
 msgstr "Шістнадцятковий рядок поточного кольору"
 
-#: ../libmate-desktop/mate-colorsel.c:357
+#: ../libmate-desktop/mate-colorsel.c:348
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "Оберіть колір із зовнішнього кільця. Для вибору світлішого або темнішого віддтінку використовуйте внутрішній трикутник."
 
-#: ../libmate-desktop/mate-colorsel.c:381
+#: ../libmate-desktop/mate-colorsel.c:372
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "Натисніть на \"піпетку\" для вибору кольору з будь-якої частини екрану."
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: ../libmate-desktop/mate-colorsel.c:381
 msgid "_Hue:"
 msgstr "В_ідтінок:"
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:382
 msgid "Position on the color wheel."
 msgstr "Позиція на кільці кольорів."
 
-#: ../libmate-desktop/mate-colorsel.c:393
+#: ../libmate-desktop/mate-colorsel.c:384
 msgid "_Saturation:"
 msgstr "Н_асиченість:"
 
-#: ../libmate-desktop/mate-colorsel.c:394
+#: ../libmate-desktop/mate-colorsel.c:385
 msgid "\"Deepness\" of the color."
 msgstr "Насиченість кольору."
 
-#: ../libmate-desktop/mate-colorsel.c:395
+#: ../libmate-desktop/mate-colorsel.c:386
 msgid "_Value:"
 msgstr "_Значення"
 
-#: ../libmate-desktop/mate-colorsel.c:396
+#: ../libmate-desktop/mate-colorsel.c:387
 msgid "Brightness of the color."
 msgstr "Яскравість кольору."
 
-#: ../libmate-desktop/mate-colorsel.c:397
+#: ../libmate-desktop/mate-colorsel.c:388
 msgid "_Red:"
 msgstr "_Червоний:"
 
-#: ../libmate-desktop/mate-colorsel.c:398
+#: ../libmate-desktop/mate-colorsel.c:389
 msgid "Amount of red light in the color."
 msgstr "Кількість червоного відтінку в кольорі."
 
-#: ../libmate-desktop/mate-colorsel.c:399
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "_Green:"
 msgstr "_Зелений:"
 
-#: ../libmate-desktop/mate-colorsel.c:400
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "Amount of green light in the color."
 msgstr "Кількість зеленого відтінку в кольорі."
 
-#: ../libmate-desktop/mate-colorsel.c:401
+#: ../libmate-desktop/mate-colorsel.c:392
 msgid "_Blue:"
 msgstr "_Синій:"
 
-#: ../libmate-desktop/mate-colorsel.c:402
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "Amount of blue light in the color."
 msgstr "Кількість синього відтінку в кольорі."
 
-#: ../libmate-desktop/mate-colorsel.c:405
+#: ../libmate-desktop/mate-colorsel.c:396
 msgid "Op_acity:"
 msgstr "Н_епрозорість:"
 
-#: ../libmate-desktop/mate-colorsel.c:416
-#: ../libmate-desktop/mate-colorsel.c:426
+#: ../libmate-desktop/mate-colorsel.c:407
+#: ../libmate-desktop/mate-colorsel.c:417
 msgid "Transparency of the color."
 msgstr "Рівень прозорости кольору."
 
-#: ../libmate-desktop/mate-colorsel.c:433
+#: ../libmate-desktop/mate-colorsel.c:424
 msgid "Color _name:"
 msgstr "_Назва кольору:"
 
-#: ../libmate-desktop/mate-colorsel.c:451
+#: ../libmate-desktop/mate-colorsel.c:442
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "Ви можете увести або шістнадцяткове значення кольору(в HTML стилі), або його ім'я, наприклад, \"orange\"."
 
-#: ../libmate-desktop/mate-colorsel.c:481
+#: ../libmate-desktop/mate-colorsel.c:472
 msgid "_Palette:"
 msgstr "_Палітра:"
 
-#: ../libmate-desktop/mate-colorsel.c:514
+#: ../libmate-desktop/mate-colorsel.c:505
 msgid "Color Wheel"
 msgstr "Кільце кольорів"
 
-#: ../libmate-desktop/mate-colorsel.c:971
+#: ../libmate-desktop/mate-colorsel.c:962
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "Обраний раніше колір для порівняння з кольором, що обраний зараз. Ви можете перетягнути цей колір на палітру кольорів або обрати цей колір як поточний, перетягнувши його на колір збоку."
 
-#: ../libmate-desktop/mate-colorsel.c:974
+#: ../libmate-desktop/mate-colorsel.c:965
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "Обраний колір. Ви можете перетягнути його на елемент палітри кольорів для збереження його і використання в майбутньому. "
 
-#: ../libmate-desktop/mate-colorsel.c:979
+#: ../libmate-desktop/mate-colorsel.c:970
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Обраний раніше колір для порівняння з кольором, що обраний зараз."
 
-#: ../libmate-desktop/mate-colorsel.c:982
+#: ../libmate-desktop/mate-colorsel.c:973
 msgid "The color you've chosen."
 msgstr "Обраний Вами колір."
 
-#: ../libmate-desktop/mate-colorsel.c:1366
+#: ../libmate-desktop/mate-colorsel.c:1362
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1371
+#: ../libmate-desktop/mate-colorsel.c:1367
 msgid "_Save color here"
 msgstr "_Зберегти колір тут"
 
-#: ../libmate-desktop/mate-colorsel.c:1591
+#: ../libmate-desktop/mate-colorsel.c:1587
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -494,7 +336,7 @@ msgstr "Помилка перемотування файлу \"%s\": %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3538
+#: ../libmate-desktop/mate-desktop-item.c:3547
 msgid "No name"
 msgstr "Немає назви"
 
@@ -513,32 +355,32 @@ msgstr "Не вдається знайти файл «%s»"
 msgid "No filename to save to"
 msgstr "Немає назви файлу для збереження"
 
-#: ../libmate-desktop/mate-desktop-item.c:1840
+#: ../libmate-desktop/mate-desktop-item.c:1842
 #, c-format
 msgid "Starting %s"
 msgstr "Запуск %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2077
+#: ../libmate-desktop/mate-desktop-item.c:2079
 #, c-format
 msgid "No URL to launch"
 msgstr "Немає URL для запуску"
 
-#: ../libmate-desktop/mate-desktop-item.c:2093
+#: ../libmate-desktop/mate-desktop-item.c:2102
 #, c-format
 msgid "Not a launchable item"
 msgstr "Елемент не можна запускати"
 
-#: ../libmate-desktop/mate-desktop-item.c:2103
+#: ../libmate-desktop/mate-desktop-item.c:2112
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Немає команди для запуску"
 
-#: ../libmate-desktop/mate-desktop-item.c:2116
+#: ../libmate-desktop/mate-desktop-item.c:2125
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Неправильна команда для запуску"
 
-#: ../libmate-desktop/mate-desktop-item.c:3595
+#: ../libmate-desktop/mate-desktop-item.c:3604
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Невідоме кодування %s"
@@ -672,7 +514,7 @@ msgstr "потрібний віртуальний розмір не вміщує
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:410
+#: ../libmate-desktop/mate-rr-labeler.c:420
 #, c-format
 msgid "Mirror Screens"
 msgstr "Дублювати монітори"
@@ -1211,10 +1053,34 @@ msgid ""
 msgstr "Ця опція визначає наявність кнопок, що слід відображати у заголовках вікон, що використовують декорації на стороні клієнта, а також бік, де вони знаходитимуться. Для довідки див. https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:63
+msgid "Use a global menubar for displaying application menus"
+msgstr "Використовувати глобальне меню для відображення меню проґрам"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:64
+msgid ""
+"This setting determines where application menu will be displayed - in a "
+"window or on a panel with MenuModel protocol. See "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-app-menu."
+msgstr "Дане налаштування визначає спосіб відображення меню проґрам - у вікні або на панелі за допомогою протоколу MenuModel. Див. https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-app-menu."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:65
+msgid "Use a global menubar for displaying window menubars"
+msgstr "Використовувати глобальне меню для відображення меню вікон"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:66
+msgid ""
+"This setting determines where window menubars will be displayed - in a "
+"window or on a panel with MenuModel protocol. See "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-menubar."
+msgstr "Дане налаштування визначає спосіб відображення меню вікон - у вікні або на панелі за допомогою протоколу MenuModel. Див. https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-menubar."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:67
 msgid "Only show mnemonics on when the Alt key is pressed"
 msgstr "Показувати мнемоніки лише коли клявіша Alt натиснена"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:64
+#: ../schemas/org.mate.interface.gschema.xml.in.h:68
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
