@@ -34,7 +34,7 @@ const char* website = "http://www.mate-desktop.org/";
 const char* copyright =  ""
     "Copyright © 1997-2011 GNOME developers\n"
     "Copyright © 2011 Perberos\n"
-    "Copyright © 2012-2017 MATE developers";
+    "Copyright © 2012-2018 MATE developers";
 
 /* Increment comments_count if you add other comments. This will be
  * used to choose a random comment. */
