@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 10:24+0100\n"
-"PO-Revision-Date: 2017-11-14 11:51+0000\n"
-"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
+"POT-Creation-Date: 2018-01-09 21:49+0300\n"
+"PO-Revision-Date: 2018-01-09 18:50+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Korean (http://www.transifex.com/mate/MATE/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -106,7 +106,7 @@ msgid "Pick a Color"
 msgstr "색상 선택"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:285
+#: ../libmate-desktop/mate-colorsel.c:286
 msgid "Current Color"
 msgstr "현재 색상"
 
@@ -115,7 +115,7 @@ msgid "The selected color"
 msgstr "선택한 색상"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:292
+#: ../libmate-desktop/mate-colorsel.c:293
 msgid "Current Alpha"
 msgstr "현재 알파 값"
 
@@ -127,157 +127,157 @@ msgstr "선택한 불투명 값(0: 완전 투명, 65535: 완전 불투명)"
 msgid "Received invalid color data\n"
 msgstr "잘못된 색상 데이터를 받았습니다\n"
 
-#: ../libmate-desktop/mate-colorsel.c:271
+#: ../libmate-desktop/mate-colorsel.c:272
 msgid "Has Opacity Control"
 msgstr "불투명 컨트롤 포함"
 
-#: ../libmate-desktop/mate-colorsel.c:272
+#: ../libmate-desktop/mate-colorsel.c:273
 msgid "Whether the color selector should allow setting opacity"
 msgstr "색상 선택기에서 불투명도를 설정할 수 있는지의 여부"
 
-#: ../libmate-desktop/mate-colorsel.c:278
+#: ../libmate-desktop/mate-colorsel.c:279
 msgid "Has palette"
 msgstr "팔레트 포함"
 
-#: ../libmate-desktop/mate-colorsel.c:279
+#: ../libmate-desktop/mate-colorsel.c:280
 msgid "Whether a palette should be used"
 msgstr "팔레트를 사용할지 여부"
 
-#: ../libmate-desktop/mate-colorsel.c:286
+#: ../libmate-desktop/mate-colorsel.c:287
 msgid "The current color"
 msgstr "현재 색상"
 
-#: ../libmate-desktop/mate-colorsel.c:293
+#: ../libmate-desktop/mate-colorsel.c:294
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "현재 불투명 값(0: 완전 투명, 65535: 완전 불투명)"
 
-#: ../libmate-desktop/mate-colorsel.c:299
+#: ../libmate-desktop/mate-colorsel.c:300
 msgid "HEX String"
 msgstr "16진수 문자열"
 
-#: ../libmate-desktop/mate-colorsel.c:300
+#: ../libmate-desktop/mate-colorsel.c:301
 msgid "The hexadecimal string of current color"
 msgstr "현재 색상의 16진수 문자열 "
 
-#: ../libmate-desktop/mate-colorsel.c:348
+#: ../libmate-desktop/mate-colorsel.c:349
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "링 외부에서 원하는 색상을 선택하십시오. 삼각형 안에서 어두움 또는 밝음을 선택하십시오."
 
-#: ../libmate-desktop/mate-colorsel.c:372
+#: ../libmate-desktop/mate-colorsel.c:373
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "스포이드를 누른 후, 선택할 색상이 있는 화면 어디든 누르십시오."
 
-#: ../libmate-desktop/mate-colorsel.c:381
+#: ../libmate-desktop/mate-colorsel.c:382
 msgid "_Hue:"
 msgstr "색상(_H):"
 
-#: ../libmate-desktop/mate-colorsel.c:382
+#: ../libmate-desktop/mate-colorsel.c:383
 msgid "Position on the color wheel."
 msgstr "색상 휠 위치입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:384
+#: ../libmate-desktop/mate-colorsel.c:385
 msgid "_Saturation:"
 msgstr "채도(_S):"
 
-#: ../libmate-desktop/mate-colorsel.c:385
+#: ../libmate-desktop/mate-colorsel.c:386
 msgid "\"Deepness\" of the color."
 msgstr "색상의 \"깊이\" 입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:386
+#: ../libmate-desktop/mate-colorsel.c:387
 msgid "_Value:"
 msgstr "명도(_V):"
 
-#: ../libmate-desktop/mate-colorsel.c:387
+#: ../libmate-desktop/mate-colorsel.c:388
 msgid "Brightness of the color."
 msgstr "색상의 밝기입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:388
+#: ../libmate-desktop/mate-colorsel.c:389
 msgid "_Red:"
 msgstr "빨강(_R):"
 
-#: ../libmate-desktop/mate-colorsel.c:389
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "Amount of red light in the color."
 msgstr "적색 빛의 양입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "_Green:"
 msgstr "초록(_G):"
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:392
 msgid "Amount of green light in the color."
 msgstr "녹색 빛의 양입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:392
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "_Blue:"
 msgstr "파랑(_B):"
 
-#: ../libmate-desktop/mate-colorsel.c:393
+#: ../libmate-desktop/mate-colorsel.c:394
 msgid "Amount of blue light in the color."
 msgstr "청색 빛의 양입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:396
+#: ../libmate-desktop/mate-colorsel.c:397
 msgid "Op_acity:"
 msgstr "불투명도(_A):"
 
-#: ../libmate-desktop/mate-colorsel.c:407
-#: ../libmate-desktop/mate-colorsel.c:417
+#: ../libmate-desktop/mate-colorsel.c:408
+#: ../libmate-desktop/mate-colorsel.c:418
 msgid "Transparency of the color."
 msgstr "색상의 투명도입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:424
+#: ../libmate-desktop/mate-colorsel.c:425
 msgid "Color _name:"
 msgstr "색상 이름(_N):"
 
-#: ../libmate-desktop/mate-colorsel.c:442
+#: ../libmate-desktop/mate-colorsel.c:443
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "이 항목에 HTML 방식 16진수 색상 값, 또는 'orange'와 같은 색상 이름을 입력할 수 있습니다."
 
-#: ../libmate-desktop/mate-colorsel.c:472
+#: ../libmate-desktop/mate-colorsel.c:473
 msgid "_Palette:"
 msgstr "팔레트(_P):"
 
-#: ../libmate-desktop/mate-colorsel.c:505
+#: ../libmate-desktop/mate-colorsel.c:506
 msgid "Color Wheel"
 msgstr "색상 휠"
 
-#: ../libmate-desktop/mate-colorsel.c:962
+#: ../libmate-desktop/mate-colorsel.c:963
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "현재 선택한 색상과 비교할 이전 선택 색상입니다. 이 색상을 팔레트 항목에 끌어다 놓거나, 다른 부분에 있는 컬러 스왓치에 현재 색상을 끌어다 놓을 수 있습니다."
 
-#: ../libmate-desktop/mate-colorsel.c:965
+#: ../libmate-desktop/mate-colorsel.c:966
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "선택한 색상입니다. 나중에 사용하려 저장하려면 팔레트 엔트리에 끌어다 놓을 수 있습니다."
 
-#: ../libmate-desktop/mate-colorsel.c:970
+#: ../libmate-desktop/mate-colorsel.c:971
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "현재 선택한 색상과 비교할 이전 선택 색상입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:973
+#: ../libmate-desktop/mate-colorsel.c:974
 msgid "The color you've chosen."
 msgstr "선택한 색상입니다."
 
-#: ../libmate-desktop/mate-colorsel.c:1362
+#: ../libmate-desktop/mate-colorsel.c:1358
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1367
+#: ../libmate-desktop/mate-colorsel.c:1363
 msgid "_Save color here"
 msgstr "이 색상 저장(_S)"
 
-#: ../libmate-desktop/mate-colorsel.c:1587
+#: ../libmate-desktop/mate-colorsel.c:1583
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -510,7 +510,7 @@ msgstr "필요한 가상 화면 크기가 가능한 크기에 맞지 않습니�
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:420
+#: ../libmate-desktop/mate-rr-labeler.c:419
 #, c-format
 msgid "Mirror Screens"
 msgstr "동일한 화면"
@@ -583,7 +583,7 @@ msgstr "선호하는 휴대형 보조 기술 프로그램"
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr "로그인, 메뉴, 명령줄에 사용할 선호하는 휴대형 보조 기술 프로그램입니다."
+msgstr "로그인, 메뉴, 명령문에 사용할 선호하는 휴대형 보조 기술 프로그램입니다."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
@@ -603,7 +603,7 @@ msgstr "선호하는 시각 보조 기술 프로그램"
 msgid ""
 "Preferred Visual assistive technology application to be used for login, "
 "menu, or command line."
-msgstr "로그인, 메뉴, 명령 줄에서 사용할 선호하는 시각 보조 기술 프로그램"
+msgstr "로그인, 메뉴, 명령문에서 사용할 선호하는 시각 보조 기술 프로그램"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
@@ -803,142 +803,132 @@ msgid "Whether menus should have a tearoff."
 msgstr "메뉴를 떼어 놓을 지 여부입니다."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:7
-msgid "Can Change Accels"
-msgstr "가속 변경 가능"
-
-#: ../schemas/org.mate.interface.gschema.xml.in.h:8
-msgid ""
-"Whether the user can dynamically type a new accelerator when positioned over"
-" an active menuitem."
-msgstr "활성 메뉴 항목 위로 위치할 때 새 가속기를 동적으로 바꿀 수 있는 지 여부입니다."
-
-#: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Toolbar Style"
 msgstr "도구 모음 방식"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:10
+#: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
 msgstr "도구 모음 방식입니다. 가능한 값은 \"모두\", \"모두-수평\", \"아이콘\", \"텍스트\" 입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:11
+#: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Menus Have Icons"
 msgstr "메뉴에 아이콘 표시"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:12
+#: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Whether menus may display an icon next to a menu entry."
 msgstr "메뉴 항목 옆에 아이콘을 표시할 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:13
+#: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Buttons Have Icons"
 msgstr "단추에 아이콘 표시"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:14
+#: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether buttons may display an icon in addition to the button text."
 msgstr "단추 옆에 아이콘을 추가로 표시할 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:15
+#: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Menubar Detachable"
 msgstr "메뉴 표시줄 분리 가능"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:16
+#: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether the user can detach menubars and move them around."
 msgstr "메뉴 표시줄을 떼내어 이리저리 이동 가능한 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:17
+#: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Toolbar Detachable"
 msgstr "도구 모음 분리 가능"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:18
+#: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach toolbars and move them around."
 msgstr "도구 모음을 떼내어 이리저리 이동 가능한 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:19
+#: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Icon Size"
 msgstr "도구 모음 아이콘 크기"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:20
+#: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr "도구 모음의 아이콘 크기입니다.  \"작은 도구 모음\", \"큰 도구 모음\" 둘 중 하나입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:21
+#: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Cursor Blink"
 msgstr "커서 깜빡임"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:22
+#: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Whether the cursor should blink."
 msgstr "커서를 깜빡일 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:23
+#: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink Time"
 msgstr "커서 깜빡임 시간"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:24
+#: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Length of the cursor blink cycle, in milliseconds."
 msgstr "밀리초 단위의 커서 깜빡임 주기 시간입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:25
+#: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Icon Theme"
 msgstr "아이콘 테마"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:26
+#: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Icon theme to use for the panel, Caja etc."
 msgstr "패널, 카하 등에 사용할 아이콘 테마."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:27
+#: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Gtk+ Theme"
 msgstr "Gtk+ 테마"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:28
+#: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Basename of the default theme used by gtk+."
 msgstr "gtk+에서 사용할 기본 테마 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:29
+#: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "List of symbolic names and color equivalents"
 msgstr "심볼 이름 및 대응 색상 목록"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:30
+#: ../schemas/org.mate.interface.gschema.xml.in.h:28
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
 msgstr "'gtk-color-scheme' 에서 설정한 대로 '\\n' 개행 문자로 구분한 \"name:color\" 목록"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:31
+#: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "Default font"
 msgstr "기본 글꼴"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:32
+#: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid "Name of the default font used by gtk+."
 msgstr "gtk+에서 사용하는 기본 글꼴 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:33
+#: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "GTK IM Preedit Style"
 msgstr "GTK 입력기 입력 사전 모양새"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:34
+#: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
 msgstr "gtk+에서 사용하는 GTK+ 입력기 입력 사전 모양새의 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:35
+#: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Status Style"
 msgstr "GTK 입력기 상태 모양새"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:36
+#: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Status Style used by gtk+."
 msgstr "gtk+에서 사용할 GTK+ 입력기 상태 모양새의 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:37
+#: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Module"
 msgstr "GTK 입력기 모듈"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:38
+#: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the input method module used by GTK+."
 msgstr "gtk+에서 사용하는 입력기 모듈의 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:39
+#: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "Use GTK3 header bar"
 msgstr "gtk3 헤더 표시줄 사용"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:40
+#: ../schemas/org.mate.interface.gschema.xml.in.h:38
 msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
@@ -946,100 +936,100 @@ msgid ""
 "using GtkDialog directly, or message dialogs."
 msgstr "파일 선택 대화상자, 색상 선택 대화상자, 또는 글꼴 선택 대화상자 같은 내장 gtk+ 대화상자 상단에 동작 위젯을 보여주려 헤더 표시줄을 나타낼지, 아니면 하단의 동작영역에 나타낼지 여부입니다. 이 설정은 GtkDialog를 직접 사용하는  개별 설정 대화상자, 또는 메시지 대화상자에 영향을 주지 않습니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:41
+#: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 overlay scrolling"
 msgstr "gtk3 오버레이 스크롤 사용"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:42
+#: ../schemas/org.mate.interface.gschema.xml.in.h:40
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr "내장 gtk+ 스크롤 창에 오버레이 스크롤을 사용할 지 여부입니다. 오버레이 스크롤은 마우스 커서를 가져다 올려놓기 전에는 숨기고 크기를 줄입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:43
+#: ../schemas/org.mate.interface.gschema.xml.in.h:41
 msgid "Enable Gtk toolkit-wide animations"
 msgstr "gtk 도구 키트 애니메이션 활성화"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:44
+#: ../schemas/org.mate.interface.gschema.xml.in.h:42
 msgid "Whether to enable toolkit-wide animations."
 msgstr "도구 키트에서 제공하는 애니메이션을 활성화할 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:45
+#: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Document font"
 msgstr "문서 글꼴"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:46
+#: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Name of the default font used for reading documents."
 msgstr "문서를 표현할 떄 사용할 기본 글꼴 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:47
+#: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Monospace font"
 msgstr "고정폭 글꼴"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:48
+#: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr "터미널과 같은 위치에서 사용할 단일 폭(고정 폭) 글꼴의 이름입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:49
+#: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Use Custom Font"
 msgstr "사용자 정의 글꼴"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:50
+#: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid "Whether to use a custom font in gtk+ applications."
 msgstr "gtk+ 프로그램에서 사용할 사용자 정의 글꼴입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:51
+#: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Status Bar on Right"
 msgstr "우측 상태 표시줄"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:52
+#: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to display a status bar meter on the right."
 msgstr "우측에 상태 표시줄을 표시할 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:53
+#: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Module for GtkFileChooser"
 msgstr "GtkFileChooser용 모듈"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:54
+#: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
 msgstr "GtkFileChooser 위젯용 파일시스템 모델로 사용할 모듈입니다. 가능한 값은 \"gio\", \"gtk+\" 입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:55
+#: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Menubar accelerator"
 msgstr "메뉴 표시줄 가속 수단"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:56
+#: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid "Keyboard shortcut to open the menu bars."
 msgstr "메뉴 표시줄을 열 단축키입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:57
+#: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Show the 'Input Methods' menu"
 msgstr "'입력기' 메뉴 표시"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:58
+#: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr "항목의 단축 메뉴와 텍스트 뷰에서 입력기를 바꿀 수 있는 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:59
+#: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Unicode Control Character' menu"
 msgstr "'유니코드 제어 문자' 메뉴 표시"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:60
+#: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr "항목의 단축 메뉴 또는 텍스트 뷰에서 제어 문자 삽입 기능을 제공할 지 여부입니다."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:61
+#: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Titlebar layout of GTK3 client-side decorated windows"
 msgstr "gtk3 클라이언트 장식 창의 제목 표시줄 배치"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:62
+#: ../schemas/org.mate.interface.gschema.xml.in.h:60
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
@@ -1048,11 +1038,11 @@ msgid ""
 "decoration-layout."
 msgstr "이 설정은 클라이언트 장식 창의 제목 표시줄에 어떤 단추를 배치할 지 결정하며, 좌측, 우측 두 위치중 어떤 곳에 놓을지도 결정합니다. https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout 를 참고하십시오."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:63
+#: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Use a global menubar for displaying application menus"
 msgstr "애플리케이션 메뉴를 표시할 때 글로벌 메뉴바 사용하기"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:64
+#: ../schemas/org.mate.interface.gschema.xml.in.h:62
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
@@ -1060,11 +1050,11 @@ msgid ""
 "shell-shows-app-menu."
 msgstr "이 설정은 창 또는 메뉴 모델 프로토콜이 있는 패널에서 애플리케이션 메뉴를 어디에 표시할지를 결정합니다. 다음 링크를 확인하세요 https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-app-menu."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:65
+#: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Use a global menubar for displaying window menubars"
 msgstr "애플리케이션 메뉴를 표시할 윈도우 메뉴바 사용하기"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:66
+#: ../schemas/org.mate.interface.gschema.xml.in.h:64
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
@@ -1072,11 +1062,11 @@ msgid ""
 "shell-shows-menubar."
 msgstr "이 설정은 창 또는 메뉴 모델 프로토콜이 있는 패널에서 윈도우 메뉴바를 어디에 표시할지를 결정합니다. 다음 링크를 확인하세요 https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-menubar."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+#: ../schemas/org.mate.interface.gschema.xml.in.h:65
 msgid "Only show mnemonics on when the Alt key is pressed"
 msgstr "Alt 키를 눌렀을 때만 니모닉 표시"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+#: ../schemas/org.mate.interface.gschema.xml.in.h:66
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
@@ -1084,14 +1074,14 @@ msgstr "Alt 키를 눌렀을 때 단축키 니모닉을 자동으로 표시하�
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
-msgstr "명령줄 비활성화"
+msgstr "명령문 비활성화"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr "사용자가 터미널에 접근하거나 실행할 명령줄을 지정하는 행위를 막습니다. 예를 들여, 패널의 \"프로그램 실행\" 대화상자로의 접근을 막습니다."
+msgstr "사용자가 터미널에 접근하거나 실행할 명령문을 지정하는 행위를 막습니다. 예를 들여, 패널의 \"프로그램 실행\" 대화상자로의 접근을 막습니다."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"

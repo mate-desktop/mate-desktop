@@ -17,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 10:24+0100\n"
-"PO-Revision-Date: 2017-10-19 12:36+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"POT-Creation-Date: 2018-01-09 21:49+0300\n"
+"PO-Revision-Date: 2018-01-09 18:50+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Japanese (http://www.transifex.com/mate/MATE/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,7 +110,7 @@ msgid "Pick a Color"
 msgstr "色の選択"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:285
+#: ../libmate-desktop/mate-colorsel.c:286
 msgid "Current Color"
 msgstr "現在の色"
 
@@ -119,7 +119,7 @@ msgid "The selected color"
 msgstr "選択した色"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:292
+#: ../libmate-desktop/mate-colorsel.c:293
 msgid "Current Alpha"
 msgstr "現在のアルファ値"
 
@@ -131,157 +131,157 @@ msgstr "選択された透明度(0で完全に透明、65535で完全に不透�
 msgid "Received invalid color data\n"
 msgstr "おかしな色データを受け取りました\n"
 
-#: ../libmate-desktop/mate-colorsel.c:271
+#: ../libmate-desktop/mate-colorsel.c:272
 msgid "Has Opacity Control"
 msgstr "透明度の設定"
 
-#: ../libmate-desktop/mate-colorsel.c:272
+#: ../libmate-desktop/mate-colorsel.c:273
 msgid "Whether the color selector should allow setting opacity"
 msgstr "カラーせレクターで透明度を設定できるかどうか"
 
-#: ../libmate-desktop/mate-colorsel.c:278
+#: ../libmate-desktop/mate-colorsel.c:279
 msgid "Has palette"
 msgstr "パレットの設定"
 
-#: ../libmate-desktop/mate-colorsel.c:279
+#: ../libmate-desktop/mate-colorsel.c:280
 msgid "Whether a palette should be used"
 msgstr "パレットが使用可能かどうか"
 
-#: ../libmate-desktop/mate-colorsel.c:286
+#: ../libmate-desktop/mate-colorsel.c:287
 msgid "The current color"
 msgstr "現在の色"
 
-#: ../libmate-desktop/mate-colorsel.c:293
+#: ../libmate-desktop/mate-colorsel.c:294
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "現在の透明度(0で完全に透明、65535で完全に不透明)"
 
-#: ../libmate-desktop/mate-colorsel.c:299
+#: ../libmate-desktop/mate-colorsel.c:300
 msgid "HEX String"
 msgstr "16 進文字列"
 
-#: ../libmate-desktop/mate-colorsel.c:300
+#: ../libmate-desktop/mate-colorsel.c:301
 msgid "The hexadecimal string of current color"
 msgstr "現在の色の 16 進文字列"
 
-#: ../libmate-desktop/mate-colorsel.c:348
+#: ../libmate-desktop/mate-colorsel.c:349
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "外の輪から色を選択して下さい。その後、中の三角形を使って明るさを選択して下さい。"
 
-#: ../libmate-desktop/mate-colorsel.c:372
+#: ../libmate-desktop/mate-colorsel.c:373
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "アイドロッパーをクリック後、任意の箇所をクリックすることで、その場所の色を取得できます。"
 
-#: ../libmate-desktop/mate-colorsel.c:381
+#: ../libmate-desktop/mate-colorsel.c:382
 msgid "_Hue:"
 msgstr "色相(_H):"
 
-#: ../libmate-desktop/mate-colorsel.c:382
+#: ../libmate-desktop/mate-colorsel.c:383
 msgid "Position on the color wheel."
 msgstr "色相環内の位置"
 
-#: ../libmate-desktop/mate-colorsel.c:384
+#: ../libmate-desktop/mate-colorsel.c:385
 msgid "_Saturation:"
 msgstr "彩度(_S):"
 
-#: ../libmate-desktop/mate-colorsel.c:385
+#: ../libmate-desktop/mate-colorsel.c:386
 msgid "\"Deepness\" of the color."
 msgstr "色の鮮やかさ"
 
-#: ../libmate-desktop/mate-colorsel.c:386
+#: ../libmate-desktop/mate-colorsel.c:387
 msgid "_Value:"
 msgstr "明度(_V):"
 
-#: ../libmate-desktop/mate-colorsel.c:387
+#: ../libmate-desktop/mate-colorsel.c:388
 msgid "Brightness of the color."
 msgstr "色の明るさ"
 
-#: ../libmate-desktop/mate-colorsel.c:388
+#: ../libmate-desktop/mate-colorsel.c:389
 msgid "_Red:"
 msgstr "赤(_R) :"
 
-#: ../libmate-desktop/mate-colorsel.c:389
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "Amount of red light in the color."
 msgstr "赤の強さ"
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "_Green:"
 msgstr "緑(_G) :"
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:392
 msgid "Amount of green light in the color."
 msgstr "緑の強さ"
 
-#: ../libmate-desktop/mate-colorsel.c:392
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "_Blue:"
 msgstr "青(_B) :"
 
-#: ../libmate-desktop/mate-colorsel.c:393
+#: ../libmate-desktop/mate-colorsel.c:394
 msgid "Amount of blue light in the color."
 msgstr "青の強さ"
 
-#: ../libmate-desktop/mate-colorsel.c:396
+#: ../libmate-desktop/mate-colorsel.c:397
 msgid "Op_acity:"
 msgstr "透明度(_A) :"
 
-#: ../libmate-desktop/mate-colorsel.c:407
-#: ../libmate-desktop/mate-colorsel.c:417
+#: ../libmate-desktop/mate-colorsel.c:408
+#: ../libmate-desktop/mate-colorsel.c:418
 msgid "Transparency of the color."
 msgstr "色の透明度"
 
-#: ../libmate-desktop/mate-colorsel.c:424
+#: ../libmate-desktop/mate-colorsel.c:425
 msgid "Color _name:"
 msgstr "色の名前(_N):"
 
-#: ../libmate-desktop/mate-colorsel.c:442
+#: ../libmate-desktop/mate-colorsel.c:443
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "HTMLの16進数形式、または「orange」などの色名で色を指定できます。"
 
-#: ../libmate-desktop/mate-colorsel.c:472
+#: ../libmate-desktop/mate-colorsel.c:473
 msgid "_Palette:"
 msgstr "パレット(_P):"
 
-#: ../libmate-desktop/mate-colorsel.c:505
+#: ../libmate-desktop/mate-colorsel.c:506
 msgid "Color Wheel"
 msgstr "色相環"
 
-#: ../libmate-desktop/mate-colorsel.c:962
+#: ../libmate-desktop/mate-colorsel.c:963
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "選択中の色と比較するための前回選択した色です。カラーパレットにドラッグして再利用したり、この色を選択色として利用することができます。"
 
-#: ../libmate-desktop/mate-colorsel.c:965
+#: ../libmate-desktop/mate-colorsel.c:966
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "以前選択した色。色をパレットにドラッグすることで、色を保存しておくことができます。"
 
-#: ../libmate-desktop/mate-colorsel.c:970
+#: ../libmate-desktop/mate-colorsel.c:971
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "前回選択した色。現在選択中の色と比較することができます。"
 
-#: ../libmate-desktop/mate-colorsel.c:973
+#: ../libmate-desktop/mate-colorsel.c:974
 msgid "The color you've chosen."
 msgstr "今選択している色"
 
-#: ../libmate-desktop/mate-colorsel.c:1362
+#: ../libmate-desktop/mate-colorsel.c:1358
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1367
+#: ../libmate-desktop/mate-colorsel.c:1363
 msgid "_Save color here"
 msgstr "ここに色を保存(_S)"
 
-#: ../libmate-desktop/mate-colorsel.c:1587
+#: ../libmate-desktop/mate-colorsel.c:1583
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -514,7 +514,7 @@ msgstr "要求した仮想サイズと実際のサイズがマッチしません
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:420
+#: ../libmate-desktop/mate-rr-labeler.c:419
 #, c-format
 msgid "Mirror Screens"
 msgstr "複数の画面をミラーする"
@@ -807,142 +807,132 @@ msgid "Whether menus should have a tearoff."
 msgstr "メニューを切り離せるようにするかどうかを設定します。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:7
-msgid "Can Change Accels"
-msgstr "アクセラレーションキーを変更できるようにする"
-
-#: ../schemas/org.mate.interface.gschema.xml.in.h:8
-msgid ""
-"Whether the user can dynamically type a new accelerator when positioned over"
-" an active menuitem."
-msgstr "利用可能なメニューアイテムを選択した状態でキーを入力した際、新しいアクセラレータを登録できるようにするかを設定します。"
-
-#: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Toolbar Style"
 msgstr "ツールバーの形式"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:10
+#: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
 msgstr "ツールバーの表示形式を設定します。設定可能な値: \"both\"、\"both-horiz\"、\"icons\"、\"text\""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:11
+#: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Menus Have Icons"
 msgstr "メニューにアイコンを表示する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:12
+#: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Whether menus may display an icon next to a menu entry."
 msgstr "メニュー項目の隣にアイコンを表示するかどうかです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:13
+#: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Buttons Have Icons"
 msgstr "ボタンにアイコンを表示するかどうか"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:14
+#: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether buttons may display an icon in addition to the button text."
 msgstr "ボタンにラベルとアイコンの両方を表示するかどうかです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:15
+#: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Menubar Detachable"
 msgstr "メニューバーを取り外せるようにする"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:16
+#: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether the user can detach menubars and move them around."
 msgstr "メニューバーを取り外して移動できるようにするかどうかです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:17
+#: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Toolbar Detachable"
 msgstr "ツールバーを取り外せるようにする"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:18
+#: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach toolbars and move them around."
 msgstr "ツールバーを取り外して移動できるようにするかどうかです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:19
+#: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Icon Size"
 msgstr "ツールバーのアイコンのサイズ"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:20
+#: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr "ツールバーに表示するアイコンの大きさです。設定可能な値: \"small-toolbar\" または \"large-toolbar\""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:21
+#: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Cursor Blink"
 msgstr "カーソルを点滅するかどうか"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:22
+#: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Whether the cursor should blink."
 msgstr "カーソルを点滅させるかどうかです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:23
+#: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink Time"
 msgstr "カーソルの点滅間隔"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:24
+#: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Length of the cursor blink cycle, in milliseconds."
 msgstr "カーソルが点滅する間隔を、ミリ秒単位で指定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:25
+#: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Icon Theme"
 msgstr "アイコンのテーマ"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:26
+#: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Icon theme to use for the panel, Caja etc."
 msgstr "パネルやCajaなどのアイコンテーマ"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:27
+#: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Gtk+ Theme"
 msgstr "GTK+ テーマ"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:28
+#: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Basename of the default theme used by gtk+."
 msgstr "GTK+ が使用するデフォルトのテーマの名前です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:29
+#: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "List of symbolic names and color equivalents"
 msgstr "色と色名のリスト"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:30
+#: ../schemas/org.mate.interface.gschema.xml.in.h:28
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
 msgstr "'gtk-color-scheme' で定義された \"色名:色\" の '\\n' 区切りのリストです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:31
+#: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "Default font"
 msgstr "デフォルトのフォント"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:32
+#: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid "Name of the default font used by gtk+."
 msgstr "GTK+ が使用するデフォルトのフォント名です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:33
+#: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "GTK IM Preedit Style"
 msgstr "GTK IM プレエディット形式"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:34
+#: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
 msgstr "GTK+ が使用する GTK+ IM プレエディット形式の名前です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:35
+#: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Status Style"
 msgstr "GTK IM ステータス形式"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:36
+#: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Status Style used by gtk+."
 msgstr "GTK+ が使用する GTK+ IM ステータス形式の名前です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:37
+#: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Module"
 msgstr "GTK IM モジュール"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:38
+#: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the input method module used by GTK+."
 msgstr "GTK+ が使用する GTK+ 入力メソッドのモジュール名です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:39
+#: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "Use GTK3 header bar"
 msgstr "GTK3 のヘッダーバーを使用する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:40
+#: ../schemas/org.mate.interface.gschema.xml.in.h:38
 msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
@@ -950,100 +940,100 @@ msgid ""
 "using GtkDialog directly, or message dialogs."
 msgstr "ファイル選択、色選択、フォント選択などの GTK+ 組み込みダイアログが、アクションウィジェットを表示するために、上部のヘッダーバーや下部のアクションエリアを使用するかどうかを設定します。この設定は GtkDialog を直接使用するカスタムダイアログやメッセージダイアログには効果がありません。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:41
+#: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 overlay scrolling"
 msgstr "GTK3 オーバーレイスクロールを使用する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:42
+#: ../schemas/org.mate.interface.gschema.xml.in.h:40
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr "GTK+ のスクロールウィンドウでオーバーレイスクロールを使用するかどうかを設定します。オーバーレイスクロールを使用すると、フォーカスが当たるまでスクロールバーを隠して表示領域を節約します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:43
+#: ../schemas/org.mate.interface.gschema.xml.in.h:41
 msgid "Enable Gtk toolkit-wide animations"
 msgstr "GTK ツールキット全体でアニメーションを有効にする"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:44
+#: ../schemas/org.mate.interface.gschema.xml.in.h:42
 msgid "Whether to enable toolkit-wide animations."
 msgstr "ツールキット全体でアニメーションを有効にするかどうかを設定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:45
+#: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Document font"
 msgstr "ドキュメントのフォント"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:46
+#: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Name of the default font used for reading documents."
 msgstr "ドキュメントで使用するデフォルトのフォント名です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:47
+#: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Monospace font"
 msgstr "等幅フォント"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:48
+#: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr "端末などで使用する等幅 (固定幅) フォントの名前です。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:49
+#: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Use Custom Font"
 msgstr "カスタムフォントを使用する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:50
+#: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid "Whether to use a custom font in gtk+ applications."
 msgstr "GTK+ アプリケーションでカスタムフォントを使用するかどうかを設定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:51
+#: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Status Bar on Right"
 msgstr "ステータスバーを右側に表示する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:52
+#: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to display a status bar meter on the right."
 msgstr "右側にステータスバーを表示するかどうかを指定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:53
+#: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Module for GtkFileChooser"
 msgstr "GtkFileChooser のモジュール"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:54
+#: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
 msgstr "GtkFileChooser ウィジェットがファイルシステムモデルとして使用するモジュールです。設定可能な値: \"gio\"、\"gtk+\""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:55
+#: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Menubar accelerator"
 msgstr "メニューバーのアクセラレーター"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:56
+#: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid "Keyboard shortcut to open the menu bars."
 msgstr "メニューバーを開くキーボードショートカットです。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:57
+#: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Show the 'Input Methods' menu"
 msgstr "'入力メソッド' のメニューを表示する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:58
+#: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr "入力エントリーとテキストビューのコンテキストメニューに入力メソッドを切り替えるメニュー項目を追加するかどうかを指定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:59
+#: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Unicode Control Character' menu"
 msgstr "'Unicode 制御文字の挿入' メニューを表示する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:60
+#: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr "入力エントリーとテキストビューのコンテキストメニューに制御文字を挿入するメニュー項目を追加するかどうかを指定します。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:61
+#: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Titlebar layout of GTK3 client-side decorated windows"
 msgstr "GTK3 クライアントで装飾されたウィンドウのタイトルバーのレイアウト"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:62
+#: ../schemas/org.mate.interface.gschema.xml.in.h:60
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
@@ -1052,11 +1042,11 @@ msgid ""
 "decoration-layout."
 msgstr "クライアント側で装飾されたウィンドウのタイトルバーにどのボタンを表示するかの設定です。また、ボタンを左右どちらに描画するかも設定できます。https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout を確認してください。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:63
+#: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Use a global menubar for displaying application menus"
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:64
+#: ../schemas/org.mate.interface.gschema.xml.in.h:62
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
@@ -1064,11 +1054,11 @@ msgid ""
 "shell-shows-app-menu."
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:65
+#: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Use a global menubar for displaying window menubars"
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:66
+#: ../schemas/org.mate.interface.gschema.xml.in.h:64
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
@@ -1076,11 +1066,11 @@ msgid ""
 "shell-shows-menubar."
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+#: ../schemas/org.mate.interface.gschema.xml.in.h:65
 msgid "Only show mnemonics on when the Alt key is pressed"
 msgstr "Alt キーが押された時だけニーモニックを表示する"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+#: ../schemas/org.mate.interface.gschema.xml.in.h:66
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."

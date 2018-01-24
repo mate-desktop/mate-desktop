@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 10:24+0100\n"
-"PO-Revision-Date: 2017-10-20 01:56+0000\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
+"POT-Creation-Date: 2018-01-09 21:49+0300\n"
+"PO-Revision-Date: 2018-01-09 18:50+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/mate/MATE/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -106,7 +106,7 @@ msgid "Pick a Color"
 msgstr "選取顏色"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
-#: ../libmate-desktop/mate-colorsel.c:285
+#: ../libmate-desktop/mate-colorsel.c:286
 msgid "Current Color"
 msgstr "目前的顏色"
 
@@ -115,7 +115,7 @@ msgid "The selected color"
 msgstr "選取的顏色"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
-#: ../libmate-desktop/mate-colorsel.c:292
+#: ../libmate-desktop/mate-colorsel.c:293
 msgid "Current Alpha"
 msgstr "當前的 Alpha"
 
@@ -127,157 +127,157 @@ msgstr "選取的不透明度(0為完全透明，65535為完全不透明)"
 msgid "Received invalid color data\n"
 msgstr "收到了無效的顏色資料\n"
 
-#: ../libmate-desktop/mate-colorsel.c:271
+#: ../libmate-desktop/mate-colorsel.c:272
 msgid "Has Opacity Control"
 msgstr "不透明控制"
 
-#: ../libmate-desktop/mate-colorsel.c:272
+#: ../libmate-desktop/mate-colorsel.c:273
 msgid "Whether the color selector should allow setting opacity"
 msgstr "是否允許色彩選擇器設定不透明度"
 
-#: ../libmate-desktop/mate-colorsel.c:278
+#: ../libmate-desktop/mate-colorsel.c:279
 msgid "Has palette"
 msgstr "調色板"
 
-#: ../libmate-desktop/mate-colorsel.c:279
+#: ../libmate-desktop/mate-colorsel.c:280
 msgid "Whether a palette should be used"
 msgstr "調色板是否應該被使用"
 
-#: ../libmate-desktop/mate-colorsel.c:286
+#: ../libmate-desktop/mate-colorsel.c:287
 msgid "The current color"
 msgstr "目前的顏色"
 
-#: ../libmate-desktop/mate-colorsel.c:293
+#: ../libmate-desktop/mate-colorsel.c:294
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "目前的不透明度(0為完全透明，65535為完全不透明)"
 
-#: ../libmate-desktop/mate-colorsel.c:299
+#: ../libmate-desktop/mate-colorsel.c:300
 msgid "HEX String"
 msgstr "十六進位字串"
 
-#: ../libmate-desktop/mate-colorsel.c:300
+#: ../libmate-desktop/mate-colorsel.c:301
 msgid "The hexadecimal string of current color"
 msgstr "目前顏色的十六進位字串"
 
-#: ../libmate-desktop/mate-colorsel.c:348
+#: ../libmate-desktop/mate-colorsel.c:349
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "從外面的環選取您想要的顏色。並用內部的三角形選取該顏色所要使用的明暗程度。"
 
-#: ../libmate-desktop/mate-colorsel.c:372
+#: ../libmate-desktop/mate-colorsel.c:373
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "點擊顏色吸管，然後在您的螢幕上的任一處點擊您想要使用的顏色以選取該顏色。"
 
-#: ../libmate-desktop/mate-colorsel.c:381
+#: ../libmate-desktop/mate-colorsel.c:382
 msgid "_Hue:"
 msgstr "色度(_H)："
 
-#: ../libmate-desktop/mate-colorsel.c:382
+#: ../libmate-desktop/mate-colorsel.c:383
 msgid "Position on the color wheel."
 msgstr "在色輪上的位置。"
 
-#: ../libmate-desktop/mate-colorsel.c:384
+#: ../libmate-desktop/mate-colorsel.c:385
 msgid "_Saturation:"
 msgstr "飽和度(_S)："
 
-#: ../libmate-desktop/mate-colorsel.c:385
+#: ../libmate-desktop/mate-colorsel.c:386
 msgid "\"Deepness\" of the color."
 msgstr "顏色的「濃度」"
 
-#: ../libmate-desktop/mate-colorsel.c:386
+#: ../libmate-desktop/mate-colorsel.c:387
 msgid "_Value:"
 msgstr "亮度(_V)："
 
-#: ../libmate-desktop/mate-colorsel.c:387
+#: ../libmate-desktop/mate-colorsel.c:388
 msgid "Brightness of the color."
 msgstr "顏色的明亮程度。"
 
-#: ../libmate-desktop/mate-colorsel.c:388
+#: ../libmate-desktop/mate-colorsel.c:389
 msgid "_Red:"
 msgstr "紅(_R)："
 
-#: ../libmate-desktop/mate-colorsel.c:389
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "Amount of red light in the color."
 msgstr "紅光在顏色中的多寡。"
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "_Green:"
 msgstr "綠(_G)："
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:392
 msgid "Amount of green light in the color."
 msgstr "綠光在顏色中的多寡。"
 
-#: ../libmate-desktop/mate-colorsel.c:392
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "_Blue:"
 msgstr "藍(_B)："
 
-#: ../libmate-desktop/mate-colorsel.c:393
+#: ../libmate-desktop/mate-colorsel.c:394
 msgid "Amount of blue light in the color."
 msgstr "藍光在顏色中的多寡。"
 
-#: ../libmate-desktop/mate-colorsel.c:396
+#: ../libmate-desktop/mate-colorsel.c:397
 msgid "Op_acity:"
 msgstr "不透明(_A)："
 
-#: ../libmate-desktop/mate-colorsel.c:407
-#: ../libmate-desktop/mate-colorsel.c:417
+#: ../libmate-desktop/mate-colorsel.c:408
+#: ../libmate-desktop/mate-colorsel.c:418
 msgid "Transparency of the color."
 msgstr "顏色的透明程度。"
 
-#: ../libmate-desktop/mate-colorsel.c:424
+#: ../libmate-desktop/mate-colorsel.c:425
 msgid "Color _name:"
 msgstr "色彩名稱(_N)："
 
-#: ../libmate-desktop/mate-colorsel.c:442
+#: ../libmate-desktop/mate-colorsel.c:443
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "您可以輸入 HTML 風格的十六進位色彩值，或是簡單的輸入色彩的名稱，像是 'orange' 到這個格子裡。"
 
-#: ../libmate-desktop/mate-colorsel.c:472
+#: ../libmate-desktop/mate-colorsel.c:473
 msgid "_Palette:"
 msgstr "調色板(_P):"
 
-#: ../libmate-desktop/mate-colorsel.c:505
+#: ../libmate-desktop/mate-colorsel.c:506
 msgid "Color Wheel"
 msgstr "色輪"
 
-#: ../libmate-desktop/mate-colorsel.c:962
+#: ../libmate-desktop/mate-colorsel.c:963
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "先前選取的顏色，用來與您現在所選的比較。您可以將此顏色拖曳至調色板上，或是透過拖曳它到另外一個色樣旁來選擇這個顏色。"
 
-#: ../libmate-desktop/mate-colorsel.c:965
+#: ../libmate-desktop/mate-colorsel.c:966
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "您已選取的顏色。您可以拖曳這個顏色到調色板以為未來的使用儲存它。"
 
-#: ../libmate-desktop/mate-colorsel.c:970
+#: ../libmate-desktop/mate-colorsel.c:971
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "先前選取的顏色，用來與您現在所選的比較。"
 
-#: ../libmate-desktop/mate-colorsel.c:973
+#: ../libmate-desktop/mate-colorsel.c:974
 msgid "The color you've chosen."
 msgstr "您已選取的顏色。"
 
-#: ../libmate-desktop/mate-colorsel.c:1362
+#: ../libmate-desktop/mate-colorsel.c:1358
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1367
+#: ../libmate-desktop/mate-colorsel.c:1363
 msgid "_Save color here"
 msgstr "在這裡儲存顏色(_S)"
 
-#: ../libmate-desktop/mate-colorsel.c:1587
+#: ../libmate-desktop/mate-colorsel.c:1583
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -510,7 +510,7 @@ msgstr "要求的虛擬大小無法符合可用的大小：要求的 =(%d, %d)�
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:420
+#: ../libmate-desktop/mate-rr-labeler.c:419
 #, c-format
 msgid "Mirror Screens"
 msgstr "鏡射螢幕"
@@ -803,142 +803,132 @@ msgid "Whether menus should have a tearoff."
 msgstr "應否顯示可讓選單拆離選單列的元件。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:7
-msgid "Can Change Accels"
-msgstr "可更改捷徑鍵"
-
-#: ../schemas/org.mate.interface.gschema.xml.in.h:8
-msgid ""
-"Whether the user can dynamically type a new accelerator when positioned over"
-" an active menuitem."
-msgstr "當位置在使用中選單項目上時使用者能否在中隨時設定捷徑鍵。"
-
-#: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Toolbar Style"
 msgstr "工具列樣式"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:10
+#: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
 msgstr "工具列的風格。可用的數值有「both」、「both-horiz」、「icons」與「text」。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:11
+#: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Menus Have Icons"
 msgstr "選單可出現圖示"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:12
+#: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Whether menus may display an icon next to a menu entry."
 msgstr "選單項目旁邊應否顯示圖示。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:13
+#: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Buttons Have Icons"
 msgstr "按鈕加圖示"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:14
+#: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether buttons may display an icon in addition to the button text."
 msgstr "是否要在按鈕文字旁顯示圖示。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:15
+#: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Menubar Detachable"
 msgstr "選單列可拆離視窗"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:16
+#: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether the user can detach menubars and move them around."
 msgstr "使用者可否可拆離及移動選單列。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:17
+#: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Toolbar Detachable"
 msgstr "工具列可拆離視窗"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:18
+#: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach toolbars and move them around."
 msgstr "使用者可否差離及移動工具列。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:19
+#: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Icon Size"
 msgstr "工具列圖示大小"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:20
+#: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr "工具列中圖示的大小，可以是「small-toolbar」或「large-toolbar」。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:21
+#: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Cursor Blink"
 msgstr "閃爍游標"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:22
+#: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Whether the cursor should blink."
 msgstr "游標可否閃爍。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:23
+#: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink Time"
 msgstr "游標閃爍時間"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:24
+#: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Length of the cursor blink cycle, in milliseconds."
 msgstr "游標閃爍的周期，以毫秒計算。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:25
+#: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Icon Theme"
 msgstr "圖示主題"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:26
+#: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Icon theme to use for the panel, Caja etc."
 msgstr "在面板、Caja 等程式內使用的圖示主題"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:27
+#: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Gtk+ Theme"
 msgstr "Gtk+ 主題"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:28
+#: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Basename of the default theme used by gtk+."
 msgstr "gtk+ 預設使用主題的名稱。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:29
+#: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "List of symbolic names and color equivalents"
 msgstr "代表名稱與相應顏色的列表"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:30
+#: ../schemas/org.mate.interface.gschema.xml.in.h:28
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
 msgstr "一份『\\n』分隔的「名稱：顏色」列表是由『gtk-color-scheme』設定所定義的"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:31
+#: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "Default font"
 msgstr "預設字型"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:32
+#: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid "Name of the default font used by gtk+."
 msgstr "gtk+ 使用的預設字型名稱。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:33
+#: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "GTK IM Preedit Style"
 msgstr "GTK 輸入法預編輯區樣式"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:34
+#: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
 msgstr "GTK+ 輸入法所使用的預編輯區樣式的名稱。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:35
+#: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Status Style"
 msgstr "GTK 輸入法狀態樣式"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:36
+#: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Status Style used by gtk+."
 msgstr "GTK+ 輸入法所使用的「狀態區域」樣式的名稱。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:37
+#: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Module"
 msgstr "GTM 輸入法模組"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:38
+#: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the input method module used by GTK+."
 msgstr "GTK+ 輸入法模組所使用的名稱。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:39
+#: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "Use GTK3 header bar"
 msgstr "使用 GTK3 標題列"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:40
+#: ../schemas/org.mate.interface.gschema.xml.in.h:38
 msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
@@ -946,100 +936,100 @@ msgid ""
 "using GtkDialog directly, or message dialogs."
 msgstr "無論是內建的 GTK+ 對話框像是檔案選擇器、顏色選擇器或是字型選擇器都將會使用在頂部的標題列來顯示動作小組件，或是一個在底部的動作區域。這個設定不會影響直接使用 GtkDialog 自訂的對話框，或是訊息對話框。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:41
+#: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 overlay scrolling"
 msgstr "使用 GTK3 覆蓋捲動"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:42
+#: ../schemas/org.mate.interface.gschema.xml.in.h:40
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr "是否內建的 GTK+ 捲動視窗將要使用覆蓋捲動。覆蓋捲動會在捲動列取得焦點前隱藏並減少其體積。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:43
+#: ../schemas/org.mate.interface.gschema.xml.in.h:41
 msgid "Enable Gtk toolkit-wide animations"
 msgstr "啟用 Gtk 工具包範圍的動畫"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:44
+#: ../schemas/org.mate.interface.gschema.xml.in.h:42
 msgid "Whether to enable toolkit-wide animations."
 msgstr "是否啟用影響工具包範圍的動畫。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:45
+#: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Document font"
 msgstr "文件字型"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:46
+#: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Name of the default font used for reading documents."
 msgstr "閱讀文件的預設字型名稱。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:47
+#: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Monospace font"
 msgstr "等寬字型"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:48
+#: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr "在例如終端機等地方使用的等寬（固定寬度）字型"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:49
+#: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Use Custom Font"
 msgstr "使用自訂字型"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:50
+#: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid "Whether to use a custom font in gtk+ applications."
 msgstr "gtk+ 程式會否使用自訂字型。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:51
+#: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Status Bar on Right"
 msgstr "狀態列位於右側"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:52
+#: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to display a status bar meter on the right."
 msgstr "狀態列是否在右邊顯示。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:53
+#: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Module for GtkFileChooser"
 msgstr "GtkFileChooser 所使用的模組"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:54
+#: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
 msgstr "用於 GtkFileChooser 視窗元件做為檔案系統模型的模組。可能的值是「gio」和「gtk+」。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:55
+#: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Menubar accelerator"
 msgstr "選單加速器"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:56
+#: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid "Keyboard shortcut to open the menu bars."
 msgstr "用來開啟選單列的鍵盤快捷鍵。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:57
+#: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Show the 'Input Methods' menu"
 msgstr "顯示『輸入法』選單"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:58
+#: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr "項目和文字檢視的快顯選單中應否顯示輸入法選擇。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:59
+#: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Unicode Control Character' menu"
 msgstr "顯示「萬國碼控制字元」選單"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:60
+#: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr "項目和文字檢視的快顯選單中應否提供插入萬國碼控制字元的選擇。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:61
+#: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Titlebar layout of GTK3 client-side decorated windows"
 msgstr "GTK3 客戶端裝飾視窗的標題列佈局"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:62
+#: ../schemas/org.mate.interface.gschema.xml.in.h:60
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
@@ -1048,11 +1038,11 @@ msgid ""
 "decoration-layout."
 msgstr "這個設定決定了哪些按鈕應該要被放置在客戶端的標題列，以及它們應該要被放置在左或右。見 https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout 。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:63
+#: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Use a global menubar for displaying application menus"
 msgstr "使用全域選單列來顯示應用程式選單"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:64
+#: ../schemas/org.mate.interface.gschema.xml.in.h:62
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
@@ -1060,11 +1050,11 @@ msgid ""
 "shell-shows-app-menu."
 msgstr "這個設定會決定應用程式選單要顯示在哪裡 ── 在視窗中，或是在有 MenuGlobal 協定的面板中。詳細資訊請見 https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-app-menu 。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:65
+#: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Use a global menubar for displaying window menubars"
 msgstr "使用全域選單列顯示視窗選單列"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:66
+#: ../schemas/org.mate.interface.gschema.xml.in.h:64
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
@@ -1072,11 +1062,11 @@ msgid ""
 "shell-shows-menubar."
 msgstr "這個設定會決定視窗選單列要顯示在哪裡 ── 在視窗中，或是在有 MenuModel 協定的面板中。詳細資訊請見 https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-menubar 。"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+#: ../schemas/org.mate.interface.gschema.xml.in.h:65
 msgid "Only show mnemonics on when the Alt key is pressed"
 msgstr "只在 Alt 鍵被按下時顯示備忘"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+#: ../schemas/org.mate.interface.gschema.xml.in.h:66
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
