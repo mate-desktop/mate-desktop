@@ -395,11 +395,7 @@ mate_color_selection_init (MateColorSelection *colorsel)
   gtk_grid_attach (GTK_GRID (grid), gtk_separator_new (GTK_ORIENTATION_HORIZONTAL), 0, 3, 8, 1); 
 
   priv->opacity_label = gtk_label_new_with_mnemonic (_("Op_acity:"));
-#if GTK_CHECK_VERSION (3, 16, 0)
   gtk_label_set_xalign (GTK_LABEL (priv->opacity_label), 0.0);
-#else
-  gtk_misc_set_alignment (GTK_MISC (priv->opacity_label), 0.0, 0.5);
-#endif
   gtk_grid_attach (GTK_GRID (grid), priv->opacity_label, 0, 4, 1, 1); 
   adjust = GTK_ADJUSTMENT (gtk_adjustment_new (0.0, 0.0, 255.0, 1.0, 1.0, 0.0)); 
   g_object_set_data (G_OBJECT (adjust), "COLORSEL", colorsel); 
@@ -424,11 +420,7 @@ mate_color_selection_init (MateColorSelection *colorsel)
   
   label = gtk_label_new_with_mnemonic (_("Color _name:"));
   gtk_grid_attach (GTK_GRID (grid), label, 0, 5, 1, 1);
-#if GTK_CHECK_VERSION (3, 16, 0)
   gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-#else
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-#endif
   priv->hex_entry = gtk_entry_new ();
 
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), priv->hex_entry);
@@ -471,11 +463,8 @@ mate_color_selection_init (MateColorSelection *colorsel)
   set_selected_palette (colorsel, 0, 0);
   priv->palette_frame = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   label = gtk_label_new_with_mnemonic (_("_Palette:"));
-#if GTK_CHECK_VERSION (3, 16, 0)
+
   gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-#else
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-#endif
   gtk_box_pack_start (GTK_BOX (priv->palette_frame), label, FALSE, FALSE, 0);
 
   gtk_label_set_mnemonic_widget (GTK_LABEL (label),
@@ -2072,11 +2061,7 @@ make_label_spinbutton (MateColorSelection *colorsel,
   label = gtk_label_new_with_mnemonic (text);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label), *spinbutton);
 
-#if GTK_CHECK_VERSION (3, 16, 0)
   gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-#else
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-#endif
   gtk_grid_attach (GTK_GRID (grid), label, i, j, 1, 1);
   gtk_grid_attach (GTK_GRID (grid), *spinbutton, i+1, j, 1, 1);
 }

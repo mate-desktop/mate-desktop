@@ -110,7 +110,7 @@ fi
 
 GLIB_REQUIRED=2.36.0
 GIO_REQUIRED=2.26.0
-GTK_REQUIRED=3.14.0
+GTK_REQUIRED=3.22.0
 XRANDR_REQUIRED=1.3
 
 dnl ----------------------------------------------------------------------------

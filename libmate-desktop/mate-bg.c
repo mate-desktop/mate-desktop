@@ -844,25 +844,15 @@ draw_color_each_monitor (MateBG    *bg,
 			 GdkPixbuf *dest,
 			 GdkScreen *screen)
 {
-#if GTK_CHECK_VERSION (3, 22, 0)
 	GdkDisplay *display;
-#endif
 	GdkRectangle rect;
 	gint num_monitors;
 	int monitor;
 
-#if GTK_CHECK_VERSION (3, 22, 0)
 	display = gdk_screen_get_display (screen);
 	num_monitors = gdk_display_get_n_monitors (display);
-#else
-	num_monitors = gdk_screen_get_n_monitors (screen);
-#endif
 	for (monitor = 0; monitor < num_monitors; monitor++) {
-#if GTK_CHECK_VERSION (3, 22, 0)
 		gdk_monitor_get_geometry (gdk_display_get_monitor (display, monitor), &rect);
-#else
-		gdk_screen_get_monitor_geometry (screen, monitor, &rect);
-#endif
 		draw_color_area (bg, dest, &rect);
 	}
 }
@@ -1033,25 +1023,17 @@ draw_each_monitor (MateBG    *bg,
 		   GdkPixbuf *dest,
 		   GdkScreen *screen)
 {
-#if GTK_CHECK_VERSION (3, 22, 0)
 	GdkDisplay *display;
 
 	display = gdk_screen_get_display (screen);
 	gint num_monitors = gdk_display_get_n_monitors (display);
-#else
-	gint num_monitors = gdk_screen_get_n_monitors (screen);
-#endif
 	gint monitor = 0;
 
 	for (; monitor < num_monitors; monitor++) {
 		GdkRectangle rect;
 		GdkPixbuf *pixbuf;
 
-#if GTK_CHECK_VERSION (3, 22, 0)
 		gdk_monitor_get_geometry (gdk_display_get_monitor (display, monitor), &rect);
-#else
-		gdk_screen_get_monitor_geometry (screen, monitor, &rect);
-#endif
 
 		pixbuf = get_pixbuf_for_size (bg, monitor, rect.width, rect.height);
 		if (pixbuf) {
