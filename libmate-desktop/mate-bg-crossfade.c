@@ -411,7 +411,6 @@ draw_background (MateBGCrossfade *fade)
 	if (fade->priv->widget != NULL) {
 		gtk_widget_queue_draw (fade->priv->widget);
 	} else if (gdk_window_get_window_type (fade->priv->window) != GDK_WINDOW_ROOT) {
-#if GTK_CHECK_VERSION (3, 22, 0)
 		cairo_t           *cr;
 		cairo_region_t    *region;
 		GdkDrawingContext *draw_context;
@@ -425,16 +424,6 @@ draw_background (MateBGCrossfade *fade)
 		cairo_paint (cr);
 		gdk_window_end_draw_frame (fade->priv->window, draw_context);
 		cairo_region_destroy (region);
-#else
-		cairo_pattern_t *pattern;
-
-		pattern =
-		  cairo_pattern_create_for_surface (fade->priv->fading_surface);
-		gdk_window_set_background_pattern (fade->priv->window, pattern);
-		cairo_pattern_destroy (pattern);
-		gdk_window_invalidate_rect (fade->priv->window, NULL, FALSE);
-		gdk_window_process_updates (fade->priv->window, FALSE);
-#endif
 	} else {
 		Display *xdisplay = GDK_WINDOW_XDISPLAY (fade->priv->window);
 		gdk_error_trap_push ();
