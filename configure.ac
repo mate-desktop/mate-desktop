@@ -31,10 +31,8 @@ AC_SUBST(LT_VERSION)
 AM_MAINTAINER_MODE
 
 # GLib min/max required versions
-AC_DEFINE([GLIB_VERSION_MAX_ALLOWED], [GLIB_VERSION_2_36],
-	[Warn on use of APIs added after GLib 2.36])
-AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_36],
-	[Warn on use of APIs deprecated before GLib 2.36])
+AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_50],
+	[Warn on use of APIs deprecated before GLib 2.50])
 
 IT_PROG_INTLTOOL([0.50.1])
 
@@ -79,10 +77,8 @@ if test "x$enable_deprecation_flags" = "xyes"; then
 fi
 
 # GLib min/max required versions
-AC_DEFINE([GLIB_VERSION_MAX_ALLOWED], [GLIB_VERSION_2_36],
-	[Warn on use of APIs added after GLib 2.36])
-AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_36],
-	[Warn on use of APIs deprecated before GLib 2.36])
+AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_50],
+	[Warn on use of APIs deprecated before GLib 2.50])
 
 # Whether to build mate-about
 AC_ARG_ENABLE([mate-about],
@@ -108,7 +104,7 @@ else
         EXTERNAL_PNP_IDS="$with_pnp_ids_path"
 fi
 
-GLIB_REQUIRED=2.36.0
+GLIB_REQUIRED=2.50.0
 GIO_REQUIRED=2.26.0
 GTK_REQUIRED=3.22.0
 XRANDR_REQUIRED=1.3
