@@ -30,10 +30,6 @@ AC_SUBST(LT_VERSION)
 
 AM_MAINTAINER_MODE
 
-# GLib min/max required versions
-AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_50],
-	[Warn on use of APIs deprecated before GLib 2.50])
-
 IT_PROG_INTLTOOL([0.50.1])
 
 AC_PROG_CC
@@ -75,10 +71,6 @@ if test "x$enable_deprecation_flags" = "xyes"; then
    DISABLE_DEPRECATED_CFLAGS=$DISABLE_DEPRECATED
    AC_SUBST(DISABLE_DEPRECATED_CFLAGS)
 fi
-
-# GLib min/max required versions
-AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_50],
-	[Warn on use of APIs deprecated before GLib 2.50])
 
 # Whether to build mate-about
 AC_ARG_ENABLE([mate-about],
