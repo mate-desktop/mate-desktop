@@ -170,5 +170,11 @@
       <summary>Only show mnemonics on when the Alt key is pressed</summary>
       <description>Whether mnemonics should be automatically shown and hidden when the user presses the Alt key.</description>
     </key>
+    <key name="window-scaling-factor" type="i">
+      <default>0</default>
+      <range min="0" max="2"/>
+      <summary>Window Scaling Factor</summary>
+      <description>Internal scale factor that maps from window coordiantes to the actual device pixels. On traditional systems this is 1, but on very high density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). Set to 0 to auto-detect. After changing this value, the window manager, the panel, and the desktop (caja) may need to be restarted.</description>
+    </key>
   </schema>
 </schemalist>
