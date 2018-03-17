@@ -1,0 +1,5 @@
+#! /bin/sh
+
+PACKAGE=mate-desktop;
+
+make -C po $PACKAGE.pot && mv po/$PACKAGE.pot .
