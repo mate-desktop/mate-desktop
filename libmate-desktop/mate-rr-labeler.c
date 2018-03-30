@@ -382,7 +382,7 @@ create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *
 	GtkWidget *widget;
 	char *str;
 	char *display_name;
-	GdkColor black = { 0, 0, 0, 0 };
+	GdkRGBA black = { 0, 0, 0, 1.0 };
 	int x,y;
 
 	window = gtk_window_new (GTK_WINDOW_POPUP);
@@ -423,7 +423,7 @@ create_label_window (MateRRLabeler *labeler, MateRROutputInfo *output, GdkRGBA *
 	 * theme's colors, since the label is always shown against a light
 	 * pastel background.  See bgo#556050
 	 */
-	gtk_widget_modify_fg (widget, gtk_widget_get_state_flags (widget), &black);
+	gtk_widget_override_color (widget, gtk_widget_get_state_flags (widget), &black);
 
 	gtk_container_add (GTK_CONTAINER (window), widget);
 
@@ -521,7 +521,7 @@ mate_rr_labeler_hide (MateRRLabeler *labeler)
  * mate_rr_labeler_get_rgba_for_output:
  * @labeler: A #MateRRLabeler
  * @output: Output device (i.e. monitor) to query
- * @rgba_out: (out): Color of selected monitor.
+ * @color_out: (out): Color of selected monitor.
  *
  * Get the color used for the label on a given output (monitor).
  */
