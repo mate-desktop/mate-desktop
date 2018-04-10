@@ -276,6 +276,9 @@ mate_bg_load_from_preferences (MateBG *bg)
 
 	mate_bg_load_from_gsettings (bg, settings);
 	g_object_unref (settings);
+
+	/* Queue change to force background redraw */
+	queue_changed (bg);
 }
 
 /* This function loads default system settings */
@@ -1138,6 +1141,36 @@ mate_bg_create_surface (MateBG      *bg,
 			int	     height,
 			gboolean     root)
 {
+	return mate_bg_create_surface_scale (bg,
+					     window,
+					     width,
+					     height,
+					     1,
+					     root);
+}
+
+/**
+ * mate_bg_create_surface:
+ * @bg: MateBG
+ * @window:
+ * @width:
+ * @height:
+ * @scale:
+ * @root:
+ *
+ * Create a scaled surface that can be set as background for @window. If @is_root is
+ * TRUE, the surface created will be created by a temporary X server connection
+ * so that if someone calls XKillClient on it, it won't affect the application
+ * who created it.
+ **/
+cairo_surface_t *
+mate_bg_create_surface_scale (MateBG      *bg,
+			      GdkWindow   *window,
+			      int          width,
+			      int          height,
+			      int          scale,
+			      gboolean     root)
+{
 	int pm_width, pm_height;
 
 	cairo_surface_t *surface;
@@ -1156,10 +1189,9 @@ mate_bg_create_surface (MateBG      *bg,
 
 	mate_bg_get_pixmap_size (bg, width, height, &pm_width, &pm_height);
 
-
 	if (root)
 	{
-		surface = make_root_pixmap (window, pm_width, pm_height);
+		surface = make_root_pixmap (window, pm_width * scale, pm_height * scale);
 	}
 	else
 	{
@@ -1168,6 +1200,8 @@ mate_bg_create_surface (MateBG      *bg,
 	}
 
 	cr = cairo_create (surface);
+	cairo_scale (cr, (double)scale, (double)scale);
+
 	if (!bg->filename && bg->color_type == MATE_BG_COLOR_SOLID) {
 		gdk_cairo_set_source_rgba (cr, &(bg->primary));
 	}
