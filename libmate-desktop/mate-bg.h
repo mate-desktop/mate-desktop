@@ -127,6 +127,13 @@ cairo_surface_t *mate_bg_create_surface        (MateBG               *bg,
 						int                   height,
 						gboolean              root);
 
+cairo_surface_t *mate_bg_create_surface_scale  (MateBG               *bg,
+						GdkWindow            *window,
+						int                   width,
+						int                   height,
+						int                   scale,
+						gboolean              root);
+
 gboolean         mate_bg_get_image_size        (MateBG               *bg,
 						 MateDesktopThumbnailFactory *factory,
                                                  int                    best_width,
