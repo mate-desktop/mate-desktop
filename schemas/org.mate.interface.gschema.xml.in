@@ -174,7 +174,12 @@
       <default>0</default>
       <range min="0" max="2"/>
       <summary>Window Scaling Factor</summary>
-      <description>Internal scale factor that maps from window coordinates to the actual device pixels. On traditional systems this is 1, but on very high density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). Set to 0 to auto-detect.</description>
+      <description>This controls the GTK scale factor that maps from window coordinates to the actual device pixels. On traditional systems this is 1, but on very high density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). Set to 0 to auto-detect.</description>
+    </key>
+    <key name="window-scaling-factor-qt-sync" type="b">
+      <default>true</default>
+      <summary>Scaling Factor for QT appllications</summary>
+      <description>This setting determines whether MATE controls the scale factor for QT applications. Enable to synchronize with the GTK scale factor when initializing the session, disable to control this value elsewhere. Requires restarting your session.</description>
     </key>
   </schema>
 </schemalist>
