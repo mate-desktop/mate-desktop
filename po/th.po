@@ -1,17 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Rockers <sumorock@hotmail.com>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 21:49+0300\n"
-"PO-Revision-Date: 2018-01-09 18:50+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Thai (http://www.transifex.com/mate/MATE/language/th/)\n"
+"POT-Creation-Date: 2018-03-17 08:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Akom <knight2000@gmail.com>, 2018\n"
+"Language-Team: Thai (https://www.transifex.com/mate/teams/13566/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:77
 msgid "translator-credits"
-msgstr "translator-credits"
+msgstr "Akom Chotiphantawanon <knight2000@gmail.com>, 2016"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -89,25 +89,25 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
-msgstr ""
+msgstr "หัวเรื่อง"
 
 #: ../libmate-desktop/mate-colorbutton.c:170
 msgid "The title of the color selection dialog"
-msgstr ""
+msgstr "หัวเรื่องของกล่องโต้ตอบเลือกสี"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
 #: ../libmate-desktop/mate-colorbutton.c:442
 msgid "Pick a Color"
-msgstr ""
+msgstr "เลือกสี"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
 #: ../libmate-desktop/mate-colorsel.c:286
 msgid "Current Color"
-msgstr ""
+msgstr "สีปัจจุบัน"
 
 #: ../libmate-desktop/mate-colorbutton.c:185
 msgid "The selected color"
-msgstr ""
+msgstr "สีที่เลือกอยู่"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
 #: ../libmate-desktop/mate-colorsel.c:293
@@ -120,7 +120,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
-msgstr ""
+msgstr "ได้รับข้อมูลสีที่ผิดรูปแบบ\n"
 
 #: ../libmate-desktop/mate-colorsel.c:272
 msgid "Has Opacity Control"
@@ -184,7 +184,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorsel.c:387
 msgid "_Value:"
-msgstr ""
+msgstr "_ค่า:"
 
 #: ../libmate-desktop/mate-colorsel.c:388
 msgid "Brightness of the color."
@@ -218,61 +218,61 @@ msgstr ""
 msgid "Op_acity:"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:408
-#: ../libmate-desktop/mate-colorsel.c:418
+#: ../libmate-desktop/mate-colorsel.c:404
+#: ../libmate-desktop/mate-colorsel.c:414
 msgid "Transparency of the color."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:421
 msgid "Color _name:"
-msgstr ""
+msgstr "_ชื่อสี:"
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:473
+#: ../libmate-desktop/mate-colorsel.c:465
 msgid "_Palette:"
-msgstr ""
+msgstr "แ_ท่นอักขระ:"
 
-#: ../libmate-desktop/mate-colorsel.c:506
+#: ../libmate-desktop/mate-colorsel.c:495
 msgid "Color Wheel"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:963
+#: ../libmate-desktop/mate-colorsel.c:952
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:966
+#: ../libmate-desktop/mate-colorsel.c:955
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:971
+#: ../libmate-desktop/mate-colorsel.c:960
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:974
+#: ../libmate-desktop/mate-colorsel.c:963
 msgid "The color you've chosen."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1358
+#: ../libmate-desktop/mate-colorsel.c:1347
 msgid "gtk-color-sel"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1363
+#: ../libmate-desktop/mate-colorsel.c:1352
 msgid "_Save color here"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1583
+#: ../libmate-desktop/mate-colorsel.c:1572
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -327,7 +327,7 @@ msgstr "เกิดข้อผิดพลาดขณะกรอแฟ้ม
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3547
+#: ../libmate-desktop/mate-desktop-item.c:3540
 msgid "No name"
 msgstr "ไม่มีชื่อ"
 
@@ -356,29 +356,29 @@ msgstr "กำลังเริ่ม %s"
 msgid "No URL to launch"
 msgstr "ไม่มี URL จะเปิด"
 
-#: ../libmate-desktop/mate-desktop-item.c:2102
+#: ../libmate-desktop/mate-desktop-item.c:2095
 #, c-format
 msgid "Not a launchable item"
-msgstr "เรียกใช้ไม่ได้"
+msgstr "ไม่ใช่รายการที่เรียกทำงานได้"
 
-#: ../libmate-desktop/mate-desktop-item.c:2112
+#: ../libmate-desktop/mate-desktop-item.c:2105
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "ไม่มีคำสั่ง (Exec) จะเรียก"
 
-#: ../libmate-desktop/mate-desktop-item.c:2125
+#: ../libmate-desktop/mate-desktop-item.c:2118
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "คำสั่งที่เรียก (Exec) นั้นใช้ไม่ได้"
 
-#: ../libmate-desktop/mate-desktop-item.c:3604
+#: ../libmate-desktop/mate-desktop-item.c:3597
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "ไม่รู้จักรหัสอักขระของ: %s"
 
 #: ../libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr "ไม่พบเทอร์มินัล จะใช้ xterm แม้อาจไม่ได้ผล"
+msgstr "ไม่พบเทอร์มินัล จะลองใช้ xterm แทน แม้ว่าอาจจะไม่ได้ผล"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:460
@@ -389,7 +389,8 @@ msgstr "ไม่สามารถอ่านค่าทรัพยากร
 #: ../libmate-desktop/mate-rr.c:480
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
-msgstr "เกิดข้อผิดพลาดของ X ที่ไม่ได้เตรียมรับมือไว้ขณะอ่านค่าช่วงของขนาดหน้าจอ"
+msgstr ""
+"เกิดข้อผิดพลาดของ X ที่ไม่ได้เตรียมรับมือไว้ขณะอ่านค่าช่วงของขนาดหน้าจอ"
 
 #: ../libmate-desktop/mate-rr.c:486
 #, c-format
@@ -414,7 +415,9 @@ msgstr "ไม่สามารถอ่านข้อมูลเกี่ย
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr "ตำแหน่ง/ขนาดสำหรับ CRTC %d ที่ร้องขอ มีค่าอยู่นอกขีดจำกัดที่กำหนด: ตำแหน่ง=(%d, %d), ขนาด=(%d, %d), ค่าสูงสุด=(%d, %d)"
+msgstr ""
+"ตำแหน่ง/ขนาดสำหรับ CRTC %d ที่ร้องขอ มีค่าอยู่นอกขีดจำกัดที่กำหนด: "
+"ตำแหน่ง=(%d, %d), ขนาด=(%d, %d), ค่าสูงสุด=(%d, %d)"
 
 #: ../libmate-desktop/mate-rr.c:1772
 #, c-format
@@ -473,21 +476,26 @@ msgstr ""
 #: ../libmate-desktop/mate-rr-config.c:1726
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
-msgstr "CRTC %d: กำลังลองใช้โหมด %dx%d@%dHz โดยแสดงผลที่ %dx%d@%dHz (รอบที่ %d)\n"
+msgstr ""
+"CRTC %d: กำลังลองใช้โหมด %dx%d@%dHz โดยแสดงผลที่ %dx%d@%dHz (รอบที่ %d)\n"
 
 #: ../libmate-desktop/mate-rr-config.c:1773
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
-msgstr "ไม่สามารถกำหนด CRTC ให้กับอุปกรณ์แสดงผล:\n%s"
+msgstr ""
+"ไม่สามารถกำหนด CRTC ให้กับอุปกรณ์แสดงผล:\n"
+"%s"
 
 #: ../libmate-desktop/mate-rr-config.c:1777
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
 "%s"
-msgstr "โหมดที่เลือกไว้นั้น ไม่มีโหมดใดเข้ากันได้กับโหมดที่เป็นไปได้:\n%s"
+msgstr ""
+"โหมดที่เลือกไว้นั้น ไม่มีโหมดใดเข้ากันได้กับโหมดที่เป็นไปได้:\n"
+"%s"
 
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
@@ -497,7 +505,9 @@ msgstr "โหมดที่เลือกไว้นั้น ไม่ม�
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
-msgstr "ขนาดเสมือนที่ต้องการไม่เข้ากับขนาดที่มี: ที่ร้องขอ=(%d, %d), ค่าต่ำสุด=(%d, %d), ค่าสูงสุด=(%d, %d)"
+msgstr ""
+"ขนาดเสมือนที่ต้องการไม่เข้ากับขนาดที่มี: ที่ร้องขอ=(%d, %d), ค่าต่ำสุด=(%d, "
+"%d), ค่าสูงสุด=(%d, %d)"
 
 #. Keep this string in sync with mate-control-center/capplets/display/xrandr-
 #. capplet.c:get_display_name()
@@ -505,94 +515,102 @@ msgstr "ขนาดเสมือนที่ต้องการไม่เ
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:419
+#: ../libmate-desktop/mate-rr-labeler.c:408
 #, c-format
 msgid "Mirror Screens"
 msgstr "หน้าจอแสดงเหมือนกัน"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
-msgstr ""
+msgstr "ช่วงเวลาสั้นสุด เป็นมิลลิวินาที"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr ""
+msgstr "ไม่สนใจปุ่มเดียวกันที่ถูกกดซ้ำภายใน @delay มิลลิวินาที"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
-msgstr ""
+msgstr "พิกเซลต่อวินาที"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr ""
+msgstr "ความเร็วสูงสุดกี่พิกเซลต่อวินาที"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr ""
+msgstr "ใช้เวลากี่มิลลิวินาที่ในการเร่งความเร็ว"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr ""
+msgstr "ใช้เวลากี่มิลลิวินาทีในการเร่งจาก 0 ไปความเร็วสูงสุด"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
 msgid "Initial delay in milliseconds"
-msgstr ""
+msgstr "จำนวนมิลลิวินาทีที่คอย"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
-msgstr ""
+msgstr "คอยกี่มิลลิวินาทีก่อนที่ปุ่มบังคับเมาส์จะเริ่มทำงาน"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
 msgid "Minimum interval in milliseconds"
-msgstr ""
+msgstr "ช่วงเวลาสั้นสุด เป็นมิลลิวินาที"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr ""
+msgstr "รับสัญญาณการกดปุ่มต่อเมื่อปุ่มถูกกดค้างไว้ @delay มิลลิวินาที"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
-msgstr ""
+msgstr "เลิกใช้ถ้าสองปุ่มถูกกดพร้อมกัน"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Beep when a modifier is pressed."
-msgstr ""
+msgstr "บี๊บถ้าปุ่มประกอบถูกกด"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr ""
+msgstr "โปรแกรมเทคโนโลยีสิ่งอำนวยความสะดวกเมื่อเข้าสู่ระบบ"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
 msgstr ""
+"รายการของโปรแกรมเทคโนโลยีสิ่งอำนวยความสะดวกที่จะเริ่มใช้เมื่อเข้าสู่ระบบ "
+"MATE"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "โปรแกรมเทคโนโลยีสิ่งอำนวยความสะดวกสำหรับอุปกรณ์ติดตามตัวที่เลือกใช้"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
+"โปรแกรมเทคโนโลยีสิ่งอำนวยความสะดวกสำหรับอุปกรณ์ติดตามตัวที่เลือกใช้ "
+"สำหรับการเข้าระบบ เมนู หรือบรรทัดคำสั่ง"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
 msgstr ""
+"เรียกโปรแกรมเทคโนโลยีสิ่งอำนวยความสะดวกสำหรับอุปกรณ์ติดตามตัวที่เลือกไว้"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
+"ให้ MATE "
+"เรียกโปรแกรมเทคโนโลยีสิ่งอำนวยความสะดวกสำหรับอุปกรณ์ติดตามตัวที่เลือกไว้ "
+"เมื่อเข้าระบบ"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "โปรแกรมเทคโนโลยีสิ่งอำนวยความสะดวกสำหรับสายตาที่เลือกใช้"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
@@ -602,94 +620,96 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "เรียกโปรแกรมเทคโนโลยีสิ่งอำนวยความสะดวกสำหรับสายตาที่เลือกไว้"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
+"ให้ MATE เรียกโปรแกรมเทคโนโลยีสิ่งอำนวยความสะดวกสำหรับสายตาที่เลือกไว้ "
+"เมื่อเข้าระบบ"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
-msgstr ""
+msgstr "เบราว์เซอร์ปริยาย"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
-msgstr ""
+msgstr "เบราว์เซอร์ที่ใช้สำหรับเปิด URL ถ้าไม่ได้เจาะจงใช้เบราว์เซอร์อื่น"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
 msgid "Browser needs terminal"
-msgstr ""
+msgstr "เบราว์เซอร์ต้องใช้เทอร์มินัล"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:4
 msgid "Whether the default browser needs a terminal to run."
-msgstr ""
+msgstr "เบราว์เซอร์ปริยายต้องใช้เทอร์มินัลหรือไม่"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:5
 msgid "Browser understands remote"
-msgstr ""
+msgstr "เบราว์เซอร์เข้าใจรีโมต"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
 msgid "Whether the default browser understands netscape remote."
-msgstr ""
+msgstr "กำหนดว่าเบราว์เซอร์ปริยายเข้าใจ netscape remote หรือไม่"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
-msgstr ""
+msgstr "ปฏิทินปริยาย"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:2
 msgid "Default calendar application"
-msgstr ""
+msgstr "โปรแกรมปฏิทินปริยาย"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:3
 msgid "Calendar needs terminal"
-msgstr ""
+msgstr "ปฏิทินต้องใช้เทอร์มินัล"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr ""
+msgstr "ปฏิทินปริยายต้องใช้เทอร์มินัลหรือไม่"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
-msgstr ""
+msgstr "โปรแกรมงานปริยาย"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
 msgid "Default tasks application"
-msgstr ""
+msgstr "โปรแกรมรายการงานปริยาย"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:7
 msgid "Tasks needs terminal"
-msgstr ""
+msgstr "โปรแกรมงานต้องใช้เทอร์มินัล"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr ""
+msgstr "โปรแกรมรายการงานปริยายต้องใช้เทอร์มินัลหรือไม่"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
-msgstr ""
+msgstr "โปรแกรมเทอร์มินัล"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr ""
+msgstr "โปรแกรมเทอร์มินัลที่จะใช้สำหรับโปรแกรมที่ต้องใช้เทอร์มินัล"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
-msgstr ""
+msgstr "อาร์กิวเมนต์คำสั่ง"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr ""
+msgstr "อากิวเมนต์สำหรับเรียกใช้โปรแกรมในเทอร์มินัลตามคีย์ 'exec'"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
-msgstr ""
+msgstr "วาดพื้นหลังของพื้นโต๊ะ"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr ""
+msgstr "ให้ MATE เป็นผู้วาดพื้นหลังของพื้นโต๊ะ"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
@@ -711,7 +731,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
-msgstr ""
+msgstr "ตัวเลือกของรูป"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:8
 msgid ""
@@ -722,148 +742,152 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
-msgstr ""
+msgstr "ชื่อแฟ้มรูป"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
-msgstr ""
+msgstr "แฟ้มที่จะใช้เป็นรูปพื้นหลัง"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:11
 msgid "Picture Opacity"
-msgstr ""
+msgstr "ความโปร่งแสงของรูป"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
-msgstr ""
+msgstr "ความโปร่งแสงสำหรับรูปพื้นหลัง"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
-msgstr ""
+msgstr "สีหลัก"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr ""
+msgstr "สีเดียวที่ใช้ หรือสีซ้ายหรือสีบนถ้าไล่แถบสี "
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
-msgstr ""
+msgstr "สีรอง"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr ""
+msgstr "สีขวาหรือสีล่างถ้าไล่แถบสี ค่านี้ไม่ถูกใช้ถ้าใช้สีเดียว"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
-msgstr ""
+msgstr "ชนิดการแรเงาสี"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr ""
+"จะไล่สีพื้นหลังอย่างไร  สามารถตั้งเป็น \"horizontal-gradient\" \"vertical-"
+"gradient\" หรือ \"solid\""
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
-msgstr ""
+msgstr "ชุดไอคอนแฟ้ม"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr ""
+msgstr "ชุดไอคอนสำหรับใช้แสดงเป็นตัวแทนแฟ้ม"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
-msgstr ""
+msgstr "ใช้สิ่งอำนวยความสะดวก"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr ""
+msgstr "กำหนดว่าโปรแกรมควรจะใช้สิ่งอำนวยความสะดวกหรือไม่"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
-msgstr ""
+msgstr "ใช้ภาพเคลื่อนไหว"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
 msgstr ""
+"กำหนดว่าควรจะแสดงภาพเคลื่อนไหวหรือไม่  หมายเหตุ: "
+"นี่เป็นคีย์ส่วนกลางที่ใช้ร่วมสำหรับ พาเนล โปรแกรมจัดการหน้าต่าง ฯลฯ"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
-msgstr ""
+msgstr "เมนูมีแถบดึงออก"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr ""
+msgstr "กำหนดว่าเมนูสามารถดึงออกมาได้หรือไม่"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Toolbar Style"
-msgstr ""
+msgstr "รูปแบบแถบเครื่องมือ"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr ""
+msgstr "รูปแบบแถบเครื่องมือ สามารถตั้งเป็น \"both\", \"both-horiz\" \"icons\" หรือ \"text\""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Menus Have Icons"
-msgstr ""
+msgstr "เมนูมีไอคอน"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr ""
+msgstr "กำหนดว่าเมนูจะแสดงไอคอนข้างๆ รายการในเมนูหรือไม่"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Buttons Have Icons"
-msgstr ""
+msgstr "ปุ่มมีไอคอน"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr ""
+msgstr "กำหนดว่าปุ่มจะแสดงไอคอนเพิ่มเติมจากข้อความบนปุ่มหรือไม่"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Menubar Detachable"
-msgstr ""
+msgstr "ดึงแถบเมนูออกมาได้"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether the user can detach menubars and move them around."
-msgstr ""
+msgstr "กำหนดว่าผู้ใช้สามารถดึงแถบเมนูออกมาใช้นอกหน้าต่างได้หรือไม่"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Toolbar Detachable"
-msgstr ""
+msgstr "ดึงแถบเครื่องมือออกมาได้"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach toolbars and move them around."
-msgstr ""
+msgstr "กำหนดว่าผู้ใช้สามารถดึงแถบเครื่องมือออกมาใช้นอกหน้าต่างได้หรือไม่"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Icon Size"
-msgstr ""
+msgstr "ขนาดไอคอนในแถบเครื่องมือ"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr ""
+msgstr "ขนาดของไอคอนในแถบเครื่องมือ เป็นค่า \"small-toolbar\" หรือ \"large-toolbar\""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Cursor Blink"
-msgstr ""
+msgstr "เคอร์เซอร์กะพริบ"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Whether the cursor should blink."
-msgstr ""
+msgstr "กำหนดว่าเคอร์เซอร์จะกะพริบหรือไม่"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink Time"
-msgstr ""
+msgstr "ช่วงการกะพริบของเคอร์เซอร์"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr ""
+msgstr "จังหวะการกะพริบของเคอร์เซอร์ เป็นมิลลิวินาที"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Icon Theme"
-msgstr ""
+msgstr "ชุดตกแต่งไอคอน"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Icon theme to use for the panel, Caja etc."
@@ -871,11 +895,11 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Gtk+ Theme"
-msgstr ""
+msgstr "ชุดตกแต่ง Gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Basename of the default theme used by gtk+."
-msgstr ""
+msgstr "ชื่อของชุดตกแต่งปริยายที่ใช้โดย GTK+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "List of symbolic names and color equivalents"
@@ -889,35 +913,35 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "Default font"
-msgstr ""
+msgstr "แบบอักษรปริยาย"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid "Name of the default font used by gtk+."
-msgstr ""
+msgstr "ชื่อแบบอักษรปริยายสำหรับ gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "GTK IM Preedit Style"
-msgstr ""
+msgstr "รูปแบบ Preedit ของ GTK IM"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr ""
+msgstr "ชื่อของรูปแบบ Preedit ของกรรมวิธีป้อนข้อความที่จะใช้ใน GTK+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Status Style"
-msgstr ""
+msgstr "รูปแบบของสถานะของ GTK IM"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr ""
+msgstr "ชื่อของรูปแบบสถานะของกรรมวิธีป้อนข้อความที่จะใช้ใน GTK+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Module"
-msgstr ""
+msgstr "มอดูล GTK IM"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the input method module used by GTK+."
-msgstr ""
+msgstr "ชื่อของมอดูลกรรมวิธีป้อนข้อความที่จะใช้ใน GTK+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "Use GTK3 header bar"
@@ -951,40 +975,42 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Document font"
-msgstr ""
+msgstr "แบบอักษรสำหรับเอกสาร"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Name of the default font used for reading documents."
-msgstr ""
+msgstr "ชื่อแบบอักษรปริยายสำหรับอ่านเอกสารต่างๆ"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Monospace font"
-msgstr ""
+msgstr "แบบอักษรพิมพ์ดีด"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr ""
+"ชื่อแบบอักษรพิมพ์ดีด (ความกว้างคงที่) สำหรับใช้โปรแกรมที่ต้องใช้ (เช่น "
+"เทอร์มินัล)"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Use Custom Font"
-msgstr ""
+msgstr "ใช้แบบอักษรตั้งเอง"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr ""
+msgstr "กำหนดว่าจะใช้แบบอักษรตั้งเองในโปรแกรม gtk+ หรือไม่"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Status Bar on Right"
-msgstr ""
+msgstr "แถบสถานะอยู่ด้านขวา"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to display a status bar meter on the right."
-msgstr ""
+msgstr "กำหนดว่าจะแสดงแถบสถานะไว้ด้านขวาหรือไม่"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Module for GtkFileChooser"
-msgstr ""
+msgstr "มอดูลสำหรับ GtkFileChooser"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid ""
@@ -994,31 +1020,33 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Menubar accelerator"
-msgstr ""
+msgstr "คีย์ด่วนเรียกเมนู"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid "Keyboard shortcut to open the menu bars."
-msgstr ""
+msgstr "ปุ่มลัดที่จะใช้เปิดแถบเมนู"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Show the 'Input Methods' menu"
-msgstr ""
+msgstr "แสดงเมนู 'วิธีป้อนข้อความ'"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr ""
+"กำหนดว่าจะให้เมนูบริบทของช่องป้อนข้อความแสดงเมนูสำหรับเปลี่ยนวิธีป้อนข้อความหรือไม่"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Unicode Control Character' menu"
-msgstr ""
+msgstr "แสดงเมนู 'อักขระควบคุมของยูนิโค้ด'"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr ""
+"กำหนดว่าจะให้เมนูบริบทของช่องป้อนข้อความแสดงเมนูสำหรับแทรกอักขระควบคุมหรือไม่"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Titlebar layout of GTK3 client-side decorated windows"
@@ -1067,9 +1095,21 @@ msgid ""
 "presses the Alt key."
 msgstr ""
 
+#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+msgid "Window Scaling Factor"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+msgid ""
+"Internal scale factor that maps from window coordinates to the actual device"
+" pixels. On traditional systems this is 1, but on very high density displays"
+" (e.g. HiDPI, Retina) this can be a higher value (often 2). Set to 0 to "
+"auto-detect."
+msgstr ""
+
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
-msgstr ""
+msgstr "ปิดใช้บรรทัดคำสั่ง"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
@@ -1077,50 +1117,58 @@ msgid ""
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
+"ป้องกันไม่ให้ผู้ใช้เรียกใช้เทอร์มินัล หรือเรียกใช้คำสั่งจากบรรทัดคำสั่ง "
+"ผลคือ หน้าต่าง \"เรียกโปรแกรม\" ในพาเนลจะหายไป เป็นต้น"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
-msgstr ""
+msgstr "ปิดใช้การบันทึกแฟ้ม"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
 msgstr ""
+"ป้องกันไม่ให้ผู้ใช้บันทึกแฟ้มลงดิสก์ ผลคือ เมนู \"บันทึกเป็น\" "
+"ในโปรแกรมต่างๆ จะใช้ไม่ได้ เป็นต้น"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
-msgstr ""
+msgstr "ปิดใช้การพิมพ์"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
 msgstr ""
+"ป้องกันไม่ให้ผู้ใช้พิมพ์ออกเครื่องพิมพ์ ผลคือ เมนู \"พิมพ์\" ในโปรแกรมต่างๆ "
+"จะใช้ไม่ได้ เป็นต้น"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
-msgstr ""
+msgstr "ปิดใช้การปรับแต่งการพิมพ์"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
 msgstr ""
+"ป้องกันไม่ให้ผู้ใช้ปรับแต่งการพิมพ์ ผลคือ เมนู \"ปรับแต่งการพิมพ์\" "
+"ในโปรแกรมต่างๆ จะใช้ไม่ได้ เป็นต้น"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
-msgstr ""
+msgstr "ปิดการสลับผู้ใช้"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:10
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr ""
+msgstr "ป้องกันไม่ให้ผู้ใช้สลับไปใช้บัญชีผู้ใช้อื่นขณะที่วาระยังดำเนินอยู่"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
-msgstr ""
+msgstr "ปิดการล็อคหน้าจอ"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
@@ -1128,11 +1176,11 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:13
 msgid "Disable URL and MIME type handlers"
-msgstr ""
+msgstr "ปิดใช้การดำเนินการ URL และชนิด MIME"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr ""
+msgstr "ไม่ต้องเรียกโปรแกรมจัดการ URL หรือชนิด MIME ใดๆ"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
@@ -1152,25 +1200,25 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr ""
+msgstr "สามารถตั้งเป็น \"on\", \"off\" หรือ \"custom\""
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:2
 msgid "Keyboard Bell Custom Filename"
-msgstr ""
+msgstr "ชื่อแฟ้มเสียงระฆังแป้มพิมพ์ที่กำหนด"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:3
 msgid "File name of the bell sound to be played."
-msgstr ""
+msgstr "ชื่อแฟ้มเสียงระฆังที่จะเล่น"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:4
 msgid "Remember NumLock state"
-msgstr ""
+msgstr "จำสถานะ NumLock"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr ""
+msgstr "ถ้าเป็นจริง MATE จะจำสถานะของไฟ NumLock ขณะจบวาระเพื่อใช้ในวาระถัดไป"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
@@ -1182,11 +1230,11 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:1
 msgid "Mouse button orientation"
-msgstr ""
+msgstr "ตำแหน่งปุ่มบนเมาส์"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr ""
+msgstr "สลับปุ่มซ้ายและขวาของเมาส์ สำหรับผู้ถนัดซ้าย"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Motion Acceleration"
@@ -1196,33 +1244,35 @@ msgstr ""
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
-msgstr ""
+msgstr "ตัวคูณความเร่งของเมาส์  ถ้าตั้งเป็น -1 จะใช้ค่าปริยายของระบบ"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
-msgstr ""
+msgstr "ระยะเร่ง"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:6
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
 msgstr ""
+"ระยะทางเป็นพิกเซล ที่ตัวชี้ต้องขยับ ก่อนที่จะเมาส์จะวิ่งอย่างเร็ว "
+"ถ้าตั้งเป็น -1 จะใช้ค่าปริยายของระบบ"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
-msgstr ""
+msgstr "ระยะเริ่มลาก"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:8
 msgid "Distance before a drag is started."
-msgstr ""
+msgstr "ระยะก่อนที่จะเริ่มลาก"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr ""
+msgstr "ความเร็วดับเบิลคลิก"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
-msgstr ""
+msgstr "ความเร็วดับเบิลคลิก"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:11
 msgid "Middle button emulation"
@@ -1236,17 +1286,17 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
-msgstr ""
+msgstr "หาตัวชี้"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr ""
+msgstr "เน้นตำแหน่งของตัวชี้เมื่อปุ่ม Control ถูกกดแล้วปล่อย"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor theme"
-msgstr ""
+msgstr "ชุดตกแต่งตัวชี้"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid "Cursor theme name."
@@ -1254,81 +1304,86 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
-msgstr ""
+msgstr "ขนาดตัวชี้"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
-msgstr ""
+msgstr "ขนาดของตัวชี้ที่อ้างโดย cursor_theme"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:1
 msgid "Default mixer device"
-msgstr ""
+msgstr "อุปกรณ์ปรับระดับเสียงปริยาย"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr ""
+msgstr "อุปกรณ์ปรับระดับเสียงปริยายที่จะใช้โดยปุ่มลัดสื่อผสม"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:3
 msgid "Default mixer tracks"
-msgstr ""
+msgstr "แทร็กปรับระดับเสียงปริยาย"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr ""
+msgstr "แทร็กปรับระดับเสียงปริยายที่จะใช้โดยปุ่มลัดสื่อผสม"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
-msgstr ""
+msgstr "เปิดใช้ ESD"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
-msgstr ""
+msgstr "เปิดใช้ระบบเสียง"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
-msgstr ""
+msgstr "เล่นเสียงเมื่อมีเหตุการณ์"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:8
 msgid "Whether to play sounds on user events."
-msgstr ""
+msgstr "จะเล่นเสียงหรือไม่เมื่อมีเหตุการณ์การใช้งาน"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
-msgstr ""
+msgstr "ชื่อชุดเสียง"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:10
 msgid "The XDG sound theme to use for event sounds."
-msgstr ""
+msgstr "ชุดเสียงของ XDG ที่จะใช้เล่นประกอบการป้อนข้อมูล"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:11
 msgid "Input feedback sounds"
-msgstr ""
+msgstr "เล่นเสียงการป้อนข้อมูล"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:12
 msgid "Whether to play sounds on input events."
-msgstr ""
+msgstr "จะเล่นเสียงหรือไม่เมื่อมีเหตุการณ์การป้อนข้อมูล"
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
 msgstr ""
+"ระยะเวลาที่นานที่สุดที่จะเก็บภาพย่อไว้ในแคช เป็นจำนวนวัน กำหนดเป็น -1 "
+"ถ้าจะไม่ล้างแคชเลย"
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
 msgstr ""
+"ขนาดสูงสุดของแคชภาพย่อ ในหน่วยเมกะไบต์ กำหนดเป็น -1 ถ้าจะไม่ล้างแคชเลย"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
-msgstr ""
+msgstr "ปิดการใช้งานโปรแกรมแสดงรูปภาพย่อภายนอกทั้งหมด"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:2
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
 msgstr ""
+"ตั้งเป็นค่าจริงเพื่อปิดการเรียกใช้โปรแกรมแสดงรูปภาพย่อภายนอกทั้งหมด "
+"โดยไม่สนใจว่าโปรแกรมแต่ละตัวเหล่านั้นจะมีการสั่งเปิดใช้หรือปิดการใช้งานต่างหากไว้หรือไม่"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
@@ -1343,35 +1398,35 @@ msgstr ""
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"
-msgstr ""
+msgstr "ระยะเวลาพิมพ์"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr ""
+msgstr "จำนวนนาทีที่พิมพ์ก่อนที่จะบังคับให้พัก"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"
-msgstr ""
+msgstr "เวลาพัก"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
 msgid "Number of minutes that the typing break should last."
-msgstr ""
+msgstr "จำนวนนาทีของระยะเวลาพักพิมพ์"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:5
 msgid "Allow postponing of breaks"
-msgstr ""
+msgstr "ยอมให้เลื่อนการพักออกไป"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
-msgstr ""
+msgstr "จะให้เลื่อนการพักพิมพ์ออกไปได้หรือไม่"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
 msgid "Whether or not keyboard locking is enabled"
-msgstr ""
+msgstr "จะล็อคแป้นพิมพ์หรือไม่"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:8
 msgid "Whether or not keyboard locking is enabled."
-msgstr ""
+msgstr "จะล็อคแป้นพิมพ์หรือไม่"
 
 #: ../tools/mate-color-select.c:64
 #: ../tools/mate-color-select.desktop.in.in.h:1

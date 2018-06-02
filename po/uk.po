@@ -1,37 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Evolve32 <evolve32@yandex.ru>, 2014
-# Max Lyashuk <m_lyashuk@ukr.net>, 2015
-# Микола Ткач <znadibnyk@gmail.com>, 2013
-# Oleh, 2014
-# zubr139, 2013
-# zubr139, 2012
-# zubr139, 2012-2013
-# Микола Ткач <znadibnyk@gmail.com>, 2014-2016
-# Микола Ткач <znadibnyk@gmail.com>, 2017
-# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 21:49+0300\n"
-"PO-Revision-Date: 2018-01-09 18:50+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Ukrainian (http://www.transifex.com/mate/MATE/language/uk/)\n"
+"POT-Creation-Date: 2018-03-17 08:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018\n"
+"Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:77
 msgid "translator-credits"
-msgstr "zubr139 <zubr139@ukr.net>\nMykola Tkach <Stuartlittle1970@gmail.com>\nОлег Цюпка <myr4yk@gmail.com>"
+msgstr ""
+"Yarema aka Knedlyk <yupadmin@gmail.com>,\n"
+"Микола Ткач <Stuartlittle1970@gmail.com>,\n"
+"Oleh Tsyupka <myr4yk@gmail.com>"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -45,19 +39,26 @@ msgstr "Дізнайтеся більше про MATE"
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
-msgstr "MATE надає інтуїтивно зрозуміле та привабливе робоче оточення для Linux користувачів, що використовують традиційну концепцію."
+msgstr ""
+"MATE надає інтуїтивно зрозуміле та привабливе робоче оточення для Linux "
+"користувачів, що використовують традиційну концепцію."
 
 #: ../mate-about/mate-about.h:46
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
-msgstr "MATE містить більшу частину того, що Ви бачите на своєму комп’ютері, включаючи керівник файлами, переглядачі документів та зображень, меню і багато иньших додатків"
+msgstr ""
+"MATE містить більшу частину того, що Ви бачите на своєму комп’ютері, "
+"включаючи керівник файлами, переглядачі документів та зображень, меню і "
+"багато иньших додатків"
 
 #: ../mate-about/mate-about.h:49
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
-msgstr "MATE - це Вільне, зручне та доступне робоче середовище для Unix-подібних операційних систем."
+msgstr ""
+"MATE - це Вільне, зручне та доступне робоче середовище для Unix-подібних "
+"операційних систем."
 
 #: ../mate-about/mate-about.h:52
 msgid ""
@@ -65,20 +66,28 @@ msgid ""
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
-msgstr "MATE — відгалуження від розробки GNOME 2. Сотні людей вклали код у GNOME з миті його старту в 1997; а багато иньших добродіїв зробили внесок у иньші важливі напрямки, включаючи переклади, документацію та запоруку якости."
+msgstr ""
+"MATE — відгалуження від розробки GNOME 2. Сотні людей вклали код у GNOME з "
+"миті його старту в 1997; а багато иньших добродіїв зробили внесок у иньші "
+"важливі напрямки, включаючи переклади, документацію та запоруку якости."
 
 #: ../mate-about/mate-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
-msgstr "GNOME 2 був найпопулярнішим робочим середовищем для Linux, але більше він не розробляється... Тепер є MATE для надання Вам того самого робочого середовища!"
+msgstr ""
+"GNOME 2 був найпопулярнішим робочим середовищем для Linux, але більше він не"
+" розробляється... Тепер є MATE для надання Вам того самого робочого "
+"середовища!"
 
 #: ../mate-about/mate-about.h:59
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
-msgstr "Ім’я «MATE» йде від мате́, виду падубу парагвайського. Його листя містить каваїн(кофеїн) й використовується для настоянок та напою, що зветься мате."
+msgstr ""
+"Ім’я «MATE» йде від мате́, виду падубу парагвайського. Його листя містить "
+"каваїн(кофеїн) й використовується для настоянок та напою, що зветься мате."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -125,7 +134,9 @@ msgstr "Поточна прозорість кольору"
 
 #: ../libmate-desktop/mate-colorbutton.c:200
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr "Обране значення непрозорости (0 - повністю прозорий, 65535 - повністю непрозорий)"
+msgstr ""
+"Обране значення непрозорости (0 - повністю прозорий, 65535 - повністю "
+"непрозорий)"
 
 #: ../libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
@@ -153,7 +164,9 @@ msgstr "Поточний колір"
 
 #: ../libmate-desktop/mate-colorsel.c:294
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr "Обране значення непрозорости (0 - повністю прозорий, 65535 - повністю непрозорий)"
+msgstr ""
+"Обране значення непрозорости (0 - повністю прозорий, 65535 - повністю "
+"непрозорий)"
 
 #: ../libmate-desktop/mate-colorsel.c:300
 msgid "HEX String"
@@ -167,7 +180,9 @@ msgstr "Шістнадцятковий рядок поточного кольо�
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
-msgstr "Оберіть колір із зовнішнього кільця. Для вибору світлішого або темнішого віддтінку використовуйте внутрішній трикутник."
+msgstr ""
+"Оберіть колір із зовнішнього кільця. Для вибору світлішого або темнішого "
+"віддтінку використовуйте внутрішній трикутник."
 
 #: ../libmate-desktop/mate-colorsel.c:373
 msgid ""
@@ -227,65 +242,75 @@ msgstr "Кількість синього відтінку в кольорі."
 msgid "Op_acity:"
 msgstr "Н_епрозорість:"
 
-#: ../libmate-desktop/mate-colorsel.c:408
-#: ../libmate-desktop/mate-colorsel.c:418
+#: ../libmate-desktop/mate-colorsel.c:404
+#: ../libmate-desktop/mate-colorsel.c:414
 msgid "Transparency of the color."
 msgstr "Рівень прозорости кольору."
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:421
 msgid "Color _name:"
 msgstr "_Назва кольору:"
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
-msgstr "Ви можете увести або шістнадцяткове значення кольору(в HTML стилі), або його ім'я, наприклад, \"orange\"."
+msgstr ""
+"Ви можете увести або шістнадцяткове значення кольору(в HTML стилі), або його"
+" ім'я, наприклад, \"orange\"."
 
-#: ../libmate-desktop/mate-colorsel.c:473
+#: ../libmate-desktop/mate-colorsel.c:465
 msgid "_Palette:"
 msgstr "_Палітра:"
 
-#: ../libmate-desktop/mate-colorsel.c:506
+#: ../libmate-desktop/mate-colorsel.c:495
 msgid "Color Wheel"
 msgstr "Кільце кольорів"
 
-#: ../libmate-desktop/mate-colorsel.c:963
+#: ../libmate-desktop/mate-colorsel.c:952
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
-msgstr "Обраний раніше колір для порівняння з кольором, що обраний зараз. Ви можете перетягнути цей колір на палітру кольорів або обрати цей колір як поточний, перетягнувши його на колір збоку."
+msgstr ""
+"Обраний раніше колір для порівняння з кольором, що обраний зараз. Ви можете "
+"перетягнути цей колір на палітру кольорів або обрати цей колір як поточний, "
+"перетягнувши його на колір збоку."
 
-#: ../libmate-desktop/mate-colorsel.c:966
+#: ../libmate-desktop/mate-colorsel.c:955
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
-msgstr "Обраний колір. Ви можете перетягнути його на елемент палітри кольорів для збереження його і використання в майбутньому. "
+msgstr ""
+"Обраний колір. Ви можете перетягнути його на елемент палітри кольорів для "
+"збереження його і використання в майбутньому. "
 
-#: ../libmate-desktop/mate-colorsel.c:971
+#: ../libmate-desktop/mate-colorsel.c:960
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Обраний раніше колір для порівняння з кольором, що обраний зараз."
 
-#: ../libmate-desktop/mate-colorsel.c:974
+#: ../libmate-desktop/mate-colorsel.c:963
 msgid "The color you've chosen."
 msgstr "Обраний Вами колір."
 
-#: ../libmate-desktop/mate-colorsel.c:1358
+#: ../libmate-desktop/mate-colorsel.c:1347
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1363
+#: ../libmate-desktop/mate-colorsel.c:1352
 msgid "_Save color here"
 msgstr "_Зберегти колір тут"
 
-#: ../libmate-desktop/mate-colorsel.c:1583
+#: ../libmate-desktop/mate-colorsel.c:1572
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
-msgstr "Натисніть на дану комірку, щоб зробити її поточним кольором. Для зміни цієї комірки, перетягніть сюди зразок кольору або натисніть ПКМ і виберіть \"Зберегти колір тут\"."
+msgstr ""
+"Натисніть на дану комірку, щоб зробити її поточним кольором. Для зміни цієї "
+"комірки, перетягніть сюди зразок кольору або натисніть ПКМ і виберіть "
+"\"Зберегти колір тут\"."
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
 #: ../libmate-desktop/mate-colorseldialog.c:162
@@ -336,9 +361,9 @@ msgstr "Помилка перемотування файлу \"%s\": %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3547
+#: ../libmate-desktop/mate-desktop-item.c:3540
 msgid "No name"
-msgstr "Немає назви"
+msgstr "Без назви"
 
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
@@ -358,36 +383,38 @@ msgstr "Немає назви файлу для збереження"
 #: ../libmate-desktop/mate-desktop-item.c:1842
 #, c-format
 msgid "Starting %s"
-msgstr "Запуск %s"
+msgstr "Запускаю '%s'"
 
 #: ../libmate-desktop/mate-desktop-item.c:2079
 #, c-format
 msgid "No URL to launch"
 msgstr "Немає URL для запуску"
 
-#: ../libmate-desktop/mate-desktop-item.c:2102
+#: ../libmate-desktop/mate-desktop-item.c:2095
 #, c-format
 msgid "Not a launchable item"
-msgstr "Елемент не можна запускати"
+msgstr "Елемент не запускається"
 
-#: ../libmate-desktop/mate-desktop-item.c:2112
+#: ../libmate-desktop/mate-desktop-item.c:2105
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Немає команди для запуску"
 
-#: ../libmate-desktop/mate-desktop-item.c:2125
+#: ../libmate-desktop/mate-desktop-item.c:2118
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Неправильна команда для запуску"
 
-#: ../libmate-desktop/mate-desktop-item.c:3604
+#: ../libmate-desktop/mate-desktop-item.c:3597
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Невідоме кодування %s"
 
 #: ../libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr "Не вдається знайти відповідний термінал, використовується проґрама xterm, хоча й вона може не працювати"
+msgstr ""
+"Не вдається знайти відповідний термінал, використовується проґрама xterm, "
+"хоча й вона може не працювати"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:460
@@ -423,7 +450,9 @@ msgstr "не вдається отримати інформацію про ви�
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr "потрібна проґрама та розмір CRTC %d виходить за рамки припустимих меж: розташування=(%d, %d), розмір=(%d, %d), максимально=(%d, %d)"
+msgstr ""
+"потрібна проґрама та розмір CRTC %d виходить за рамки припустимих меж: "
+"розташування=(%d, %d), розмір=(%d, %d), максимально=(%d, %d)"
 
 #: ../libmate-desktop/mate-rr.c:1772
 #, c-format
@@ -467,7 +496,11 @@ msgid ""
 "existing mode = %d, new mode = %d\n"
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
-msgstr "параметри виходу %s відрізняються від параметрів иньшого клонованого виходу:\nрежим = %d, новий режим = %d\nкоординати = (%d, %d), нові координати = (%d, %d)\nобертання = %s, нове обертання = %s"
+msgstr ""
+"параметри виходу %s відрізняються від параметрів иньшого клонованого виходу:\n"
+"режим = %d, новий режим = %d\n"
+"координати = (%d, %d), нові координати = (%d, %d)\n"
+"обертання = %s, нове обертання = %s"
 
 #: ../libmate-desktop/mate-rr-config.c:1533
 #, c-format
@@ -482,21 +515,27 @@ msgstr "Перевірка режимів для контролера CRT %d\n"
 #: ../libmate-desktop/mate-rr-config.c:1726
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
-msgstr "контролер CRT %d: пробний режим %dx%d@%dГц з виходом на %dx%d@%dГц (спроба %d)\n"
+msgstr ""
+"контролер CRT %d: пробний режим %dx%d@%dГц з виходом на %dx%d@%dГц (спроба "
+"%d)\n"
 
 #: ../libmate-desktop/mate-rr-config.c:1773
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
-msgstr "не вдалося встановити CRTC для виходів:\n%s"
+msgstr ""
+"не вдалося встановити CRTC для виходів:\n"
+"%s"
 
 #: ../libmate-desktop/mate-rr-config.c:1777
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
 "%s"
-msgstr "жоден з обраних режимів не сумісний з режимами:\n%s"
+msgstr ""
+"жоден з обраних режимів не сумісний з режимами:\n"
+"%s"
 
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
@@ -506,7 +545,9 @@ msgstr "жоден з обраних режимів не сумісний з р�
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
-msgstr "потрібний віртуальний розмір не вміщується у доступний простір: потрібно=(%d, %d), мінімум=(%d, %d), максимум=(%d, %d)"
+msgstr ""
+"потрібний віртуальний розмір не вміщується у доступний простір: "
+"потрібно=(%d, %d), мінімум=(%d, %d), максимум=(%d, %d)"
 
 #. Keep this string in sync with mate-control-center/capplets/display/xrandr-
 #. capplet.c:get_display_name()
@@ -514,10 +555,10 @@ msgstr "потрібний віртуальний розмір не вміщує
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:419
+#: ../libmate-desktop/mate-rr-labeler.c:408
 #, c-format
 msgid "Mirror Screens"
-msgstr "Дублювати монітори"
+msgstr "Дублювати зображення"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
@@ -525,7 +566,9 @@ msgstr "мінімальний інтервал у мілісекундах"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
-msgstr "Не зважати на багаторазове натиснення однієї клявіші протягом @delay мілісекунд."
+msgstr ""
+"Не зважати на багаторазове натиснення однієї клявіші протягом @delay "
+"мілісекунд."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
@@ -550,7 +593,8 @@ msgstr "Початкова затримка у мілісекундах"
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
-msgstr "Скільки мілісекунд чекати перед початком опрацювання клявіш руху мишею."
+msgstr ""
+"Скільки мілісекунд чекати перед початком опрацювання клявіш руху мишею."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
 msgid "Minimum interval in milliseconds"
@@ -559,7 +603,9 @@ msgstr "Мінімальний інтервал у мілісекундах"
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr "Не приймати клявішу, як натиснуту, поки вона не утримувалася протягом @delay мілісекунд."
+msgstr ""
+"Не приймати клявішу, як натиснуту, поки вона не утримувалася протягом @delay"
+" мілісекунд."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
@@ -577,7 +623,9 @@ msgstr "Запускати при вході проґрами зі спеція�
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
-msgstr "Перелік проґрам для людей з обмеженими можливостями, що запускаються при вході до сеансу середовища MATE."
+msgstr ""
+"Перелік проґрам для людей з обмеженими можливостями, що запускаються при "
+"вході до сеансу середовища MATE."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
@@ -587,7 +635,9 @@ msgstr "Обрана проґрама Мобільности спеціяльн�
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr "Обрана проґрама мобільности спеціяльних можливостей для використання під час входу у сеанс, роботи з меню та у командному рядку."
+msgstr ""
+"Обрана проґрама мобільности спеціяльних можливостей для використання під час"
+" входу у сеанс, роботи з меню та у командному рядку."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
@@ -597,7 +647,9 @@ msgstr "Запускати обрану проґраму мобільности 
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr "Чи запускати під час входу у MATE проґраму мобільности спеціяльних можливостей."
+msgstr ""
+"Чи запускати під час входу у MATE проґраму мобільности спеціяльних "
+"можливостей."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
@@ -607,7 +659,9 @@ msgstr "Обрана Зорова проґрама спеціяльних мож
 msgid ""
 "Preferred Visual assistive technology application to be used for login, "
 "menu, or command line."
-msgstr "Бажаний додаток допомоги зору, який слід використовувати при вході у систему, в меню або у командному рядку."
+msgstr ""
+"Бажаний додаток допомоги зору, який слід використовувати при вході у "
+"систему, в меню або у командному рядку."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
@@ -617,7 +671,8 @@ msgstr "Запускати обрану Зорову проґраму спеці
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr "Чи запускати під час входу у MATE Зорову проґраму спеціяльних можливостей."
+msgstr ""
+"Чи запускати під час входу у MATE Зорову проґраму спеціяльних можливостей."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
@@ -690,7 +745,9 @@ msgstr "Аргументи Exec"
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr "Аргумент, що використовується для запуску проґрам в терміналі визначений ключем 'exec'."
+msgstr ""
+"Аргумент, що використовується для запуску проґрам в терміналі визначений "
+"ключем 'exec'."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
@@ -702,11 +759,12 @@ msgstr "Чи має МАТЕ показувати тло стільниці."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
-msgstr "Показати піктограми на стільниці"
+msgstr "Показати піктограми стільниці"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "Чи повинен керівник файлами МАТЕ (Caja) показувати піктограми на стільниці."
+msgstr ""
+"Чи повинен керівник файлами МАТЕ (Caja) показувати піктограми на стільниці."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
@@ -716,7 +774,9 @@ msgstr "Чи використовувати плявний перехід при
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
-msgstr "Якщо налаштовано true, MATE буде змінювати тло стільниці з ефектом плявного переходу."
+msgstr ""
+"Якщо налаштовано true, MATE буде змінювати тло стільниці з ефектом плявного "
+"переходу."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
@@ -727,7 +787,11 @@ msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr "Визначає метод унаочнення зображення встановленого параметром wallpaper_filename. Можливі значення \"wallpaper\" шпалери, \"centered\" у центрі, \"scaled\" масштабований, \"stretched\" розтягнутий, \"zoom\" зміна розміру, \"spanned\" натягнутий."
+msgstr ""
+"Визначає метод унаочнення зображення встановленого параметром "
+"wallpaper_filename. Можливі значення \"wallpaper\" шпалери, \"centered\" у "
+"центрі, \"scaled\" масштабований, \"stretched\" розтягнутий, \"zoom\" зміна "
+"розміру, \"spanned\" натягнутий."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
@@ -760,7 +824,9 @@ msgstr "Вторинний колір"
 #: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr "Правий чи нижній колір для малювання градієнтів, не використовується для суцільного кольору."
+msgstr ""
+"Правий чи нижній колір для малювання градієнтів, не використовується для "
+"суцільного кольору."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
@@ -770,7 +836,10 @@ msgstr "Тип переходу кольору"
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
-msgstr "Тип згасання кольору тла. Можливі значення: \"horizontal-gradient\" горизонтальній градієнт, \"vertical-gradient\" вертикальній градієнт і \"solid\" суцільний колір."
+msgstr ""
+"Тип згасання кольору тла. Можливі значення: \"horizontal-gradient\" "
+"горизонтальній градієнт, \"vertical-gradient\" вертикальній градієнт і "
+"\"solid\" суцільний колір."
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
@@ -796,7 +865,9 @@ msgstr "Увімкнути анімацію"
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr "Чи потрібно показувати анімацію. Зауважте: це глобальний ключ, його зміна вплине на поведінку керівника вікнами, панелі тощо."
+msgstr ""
+"Чи потрібно показувати анімацію. Зауважте: це глобальний ключ, його зміна "
+"вплине на поведінку керівника вікнами, панелі тощо."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
@@ -812,7 +883,9 @@ msgstr "Стиль панелі знарядь"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr "Стиль панелі знарядь. Правильними значеннями є \"both\", \"both-horiz\", \"icons\", та \"text\"."
+msgstr ""
+"Стиль панелі знарядь. Правильними значеннями є \"both\", \"both-horiz\", "
+"\"icons\", та \"text\"."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Menus Have Icons"
@@ -852,7 +925,9 @@ msgstr "Розмір піктограм на панелях"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr "Розмір піктограм на панелях знарядь: або \"small-toolbar\", або \"large-toolbar\"."
+msgstr ""
+"Розмір піктограм на панелях знарядь: або \"small-toolbar\", або \"large-"
+"toolbar\"."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Cursor Blink"
@@ -894,7 +969,9 @@ msgstr "Перелік символічних імен та еквівалент
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
-msgstr "Відокремлений перелік '\\n' \"name:color\" визначений опцією 'gtk-color-scheme'"
+msgstr ""
+"Відокремлений перелік '\\n' \"name:color\" визначений опцією 'gtk-color-"
+"scheme'"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "Default font"
@@ -938,7 +1015,11 @@ msgid ""
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr "Чи використовувати заголовок вікна згори для відображення віджетів дій таких діялоґів GTK+ як вибір файлів, вибір кольору або вибір шрифту, або область дій знизу. Ці налащтування не стосуються довільних діялоґів з використанням GtkDialog напряму або діялоґів повідомлень."
+msgstr ""
+"Чи використовувати заголовок вікна згори для відображення віджетів дій таких"
+" діялоґів GTK+ як вибір файлів, вибір кольору або вибір шрифту, або область "
+"дій знизу. Ці налащтування не стосуються довільних діялоґів з використанням "
+"GtkDialog напряму або діялоґів повідомлень."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 overlay scrolling"
@@ -948,7 +1029,9 @@ msgstr "Використовувати накладене гортання GTK3"
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
-msgstr "Чи використовувати вбудованим GTK+ прогортуваним вікнам накладене гортання. Накладене гортання ховає і зменшує розмір смуги гортання коли не в фокусі."
+msgstr ""
+"Чи використовувати вбудованим GTK+ прогортуваним вікнам накладене гортання. "
+"Накладене гортання ховає і зменшує розмір смуги гортання коли не в фокусі."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:41
 msgid "Enable Gtk toolkit-wide animations"
@@ -973,7 +1056,9 @@ msgstr "Моноширинний шрифт"
 #: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
-msgstr "Назва моноширинного (з фіксованою шириною) шрифту, що використовується у додатках типу терміналу."
+msgstr ""
+"Назва моноширинного (з фіксованою шириною) шрифту, що використовується у "
+"додатках типу терміналу."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Use Custom Font"
@@ -999,7 +1084,9 @@ msgstr "Модуль для GtkFileChooser"
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
-msgstr "Модуль для використання у якости моделі файлової системи у віджеті GtkFileChooser. Можливі значення: «gio» та «gtk+»."
+msgstr ""
+"Модуль для використання у якости моделі файлової системи у віджеті "
+"GtkFileChooser. Можливі значення: «gio» та «gtk+»."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Menubar accelerator"
@@ -1017,7 +1104,9 @@ msgstr "Показувати меню \"Методи вводу\""
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
-msgstr "Чи повинні контекстні меню елементів уведення тексту пропонувати змінити метод уведення."
+msgstr ""
+"Чи повинні контекстні меню елементів уведення тексту пропонувати змінити "
+"метод уведення."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Unicode Control Character' menu"
@@ -1027,11 +1116,15 @@ msgstr "Показувати меню \"Керуючі символи Unicode\""
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
-msgstr "Чи повинні контекстні меню елементів уведення тексту пропонувати вставити керуючі символи."
+msgstr ""
+"Чи повинні контекстні меню елементів уведення тексту пропонувати вставити "
+"керуючі символи."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "Компонування заголовку в GTK3 вікнах, що використовують декорації на стороні клієнта."
+msgstr ""
+"Компонування заголовку в GTK3 вікнах, що використовують декорації на стороні"
+" клієнта."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:60
 msgid ""
@@ -1040,7 +1133,12 @@ msgid ""
 " of right. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
-msgstr "Ця опція визначає наявність кнопок, що слід відображати у заголовках вікон, що використовують декорації на стороні клієнта, а також бік, де вони знаходитимуться. Для довідки див. https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout."
+msgstr ""
+"Ця опція визначає наявність кнопок, що слід відображати у заголовках вікон, "
+"що використовують декорації на стороні клієнта, а також бік, де вони "
+"знаходитимуться. Для довідки див. "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"decoration-layout."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Use a global menubar for displaying application menus"
@@ -1052,7 +1150,11 @@ msgid ""
 "window or on a panel with MenuModel protocol. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
-msgstr "Дане налаштування визначає спосіб відображення меню проґрам - у вікні або на панелі за допомогою протоколу MenuModel. Див. https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-app-menu."
+msgstr ""
+"Дане налаштування визначає спосіб відображення меню проґрам - у вікні або на"
+" панелі за допомогою протоколу MenuModel. Див. "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-app-menu."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Use a global menubar for displaying window menubars"
@@ -1064,7 +1166,11 @@ msgid ""
 "window or on a panel with MenuModel protocol. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-menubar."
-msgstr "Дане налаштування визначає спосіб відображення меню вікон - у вікні або на панелі за допомогою протоколу MenuModel. Див. https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-menubar."
+msgstr ""
+"Дане налаштування визначає спосіб відображення меню вікон - у вікні або на "
+"панелі за допомогою протоколу MenuModel. Див. "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-menubar."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:65
 msgid "Only show mnemonics on when the Alt key is pressed"
@@ -1074,7 +1180,21 @@ msgstr "Показувати мнемоніки лише коли клявіша
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr "Чи повинні мнемоніки бути автоматично показані або приховані, коли користувач натискає клявішу Alt."
+msgstr ""
+"Чи повинні мнемоніки бути автоматично показані або приховані, коли "
+"користувач натискає клявішу Alt."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+msgid "Window Scaling Factor"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+msgid ""
+"Internal scale factor that maps from window coordinates to the actual device"
+" pixels. On traditional systems this is 1, but on very high density displays"
+" (e.g. HiDPI, Retina) this can be a higher value (often 2). Set to 0 to "
+"auto-detect."
+msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
@@ -1085,7 +1205,10 @@ msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr "Забороняє користувачу доступ до терміналу або вказує командний рядок для виконання. Наприклад доступ до діялоґового вікна панелі \"Виконання проґрами\" буде вимкнено."
+msgstr ""
+"Забороняє користувачу доступ до терміналу або вказує командний рядок для "
+"виконання. Наприклад доступ до діялоґового вікна панелі \"Виконання "
+"проґрами\" буде вимкнено."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
@@ -1095,7 +1218,9 @@ msgstr "Вимкнути збереження файлів на диск"
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr "Забороняє користувачу збереження файлів на диск. Наприклад, буде вимкнено доступ до діялоґу «Зберегти як» в усіх додатках."
+msgstr ""
+"Забороняє користувачу збереження файлів на диск. Наприклад, буде вимкнено "
+"доступ до діялоґу «Зберегти як» в усіх додатках."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
@@ -1105,7 +1230,9 @@ msgstr "Вимкнути друк"
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr "Забороняє користувачу друк. Наприклад, буде вимкнено доступ до діялоґу «Друк» в усіх додатках."
+msgstr ""
+"Забороняє користувачу друк. Наприклад, буде вимкнено доступ до діялоґу "
+"«Друк» в усіх додатках."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
@@ -1115,7 +1242,9 @@ msgstr "Вимкнути налаштовування друку"
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr "Забороняє користувачу зміну параметрів друку. Наприклад, буде вимкнено доступ до діялоґу «Налаштовування друку» в усіх додатках."
+msgstr ""
+"Забороняє користувачу зміну параметрів друку. Наприклад, буде вимкнено "
+"доступ до діялоґу «Налаштовування друку» в усіх додатках."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
@@ -1125,7 +1254,9 @@ msgstr "Вимкнути перемикання користувачів"
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr "Забороняє користувачу перемикання на иньший обліковий запис, поки активний його сеанс."
+msgstr ""
+"Забороняє користувачу перемикання на иньший обліковий запис, поки активний "
+"його сеанс."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
@@ -1179,7 +1310,9 @@ msgstr "Запам'ятовувати стан NumLock"
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr "Якщо цей ключ встановлено, MATE буде зберігати стан перемикача NumLock між сеансами."
+msgstr ""
+"Якщо цей ключ встановлено, MATE буде зберігати стан перемикача NumLock між "
+"сеансами."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
@@ -1205,7 +1338,8 @@ msgstr "Пришвидшення руху"
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
-msgstr "Множник прискорення руху миші. Значення -1 є типовим системним значенням."
+msgstr ""
+"Множник прискорення руху миші. Значення -1 є типовим системним значенням."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
@@ -1215,7 +1349,9 @@ msgstr "Поріг руху"
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
-msgstr "Відстань у точках, на яку має пересунутися вказівник, перед тим, як розпочнеться прискорення руху миші. Системним початковим значенням є -1."
+msgstr ""
+"Відстань у точках, на яку має пересунутися вказівник, перед тим, як "
+"розпочнеться прискорення руху миші. Системним початковим значенням є -1."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
@@ -1241,7 +1377,9 @@ msgstr "Емуляція середньої кнопки"
 msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
-msgstr "Вмикає емуляцію середньої кнопки миші через одночасне натискання на ліву та праву кнопки."
+msgstr ""
+"Вмикає емуляцію середньої кнопки миші через одночасне натискання на ліву та "
+"праву кнопки."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
@@ -1251,7 +1389,9 @@ msgstr "Знайти вказівник"
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr "Підсвічує поточне розташування вказівника, коли клявішу Control натиснуто та відпущено."
+msgstr ""
+"Підсвічує поточне розташування вказівника, коли клявішу Control натиснуто та"
+" відпущено."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor theme"
@@ -1275,7 +1415,9 @@ msgstr "Типовий пристрій мікшера звуку"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr "Типовий пристрій мікшера, що використовується мультимедійними сполученнями клявіш."
+msgstr ""
+"Типовий пристрій мікшера, що використовується мультимедійними сполученнями "
+"клявіш."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:3
 msgid "Default mixer tracks"
@@ -1283,7 +1425,9 @@ msgstr "Типові доріжки мікшера"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr "Типові доріжки мікшера, що використовуються мультимедійними сполученнями клявіш."
+msgstr ""
+"Типові доріжки мікшера, що використовуються мультимедійними сполученнями "
+"клявіш."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
@@ -1321,13 +1465,17 @@ msgstr "Чи відтворювати звуки під час подій вво
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
-msgstr "Максимальна давність мініатюр у кеші, у днях. Встановіть у -1 для вимкнення очищення кешу."
+msgstr ""
+"Максимальна давність мініатюр у кеші, у днях. Встановіть у -1 для вимкнення "
+"очищення кешу."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr "Максимальний розмір кешу, у мегабайтах. Встановіть у -1 для вимкнення очищення кешу."
+msgstr ""
+"Максимальний розмір кешу, у мегабайтах. Встановіть у -1 для вимкнення "
+"очищення кешу."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
@@ -1337,18 +1485,22 @@ msgstr "Вимкнути усі зовнішні проґрами створен
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
-msgstr "Позначте, для вимикання усіх зовнішніх проґрам створення мініатюр, незалежно від того, чи вони увімкнені иньшими способами."
+msgstr ""
+"Позначте, для вимикання усіх зовнішніх проґрам створення мініатюр, незалежно"
+" від того, чи вони увімкнені иньшими способами."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
-msgstr "Перелік mime-типів, для яких зовнішні проґрами для мініатюр буде вимкнено"
+msgstr ""
+"Перелік mime-типів, для яких зовнішні проґрами для мініатюр буде вимкнено"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:4
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr "Мініатюри не буде створено для файлів, чиї mime-типи вказано у переліку."
+msgstr ""
+"Мініатюри не буде створено для файлів, чиї mime-типи вказано у переліку."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"

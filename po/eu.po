@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2012-2014,2016
-# Egoitz Rodriguez Obieta <egoitzro@gmail.com>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 21:49+0300\n"
-"PO-Revision-Date: 2018-01-09 18:50+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Basque (http://www.transifex.com/mate/MATE/language/eu/)\n"
+"POT-Creation-Date: 2018-03-17 08:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Egoitz Rodriguez Obieta <egoitzro@gmail.com>, 2018\n"
+"Language-Team: Basque (https://www.transifex.com/mate/teams/13566/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +22,9 @@ msgstr ""
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:77
 msgid "translator-credits"
-msgstr "Asier Iturralde Sarasola <asier.iturralde@gmail.com>"
+msgstr ""
+"Asier Iturralde Sarasola <asier.iturralde@gmail.com>\n"
+"Aritz Jorge Sánchez"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -37,19 +38,26 @@ msgstr "Ikasi gehiago MATEri buruz"
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
-msgstr "MATEk mahaigain intuitibo eta erakargarri bat eskaintzen die Linux erabiltzaileei metafora tradizionalak erabiliz"
+msgstr ""
+"MATEk mahaigain intuitibo eta erakargarri bat eskaintzen die Linux "
+"erabiltzaileei metafora tradizionalak erabiliz"
 
 #: ../mate-about/mate-about.h:46
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
-msgstr "MATE ordenagailuan ikusten duzun ia guztia da, hala nola, fitxategi-kudeatzailea, dokumentu-ikustailea, irudi-ikustailea, menuak eta hainbat aplikazio."
+msgstr ""
+"MATE ordenagailuan ikusten duzun ia guztia da, hala nola, fitxategi-"
+"kudeatzailea, dokumentu-ikustailea, irudi-ikustailea, menuak eta hainbat "
+"aplikazio."
 
 #: ../mate-about/mate-about.h:49
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
-msgstr "MATE Unix-moduko sistema-eragile familiarentzako mahaigain-ingurune libre, erabilgarri eta egonkorra da."
+msgstr ""
+"MATE Unix-moduko sistema-eragile familiarentzako mahaigain-ingurune libre, "
+"erabilgarri eta egonkorra da."
 
 #: ../mate-about/mate-about.h:52
 msgid ""
@@ -57,20 +65,29 @@ msgid ""
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
-msgstr "MATE GNOME 2ren jarraipena da. Ehunka pertsonak parte hartu dute GNOMEren kodean 1997tik hona; beste hainbat pertsonak ere parte hartu dute itzulpenak, dokumentazioa eta kalitate-bermatzea bezalako lan garrantzitsuak eginez."
+msgstr ""
+"MATE GNOME 2ren jarraipena da. Ehunka pertsonak parte hartu dute GNOMEren "
+"kodean 1997tik hona; beste hainbat pertsonak ere parte hartu dute "
+"itzulpenak, dokumentazioa eta kalitate-bermatzea bezalako lan garrantzitsuak"
+" eginez."
 
 #: ../mate-about/mate-about.h:56
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
-msgstr "GNOME 2 Linux mahaigain ezagunena zen baina jada ez dago eskuragarri... baina hemen dago MATE mahaigain bera eskaintzeko!"
+msgstr ""
+"GNOME 2 Linux mahaigain ezagunena zen baina jada ez dago eskuragarri... "
+"baina hemen dago MATE mahaigain bera eskaintzeko!"
 
 #: ../mate-about/mate-about.h:59
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
-msgstr "MATE izena mate landaretik dator. Espezie honek Hego Amerika subtropikalean du jatorria. Kafeina dauka eta infusioak eta mate deituriko edaria egiteko erabiltzen da."
+msgstr ""
+"MATE izena mate landaretik dator. Espezie honek Hego Amerika subtropikalean "
+"du jatorria. Kafeina dauka eta infusioak eta mate deituriko edaria egiteko "
+"erabiltzen da."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -129,7 +146,8 @@ msgstr "Opakutasun-kontrola dauka"
 
 #: ../libmate-desktop/mate-colorsel.c:273
 msgid "Whether the color selector should allow setting opacity"
-msgstr "Kolore-hautatzaileak opakutasuna ezartzeko aukera eman behar duen ala ez"
+msgstr ""
+"Kolore-hautatzaileak opakutasuna ezartzeko aukera eman behar duen ala ez"
 
 #: ../libmate-desktop/mate-colorsel.c:279
 msgid "Has palette"
@@ -160,12 +178,15 @@ msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr ""
+"Hautatu nahi duzun kolorea kanpoko eraztunetik. Hautatu kolore horren "
+"iluntasun edo argitasuna barruko hirukia erabiliz."
 
 #: ../libmate-desktop/mate-colorsel.c:373
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr ""
+"Klikatu tanta-kontagailua, ondoren klikatu pantailan kolore hori hautatzeko."
 
 #: ../libmate-desktop/mate-colorsel.c:382
 msgid "_Hue:"
@@ -173,7 +194,7 @@ msgstr "_Tonua:"
 
 #: ../libmate-desktop/mate-colorsel.c:383
 msgid "Position on the color wheel."
-msgstr ""
+msgstr "Kolore gurpileko kokapena."
 
 #: ../libmate-desktop/mate-colorsel.c:385
 msgid "_Saturation:"
@@ -197,7 +218,7 @@ msgstr "_Gorria:"
 
 #: ../libmate-desktop/mate-colorsel.c:390
 msgid "Amount of red light in the color."
-msgstr ""
+msgstr "Kolorearen argi gorri kopurua."
 
 #: ../libmate-desktop/mate-colorsel.c:391
 msgid "_Green:"
@@ -205,7 +226,7 @@ msgstr "_Berdea:"
 
 #: ../libmate-desktop/mate-colorsel.c:392
 msgid "Amount of green light in the color."
-msgstr ""
+msgstr "Kolorearen argi berde kopurua."
 
 #: ../libmate-desktop/mate-colorsel.c:393
 msgid "_Blue:"
@@ -213,67 +234,69 @@ msgstr "_Urdina:"
 
 #: ../libmate-desktop/mate-colorsel.c:394
 msgid "Amount of blue light in the color."
-msgstr ""
+msgstr "Kolorearen argi urdin kopurua."
 
 #: ../libmate-desktop/mate-colorsel.c:397
 msgid "Op_acity:"
 msgstr "Op_akutasuna:"
 
-#: ../libmate-desktop/mate-colorsel.c:408
-#: ../libmate-desktop/mate-colorsel.c:418
+#: ../libmate-desktop/mate-colorsel.c:404
+#: ../libmate-desktop/mate-colorsel.c:414
 msgid "Transparency of the color."
 msgstr "Kolorearen gardentasuna."
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:421
 msgid "Color _name:"
 msgstr "Kolorearen ize_na:"
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
+"HTML estiloko kolore balio hamaseitar bat sar dezakezu edo 'orange' "
+"(laranja) bezalako ingelesezko kolore izen bat."
 
-#: ../libmate-desktop/mate-colorsel.c:473
+#: ../libmate-desktop/mate-colorsel.c:465
 msgid "_Palette:"
 msgstr "_Paleta:"
 
-#: ../libmate-desktop/mate-colorsel.c:506
+#: ../libmate-desktop/mate-colorsel.c:495
 msgid "Color Wheel"
-msgstr ""
+msgstr "Kolore gurpila"
 
-#: ../libmate-desktop/mate-colorsel.c:963
+#: ../libmate-desktop/mate-colorsel.c:952
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:966
+#: ../libmate-desktop/mate-colorsel.c:955
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:971
+#: ../libmate-desktop/mate-colorsel.c:960
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:974
+#: ../libmate-desktop/mate-colorsel.c:963
 msgid "The color you've chosen."
 msgstr "Hautatu duzun kolorea."
 
-#: ../libmate-desktop/mate-colorsel.c:1358
+#: ../libmate-desktop/mate-colorsel.c:1347
 msgid "gtk-color-sel"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1363
+#: ../libmate-desktop/mate-colorsel.c:1352
 msgid "_Save color here"
 msgstr "_Gorde kolorea hemen"
 
-#: ../libmate-desktop/mate-colorsel.c:1583
+#: ../libmate-desktop/mate-colorsel.c:1572
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -328,9 +351,9 @@ msgstr "Errorea gertatu da '%s' fitxategian atzera joatean: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3547
+#: ../libmate-desktop/mate-desktop-item.c:3540
 msgid "No name"
-msgstr "Izenik ez"
+msgstr "Izenik gabe"
 
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
@@ -350,36 +373,38 @@ msgstr "Ez dago gordetzeko fitxategi-izenik"
 #: ../libmate-desktop/mate-desktop-item.c:1842
 #, c-format
 msgid "Starting %s"
-msgstr "%s abiarazten"
+msgstr "%s hasieratzen"
 
 #: ../libmate-desktop/mate-desktop-item.c:2079
 #, c-format
 msgid "No URL to launch"
 msgstr "Ez dago abiarazteko URLrik"
 
-#: ../libmate-desktop/mate-desktop-item.c:2102
+#: ../libmate-desktop/mate-desktop-item.c:2095
 #, c-format
 msgid "Not a launchable item"
-msgstr "Ez dago abiaraz daitekeen elementurik"
+msgstr "Ez da elementu abiarazgarria"
 
-#: ../libmate-desktop/mate-desktop-item.c:2112
+#: ../libmate-desktop/mate-desktop-item.c:2105
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Ez dago abiarazteko komandorik (Exec)"
 
-#: ../libmate-desktop/mate-desktop-item.c:2125
+#: ../libmate-desktop/mate-desktop-item.c:2118
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Abiarazteko komando okerra (Exec)"
 
-#: ../libmate-desktop/mate-desktop-item.c:3604
+#: ../libmate-desktop/mate-desktop-item.c:3597
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Honen kodeketa ezezaguna: %s"
 
 #: ../libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr "Ezin izan da terminala aurkitu, xterm erabiliko da, nahiz eta agian ez funtzionatu"
+msgstr ""
+"Ezin da terminala aurkitu; xterm erabiliko da, nahiz eta agian funtzionatu "
+"ez"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:460
@@ -415,7 +440,9 @@ msgstr "ezin izan da %d irteerari buruzko informazioa lortu"
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr "eskatutako %d. CRTCaren posizioa/tamaina baimendutako mugatik at dago: posizioa=(%d, %d), tamaina=(%d, %d), gehienezkoa=(%d, %d)"
+msgstr ""
+"eskatutako %d. CRTCaren posizioa/tamaina baimendutako mugatik at dago: "
+"posizioa=(%d, %d), tamaina=(%d, %d), gehienezkoa=(%d, %d)"
 
 #: ../libmate-desktop/mate-rr.c:1772
 #, c-format
@@ -435,7 +462,9 @@ msgstr "Eramangarria"
 #, c-format
 msgid ""
 "none of the saved display configurations matched the active configuration"
-msgstr "pantailaren gordetako konfiguraziotariko bat bera ere ez dator bat konfigurazio aktiboarekin"
+msgstr ""
+"pantailaren gordetako konfiguraziotariko bat bera ere ez dator bat "
+"konfigurazio aktiboarekin"
 
 #: ../libmate-desktop/mate-rr-config.c:1486
 #, c-format
@@ -459,7 +488,11 @@ msgid ""
 "existing mode = %d, new mode = %d\n"
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
-msgstr "%s irteerak ez dauka beste klonatutako irteeraren parametro berdinak:\ndagoen modua = %d, modu berria = %d\ndauden koordenatuak = (%d, %d), koordenatu berriak = (%d, %d)\ndagoen biraketa = %s, biraketa berria = %s"
+msgstr ""
+"%s irteerak ez dauka beste klonatutako irteeraren parametro berdinak:\n"
+"dagoen modua = %d, modu berria = %d\n"
+"dauden koordenatuak = (%d, %d), koordenatu berriak = (%d, %d)\n"
+"dagoen biraketa = %s, biraketa berria = %s"
 
 #: ../libmate-desktop/mate-rr-config.c:1533
 #, c-format
@@ -474,21 +507,27 @@ msgstr "%d. CRTCaren moduak saiatzen\n"
 #: ../libmate-desktop/mate-rr-config.c:1726
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
-msgstr "%d. CRTCa: %dx%d@%dHz modua saiatzen, %dx%d@%dHz irteerarekin (%d. pasaldia)\n"
+msgstr ""
+"%d. CRTCa: %dx%d@%dHz modua saiatzen, %dx%d@%dHz irteerarekin (%d. "
+"pasaldia)\n"
 
 #: ../libmate-desktop/mate-rr-config.c:1773
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
-msgstr "ezin izan da CRTCak irteeretara esleitu:\n%s"
+msgstr ""
+"ezin izan da CRTCak irteeretara esleitu:\n"
+"%s"
 
 #: ../libmate-desktop/mate-rr-config.c:1777
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
 "%s"
-msgstr "hautatutako moduetariko bat bera ere ez da bateragarria modu erabilgarriekin:\n%s"
+msgstr ""
+"hautatutako moduetariko bat bera ere ez da bateragarria modu erabilgarriekin:\n"
+"%s"
 
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
@@ -498,7 +537,9 @@ msgstr "hautatutako moduetariko bat bera ere ez da bateragarria modu erabilgarri
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
-msgstr "eskatutako tamaina birtuala ez zaio tamaina erabilgarriari doitzen: eskatutakoa=(%d, %d), gutxienekoa=(%d, %d), gehienezkoa=(%d, %d)"
+msgstr ""
+"eskatutako tamaina birtuala ez zaio tamaina erabilgarriari doitzen: "
+"eskatutakoa=(%d, %d), gutxienekoa=(%d, %d), gehienezkoa=(%d, %d)"
 
 #. Keep this string in sync with mate-control-center/capplets/display/xrandr-
 #. capplet.c:get_display_name()
@@ -506,18 +547,20 @@ msgstr "eskatutako tamaina birtuala ez zaio tamaina erabilgarriari doitzen: eska
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:419
+#: ../libmate-desktop/mate-rr-labeler.c:408
 #, c-format
 msgid "Mirror Screens"
-msgstr "Ispilu-pantailak"
+msgstr "Pantaila ispiluak"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
-msgstr ""
+msgstr "gutxieneko tartea milisegundotan"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
 msgstr ""
+"Ez egin jaramonik tekla _bera_ hainbat aldiz sakatzen bada @delay "
+"milisegundotan."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
@@ -525,15 +568,16 @@ msgstr "Pixelak segundoko"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr ""
+msgstr "Gehienezko abiaduran zenbat pixel segundoko mugituko diren."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr ""
+msgstr "Zenbat denboraz azeleratu behar den (milisegundotan)"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
 msgstr ""
+"0tik gehienezko abiadurara iristeko behar duen denbora (milisegundotan)."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
 msgid "Initial delay in milliseconds"
@@ -543,6 +587,8 @@ msgstr "Hasierako atzerapena milisegundotan"
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
 msgstr ""
+"Sagua mugitzeko tresnak funtzionatzen hasi baino lehen itxaron behar den "
+"denbora (milisegundotan)."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
 msgid "Minimum interval in milliseconds"
@@ -551,7 +597,9 @@ msgstr "Gutxieneko tartea milisegundotan"
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr "Ez onartu tekla bat sakatutzat @delay milisegundoz sakatuta edukitzen ez bada."
+msgstr ""
+"Ez onartu tekla bat sakatutzat @delay milisegundoz sakatuta edukitzen ez "
+"bada."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
@@ -559,41 +607,46 @@ msgstr "Desgaitu bi tekla aldi berean sakatzen direnean."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Beep when a modifier is pressed."
-msgstr ""
+msgstr "Jo soinu-seinalea aldatzailea sakatutakoan."
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr ""
+msgstr "Laguntza-teknologien aplikazioen abioa"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
 msgstr ""
+"MATEren mahaigainean saioa hastean abiarazi beharreko laguntza-teknologien "
+"aplikazio-zerrenda."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Laguntza-teknologien aplikazio hobetsia"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
+"Laguntza-teknologien aplikazio hobetsia saio-hasieran, menuan edo komando-"
+"lerroan erabiltzeko."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Abiarazi laguntza-teknologien aplikazio hobetsia"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
+"MATEk abiaraziko duen laguntza-teknologien aplikazio hobetsia saio-hasieran."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "Laguntza-teknologia bisualen aplikazio hobetsia"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
@@ -603,13 +656,15 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "Abiarazi laguntza-teknologia bisualen aplikazio hobetsia"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
+"MATEk abiaraziko duen laguntza-teknologia bisualen aplikazio hobetsia saio-"
+"hasieran."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
@@ -633,7 +688,9 @@ msgstr "Arakatzaileak urrunekoa ulertzen du"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
 msgid "Whether the default browser understands netscape remote."
-msgstr "Arakatzaile lehenetsiak urruneko netscape ulertzen duen ala ez adierazten du."
+msgstr ""
+"Arakatzaile lehenetsiak urruneko netscape ulertzen duen ala ez adierazten "
+"du."
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
@@ -649,7 +706,8 @@ msgstr "Egutegiak terminala behar du"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr "Egutegi-aplikazio lehenetsiak exekutatzeko terminal bat behar duen ala ez."
+msgstr ""
+"Egutegi-aplikazio lehenetsiak exekutatzeko terminal bat behar duen ala ez."
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
@@ -665,7 +723,9 @@ msgstr "Atazak terminala behar du"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr "Atazen aplikazio lehenetsia exekutatzeko terminal bat behar den ala ez adierazten du."
+msgstr ""
+"Atazen aplikazio lehenetsia exekutatzeko terminal bat behar den ala ez "
+"adierazten du."
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
@@ -673,7 +733,9 @@ msgstr "Terminal-aplikazioa"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr "Terminala behar duten aplikazioak abiaraztean erabili beharreko terminal-programa."
+msgstr ""
+"Terminala behar duten aplikazioak abiaraztean erabili beharreko terminal-"
+"programa."
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
@@ -682,7 +744,9 @@ msgstr "Exekutatzeko argumentuak"
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr "'exec' teklak definitutako terminalean programak exekutatzeko erabilitako argumentua."
+msgstr ""
+"'exec' teklak definitutako terminalean programak exekutatzeko erabilitako "
+"argumentua."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
@@ -698,7 +762,9 @@ msgstr "Erakutsi mahaigaineko ikonoak"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:4
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "MATEren fitxategi-kudeatzaileak (Caja) marraztu behar ditu mahaigaineko ikonoak."
+msgstr ""
+"MATEren fitxategi-kudeatzaileak (Caja) marraztu behar ditu mahaigaineko "
+"ikonoak."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:5
 msgid "Fade the background on change"
@@ -719,7 +785,10 @@ msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr "'wallpaper_filename'-k ezarritako irudia nola errendatzen den zehazten du. Balio posibleak hauek dira: \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\", \"spanned\"."
+msgstr ""
+"'wallpaper_filename'-k ezarritako irudia nola errendatzen den zehazten du. "
+"Balio posibleak hauek dira: \"wallpaper\", \"centered\", \"scaled\", "
+"\"stretched\", \"zoom\", \"spanned\"."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
@@ -739,30 +808,34 @@ msgstr "Atzeko planoaren irudia marrazteko opakutasuna."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
-msgstr ""
+msgstr "Kolore primarioa"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr ""
+msgstr "Ezkerreko edo goiko kolorea gradienteak marraztean, edo kolore lisoa."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
-msgstr ""
+msgstr "Kolore sekundarioa"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
+"Eskuineko edo beheko kolorea gradienteak marraztean; ez da erabiltzen kolore"
+" lisoentzat."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
-msgstr ""
+msgstr "Koloreen itzaldura-mota"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr ""
+"Nola itzaleztatu atzeko planoaren kolorea. Hauek dira balio posibleak: "
+"\"horizontal-gradient\", \"vertical-gradient\", eta \"solid\"."
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
@@ -778,7 +851,9 @@ msgstr "Gaitu erabilerraztasuna"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr "Aplikazioek erabilerraztasun-euskarria eduki behar duten ala ez adierazten du."
+msgstr ""
+"Aplikazioek erabilerraztasun-euskarria eduki behar duten ala ez adierazten "
+"du."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
@@ -788,15 +863,18 @@ msgstr "Gaitu animazioak"
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr "Animazioak bistaratu behar diren ala ez adierazten du. Oharra: hau gako orokorra da, leiho-kudeatzailearen, panelaren eta abarraren portaera aldatzen du."
+msgstr ""
+"Animazioak bistaratu behar diren ala ez adierazten du. Oharra: hau gako "
+"orokorra da, leiho-kudeatzailearen, panelaren eta abarraren portaera "
+"aldatzen du."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
-msgstr ""
+msgstr "Menuak askagarriak dira"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr ""
+msgstr "Menuak askagarriak izan behar duten ala ez adierazten du."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Toolbar Style"
@@ -804,7 +882,9 @@ msgstr "Tresna-barraren estiloa"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr "Tresna-barraren estiloa. Balio hauek onartzen dira: \"both\", \"both-horiz\", \"icons\" eta \"text\"."
+msgstr ""
+"Tresna-barraren estiloa. Balio hauek onartzen dira: \"both\", \"both-"
+"horiz\", \"icons\" eta \"text\"."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Menus Have Icons"
@@ -812,7 +892,9 @@ msgstr "Menuek ikonoak dituzte"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr "Menuek menu-sarreren ondoan ikonoa bistaratu behar duten ala ez adierazten du."
+msgstr ""
+"Menuek menu-sarreren ondoan ikonoa bistaratu behar duten ala ez adierazten "
+"du."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Buttons Have Icons"
@@ -820,7 +902,9 @@ msgstr "Botoiek ikonoak dituzte"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr "Botoiek botoiaren testuaz gain ikonoa bistaratu behar duten ala ez adierazten du."
+msgstr ""
+"Botoiek botoiaren testuaz gain ikonoa bistaratu behar duten ala ez "
+"adierazten du."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Menubar Detachable"
@@ -828,7 +912,9 @@ msgstr "Menu-barra askagarria"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether the user can detach menubars and move them around."
-msgstr "Erabiltzaileak menu-barrak askatu eta lekuz alda ditzakeen ala ez adierazten du."
+msgstr ""
+"Erabiltzaileak menu-barrak askatu eta lekuz alda ditzakeen ala ez adierazten"
+" du."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Toolbar Detachable"
@@ -836,7 +922,9 @@ msgstr "Tresna-barra askagarria"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach toolbars and move them around."
-msgstr "Erabiltzaileak tresna-barrak askatu eta lekuz alda ditzakeen ala ez adierazten du."
+msgstr ""
+"Erabiltzaileak tresna-barrak askatu eta lekuz alda ditzakeen ala ez "
+"adierazten du."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Icon Size"
@@ -844,7 +932,9 @@ msgstr "Tresna-barrako ikonoen tamaina"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr "Ikonoen tamaina tresna-barretan, \"small-toolbar\" (tresna-barra txikia) edo \"large-toolbar\" (tresna-barra handia) izan daiteke."
+msgstr ""
+"Ikonoen tamaina tresna-barretan, \"small-toolbar\" (tresna-barra txikia) edo"
+" \"large-toolbar\" (tresna-barra handia) izan daiteke."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Cursor Blink"
@@ -886,7 +976,9 @@ msgstr "Izen sinboliko eta kolore baliokideen zerrenda"
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
-msgstr "'\\n' bidez banaturiko \"izena:kolorea\" zerrenda bat, 'gtk-color-scheme' ezarpenak definitu bezala"
+msgstr ""
+"'\\n' bidez banaturiko \"izena:kolorea\" zerrenda bat, 'gtk-color-scheme' "
+"ezarpenak definitu bezala"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "Default font"
@@ -902,7 +994,8 @@ msgstr "GTK IMen Preedit estiloa"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr "Gtk+-ek erabiltzen duen GTK+-en Preedit estiloko sarrerako metodoaren izena."
+msgstr ""
+"Gtk+-ek erabiltzen duen GTK+-en Preedit estiloko sarrerako metodoaren izena."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Status Style"
@@ -910,7 +1003,8 @@ msgstr "GTK IM egoera estiloa"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr "Gtk+-ek erabiltzen duen GTK+-en egoera-estiloko sarrerako metodoaren izena."
+msgstr ""
+"Gtk+-ek erabiltzen duen GTK+-en egoera-estiloko sarrerako metodoaren izena."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Module"
@@ -956,7 +1050,8 @@ msgstr "Dokumentuaren letra-tipoa"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Name of the default font used for reading documents."
-msgstr "Dokumentuak irakurtzeko erabiltzen den letra-tipo lehenetsiaren izena."
+msgstr ""
+"Dokumentuak irakurtzeko erabiltzen den letra-tipo lehenetsiaren izena."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Monospace font"
@@ -965,7 +1060,9 @@ msgstr "Tarte bakarreko letra-tipoa"
 #: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
-msgstr "Helbideetan, adibidez terminaletan, erabiltzeko tarte bakarreko (zabalera finkoko) letra-tipoaren izena."
+msgstr ""
+"Helbideetan, adibidez terminaletan, erabiltzeko tarte bakarreko (zabalera "
+"finkoko) letra-tipoaren izena."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Use Custom Font"
@@ -973,7 +1070,8 @@ msgstr "Erabili letra-tipo pertsonalizatua"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr "gtk+ aplikazioetan letra-tipo lehenetsia erabiliko den ala ez adierazten du."
+msgstr ""
+"gtk+ aplikazioetan letra-tipo lehenetsia erabiliko den ala ez adierazten du."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Status Bar on Right"
@@ -981,7 +1079,9 @@ msgstr "Egoera-barra eskuinean"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to display a status bar meter on the right."
-msgstr "Egoera-barraren neurgailua eskuinean bistaratu behar den ala ez adierazten du."
+msgstr ""
+"Egoera-barraren neurgailua eskuinean bistaratu behar den ala ez adierazten "
+"du."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Module for GtkFileChooser"
@@ -991,7 +1091,9 @@ msgstr "GtkFileChooser-en modulua"
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
-msgstr "GtkFileChooser trepetarentzat fitxategi-sistema eredu bezala erabiltzeko modulua. Balio erabilgarriak \"gio\" eta \"gtk+\" dira."
+msgstr ""
+"GtkFileChooser trepetarentzat fitxategi-sistema eredu bezala erabiltzeko "
+"modulua. Balio erabilgarriak \"gio\" eta \"gtk+\" dira."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Menubar accelerator"
@@ -1009,7 +1111,9 @@ msgstr "Erakutsi 'Sarrera metodoak' menua"
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
-msgstr "Sarrerako eta testuen ikuspegiko testuinguruko menuek sarrerako metodoa aldatzeko aukera eman behar duten ala ez."
+msgstr ""
+"Sarrerako eta testuen ikuspegiko testuinguruko menuek sarrerako metodoa "
+"aldatzeko aukera eman behar duten ala ez."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Unicode Control Character' menu"
@@ -1020,6 +1124,8 @@ msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr ""
+"Sarrerako eta testuen ikuspegiko testuinguruko menuak kontroleko karaktereak"
+" txertatzea utzi behar duen edo ez."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Titlebar layout of GTK3 client-side decorated windows"
@@ -1068,6 +1174,18 @@ msgid ""
 "presses the Alt key."
 msgstr ""
 
+#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+msgid "Window Scaling Factor"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+msgid ""
+"Internal scale factor that maps from window coordinates to the actual device"
+" pixels. On traditional systems this is 1, but on very high density displays"
+" (e.g. HiDPI, Retina) this can be a higher value (often 2). Set to 0 to "
+"auto-detect."
+msgstr ""
+
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
 msgstr "Desgaitu komando-lerroa"
@@ -1077,7 +1195,10 @@ msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr "Erabiltzaileak terminal bat atzitzea edo komando-lerro bat exekutatzeko zehaztea eragozten du. Adibidez, honek paneleko \"Exekutatu aplikazioa\" elkarrizketa-koadroa desgaitzen du."
+msgstr ""
+"Erabiltzaileak terminal bat atzitzea edo komando-lerro bat exekutatzeko "
+"zehaztea eragozten du. Adibidez, honek paneleko \"Exekutatu aplikazioa\" "
+"elkarrizketa-koadroa desgaitzen du."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
@@ -1087,7 +1208,10 @@ msgstr "Desgaitu fitxategiak diskoan gordetzea"
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr "Erabiltzaileak fitxategiak diskoan gordetzea eragozten du. Adibidez, honek aplikazio guztietako \"Gorde honela\" elkarrizketa-koadroak irekitzea desgaitzen du."
+msgstr ""
+"Erabiltzaileak fitxategiak diskoan gordetzea eragozten du. Adibidez, honek "
+"aplikazio guztietako \"Gorde honela\" elkarrizketa-koadroak irekitzea "
+"desgaitzen du."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
@@ -1097,7 +1221,9 @@ msgstr "Desgaitu inprimatzea"
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr "Erabiltzaileak inprimatzea eragozten du. Adibidez, honek aplikazio guztietako \"Inprimatu\" elkarrizketa-koadroa irekitzea desgaitzen du."
+msgstr ""
+"Erabiltzaileak inprimatzea eragozten du. Adibidez, honek aplikazio "
+"guztietako \"Inprimatu\" elkarrizketa-koadroa irekitzea desgaitzen du."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
@@ -1107,7 +1233,10 @@ msgstr "Desgaitu inprimagailuaren konfigurazioa"
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr "Erabiltzaileak inprimagailuaren ezarpenak aldatzea eragozten du. Adibidez, honek aplikazio guztietako \"Inprimagailuaren ezarpenak\" elkarrizketa-koadroak irekitzea desgaitzen du."
+msgstr ""
+"Erabiltzaileak inprimagailuaren ezarpenak aldatzea eragozten du. Adibidez, "
+"honek aplikazio guztietako \"Inprimagailuaren ezarpenak\" elkarrizketa-"
+"koadroak irekitzea desgaitzen du."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
@@ -1117,7 +1246,9 @@ msgstr "Desgaitu erabiltzailez aldatzea"
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr "Honek erabiltzailea beste baten kontura aldatzea saihesten du saioa aktibo duen bitartean."
+msgstr ""
+"Honek erabiltzailea beste baten kontura aldatzea saihesten du saioa aktibo "
+"duen bitartean."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
@@ -1133,7 +1264,8 @@ msgstr "Desgaitu URL eta MIME mota maneiatzaileak"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr "Galarazi edozein URL edo MIME moten aplikazio-maneiatzaileak exekutatzea."
+msgstr ""
+"Galarazi edozein URL edo MIME moten aplikazio-maneiatzaileak exekutatzea."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
@@ -1171,7 +1303,9 @@ msgstr "Gogoratu BlokZenb-ren egoera"
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr "Egia balioarekin ezartzean MATEk blokeo numerikoaren LED argiaren egoera saioen artean gogoratuko du."
+msgstr ""
+"Egia balioarekin ezartzean MATEk blokeo numerikoaren LED argiaren egoera "
+"saioen artean gogoratuko du."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
@@ -1187,7 +1321,8 @@ msgstr "Saguaren botoien orientazioa"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "Trukatu saguaren ezker eta eskuineko botoiak, sagua ezkerrentzat egokitzeko."
+msgstr ""
+"Trukatu saguaren ezker eta eskuineko botoiak, sagua ezkerrentzat egokitzeko."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Motion Acceleration"
@@ -1198,36 +1333,40 @@ msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
 msgstr ""
+"Saguaren mugimendurako azelerazio biderkatzailea. -1 balioa sistemaren balio"
+" lehenetsia da."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
-msgstr ""
+msgstr "Mugimendu-muga"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:6
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
 msgstr ""
+"Sagu bizkortuaren mugimendua aktibatu baino lehen erakusleak egin behar duen"
+" distantzia pixeletan. -1 balioa sistemaren balio lehenetsia da."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
-msgstr ""
+msgstr "Arrastatze atalasea"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:8
 msgid "Distance before a drag is started."
-msgstr ""
+msgstr "Arrastatzea hasi aurreko distantzia."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr ""
+msgstr "Klik bikoitzaren denbora"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
-msgstr ""
+msgstr "Klik bikoitzaren iraupena."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:11
 msgid "Middle button emulation"
-msgstr ""
+msgstr "Erdiko botoiaren emulazioa"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:12
 msgid ""
@@ -1237,13 +1376,15 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
-msgstr ""
+msgstr "Kokatu erakuslea"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
 msgstr ""
+"Erakuslearen uneko kokalekua nabarmentzen du Kontrol tekla sakatutakoan eta "
+"askatutakoan."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor theme"
@@ -1259,7 +1400,7 @@ msgstr "Kurtsorearen tamaina"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
-msgstr ""
+msgstr "Tamaina (kurtsore-gaiak zehazten duen kurtsorearena)."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:1
 msgid "Default mixer device"
@@ -1267,7 +1408,7 @@ msgstr "Nahasgailu lehenetsia"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr ""
+msgstr "Multimediako laster-teklek erabiltzen duten nahasgailu lehenetsia"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:3
 msgid "Default mixer tracks"
@@ -1276,6 +1417,8 @@ msgstr "Pista-nahasgailu lehenetsia"
 #: ../schemas/org.mate.sound.gschema.xml.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
 msgstr ""
+"Multimediako laster-teklek erabiltzen dituzten nahasgailuaren pista "
+"lehenetsiak."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
@@ -1283,7 +1426,7 @@ msgstr "Gaitu ESD"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
-msgstr ""
+msgstr "Gaitu soinu-zerbitzaria abiaraztea."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
@@ -1292,6 +1435,7 @@ msgstr "Gertaeren soinuak"
 #: ../schemas/org.mate.sound.gschema.xml.in.h:8
 msgid "Whether to play sounds on user events."
 msgstr ""
+"Erabiltzailearen gertaeretan soinuak erreproduzitu ala ez adierazten du."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
@@ -1303,23 +1447,27 @@ msgstr "XDG soinu-gaia gertaeren soinuetan erabiltzeko."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:11
 msgid "Input feedback sounds"
-msgstr ""
+msgstr "Sarrerako berrelikaduren soinuak"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:12
 msgid "Whether to play sounds on input events."
-msgstr ""
+msgstr "Sarrerako gertaeretan soinuak erreproduzitu ala ez adierazten du."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
 msgstr ""
+"Cacheko koadro txikien gehienezko antzinatasuna (egunetan). Ezarri -1 balioa"
+" garbitzea desgaitzeko."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
 msgstr ""
+"Cacheko koadro txikien gehienezko tamaina (MB). Ezarri -1 balioa garbitzea "
+"desgaitzeko."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
@@ -1329,7 +1477,9 @@ msgstr "Desgaitu kanpoko koadro txikitzaile guztiak"
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
-msgstr "Ezarri egia kanpoko koadro txikitzaileen programa guztiak desgaitzeko, beren kabuz gaituta/desgaituta dauden kontuan hartu gabe."
+msgstr ""
+"Ezarri egia kanpoko koadro txikitzaileen programa guztiak desgaitzeko, beren"
+" kabuz gaituta/desgaituta dauden kontuan hartu gabe."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
@@ -1348,23 +1498,24 @@ msgstr "Idazteko denbora"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr ""
+msgstr "Idazteko denborako minutuak atseden-modua abiarazi aurretik."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"
-msgstr ""
+msgstr "Atsedenaldia"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
 msgid "Number of minutes that the typing break should last."
-msgstr ""
+msgstr "Idazteko atsedenaldiak iraun behar dituen minutuak."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:5
 msgid "Allow postponing of breaks"
-msgstr ""
+msgstr "Baimendu atsedenak atzeratzea"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
 msgstr ""
+"Idazteko atsedenaldiaren pantaila atzeratu daitekeen ala ez adierazten du."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
 msgid "Whether or not keyboard locking is enabled"

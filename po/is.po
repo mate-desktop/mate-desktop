@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Sveinn í Felli <sv1@fellsnet.is>, 2012,2014-2015
-# Sveinn í Felli <sv1@fellsnet.is>, 2012
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 21:49+0300\n"
-"PO-Revision-Date: 2018-01-09 18:50+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Icelandic (http://www.transifex.com/mate/MATE/language/is/)\n"
+"POT-Creation-Date: 2018-03-17 08:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Language-Team: Icelandic (https://www.transifex.com/mate/teams/13566/is/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +22,10 @@ msgstr ""
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:77
 msgid "translator-credits"
-msgstr "Samúel Jón Gunnarsson <sammi@techattack.nu>, 2003\nSveinn í Felli <sv1@fellsnet.is>, 2012-2015\nAðrir FOSS íslenskuþýðendur"
+msgstr ""
+"Samúel Jón Gunnarsson <sammi@techattack.nu>, 2003\n"
+"Sveinn í Felli <sv1@fellsnet.is>, 2012-2016\n"
+"Aðrir FOSS íslenskuþýðendur"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -49,7 +51,9 @@ msgstr ""
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
-msgstr "MATE er frjálst, nýtanlegt, stöðugt, aðgengilegt skjáviðmót fyrir Unix-skyldar fjölskyldur stýrikerfa."
+msgstr ""
+"MATE er frjálst, nýtanlegt, stöðugt, aðgengilegt skjáviðmót fyrir Unix-"
+"skyldar fjölskyldur stýrikerfa."
 
 #: ../mate-about/mate-about.h:52
 msgid ""
@@ -78,7 +82,7 @@ msgstr ""
 #: ../libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
-msgstr "Óþekkt"
+msgstr "Óþekktur"
 
 #: ../libmate-desktop/mate-colorbutton.c:154
 msgid "Use alpha"
@@ -159,13 +163,17 @@ msgstr ""
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
-msgstr "Veldu þann lit sem þú vilt fá með ytri hringinum. Veldu birtu litarins með því að nota innri þríhyrninginn."
+msgstr ""
+"Veldu þann lit sem þú vilt fá með ytri hringinum. Veldu birtu litarins með "
+"því að nota innri þríhyrninginn."
 
 #: ../libmate-desktop/mate-colorsel.c:373
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
-msgstr "Smelltu á dropateljarann, síðan á lit einhverstaðar á skjánum til að velja hann."
+msgstr ""
+"Smelltu á dropateljarann, síðan á lit einhverstaðar á skjánum til að velja "
+"hann."
 
 #: ../libmate-desktop/mate-colorsel.c:382
 msgid "_Hue:"
@@ -219,65 +227,75 @@ msgstr "Magn bláa litsins."
 msgid "Op_acity:"
 msgstr "_Gagnsæi:"
 
-#: ../libmate-desktop/mate-colorsel.c:408
-#: ../libmate-desktop/mate-colorsel.c:418
+#: ../libmate-desktop/mate-colorsel.c:404
+#: ../libmate-desktop/mate-colorsel.c:414
 msgid "Transparency of the color."
 msgstr "Gagnsæi litarins."
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:421
 msgid "Color _name:"
 msgstr "_Nafn litarins:"
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
-msgstr "Það er hægt að bæta við litum með sextándakerfistölum eins og í HTML eða með því að skrifa nafn litarins (til dæmis ‚orange‘)."
+msgstr ""
+"Það er hægt að bæta við litum með sextándakerfistölum eins og í HTML eða með"
+" því að skrifa nafn litarins (til dæmis ‚orange‘)."
 
-#: ../libmate-desktop/mate-colorsel.c:473
+#: ../libmate-desktop/mate-colorsel.c:465
 msgid "_Palette:"
 msgstr "_Litaspjald:"
 
-#: ../libmate-desktop/mate-colorsel.c:506
+#: ../libmate-desktop/mate-colorsel.c:495
 msgid "Color Wheel"
 msgstr "Litahjól"
 
-#: ../libmate-desktop/mate-colorsel.c:963
+#: ../libmate-desktop/mate-colorsel.c:952
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
-msgstr "Áður valinn litur, til samanburðar við litinn sem þú ert að velja núna. Þút getur dregið þennan lit inn á litaspjaldið, eða valið hann sem virkan með því að draga hann inn á litaspjald virkra lita."
+msgstr ""
+"Áður valinn litur, til samanburðar við litinn sem þú ert að velja núna. Þút "
+"getur dregið þennan lit inn á litaspjaldið, eða valið hann sem virkan með "
+"því að draga hann inn á litaspjald virkra lita."
 
-#: ../libmate-desktop/mate-colorsel.c:966
+#: ../libmate-desktop/mate-colorsel.c:955
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
-msgstr "Liturinn sem þú hefur valið. Þú getur dregið hann inn á litaspjaldið svo þú getir notað hann í framtíðinni."
+msgstr ""
+"Liturinn sem þú hefur valið. Þú getur dregið hann inn á litaspjaldið svo þú "
+"getir notað hann í framtíðinni."
 
-#: ../libmate-desktop/mate-colorsel.c:971
+#: ../libmate-desktop/mate-colorsel.c:960
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Áður valinn litur, til samanburðar við þann sem þú ert að velja núna."
 
-#: ../libmate-desktop/mate-colorsel.c:974
+#: ../libmate-desktop/mate-colorsel.c:963
 msgid "The color you've chosen."
 msgstr "Liturinn sem þú hefur valið."
 
-#: ../libmate-desktop/mate-colorsel.c:1358
+#: ../libmate-desktop/mate-colorsel.c:1347
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1363
+#: ../libmate-desktop/mate-colorsel.c:1352
 msgid "_Save color here"
 msgstr "_Vista lit hér"
 
-#: ../libmate-desktop/mate-colorsel.c:1583
+#: ../libmate-desktop/mate-colorsel.c:1572
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
-msgstr "Smelltu á litasjaldsfærslu til að gera hana að núverandi lit. Til að breyta færslunni, dragðu þá lit af virka litaspjaldin hingað eða hægri smelltu á það og veldu „Vista lit hér.“"
+msgstr ""
+"Smelltu á litasjaldsfærslu til að gera hana að núverandi lit. Til að breyta "
+"færslunni, dragðu þá lit af virka litaspjaldin hingað eða hægri smelltu á "
+"það og veldu „Vista lit hér.“"
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
 #: ../libmate-desktop/mate-colorseldialog.c:162
@@ -328,9 +346,9 @@ msgstr "Villa við endurlestur skráar '%s': %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3547
+#: ../libmate-desktop/mate-desktop-item.c:3540
 msgid "No name"
-msgstr "Ónefnt"
+msgstr "Ekkert heiti"
 
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
@@ -357,29 +375,31 @@ msgstr "Ræsi %s"
 msgid "No URL to launch"
 msgstr "Engin URL slóð til að ræsa"
 
-#: ../libmate-desktop/mate-desktop-item.c:2102
+#: ../libmate-desktop/mate-desktop-item.c:2095
 #, c-format
 msgid "Not a launchable item"
 msgstr "Þetta er ekki ræsanlegur íhlutur"
 
-#: ../libmate-desktop/mate-desktop-item.c:2112
+#: ../libmate-desktop/mate-desktop-item.c:2105
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Engin skipun (Exec) til ræsingar"
 
-#: ../libmate-desktop/mate-desktop-item.c:2125
+#: ../libmate-desktop/mate-desktop-item.c:2118
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Óæskileg skipun (Exec) til ræsingar"
 
-#: ../libmate-desktop/mate-desktop-item.c:3604
+#: ../libmate-desktop/mate-desktop-item.c:3597
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Óþekkt kóðun á: %s"
 
 #: ../libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr "Ekki tókst að finna útstöð, nota xterm, jafnvel þó svo það muni jafnvel ekki virka"
+msgstr ""
+"Ekki tókst að finna útstöð, nota xterm, jafnvel þó svo það muni jafnvel ekki"
+" virka"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:460
@@ -415,7 +435,9 @@ msgstr "ekki tókst að nálgast upplýsingar um úttakið %d"
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr "umbeðin staðsetning og stærð fyrir CRTC %d er utan leyfilegra marka: staðsetning=(%d, %d), stærð=(%d, %d), hámark=(%d, %d)"
+msgstr ""
+"umbeðin staðsetning og stærð fyrir CRTC %d er utan leyfilegra marka: "
+"staðsetning=(%d, %d), stærð=(%d, %d), hámark=(%d, %d)"
 
 #: ../libmate-desktop/mate-rr.c:1772
 #, c-format
@@ -459,7 +481,11 @@ msgid ""
 "existing mode = %d, new mode = %d\n"
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
-msgstr "úttakið %s er ekki með sömu viðföng og annað klónað úttak:\\n\nnúverandi hamur = %d, nýr hamur = %d\\n\nnúverandi hnit = (%d, %d), ný hnit = (%d, %d)\\n\nnúverandi stefna = %s, ný stefna = %s"
+msgstr ""
+"úttakið %s er ekki með sömu viðföng og annað klónað úttak:\\n\n"
+"núverandi hamur = %d, nýr hamur = %d\\n\n"
+"núverandi hnit = (%d, %d), ný hnit = (%d, %d)\\n\n"
+"núverandi stefna = %s, ný stefna = %s"
 
 #: ../libmate-desktop/mate-rr-config.c:1533
 #, c-format
@@ -474,21 +500,27 @@ msgstr "Prófa upplausnir fyrir CRTC skjástýringuna %d\n"
 #: ../libmate-desktop/mate-rr-config.c:1726
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
-msgstr "CRTC skjástýringin %d: prófa upplausn %dx%d@%dHz með úttak á %dx%d@%dHz (pass %d)\n"
+msgstr ""
+"CRTC skjástýringin %d: prófa upplausn %dx%d@%dHz með úttak á %dx%d@%dHz "
+"(pass %d)\n"
 
 #: ../libmate-desktop/mate-rr-config.c:1773
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
-msgstr "gat ekki úthlutað CRTC-um á úttök:\\n\n%s"
+msgstr ""
+"gat ekki úthlutað CRTC-um á úttök:\\n\n"
+"%s"
 
 #: ../libmate-desktop/mate-rr-config.c:1777
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
 "%s"
-msgstr "enginn af völdum hömum var samhæfður við mögulega hami:\\n\n%s"
+msgstr ""
+"enginn af völdum hömum var samhæfður við mögulega hami:\\n\n"
+"%s"
 
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
@@ -498,7 +530,9 @@ msgstr "enginn af völdum hömum var samhæfður við mögulega hami:\\n\n%s"
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
-msgstr "umbeðin sýndarstærð passar ekki: umbeðin stærð=(%d, %d), lágmark=(%d, %d), hámark=(%d, %d)"
+msgstr ""
+"umbeðin sýndarstærð passar ekki: umbeðin stærð=(%d, %d), lágmark=(%d, %d), "
+"hámark=(%d, %d)"
 
 #. Keep this string in sync with mate-control-center/capplets/display/xrandr-
 #. capplet.c:get_display_name()
@@ -506,10 +540,10 @@ msgstr "umbeðin sýndarstærð passar ekki: umbeðin stærð=(%d, %d), lágmark
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:419
+#: ../libmate-desktop/mate-rr-labeler.c:408
 #, c-format
 msgid "Mirror Screens"
-msgstr "Spegla skjám"
+msgstr "Sýna það sama"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
@@ -533,7 +567,8 @@ msgstr "Hversu lengi á að hraða í millisekúndum"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr "Hversu margar millisekúndur tekur það að fara frá 0 upp í hámarkshraða."
+msgstr ""
+"Hversu margar millisekúndur tekur það að fara frá 0 upp í hámarkshraða."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
 msgid "Initial delay in milliseconds"
@@ -542,7 +577,9 @@ msgstr "Upphafleg bið í millisekúndum"
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
-msgstr "Hversu margar millisekúndur á að bíða áður en að músahreyfingarlyklar byrja að virka."
+msgstr ""
+"Hversu margar millisekúndur á að bíða áður en að músahreyfingarlyklar byrja "
+"að virka."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
 msgid "Minimum interval in milliseconds"
@@ -551,7 +588,9 @@ msgstr "Lágmarkstímabil í millisekúndum"
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
-msgstr "Ekki hlusta þegar ýtt er á takka nema honum sé haldið í @delay millisekúndur."
+msgstr ""
+"Ekki hlusta þegar ýtt er á takka nema honum sé haldið í @delay "
+"millisekúndur."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
@@ -579,7 +618,9 @@ msgstr "Ákjósanlegt hreyfihjálparforrit"
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr "Ákjósanlegt hreyfihjálparforrit sem á að nota fyrir innskráningu, valmynd eða skipanalínu."
+msgstr ""
+"Ákjósanlegt hreyfihjálparforrit sem á að nota fyrir innskráningu, valmynd "
+"eða skipanalínu."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
@@ -599,7 +640,9 @@ msgstr "Ákjósanlegt sjónarhjálparforrit"
 msgid ""
 "Preferred Visual assistive technology application to be used for login, "
 "menu, or command line."
-msgstr "Ákjósanlegt sjónarhjálparforrit sem nota á í innskráningu, valmynd eða skipanalínu."
+msgstr ""
+"Ákjósanlegt sjónarhjálparforrit sem nota á í innskráningu, valmynd eða "
+"skipanalínu."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
@@ -649,7 +692,9 @@ msgstr "Dagatal þarf útstöð"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr "Hvort að sjálfgefna dagatalsforritið þurfi útstöð til þess að geta verið ræst"
+msgstr ""
+"Hvort að sjálfgefna dagatalsforritið þurfi útstöð til þess að geta verið "
+"ræst"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
@@ -665,7 +710,9 @@ msgstr "Verkefni þurfa útstöð"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr "Hvort að sjálfgefna verkefnaforritið þurfi útstöð til þess að geta verið ræst"
+msgstr ""
+"Hvort að sjálfgefna verkefnaforritið þurfi útstöð til þess að geta verið "
+"ræst"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
@@ -682,7 +729,8 @@ msgstr "Ræsiviðföng"
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
-msgstr "Viðföng notuð til þess að ræsa forrit í skel skilgreind með 'exec' lykli."
+msgstr ""
+"Viðföng notuð til þess að ræsa forrit í skel skilgreind með 'exec' lykli."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
@@ -708,7 +756,9 @@ msgstr "Deyfa bakgrunn við skiptingu"
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
-msgstr "Ef þetta er virkt mun MATE nota deyfingaráhrif við að skipta um bakgrunn á skjáborðinu."
+msgstr ""
+"Ef þetta er virkt mun MATE nota deyfingaráhrif við að skipta um bakgrunn á "
+"skjáborðinu."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
@@ -719,7 +769,10 @@ msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr "Skilgreinir hvernig mynd sem sett er af veggfóður_skráarheiti er myndgerð. Möguleikarnir eru \"veggfóður\", \"miðjað\", \"kvarðað\", \"teygt\", \"aðdráttur\", \"spannað\"."
+msgstr ""
+"Skilgreinir hvernig mynd sem sett er af veggfóður_skráarheiti er myndgerð. "
+"Möguleikarnir eru \"veggfóður\", \"miðjað\", \"kvarðað\", \"teygt\", "
+"\"aðdráttur\", \"spannað\"."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
@@ -743,7 +796,8 @@ msgstr "Aðallitur"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr "Vinstri eða efsti litur þegar 'gradients' eru teiknaðir eða heill litur."
+msgstr ""
+"Vinstri eða efsti litur þegar 'gradients' eru teiknaðir eða heill litur."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
@@ -752,7 +806,8 @@ msgstr "Auka litur"
 #: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
-msgstr "Hægri eða neðsti litur þegar 'gradients' eru teiknaðir eða heill litur."
+msgstr ""
+"Hægri eða neðsti litur þegar 'gradients' eru teiknaðir eða heill litur."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
@@ -762,7 +817,10 @@ msgstr "Gerð skuggalits"
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
-msgstr "Hvernig á að skyggja bakgrunnslitina. Möguleg gildi eru \"horizontal-gradient\" (láréttur stigull), \"vertical-gradient\" (lóðréttur stigull) og \"solid\" (gegnheill litur)"
+msgstr ""
+"Hvernig á að skyggja bakgrunnslitina. Möguleg gildi eru \"horizontal-"
+"gradient\" (láréttur stigull), \"vertical-gradient\" (lóðréttur stigull) og "
+"\"solid\" (gegnheill litur)"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
@@ -788,7 +846,9 @@ msgstr "Virkja hreyfingar"
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
-msgstr "Stillir hvort birta skuli hreyfimyndir. Ath: Þetta er víðvær stilling sem hefur áhrif á gluggastjórann, spjaldið og svo framvegis."
+msgstr ""
+"Stillir hvort birta skuli hreyfimyndir. Ath: Þetta er víðvær stilling sem "
+"hefur áhrif á gluggastjórann, spjaldið og svo framvegis."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
@@ -804,7 +864,9 @@ msgstr "Stíll verkfærastiku"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
-msgstr "Stíll tækjastiku. Leyfð gildi eru \"both\" (bæði), \"both-horiz\" (bæði lárétt), \"icons\" (teikn) og \"text\" (texti)"
+msgstr ""
+"Stíll tækjastiku. Leyfð gildi eru \"both\" (bæði), \"both-horiz\" (bæði "
+"lárétt), \"icons\" (teikn) og \"text\" (texti)"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Menus Have Icons"
@@ -844,7 +906,9 @@ msgstr "Stærð smátáknmynda á tólstiku"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr "Stærð teikna í tækjastikum, ýmist \"small-toolbar\" (lítil tækjastika) eða \"large-toolbar\" (stór tækjastika)"
+msgstr ""
+"Stærð teikna í tækjastikum, ýmist \"small-toolbar\" (lítil tækjastika) eða "
+"\"large-toolbar\" (stór tækjastika)"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Cursor Blink"
@@ -991,7 +1055,9 @@ msgstr "Forritseining fyrir GtkSkráveljara"
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
-msgstr "Eining sem nota skal fyrir skráakerfislíkan í GtkFileChooser græjunni (widget). Möguleg gildi eru \"gio\" og \"gtk+\"."
+msgstr ""
+"Eining sem nota skal fyrir skráakerfislíkan í GtkFileChooser græjunni "
+"(widget). Möguleg gildi eru \"gio\" og \"gtk+\"."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Menubar accelerator"
@@ -1009,7 +1075,9 @@ msgstr "Sýna valmynd fyrir inntaksaðferðir"
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
-msgstr "Hvort samhengisvalmyndir inntaka og textasýna eigi að leyfa þér að breyta inntaksaðferðinni."
+msgstr ""
+"Hvort samhengisvalmyndir inntaka og textasýna eigi að leyfa þér að breyta "
+"inntaksaðferðinni."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Unicode Control Character' menu"
@@ -1019,7 +1087,9 @@ msgstr "Sýna valmynd fyrir Unicode stýritákn"
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
-msgstr "Hvort samhengisvalmyndir inntaka og textasýna eigi að leyfa þér að setja inn stýritákn."
+msgstr ""
+"Hvort samhengisvalmyndir inntaka og textasýna eigi að leyfa þér að setja inn"
+" stýritákn."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Titlebar layout of GTK3 client-side decorated windows"
@@ -1068,6 +1138,18 @@ msgid ""
 "presses the Alt key."
 msgstr ""
 
+#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+msgid "Window Scaling Factor"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+msgid ""
+"Internal scale factor that maps from window coordinates to the actual device"
+" pixels. On traditional systems this is 1, but on very high density displays"
+" (e.g. HiDPI, Retina) this can be a higher value (often 2). Set to 0 to "
+"auto-detect."
+msgstr ""
+
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
 msgstr "Gera skipanalínu óvirka"
@@ -1077,7 +1159,9 @@ msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr "Hindra aðgang notanda að skjáhermi eða ákvarða skipanalínu til að keyra. T.d. myndi þetta hindra aðgang að „Keyra forrit‟ svarglugga tækjastikunnar."
+msgstr ""
+"Hindra aðgang notanda að skjáhermi eða ákvarða skipanalínu til að keyra. "
+"T.d. myndi þetta hindra aðgang að „Keyra forrit‟ svarglugga tækjastikunnar."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
@@ -1087,7 +1171,9 @@ msgstr "Gera vistun skrá á disk óvirka"
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr "Hindra notanda í að vista skrár á disk. T.d. myndi þetta hindra aðganga að öllum forritum „Vista sem‟ svarglugganum."
+msgstr ""
+"Hindra notanda í að vista skrár á disk. T.d. myndi þetta hindra aðganga að "
+"öllum forritum „Vista sem‟ svarglugganum."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
@@ -1097,7 +1183,9 @@ msgstr "Gera prentun óvirka"
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr "Hindra notanda í að prenta. T.d. myndi þetta hindra aðganga að öllum forritum „Prenta‟ svargluggans."
+msgstr ""
+"Hindra notanda í að prenta. T.d. myndi þetta hindra aðganga að öllum "
+"forritum „Prenta‟ svargluggans."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
@@ -1107,7 +1195,9 @@ msgstr "Gera prentarauppsetningu óvirka"
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr "Hindra notanda í að breyta stillingum prentara. T.d. myndi þetta hindra aðganga að öllum forritum „Prentarastillingar‟ svargluggans."
+msgstr ""
+"Hindra notanda í að breyta stillingum prentara. T.d. myndi þetta hindra "
+"aðganga að öllum forritum „Prentarastillingar‟ svargluggans."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
@@ -1117,7 +1207,8 @@ msgstr "Gera notandabreytingu óvirka"
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr "Hindra notanda í að skipta yfir í annan notanda meðan seta hans er virk."
+msgstr ""
+"Hindra notanda í að skipta yfir í annan notanda meðan seta hans er virk."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
@@ -1171,7 +1262,8 @@ msgstr "Muna stöðu talnaborðsláss"
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
-msgstr "Þegar þetta er valið mun MATE muna stöðu talnaborðslássins milli seta."
+msgstr ""
+"Þegar þetta er valið mun MATE muna stöðu talnaborðslássins milli seta."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
@@ -1197,7 +1289,8 @@ msgstr ""
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
-msgstr "Margföldunarstuðull músarhröðunar. Gildið -1 er sjálfgefna kerfisgildið."
+msgstr ""
+"Margföldunarstuðull músarhröðunar. Gildið -1 er sjálfgefna kerfisgildið."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
@@ -1207,7 +1300,9 @@ msgstr "Skynjunarmörk hreyfingar"
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
-msgstr "Fjarlægð í myndeiningum sem bendillinn þarf að fara áður en hröðun hefst. Gildið -1 er sjálfgefna kerfisgildið"
+msgstr ""
+"Fjarlægð í myndeiningum sem bendillinn þarf að fara áður en hröðun hefst. "
+"Gildið -1 er sjálfgefna kerfisgildið"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
@@ -1243,7 +1338,9 @@ msgstr "Finna bendil"
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
-msgstr "Lýsir upp núverandi staðsetningu músarbendilsins þegar ýtt er snöggt á Ctrl-takkann."
+msgstr ""
+"Lýsir upp núverandi staðsetningu músarbendilsins þegar ýtt er snöggt á Ctrl-"
+"takkann."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor theme"
@@ -1313,13 +1410,17 @@ msgstr "Hvort spila eigi hljóð þegar inntaksatburðir eiga sér stað."
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
-msgstr "Hæsti mögulegi aldur smámyndar í flýtiminni, mælt í dögum. Ef gildi er -1 þá er minni ekki hreinsað."
+msgstr ""
+"Hæsti mögulegi aldur smámyndar í flýtiminni, mælt í dögum. Ef gildi er -1 þá"
+" er minni ekki hreinsað."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
-msgstr "Mesta mögulega stærð smámyndar í flýtiminni, mælt í megabætum. Ef gildi er -1 þá er minni ekki hreinsað."
+msgstr ""
+"Mesta mögulega stærð smámyndar í flýtiminni, mælt í megabætum. Ef gildi er "
+"-1 þá er minni ekki hreinsað."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
@@ -1329,7 +1430,9 @@ msgstr "Nota engin útvær smámyndatól"
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
-msgstr "Hakaðu við þetta til þess að koma í veg fyrir að öll útvær smámyndatól verði notuð, hvernig sem hvert þeirra er stillt."
+msgstr ""
+"Hakaðu við þetta til þess að koma í veg fyrir að öll útvær smámyndatól verði"
+" notuð, hvernig sem hvert þeirra er stillt."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
