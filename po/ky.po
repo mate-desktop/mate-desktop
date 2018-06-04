@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# chingis, 2013
-# chingis, 2013
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 21:49+0300\n"
-"PO-Revision-Date: 2018-01-09 18:50+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Kyrgyz (http://www.transifex.com/mate/MATE/language/ky/)\n"
+"POT-Creation-Date: 2018-06-03 11:17+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: ballpen, 2018\n"
+"Language-Team: Kyrgyz (https://www.transifex.com/mate/teams/13566/ky/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -90,25 +89,25 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
-msgstr ""
+msgstr "Аталыш"
 
 #: ../libmate-desktop/mate-colorbutton.c:170
 msgid "The title of the color selection dialog"
-msgstr ""
+msgstr "Түс тандоо диалогунун аталышы"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
 #: ../libmate-desktop/mate-colorbutton.c:442
 msgid "Pick a Color"
-msgstr ""
+msgstr "Түстү тандоо"
 
 #: ../libmate-desktop/mate-colorbutton.c:184
 #: ../libmate-desktop/mate-colorsel.c:286
 msgid "Current Color"
-msgstr ""
+msgstr "Кезектеги түс"
 
 #: ../libmate-desktop/mate-colorbutton.c:185
 msgid "The selected color"
-msgstr ""
+msgstr "Тандалган түс"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
 #: ../libmate-desktop/mate-colorsel.c:293
@@ -121,7 +120,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
-msgstr ""
+msgstr "Туура эмес түс маалыматтары алынды\n"
 
 #: ../libmate-desktop/mate-colorsel.c:272
 msgid "Has Opacity Control"
@@ -185,7 +184,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorsel.c:387
 msgid "_Value:"
-msgstr ""
+msgstr "_Мааниси:"
 
 #: ../libmate-desktop/mate-colorsel.c:388
 msgid "Brightness of the color."
@@ -219,61 +218,61 @@ msgstr ""
 msgid "Op_acity:"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:408
-#: ../libmate-desktop/mate-colorsel.c:418
+#: ../libmate-desktop/mate-colorsel.c:404
+#: ../libmate-desktop/mate-colorsel.c:414
 msgid "Transparency of the color."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:421
 msgid "Color _name:"
-msgstr ""
+msgstr "Түс _аты:"
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:473
+#: ../libmate-desktop/mate-colorsel.c:465
 msgid "_Palette:"
-msgstr ""
+msgstr "_Палитра:"
 
-#: ../libmate-desktop/mate-colorsel.c:506
+#: ../libmate-desktop/mate-colorsel.c:495
 msgid "Color Wheel"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:963
+#: ../libmate-desktop/mate-colorsel.c:952
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:966
+#: ../libmate-desktop/mate-colorsel.c:955
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:971
+#: ../libmate-desktop/mate-colorsel.c:960
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:974
+#: ../libmate-desktop/mate-colorsel.c:963
 msgid "The color you've chosen."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1358
+#: ../libmate-desktop/mate-colorsel.c:1347
 msgid "gtk-color-sel"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1363
+#: ../libmate-desktop/mate-colorsel.c:1352
 msgid "_Save color here"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1583
+#: ../libmate-desktop/mate-colorsel.c:1572
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -320,7 +319,7 @@ msgstr "«%s» файлын окуу катасы: %s"
 #: ../libmate-desktop/mate-desktop-item.c:288
 #, c-format
 msgid "Error rewinding file '%s': %s"
-msgstr ""
+msgstr "\"%s\" файлын түрүү катасы: %s"
 
 #. Translators: the "name" mentioned
 #. * here is the name of an application or
@@ -328,14 +327,14 @@ msgstr ""
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3547
+#: ../libmate-desktop/mate-desktop-item.c:3540
 msgid "No name"
 msgstr "Аты жок"
 
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
-msgstr ""
+msgstr "\"%s\" файлы кадимки файл же каталог эмес."
 
 #: ../libmate-desktop/mate-desktop-item.c:791
 #, c-format
@@ -345,7 +344,7 @@ msgstr "«%s» файлын табуу мүмкүн эмес"
 #: ../libmate-desktop/mate-desktop-item.c:837
 #, c-format
 msgid "No filename to save to"
-msgstr ""
+msgstr "Сактоо үчүн файл аты берилген эмес"
 
 #: ../libmate-desktop/mate-desktop-item.c:1842
 #, c-format
@@ -355,27 +354,27 @@ msgstr "%s жүргүзүлүүдө"
 #: ../libmate-desktop/mate-desktop-item.c:2079
 #, c-format
 msgid "No URL to launch"
-msgstr ""
+msgstr "Иштетүү үчүн URL көрсөтүлбөгөн"
 
-#: ../libmate-desktop/mate-desktop-item.c:2102
+#: ../libmate-desktop/mate-desktop-item.c:2095
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "Жүргүзүлбөгөн объект"
 
-#: ../libmate-desktop/mate-desktop-item.c:2112
+#: ../libmate-desktop/mate-desktop-item.c:2105
 #, c-format
 msgid "No command (Exec) to launch"
-msgstr ""
+msgstr "Иштетүү үчүн команда (Exec) жок"
 
-#: ../libmate-desktop/mate-desktop-item.c:2125
+#: ../libmate-desktop/mate-desktop-item.c:2118
 #, c-format
 msgid "Bad command (Exec) to launch"
-msgstr ""
+msgstr "Иштетүү үчүн команда (Exec) туура эмес"
 
-#: ../libmate-desktop/mate-desktop-item.c:3604
+#: ../libmate-desktop/mate-desktop-item.c:3597
 #, c-format
 msgid "Unknown encoding of: %s"
-msgstr ""
+msgstr "\"%s\" кодировкасы белгисиз"
 
 #: ../libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
@@ -506,7 +505,7 @@ msgstr ""
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:419
+#: ../libmate-desktop/mate-rr-labeler.c:408
 #, c-format
 msgid "Mirror Screens"
 msgstr "Күзгү экрандары"
@@ -782,7 +781,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
-msgstr ""
+msgstr "Анимацияны күйгүзүү"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
@@ -800,7 +799,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Toolbar Style"
-msgstr ""
+msgstr "Аспап панелинин стили"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
@@ -816,7 +815,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Buttons Have Icons"
-msgstr ""
+msgstr "Кнопкаларда белгилер бар"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether buttons may display an icon in addition to the button text."
@@ -840,7 +839,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Icon Size"
-msgstr ""
+msgstr "Аспап панелинин белги өлчөмү"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
@@ -848,7 +847,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Cursor Blink"
-msgstr ""
+msgstr "Курсордун үлпүлдөөсү"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Whether the cursor should blink."
@@ -856,7 +855,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink Time"
-msgstr ""
+msgstr "Курсордун үлпүлдөө убакыты"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Length of the cursor blink cycle, in milliseconds."
@@ -864,7 +863,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Icon Theme"
-msgstr ""
+msgstr "Белги темасы"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Icon theme to use for the panel, Caja etc."
@@ -872,7 +871,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Gtk+ Theme"
-msgstr ""
+msgstr "Gtk+ темасы"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Basename of the default theme used by gtk+."
@@ -890,7 +889,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "Default font"
-msgstr ""
+msgstr "Жарыяланбас ариби"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid "Name of the default font used by gtk+."
@@ -906,7 +905,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Status Style"
-msgstr ""
+msgstr "GTK IM статусунун стили"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Status Style used by gtk+."
@@ -914,7 +913,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Module"
-msgstr ""
+msgstr "GTK IM модулу"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the input method module used by GTK+."
@@ -952,7 +951,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Document font"
-msgstr ""
+msgstr "Документ шрифти"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Name of the default font used for reading documents."
@@ -960,7 +959,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Monospace font"
-msgstr ""
+msgstr "Моножазы шрифти"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid ""
@@ -969,7 +968,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Use Custom Font"
-msgstr ""
+msgstr "Башка шрифтти колдонуу"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid "Whether to use a custom font in gtk+ applications."
@@ -977,7 +976,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Status Bar on Right"
-msgstr ""
+msgstr "Абал сабы оң жагында"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to display a status bar meter on the right."
@@ -1068,9 +1067,33 @@ msgid ""
 "presses the Alt key."
 msgstr ""
 
+#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+msgid "Window Scaling Factor"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+msgid ""
+"This controls the GTK scale factor that maps from window coordinates to the "
+"actual device pixels. On traditional systems this is 1, but on very high "
+"density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
+"Set to 0 to auto-detect."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:69
+msgid "Scaling Factor for QT appllications"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:70
+msgid ""
+"This setting determines whether MATE controls the scale factor for QT "
+"applications. Enable to synchronize with the GTK scale factor when "
+"initializing the session, disable to control this value elsewhere. Requires "
+"restarting your session."
+msgstr ""
+
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
-msgstr ""
+msgstr "Командалык сапты өчүрүү"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
@@ -1081,7 +1104,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
-msgstr ""
+msgstr "Файлдарды дискке сактоону өчүрүү"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
 msgid ""
@@ -1091,7 +1114,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
-msgstr ""
+msgstr "Басманы өчүрүү"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
@@ -1101,7 +1124,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
-msgstr ""
+msgstr "Басманы ырастоону өчүрүү"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
@@ -1121,7 +1144,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
-msgstr ""
+msgstr "Экранды бөгөттөөнү өчүрүү"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
@@ -1165,7 +1188,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:4
 msgid "Remember NumLock state"
-msgstr ""
+msgstr "NumLock абалын эске сактоо"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
 msgid ""
@@ -1175,7 +1198,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
-msgstr ""
+msgstr "NumLock абалы"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:7
 msgid "The remembered state of the NumLock LED."
@@ -1237,7 +1260,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
-msgstr ""
+msgstr "Көрсөткүчтү табуу"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
@@ -1247,7 +1270,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor theme"
-msgstr ""
+msgstr "Курсор темасы"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid "Cursor theme name."
@@ -1255,7 +1278,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
-msgstr ""
+msgstr "Курсор өлчөмү"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
@@ -1279,7 +1302,7 @@ msgstr ""
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
-msgstr ""
+msgstr "ESD'ни күйгүзүү"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
@@ -1287,7 +1310,7 @@ msgstr ""
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
-msgstr ""
+msgstr "Окуялардын үндөрү"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:8
 msgid "Whether to play sounds on user events."
@@ -1295,7 +1318,7 @@ msgstr ""
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
-msgstr ""
+msgstr "Үн темасынын аты"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:10
 msgid "The XDG sound theme to use for event sounds."

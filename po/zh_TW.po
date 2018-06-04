@@ -1,22 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Abel Cheung <abel@oaka.org>, 2001-2003, 2007
-# Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>, 2008,2010
-# Jeff Huang <s8321414@gmail.com>, 2015-2017
-# 趙惟倫 <bluebat@member.fsf.org>, 2012-2013
-# Woodman Tuen <wmtuen@gmail.com>, 2007
-# Jeff Huang <s8321414@gmail.com>, 2014
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 21:49+0300\n"
-"PO-Revision-Date: 2018-01-09 18:50+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/mate/MATE/language/zh_TW/)\n"
+"POT-Creation-Date: 2018-06-03 11:17+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Walter Cheuk <wwycheuk@gmail.com>, 2018\n"
+"Language-Team: Chinese (Taiwan) (https://www.transifex.com/mate/teams/13566/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +22,13 @@ msgstr ""
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:77
 msgid "translator-credits"
-msgstr "黃柏諺 <s8321414@yahoo.com.tw>,2013-15\n趙惟倫 <bluebat@member.fsf.org>, 2013\nChao-Hsiung Liao <j_h_liau@yahoo.com.tw>, 2008, 2010\nWoodman Tuen <wmtuen@gmail.com>, 2007\nAbel Cheung <abel@oaka.org>, 2001-2003, 2007"
+msgstr ""
+"黃柏諺 <s8321414@yahoo.com.tw>,2013-14\n"
+"Launchpad 貢獻者：\n"
+"  Jose Sun https://launchpad.net/~josesun\n"
+"  Toomore https://launchpad.net/~toomore\n"
+"  fetag https://launchpad.net/~coolfire\n"
+"Walter Cheuk <wwycheuk@gmail.com>, 2016."
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -61,7 +62,9 @@ msgid ""
 "code to GNOME since it was started in 1997; many more have contributed in "
 "other important ways, including translations, documentation, and quality "
 "assurance."
-msgstr "MATE 是 GNOME 2的延續。自從 GNOME 於 1997 年啟動開始，已有數以百計的人貢獻編碼給它；更多的人已經以其他的重要方式做出貢獻，包含翻譯、文件以及品質管制。"
+msgstr ""
+"MATE 是 GNOME 2的延續。自從 GNOME 於 1997 "
+"年啟動開始，已有數以百計的人貢獻編碼給它；更多的人已經以其他的重要方式做出貢獻，包含翻譯、文件以及品質管制。"
 
 #: ../mate-about/mate-about.h:56
 msgid ""
@@ -74,7 +77,8 @@ msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
-msgstr "名稱“MATE”來自 yerba maté，是一種原生於亞熱帶南美的冬青樹。它的樹葉包含咖啡因而被用來製作點滴和一種稱之為 mate 的飲料。"
+msgstr ""
+"名稱“MATE”來自 yerba maté，是一種原生於亞熱帶南美的冬青樹。它的樹葉包含咖啡因而被用來製作點滴和一種稱之為 mate 的飲料。"
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -82,7 +86,7 @@ msgstr "名稱“MATE”來自 yerba maté，是一種原生於亞熱帶南美�
 #: ../libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
-msgstr "不明"
+msgstr "未知的"
 
 #: ../libmate-desktop/mate-colorbutton.c:154
 msgid "Use alpha"
@@ -223,61 +227,61 @@ msgstr "藍光在顏色中的多寡。"
 msgid "Op_acity:"
 msgstr "不透明(_A)："
 
-#: ../libmate-desktop/mate-colorsel.c:408
-#: ../libmate-desktop/mate-colorsel.c:418
+#: ../libmate-desktop/mate-colorsel.c:404
+#: ../libmate-desktop/mate-colorsel.c:414
 msgid "Transparency of the color."
 msgstr "顏色的透明程度。"
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:421
 msgid "Color _name:"
 msgstr "色彩名稱(_N)："
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "您可以輸入 HTML 風格的十六進位色彩值，或是簡單的輸入色彩的名稱，像是 'orange' 到這個格子裡。"
 
-#: ../libmate-desktop/mate-colorsel.c:473
+#: ../libmate-desktop/mate-colorsel.c:465
 msgid "_Palette:"
 msgstr "調色板(_P):"
 
-#: ../libmate-desktop/mate-colorsel.c:506
+#: ../libmate-desktop/mate-colorsel.c:495
 msgid "Color Wheel"
 msgstr "色輪"
 
-#: ../libmate-desktop/mate-colorsel.c:963
+#: ../libmate-desktop/mate-colorsel.c:952
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "先前選取的顏色，用來與您現在所選的比較。您可以將此顏色拖曳至調色板上，或是透過拖曳它到另外一個色樣旁來選擇這個顏色。"
 
-#: ../libmate-desktop/mate-colorsel.c:966
+#: ../libmate-desktop/mate-colorsel.c:955
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "您已選取的顏色。您可以拖曳這個顏色到調色板以為未來的使用儲存它。"
 
-#: ../libmate-desktop/mate-colorsel.c:971
+#: ../libmate-desktop/mate-colorsel.c:960
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "先前選取的顏色，用來與您現在所選的比較。"
 
-#: ../libmate-desktop/mate-colorsel.c:974
+#: ../libmate-desktop/mate-colorsel.c:963
 msgid "The color you've chosen."
 msgstr "您已選取的顏色。"
 
-#: ../libmate-desktop/mate-colorsel.c:1358
+#: ../libmate-desktop/mate-colorsel.c:1347
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1363
+#: ../libmate-desktop/mate-colorsel.c:1352
 msgid "_Save color here"
 msgstr "在這裡儲存顏色(_S)"
 
-#: ../libmate-desktop/mate-colorsel.c:1583
+#: ../libmate-desktop/mate-colorsel.c:1572
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -332,7 +336,7 @@ msgstr "回到檔案‘%s’的開始位置時發生錯誤：%s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3547
+#: ../libmate-desktop/mate-desktop-item.c:3540
 msgid "No name"
 msgstr "沒有名稱"
 
@@ -361,29 +365,29 @@ msgstr "準備啟動 %s"
 msgid "No URL to launch"
 msgstr "沒有可以啟動的 URL"
 
-#: ../libmate-desktop/mate-desktop-item.c:2102
+#: ../libmate-desktop/mate-desktop-item.c:2095
 #, c-format
 msgid "Not a launchable item"
 msgstr "不是可以啟動的項目"
 
-#: ../libmate-desktop/mate-desktop-item.c:2112
+#: ../libmate-desktop/mate-desktop-item.c:2105
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "沒有可啟動的指令 (Exec)"
 
-#: ../libmate-desktop/mate-desktop-item.c:2125
+#: ../libmate-desktop/mate-desktop-item.c:2118
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "準備啟動的指令 (Exec) 出現錯誤"
 
-#: ../libmate-desktop/mate-desktop-item.c:3604
+#: ../libmate-desktop/mate-desktop-item.c:3597
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "以下 URI 內容的編碼不明：%s"
 
 #: ../libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr "找不到終端機，將使用 xterm 代替，不管系統中有沒有 xterm"
+msgstr "找不到終端機，即使可能出問題也將會使用 xterm 代替"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:460
@@ -463,7 +467,11 @@ msgid ""
 "existing mode = %d, new mode = %d\n"
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
-msgstr "輸出裝置 %s 沒有和另一個複製輸出裝置同樣的參數：\n現有的模式 = %d，新的模式 = %d\n現有的坐標 = (%d, %d)，新的坐標 = (%d, %d)\n現有的旋轉 = %s，新的旋轉 = %s"
+msgstr ""
+"輸出裝置 %s 沒有和另一個複製輸出裝置同樣的參數：\n"
+"現有的模式 = %d，新的模式 = %d\n"
+"現有的坐標 = (%d, %d)，新的坐標 = (%d, %d)\n"
+"現有的旋轉 = %s，新的旋轉 = %s"
 
 #: ../libmate-desktop/mate-rr-config.c:1533
 #, c-format
@@ -485,14 +493,18 @@ msgstr "CRTC %d：正在嘗試模式 %dx%d@%dHz 於輸出裝置 %dx%d@%dHz (通�
 msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
-msgstr "無法指派 CRTC 給輸出裝置：\n%s"
+msgstr ""
+"無法指派 CRTC 給輸出裝置：\n"
+"%s"
 
 #: ../libmate-desktop/mate-rr-config.c:1777
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
 "%s"
-msgstr "選取的模式沒有一個和可用的模式相容：\n%s"
+msgstr ""
+"選取的模式沒有一個和可用的模式相容：\n"
+"%s"
 
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
@@ -510,7 +522,7 @@ msgstr "要求的虛擬大小無法符合可用的大小：要求的 =(%d, %d)�
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:419
+#: ../libmate-desktop/mate-rr-labeler.c:408
 #, c-format
 msgid "Mirror Screens"
 msgstr "鏡射螢幕"
@@ -723,7 +735,9 @@ msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
-msgstr "決定由 wallpaper_filename 所設定的圖像將如何進行潤算。可能的值為「wallpaper」、「centered」、「scaled」、「stretched」、「zoom」、「spanned」。"
+msgstr ""
+"決定由 wallpaper_filename "
+"所設定的圖像將如何進行潤算。可能的值為「wallpaper」、「centered」、「scaled」、「stretched」、「zoom」、「spanned」。"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
@@ -934,7 +948,10 @@ msgid ""
 "the font chooser will use a header bar at the top to show action widgets, or"
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
-msgstr "無論是內建的 GTK+ 對話框像是檔案選擇器、顏色選擇器或是字型選擇器都將會使用在頂部的標題列來顯示動作小組件，或是一個在底部的動作區域。這個設定不會影響直接使用 GtkDialog 自訂的對話框，或是訊息對話框。"
+msgstr ""
+"無論是內建的 GTK+ "
+"對話框像是檔案選擇器、顏色選擇器或是字型選擇器都將會使用在頂部的標題列來顯示動作小組件，或是一個在底部的動作區域。這個設定不會影響直接使用 "
+"GtkDialog 自訂的對話框，或是訊息對話框。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:39
 msgid "Use GTK3 overlay scrolling"
@@ -1036,7 +1053,10 @@ msgid ""
 " of right. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
-msgstr "這個設定決定了哪些按鈕應該要被放置在客戶端的標題列，以及它們應該要被放置在左或右。見 https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-layout 。"
+msgstr ""
+"這個設定決定了哪些按鈕應該要被放置在客戶端的標題列，以及它們應該要被放置在左或右。見 "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"decoration-layout 。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:61
 msgid "Use a global menubar for displaying application menus"
@@ -1048,7 +1068,10 @@ msgid ""
 "window or on a panel with MenuModel protocol. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
-msgstr "這個設定會決定應用程式選單要顯示在哪裡 ── 在視窗中，或是在有 MenuGlobal 協定的面板中。詳細資訊請見 https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-app-menu 。"
+msgstr ""
+"這個設定會決定應用程式選單要顯示在哪裡 ── 在視窗中，或是在有 MenuGlobal 協定的面板中。詳細資訊請見 "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-app-menu 。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:63
 msgid "Use a global menubar for displaying window menubars"
@@ -1060,7 +1083,10 @@ msgid ""
 "window or on a panel with MenuModel protocol. See "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-menubar."
-msgstr "這個設定會決定視窗選單列要顯示在哪裡 ── 在視窗中，或是在有 MenuModel 協定的面板中。詳細資訊請見 https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-shows-menubar 。"
+msgstr ""
+"這個設定會決定視窗選單列要顯示在哪裡 ── 在視窗中，或是在有 MenuModel 協定的面板中。詳細資訊請見 "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-menubar 。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:65
 msgid "Only show mnemonics on when the Alt key is pressed"
@@ -1071,6 +1097,34 @@ msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
 msgstr "當使用者按下 Alt 鈕時，備忘是否應該自動顯示及隱藏。"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+msgid "Window Scaling Factor"
+msgstr "視窗縮放係數"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+msgid ""
+"This controls the GTK scale factor that maps from window coordinates to the "
+"actual device pixels. On traditional systems this is 1, but on very high "
+"density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
+"Set to 0 to auto-detect."
+msgstr ""
+"這會控制 GTK 的縮放係數，其會將視窗座標定位至正確的裝置像素。在傳統的系統上為 1，但在非常高密度的顯示器上（如 "
+"HiDPI、Retina）可以設定為較高的值（通常為 2）。設定為 0 以自動偵測。"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:69
+msgid "Scaling Factor for QT appllications"
+msgstr "Qt 應用程式的縮放係數"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:70
+msgid ""
+"This setting determines whether MATE controls the scale factor for QT "
+"applications. Enable to synchronize with the GTK scale factor when "
+"initializing the session, disable to control this value elsewhere. Requires "
+"restarting your session."
+msgstr ""
+"此設定決定了 MATE 是否要控制 Qt 應用程式的縮放係數。啟用以在初始化工作階段時與 GTK "
+"的縮放係數同步，停用以在其他地方控制此值。必須重新啟動您的工作階段。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

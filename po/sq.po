@@ -1,17 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Indrit Bashkimi <indrit.bashkimi@gmail.com>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 21:49+0300\n"
-"PO-Revision-Date: 2018-01-09 18:50+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Albanian (http://www.transifex.com/mate/MATE/language/sq/)\n"
+"POT-Creation-Date: 2018-06-03 11:17+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kaxi Laxi <illyric@live.se>, 2018\n"
+"Language-Team: Albanian (https://www.transifex.com/mate/teams/13566/sq/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +22,10 @@ msgstr ""
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:77
 msgid "translator-credits"
-msgstr "Elian Myftiu <elian@alblinux.net>\nIndrit Bashkimi <indrit.bashkimi@gmail.com>\nLaurent Dhima <laurenti@alblinux.net>"
+msgstr ""
+"Elian Myftiu <elian@alblinux.net>\n"
+"Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
+"Laurent Dhima <laurenti@alblinux.net>"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -77,7 +80,7 @@ msgstr ""
 #: ../libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
-msgstr ""
+msgstr "Panjohur"
 
 #: ../libmate-desktop/mate-colorbutton.c:154
 msgid "Use alpha"
@@ -93,7 +96,7 @@ msgstr "Titulli"
 
 #: ../libmate-desktop/mate-colorbutton.c:170
 msgid "The title of the color selection dialog"
-msgstr ""
+msgstr "Titulli i dialogut per zgjedhjen e ngjyres"
 
 #: ../libmate-desktop/mate-colorbutton.c:171
 #: ../libmate-desktop/mate-colorbutton.c:442
@@ -103,11 +106,11 @@ msgstr "Zgjidhni një ngjyrë"
 #: ../libmate-desktop/mate-colorbutton.c:184
 #: ../libmate-desktop/mate-colorsel.c:286
 msgid "Current Color"
-msgstr ""
+msgstr "Ngjyra aktuale"
 
 #: ../libmate-desktop/mate-colorbutton.c:185
 msgid "The selected color"
-msgstr ""
+msgstr "Ngjyra e zgjedhur"
 
 #: ../libmate-desktop/mate-colorbutton.c:199
 #: ../libmate-desktop/mate-colorsel.c:293
@@ -120,7 +123,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
-msgstr ""
+msgstr "Mora të dhëna të pavlefshme ngjyre\n"
 
 #: ../libmate-desktop/mate-colorsel.c:272
 msgid "Has Opacity Control"
@@ -144,7 +147,9 @@ msgstr "Ngjyra aktuale"
 
 #: ../libmate-desktop/mate-colorsel.c:294
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr "Vlera aktuale e patejdukshmërisë (0 plotësisht i tejdukshëm, 65535 plotësisht i patejdukshëm)"
+msgstr ""
+"Vlera aktuale e patejdukshmërisë (0 plotësisht i tejdukshëm, 65535 "
+"plotësisht i patejdukshëm)"
 
 #: ../libmate-desktop/mate-colorsel.c:300
 msgid "HEX String"
@@ -218,61 +223,61 @@ msgstr ""
 msgid "Op_acity:"
 msgstr "_Tejdukshmëria:"
 
-#: ../libmate-desktop/mate-colorsel.c:408
-#: ../libmate-desktop/mate-colorsel.c:418
+#: ../libmate-desktop/mate-colorsel.c:404
+#: ../libmate-desktop/mate-colorsel.c:414
 msgid "Transparency of the color."
 msgstr "Tejdukshmëria e ngjyrës."
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:421
 msgid "Color _name:"
 msgstr "_Emri i ngjyrës:"
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:473
+#: ../libmate-desktop/mate-colorsel.c:465
 msgid "_Palette:"
-msgstr ""
+msgstr "_Paleta:"
 
-#: ../libmate-desktop/mate-colorsel.c:506
+#: ../libmate-desktop/mate-colorsel.c:495
 msgid "Color Wheel"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:963
+#: ../libmate-desktop/mate-colorsel.c:952
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:966
+#: ../libmate-desktop/mate-colorsel.c:955
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:971
+#: ../libmate-desktop/mate-colorsel.c:960
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:974
+#: ../libmate-desktop/mate-colorsel.c:963
 msgid "The color you've chosen."
 msgstr "Ngjyra që keni zgjedhur."
 
-#: ../libmate-desktop/mate-colorsel.c:1358
+#: ../libmate-desktop/mate-colorsel.c:1347
 msgid "gtk-color-sel"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1363
+#: ../libmate-desktop/mate-colorsel.c:1352
 msgid "_Save color here"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1583
+#: ../libmate-desktop/mate-colorsel.c:1572
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -327,7 +332,7 @@ msgstr "Gabim në rimbështjelljen e file '%s': %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3547
+#: ../libmate-desktop/mate-desktop-item.c:3540
 msgid "No name"
 msgstr "Pa emër"
 
@@ -349,29 +354,29 @@ msgstr "Asnjë emër file ku të ruhet"
 #: ../libmate-desktop/mate-desktop-item.c:1842
 #, c-format
 msgid "Starting %s"
-msgstr "Duke filluar %s"
+msgstr "Fillo %s"
 
 #: ../libmate-desktop/mate-desktop-item.c:2079
 #, c-format
 msgid "No URL to launch"
 msgstr "Asnjë URL për të shfaqur"
 
-#: ../libmate-desktop/mate-desktop-item.c:2102
+#: ../libmate-desktop/mate-desktop-item.c:2095
 #, c-format
 msgid "Not a launchable item"
 msgstr "Nuk është një element i ekzekutueshëm"
 
-#: ../libmate-desktop/mate-desktop-item.c:2112
+#: ../libmate-desktop/mate-desktop-item.c:2105
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Asnjë komandë (Exec) për zbatim"
 
-#: ../libmate-desktop/mate-desktop-item.c:2125
+#: ../libmate-desktop/mate-desktop-item.c:2118
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Komandë për t'u zbatuar (Exec) e pavlefshme"
 
-#: ../libmate-desktop/mate-desktop-item.c:3604
+#: ../libmate-desktop/mate-desktop-item.c:3597
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Kodifikim i panjohur për: %s"
@@ -379,6 +384,8 @@ msgstr "Kodifikim i panjohur për: %s"
 #: ../libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr ""
+"Nuk arrij të gjej një terminal, po përdor xterm, ka mundësi të mos "
+"funksionojë"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:460
@@ -505,94 +512,107 @@ msgstr ""
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:419
+#: ../libmate-desktop/mate-rr-labeler.c:408
 #, c-format
 msgid "Mirror Screens"
-msgstr ""
+msgstr "Pasqyra e ekranit"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
-msgstr ""
+msgstr "intervali minimum në millisekonda"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
 msgstr ""
+"Shpërfill shtypje shumëfishe për të _njëjtin_ pulsant nëse kryhen brenda "
+"@delay milisekonda."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
-msgstr ""
+msgstr "Pixels në sekondë"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr ""
+msgstr "Sa pixel për sekondë duhen lëvizur me shpejtësinë maksimum."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr ""
+msgstr "Kohëzgjatja e përshpejtimit në milisekonda"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
 msgstr ""
+"Për sa milisekonda ka nevojë për të shkuar nga 0 në shpejtësinë maksimum"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
 msgid "Initial delay in milliseconds"
-msgstr ""
+msgstr "Vonesa fillestare në milisekonda"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
 msgstr ""
+"Sa millisekonda duhet pritur përpara se pulsantët për lëvizjen e mouse të "
+"hyjnë në aksion."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
 msgid "Minimum interval in milliseconds"
-msgstr ""
+msgstr "Intervali minimum në millisekonda"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
 msgstr ""
+"Mos prano një pulsant nëse nuk është mbajtur i shtypur për të paktën @delay "
+"milisekonda."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
-msgstr ""
+msgstr "Çaktivizo nëse shtypen njëkohësisht dy pulsante"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Beep when a modifier is pressed."
-msgstr ""
+msgstr "Sinjal akustik kur shtypet një ndryshues."
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr ""
+msgstr "Nisja e programeve të teknollogjisë asistuese"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
 msgstr ""
+"Lista e aplikativëve të teknollogjisë asistuese që duhen nisur kur kryhet "
+"hyrja në hapësirën e punës MATE."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Aplikativi i preferuar i teknollogjisë asistuese Mobility"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
+"Aplikativi Mobility i preferuar i teknollogjisë asistuese që duhet përdorur "
+"për identifikimin, menunë, ose rreshtin e komandave."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Nis aplikativin e preferuar të teknollogjisë asistuese Mobility"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
+"MATE për të nisur aplikativin e dëshiruar të teknollogjisë asistuese "
+"Mobility gjatë hyrjes."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "Aplikativi i preferuar i teknollogjisë asistuese Visual"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
@@ -602,94 +622,108 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "Nis aplikativin e preferuar të teknollogjisë asistuese Visual"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
+"MATE për të nisur aplikativin e dëshiruar të teknollogjisë asistuese Visual "
+"gjatë hyrjes."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
-msgstr ""
+msgstr "Shfletuesi i paracaktuar"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
-msgstr ""
+msgstr "Shfletuesi i paracaktuar për çdo URL."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
 msgid "Browser needs terminal"
-msgstr ""
+msgstr "Shfletuesi ka nevojë për terminalin  "
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:4
 msgid "Whether the default browser needs a terminal to run."
 msgstr ""
+"Tregon nëse shfletuesi i paracaktuar ka nevojë për një terminal që të "
+"zbatohet."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:5
 msgid "Browser understands remote"
-msgstr ""
+msgstr "Shfletuesi trajton files remotë"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
 msgid "Whether the default browser understands netscape remote."
 msgstr ""
+"Tregon nëse shfletuesi i paracaktuar manazhon opsionin \"remote\" të "
+"netscape."
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
-msgstr ""
+msgstr "Kalendari i paracaktuar"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:2
 msgid "Default calendar application"
-msgstr ""
+msgstr "Aplikativi i kalendarit të paracaktuar"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:3
 msgid "Calendar needs terminal"
-msgstr ""
+msgstr "Kalendari ka nevojë për një terminal"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
 msgstr ""
+"Tregon nëse aplikativi kalendar i paracaktuar ka nevojë për një terminal që "
+"të zbatohet"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
-msgstr ""
+msgstr "Aktivitetet i paracaktuar"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
 msgid "Default tasks application"
-msgstr ""
+msgstr "Aplikativi i aktiviteteve i paracaktuar"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:7
 msgid "Tasks needs terminal"
-msgstr ""
+msgstr "Aktivitetet ka nevojë për një terminal"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
 msgstr ""
+"Tregon nëse aplikativi i aktiviteteve i paracaktuar ka nevojë për një "
+"terminal që të zbatohet."
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
-msgstr ""
+msgstr "Aplikimi i terminalit"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
 msgstr ""
+"Programi i terminalit që duhet përdorur kur nisen aplikativë që kërkojnë një"
+" të tillë."
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
-msgstr ""
+msgstr "Argumente exec"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
 msgstr ""
+"Argumenti i përdorur për të ndjekur programe në terminal i përcaktuar nga "
+"çelsi 'exec'."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
-msgstr ""
+msgstr "Vizato sfondin e desktop"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr ""
+msgstr "Tregon nëse MATE duhet të vizatojë sfondin e desktop."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
@@ -711,7 +745,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
-msgstr ""
+msgstr "Opcionet e figurës"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:8
 msgid ""
@@ -722,148 +756,164 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
-msgstr ""
+msgstr "Emri i file të figurës"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
-msgstr ""
+msgstr "File që duhet përdorur si figurë sfondi."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:11
 msgid "Picture Opacity"
-msgstr ""
+msgstr "Tejdukshëria e figurës"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
-msgstr ""
+msgstr "Tejdukshmëria me të cilën të vizatohet figura e sfondit."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
-msgstr ""
+msgstr "Ngjyra kryesore"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
 msgstr ""
+"Ngjyra sipër apo majtas kur vizatohet një i shkallëzuar, ose për ngjyrën e "
+"plotë."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
-msgstr ""
+msgstr "Ngjyra dytësore"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
+"Ngjyra djathtas apo poshtë kur vizatohet një i shkallëzuar, nuk përdoret për"
+" ngjyrën e plotë."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
-msgstr ""
+msgstr "Lloji i sfumimit të ngjyrave"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr ""
+"Tregon se si duhet sfumuar ngjyra e sfondit. Vlerat e mundëshme janë "
+"\"horizontal-gradient\", \"vertical-gradient\", dhe \"solid\"."
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
-msgstr ""
+msgstr "Tema e ikonave të file"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr ""
+msgstr "Tema e përdorur për të shfaqur ikonat e file."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
-msgstr ""
+msgstr "Aktivizo hyrjen e lehtësuar"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr ""
+msgstr "Përcakton nëse aplikativët duhet të kenë suportin e açesibilitetit."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
-msgstr ""
+msgstr "Aktivizo animacionet"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
 msgstr ""
+"Përcakton nëse duhen shfaqur animimet. Shënim: Ky është një kyç global, "
+"lejon ndryshimin e sjelljes së manazhuesit të dritareve, panelit, etj."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
-msgstr ""
+msgstr "Menu me shkëputës"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr ""
+msgstr "Përcakton nëse menutë duhet të kenë një shkëputës."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Toolbar Style"
-msgstr ""
+msgstr "Stili i panelit të instrumentëve"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
 msgstr ""
+"Stili i panelit të instrumentëve. Vlera të vlefshme janë \"both\", \"both-"
+"horiz\", \"icons\", dhe \"text\"."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Menus Have Icons"
-msgstr ""
+msgstr "Menu me ikona"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr ""
+msgstr "Përcakton nëse menutë duhet të shfaqin ikona krahas zërave të menusë."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Buttons Have Icons"
-msgstr ""
+msgstr "Butonat kan Ikona"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr ""
+msgstr "Nëse butonat mund të shfaqin një ikonë përveç tekstit të butonit."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Menubar Detachable"
-msgstr ""
+msgstr "Paneli i menuve të shkëputshme"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether the user can detach menubars and move them around."
 msgstr ""
+"Përcakton nëse përdoruesit i jepet mundësia të shkëpusë panelët e menusë dhe"
+" t'i lëvizë sipas dëshirës."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Toolbar Detachable"
-msgstr ""
+msgstr "Paneli i instrumentëve i shkëputshëm"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach toolbars and move them around."
 msgstr ""
+"Përcakton nëse përdoruesit i jepet mundësia të shkëpusë panelët e "
+"instrumentëve dhe t'i lëvizë sipas dëshirës."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Icon Size"
-msgstr ""
+msgstr "Madhësia ikonave të panelit të instrumentëve"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
+"Madhësia e ikonave në panelin e instrumentëve, zgjedhur midis \"small-"
+"toolbar\" ose \"large-toolbar\"."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Cursor Blink"
-msgstr ""
+msgstr "Pulsimi i kursorit"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Whether the cursor should blink."
-msgstr ""
+msgstr "Përcakton nëse kursori duhet të pulsojë."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink Time"
-msgstr ""
+msgstr "Intervali i pulsimit të kursorit"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr ""
+msgstr "Kohëzgjatja e ciklit të pulsimit të kursorit, në milisekonda."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Icon Theme"
-msgstr ""
+msgstr "Tema e ikonave"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Icon theme to use for the panel, Caja etc."
@@ -871,11 +921,11 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Gtk+ Theme"
-msgstr ""
+msgstr "Tema e Gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Basename of the default theme used by gtk+."
-msgstr ""
+msgstr "Emri bazë i temës së prezgjedhur të përdorur nga gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "List of symbolic names and color equivalents"
@@ -889,35 +939,36 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "Default font"
-msgstr ""
+msgstr "Gërmat e prezgjedhura"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid "Name of the default font used by gtk+."
-msgstr ""
+msgstr "Emri i tipit të gërmave të përdorura si të prezgjedhura nga gtk+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "GTK IM Preedit Style"
-msgstr ""
+msgstr "Stili i GTK IM Preedit"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
 msgstr ""
+"Emri i metodës së input të GTK+ input method Preedit Style e përdorur."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Status Style"
-msgstr ""
+msgstr "Stili i GTK IM Status"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr ""
+msgstr "Emri i metodës së input të GTK+ input method Status Style e përdorur."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Module"
-msgstr ""
+msgstr "Moduli GTK IM"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the input method module used by GTK+."
-msgstr ""
+msgstr "Emri i modulit të metodës së input përdorur nga GTK+."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "Use GTK3 header bar"
@@ -951,40 +1002,42 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Document font"
-msgstr ""
+msgstr "Gërmat e dokumentit"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Name of the default font used for reading documents."
-msgstr ""
+msgstr "Emri i gërmave të paracaktuar përdorur për leximin e dokumentëve."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Monospace font"
-msgstr ""
+msgstr "Monospace font"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr ""
+"Emri i një shkronje monospace (me gjërësi të fiksuar) për t'u përdorur në "
+"pozicionet si p.sh. terminalët"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Use Custom Font"
-msgstr ""
+msgstr "Përdor gërmat e personalizuara"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr ""
+msgstr "Tregon nëse duhen përdorur gërmat e personalizuara tek programet gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Status Bar on Right"
-msgstr ""
+msgstr "Paneli i gjendjes djathtas"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to display a status bar meter on the right."
-msgstr ""
+msgstr "Tregon nëse duhet shfaqur djathtas një tregues gjëndjeje."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Module for GtkFileChooser"
-msgstr ""
+msgstr "Moduli për GtkFileChooser"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid ""
@@ -994,31 +1047,35 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Menubar accelerator"
-msgstr ""
+msgstr "Përshpejues i panelit të menusë"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid "Keyboard shortcut to open the menu bars."
-msgstr ""
+msgstr "Kombinimi i tastierës për të hapur panelët e menusë."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Show the 'Input Methods' menu"
-msgstr ""
+msgstr "Shfaq menunë e 'Metodave të Input'"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr ""
+"Tregon nëse menutë e kontekstit të paraqitjes së elementëve apo tekstit "
+"duhet të afrojnë mundësinë e ndryshimit të metodës së input."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Unicode Control Character' menu"
-msgstr ""
+msgstr "Shfaq menunë e 'Simbolit të kontrollit Unicode'"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr ""
+"Tregon nëse menutë e kontekstit të paraqitjes së elementëve apo tekstit "
+"duhet të afrojnë mundësinë e futjes së simboleve të kontrollit."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Titlebar layout of GTK3 client-side decorated windows"
@@ -1067,9 +1124,33 @@ msgid ""
 "presses the Alt key."
 msgstr ""
 
+#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+msgid "Window Scaling Factor"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+msgid ""
+"This controls the GTK scale factor that maps from window coordinates to the "
+"actual device pixels. On traditional systems this is 1, but on very high "
+"density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
+"Set to 0 to auto-detect."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:69
+msgid "Scaling Factor for QT appllications"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:70
+msgid ""
+"This setting determines whether MATE controls the scale factor for QT "
+"applications. Enable to synchronize with the GTK scale factor when "
+"initializing the session, disable to control this value elsewhere. Requires "
+"restarting your session."
+msgstr ""
+
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
-msgstr ""
+msgstr "Çaktivizo rreshtin e komandës"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
@@ -1077,50 +1158,63 @@ msgid ""
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
+"Bllokon mundësinë e përdorimit të terminalit nga ana e përdoruesit apo "
+"ekzekutimin e një komande në rresht. Për shembull, do të ç'aktivojë hyrjen "
+"tek dritarja e dialogut \"Zbato Programin\" tek paneli."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
-msgstr ""
+msgstr "Çaktivizo ruajtjen e files në disk"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
 msgstr ""
+"Ndalon ruajtjen e files në disk nga ana e përdoruesve. Për shembull, do të "
+"ç'aktivojë hyrjen tek të gjitha dritaret e dialogut \"Ruaje si\" të "
+"programeve."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
-msgstr ""
+msgstr "Çaktivizo printimin"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
 msgstr ""
+"Nuk lejon printimin nga ana e përdoruesit. Për shembull, do të ç'aktivojë "
+"hyrjen tek të gjitha dritaret e dialogut \"Printo\" të programeve."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
-msgstr ""
+msgstr "Çaktivizo konfigurimin e printimit"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
 msgstr ""
+"Nuk lejon ndryshimin e rregullimeve të printerit nga ana e përdoruesit. Për "
+"shembull, do të ç'aktivojë hyrjen tek të gjitha dritaret e dialogut "
+"\"Rregullimi i Printerit\" të programeve."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
-msgstr ""
+msgstr "Çaktivizo kalimin nga një përdorues tek tjetri"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:10
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
 msgstr ""
+"Nuk lejon përdoruesin të kalojë në një përdorues tjetër kur seanca e tij "
+"është aktive."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
-msgstr ""
+msgstr "Çaktivizo bllokimin e ekranit"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
@@ -1128,11 +1222,12 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:13
 msgid "Disable URL and MIME type handlers"
-msgstr ""
+msgstr "Çaktivizon menazhuesit e URL dhe llojeve MIME"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr ""
+"Parandalo zbatimin e çfarëdolloj aplikativi që menazhon URL apo llojet MIME."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
@@ -1152,25 +1247,27 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr ""
+msgstr "Vlerat e mundëshme janë \"on\", \"off\", dhe \"custom\"."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:2
 msgid "Keyboard Bell Custom Filename"
-msgstr ""
+msgstr "Emri i file të personalizuar të ziles së tastierës"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:3
 msgid "File name of the bell sound to be played."
-msgstr ""
+msgstr "Emri file i tingullit akustik që duhet riprodhuar."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:4
 msgid "Remember NumLock state"
-msgstr ""
+msgstr "Kujto gjëndjen e NumLock"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
 msgstr ""
+"Nëse vendoset në 'true', MATE do të memorizojë gjëndjen e LED të NumLock "
+"midis seancave."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
@@ -1182,11 +1279,11 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:1
 msgid "Mouse button orientation"
-msgstr ""
+msgstr "Orientimi i pulsantëve të mouse"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr ""
+msgstr "Ndryshon pulsantët majtas dhe djathtas për mëngjarashët."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Motion Acceleration"
@@ -1197,32 +1294,37 @@ msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
 msgstr ""
+"Shumëzues i shpejtimit për lëvizjet e mouse. Vendose në -1 për të përdorur "
+"preferimet e sistemit."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
-msgstr ""
+msgstr "Kufiri i lëvizjes"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:6
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
 msgstr ""
+"Numri i pixels me të cilin duhet lëvizur kursori i mouse përpara se të "
+"aktivohet lëvizja e përshpejtuar e tij. Vendose në -1 për të "
+"përdorurpreferimet e sistemit. "
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
-msgstr ""
+msgstr "Kufiri i zvarritjes"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:8
 msgid "Distance before a drag is started."
-msgstr ""
+msgstr "Distanca para se të fillohet një zvarritje."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr ""
+msgstr "Koha e dopjo klik-imit"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
-msgstr ""
+msgstr "Kohëzgjatja e dopio klik."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:11
 msgid "Middle button emulation"
@@ -1236,17 +1338,19 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
-msgstr ""
+msgstr "Gjej kursorin"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
 msgstr ""
+"Vë në dukje pozicionin aktual të kursorit kur pulsanti Control shtypet dhe "
+"rilëshohet."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor theme"
-msgstr ""
+msgstr "Tema e kursorit"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid "Cursor theme name."
@@ -1254,81 +1358,87 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
-msgstr ""
+msgstr "Madhësia e kursorit"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
-msgstr ""
+msgstr "Madhësia e kursorit, përcaktuar nga cursor_theme."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:1
 msgid "Default mixer device"
-msgstr ""
+msgstr "Dispozitivi i prezgjedhur mixer"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr ""
+msgstr "Dispozitivi i prezgjedhur mixer përdorur nga pulsantët multimedialë."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:3
 msgid "Default mixer tracks"
-msgstr ""
+msgstr "Tracks e prezgjedhur të mixer"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr ""
+msgstr "Tracks e prezgjedhur të mixer përdorur nga pulsantët multimedialë."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
-msgstr ""
+msgstr "Aktivizo ESD"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
-msgstr ""
+msgstr "Aktivizo server-in e zërit gjatë nisjes."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
-msgstr ""
+msgstr "Tinguj për ndodhitë"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:8
 msgid "Whether to play sounds on user events."
-msgstr ""
+msgstr "Përcakton nëse duhen përdorur tingujt për ndodhitë e përdoruesit"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
-msgstr ""
+msgstr "Emri i temës sonore"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:10
 msgid "The XDG sound theme to use for event sounds."
-msgstr ""
+msgstr "Tema sonore XDG për tu përdorur për tingujt e eventeve."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:11
 msgid "Input feedback sounds"
-msgstr ""
+msgstr "Tingujt përgjigjës të input"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:12
 msgid "Whether to play sounds on input events."
-msgstr ""
+msgstr "Përcakton nëse duhen riprodhuar tinguj për eventet e input."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
 msgstr ""
+"Mosha maksimum e ruajtjes së miniaturave në cache. Cakto në -1 për të "
+"çaktivizuar pastrimin."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
 msgstr ""
+"Madhësia maksimum e cache të miniaturave, në megabyte. Cakto në -1 për të "
+"çaktivizuar pastrimin."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
-msgstr ""
+msgstr "Ç'aktivo të gjithë krijuesit e jashtëm të miniaturave"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:2
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
 msgstr ""
+"Vendose në «e vërtetë» që të disaktivohen të gjithë programet e jashtëm për "
+"të krijuar miniatura, pavarësisht nga rregullimi i tyre."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
@@ -1343,35 +1453,35 @@ msgstr ""
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"
-msgstr ""
+msgstr "Kohëzgjatja e shkrimit"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr ""
+msgstr "Numri i minutave të shkrimit para modalitetit pushim"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"
-msgstr ""
+msgstr "Kohëzgjatja e pushimit"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
 msgid "Number of minutes that the typing break should last."
-msgstr ""
+msgstr "Kohëzgjatja në minuta e pushimit."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:5
 msgid "Allow postponing of breaks"
-msgstr ""
+msgstr "Lejo shtyrjen e pushimeve"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
-msgstr ""
+msgstr "Tregon nëse ekrani i bllokimit të shkrimit mund të shtyhet."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
 msgid "Whether or not keyboard locking is enabled"
-msgstr ""
+msgstr "Tregon nëse bllokimi i tastierës është aktiv "
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:8
 msgid "Whether or not keyboard locking is enabled."
-msgstr ""
+msgstr "Tregon nëse bllokimi i tastierës është aktiv."
 
 #: ../tools/mate-color-select.c:64
 #: ../tools/mate-color-select.desktop.in.in.h:1

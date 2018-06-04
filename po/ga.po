@@ -1,16 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 21:49+0300\n"
-"PO-Revision-Date: 2018-01-09 18:50+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Irish (http://www.transifex.com/mate/MATE/language/ga/)\n"
+"POT-Creation-Date: 2018-06-03 11:17+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Language-Team: Irish (https://www.transifex.com/mate/teams/13566/ga/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,6 +23,9 @@ msgstr ""
 #: ../mate-about/mate-about.c:77
 msgid "translator-credits"
 msgstr ""
+"Paul Duffy <dubhthach@frink.nuigalway.ie>\n"
+"Alastair McKinstry <mckinstry@computer.org>\n"
+"Seán de Búrca <leftmostcat@gmail.com>"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -76,7 +80,7 @@ msgstr ""
 #: ../libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
-msgstr ""
+msgstr "Anaithnid"
 
 #: ../libmate-desktop/mate-colorbutton.c:154
 msgid "Use alpha"
@@ -88,7 +92,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
-msgstr ""
+msgstr "Teideal"
 
 #: ../libmate-desktop/mate-colorbutton.c:170
 msgid "The title of the color selection dialog"
@@ -183,7 +187,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorsel.c:387
 msgid "_Value:"
-msgstr ""
+msgstr "_Luach:"
 
 #: ../libmate-desktop/mate-colorsel.c:388
 msgid "Brightness of the color."
@@ -217,61 +221,61 @@ msgstr ""
 msgid "Op_acity:"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:408
-#: ../libmate-desktop/mate-colorsel.c:418
+#: ../libmate-desktop/mate-colorsel.c:404
+#: ../libmate-desktop/mate-colorsel.c:414
 msgid "Transparency of the color."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:421
 msgid "Color _name:"
-msgstr ""
+msgstr "_Ainm datha:"
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:473
+#: ../libmate-desktop/mate-colorsel.c:465
 msgid "_Palette:"
-msgstr ""
+msgstr "_Pailéad:"
 
-#: ../libmate-desktop/mate-colorsel.c:506
+#: ../libmate-desktop/mate-colorsel.c:495
 msgid "Color Wheel"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:963
+#: ../libmate-desktop/mate-colorsel.c:952
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:966
+#: ../libmate-desktop/mate-colorsel.c:955
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:971
+#: ../libmate-desktop/mate-colorsel.c:960
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:974
+#: ../libmate-desktop/mate-colorsel.c:963
 msgid "The color you've chosen."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1358
+#: ../libmate-desktop/mate-colorsel.c:1347
 msgid "gtk-color-sel"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1363
+#: ../libmate-desktop/mate-colorsel.c:1352
 msgid "_Save color here"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1583
+#: ../libmate-desktop/mate-colorsel.c:1572
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -326,7 +330,7 @@ msgstr "Earráid agus comhad '%s' á atochras: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3547
+#: ../libmate-desktop/mate-desktop-item.c:3540
 msgid "No name"
 msgstr "Gan ainm"
 
@@ -355,35 +359,38 @@ msgstr "%s á Thosú"
 msgid "No URL to launch"
 msgstr "Gan URL a thosú"
 
-#: ../libmate-desktop/mate-desktop-item.c:2102
+#: ../libmate-desktop/mate-desktop-item.c:2095
 #, c-format
 msgid "Not a launchable item"
 msgstr "Ní mír inthosaithe"
 
-#: ../libmate-desktop/mate-desktop-item.c:2112
+#: ../libmate-desktop/mate-desktop-item.c:2105
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Gan órdu (Exec) a thosú"
 
-#: ../libmate-desktop/mate-desktop-item.c:2125
+#: ../libmate-desktop/mate-desktop-item.c:2118
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Drochordú (Exec) a thosú"
 
-#: ../libmate-desktop/mate-desktop-item.c:3604
+#: ../libmate-desktop/mate-desktop-item.c:3597
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Ionchódú anaithnid de: %s"
 
 #: ../libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr "Ní féidir teirminéal, agus xterm á úsáid, a aimsiú, cé go mb'fhéidir go oibríonn sé"
+msgstr ""
+"Ní féidir teirminéal, agus xterm á úsáid, a aimsiú, cé go mb'fhéidir go "
+"oibríonn sé"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:460
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
-msgstr "níorbh fhéidir acmhainní an scáileáin a fháil (CRTCanna, aschur, móid)"
+msgstr ""
+"níorbh fhéidir acmhainní an scáileáin a fháil (CRTCanna, aschur, móid)"
 
 #: ../libmate-desktop/mate-rr.c:480
 #, c-format
@@ -413,7 +420,9 @@ msgstr "níorbh fhéidir eolas a fháil faoi aschur %d"
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr "tá an ionad/mhéid iarrtha don CRTC %d lasmuigh den teorainn ceadaithe: ionad=(%d, %d), méid=(%d, %d), uasta=(%d, %d)"
+msgstr ""
+"tá an ionad/mhéid iarrtha don CRTC %d lasmuigh den teorainn ceadaithe: "
+"ionad=(%d, %d), méid=(%d, %d), uasta=(%d, %d)"
 
 #: ../libmate-desktop/mate-rr.c:1772
 #, c-format
@@ -433,7 +442,9 @@ msgstr "Ríomhaire glúine"
 #, c-format
 msgid ""
 "none of the saved display configurations matched the active configuration"
-msgstr "ní raibh aon ag na cumraíochtaí taispeána sábháilte comhoiriúnach don chumraíocht ghníomhach"
+msgstr ""
+"ní raibh aon ag na cumraíochtaí taispeána sábháilte comhoiriúnach don "
+"chumraíocht ghníomhach"
 
 #: ../libmate-desktop/mate-rr-config.c:1486
 #, c-format
@@ -496,7 +507,9 @@ msgstr ""
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
-msgstr "ní oiriúnaíonn an mhéid fhíorúil riachtanach an mhéid atá le fáil: iarrtha=(%d, %d), íosta=(%d, %d), uasta=(%d, %d)"
+msgstr ""
+"ní oiriúnaíonn an mhéid fhíorúil riachtanach an mhéid atá le fáil: "
+"iarrtha=(%d, %d), íosta=(%d, %d), uasta=(%d, %d)"
 
 #. Keep this string in sync with mate-control-center/capplets/display/xrandr-
 #. capplet.c:get_display_name()
@@ -504,10 +517,10 @@ msgstr "ní oiriúnaíonn an mhéid fhíorúil riachtanach an mhéid atá le fá
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:419
+#: ../libmate-desktop/mate-rr-labeler.c:408
 #, c-format
 msgid "Mirror Screens"
-msgstr "Scáileáin Scáthánaithe"
+msgstr "Scáthánaigh Scáileáin"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
@@ -611,7 +624,7 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
-msgstr ""
+msgstr "an Líonléitheoir atá loiceadh"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
@@ -667,7 +680,7 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
-msgstr ""
+msgstr "Feidhmchláir Terminéal"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
@@ -675,7 +688,7 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
-msgstr ""
+msgstr "Argóintí Reatha"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
@@ -684,7 +697,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
-msgstr ""
+msgstr "Tarraingt an Cúlra"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:2
 msgid "Have MATE draw the desktop background."
@@ -710,7 +723,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
-msgstr ""
+msgstr "Roghanna ag an Pictiúr"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:8
 msgid ""
@@ -721,7 +734,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
-msgstr ""
+msgstr "Ainm-Comhad an Pictiúr"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
@@ -737,7 +750,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
-msgstr ""
+msgstr "An Dáth Príomha"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
@@ -745,7 +758,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
-msgstr ""
+msgstr "An Dáth Tánaisteach"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
@@ -764,7 +777,7 @@ msgstr ""
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
-msgstr ""
+msgstr "Téama Deilbhíní Comhaid"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
@@ -772,7 +785,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
-msgstr ""
+msgstr "Cumasaigh Inrochtaineacht"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
@@ -780,7 +793,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
-msgstr ""
+msgstr "Cumasaigh Íomhánna Beo"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
@@ -798,7 +811,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Toolbar Style"
-msgstr ""
+msgstr "Stíl Bharra Uirlisí"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
@@ -806,7 +819,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Menus Have Icons"
-msgstr ""
+msgstr "Tá Deilbhíní ag na Roghchláir"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Whether menus may display an icon next to a menu entry."
@@ -838,7 +851,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Icon Size"
-msgstr ""
+msgstr "Méid Deilbhín Bharra Uirlisí"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
@@ -846,7 +859,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Cursor Blink"
-msgstr ""
+msgstr "Caochadh an Chúrsóra"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Whether the cursor should blink."
@@ -854,7 +867,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink Time"
-msgstr ""
+msgstr "Am Chaochadh an Chúrsóra"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Length of the cursor blink cycle, in milliseconds."
@@ -862,7 +875,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Icon Theme"
-msgstr ""
+msgstr "Téama Deilbhíní"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Icon theme to use for the panel, Caja etc."
@@ -870,7 +883,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Gtk+ Theme"
-msgstr ""
+msgstr "Téama Gtk+"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Basename of the default theme used by gtk+."
@@ -888,7 +901,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "Default font"
-msgstr ""
+msgstr "Cló réamhshocrú"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid "Name of the default font used by gtk+."
@@ -904,7 +917,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Status Style"
-msgstr ""
+msgstr "Stíl Stádas IM GTK"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Status Style used by gtk+."
@@ -912,7 +925,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Module"
-msgstr ""
+msgstr "Modúl IM GTK"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the input method module used by GTK+."
@@ -950,7 +963,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Document font"
-msgstr ""
+msgstr "Cló cáipéise"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Name of the default font used for reading documents."
@@ -958,7 +971,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Monospace font"
-msgstr ""
+msgstr "Cló aonleithid"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid ""
@@ -967,7 +980,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Use Custom Font"
-msgstr ""
+msgstr "Bain Úsáid as Cló Saincheaptha"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid "Whether to use a custom font in gtk+ applications."
@@ -975,7 +988,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Status Bar on Right"
-msgstr ""
+msgstr "Barra Stádais ar Dheis"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to display a status bar meter on the right."
@@ -983,7 +996,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Module for GtkFileChooser"
-msgstr ""
+msgstr "Modúl le GtkFileChooser"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid ""
@@ -1001,7 +1014,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Show the 'Input Methods' menu"
-msgstr ""
+msgstr "Taispeáin an roghchlár 'Modhanna Ionchuir'"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid ""
@@ -1011,7 +1024,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Unicode Control Character' menu"
-msgstr ""
+msgstr "Taispeáin an roghchlár 'Carachtar Rialú Unicode'"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
@@ -1066,9 +1079,33 @@ msgid ""
 "presses the Alt key."
 msgstr ""
 
+#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+msgid "Window Scaling Factor"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+msgid ""
+"This controls the GTK scale factor that maps from window coordinates to the "
+"actual device pixels. On traditional systems this is 1, but on very high "
+"density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
+"Set to 0 to auto-detect."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:69
+msgid "Scaling Factor for QT appllications"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:70
+msgid ""
+"This setting determines whether MATE controls the scale factor for QT "
+"applications. Enable to synchronize with the GTK scale factor when "
+"initializing the session, disable to control this value elsewhere. Requires "
+"restarting your session."
+msgstr ""
+
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
-msgstr ""
+msgstr "Díchumasaigh líne na n-orduithe"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
@@ -1089,7 +1126,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
-msgstr ""
+msgstr "Díchumasaigh priontáil"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
@@ -1099,7 +1136,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
-msgstr ""
+msgstr "Díchumasaigh socrú priontála"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
@@ -1119,7 +1156,7 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
-msgstr ""
+msgstr "Díchumasaigh glasáil scáileáin"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
@@ -1217,7 +1254,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr ""
+msgstr "Am Déchliceála"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
@@ -1235,7 +1272,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
-msgstr ""
+msgstr "Aimsigh Pointeoir"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
@@ -1245,7 +1282,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor theme"
-msgstr ""
+msgstr "Téama cúrsóra"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid "Cursor theme name."
@@ -1253,7 +1290,7 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
-msgstr ""
+msgstr "Méid chúrsóra"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
@@ -1277,7 +1314,7 @@ msgstr ""
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
-msgstr ""
+msgstr "Cumasaigh ESD"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
@@ -1342,7 +1379,7 @@ msgstr ""
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"
-msgstr ""
+msgstr "Clóscríobh an t'Ám"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
@@ -1350,7 +1387,7 @@ msgstr ""
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"
-msgstr ""
+msgstr "Ám Sos"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
 msgid "Number of minutes that the typing break should last."

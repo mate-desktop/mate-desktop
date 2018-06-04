@@ -1,16 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 21:49+0300\n"
-"PO-Revision-Date: 2018-01-09 18:50+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Mongolian (http://www.transifex.com/mate/MATE/language/mn/)\n"
+"POT-Creation-Date: 2018-06-03 11:17+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Language-Team: Mongolian (https://www.transifex.com/mate/teams/13566/mn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,6 +23,8 @@ msgstr ""
 #: ../mate-about/mate-about.c:77
 msgid "translator-credits"
 msgstr ""
+"Сүхбаатарын Дөлмандах <sdulmandakh@yahoo.co> \n"
+"Санлигийн Бадрал 2004, <badral@openmn.org>"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -76,7 +79,7 @@ msgstr ""
 #: ../libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
-msgstr "Тодорхойгүй"
+msgstr "Тодорхойлогдоогүй"
 
 #: ../libmate-desktop/mate-colorbutton.c:154
 msgid "Use alpha"
@@ -88,7 +91,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorbutton.c:169
 msgid "Title"
-msgstr ""
+msgstr "Гарчиг"
 
 #: ../libmate-desktop/mate-colorbutton.c:170
 msgid "The title of the color selection dialog"
@@ -119,7 +122,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
-msgstr ""
+msgstr "Хүчингүй өнгөний өгөгдөл хүлээн авлаа\n"
 
 #: ../libmate-desktop/mate-colorsel.c:272
 msgid "Has Opacity Control"
@@ -183,7 +186,7 @@ msgstr ""
 
 #: ../libmate-desktop/mate-colorsel.c:387
 msgid "_Value:"
-msgstr ""
+msgstr "_Утга:"
 
 #: ../libmate-desktop/mate-colorsel.c:388
 msgid "Brightness of the color."
@@ -217,61 +220,61 @@ msgstr ""
 msgid "Op_acity:"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:408
-#: ../libmate-desktop/mate-colorsel.c:418
+#: ../libmate-desktop/mate-colorsel.c:404
+#: ../libmate-desktop/mate-colorsel.c:414
 msgid "Transparency of the color."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:425
+#: ../libmate-desktop/mate-colorsel.c:421
 msgid "Color _name:"
-msgstr ""
+msgstr "Өнгөний _нэр:"
 
-#: ../libmate-desktop/mate-colorsel.c:443
+#: ../libmate-desktop/mate-colorsel.c:435
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:473
+#: ../libmate-desktop/mate-colorsel.c:465
 msgid "_Palette:"
-msgstr ""
+msgstr "Загвар:"
 
-#: ../libmate-desktop/mate-colorsel.c:506
+#: ../libmate-desktop/mate-colorsel.c:495
 msgid "Color Wheel"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:963
+#: ../libmate-desktop/mate-colorsel.c:952
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:966
+#: ../libmate-desktop/mate-colorsel.c:955
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:971
+#: ../libmate-desktop/mate-colorsel.c:960
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:974
+#: ../libmate-desktop/mate-colorsel.c:963
 msgid "The color you've chosen."
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1358
+#: ../libmate-desktop/mate-colorsel.c:1347
 msgid "gtk-color-sel"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1363
+#: ../libmate-desktop/mate-colorsel.c:1352
 msgid "_Save color here"
 msgstr ""
 
-#: ../libmate-desktop/mate-colorsel.c:1583
+#: ../libmate-desktop/mate-colorsel.c:1572
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -326,9 +329,9 @@ msgstr "»%s« файлыг буцааж байхад алдаа: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3547
+#: ../libmate-desktop/mate-desktop-item.c:3540
 msgid "No name"
-msgstr "Нэргүй"
+msgstr "Нэр өгөөгүй байна"
 
 #: ../libmate-desktop/mate-desktop-item.c:607
 #, c-format
@@ -348,36 +351,38 @@ msgstr "Хадгалах файлын тань нэр алга"
 #: ../libmate-desktop/mate-desktop-item.c:1842
 #, c-format
 msgid "Starting %s"
-msgstr "%s эхэлж байна"
+msgstr "%s-ийг эхлүүлж байна"
 
 #: ../libmate-desktop/mate-desktop-item.c:2079
 #, c-format
 msgid "No URL to launch"
 msgstr "Эхлэх URL хаяг алга"
 
-#: ../libmate-desktop/mate-desktop-item.c:2102
+#: ../libmate-desktop/mate-desktop-item.c:2095
 #, c-format
 msgid "Not a launchable item"
-msgstr "Биелчихээр элемент алга"
+msgstr "Нээж болох зүйл биш байна"
 
-#: ../libmate-desktop/mate-desktop-item.c:2112
+#: ../libmate-desktop/mate-desktop-item.c:2105
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Ажиллуулах тушаал алга"
 
-#: ../libmate-desktop/mate-desktop-item.c:2125
+#: ../libmate-desktop/mate-desktop-item.c:2118
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Ажиллуулах тушаал алдаатай байна"
 
-#: ../libmate-desktop/mate-desktop-item.c:3604
+#: ../libmate-desktop/mate-desktop-item.c:3597
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "%s -н тодорхойгүй тэмдэгт кодчлол"
 
 #: ../libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr "Терминал олдсонгүй. Ажиллах боломжтой байсан ч xterm хэрэглэгдэх болно"
+msgstr ""
+"Терминал олдсонгүй; алдаа гарах магадлалтай ч xterm-ийг цааш нь ашиглаж "
+"байна."
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: ../libmate-desktop/mate-rr.c:460
@@ -413,7 +418,9 @@ msgstr "»%d« гаралтын тухай мэдээллийг авах бол�
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
-msgstr "CRTC %d -н сонгосон байрлал/хэмжээ тогтоосон хязгаараас халижээ. Хязгаар: байрлал=(%d, %d), хэмжээ=(%d, %d), Махсимум=(%d, %d)"
+msgstr ""
+"CRTC %d -н сонгосон байрлал/хэмжээ тогтоосон хязгаараас халижээ. Хязгаар: "
+"байрлал=(%d, %d), хэмжээ=(%d, %d), Махсимум=(%d, %d)"
 
 #: ../libmate-desktop/mate-rr.c:1772
 #, c-format
@@ -496,7 +503,9 @@ msgstr ""
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
 "minimum=(%d, %d), maximum=(%d, %d)"
-msgstr "Сонгосон виртуал хэмжээ боломжит хэмжээтэй таарахгүй байна. Хүссэн=(%d, %d), Минимум=(%d, %d), Максимум=(%d, %d)"
+msgstr ""
+"Сонгосон виртуал хэмжээ боломжит хэмжээтэй таарахгүй байна. Хүссэн=(%d, %d),"
+" Минимум=(%d, %d), Максимум=(%d, %d)"
 
 #. Keep this string in sync with mate-control-center/capplets/display/xrandr-
 #. capplet.c:get_display_name()
@@ -504,94 +513,103 @@ msgstr "Сонгосон виртуал хэмжээ боломжит хэмжэ
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:419
+#: ../libmate-desktop/mate-rr-labeler.c:408
 #, c-format
 msgid "Mirror Screens"
 msgstr "Дэлгэцийг тусгах"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
 msgid "minimum interval in milliseconds"
-msgstr ""
+msgstr "хамгийн бага хоорондын интервал миллисекундээр"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
 msgstr ""
+"_Тухайн_ товчлуурыг @delay миллисекундэд олон удаа дарагдсаныг үл тооцох."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
 msgid "Pixels per seconds"
-msgstr ""
+msgstr "Нэг секундэд ноогдох цэг"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
 msgid "How many pixels per second to move at the maximum speed."
-msgstr ""
+msgstr "Хулганын дээд хурдны үед секундэд хэдэн цэгээр хөдлөх вэ."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
 msgid "How long to accelerate in milliseconds"
-msgstr ""
+msgstr "Хэдэн миллисекундээр хурдасгах вэ"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr ""
+msgstr "0-ээс хамгийн дээд хурд хүртэл хэдэн миллисекунд үргэлжлэх вэ?"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
 msgid "Initial delay in milliseconds"
-msgstr ""
+msgstr "Эхлэх хүлээлт миллисекундээр"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:8
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
 msgstr ""
+"Хулганын хөдөлгөөний товчлуур үйлчилж эхэлтэл хэдэн миллисекунд хүлээх вэ."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
 msgid "Minimum interval in milliseconds"
-msgstr ""
+msgstr "Хамгийн бага завсар миллисекундээр"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
 msgstr ""
+"Товчлуур @delay миллисекундээс богино хугацаанд дарагдсан бол үл тооцох."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
 msgid "Disable if two keys are pressed at the same time."
-msgstr ""
+msgstr "Нэгэн зэрэг хоёр товчлуур дарагдсан байхад идэвхгүйжүүлэх"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Beep when a modifier is pressed."
-msgstr ""
+msgstr "Сэлгүүр товчлуур дарагдахад дуу гаргах"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
 msgid "Startup Assistive Technology Applications"
-msgstr ""
+msgstr "Тусламж технологитой эхлэл програмууд"
 
 #: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
 msgstr ""
+"MATE-ажлын тавцан руу нэвтрэх үед эхлүүлэх тусламж технологийн програмуудын "
+"жагсаалт."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Эрхэмлэсэн тусламж технологийн програм"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
+"Нэвтрэлт, цэс эсвэл тушаалын мөрөнд хэрэглэгдэх эрхэмлэсэн мобил тусламж "
+"технологийн програм."
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
 msgid "Start preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Мобил тусламжийн технологи эхлүүлэхэд эрхэмлэсэн програм"
 
 #: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
+"Нэвтрэхэд эхлүүлэх мобил тусламжийн технологид хэрэглэхээр эрхэмлэсэн "
+"програм."
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "Эрхэмлэсэн харааны тусламж технологийн програм"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
 msgid ""
@@ -601,94 +619,98 @@ msgstr ""
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "Эрхэмлэсэн харааны тусламж технологийн програм эхлүүлэх"
 
 #: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
+"Нэвтрэх үед MATE-н эхлүүлэх эрхэмлэсэн харааны тусламж технологийн програм."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
 msgid "Default browser"
-msgstr ""
+msgstr "Өгөгдмөл-хөтөч"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
 msgid "Default browser for all URLs."
-msgstr ""
+msgstr "Бүх URL-ийн хувьд өгөгдмөл вэб хөтөч."
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
 msgid "Browser needs terminal"
-msgstr ""
+msgstr "Хөтөч терминал шаардаж байна"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:4
 msgid "Whether the default browser needs a terminal to run."
-msgstr ""
+msgstr "Өгөгдмөл хөтөч ажиллахдаа терминал шаардах эсэх"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:5
 msgid "Browser understands remote"
-msgstr ""
+msgstr "Хөтөч алсаас удирдуулна"
 
 #: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
 msgid "Whether the default browser understands netscape remote."
 msgstr ""
+"Өгөгдмөл хөтөч »netscape remote« хэрэгсэл ашиглан алсаас удирдагдах эсэх."
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
 msgid "Default calendar"
-msgstr ""
+msgstr "Өгөгдмөл цаглабар"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:2
 msgid "Default calendar application"
-msgstr ""
+msgstr "Өгөгдмөл цаглабар программ"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:3
 msgid "Calendar needs terminal"
-msgstr ""
+msgstr "Цаглабар терминал шаардаж байна"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr ""
+msgstr "Өгөгдмөл цаглабар програм ажиллахын тулд терминал шаардах эсэх"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
 msgid "Default tasks"
-msgstr ""
+msgstr "Өгөгдмөл даалгавар"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
 msgid "Default tasks application"
-msgstr ""
+msgstr "Өгөгдмөл даалгавар програм"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:7
 msgid "Tasks needs terminal"
-msgstr ""
+msgstr "Даалгавар терминал шаардаж байна"
 
 #: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr ""
+msgstr "Өгөгдмөл даалгаварын програм ажиллахын тулд терминал шаардах эсэх"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
 msgid "Terminal application"
-msgstr ""
+msgstr "Терминал-программ"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
 msgid "Terminal program to use when starting applications that require one."
-msgstr ""
+msgstr "Терминал шаардах програмуудын эхлүүлэхэд хэрэглэх терминал програм."
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
 msgid "Exec Arguments"
-msgstr ""
+msgstr "Үйлдлийн Аргументууд"
 
 #: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
 msgstr ""
+"Терминал дотор программ ажиллуулахад хэрэглэдэг »exec«-түлхүүрээр "
+"тодорхойлогдсон аргумент"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:1
 msgid "Draw Desktop Background"
-msgstr ""
+msgstr "Дэлгэцийн ар дэвсгэр зурах"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:2
 msgid "Have MATE draw the desktop background."
-msgstr ""
+msgstr "MATE дэлгэцийн дэвсгэрийг зурах шаардлагатай эсэх."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:3
 msgid "Show Desktop Icons"
@@ -710,7 +732,7 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:7
 msgid "Picture Options"
-msgstr ""
+msgstr "Зургийн сонголтууд"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:8
 msgid ""
@@ -721,148 +743,159 @@ msgstr ""
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:9
 msgid "Picture Filename"
-msgstr ""
+msgstr "Зургийн файлын нэр"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:10
 msgid "File to use for the background image."
-msgstr ""
+msgstr "Дэвсгэрийн зургаар ашиглах файл."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:11
 msgid "Picture Opacity"
-msgstr ""
+msgstr "Зургийн өнгөний идэвх"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:12
 msgid "Opacity with which to draw the background picture."
-msgstr ""
+msgstr "Дэвсгэрийн зургийн өнгөний идэвх."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:13
 msgid "Primary Color"
-msgstr ""
+msgstr "Анхны өнгө"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:14
 msgid "Left or Top color when drawing gradients, or the solid color."
 msgstr ""
+"Өнгөний өөрчлөлтийг илэрхийлэхэд гарах зүүн болоод дээд хэсгийн өнгө эсвэл "
+"цул өнгөөр будахад хэрэглэх өнгө."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:15
 msgid "Secondary Color"
-msgstr ""
+msgstr "Хоёрдогч өнгө"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:16
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
+"Өнгөний өөрчлөлтийг илэрхийлэхэд гарах баруун болоод доод хэсгийн өнгө эсвэл"
+" цул өнгөөр будахад хэрэглэх өнгө."
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:17
 msgid "Color Shading Type"
-msgstr ""
+msgstr "Өнгөний тунаралтын төрөл"
 
 #: ../schemas/org.mate.background.gschema.xml.in.h:18
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr ""
+"Дэвсгэрийн өнгөний уусалтыг тохируулах. Боломжит утгууд нь »horizontal-"
+"gradient« (хэвтээ уусалт), »vertical-gradient« (босоо уусалт) мөн »solid« "
+"(дан өнгийн)."
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:1
 msgid "File Icon Theme"
-msgstr ""
+msgstr "Файлын эмблемийн хэлбэр"
 
 #: ../schemas/org.mate.file-views.gschema.xml.in.h:2
 msgid "Theme used for displaying file icons."
-msgstr ""
+msgstr "Файлын дарцагийг үзүүлэхэд ашиглах хэлбэр."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:1
 msgid "Enable Accessibility"
-msgstr ""
+msgstr "Хандалтыг чөлөөтэй болгох"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:2
 msgid "Whether Applications should have accessibility support."
-msgstr ""
+msgstr "Програмуудад хялбар хандалт боломжтой байлгах эсэх."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:3
 msgid "Enable Animations"
-msgstr ""
+msgstr "Хөдөлгөөнийг идэвхжүүлэх"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:4
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
 msgstr ""
+"Үйл хөдлөлүүдийг харуулах эсэх. Жич: Энэ бол ерөнхий түлхүүр. Түүгээр цонхны"
+" менежер, самбар гэх мэтийн төлөвийг өөрчилж болно."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:5
 msgid "Menus Have Tearoff"
-msgstr ""
+msgstr "Цэснүүд ноорог тэмдэглэлтэй"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:6
 msgid "Whether menus should have a tearoff."
-msgstr ""
+msgstr "Цэсүүд хэрчилттэй байх эсэх."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:7
 msgid "Toolbar Style"
-msgstr ""
+msgstr "Багажийн самбарын хэлбэр"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:8
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
 msgstr ""
+"Багаж самбарын хэлбэр. Боломжит утгууд нь »both«, »both_horiz«, »icon« ба "
+"»text«"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:9
 msgid "Menus Have Icons"
-msgstr ""
+msgstr "Цэснүүд эмблемтэй"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:10
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr ""
+msgstr "Цэсийн элементүүдийн дэргэд дарцаг харуулах эсэх."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:11
 msgid "Buttons Have Icons"
-msgstr ""
+msgstr "Товчнууд эмблемтэй байх"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:12
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr ""
+msgstr "Товчнууд бичвэрийнхээ дээр дарцаг харуулах эсэх."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:13
 msgid "Menubar Detachable"
-msgstr ""
+msgstr "Цэсийн самбарыг салгаж болохуйц"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:14
 msgid "Whether the user can detach menubars and move them around."
-msgstr ""
+msgstr "Хэрэглэгч цэсний самбарыг салган зөөж болох эсэх."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:15
 msgid "Toolbar Detachable"
-msgstr ""
+msgstr "Багажийн самбарыг салгаж болохуйц"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:16
 msgid "Whether the user can detach toolbars and move them around."
-msgstr ""
+msgstr "Хэрэглэгч багаж самбарыг салган зөөж болох эсэх."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:17
 msgid "Toolbar Icon Size"
-msgstr ""
+msgstr "Багажийн самбарын эмблемийн хэмжээ"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:18
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr ""
+msgstr "\"small-toolbar\" эсвэл \"large-toolbar\" багаж самбар дахь дарцагийн хэмжээ."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:19
 msgid "Cursor Blink"
-msgstr ""
+msgstr "Түүчээ Анивчдаг"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:20
 msgid "Whether the cursor should blink."
-msgstr ""
+msgstr "Түүчээ анивчих эсэх."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:21
 msgid "Cursor Blink Time"
-msgstr ""
+msgstr "Заагчийн анивчих давтамж"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:22
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr ""
+msgstr "Түүчээний анивчилтын давтамжийн урт миллисекундээр."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:23
 msgid "Icon Theme"
-msgstr ""
+msgstr "Icon-Хэлбэр"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:24
 msgid "Icon theme to use for the panel, Caja etc."
@@ -870,11 +903,11 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:25
 msgid "Gtk+ Theme"
-msgstr ""
+msgstr "GTK+Хэлбэр"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:26
 msgid "Basename of the default theme used by gtk+."
-msgstr ""
+msgstr "GTK+ -аас заагдсан стандарт суурь нэрсүүд"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:27
 msgid "List of symbolic names and color equivalents"
@@ -888,35 +921,35 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:29
 msgid "Default font"
-msgstr ""
+msgstr "Өгөгдмөл фонт"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:30
 msgid "Name of the default font used by gtk+."
-msgstr ""
+msgstr "GTK+-д хэрэглэгдсэн өгөгдмөл фонтын нэр."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:31
 msgid "GTK IM Preedit Style"
-msgstr ""
+msgstr "GTK-ийн өгөгдлийн урьдчилан засварлах хэлбэр"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:32
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr ""
+msgstr "GTK+-т хэрэглэгдсэн Preedit-хэлбэрийн оруулалтын аргын нэр."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:33
 msgid "GTK IM Status Style"
-msgstr ""
+msgstr "GTK-ийн өгөгдлийн статусын хэлбэр"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:34
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr ""
+msgstr "GTK+-т хэрэглэгдсэн Төлөв-хэлбэрийн оруулалтын аргын нэр."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:35
 msgid "GTK IM Module"
-msgstr ""
+msgstr "GTK IM Модуль"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:36
 msgid "Name of the input method module used by GTK+."
-msgstr ""
+msgstr "GTK+-д хэрэглэгдсэн оруулалтын аргын модулийн нэр."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:37
 msgid "Use GTK3 header bar"
@@ -950,40 +983,41 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:43
 msgid "Document font"
-msgstr ""
+msgstr "Баримтын фонт"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:44
 msgid "Name of the default font used for reading documents."
-msgstr ""
+msgstr "Баримт уншихад хэрэглэгдсэн өгөгдмөл фонтын нэр."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:45
 msgid "Monospace font"
-msgstr ""
+msgstr "Ижил өргөнтэй бичиг"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:46
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr ""
+"Ижил өргөнтэй бичгийн нэр (fixed-width) жишээ нь терминалд хэрэглэгддэг."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:47
 msgid "Use Custom Font"
-msgstr ""
+msgstr "Хэрэглэгчийн зааж өгсөн фонтыг хэрэглэх"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:48
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr ""
+msgstr "GTK+-программд хэрэглэгчийн заасан фонтыг хэрэглэх эсэх"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:49
 msgid "Status Bar on Right"
-msgstr ""
+msgstr "Баруун тал дахь төлөвийн самбар"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:50
 msgid "Whether to display a status bar meter on the right."
-msgstr ""
+msgstr "Төлөв самбарыг баруун талд харуулах эсэх."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:51
 msgid "Module for GtkFileChooser"
-msgstr ""
+msgstr "GtkFileChooser -н модуль"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:52
 msgid ""
@@ -993,31 +1027,35 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:53
 msgid "Menubar accelerator"
-msgstr ""
+msgstr "Цэсийн самбар хурдасгуур"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:54
 msgid "Keyboard shortcut to open the menu bars."
-msgstr ""
+msgstr "Цэс самбар нээгч товчлуурын хослол."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:55
 msgid "Show the 'Input Methods' menu"
-msgstr ""
+msgstr "'Оруулах арга' цэсийг харуул"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:56
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr ""
+"Оруулах талбар ба бичвэрийн мужийн хам цэсэнд оруулах аргыг өөрчлөх боломж "
+"олгох эсэх."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Unicode Control Character' menu"
-msgstr ""
+msgstr "'Юникод Хяналтын Тэмдэгт' цэсийг харуул"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr ""
+"Оруулах талбар ба бичвэрийн мужийн хам цэсэнд удирдах тэмдэгт оруулах боломж"
+" олгох эсэх."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:59
 msgid "Titlebar layout of GTK3 client-side decorated windows"
@@ -1066,9 +1104,33 @@ msgid ""
 "presses the Alt key."
 msgstr ""
 
+#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+msgid "Window Scaling Factor"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+msgid ""
+"This controls the GTK scale factor that maps from window coordinates to the "
+"actual device pixels. On traditional systems this is 1, but on very high "
+"density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
+"Set to 0 to auto-detect."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:69
+msgid "Scaling Factor for QT appllications"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:70
+msgid ""
+"This setting determines whether MATE controls the scale factor for QT "
+"applications. Enable to synchronize with the GTK scale factor when "
+"initializing the session, disable to control this value elsewhere. Requires "
+"restarting your session."
+msgstr ""
+
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
-msgstr ""
+msgstr "Тушаалын мөр идэвхгүйжүүлэх"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
 msgid ""
@@ -1076,50 +1138,58 @@ msgid ""
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
+"Терминал эсвэл тушаалын мөрөөс хандахыг хориглох. Жишээлбэл, \"Програм "
+"ажиллуулах\" диалог руу хандахыг хаана."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
 msgid "Disable saving files to disk"
-msgstr ""
+msgstr "Диск рүү файл хадгалахыг идэвхгүйжүүлэх"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
 msgstr ""
+"Хэрэглэгч диск рүү файл хадгалахаас сэрэмжилэх. Жишээлбэл, Бүх програмын "
+"\"Өөрөөр хадгалах\" диалогийн хандалт хаагдана."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
 msgid "Disable printing"
-msgstr ""
+msgstr "Хэвлэхийг идэвхгүйжүүлэх"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
 msgstr ""
+"Хэрэглэгч хэвлэхийг хориглох. Жишээлбэл, Бүх програмын \"Хэвлэх\" диалогийн "
+"хандалт хаагдана."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
 msgid "Disable print setup"
-msgstr ""
+msgstr "Хэвлэх тохиргоог идэвхгүйжүүлэх"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
 msgstr ""
+"Хэрэглэгч хэвлэх тохиргоо өөрчлөхөөс сэрэмжилэх. Жишээлбэл, Бүх програмын "
+"\"Хэвлэх тохиргоо\" диалог руу хандалт хаагдана."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
 msgid "Disable user switching"
-msgstr ""
+msgstr "Хэрэглэгчийн сэлгээг идэвхгүйжүүлэх"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:10
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr ""
+msgstr "Суулт идэвхтэй байх үед хэрэглэгч өөр данс руу сэлгэхийг саатуулах."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
 msgid "Disable lock screen"
-msgstr ""
+msgstr "Дэлгэц түгжилт идэвхгүйжүүлэх"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
 msgid "Prevent the user from locking the screen."
@@ -1127,11 +1197,11 @@ msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:13
 msgid "Disable URL and MIME type handlers"
-msgstr ""
+msgstr "URL ба MIME төрөл боловсруулагчийг хаах"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr ""
+msgstr "Ажиллаж буй URL эсвэл MIME төрөл боловсруулагч програмыг саатуулах."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
 msgid "Disable theme settings"
@@ -1152,24 +1222,28 @@ msgstr ""
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:1
 msgid "possible values are \"on\", \"off\", and \"custom\"."
 msgstr ""
+"Боломжит утгууд нь »on« (асаах), »off« (салгах) мөн»custom« (хэрэглэгчийн "
+"тохиргоогоор)"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:2
 msgid "Keyboard Bell Custom Filename"
-msgstr ""
+msgstr "Гарны товчлуурын хонхны дууны файлын нэр"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:3
 msgid "File name of the bell sound to be played."
-msgstr ""
+msgstr "Тоглуулах дууны файлын нэр."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:4
 msgid "Remember NumLock state"
-msgstr ""
+msgstr "NumLock-н төлөвийг хадгалах"
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
 msgstr ""
+"Хэрэв TRUE (үнэн) бол MATE суулт хооронд umLock LED-н төлөвийг хадгалах "
+"эсэх."
 
 #: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
 msgid "NumLock state"
@@ -1181,11 +1255,11 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:1
 msgid "Mouse button orientation"
-msgstr ""
+msgstr "Хулганын товчлуурын байрлал"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:2
 msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr ""
+msgstr "Солгой хүнд зориулан хулганын товчлуурын байрлалыг солих эсэх."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
 msgid "Motion Acceleration"
@@ -1195,33 +1269,35 @@ msgstr ""
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
-msgstr ""
+msgstr "Хулганын хөдөлгөөний хурдцыг үржүүлэгчУтга »-1« бол стандарт."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
 msgid "Motion Threshold"
-msgstr ""
+msgstr "Хөдөлгөөний хурдын хязгаар"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:6
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
 msgstr ""
+"Хулганын хурдавчилсан хөдөлгөөн эхэлтэл заагуурын хоцрох зайг цэгээр "
+"илэрхийлсэн нь.Утга  -1 нь стандарт."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
 msgid "Drag Threshold"
-msgstr ""
+msgstr "Чирэх хурдын хязгаар"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:8
 msgid "Distance before a drag is started."
-msgstr ""
+msgstr "Чирэхийн өмнө хэрэглэгдэх зай."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
 msgid "Double Click Time"
-msgstr ""
+msgstr "Давхар товшилтын хугацаа"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
 msgid "Length of a double click."
-msgstr ""
+msgstr "Давхар товшилтын урт"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:11
 msgid "Middle button emulation"
@@ -1235,17 +1311,19 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
-msgstr ""
+msgstr "Түүчээний байршил тогтоох"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
 msgstr ""
+"CTRL товчлуурыг дарах болон тавих үед хулганын заагуурын байрлалыг нааш нь "
+"товойлгож харуулах эсэх."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
 msgid "Cursor theme"
-msgstr ""
+msgstr "Түүчээний хэлбэр"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
 msgid "Cursor theme name."
@@ -1253,81 +1331,88 @@ msgstr ""
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
 msgid "Cursor size"
-msgstr ""
+msgstr "Түүчээний хэмжээ"
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
 msgid "Size of the cursor referenced by cursor_theme."
-msgstr ""
+msgstr "»cursor_theme«-р холбогдсон хулганы заагуурын хэмжээ."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:1
 msgid "Default mixer device"
-msgstr ""
+msgstr "Өгөгдмөл найруулагч төхөөрөмж"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:2
 msgid "The default mixer device used by the multimedia key bindings."
 msgstr ""
+"Мультимедиа товчлуур хэрэглэх үед өгөгдмөл найруулагч төх. хэрэглэх эсэх."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:3
 msgid "Default mixer tracks"
-msgstr ""
+msgstr "Өгөгдмөл найруулагчийн суваг"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:4
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr ""
+msgstr "Мультимедиа товчлуур хэрэглэх үед өгөгдмөл суваг хэрэглэх эсэх."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:5
 msgid "Enable ESD"
-msgstr ""
+msgstr "ESD-ийг идэвхжүүлэх"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:6
 msgid "Enable sound server startup."
-msgstr ""
+msgstr "MATE-ийн эхлэхэд дууны серверийг ажиллуулах."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:7
 msgid "Sounds for events"
-msgstr ""
+msgstr "Үйлдлүүдийн гаргах дуу"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:8
 msgid "Whether to play sounds on user events."
-msgstr ""
+msgstr "Хэрэглэгчийн хийх үйлдэлд хамааруулан дуу гаргах эсэх"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:9
 msgid "Sound theme name"
-msgstr ""
+msgstr "Дууны аялгуун нэр"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:10
 msgid "The XDG sound theme to use for event sounds."
-msgstr ""
+msgstr "Үйлдлүүдийн чимээнд XDG дууны аялгууг хэрэглэх."
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:11
 msgid "Input feedback sounds"
-msgstr ""
+msgstr "Үйлчлэлийн дуу оруулах"
 
 #: ../schemas/org.mate.sound.gschema.xml.in.h:12
 msgid "Whether to play sounds on input events."
-msgstr ""
+msgstr "Оролтын үйлдэлд дуу тоглуулах эсэх"
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:1
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
 msgstr ""
+"Завсрын хадгалагчид мини зургуудыг хадгалах хамгийн их хугацаа, өдрөөр. "
+"Цэвэрлэхгүй гэвэл -1 сонгоно уу."
 
 #: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
 msgstr ""
+"Завсрын хадгалагчид мини зургуудыг хадгалах хамгийн их хугацаа, мегабайтаар."
+" Цэвэрлэхгүй гэвэл -1 сонгоно уу."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
 msgid "Disable all external thumbnailers"
-msgstr ""
+msgstr "Бүх гадаад мини харагдалтыг хаах"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:2
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
 msgstr ""
+"Хэрвээ идэвхжүүлбэл бүх гадаад мини харагдалттай програмыг тэд тусдаа "
+"нээлттэй/хаалттай эсэхийг үл харгалзан хаана."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
@@ -1342,35 +1427,35 @@ msgstr ""
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"
-msgstr ""
+msgstr "Оруулах хугацаа"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
 msgid "Number of minutes of typing time before break mode starts."
-msgstr ""
+msgstr "Оруулах (бичих) үеийн түр зогсолтын горим эхлэхийн өмнөх минутын тоо"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
 msgid "Break time"
-msgstr ""
+msgstr "Түр зогсолт"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
 msgid "Number of minutes that the typing break should last."
-msgstr ""
+msgstr "Оруулах үеийн түр зогсолтын үргэлжилэх минут."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:5
 msgid "Allow postponing of breaks"
-msgstr ""
+msgstr "Түр зогсолт зөөхийг зөвшөөрөх"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
-msgstr ""
+msgstr "Хэрэглэгч оруулах үеийн түр зогсолтыг зөөж болох эсэх."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
 msgid "Whether or not keyboard locking is enabled"
-msgstr ""
+msgstr "Гар түгжих эсэх?"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:8
 msgid "Whether or not keyboard locking is enabled."
-msgstr ""
+msgstr "Гар түгжих эсэх?"
 
 #: ../tools/mate-color-select.c:64
 #: ../tools/mate-color-select.desktop.in.in.h:1
