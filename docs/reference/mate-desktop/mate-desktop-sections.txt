@@ -269,6 +269,19 @@ MateDesktopThumbnailFactoryClass
 </SECTION>
 
 <SECTION>
+<FILE>mate-languages</FILE>
+<TITLE>Language Utilities</TITLE>
+mate_get_all_locales
+mate_get_country_from_code
+mate_get_country_from_locale
+mate_get_language_from_code
+mate_get_language_from_locale
+mate_normalize_locale
+mate_parse_locale
+mate_language_has_translations
+</SECTION>
+
+<SECTION>
 <INCLUDE>mate-desktop-utils.h</INCLUDE>
 <FILE>mate-desktop-utils</FILE>
 <TITLE>Miscellaneous Functions</TITLE>

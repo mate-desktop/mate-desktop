@@ -9,6 +9,7 @@ libmate_desktop_HEADERS = \
 	mate-bg-crossfade.h		\
 	mate-desktop-thumbnail.h	\
 	mate-rr.h			\
+	mate-languages.h		\
 	mate-rr-config.h		\
 	mate-rr-labeler.h \
 	mate-colorbutton.h \
@@ -24,6 +25,7 @@ AM_CPPFLAGS =							\
 	-DG_LOG_DOMAIN=\"MateDesktop\"				\
 	-DMATELOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale\""	\
 	-DPNP_IDS=\""$(PNP_IDS)"\"				\
+	-DISO_CODES_PREFIX=\""$(ISO_CODES_PREFIX)"\"		\
 	$(DISABLE_DEPRECATED_CFLAGS)
 
 AM_CFLAGS = $(WARN_CFLAGS)
@@ -42,6 +44,7 @@ introspection_sources = \
 	mate-bg-crossfade.c	\
 	display-name.c		\
 	mate-rr.c		\
+	mate-languages.c	\
 	mate-rr-config.c	\
 	mate-rr-output-info.c	\
 	mate-rr-labeler.c	\
