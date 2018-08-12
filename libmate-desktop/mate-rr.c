@@ -437,6 +437,7 @@ fill_out_screen_info (Display *xdisplay,
 {
 #ifdef HAVE_RANDR
     XRRScreenResources *resources;
+	GdkDisplay *display;
     
     g_assert (xdisplay != NULL);
     g_assert (info != NULL);
@@ -468,14 +469,15 @@ fill_out_screen_info (Display *xdisplay,
     if (needs_reprobe) {
 	gboolean success;
 
-        gdk_error_trap_push ();
+	display = gdk_display_get_default ();
+    gdk_x11_display_error_trap_push (display);
 	success = XRRGetScreenSizeRange (xdisplay, xroot,
 					 &(info->min_width),
 					 &(info->min_height),
 					 &(info->max_width),
 					 &(info->max_height));
-	gdk_flush ();
-	if (gdk_error_trap_pop ()) {
+	gdk_display_flush (display);
+	if (gdk_x11_display_error_trap_pop (display)) {
 	    g_set_error (error, MATE_RR_ERROR, MATE_RR_ERROR_UNKNOWN,
 			 _("unhandled X error while getting the range of screen sizes"));
 	    return FALSE;
@@ -497,9 +499,10 @@ fill_out_screen_info (Display *xdisplay,
     }
 
     info->primary = None;
-    gdk_error_trap_push ();
+	display = gdk_display_get_default ();
+    gdk_x11_display_error_trap_push (display);
     info->primary = XRRGetOutputPrimary (xdisplay, xroot);
-    gdk_error_trap_pop_ignored ();
+    gdk_x11_display_error_trap_pop_ignored (display);
 
     return TRUE;
 #else
@@ -843,10 +846,13 @@ mate_rr_screen_set_size (MateRRScreen *screen,
     g_return_if_fail (MATE_IS_RR_SCREEN (screen));
 
 #ifdef HAVE_RANDR
-    gdk_error_trap_push ();
+	GdkDisplay *display;
+
+	display = gdk_display_get_default ();
+    gdk_x11_display_error_trap_push (display);
     XRRSetScreenSize (screen->priv->xdisplay, screen->priv->xroot,
 		      width, height, mm_width, mm_height);
-    gdk_error_trap_pop_ignored ();
+    gdk_x11_display_error_trap_pop_ignored (display);
 #endif
 }
 
@@ -925,6 +931,7 @@ force_timestamp_update (MateRRScreen *screen)
     MateRRScreenPrivate *priv = screen->priv;
     MateRRCrtc *crtc;
     XRRCrtcInfo *current_info;
+	GdkDisplay *display;
     Status status;
     gboolean timestamp_updated;
 
@@ -940,9 +947,10 @@ force_timestamp_update (MateRRScreen *screen)
 				   crtc->id);
 
     if (current_info == NULL)
-	goto out;
+	  goto out;
 
-    gdk_error_trap_push ();
+	display = gdk_display_get_default ();
+    gdk_x11_display_error_trap_push (display);
     status = XRRSetCrtcConfig (priv->xdisplay,
 			       priv->info->resources,
 			       crtc->id,
@@ -956,8 +964,8 @@ force_timestamp_update (MateRRScreen *screen)
 
     XRRFreeCrtcInfo (current_info);
 
-    gdk_flush ();
-    if (gdk_error_trap_pop ())
+    gdk_display_flush (display);
+    if (gdk_x11_display_error_trap_pop (display))
 	goto out;
 
     if (status == RRSetConfigSuccess)
@@ -1716,6 +1724,7 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
 #ifdef HAVE_RANDR
     ScreenInfo *info;
     GArray *output_ids;
+	GdkDisplay *display;
     Status status;
     gboolean result;
     int i;
@@ -1753,7 +1762,8 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
 	    g_array_append_val (output_ids, outputs[i]->id);
     }
 
-    gdk_error_trap_push ();
+	display = gdk_display_get_default ();
+    gdk_x11_display_error_trap_push (display);
     status = XRRSetCrtcConfig (DISPLAY (crtc), info->resources, crtc->id,
 			       timestamp, 
 			       x, y,
@@ -1764,7 +1774,7 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
     
     g_array_free (output_ids, TRUE);
 
-    if (gdk_error_trap_pop () || status != RRSetConfigSuccess) {
+    if (gdk_x11_display_error_trap_pop (display) || status != RRSetConfigSuccess) {
         /* Translators: CRTC is a CRT Controller (this is X terminology).
          * It is *very* unlikely that you'll ever get this error, so it is
          * only listed for completeness. */
