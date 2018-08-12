@@ -426,13 +426,15 @@ draw_background (MateBGCrossfade *fade)
 		cairo_region_destroy (region);
 	} else {
 		Display *xdisplay = GDK_WINDOW_XDISPLAY (fade->priv->window);
-		gdk_error_trap_push ();
+		GdkDisplay *display;
+		display = gdk_display_get_default ();
+		gdk_x11_display_error_trap_push (display);
 		XGrabServer (xdisplay);
 		XClearWindow (xdisplay, GDK_WINDOW_XID (fade->priv->window));
 		send_root_property_change_notification (fade);
 		XFlush (xdisplay);
 		XUngrabServer (xdisplay);
-		gdk_error_trap_pop_ignored ();
+		gdk_x11_display_error_trap_pop_ignored (display);
 	}
 }
 
@@ -588,7 +590,7 @@ get_root_pixmap_id_surface (GdkDisplay *display)
 		int x_ret, y_ret;
 		unsigned int w_ret, h_ret, bw_ret, depth_ret;
 
-		gdk_error_trap_push ();
+		gdk_x11_display_error_trap_push (display);
 		if (XGetGeometry (xdisplay, pixmap, &root_ret,
 		                  &x_ret, &y_ret, &w_ret, &h_ret,
 		                  &bw_ret, &depth_ret))
@@ -598,7 +600,7 @@ get_root_pixmap_id_surface (GdkDisplay *display)
 			                                     w_ret, h_ret);
 		}
 
-		gdk_error_trap_pop_ignored ();
+		gdk_x11_display_error_trap_pop_ignored (display);
 		XFree (data);
 	}
 
