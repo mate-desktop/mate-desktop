@@ -1473,14 +1473,20 @@ static void
 sn_error_trap_push (SnDisplay *display,
 		    Display   *xdisplay)
 {
-	gdk_error_trap_push ();
+	GdkDisplay *gdkdisplay;
+
+	gdkdisplay = gdk_display_get_default ();
+	gdk_x11_display_error_trap_push (gdkdisplay);
 }
 
 static void
 sn_error_trap_pop (SnDisplay *display,
 		   Display   *xdisplay)
 {
-	gdk_error_trap_pop_ignored ();
+	GdkDisplay *gdkdisplay;
+
+	gdkdisplay = gdk_display_get_default ();
+	gdk_x11_display_error_trap_pop_ignored (gdkdisplay);
 }
 
 static char **
