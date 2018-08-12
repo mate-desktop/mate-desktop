@@ -1290,6 +1290,7 @@ mate_rr_config_apply_with_time (MateRRConfig *config,
     MateRROutputInfo **outputs;
     gboolean result = FALSE;
     int i;
+    GdkDisplay *display;
 
     g_return_val_if_fail (MATE_IS_RR_CONFIG (config), FALSE);
     g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), FALSE);
@@ -1309,7 +1310,8 @@ mate_rr_config_apply_with_time (MateRRConfig *config,
 
 	crtc_assignment_free (assignment);
 
-	gdk_flush ();
+	display = gdk_display_get_default ();
+	gdk_display_flush (display);
     }
 
     return result;
