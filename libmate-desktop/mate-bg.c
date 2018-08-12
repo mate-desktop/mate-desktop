@@ -1444,6 +1444,7 @@ mate_bg_get_surface_from_root (GdkScreen *screen)
 	int screen_num;
 	cairo_surface_t *surface;
 	cairo_surface_t *source_pixmap;
+	GdkDisplay *gdkdisplay;
 	int width, height;
 	cairo_t *cr;
 
@@ -1466,7 +1467,8 @@ mate_bg_get_surface_from_root (GdkScreen *screen)
 	}
 
 	if (data != NULL) {
-		gdk_error_trap_push ();
+		gdkdisplay = gdk_screen_get_display (screen);
+		gdk_x11_display_error_trap_push (gdkdisplay);
 
 		Pixmap xpixmap = *(Pixmap *) data;
 		Window root_return;
@@ -1484,7 +1486,7 @@ mate_bg_get_surface_from_root (GdkScreen *screen)
 								   w_ret, h_ret);
 		}
 
-		gdk_error_trap_pop_ignored ();
+		gdk_x11_display_error_trap_pop_ignored (gdkdisplay);
 	}
 
 	width = WidthOfScreen (gdk_x11_screen_get_xscreen (screen));
@@ -1537,6 +1539,7 @@ mate_bg_set_root_pixmap_id (GdkScreen       *screen,
 	int      format, result;
 	unsigned long nitems, after;
 	unsigned char *data_root, *data_esetroot;
+	GdkDisplay *gdkdisplay;
 
 	/* Get atoms for both properties in an array, only if they exist.
 	 * This method is to avoid multiple round-trips to Xserver
@@ -1561,14 +1564,15 @@ mate_bg_set_root_pixmap_id (GdkScreen       *screen,
 				Pixmap xrootpmap = *((Pixmap *) data_root);
 				Pixmap esetrootpmap = *((Pixmap *) data_esetroot);
 
-				gdk_error_trap_push ();
+				gdkdisplay = gdk_screen_get_display (screen);
+				gdk_x11_display_error_trap_push (gdkdisplay);
 				if (xrootpmap && xrootpmap == esetrootpmap) {
 					XKillClient (display, xrootpmap);
 				}
 				if (esetrootpmap && esetrootpmap != xrootpmap) {
 					XKillClient (display, esetrootpmap);
 				}
-				gdk_error_trap_pop_ignored ();
+				gdk_x11_display_error_trap_pop_ignored (gdkdisplay);
 			}
 			if (data_esetroot != NULL) {
 				XFree (data_esetroot);
