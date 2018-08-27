@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 08:55+0100\n"
+"POT-Creation-Date: 2018-06-02 16:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Cfpo Miègjorn-Pirenèus <inactive+cfpomp@transifex.com>, 2018\n"
 "Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
@@ -1082,10 +1082,22 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:68
 msgid ""
-"Internal scale factor that maps from window coordinates to the actual device"
-" pixels. On traditional systems this is 1, but on very high density displays"
-" (e.g. HiDPI, Retina) this can be a higher value (often 2). Set to 0 to "
-"auto-detect."
+"This controls the GTK scale factor that maps from window coordinates to the "
+"actual device pixels. On traditional systems this is 1, but on very high "
+"density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
+"Set to 0 to auto-detect."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:69
+msgid "Scaling Factor for QT appllications"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:70
+msgid ""
+"This setting determines whether MATE controls the scale factor for QT "
+"applications. Enable to synchronize with the GTK scale factor when "
+"initializing the session, disable to control this value elsewhere. Requires "
+"restarting your session."
 msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1

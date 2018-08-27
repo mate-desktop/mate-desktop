@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-17 08:55+0100\n"
+"POT-Creation-Date: 2018-06-02 16:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
@@ -1115,13 +1115,23 @@ msgstr "창 배율 상수"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:68
 msgid ""
-"Internal scale factor that maps from window coordinates to the actual device"
-" pixels. On traditional systems this is 1, but on very high density displays"
-" (e.g. HiDPI, Retina) this can be a higher value (often 2). Set to 0 to "
-"auto-detect."
+"This controls the GTK scale factor that maps from window coordinates to the "
+"actual device pixels. On traditional systems this is 1, but on very high "
+"density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
+"Set to 0 to auto-detect."
 msgstr ""
-"창 좌표를 실제 장치 픽셀 단위로 대응하는 내부 배율 상수입니다. 전통 시스템에서는 1이지만, 고밀도 디스플레이(예: HiDPI, "
-"레티나) 에서는 더 높은 값을 지정할 수 있습니다. 0 값으로 설정하면 자동으로 감지한 값을 사용합니다."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:69
+msgid "Scaling Factor for QT appllications"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:70
+msgid ""
+"This setting determines whether MATE controls the scale factor for QT "
+"applications. Enable to synchronize with the GTK scale factor when "
+"initializing the session, disable to control this value elsewhere. Requires "
+"restarting your session."
+msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
