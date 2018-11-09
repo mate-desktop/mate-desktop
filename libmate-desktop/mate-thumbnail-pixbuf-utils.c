@@ -29,7 +29,10 @@
 #include <string.h>
 #include <glib.h>
 
+#ifndef MATE_DESKTOP_USE_UNSTABLE_API
 #define MATE_DESKTOP_USE_UNSTABLE_API
+#endif
+
 #include "mate-desktop-thumbnail.h"
 
 #define LOAD_BUFFER_SIZE 65536

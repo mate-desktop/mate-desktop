@@ -25,7 +25,9 @@
  * Author: Federico Mena-Quintero <federico@novell.com>
  */
 
+#ifndef MATE_DESKTOP_USE_UNSTABLE_API
 #define MATE_DESKTOP_USE_UNSTABLE_API
+#endif
 
 #include <config.h>
 #include <glib/gi18n-lib.h>

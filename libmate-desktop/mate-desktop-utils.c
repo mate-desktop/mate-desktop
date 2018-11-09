@@ -31,7 +31,9 @@
 #include <gdk/gdk.h>
 #include <gtk/gtk.h>
 
+#ifndef MATE_DESKTOP_USE_UNSTABLE_API
 #define MATE_DESKTOP_USE_UNSTABLE_API
+#endif
 #include <mate-desktop-utils.h>
 
 #include "private.h"

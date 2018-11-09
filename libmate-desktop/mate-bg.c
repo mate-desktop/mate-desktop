@@ -43,7 +43,10 @@ Authors: Soren Sandmann <sandmann@redhat.com>
 
 #include <cairo.h>
 
+#ifndef MATE_DESKTOP_USE_UNSTABLE_API
 #define MATE_DESKTOP_USE_UNSTABLE_API
+#endif
+
 #include <mate-bg.h>
 #include <mate-bg-crossfade.h>
 

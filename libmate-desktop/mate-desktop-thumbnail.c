@@ -40,7 +40,10 @@
 #define GDK_PIXBUF_ENABLE_BACKEND
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
+#ifndef MATE_DESKTOP_USE_UNSTABLE_API
 #define MATE_DESKTOP_USE_UNSTABLE_API
+#endif
+
 #include "mate-desktop-thumbnail.h"
 #include <glib/gstdio.h>
 #include <glib-unix.h>

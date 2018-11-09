@@ -54,7 +54,10 @@
 
 #define sure_string(s) ((s)!=NULL?(s):"")
 
+#ifndef MATE_DESKTOP_USE_UNSTABLE_API
 #define MATE_DESKTOP_USE_UNSTABLE_API
+#endif
+
 #undef MATE_DISABLE_DEPRECATED
 #include <mate-desktop-item.h>
 #include <mate-desktop-utils.h>

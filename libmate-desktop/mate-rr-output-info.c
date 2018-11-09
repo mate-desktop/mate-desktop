@@ -21,7 +21,9 @@
  * Boston, MA 02111-1307, USA.
  */
 
+#ifndef MATE_DESKTOP_USE_UNSTABLE_API
 #define MATE_DESKTOP_USE_UNSTABLE_API
+#endif
 
 #include <config.h>
 

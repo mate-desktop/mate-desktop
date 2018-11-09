@@ -36,7 +36,10 @@
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
 
+#ifndef MATE_DESKTOP_USE_UNSTABLE_API
 #define MATE_DESKTOP_USE_UNSTABLE_API
+#endif
+
 #include "mate-languages.h"
 
 #include <langinfo.h>
