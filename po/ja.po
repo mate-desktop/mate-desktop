@@ -3,14 +3,24 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# semicolon <mail@semicln.com>, 2018
+# Kenzo Matsumoto <dicegeist@gmail.com>, 2018
+# ABE Tsunehiko, 2018
+# あわしろいくや <ikunya@gmail.com>, 2018
+# Mika Kobayashi, 2018
+# ふうせん Fu-sen. | BALLOON a.k.a. Fu-sen., 2018
+# Ikuru K <kanumaiku@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-02 16:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kenzo Matsumoto <dicegeist@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-08-27 15:50+0200\n"
+"PO-Revision-Date: 2018-03-11 16:44+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -345,7 +355,7 @@ msgstr "'%s' を戻している最中にエラーが発生しました: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3540
+#: ../libmate-desktop/mate-desktop-item.c:3546
 msgid "No name"
 msgstr "ここに名前を入力してください"
 
@@ -364,32 +374,32 @@ msgstr "ファイル '%s' が見つかりません"
 msgid "No filename to save to"
 msgstr "保存先のファイル名が不明です"
 
-#: ../libmate-desktop/mate-desktop-item.c:1842
+#: ../libmate-desktop/mate-desktop-item.c:1848
 #, c-format
 msgid "Starting %s"
 msgstr "%s の起動中です"
 
-#: ../libmate-desktop/mate-desktop-item.c:2079
+#: ../libmate-desktop/mate-desktop-item.c:2085
 #, c-format
 msgid "No URL to launch"
 msgstr "起動する URL が不明です"
 
-#: ../libmate-desktop/mate-desktop-item.c:2095
+#: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Not a launchable item"
 msgstr "起動できないアイテムです"
 
-#: ../libmate-desktop/mate-desktop-item.c:2105
+#: ../libmate-desktop/mate-desktop-item.c:2111
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "起動するコマンドが指定されていません"
 
-#: ../libmate-desktop/mate-desktop-item.c:2118
+#: ../libmate-desktop/mate-desktop-item.c:2124
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "起動するコマンドの指定が正しくありません"
 
-#: ../libmate-desktop/mate-desktop-item.c:3597
+#: ../libmate-desktop/mate-desktop-item.c:3603
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "エンコーディングが不明です: %s"
@@ -398,28 +408,32 @@ msgstr "エンコーディングが不明です: %s"
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "端末が見つかりません。たとえ動作しなくても xterm を呼び出します。"
 
+#: ../libmate-desktop/mate-languages.c:711
+msgid "Unspecified"
+msgstr "未設定"
+
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:460
+#: ../libmate-desktop/mate-rr.c:461
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "画面のリソース (いろいろな CRTC、出力、モード等) を取得できませんでした"
 
-#: ../libmate-desktop/mate-rr.c:480
+#: ../libmate-desktop/mate-rr.c:482
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "画面の解像度を取得する際にXサーバで原因不明のエラーが発生しました"
 
-#: ../libmate-desktop/mate-rr.c:486
+#: ../libmate-desktop/mate-rr.c:488
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "画面の解像度を取得できませんでした"
 
-#: ../libmate-desktop/mate-rr.c:704
+#: ../libmate-desktop/mate-rr.c:707
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "RANDR 拡張がインストールされていません"
 
-#: ../libmate-desktop/mate-rr.c:1257
+#: ../libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "出力 %d に関する情報を取得できませんでした"
@@ -427,7 +441,7 @@ msgstr "出力 %d に関する情報を取得できませんでした"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1738
+#: ../libmate-desktop/mate-rr.c:1747
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -435,12 +449,12 @@ msgid ""
 msgstr ""
 "要求した CRTC %d の位置やサイズが許容範囲を超えました: 位置 (%d, %d)、サイズ (%d, %d) / 許容範囲 (%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1772
+#: ../libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "CRTC %d の設定をセットできませんでした"
 
-#: ../libmate-desktop/mate-rr.c:1936
+#: ../libmate-desktop/mate-rr.c:1946
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "CRTC %d に関する情報を取得できませんでした"
@@ -455,22 +469,22 @@ msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "保存したディスプレイの設定に一致する現在の設定はありません"
 
-#: ../libmate-desktop/mate-rr-config.c:1486
+#: ../libmate-desktop/mate-rr-config.c:1488
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d は出力 %s をドライブできません"
 
-#: ../libmate-desktop/mate-rr-config.c:1493
+#: ../libmate-desktop/mate-rr-config.c:1495
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "出力 %s は %dx%d@%dHz のモードをサポートしていません"
 
-#: ../libmate-desktop/mate-rr-config.c:1504
+#: ../libmate-desktop/mate-rr-config.c:1506
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d は rotation=%s をサポートしていません"
 
-#: ../libmate-desktop/mate-rr-config.c:1518
+#: ../libmate-desktop/mate-rr-config.c:1520
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -483,22 +497,22 @@ msgstr ""
 "現在 coordinates = (%d, %d), 新 coordinates = (%d, %d)\n"
 "現在 rotation = %s, 新 rotation = %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1533
+#: ../libmate-desktop/mate-rr-config.c:1535
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "出力 %s をクローンできません"
 
-#: ../libmate-desktop/mate-rr-config.c:1702
+#: ../libmate-desktop/mate-rr-config.c:1704
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "CRTC %d のモードを試します\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1726
+#: ../libmate-desktop/mate-rr-config.c:1728
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr "CRTC %d: %dx%d@%dHz のモードを %dx%d@%dHz (%d パス) の出力で試します\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1773
+#: ../libmate-desktop/mate-rr-config.c:1775
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -507,7 +521,7 @@ msgstr ""
 "CRTC を出力に割り当てできませんでした:\n"
 "%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1777
+#: ../libmate-desktop/mate-rr-config.c:1779
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -519,7 +533,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1859
+#: ../libmate-desktop/mate-rr-config.c:1861
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -1129,6 +1143,16 @@ msgid ""
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:71
+msgid "Enable the primary paste selection"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:72
+msgid ""
+"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"middle mouse button click."
 msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1

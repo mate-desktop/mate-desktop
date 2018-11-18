@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# 趙惟倫 <bluebat@member.fsf.org>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-02 16:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-08-27 15:50+0200\n"
+"PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: 趙惟倫 <bluebat@member.fsf.org>, 2018\n"
 "Language-Team: Chinese (Mandarin) (https://www.transifex.com/mate/teams/13566/cmn/)\n"
 "MIME-Version: 1.0\n"
@@ -331,7 +334,7 @@ msgstr "回到檔案「%s」的開始位置時發生錯誤：%s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3540
+#: ../libmate-desktop/mate-desktop-item.c:3546
 msgid "No name"
 msgstr "沒有名稱"
 
@@ -350,32 +353,32 @@ msgstr "找不到檔案「%s」"
 msgid "No filename to save to"
 msgstr "儲存檔案時沒有指定檔案名稱"
 
-#: ../libmate-desktop/mate-desktop-item.c:1842
+#: ../libmate-desktop/mate-desktop-item.c:1848
 #, c-format
 msgid "Starting %s"
 msgstr "準備啟動 %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2079
+#: ../libmate-desktop/mate-desktop-item.c:2085
 #, c-format
 msgid "No URL to launch"
 msgstr "沒有可以啟動的 URL"
 
-#: ../libmate-desktop/mate-desktop-item.c:2095
+#: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Not a launchable item"
 msgstr "不是可以啟動的項目"
 
-#: ../libmate-desktop/mate-desktop-item.c:2105
+#: ../libmate-desktop/mate-desktop-item.c:2111
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "沒有可啟動的指令 (Exec)"
 
-#: ../libmate-desktop/mate-desktop-item.c:2118
+#: ../libmate-desktop/mate-desktop-item.c:2124
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "準備啟動的指令 (Exec) 出現錯誤"
 
-#: ../libmate-desktop/mate-desktop-item.c:3597
+#: ../libmate-desktop/mate-desktop-item.c:3603
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "以下 URI 內容的編碼不明：%s"
@@ -384,28 +387,32 @@ msgstr "以下 URI 內容的編碼不明：%s"
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "找不到終端機，將使用 xterm 代替，不管系統中有沒有 xterm"
 
+#: ../libmate-desktop/mate-languages.c:711
+msgid "Unspecified"
+msgstr ""
+
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:460
+#: ../libmate-desktop/mate-rr.c:461
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "無法取得螢幕資源 (CTRCs、輸出、模式)"
 
-#: ../libmate-desktop/mate-rr.c:480
+#: ../libmate-desktop/mate-rr.c:482
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "在取得螢幕大小的範圍發生無法處理的 X 錯誤"
 
-#: ../libmate-desktop/mate-rr.c:486
+#: ../libmate-desktop/mate-rr.c:488
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "無法取得螢幕大小的範圍"
 
-#: ../libmate-desktop/mate-rr.c:704
+#: ../libmate-desktop/mate-rr.c:707
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "沒有 RANDR 擴充功能"
 
-#: ../libmate-desktop/mate-rr.c:1257
+#: ../libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "無法取得輸出 %d 的資訊"
@@ -413,19 +420,19 @@ msgstr "無法取得輸出 %d 的資訊"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1738
+#: ../libmate-desktop/mate-rr.c:1747
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "對 CTRC %d 要求的位置/大小超出允許的限制：位置 =(%d，%d)，大小 =(%d，%d)，最大值=(%d，%d)"
 
-#: ../libmate-desktop/mate-rr.c:1772
+#: ../libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "無法設定 CRTC %d 的組態"
 
-#: ../libmate-desktop/mate-rr.c:1936
+#: ../libmate-desktop/mate-rr.c:1946
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "無法取得 CRTC %d 的資訊"
@@ -440,22 +447,22 @@ msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "已儲存的顯示組態沒有一個符合使用中的組態"
 
-#: ../libmate-desktop/mate-rr-config.c:1486
+#: ../libmate-desktop/mate-rr-config.c:1488
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d 不能驅動輸出裝置 %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1493
+#: ../libmate-desktop/mate-rr-config.c:1495
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "輸出裝置 %s 不支援模式 %dx%d@%dHz"
 
-#: ../libmate-desktop/mate-rr-config.c:1504
+#: ../libmate-desktop/mate-rr-config.c:1506
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d 不支援 rotation=%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1518
+#: ../libmate-desktop/mate-rr-config.c:1520
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -468,22 +475,22 @@ msgstr ""
 "現有的坐標 = (%d，%d)，新的坐標 = (%d，%d)\n"
 "現有的旋轉 = %s，新的旋轉 = %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1533
+#: ../libmate-desktop/mate-rr-config.c:1535
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "不能拷貝到輸出裝置 %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1702
+#: ../libmate-desktop/mate-rr-config.c:1704
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "正在嘗試 CRTC %d 的模式\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1726
+#: ../libmate-desktop/mate-rr-config.c:1728
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr "CRTC %d：正在嘗試模式 %dx%d@%dHz 於輸出裝置 %dx%d@%dHz (通過 %d)\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1773
+#: ../libmate-desktop/mate-rr-config.c:1775
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -492,7 +499,7 @@ msgstr ""
 "無法指派 CRTC 給輸出裝置：\n"
 "%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1777
+#: ../libmate-desktop/mate-rr-config.c:1779
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -504,7 +511,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1859
+#: ../libmate-desktop/mate-rr-config.c:1861
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -1102,6 +1109,16 @@ msgid ""
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:71
+msgid "Enable the primary paste selection"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:72
+msgid ""
+"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"middle mouse button click."
 msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1

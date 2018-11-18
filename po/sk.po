@@ -3,14 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Miroslav Sido <miro_redhawk@hotmail.com>, 2018
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Tibor Kaputa <tibbbi2@gmail.com>, 2018
+# Dušan Kazik <prescott66@gmail.com>, 2018
+# Erik Bročko <erik.brocko@letemsvetemapplem.eu>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-02 16:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Miroslav Sido <miro_redhawk@hotmail.com>, 2018\n"
+"POT-Creation-Date: 2018-08-27 15:50+0200\n"
+"PO-Revision-Date: 2018-03-11 16:44+0000\n"
+"Last-Translator: Erik Bročko <erik.brocko@letemsvetemapplem.eu>, 2018\n"
 "Language-Team: Slovak (https://www.transifex.com/mate/teams/13566/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -307,9 +315,9 @@ msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
-"Kliknite na túto jednotku palety pre jej zvolenie ako súčasná farba. Pre "
-"zvolenie tejto jednotky sem pritiahnite farebnú vzorku, alebo kliknite "
-"pravým tlačidlom a zvoľte „Uložiť sem farbu“."
+"Kliknite na túto položku palety pre jej zvolenie ako súčasnú farbu. Pre "
+"zvolenie tejto položky sem pritiahnite farebnú vzorku alebo na ňu kliknite "
+"pravým tlačidlom myši a zvoľte \"Uložiť sem farbu\"."
 
 #: ../libmate-desktop/mate-colorseldialog.c:99
 #: ../libmate-desktop/mate-colorseldialog.c:162
@@ -360,7 +368,7 @@ msgstr "Chyba pri presune v súbore „%s“: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3540
+#: ../libmate-desktop/mate-desktop-item.c:3546
 msgid "No name"
 msgstr "Bez mena"
 
@@ -379,32 +387,32 @@ msgstr "Nepodarilo sa nájsť súbor „%s“"
 msgid "No filename to save to"
 msgstr "Nezadaný názov súboru pre uloženie"
 
-#: ../libmate-desktop/mate-desktop-item.c:1842
+#: ../libmate-desktop/mate-desktop-item.c:1848
 #, c-format
 msgid "Starting %s"
 msgstr "Spúšťa sa %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2079
+#: ../libmate-desktop/mate-desktop-item.c:2085
 #, c-format
 msgid "No URL to launch"
 msgstr "Nezadané URL, ktoré sa má spustiť"
 
-#: ../libmate-desktop/mate-desktop-item.c:2095
+#: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Not a launchable item"
 msgstr "Nie je spustiteľnou položkou"
 
-#: ../libmate-desktop/mate-desktop-item.c:2105
+#: ../libmate-desktop/mate-desktop-item.c:2111
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Nezadaný príkaz (Exec), ktorý sa má spustiť"
 
-#: ../libmate-desktop/mate-desktop-item.c:2118
+#: ../libmate-desktop/mate-desktop-item.c:2124
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Neplatný príkaz (Exec), ktorý sa má spustiť"
 
-#: ../libmate-desktop/mate-desktop-item.c:3597
+#: ../libmate-desktop/mate-desktop-item.c:3603
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Neznáme kódovanie pre: %s"
@@ -415,28 +423,32 @@ msgstr ""
 "Nepodarilo sa nájsť terminál. Použije sa xterm aj napriek tomu, že nemusí "
 "fungovať"
 
+#: ../libmate-desktop/mate-languages.c:711
+msgid "Unspecified"
+msgstr "Nešpecifikované"
+
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:460
+#: ../libmate-desktop/mate-rr.c:461
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "nepodarilo sa získať zdroje obrazovky (CRTC, výstupy, režimy)"
 
-#: ../libmate-desktop/mate-rr.c:480
+#: ../libmate-desktop/mate-rr.c:482
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "neobslúžená chyba X pri získavaní rozsahu veľkostí obrazovky"
 
-#: ../libmate-desktop/mate-rr.c:486
+#: ../libmate-desktop/mate-rr.c:488
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "nepodarilo sa získať rozsah veľkostí obrazovky"
 
-#: ../libmate-desktop/mate-rr.c:704
+#: ../libmate-desktop/mate-rr.c:707
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "rozšírenie RANDR nie je prítomné"
 
-#: ../libmate-desktop/mate-rr.c:1257
+#: ../libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "nepodarilo sa získať informácie o výstupe %d"
@@ -444,7 +456,7 @@ msgstr "nepodarilo sa získať informácie o výstupe %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1738
+#: ../libmate-desktop/mate-rr.c:1747
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -453,12 +465,12 @@ msgstr ""
 "vyžiadaná poloha/veľkosť pre CRTC %d je mimo povolenú hranicu: poloha=(%d, "
 "%d), veľkosť=(%d, %d), maximum=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1772
+#: ../libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "nepodarilo sa nastaviť konfiguráciu pre CRTC %d"
 
-#: ../libmate-desktop/mate-rr.c:1936
+#: ../libmate-desktop/mate-rr.c:1946
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "nepodarilo sa získať informáciu o CRTC %d"
@@ -474,22 +486,22 @@ msgid ""
 msgstr ""
 "žiadna z uložených konfigurácií displeja nezodpovedá aktívnej konfigurácii"
 
-#: ../libmate-desktop/mate-rr-config.c:1486
+#: ../libmate-desktop/mate-rr-config.c:1488
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d nemôže obsluhovať výstup %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1493
+#: ../libmate-desktop/mate-rr-config.c:1495
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "výstup %s nepodporuje režim %dx%d@%dHz"
 
-#: ../libmate-desktop/mate-rr-config.c:1504
+#: ../libmate-desktop/mate-rr-config.c:1506
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d nepodporuje otočenie=%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1518
+#: ../libmate-desktop/mate-rr-config.c:1520
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -502,23 +514,23 @@ msgstr ""
 "existujúce súradnice = (%d, %d), nové súradnice = (%d, %d)\n"
 "existujúca otočenie = %s, nové otočenie = %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1533
+#: ../libmate-desktop/mate-rr-config.c:1535
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "nepodarilo sa klonovať na výstup %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1702
+#: ../libmate-desktop/mate-rr-config.c:1704
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Skúšanie režimov pre CRTC %d\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1726
+#: ../libmate-desktop/mate-rr-config.c:1728
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "CRTC %d: skúšanie režimu %dx%d@%dHz s výstupom %dx%d@%dHz (prechod %d)\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1773
+#: ../libmate-desktop/mate-rr-config.c:1775
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -527,7 +539,7 @@ msgstr ""
 "nepodarilo sa priradiť CRTC na výstupy:\n"
 "%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1777
+#: ../libmate-desktop/mate-rr-config.c:1779
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -539,7 +551,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1859
+#: ../libmate-desktop/mate-rr-config.c:1861
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -1182,7 +1194,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:67
 msgid "Window Scaling Factor"
-msgstr ""
+msgstr "Škálovací faktor okien"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:68
 msgid ""
@@ -1191,10 +1203,15 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Toto upravuje zväčšovací faktor GTK, ktorým sa prepočítavajú súradnice "
+"položiek na obrazovke na skutočné fyzické pixely zariadenia. Zvyčajne je "
+"táto hodnota nastavená na 1, ale na obrazovkách s veľmi vysokým rozlíšením "
+"je možné použiť vyššiu hodnotu (napr. 2). Nastavte na 0 pre automatickú "
+"detekciu."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:69
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "Škálovací faktor QT aplikácií"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:70
 msgid ""
@@ -1203,6 +1220,22 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Toto nastavenie určuje, či MATE ovláda zväčšovací faktor QT aplikácií. "
+"Povoľte pre synchronizáciu s GTK škálovacím faktorom pri načítaní sedenia, "
+"zakážte pre úpravu tejto hodnoty niekde inde. Je potrebný reštart vášho "
+"sedenia."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:71
+msgid "Enable the primary paste selection"
+msgstr "Povoliť vkladanie hlavného výberu"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:72
+msgid ""
+"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"middle mouse button click."
+msgstr ""
+"Ak je povolené, GTK+ vloží obsah hlavného výberu, zvyčajne stlačením "
+"stredného tlačidla myši."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
@@ -1385,8 +1418,8 @@ msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
 msgstr ""
-"Povolí emuláciu stredného tlačidla pomocou spoločného stlačenia ľavého a "
-"pravého tlačidla."
+"Povolí emuláciu stredného tlačidla myši pomocou súčasného stlačenia ľavého a"
+" pravého tlačidla."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
@@ -1492,21 +1525,21 @@ msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
 msgstr ""
-"Nastavte na TRUE, aby sa deaktivovali všetky externé programy na tvorbu "
-"náhľadov, nezávisle od toho, či sú jednotlivo zakázané/povolené."
+"Povoľte, aby sa deaktivovali všetky externé programy na tvorbu náhľadov, "
+"nezávisle od toho, či sú jednotlivo zakázané/povolené."
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
 msgstr ""
-"Zoznam typov Mime, pre ktoré budú zakázané externé programy pre tvorbu "
-"miniatúr."
+"Zoznam typov MIME, pre ktoré budú zakázané externé programy pre tvorbu "
+"miniatúr"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:4
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr "Miniatúry nebudú vytvárané pre súbory, ktorých Mime je v zozname."
+msgstr "Miniatúry nebudú vytvárané pre súbory, ktorých MIME je v zozname."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"

@@ -3,14 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Aputsiak Niels Janussen (Skjalden) <aj@isit.gl>, 2018
+# Allan Nordhøy <epost@anotheragency.no>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Joe Hansen <joedalton2@yahoo.dk>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-02 16:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>, 2018\n"
+"POT-Creation-Date: 2018-08-27 15:50+0200\n"
+"PO-Revision-Date: 2018-03-11 16:44+0000\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2018\n"
 "Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -365,7 +371,7 @@ msgstr "Fejl ved tilbagespoling af filen »%s«: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3540
+#: ../libmate-desktop/mate-desktop-item.c:3546
 msgid "No name"
 msgstr "Intet navn"
 
@@ -384,32 +390,32 @@ msgstr "Kan ikke finde filen »%s«"
 msgid "No filename to save to"
 msgstr "Intet filnavn at gemme som"
 
-#: ../libmate-desktop/mate-desktop-item.c:1842
+#: ../libmate-desktop/mate-desktop-item.c:1848
 #, c-format
 msgid "Starting %s"
 msgstr "Starter %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2079
+#: ../libmate-desktop/mate-desktop-item.c:2085
 #, c-format
 msgid "No URL to launch"
 msgstr "Ingen adresse at starte"
 
-#: ../libmate-desktop/mate-desktop-item.c:2095
+#: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Not a launchable item"
 msgstr "Ikke et kørbart element"
 
-#: ../libmate-desktop/mate-desktop-item.c:2105
+#: ../libmate-desktop/mate-desktop-item.c:2111
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "Ingen kommando (Exec) at starte"
 
-#: ../libmate-desktop/mate-desktop-item.c:2118
+#: ../libmate-desktop/mate-desktop-item.c:2124
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "Ugyldig startkommando (Exec)"
 
-#: ../libmate-desktop/mate-desktop-item.c:3597
+#: ../libmate-desktop/mate-desktop-item.c:3603
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Ukendt kodning af: %s"
@@ -418,28 +424,32 @@ msgstr "Ukendt kodning af: %s"
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "Kan ikke finde en terminal, bruger xterm selvom den måske ikke virker"
 
+#: ../libmate-desktop/mate-languages.c:711
+msgid "Unspecified"
+msgstr "Uspecificeret"
+
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:460
+#: ../libmate-desktop/mate-rr.c:461
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "kunne ikke hente skærmresourcerne (CRTC'er, uddataene, tilstandende)"
 
-#: ../libmate-desktop/mate-rr.c:480
+#: ../libmate-desktop/mate-rr.c:482
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "uhåndterbar X-fejl under hentning af tabeller til skærmstørrelser"
 
-#: ../libmate-desktop/mate-rr.c:486
+#: ../libmate-desktop/mate-rr.c:488
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "kunne ikke hente tabeller til skærmstørrelser"
 
-#: ../libmate-desktop/mate-rr.c:704
+#: ../libmate-desktop/mate-rr.c:707
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "RANDR-udvidelsen er ikke tilstede"
 
-#: ../libmate-desktop/mate-rr.c:1257
+#: ../libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "kunne ikke hente information om uddata %d"
@@ -447,7 +457,7 @@ msgstr "kunne ikke hente information om uddata %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1738
+#: ../libmate-desktop/mate-rr.c:1747
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -456,12 +466,12 @@ msgstr ""
 "anmodet placering/størrelse til CRTC %d er uden for de tilladte grænser: "
 "Position=(%d, %d), størrelse=(%d, %d), maksimum=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1772
+#: ../libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "kunne ikke sætte indstillinger til CRTC %d"
 
-#: ../libmate-desktop/mate-rr.c:1936
+#: ../libmate-desktop/mate-rr.c:1946
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "kunne ikke hente information om CRTC %d"
@@ -478,22 +488,22 @@ msgstr ""
 "ingen af de gemte skærmindstillinger stemmer overens med nuværende "
 "indstilling"
 
-#: ../libmate-desktop/mate-rr-config.c:1486
+#: ../libmate-desktop/mate-rr-config.c:1488
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d kan ikke drive output %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1493
+#: ../libmate-desktop/mate-rr-config.c:1495
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "output %s understøtter ikke tilstanden %dx%d@%dHz"
 
-#: ../libmate-desktop/mate-rr-config.c:1504
+#: ../libmate-desktop/mate-rr-config.c:1506
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d understøtter ikke rotation=%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1518
+#: ../libmate-desktop/mate-rr-config.c:1520
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -506,24 +516,24 @@ msgstr ""
 "eksisterende koordinater = (%d, %d), nye koordinater = (%d, %d)\n"
 "eksisterende rotation = %s, ny rotation = %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1533
+#: ../libmate-desktop/mate-rr-config.c:1535
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "kan ikke klone til output %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1702
+#: ../libmate-desktop/mate-rr-config.c:1704
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Prøver tilstande for CRTC %d\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1726
+#: ../libmate-desktop/mate-rr-config.c:1728
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "CRTC %d: prøver tilstand %dx%d@%dHz med output på %dx%d@%dHz (gennemløb "
 "%d)\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1773
+#: ../libmate-desktop/mate-rr-config.c:1775
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -532,7 +542,7 @@ msgstr ""
 "kunne ikke tildele CTRC'er til output:\n"
 "%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1777
+#: ../libmate-desktop/mate-rr-config.c:1779
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -544,7 +554,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1859
+#: ../libmate-desktop/mate-rr-config.c:1861
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -1225,6 +1235,18 @@ msgstr ""
 "programmer. Aktiver for at synkronisere med GTK-skaleringsfaktoren når "
 "sessionen initialiseres, deaktiver for at kontrollere denne værdi et andet "
 "sted. Kræver at din session genstartes."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:71
+msgid "Enable the primary paste selection"
+msgstr "Aktiver den primære indsæt-markering"
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:72
+msgid ""
+"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"middle mouse button click."
+msgstr ""
+"Hvis sand (true) bruger gtk+ den prime indsæt-markering, normalt udløst af "
+"et klik med midterste museknap."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

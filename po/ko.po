@@ -3,13 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Alan Lee <bkrhlim@aol.com>, 2018
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2018
+# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-02 16:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-08-27 15:50+0200\n"
+"PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -343,7 +349,7 @@ msgstr "'%s' 파일을 뒤로 감는 데 오류 발생: %s"
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
 #: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3540
+#: ../libmate-desktop/mate-desktop-item.c:3546
 msgid "No name"
 msgstr "이름 없음"
 
@@ -362,32 +368,32 @@ msgstr "'%s' 파일을 찾을 수 없습니다"
 msgid "No filename to save to"
 msgstr "저장할 파일 이름이 없습니다"
 
-#: ../libmate-desktop/mate-desktop-item.c:1842
+#: ../libmate-desktop/mate-desktop-item.c:1848
 #, c-format
 msgid "Starting %s"
 msgstr "%s 시작"
 
-#: ../libmate-desktop/mate-desktop-item.c:2079
+#: ../libmate-desktop/mate-desktop-item.c:2085
 #, c-format
 msgid "No URL to launch"
 msgstr "실행할 URL이 없습니다"
 
-#: ../libmate-desktop/mate-desktop-item.c:2095
+#: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Not a launchable item"
 msgstr "실행할 수 있는 항목이 없습니다"
 
-#: ../libmate-desktop/mate-desktop-item.c:2105
+#: ../libmate-desktop/mate-desktop-item.c:2111
 #, c-format
 msgid "No command (Exec) to launch"
 msgstr "실행할 명령이 없습니다"
 
-#: ../libmate-desktop/mate-desktop-item.c:2118
+#: ../libmate-desktop/mate-desktop-item.c:2124
 #, c-format
 msgid "Bad command (Exec) to launch"
 msgstr "실행할 수 있는 명령이 잘못되었습니다"
 
-#: ../libmate-desktop/mate-desktop-item.c:3597
+#: ../libmate-desktop/mate-desktop-item.c:3603
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "알 수 없는 인코딩: %s"
@@ -396,28 +402,32 @@ msgstr "알 수 없는 인코딩: %s"
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr "터미널을 찾을 수  없어  xterm이 작동하지 않더라도 사용합니다"
 
+#: ../libmate-desktop/mate-languages.c:711
+msgid "Unspecified"
+msgstr "지정 안함"
+
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:460
+#: ../libmate-desktop/mate-rr.c:461
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "화면 정보를 읽어 올 수 없습니다 (CRTC, 출력, 모드)"
 
-#: ../libmate-desktop/mate-rr.c:480
+#: ../libmate-desktop/mate-rr.c:482
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "스크린 크기의 범위를 가져오는 데 처리하지 못하는 X 오류가 발생했습니다"
 
-#: ../libmate-desktop/mate-rr.c:486
+#: ../libmate-desktop/mate-rr.c:488
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "화면 크기 범위를  읽어 올 수 없습니다"
 
-#: ../libmate-desktop/mate-rr.c:704
+#: ../libmate-desktop/mate-rr.c:707
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "RANDR 확장 기능이 없습니다"
 
-#: ../libmate-desktop/mate-rr.c:1257
+#: ../libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "출력 %d번에 대한 정보를 읽어 올 수 없습니다"
@@ -425,7 +435,7 @@ msgstr "출력 %d번에 대한 정보를 읽어 올 수 없습니다"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1738
+#: ../libmate-desktop/mate-rr.c:1747
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -434,12 +444,12 @@ msgstr ""
 "CRTC %d번의 요청한 위치/크기가 허용하는 크기 제한을 넘어갑니다. 위치=(%d, %d), 크기=(%d, %d), 최대=(%d, "
 "%d)"
 
-#: ../libmate-desktop/mate-rr.c:1772
+#: ../libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "CRTC %d번을 설정할 수 없습니다"
 
-#: ../libmate-desktop/mate-rr.c:1936
+#: ../libmate-desktop/mate-rr.c:1946
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "CRTC %d번에 대한 정보를 읽어 올 수 없습니다"
@@ -454,22 +464,22 @@ msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "저장한 화면 설정은 사용 가능한 설정 중에 일치하는 설정이 없습니다."
 
-#: ../libmate-desktop/mate-rr-config.c:1486
+#: ../libmate-desktop/mate-rr-config.c:1488
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d번은 %s 출력을 할 수 없습니다"
 
-#: ../libmate-desktop/mate-rr-config.c:1493
+#: ../libmate-desktop/mate-rr-config.c:1495
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "%s 출력은 %dx%d@%dHz 모드를 지원하지 않습니다"
 
-#: ../libmate-desktop/mate-rr-config.c:1504
+#: ../libmate-desktop/mate-rr-config.c:1506
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d번은 %s 회전을 지원하지 않습니다"
 
-#: ../libmate-desktop/mate-rr-config.c:1518
+#: ../libmate-desktop/mate-rr-config.c:1520
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -482,22 +492,22 @@ msgstr ""
 "현재 좌표 = (%d, %d), 새 좌표 = (%d, %d)\n"
 "현재 회전 = %s, 새 회전 = %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1533
+#: ../libmate-desktop/mate-rr-config.c:1535
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "%s 출력에 복사할 수 없습니다"
 
-#: ../libmate-desktop/mate-rr-config.c:1702
+#: ../libmate-desktop/mate-rr-config.c:1704
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "CRTC %d번에 화면 모드 시도\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1726
+#: ../libmate-desktop/mate-rr-config.c:1728
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr "CRTC %d: %dx%d@%dHz 모드를 %dx%d@%dHz 출력에 시도 (패스 %d)\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1773
+#: ../libmate-desktop/mate-rr-config.c:1775
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -506,7 +516,7 @@ msgstr ""
 "CRTC를 출력에 할당할 수 없습니다:\n"
 "%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1777
+#: ../libmate-desktop/mate-rr-config.c:1779
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -518,7 +528,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1859
+#: ../libmate-desktop/mate-rr-config.c:1861
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -1120,10 +1130,12 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"이것은 GTK 스케일 팩터를 조절해서 창의 위치를 실제 장치의 픽셀에 맞춥니다. 일반적인 시스템에선 1이지만, 고밀도 디스플레이 (예: "
+"HiDPI, 레티나)에서는 더 높은 값일 수 있습니다 (대부분 2). 0으로 맞추면 자동으로 감지합니다."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:69
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "QT 애플리케이션용 스케일링 팩터"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:70
 msgid ""
@@ -1131,6 +1143,18 @@ msgid ""
 "applications. Enable to synchronize with the GTK scale factor when "
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
+msgstr ""
+"이 설정은 마테가 QT 애플리케이션용 스케일 팩터를 조절할지를 결정합니다. 세션을 시작할 때 GTK 스케일 팩터와 동기화할 수 있게 "
+"하고, 다른 곳에서는 조절할 수 없도록 하세요. 세션을 다시 시작해야 합니다."
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:71
+msgid "Enable the primary paste selection"
+msgstr ""
+
+#: ../schemas/org.mate.interface.gschema.xml.in.h:72
+msgid ""
+"If true, gtk+ uses the primary paste selection, usually triggered by a "
+"middle mouse button click."
 msgstr ""
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
