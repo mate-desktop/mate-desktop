@@ -4,6 +4,7 @@ desktop_gschemas_in = \
 	org.mate.applications-at-mobility.gschema.xml.in \
 	org.mate.applications-at-visual.gschema.xml.in \
 	org.mate.applications-browser.gschema.xml.in \
+	org.mate.applications-calculator.gschema.xml.in \
 	org.mate.applications-office.gschema.xml.in \
 	org.mate.applications-terminal.gschema.xml.in \
 	org.mate.background.gschema.xml.in \
