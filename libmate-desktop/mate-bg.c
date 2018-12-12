@@ -1129,7 +1129,7 @@ mate_bg_get_pixmap_size (MateBG   *bg,
  * @height:
  * @root:
  *
- * Create a surface that can be set as background for @window. If @is_root is
+ * Create a surface that can be set as background for @window. If @root is
  * TRUE, the surface created will be created by a temporary X server connection
  * so that if someone calls XKillClient on it, it won't affect the application
  * who created it.
@@ -1150,7 +1150,7 @@ mate_bg_create_surface (MateBG      *bg,
 }
 
 /**
- * mate_bg_create_surface:
+ * mate_bg_create_surface_scale:
  * @bg: MateBG
  * @window:
  * @width:
@@ -1158,7 +1158,7 @@ mate_bg_create_surface (MateBG      *bg,
  * @scale:
  * @root:
  *
- * Create a scaled surface that can be set as background for @window. If @is_root is
+ * Create a scaled surface that can be set as background for @window. If @root is
  * TRUE, the surface created will be created by a temporary X server connection
  * so that if someone calls XKillClient on it, it won't affect the application
  * who created it.
