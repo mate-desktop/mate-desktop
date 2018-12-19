@@ -7,7 +7,8 @@ endif
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 DISTCHECK_CONFIGURE_FLAGS = \
-	--enable-gtk-doc
+	--enable-gtk-doc \
+	CFLAGS='-Wno-deprecated-declarations'
 
 if MATE_ABOUT_ENABLED
 versiondir = $(datadir)/mate-about
