@@ -3,14 +3,31 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Felipe Rozelio <feliperozelio@gmail.com>, 2018
+# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2018
+# Allan Richardson <luke.downhill@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2018
+# Marcio Andre Padula <padula1000@gmail.com>, 2018
+# Marcus Vinícius Marques, 2018
+# Victor Gonçalves <hotcyv@gmail.com>, 2018
+# Lucas Mezêncio <lucas.mezencio@gmail.com>, 2018
+# 642cf48d39bca7f9ad9d185d4bcea8c8, 2018
+# Roger Araújo <roger.rf@gmail.com>, 2018
+# Jonatas da Silva Teixeira <jonatasteixeira@id.uff.br>, 2018
+# Halan Germano Bacca <halangermano@hotmail.com.br>, 2018
+# Lucas Dias <lucasdiaas@outlook.com>, 2018
+# 58fae44c6c4ff84516f8c8656a7fb14d, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 11:17+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Halan Germano Bacca <halangermano@hotmail.com.br>, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:41+0000\n"
+"Last-Translator: 58fae44c6c4ff84516f8c8656a7fb14d, 2018\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1236,10 +1253,15 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Controla o fator de escala do motor GTK mapeando as coordenadas das janelas "
+"para a quantidade de pixels do seu dispositivo. Em sistemas tradicionais "
+"esse fator é 1, já em telas de alta densidade de pixels (Ex.: HiDPI, Retina)"
+" pode ser um valor maior (muitas vezes 2). Use o valor 0 para detectar "
+"automaticamente o fator."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:69
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "Fator de Escala para aplicações QT"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:70
 msgid ""
@@ -1248,6 +1270,10 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Essa configuração determina quando o MATE controla a escala para aplicações "
+"QT. Ative para sincronizar com o fator de escala do GTK quando inicializar a"
+" sessão, desabilite para controlar esse valor em outro lugar. Requer "
+"reinicializar a sessão."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

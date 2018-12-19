@@ -3,14 +3,25 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Takler Tamás <taklertamas@gmail.com>, 2018
+# István Nagy <kisbela@gmail.com>, 2018
+# Zoltán Rápolthy <real_zolee@hotmail.com>, 2018
+# Rezső Páder <rezso@rezso.net>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Nagy Gábor <jackson.gabor@gmail.com>, 2018
+# Falu <info@falu.me>, 2018
+# KAMI KAMI <kami911@gmail.com>, 2018
+# Balázs Meskó <meskobalazs@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 11:17+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Zoltán Rápolthy <real_zolee@hotmail.com>, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:41+0000\n"
+"Last-Translator: Balázs Meskó <meskobalazs@gmail.com>, 2018\n"
 "Language-Team: Hungarian (https://www.transifex.com/mate/teams/13566/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1213,10 +1224,14 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"GTK méretezési tényező, amely leképezi az ablak koordinátáit a tényleges "
+"eszköz képpontjaira. Hagyományos rendszereken az értéke 1, de nagy "
+"felbontású kijelzőkön (példáu:l HiDPI, Retina) ez magasabb érték is lehet "
+"(gyakran 2). Állítsa 0-ra az automatikus észleléshez."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:69
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "QT alkalmazások méretezési tényezője"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:70
 msgid ""
@@ -1225,6 +1240,10 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Ez a beállítás meghatározza, hogy a MATE vezérli-e a QT alkalmazások "
+"méretezési tényezőjét. Kapcsolja be a GTK méretezési aránnyal történő "
+"szinkronizációhoz a munkamenet indításakor, kapcsolja ki, ha máshol állítja "
+"ezt az értéket. A munkamenet újraindítását igényli."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

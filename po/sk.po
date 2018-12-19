@@ -3,14 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Miroslav Sido <miro_redhawk@hotmail.com>, 2018
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2018
+# Dušan Kazik <prescott66@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Tibor Kaputa <tibbbi2@gmail.com>, 2018
+# Erik Bročko <erik.brocko@letemsvetemapplem.eu>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 11:17+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Miroslav Sido <miro_redhawk@hotmail.com>, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:41+0000\n"
+"Last-Translator: Erik Bročko <erik.brocko@letemsvetemapplem.eu>, 2018\n"
 "Language-Team: Slovak (https://www.transifex.com/mate/teams/13566/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1182,7 +1190,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:67
 msgid "Window Scaling Factor"
-msgstr ""
+msgstr "Škálovací faktor okien"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:68
 msgid ""
@@ -1191,10 +1199,15 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Toto upravuje zväčšovací faktor GTK, ktorým sa prepočítavajú súradnice "
+"položiek na obrazovke na skutočné fyzické pixely zariadenia. Zvyčajne je "
+"táto hodnota nastavená na 1, ale na obrazovkách s veľmi vysokým rozlíšením "
+"(HiDPI, Retina) je možné použiť vyššiu hodnotu (napr. 2). Nastavte na 0 pre "
+"automatickú detekciu."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:69
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "Škálovací faktor QT aplikácií"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:70
 msgid ""
@@ -1203,6 +1216,10 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Toto nastavenie určuje, či MATE ovláda zväčšovací faktor QT aplikácií. "
+"Povoľte pre synchronizáciu s GTK škálovacím faktorom pri načítaní sedenia, "
+"zakážte pre úpravu tejto hodnoty niekde inde. Je potrebný reštart vášho "
+"sedenia."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
@@ -1385,8 +1402,8 @@ msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
 msgstr ""
-"Povolí emuláciu stredného tlačidla pomocou spoločného stlačenia ľavého a "
-"pravého tlačidla."
+"Povolí emuláciu stredného tlačidla myši pomocou súčasného stlačenia ľavého a"
+" pravého tlačidla."
 
 #: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
 msgid "Locate Pointer"
@@ -1499,14 +1516,14 @@ msgstr ""
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
 msgstr ""
-"Zoznam typov Mime, pre ktoré budú zakázané externé programy pre tvorbu "
-"miniatúr."
+"Zoznam typov MIME, pre ktoré budú zakázané externé programy pre tvorbu "
+"miniatúr"
 
 #: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:4
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr "Miniatúry nebudú vytvárané pre súbory, ktorých Mime je v zozname."
+msgstr "Miniatúry nebudú vytvárané pre súbory, ktorých MIME je v zozname."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
 msgid "Type time"

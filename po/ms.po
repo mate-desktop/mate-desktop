@@ -3,14 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# abuyop <abuyop@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 11:17+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:41+0000\n"
+"Last-Translator: abuyop <abuyop@gmail.com>, 2018\n"
 "Language-Team: Malay (https://www.transifex.com/mate/teams/13566/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1194,10 +1198,14 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Faktor skala GTK yang dipeta dari koordinat tetingkap sehingga ke piksel "
+"peranti yang sebenar. Pada sistem tradisional nilainya 1, tetapi pada "
+"paparan berketumpatan sangat tinggi (seperti HiDPI, Retina) ia boleh "
+"mencapai nilai lebih tinggi (biasannya 2). Tetapkan pada 0 untuk auto-kesan."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:69
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "Faktor Penskalaan untuk aplikasi QT"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:70
 msgid ""
@@ -1206,6 +1214,10 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Tetapan ini menentukan sama ada MATE mengawal faktor skala untuk aplikasi "
+"QT. Benarkan untuk disegerakkan dengan faktor skala GTK ketika mengawalkan "
+"sesi, lumpuhkan untuk kawal nilai ini di tempat lain. Perlu memulakan semula"
+" sesi anda."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

@@ -3,13 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Alan Lee <bkrhlim@aol.com>, 2018
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2018
+# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 11:17+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-03-11 16:41+0000\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -1120,10 +1126,12 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"이것은 GTK 스케일 팩터를 조절해서 창의 위치를 실제 장치의 픽셀에 맞춥니다. 일반적인 시스템에선 1이지만, 고밀도 디스플레이 (예: "
+"HiDPI, 레티나)에서는 더 높은 값일 수 있습니다 (대부분 2). 0으로 맞추면 자동으로 감지합니다."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:69
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "QT 애플리케이션용 스케일링 팩터"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:70
 msgid ""
@@ -1132,6 +1140,8 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"이 설정은 마테가 QT 애플리케이션용 스케일 팩터를 조절할지를 결정합니다. 세션을 시작할 때 GTK 스케일 팩터와 동기화할 수 있게 "
+"하고, 다른 곳에서는 조절할 수 없도록 하세요. 세션을 다시 시작해야 합니다."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

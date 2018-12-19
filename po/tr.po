@@ -3,14 +3,25 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Umut Barış GÖKMEN <umtbrsgkmn@gmail.com>, 2018
+# Murat Servan Kahraman, 2018
+# tarakbumba <tarakbumba@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Emre FIRAT <emrefirat93@gmail.com>, 2018
+# Mehmet, 2018
+# Butterfly <gokhanlnx@gmail.com>, 2018
+# mauron, 2018
+# yaşar çiv <yasarciv67@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 11:17+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Mehmet, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:41+0000\n"
+"Last-Translator: yaşar çiv <yasarciv67@gmail.com>, 2018\n"
 "Language-Team: Turkish (https://www.transifex.com/mate/teams/13566/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,8 +85,8 @@ msgid ""
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE, GNOME 2 Masaüstü' nün devamıdır. GNOME 1997 yılında başladığından beri"
-" yüzlerce kişi kodlamaya katkıda bulunmuştur. Çevirmenler, belgelendirme "
+"MATE, GNOME 2 Masaüstü'nün devamıdır. GNOME 1997 yılında başladığından beri "
+"yüzlerce kişi kodlamaya katkıda bulunmuştur. Çevirmenler, belgelendirme "
 "yapanlar ve kalite denetimi yapanlar da dahil olmak üzere, bir çoğu başka "
 "önemli şekillerde katkıda bulunmuştur."
 
@@ -1209,10 +1220,14 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Bu, pencere koordinatlarından gerçek cihaz piksellerine eşlenen GTK ölçek "
+"faktörünü kontrol eder. Geleneksel sistemlerde bu 1'dir, ancak çok yüksek "
+"yoğunluklu ekranlarda (örneğin, HiDPI, Retina) bu daha yüksek bir değer "
+"olabilir (genellikle 2). Otomatik algılamak için 0'a ayarlayın."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:69
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "QT uygulamaları için Ölçeklendirme Faktörü"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:70
 msgid ""
@@ -1221,6 +1236,10 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Bu ayar, MATE'nin QT uygulamaları için ölçek faktörünü kontrol edip "
+"etmediğini belirler. Oturumu başlatırken GTK ölçek faktörü ile senkronize "
+"etmeyi etkinleştir, bu değeri başka bir yerde kontrol etmek için devre dışı "
+"bırakın. Oturumunuzu yeniden başlatmayı gerektirir."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

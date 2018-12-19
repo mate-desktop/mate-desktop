@@ -3,14 +3,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Tim Schulz <timschulz1998@yahoo.de>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Ettore Atalan <atalanttore@googlemail.com>, 2018
+# Maria Kor <korda.maria@gmail.com>, 2018
+# Tobias Bannert <tobannert@gmail.com>, 2018
+# Christian Spaan, 2018
+# Moritz Bruder <muesli4@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 11:17+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Maria Kor <korda.maria@gmail.com>, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:41+0000\n"
+"Last-Translator: Moritz Bruder <muesli4@gmail.com>, 2018\n"
 "Language-Team: German (https://www.transifex.com/mate/teams/13566/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1235,10 +1244,15 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Interner Skalierungsfaktor, der von den Fensterkoordinaten auf die "
+"tatsächlichen Gerätepixel abbildet. Bei herkömmlichen Systemen ist der Wert "
+"1, bei Bildschirmen mit sehr hoher Dichte (z.B. HiDPI, Retina) kann es ein "
+"höherer Wert sein (oftmals 2). Auf 0 stellen, um den Skalierungsfaktor "
+"automatisch zu erkennen."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:69
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "Vergrößerungsfaktor für QT Anwendungen"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:70
 msgid ""
@@ -1247,6 +1261,10 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Legt fest ob MATE den Skalierungsfaktor für QT-Applikationen steuert. "
+"Aktivieren um bei der Initialisierung der Sitzung den GTK-Skalierungsfaktor "
+"zu synchronisieren, deaktivieren um den Wert anderweitig festzulegen. "
+"Benötigt einen Neustart der Sitzung."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

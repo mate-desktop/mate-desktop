@@ -3,14 +3,28 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# 775405984, 2018
+# Wylmer Wang, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# liulitchi <xingzuo88@qq.com>, 2018
+# nyanyh <rebuilty@gmail.com>, 2018
+# Cravix <dr.neemous@gmail.com>, 2018
+# 玉堂白鹤 <yjwork@qq.com>, 2018
+# Mingcong Bai <jeffbai@aosc.xyz>, 2018
+# liushuyu011 <liushuyu011@gmail.com>, 2018
+# Mingye Wang <arthur200126@gmail.com>, 2018
+# zhangxianwei8 <zhang.xianwei8@zte.com.cn>, 2018
+# biqiu-ssw <shenshuaiwen@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 11:17+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: zhangxianwei8 <zhang.xianwei8@zte.com.cn>, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:41+0000\n"
+"Last-Translator: biqiu-ssw <shenshuaiwen@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +46,8 @@ msgstr ""
 "玉堂白鹤 <yjwork@qq.com>, 2015\n"
 "Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
 "白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
-"刘子兴 <liushuyu@aosc.xyz>, 2015-2016"
+"刘子兴 <liushuyu@aosc.xyz>, 2015-2016\n"
+"比丘<shenshuaiwen@gmail.com>,2018-2019"
 
 #: ../mate-about/mate-about.desktop.in.in.h:1
 msgid "About MATE"
@@ -1112,10 +1127,12 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"从窗口坐标映射到实际设备像素的 GTK 缩放因子。 "
+"在传统系统中的值是1，但在非常高密度的显示器上（例如HiDPI，Retina）的值可能更高（通常为2）。设置为0以自动检测。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:69
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "QT 应用的比例缩放因子"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:70
 msgid ""
@@ -1124,6 +1141,8 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"此设置决定是否要 MATE 控制 QT 应用程序的缩放比例因子。在初始化会话时会与 GTK "
+"缩放因子同步，禁止在其他位置控制此值。需要重新启动会话应用更改。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

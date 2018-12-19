@@ -3,14 +3,29 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2018
+# alfalb_mansil, 2018
+# Sérgio Marques <smarquespt@gmail.com>, 2018
+# Carlos Moreira, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# ogalho Carlos Dias Martins <ogalho@gmail.com>, 2018
+# Diogo Oliveira <diogodesigns@gmail.com>, 2018
+# Luis Filipe Teixeira <lufilte@gmail.com>, 2018
+# Mateus Pinho <mateusleitepinho@gmail.com>, 2018
+# MS <manuelarodsilva@gmail.com>, 2018
+# Manel Tinoco <maneltinoco@gmail.com>, 2018
+# José Vieira <jvieira33@sapo.pt>, 2018
+# Rui <xymarior@yandex.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 11:17+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: José Vieira <jvieira33@sapo.pt>, 2018\n"
+"PO-Revision-Date: 2018-03-11 16:41+0000\n"
+"Last-Translator: Rui <xymarior@yandex.com>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/mate/teams/13566/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1123,7 +1138,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:57
 msgid "Show the 'Unicode Control Character' menu"
-msgstr "Mostrar o menu 'Inserir caracter de controlo Unicode'"
+msgstr "Mostrar o menu 'Inserir caractere de controlo Unicode'"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:58
 msgid ""
@@ -1199,7 +1214,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:67
 msgid "Window Scaling Factor"
-msgstr ""
+msgstr "Fator de Dimensionamento da Janela"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:68
 msgid ""
@@ -1208,10 +1223,14 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Isto controla o fator de escala GTK que mapeia as coordenadas da janela aos "
+"píxeis atuais do dispositivo. Em sistemas tradicionais esta definição é 1, "
+"mas em ecrãs de alta densidade (por ex. HiDPI, Retina) pode ser um valor "
+"maior (muitas vezes 2). Use 0 para detetar automaticamente."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:69
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "Fator de Escala para aplicações QT"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:70
 msgid ""
@@ -1220,6 +1239,10 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Esta definição determina se o MATE controla o fator de escala para "
+"aplicações QT. Ative para sincronizar com o fator de escala GTK ao "
+"inicializar a sessão. Desative para controlar este valor noutro local. "
+"Necessita de reiniciar a sessão."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
@@ -1558,7 +1581,7 @@ msgstr "Permitir adiar intervalos"
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
 msgid "Whether or not the typing break screen can be postponed."
-msgstr "Define se se deve ou não permitir adiar o écrã de intervalo."
+msgstr "Define se se deve ou não permitir adiar o ecrã de intervalo."
 
 #: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
 msgid "Whether or not keyboard locking is enabled"
