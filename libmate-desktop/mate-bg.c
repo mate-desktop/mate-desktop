@@ -304,6 +304,7 @@ mate_bg_load_from_system_gsettings (MateBG    *bg,
 				    GSettings *settings,
 				    gboolean   reset_apply)
 {
+	GSettingsSchema *schema;
 	gchar **keys;
 	gchar **k;
 
@@ -312,9 +313,12 @@ mate_bg_load_from_system_gsettings (MateBG    *bg,
 
 	g_settings_delay (settings);
 
-	keys = g_settings_list_keys (settings);
-		for (k = keys; *k; k++) {
-			g_settings_reset (settings, *k);
+	g_object_get (settings, "settings-schema", &schema, NULL);
+	keys = g_settings_schema_list_keys (schema);
+	g_settings_schema_unref (schema);
+
+	for (k = keys; *k; k++) {
+		g_settings_reset (settings, *k);
 	}
 	g_strfreev (keys);
 
