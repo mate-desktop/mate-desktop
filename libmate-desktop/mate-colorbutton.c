@@ -44,8 +44,6 @@
 #define CHECK_DARK  (1.0 / 3.0)
 #define CHECK_LIGHT (2.0 / 3.0)
 
-#define MATE_COLOR_BUTTON_GET_PRIVATE(obj) (G_TYPE_INSTANCE_GET_PRIVATE ((obj), MATE_TYPE_COLOR_BUTTON, MateColorButtonPrivate))
-
 struct _MateColorButtonPrivate 
 {
   GtkWidget *draw_area; /* Widget where we draw the color sample */
@@ -120,7 +118,7 @@ static guint color_button_signals[LAST_SIGNAL] = { 0 };
 
 static const GtkTargetEntry drop_types[] = { { "application/x-color", 0, 0 } };
 
-G_DEFINE_TYPE (MateColorButton, mate_color_button, GTK_TYPE_BUTTON)
+G_DEFINE_TYPE_WITH_PRIVATE (MateColorButton, mate_color_button, GTK_TYPE_BUTTON)
 
 static void
 mate_color_button_class_init (MateColorButtonClass *klass)
@@ -222,8 +220,6 @@ mate_color_button_class_init (MateColorButtonClass *klass)
 						  NULL, NULL,
 						  g_cclosure_marshal_VOID__VOID,
 						  G_TYPE_NONE, 0);
-
-  g_type_class_add_private (gobject_class, sizeof (MateColorButtonPrivate));
 }
 
 static gboolean
@@ -414,7 +410,7 @@ mate_color_button_init (MateColorButton *color_button)
   _mate_desktop_init_i18n ();
 
   /* Create the widgets */
-  color_button->priv = MATE_COLOR_BUTTON_GET_PRIVATE (color_button);
+  color_button->priv = mate_color_button_get_instance_private (color_button);
 
   alignment = gtk_alignment_new (0.5, 0.5, 0.5, 1.0);
   gtk_container_set_border_width (GTK_CONTAINER (alignment), 1);
