@@ -167,7 +167,8 @@ static void mate_rr_screen_get_property (GObject*, guint, GValue*, GParamSpec*);
 static gboolean mate_rr_screen_initable_init (GInitable*, GCancellable*, GError**);
 static void mate_rr_screen_initable_iface_init (GInitableIface *iface);
 G_DEFINE_TYPE_WITH_CODE (MateRRScreen, mate_rr_screen, G_TYPE_OBJECT,
-    G_IMPLEMENT_INTERFACE (G_TYPE_INITABLE, mate_rr_screen_initable_iface_init))
+                         G_ADD_PRIVATE(MateRRScreen)
+                         G_IMPLEMENT_INTERFACE (G_TYPE_INITABLE, mate_rr_screen_initable_iface_init))
 
 G_DEFINE_BOXED_TYPE (MateRRCrtc, mate_rr_crtc, crtc_copy, crtc_free)
 G_DEFINE_BOXED_TYPE (MateRROutput, mate_rr_output, output_copy, output_free)
@@ -774,7 +775,6 @@ void
 mate_rr_screen_class_init (MateRRScreenClass *klass)
 {
     GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-    g_type_class_add_private (klass, sizeof (MateRRScreenPrivate));
 
     gobject_class->set_property = mate_rr_screen_set_property;
     gobject_class->get_property = mate_rr_screen_get_property;
@@ -805,7 +805,7 @@ mate_rr_screen_class_init (MateRRScreenClass *klass)
 void
 mate_rr_screen_init (MateRRScreen *self)
 {
-    MateRRScreenPrivate *priv = G_TYPE_INSTANCE_GET_PRIVATE (self, MATE_TYPE_RR_SCREEN, MateRRScreenPrivate);
+    MateRRScreenPrivate *priv = mate_rr_screen_get_instance_private (self);
     self->priv = priv;
 
     priv->gdk_screen = NULL;

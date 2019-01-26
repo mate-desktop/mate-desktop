@@ -91,7 +91,7 @@ enum {
   PROP_LAST
 };
 
-G_DEFINE_TYPE (MateRRConfig, mate_rr_config, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (MateRRConfig, mate_rr_config, G_TYPE_OBJECT)
 
 typedef struct Parser Parser;
 
@@ -449,7 +449,7 @@ out:
 static void
 mate_rr_config_init (MateRRConfig *self)
 {
-    self->priv = G_TYPE_INSTANCE_GET_PRIVATE (self, MATE_TYPE_RR_CONFIG, MateRRConfigPrivate);
+    self->priv = mate_rr_config_get_instance_private (self);
 
     self->priv->clone = FALSE;
     self->priv->screen = NULL;
@@ -721,8 +721,6 @@ static void
 mate_rr_config_class_init (MateRRConfigClass *klass)
 {
     GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-
-    g_type_class_add_private (klass, sizeof (MateRROutputInfoPrivate));
 
     gobject_class->set_property = mate_rr_config_set_property;
     gobject_class->finalize = mate_rr_config_finalize;
