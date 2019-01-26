@@ -66,10 +66,7 @@ enum {
 
 static guint signals[NUMBER_OF_SIGNALS] = { 0 };
 
-G_DEFINE_TYPE (MateBGCrossfade, mate_bg_crossfade, G_TYPE_OBJECT)
-#define MATE_BG_CROSSFADE_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o),\
-			                   MATE_TYPE_BG_CROSSFADE,\
-			                   MateBGCrossfadePrivate))
+G_DEFINE_TYPE_WITH_PRIVATE (MateBGCrossfade, mate_bg_crossfade, G_TYPE_OBJECT)
 
 static void
 mate_bg_crossfade_set_property (GObject      *object,
@@ -201,14 +198,12 @@ mate_bg_crossfade_class_init (MateBGCrossfadeClass *fade_class)
 					  G_SIGNAL_RUN_LAST, 0, NULL, NULL,
 					  g_cclosure_marshal_VOID__OBJECT,
 					  G_TYPE_NONE, 1, G_TYPE_OBJECT);
-
-	g_type_class_add_private (gobject_class, sizeof (MateBGCrossfadePrivate));
 }
 
 static void
 mate_bg_crossfade_init (MateBGCrossfade *fade)
 {
-	fade->priv = MATE_BG_CROSSFADE_GET_PRIVATE (fade);
+	fade->priv = mate_bg_crossfade_get_instance_private (fade);
 
 	fade->priv->window = NULL;
 	fade->priv->widget = NULL;

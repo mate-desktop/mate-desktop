@@ -67,13 +67,10 @@ static const char *appname = "mate-thumbnail-factory";
 static void mate_desktop_thumbnail_factory_init          (MateDesktopThumbnailFactory      *factory);
 static void mate_desktop_thumbnail_factory_class_init    (MateDesktopThumbnailFactoryClass *class);
 
-G_DEFINE_TYPE (MateDesktopThumbnailFactory,
+G_DEFINE_TYPE_WITH_PRIVATE (MateDesktopThumbnailFactory,
 	       mate_desktop_thumbnail_factory,
 	       G_TYPE_OBJECT)
 #define parent_class mate_desktop_thumbnail_factory_parent_class
-
-#define MATE_DESKTOP_THUMBNAIL_FACTORY_GET_PRIVATE(object) \
-  (G_TYPE_INSTANCE_GET_PRIVATE ((object), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactoryPrivate))
 
 typedef struct {
     gint width;
@@ -777,7 +774,7 @@ mate_desktop_thumbnail_factory_init (MateDesktopThumbnailFactory *factory)
 {
   MateDesktopThumbnailFactoryPrivate *priv;
   
-  factory->priv = MATE_DESKTOP_THUMBNAIL_FACTORY_GET_PRIVATE (factory);
+  factory->priv = mate_desktop_thumbnail_factory_get_instance_private (factory);
 
   priv = factory->priv;
 
@@ -816,8 +813,6 @@ mate_desktop_thumbnail_factory_class_init (MateDesktopThumbnailFactoryClass *cla
   gobject_class = G_OBJECT_CLASS (class);
 	
   gobject_class->finalize = mate_desktop_thumbnail_factory_finalize;
-
-  g_type_class_add_private (class, sizeof (MateDesktopThumbnailFactoryPrivate));
 }
 
 /**
