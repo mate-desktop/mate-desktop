@@ -89,7 +89,7 @@ enum {
   COLORSEL_NUM_CHANNELS
 };
 
-struct _ColorSelectionPrivate
+struct _MateColorSelectionPrivate
 {
   guint has_opacity : 1;
   guint has_palette : 1;
@@ -164,7 +164,7 @@ static void     default_change_palette_func             (GdkScreen	   *screen,
 static void     make_control_relations                  (AtkObject         *atk_obj,
                                                          GtkWidget         *widget);
 static void     make_all_relations                      (AtkObject         *atk_obj,
-                                                         ColorSelectionPrivate *priv);
+                                                         MateColorSelectionPrivate *priv);
 
 static void 	hsv_changed                             (GtkWidget         *hsv,
 							 gpointer           data);
@@ -245,7 +245,7 @@ static const guchar dropper_bits[] = {
   "\0\0\0\0\0\0\0\0\0\3\0\0\0\2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
   "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"};
 
-G_DEFINE_TYPE (MateColorSelection, mate_color_selection, GTK_TYPE_BOX)
+G_DEFINE_TYPE_WITH_PRIVATE (MateColorSelection, mate_color_selection, GTK_TYPE_BOX)
 
 static void
 mate_color_selection_class_init (MateColorSelectionClass *klass)
@@ -311,8 +311,6 @@ mate_color_selection_class_init (MateColorSelectionClass *klass)
 		  NULL, NULL,
 		  g_cclosure_marshal_VOID__VOID,
 		  G_TYPE_NONE, 0);
-
-  g_type_class_add_private (gobject_class, sizeof (ColorSelectionPrivate));
 }
 
 static void
@@ -324,13 +322,13 @@ mate_color_selection_init (MateColorSelection *colorsel)
   GtkAdjustment *adjust;
   GtkWidget *picker_image;
   gint i, j;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   AtkObject *atk_obj;
   GList *focus_chain = NULL;
   
   _mate_desktop_init_i18n ();
 
-  priv = colorsel->private_data = G_TYPE_INSTANCE_GET_PRIVATE (colorsel, MATE_TYPE_COLOR_SELECTION, ColorSelectionPrivate);
+  priv = colorsel->private_data = mate_color_selection_get_instance_private (colorsel);
   priv->changing = FALSE;
   priv->default_set = FALSE;
   priv->default_alpha_set = FALSE;
@@ -543,7 +541,7 @@ mate_color_selection_get_property (GObject     *object,
 				  GParamSpec  *pspec)
 {
   MateColorSelection *colorsel = MATE_COLOR_SELECTION (object);
-  ColorSelectionPrivate *priv = colorsel->private_data;
+  MateColorSelectionPrivate *priv = colorsel->private_data;
   GdkColor color;
   
   switch (prop_id)
@@ -574,7 +572,7 @@ static void
 mate_color_selection_dispose (GObject *object)
 {
   MateColorSelection *cselection = MATE_COLOR_SELECTION (object);
-  ColorSelectionPrivate *priv = cselection->private_data;
+  MateColorSelectionPrivate *priv = cselection->private_data;
 
   if (priv->dropper_grab_widget)
     {
@@ -591,7 +589,7 @@ static void
 mate_color_selection_realize (GtkWidget *widget)
 {
   MateColorSelection *colorsel = MATE_COLOR_SELECTION (widget);
-  ColorSelectionPrivate *priv = colorsel->private_data;
+  MateColorSelectionPrivate *priv = colorsel->private_data;
   GtkSettings *settings = gtk_widget_get_settings (widget);
 
   priv->settings_connection =  g_signal_connect (settings,
@@ -607,7 +605,7 @@ static void
 mate_color_selection_unrealize (GtkWidget *widget)
 {
   MateColorSelection *colorsel = MATE_COLOR_SELECTION (widget);
-  ColorSelectionPrivate *priv = colorsel->private_data;
+  MateColorSelectionPrivate *priv = colorsel->private_data;
   GtkSettings *settings = gtk_widget_get_settings (widget);
 
   g_signal_handler_disconnect (settings, priv->settings_connection);
@@ -647,7 +645,7 @@ static void
 set_color_internal (MateColorSelection *colorsel,
 		    gdouble           *color)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   gint i;
   
   priv = colorsel->private_data;
@@ -698,7 +696,7 @@ color_sample_drag_begin (GtkWidget      *widget,
 			 gpointer        data)
 {
   MateColorSelection *colorsel = data;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   gdouble *colsrc;
   
   priv = colorsel->private_data;
@@ -730,7 +728,7 @@ color_sample_drop_handle (GtkWidget        *widget,
 			  gpointer          data)
 {
   MateColorSelection *colorsel = data;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   guint16 *vals;
   gdouble color[4];
   priv = colorsel->private_data;
@@ -776,7 +774,7 @@ color_sample_drag_handle (GtkWidget        *widget,
 			  gpointer          data)
 {
   MateColorSelection *colorsel = data;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   guint16 vals[4];
   gdouble *colsrc;
   
@@ -803,7 +801,7 @@ color_sample_draw_sample (MateColorSelection *colorsel, cairo_t *cr, int which)
 {
   GtkWidget *da;
   gint x, y, wid, heig, goff;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   GtkAllocation allocation;
   
   g_return_if_fail (colorsel != NULL);
@@ -874,7 +872,7 @@ color_sample_draw_sample (MateColorSelection *colorsel, cairo_t *cr, int which)
 static void
 color_sample_update_samples (MateColorSelection *colorsel)
 {
-  ColorSelectionPrivate *priv = colorsel->private_data;
+  MateColorSelectionPrivate *priv = colorsel->private_data;
   gtk_widget_queue_draw (priv->old_sample);
   gtk_widget_queue_draw (priv->cur_sample);
 }
@@ -904,7 +902,7 @@ color_sample_setup_dnd (MateColorSelection *colorsel, GtkWidget *sample)
   static const GtkTargetEntry targets[] = {
     { "application/x-color", 0 }
   };
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   priv = colorsel->private_data;
   
   gtk_drag_source_set (sample,
@@ -942,7 +940,7 @@ color_sample_setup_dnd (MateColorSelection *colorsel, GtkWidget *sample)
 static void
 update_tooltips (MateColorSelection *colorsel)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
 
   priv = colorsel->private_data;
 
@@ -967,7 +965,7 @@ update_tooltips (MateColorSelection *colorsel)
 static void
 color_sample_new (MateColorSelection *colorsel)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   priv = colorsel->private_data;
 
@@ -1172,7 +1170,7 @@ palette_change_color (GtkWidget         *drawing_area,
                       gdouble           *color)
 {
   gint x, y;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   GdkColor gdk_color;
   GdkColor *current_colors;
   GdkScreen *screen;
@@ -1323,7 +1321,7 @@ save_color_selected (GtkWidget *menuitem,
 {
   MateColorSelection *colorsel;
   GtkWidget *drawing_area;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
 
   drawing_area = GTK_WIDGET (data);
   
@@ -1616,7 +1614,7 @@ grab_color_at_mouse (GdkScreen *screen,
   GdkPixbuf *pixbuf;
   guchar *pixels;
   MateColorSelection *colorsel = data;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   GdkColor color;
   GdkWindow *root_window = gdk_screen_get_root_window (screen);
   
@@ -1662,7 +1660,7 @@ static void
 shutdown_eyedropper (GtkWidget *widget)
 {
   MateColorSelection *colorsel;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   GdkDisplay *display = gtk_widget_get_display (widget);
 
   colorsel = MATE_COLOR_SELECTION (widget);
@@ -1817,7 +1815,7 @@ static void
 get_screen_color (GtkWidget *button)
 {
   MateColorSelection *colorsel = g_object_get_data (G_OBJECT (button), "COLORSEL");
-  ColorSelectionPrivate *priv = colorsel->private_data;
+  MateColorSelectionPrivate *priv = colorsel->private_data;
   GdkScreen *screen = gtk_widget_get_screen (GTK_WIDGET (button));
   GdkCursor *picker_cursor;
   GdkGrabStatus grab_status;
@@ -1882,7 +1880,7 @@ hex_changed (GtkWidget *hex_entry,
 	     gpointer   data)
 {
   MateColorSelection *colorsel;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   GdkColor color;
   gchar *text;
   
@@ -1924,7 +1922,7 @@ hsv_changed (GtkWidget *hsv,
 	     gpointer   data)
 {
   MateColorSelection *colorsel;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   colorsel = MATE_COLOR_SELECTION (data);
   priv = colorsel->private_data;
@@ -1950,7 +1948,7 @@ adjustment_changed (GtkAdjustment *adjustment,
 		    gpointer       data)
 {
   MateColorSelection *colorsel;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   gdouble value;
   
   colorsel = MATE_COLOR_SELECTION (g_object_get_data (G_OBJECT (adjustment), "COLORSEL"));
@@ -2005,7 +2003,7 @@ opacity_entry_changed (GtkWidget *opacity_entry,
 		       gpointer   data)
 {
   MateColorSelection *colorsel;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   GtkAdjustment *adj;
   gchar *text;
   
@@ -2073,7 +2071,7 @@ make_palette_frame (MateColorSelection *colorsel,
 		    gint               j)
 {
   GtkWidget *frame;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   priv = colorsel->private_data;
   frame = gtk_frame_new (NULL);
@@ -2089,7 +2087,7 @@ make_palette_frame (MateColorSelection *colorsel,
 static void 
 set_selected_palette (MateColorSelection *colorsel, int x, int y)
 {
-  ColorSelectionPrivate *priv = colorsel->private_data; 
+  MateColorSelectionPrivate *priv = colorsel->private_data; 
 
   gtk_widget_grab_focus (priv->custom_palette[x][y]);
 }
@@ -2106,7 +2104,7 @@ scale_round (double val, double factor)
 static void
 update_color (MateColorSelection *colorsel)
 {
-  ColorSelectionPrivate *priv = colorsel->private_data;
+  MateColorSelectionPrivate *priv = colorsel->private_data;
   gchar entryval[12];
   gchar opacity_text[32];
   gchar *ptr;
@@ -2234,7 +2232,7 @@ GtkWidget *
 mate_color_selection_new (void)
 {
   MateColorSelection *colorsel;
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   gdouble color[4];
   color[0] = 1.0;
   color[1] = 1.0;
@@ -2265,7 +2263,7 @@ mate_color_selection_new (void)
 gboolean
 mate_color_selection_get_has_opacity_control (MateColorSelection *colorsel)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   g_return_val_if_fail (MATE_IS_COLOR_SELECTION (colorsel), FALSE);
   
@@ -2286,7 +2284,7 @@ void
 mate_color_selection_set_has_opacity_control (MateColorSelection *colorsel,
 					     gboolean           has_opacity)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   g_return_if_fail (MATE_IS_COLOR_SELECTION (colorsel));
   
@@ -2325,7 +2323,7 @@ mate_color_selection_set_has_opacity_control (MateColorSelection *colorsel,
 gboolean
 mate_color_selection_get_has_palette (MateColorSelection *colorsel)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   g_return_val_if_fail (MATE_IS_COLOR_SELECTION (colorsel), FALSE);
   
@@ -2346,7 +2344,7 @@ void
 mate_color_selection_set_has_palette (MateColorSelection *colorsel,
 				     gboolean           has_palette)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   g_return_if_fail (MATE_IS_COLOR_SELECTION (colorsel));
   
   priv = colorsel->private_data;
@@ -2378,7 +2376,7 @@ void
 mate_color_selection_set_current_color (MateColorSelection *colorsel,
 				       const GdkColor    *color)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   gint i;
   
   g_return_if_fail (MATE_IS_COLOR_SELECTION (colorsel));
@@ -2416,7 +2414,7 @@ void
 mate_color_selection_set_current_alpha (MateColorSelection *colorsel,
 				       guint16            alpha)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   gint i;
   
   g_return_if_fail (MATE_IS_COLOR_SELECTION (colorsel));
@@ -2464,7 +2462,7 @@ void
 mate_color_selection_get_current_color (MateColorSelection *colorsel,
 				       GdkColor          *color)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   g_return_if_fail (MATE_IS_COLOR_SELECTION (colorsel));
   g_return_if_fail (color != NULL);
@@ -2486,7 +2484,7 @@ mate_color_selection_get_current_color (MateColorSelection *colorsel,
 guint16
 mate_color_selection_get_current_alpha (MateColorSelection *colorsel)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   g_return_val_if_fail (MATE_IS_COLOR_SELECTION (colorsel), 0);
   
@@ -2507,7 +2505,7 @@ void
 mate_color_selection_get_color (MateColorSelection *colorsel,
 			       gdouble           *color)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   g_return_if_fail (MATE_IS_COLOR_SELECTION (colorsel));
   
@@ -2532,7 +2530,7 @@ void
 mate_color_selection_set_previous_color (MateColorSelection *colorsel,
 					const GdkColor    *color)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   g_return_if_fail (MATE_IS_COLOR_SELECTION (colorsel));
   g_return_if_fail (color != NULL);
@@ -2565,7 +2563,7 @@ void
 mate_color_selection_set_previous_alpha (MateColorSelection *colorsel,
 					guint16            alpha)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   g_return_if_fail (MATE_IS_COLOR_SELECTION (colorsel));
   
@@ -2589,7 +2587,7 @@ void
 mate_color_selection_get_previous_color (MateColorSelection *colorsel,
 					GdkColor           *color)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   g_return_if_fail (MATE_IS_COLOR_SELECTION (colorsel));
   g_return_if_fail (color != NULL);
@@ -2611,7 +2609,7 @@ mate_color_selection_get_previous_color (MateColorSelection *colorsel,
 guint16
 mate_color_selection_get_previous_alpha (MateColorSelection *colorsel)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   g_return_val_if_fail (MATE_IS_COLOR_SELECTION (colorsel), 0);
   
@@ -2633,7 +2631,7 @@ mate_color_selection_set_palette_color (MateColorSelection   *colorsel,
 				       gint                 index,
 				       GdkColor            *color)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   gint x, y;
   gdouble col[3];
   
@@ -2663,7 +2661,7 @@ mate_color_selection_set_palette_color (MateColorSelection   *colorsel,
 gboolean
 mate_color_selection_is_adjusting (MateColorSelection *colorsel)
 {
-  ColorSelectionPrivate *priv;
+  MateColorSelectionPrivate *priv;
   
   g_return_val_if_fail (MATE_IS_COLOR_SELECTION (colorsel), FALSE);
   
@@ -2872,7 +2870,7 @@ make_control_relations (AtkObject *atk_obj,
 
 static void
 make_all_relations (AtkObject *atk_obj,
-                    ColorSelectionPrivate *priv)
+                    MateColorSelectionPrivate *priv)
 {
   make_control_relations (atk_obj, priv->hue_spinbutton);
   make_control_relations (atk_obj, priv->sat_spinbutton);
