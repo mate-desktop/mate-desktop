@@ -43,7 +43,7 @@ G_BEGIN_DECLS
 
 typedef struct _MateColorSelection       MateColorSelection;
 typedef struct _MateColorSelectionClass  MateColorSelectionClass;
-typedef struct _ColorSelectionPrivate    ColorSelectionPrivate;
+typedef struct _MateColorSelectionPrivate    MateColorSelectionPrivate;
 
 
 typedef void (* MateColorSelectionChangePaletteFunc) (const GdkColor    *colors,
@@ -57,7 +57,7 @@ struct _MateColorSelection
   GtkBox parent_instance;
 
   /* < private_data > */
-  ColorSelectionPrivate *private_data;
+  MateColorSelectionPrivate *private_data;
 };
 
 struct _MateColorSelectionClass
