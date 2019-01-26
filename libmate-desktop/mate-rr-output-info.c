@@ -30,12 +30,12 @@
 #include "edid.h"
 #include "mate-rr-private.h"
 
-G_DEFINE_TYPE (MateRROutputInfo, mate_rr_output_info, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (MateRROutputInfo, mate_rr_output_info, G_TYPE_OBJECT)
 
 static void
 mate_rr_output_info_init (MateRROutputInfo *self)
 {
-    self->priv = G_TYPE_INSTANCE_GET_PRIVATE (self, MATE_TYPE_RR_OUTPUT_INFO, MateRROutputInfoPrivate);
+    self->priv = mate_rr_output_info_get_instance_private (self);
 
     self->priv->name = NULL;
     self->priv->on = FALSE;
@@ -57,8 +57,6 @@ static void
 mate_rr_output_info_class_init (MateRROutputInfoClass *klass)
 {
     GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-
-    g_type_class_add_private (klass, sizeof (MateRROutputInfoPrivate));
 
     gobject_class->finalize = mate_rr_output_info_finalize;
 }

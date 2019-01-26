@@ -57,7 +57,7 @@ enum {
 	PROP_LAST
 };
 
-G_DEFINE_TYPE (MateRRLabeler, mate_rr_labeler, G_TYPE_OBJECT);
+G_DEFINE_TYPE_WITH_PRIVATE (MateRRLabeler, mate_rr_labeler, G_TYPE_OBJECT);
 
 static void mate_rr_labeler_finalize (GObject *object);
 static void create_label_windows (MateRRLabeler *labeler);
@@ -186,7 +186,7 @@ mate_rr_labeler_init (MateRRLabeler *labeler)
 {
 	GdkWindow *gdkwindow;
 
-	labeler->priv = G_TYPE_INSTANCE_GET_PRIVATE (labeler, MATE_TYPE_RR_LABELER, MateRRLabelerPrivate);
+	labeler->priv = mate_rr_labeler_get_instance_private (labeler);
 
 	labeler->priv->workarea_atom = XInternAtom (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
 						    "_NET_WORKAREA",
@@ -227,8 +227,6 @@ static void
 mate_rr_labeler_class_init (MateRRLabelerClass *klass)
 {
 	GObjectClass *object_class;
-
-	g_type_class_add_private (klass, sizeof (MateRRLabelerPrivate));
 
 	object_class = (GObjectClass *) klass;
 
