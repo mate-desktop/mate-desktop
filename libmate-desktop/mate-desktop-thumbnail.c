@@ -68,8 +68,8 @@ static void mate_desktop_thumbnail_factory_init          (MateDesktopThumbnailFa
 static void mate_desktop_thumbnail_factory_class_init    (MateDesktopThumbnailFactoryClass *class);
 
 G_DEFINE_TYPE_WITH_PRIVATE (MateDesktopThumbnailFactory,
-	       mate_desktop_thumbnail_factory,
-	       G_TYPE_OBJECT)
+                            mate_desktop_thumbnail_factory,
+                            G_TYPE_OBJECT)
 #define parent_class mate_desktop_thumbnail_factory_parent_class
 
 typedef struct {
