@@ -1,0 +1,111 @@
+# vim: set ts=2 sts=2 sw=2 expandtab :
+dist: xenial
+sudo: required
+language: bash
+services:
+  - docker
+
+# Use travis branch for test.
+#branches:
+#  only:
+#  - travis
+
+before_install:
+  - curl -L -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/travis/travis/docker-build
+  - chmod +x docker-build
+ 
+install:
+  - ./docker-build --name ${DISTRO} --config .travis.yml --install
+
+script:
+  - ./docker-build --name ${DISTRO} --verbose --config .travis.yml --build autotools
+
+env:
+  - DISTRO="base/archlinux"
+  - DISTRO="debian:sid"
+  - DISTRO="fedora:29"
+  - DISTRO="ubuntu:18.10"
+
+##########################################################
+# THE FOLLOWING LINES IS USED BY docker-build
+##########################################################
+requires:
+  archlinux:
+    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/trunk?h=packages/mate-desktop
+    - gcc
+    - git
+    - gobject-introspection
+    - gtk3
+    - intltool
+    - iso-codes
+    - make
+    - mate-common
+    - startup-notification
+
+  debian:
+    # Useful URL: https://github.com/mate-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-mate-team/mate-desktop
+    - git
+    - gobject-introspection
+    - gtk-doc-tools
+    - intltool
+    - iso-codes
+    - libdconf-dev
+    - libgirepository1.0-dev
+    - libglib2.0-dev
+    - libglib2.0-doc
+    - libgtk-3-dev
+    - libgtk-3-doc
+    - libstartup-notification0-dev
+    - libx11-dev
+    - libxml2-dev
+    - libxrandr-dev
+    - mate-common
+
+  fedora:
+    # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-desktop.git
+    - cairo-gobject-devel
+    - dconf-devel
+    - desktop-file-utils
+    - gcc
+    - git
+    - gobject-introspection-devel
+    - gtk3-devel
+    - iso-codes-devel
+    - itstool
+    - make
+    - mate-common
+    - redhat-rpm-config
+    - startup-notification-devel
+
+  ubuntu:
+    # Same as debian
+    - git
+    - gobject-introspection
+    - gtk-doc-tools
+    - intltool
+    - iso-codes
+    - libdconf-dev
+    - libgirepository1.0-dev
+    - libglib2.0-dev
+    - libglib2.0-doc
+    - libgtk-3-dev
+    - libgtk-3-doc
+    - libstartup-notification0-dev
+    - libx11-dev
+    - libxml2-dev
+    - libxrandr-dev
+    - mate-common
+
+variables:
+  - CFLAGS="-Wall -Werror=format-security"
+
+configures:
+  autotools:
+    - --prefix=/usr
+    - --enable-gtk-doc
+
+after_scripts:
+  - make distcheck > /dev/null
+    # It will fail on debian, so it always returns 0, but can see the error message.
+  - 'if [ $? -ne 0 ];then RED="\033[0;31m"; NC="\033[0m"; printf "${RED}!!! ERROR: Run make distcheck failed.${NC}\n"; fi'
