@@ -1226,6 +1226,26 @@ palette_change_color (GtkWidget         *drawing_area,
   g_free (current_colors);
 }
 
+static void
+override_background_color (GtkWidget *widget,
+                           GdkRGBA   *rgba)
+{
+  gchar          *css;
+  GtkCssProvider *provider;
+
+  provider = gtk_css_provider_new ();
+
+  css = g_strdup_printf ("* { background-color: %s;}",
+                         gdk_rgba_to_string (rgba));
+  gtk_css_provider_load_from_data (provider, css, -1, NULL);
+  g_free (css);
+
+  gtk_style_context_add_provider (gtk_widget_get_style_context (widget),
+                                  GTK_STYLE_PROVIDER (provider),
+                                  GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+  g_object_unref (provider);
+}
+
 /* Changes the view color */
 static void
 palette_set_color (GtkWidget         *drawing_area,
@@ -1233,13 +1253,14 @@ palette_set_color (GtkWidget         *drawing_area,
 		   gdouble           *color)
 {
   gdouble *new_color = g_new (double, 4);
-  GdkColor gdk_color;
+  GdkRGBA  box_color;
   
-  gdk_color.red = UNSCALE (color[0]);
-  gdk_color.green = UNSCALE (color[1]);
-  gdk_color.blue = UNSCALE (color[2]);
+  box_color.red = color[0];
+  box_color.green = color[1];
+  box_color.blue = color[2];
+  box_color.alpha = 1;
 
-  gtk_widget_modify_bg (drawing_area, GTK_STATE_NORMAL, &gdk_color);
+  override_background_color (drawing_area, &box_color);
   
   if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (drawing_area), "color_set")) == 0)
     {
