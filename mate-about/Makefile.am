@@ -15,7 +15,9 @@ desktopdir = $(datadir)/applications
 desktop_in_files = mate-about.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
-CLEANFILES = mate-about.desktop mate-about
+EXTRA_DIST = $(desktop_in_files)
+
+CLEANFILES = $(desktop_DATA) $(bin_PROGRAMS)
 
 #-include $(top_srcdir)/git.mk
 
