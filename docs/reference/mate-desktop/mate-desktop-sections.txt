@@ -288,3 +288,25 @@ mate_language_has_translations
 mate_desktop_prepend_terminal_to_vector
 </SECTION>
 
+<SECTION>
+<FILE>mate-hsv</FILE>
+<TITLE>MateHSV</TITLE>
+MateHSV
+mate_hsv_new
+mate_hsv_set_color
+mate_hsv_get_color
+mate_hsv_set_metrics
+mate_hsv_get_metrics
+mate_hsv_is_adjusting
+<SUBSECTION Standard>
+MATE_TYPE_HSV
+MATE_HSV
+MATE_HSV_CLASS
+MATE_IS_HSV
+MATE_IS_HSV_CLASS
+MATE_HSV_GET_CLASS
+<SUBSECTION Private>
+MateHSVPrivate
+mate_hsv_get_type
+</SECTION>
+
