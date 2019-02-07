@@ -14,6 +14,7 @@ libmate_desktop_HEADERS = \
 	mate-rr-labeler.h \
 	mate-colorbutton.h \
 	mate-colorsel.h \
+	mate-hsv.h \
 	mate-colorseldialog.h
 
 lib_LTLIBRARIES = libmate-desktop-2.la
@@ -50,6 +51,7 @@ introspection_sources = \
 	mate-rr-labeler.c	\
 	mate-colorbutton.c \
 	mate-colorsel.c \
+	mate-hsv.c \
 	mate-colorseldialog.c \
 	edid-parse.c
 
