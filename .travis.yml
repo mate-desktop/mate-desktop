@@ -5,13 +5,8 @@ language: bash
 services:
   - docker
 
-# Use travis branch for test.
-#branches:
-#  only:
-#  - travis
-
 before_install:
-  - curl -L -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/travis/travis/docker-build
+  - curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/docker-build
   - chmod +x docker-build
  
 install:
@@ -21,7 +16,7 @@ script:
   - ./docker-build --name ${DISTRO} --verbose --config .travis.yml --build autotools
 
 env:
-  - DISTRO="base/archlinux"
+  - DISTRO="archlinux/base"
   - DISTRO="debian:sid"
   - DISTRO="fedora:29"
   - DISTRO="ubuntu:18.10"
@@ -41,6 +36,7 @@ requires:
     - make
     - mate-common
     - startup-notification
+    - which
 
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
@@ -106,6 +102,4 @@ configures:
     - --enable-gtk-doc
 
 after_scripts:
-  - make distcheck > /dev/null
-    # It will fail on debian, so it always returns 0, but can see the error message.
-  - 'if [ $? -ne 0 ];then RED="\033[0;31m"; NC="\033[0m"; printf "${RED}!!! ERROR: Run make distcheck failed.${NC}\n"; fi'
+  - make distcheck
