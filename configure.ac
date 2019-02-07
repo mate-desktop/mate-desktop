@@ -231,7 +231,6 @@ GTK_DOC_CHECK([1.4])
 AC_CONFIG_FILES([
 Makefile
 mate-about/Makefile
-mate-about/mate-about.desktop.in
 libmate-desktop/Makefile
 libmate-desktop/mate-desktop-2.0.pc
 libmate-desktop/mate-desktop-2.0-uninstalled.pc
@@ -260,7 +259,6 @@ schemas/org.mate.thumbnail-cache.gschema.xml
 schemas/org.mate.thumbnailers.gschema.xml
 schemas/org.mate.typing-break.gschema.xml
 man/Makefile
-tools/mate-color-select.desktop.in
 tools/Makefile
 icons/Makefile
 ])
