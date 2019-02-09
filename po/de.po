@@ -7,18 +7,18 @@
 # Tim Schulz <timschulz1998@yahoo.de>, 2018
 # Ettore Atalan <atalanttore@googlemail.com>, 2018
 # Maria Kor <korda.maria@gmail.com>, 2018
-# Tobias Bannert <tobannert@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Moritz Bruder <muesli4@gmail.com>, 2018
+# Tobias Bannert <tobannert@gmail.com>, 2018
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-27 15:50+0200\n"
+"POT-Creation-Date: 2019-02-08 23:20+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Moritz Bruder <muesli4@gmail.com>, 2018\n"
+"Last-Translator: Tobias Bannert <tobannert@gmail.com>, 2018\n"
 "Language-Team: German (https://www.transifex.com/mate/teams/13566/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,11 +39,11 @@ msgstr ""
 "Wolfgang Stoeggl\n"
 "Tobias Bannert"
 
-#: ../mate-about/mate-about.desktop.in.in.h:1
+#: ../mate-about/mate-about.desktop.in.h:1
 msgid "About MATE"
 msgstr "Über MATE"
 
-#: ../mate-about/mate-about.desktop.in.in.h:2
+#: ../mate-about/mate-about.desktop.in.h:2
 msgid "Learn more about MATE"
 msgstr "Mehr über MATE erfahren"
 
@@ -111,48 +111,48 @@ msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: ../libmate-desktop/mate-colorbutton.c:154
+#: ../libmate-desktop/mate-colorbutton.c:152
 msgid "Use alpha"
 msgstr "Alpha benutzen"
 
-#: ../libmate-desktop/mate-colorbutton.c:155
+#: ../libmate-desktop/mate-colorbutton.c:153
 msgid "Whether or not to give the color an alpha value"
 msgstr "Legt fest, ob der Farbe ein Alphawert geben wird"
 
-#: ../libmate-desktop/mate-colorbutton.c:169
+#: ../libmate-desktop/mate-colorbutton.c:167
 msgid "Title"
 msgstr "Titel"
 
-#: ../libmate-desktop/mate-colorbutton.c:170
+#: ../libmate-desktop/mate-colorbutton.c:168
 msgid "The title of the color selection dialog"
 msgstr "Der Titel des Farbauswahldialoges"
 
-#: ../libmate-desktop/mate-colorbutton.c:171
-#: ../libmate-desktop/mate-colorbutton.c:442
+#: ../libmate-desktop/mate-colorbutton.c:169
+#: ../libmate-desktop/mate-colorbutton.c:438
 msgid "Pick a Color"
 msgstr "Farbe auswählen"
 
-#: ../libmate-desktop/mate-colorbutton.c:184
+#: ../libmate-desktop/mate-colorbutton.c:182
 #: ../libmate-desktop/mate-colorsel.c:286
 msgid "Current Color"
 msgstr "Aktuelle Farbe"
 
-#: ../libmate-desktop/mate-colorbutton.c:185
+#: ../libmate-desktop/mate-colorbutton.c:183
 msgid "The selected color"
 msgstr "Die gewählte Farbe"
 
-#: ../libmate-desktop/mate-colorbutton.c:199
+#: ../libmate-desktop/mate-colorbutton.c:197
 #: ../libmate-desktop/mate-colorsel.c:293
 msgid "Current Alpha"
 msgstr "Aktuelle Alpha"
 
-#: ../libmate-desktop/mate-colorbutton.c:200
+#: ../libmate-desktop/mate-colorbutton.c:198
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Der ausgewählte Deckkraftwert (0 vollständig transparent, 65535 völlig "
 "deckend)"
 
-#: ../libmate-desktop/mate-colorbutton.c:335
+#: ../libmate-desktop/mate-colorbutton.c:331
 msgid "Received invalid color data\n"
 msgstr "Ungültige Farbdaten wurden empfangen\n"
 
@@ -191,7 +191,7 @@ msgstr "HEX-Zeichenkette"
 msgid "The hexadecimal string of current color"
 msgstr "HEX-Zeichenkette der aktuellen Farbe"
 
-#: ../libmate-desktop/mate-colorsel.c:349
+#: ../libmate-desktop/mate-colorsel.c:347
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -199,7 +199,7 @@ msgstr ""
 "Die gewünschte Farbe aus dem äußeren Ring auswählen. Die Helligkeit dieser "
 "Farbe aus dem inneren Dreieck auswählen."
 
-#: ../libmate-desktop/mate-colorsel.c:373
+#: ../libmate-desktop/mate-colorsel.c:371
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -207,68 +207,68 @@ msgstr ""
 "Auf die Pipette klicken, dann auf eine Farbe irgendwo auf dem Bildschirm "
 "klicken, um diese Farbe auszuwählen."
 
-#: ../libmate-desktop/mate-colorsel.c:382
+#: ../libmate-desktop/mate-colorsel.c:380
 msgid "_Hue:"
 msgstr "_Farbton:"
 
-#: ../libmate-desktop/mate-colorsel.c:383
+#: ../libmate-desktop/mate-colorsel.c:381
 msgid "Position on the color wheel."
 msgstr "Position auf dem Farbrad."
 
-#: ../libmate-desktop/mate-colorsel.c:385
+#: ../libmate-desktop/mate-colorsel.c:383
 msgid "_Saturation:"
 msgstr "_Sättigung:"
 
-#: ../libmate-desktop/mate-colorsel.c:386
+#: ../libmate-desktop/mate-colorsel.c:384
 msgid "\"Deepness\" of the color."
 msgstr "Tiefe der Farbe."
 
-#: ../libmate-desktop/mate-colorsel.c:387
+#: ../libmate-desktop/mate-colorsel.c:385
 msgid "_Value:"
 msgstr "_Wert:"
 
-#: ../libmate-desktop/mate-colorsel.c:388
+#: ../libmate-desktop/mate-colorsel.c:386
 msgid "Brightness of the color."
 msgstr "Helligkeit der Farbe."
 
-#: ../libmate-desktop/mate-colorsel.c:389
+#: ../libmate-desktop/mate-colorsel.c:387
 msgid "_Red:"
 msgstr "_Rot:"
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: ../libmate-desktop/mate-colorsel.c:388
 msgid "Amount of red light in the color."
 msgstr "Menge an Rotlicht in der Farbe."
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:389
 msgid "_Green:"
 msgstr "_Grün:"
 
-#: ../libmate-desktop/mate-colorsel.c:392
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "Amount of green light in the color."
 msgstr "Menge an Grünlicht in der Farbe."
 
-#: ../libmate-desktop/mate-colorsel.c:393
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "_Blue:"
 msgstr "_Blau:"
 
-#: ../libmate-desktop/mate-colorsel.c:394
+#: ../libmate-desktop/mate-colorsel.c:392
 msgid "Amount of blue light in the color."
 msgstr "Menge an Blaulicht in der Farbe."
 
-#: ../libmate-desktop/mate-colorsel.c:397
+#: ../libmate-desktop/mate-colorsel.c:395
 msgid "Op_acity:"
 msgstr "_Deckkraft:"
 
-#: ../libmate-desktop/mate-colorsel.c:404
-#: ../libmate-desktop/mate-colorsel.c:414
+#: ../libmate-desktop/mate-colorsel.c:402
+#: ../libmate-desktop/mate-colorsel.c:412
 msgid "Transparency of the color."
 msgstr "Transparenz der Farbe."
 
-#: ../libmate-desktop/mate-colorsel.c:421
+#: ../libmate-desktop/mate-colorsel.c:419
 msgid "Color _name:"
 msgstr "_Farbname:"
 
-#: ../libmate-desktop/mate-colorsel.c:435
+#: ../libmate-desktop/mate-colorsel.c:433
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -276,15 +276,15 @@ msgstr ""
 "Sie können in diesem Feld einen hexadezimalen Farbwert wie bei HTML oder "
 "einen Farbnamen wie »orange« eingeben."
 
-#: ../libmate-desktop/mate-colorsel.c:465
+#: ../libmate-desktop/mate-colorsel.c:463
 msgid "_Palette:"
 msgstr "_Palette:"
 
-#: ../libmate-desktop/mate-colorsel.c:495
+#: ../libmate-desktop/mate-colorsel.c:493
 msgid "Color Wheel"
 msgstr "Farbrad"
 
-#: ../libmate-desktop/mate-colorsel.c:952
+#: ../libmate-desktop/mate-colorsel.c:950
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -295,7 +295,7 @@ msgstr ""
 "als aktuell auswählen, indem Sie sie auf den anderen Farbfleck daneben "
 "ziehen."
 
-#: ../libmate-desktop/mate-colorsel.c:955
+#: ../libmate-desktop/mate-colorsel.c:953
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -303,7 +303,7 @@ msgstr ""
 "Die von Ihnen gewählte Farbe. Sie können diese Farbe auf einen "
 "Paletteneintrag ziehen, um sie für den Gebrauch in der Zukunft speichern."
 
-#: ../libmate-desktop/mate-colorsel.c:960
+#: ../libmate-desktop/mate-colorsel.c:958
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
@@ -311,19 +311,19 @@ msgstr ""
 "Die zuvor ausgewählten Farbe, zum Vergleich mit der Farbe, die Sie jetzt "
 "ausgewählt haben."
 
-#: ../libmate-desktop/mate-colorsel.c:963
+#: ../libmate-desktop/mate-colorsel.c:961
 msgid "The color you've chosen."
 msgstr "Die Farbe, die Sie ausgewählt haben."
 
-#: ../libmate-desktop/mate-colorsel.c:1347
+#: ../libmate-desktop/mate-colorsel.c:1366
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1352
+#: ../libmate-desktop/mate-colorsel.c:1371
 msgid "_Save color here"
 msgstr "Farbe hier _speichern"
 
-#: ../libmate-desktop/mate-colorsel.c:1572
+#: ../libmate-desktop/mate-colorsel.c:1591
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -441,24 +441,24 @@ msgid "Unspecified"
 msgstr "Nicht festgelegt"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:461
+#: ../libmate-desktop/mate-rr.c:462
 #, c-format
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr ""
 "Es konnten keine Informationen über den Bildschirm gesammelt werden (CRTCs, "
 "Ausgaben, Auflösungen)"
 
-#: ../libmate-desktop/mate-rr.c:482
+#: ../libmate-desktop/mate-rr.c:483
 #, c-format
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "Unbehandelter X-Fehler beim Abfragen der Bildschirmgrößen"
 
-#: ../libmate-desktop/mate-rr.c:488
+#: ../libmate-desktop/mate-rr.c:489
 #, c-format
 msgid "could not get the range of screen sizes"
 msgstr "Mögliche Bildschirmgrößen konnten nicht abgefragt werden"
 
-#: ../libmate-desktop/mate-rr.c:707
+#: ../libmate-desktop/mate-rr.c:708
 #, c-format
 msgid "RANDR extension is not present"
 msgstr "Die RANDR-Erweiterung ist nicht vorhanden"
@@ -501,22 +501,22 @@ msgid ""
 msgstr ""
 "Keine der gespeicherten Bildschirmkonfigurationen gleichen der Aktiven"
 
-#: ../libmate-desktop/mate-rr-config.c:1488
+#: ../libmate-desktop/mate-rr-config.c:1486
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d kann die Ausgabe %s nicht steuern"
 
-#: ../libmate-desktop/mate-rr-config.c:1495
+#: ../libmate-desktop/mate-rr-config.c:1493
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "Ausgabe %s unterstützt nicht den Modus %dx%d@%dHz"
 
-#: ../libmate-desktop/mate-rr-config.c:1506
+#: ../libmate-desktop/mate-rr-config.c:1504
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d unterstützt nicht die Drehung=%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1520
+#: ../libmate-desktop/mate-rr-config.c:1518
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -529,24 +529,24 @@ msgstr ""
 "Bestehende Koordinaten = (%d, %d), neue Koordinaten = (%d, %d)\n"
 "Bestehende Drehung = %s, neue Drehung = %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1535
+#: ../libmate-desktop/mate-rr-config.c:1533
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "Klonen auf die Ausgabe %s nicht möglich"
 
-#: ../libmate-desktop/mate-rr-config.c:1704
+#: ../libmate-desktop/mate-rr-config.c:1702
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Modi werden für CRTC %d ausprobiert\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1728
+#: ../libmate-desktop/mate-rr-config.c:1726
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "CRTC %d: Modus %dx%d@%dHz wird probiert mit Ausgabe an %dx%d@%dHz (Durchlauf"
 " %d)\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1775
+#: ../libmate-desktop/mate-rr-config.c:1773
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -555,7 +555,7 @@ msgstr ""
 "CRTCs konnten nicht den Ausgaben zugewiesen werden:\n"
 "%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1779
+#: ../libmate-desktop/mate-rr-config.c:1777
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -567,7 +567,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1861
+#: ../libmate-desktop/mate-rr-config.c:1859
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -582,7 +582,7 @@ msgstr ""
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:408
+#: ../libmate-desktop/mate-rr-labeler.c:406
 #, c-format
 msgid "Mirror Screens"
 msgstr "Bildschirme spiegeln"
@@ -638,10 +638,16 @@ msgstr ""
 "@Verzögerungszeit in Millisekunden gedrückt wurde."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
+msgid ""
+"Latch modifiers when pressed twice in a row until the same modifier is "
+"pressed again."
+msgstr ""
+
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Disable if two keys are pressed at the same time."
 msgstr "Deaktivieren, wenn zwei Tasten gleichzeitig gedrückt werden."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
+#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:13
 msgid "Beep when a modifier is pressed."
 msgstr "Signalton erzeugen, wenn ein Modifikator gedrückt wird."
 
@@ -1270,13 +1276,15 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:71
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "Die primäre Einfügeauswahl aktivieren"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:72
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
+"Falls dieser Schlüssel WAHR ist, benutzt GTK+ die primäre Einfügeauswahl, in"
+" der Regel ausgelöst durch einen Klick mit der mittleren Maustaste."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
@@ -1625,15 +1633,14 @@ msgstr "Legt fest, ob die Tastatursperre aktiviert ist."
 msgid "Whether or not keyboard locking is enabled."
 msgstr "Legt fest, ob die Tastatursperre aktiviert ist."
 
-#: ../tools/mate-color-select.c:64
-#: ../tools/mate-color-select.desktop.in.in.h:1
+#: ../tools/mate-color-select.c:64 ../tools/mate-color-select.desktop.in.h:1
 msgid "MATE Color Selection"
 msgstr "MATE-Farbauswahl"
 
-#: ../tools/mate-color-select.desktop.in.in.h:2
+#: ../tools/mate-color-select.desktop.in.h:2
 msgid "Color selection dialog"
 msgstr "MATE-Auswahldialog"
 
-#: ../tools/mate-color-select.desktop.in.in.h:3
+#: ../tools/mate-color-select.desktop.in.h:3
 msgid "Choose colors from the palette or the screen"
 msgstr "Farben aus der Palette oder dem Bildschirm auswählen"
