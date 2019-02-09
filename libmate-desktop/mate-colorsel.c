@@ -35,6 +35,7 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n-lib.h>
 #include "mate-colorsel.h"
+#include "mate-hsv.h"
 
 #define DEFAULT_COLOR_PALETTE "#ef2929:#fcaf3e:#fce94f:#8ae234:#729fcf:#ad7fa8:#e9b96e:#888a85:#eeeeec:#cc0000:#f57900:#edd400:#73d216:#3465a4:#75507b:#c17d11:#555753:#d3d7cf:#a40000:#ce5c00:#c4a000:#4e9a06:#204a87:#5c3566:#8f5902:#2e3436:#babdb6:#000000:#2e3436:#555753:#888a85:#babdb6:#d3d7cf:#eeeeec:#f3f3f3:#ffffff"
 
@@ -337,10 +338,10 @@ mate_color_selection_init (MateColorSelection *colorsel)
   gtk_box_pack_start (GTK_BOX (colorsel), top_hbox, FALSE, FALSE, 0);
   
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-  priv->triangle_colorsel = gtk_hsv_new ();
+  priv->triangle_colorsel = mate_hsv_new ();
   g_signal_connect (priv->triangle_colorsel, "changed",
                     G_CALLBACK (hsv_changed), colorsel);
-  gtk_hsv_set_metrics (GTK_HSV (priv->triangle_colorsel), 174, 15);
+  mate_hsv_set_metrics (MATE_HSV (priv->triangle_colorsel), 174, 15);
   gtk_box_pack_start (GTK_BOX (top_hbox), vbox, FALSE, FALSE, 0);
   gtk_box_pack_start (GTK_BOX (vbox), priv->triangle_colorsel, FALSE, FALSE, 0);
   gtk_widget_set_tooltip_text (priv->triangle_colorsel,
@@ -1951,10 +1952,10 @@ hsv_changed (GtkWidget *hsv,
   if (priv->changing)
     return;
   
-  gtk_hsv_get_color (GTK_HSV (hsv),
-		     &priv->color[COLORSEL_HUE],
-		     &priv->color[COLORSEL_SATURATION],
-		     &priv->color[COLORSEL_VALUE]);
+  mate_hsv_get_color (MATE_HSV (hsv),
+		      &priv->color[COLORSEL_HUE],
+		      &priv->color[COLORSEL_SATURATION],
+		      &priv->color[COLORSEL_VALUE]);
   gtk_hsv_to_rgb (priv->color[COLORSEL_HUE],
 		  priv->color[COLORSEL_SATURATION],
 		  priv->color[COLORSEL_VALUE],
@@ -2133,10 +2134,10 @@ update_color (MateColorSelection *colorsel)
   priv->changing = TRUE;
   color_sample_update_samples (colorsel);
   
-  gtk_hsv_set_color (GTK_HSV (priv->triangle_colorsel),
-		     priv->color[COLORSEL_HUE],
-		     priv->color[COLORSEL_SATURATION],
-		     priv->color[COLORSEL_VALUE]);
+  mate_hsv_set_color (MATE_HSV (priv->triangle_colorsel),
+		      priv->color[COLORSEL_HUE],
+		      priv->color[COLORSEL_SATURATION],
+		      priv->color[COLORSEL_VALUE]);
   gtk_adjustment_set_value (gtk_spin_button_get_adjustment
 			    (GTK_SPIN_BUTTON (priv->hue_spinbutton)),
 			    scale_round (priv->color[COLORSEL_HUE], 360));
@@ -2688,7 +2689,7 @@ mate_color_selection_is_adjusting (MateColorSelection *colorsel)
   
   priv = colorsel->private_data;
   
-  return (gtk_hsv_is_adjusting (GTK_HSV (priv->triangle_colorsel)));
+  return (mate_hsv_is_adjusting (MATE_HSV (priv->triangle_colorsel)));
 }
 
 
