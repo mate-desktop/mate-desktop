@@ -612,15 +612,14 @@ set_cross_grab (MateHSV   *hsv,
 
   cursor = gdk_cursor_new_for_display (gtk_widget_get_display (GTK_WIDGET (hsv)),
                                        GDK_CROSSHAIR);
-  gdk_device_grab (device,
-                   priv->window,
-                   GDK_OWNERSHIP_NONE,
-                   FALSE,
-                   GDK_POINTER_MOTION_MASK
-                    | GDK_POINTER_MOTION_HINT_MASK
-                    | GDK_BUTTON_RELEASE_MASK,
-                   cursor,
-                   time);
+  gdk_seat_grab (gdk_device_get_seat (device),
+                 priv->window,
+                 GDK_SEAT_CAPABILITY_ALL_POINTING,
+                 FALSE,
+                 cursor,
+                 NULL,
+                 NULL,
+                 NULL);
   g_object_unref (cursor);
 }
 
@@ -722,7 +721,7 @@ mate_hsv_button_release (GtkWidget      *widget,
       g_assert_not_reached ();
     }
 
-  gdk_device_ungrab (gdk_event_get_device ((GdkEvent *) event), event->time);
+  gdk_seat_ungrab (gdk_device_get_seat (gdk_event_get_device ((GdkEvent *) event)));
 
   return TRUE;
 }
