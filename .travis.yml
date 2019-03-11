@@ -5,10 +5,15 @@ language: bash
 services:
   - docker
 
+branches:
+  except:
+  - gh-pages
+
 before_install:
   - curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/docker-build
-  - chmod +x docker-build
- 
+  - curl -Ls -o gen-index https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/gen-index.sh
+  - chmod +x docker-build gen-index
+
 install:
   - sudo apt-get install -y python3-pip python3-setuptools
   - sudo pip3 install --upgrade pip
@@ -16,7 +21,30 @@ install:
   - ./docker-build --name ${DISTRO} --config .travis.yml --install
 
 script:
-  - ./docker-build --name ${DISTRO} --verbose --config .travis.yml --build autotools
+  - ./docker-build --name ${DISTRO} --verbose --config .travis.yml --build scripts
+
+deploy:
+  provider: pages
+  github-token: $GITHUB_TOKEN
+  #keep-history: true
+  skip_cleanup: true
+  committer-from-gh: true
+  target-branch: gh-pages
+  local-dir: html-report
+  on:
+    all_branches: true
+    condition: ${DISTRO} =~ ^fedora.*$
+
+after_success:
+  - 'if [[ "$TRAVIS_SECURE_ENV_VARS" == "true" && "$TRAVIS_PULL_REQUEST" != "false" && ${DISTRO} =~ ^fedora.*$ ]]; then
+        REPO_SLUG_ARRAY=(${TRAVIS_REPO_SLUG//\// });
+        REPO_NAME=${REPO_SLUG_ARRAY[1]};
+        URL="https://${REPO_NAME}.mate-desktop.dev";
+        COMMENT="Code analysis completed";
+        curl -H "Authorization: token $GITHUB_TOKEN" -X POST
+           -d "{\"state\": \"success\", \"description\": \"$COMMENT\", \"context\":\"scan-build\", \"target_url\": \"$URL\"}"
+           https://api.github.com/repos/${TRAVIS_REPO_SLUG}/statuses/${TRAVIS_PULL_REQUEST_SHA};
+     fi'
 
 env:
   - DISTRO="archlinux/base"
@@ -30,6 +58,7 @@ env:
 requires:
   archlinux:
     # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/trunk?h=packages/mate-desktop
+    - clang
     - gcc
     - git
     - gobject-introspection
@@ -44,6 +73,8 @@ requires:
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/mate-desktop
+    - clang
+    - clang-tools
     - git
     - gobject-introspection
     - gtk-doc-tools
@@ -64,6 +95,8 @@ requires:
   fedora:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-desktop.git
     - cairo-gobject-devel
+    - clang-analyzer
+    - clang
     - dconf-devel
     - desktop-file-utils
     - gcc
@@ -78,6 +111,8 @@ requires:
     - startup-notification-devel
 
   ubuntu:
+    - clang
+    - clang-tools
     - git
     - gobject-introspection
     - gtk-doc-tools
@@ -97,11 +132,37 @@ requires:
 
 variables:
   - CFLAGS="-Wall -Werror=format-security"
+  - 'CHECKERS="
+    -enable-checker deadcode.DeadStores
+    -enable-checker alpha.core.CastSize
+    -enable-checker alpha.core.CastToStruct
+    -enable-checker alpha.core.IdenticalExpr
+    -enable-checker alpha.core.SizeofPtr
+    -enable-checker alpha.security.ArrayBoundV2
+    -enable-checker alpha.security.MallocOverflow
+    -enable-checker alpha.security.ReturnPtrRange
+    -enable-checker alpha.unix.SimpleStream
+    -enable-checker alpha.unix.cstring.BufferOverlap
+    -enable-checker alpha.unix.cstring.NotNullTerminated
+    -enable-checker alpha.unix.cstring.OutOfBounds
+    -enable-checker alpha.core.FixedAddr
+    -enable-checker security.insecureAPI.strcpy"'
 
-configures:
-  autotools:
-    - --prefix=/usr
-    - --enable-gtk-doc
+build_scripts:
+  - if [ ${DISTRO_NAME} == "fedora" ];then
+  -     curl -Ls -o fedora.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/fedora.sh
+  -     bash ./fedora.sh
+  - fi
+  - ./autogen.sh
+  - scan-build $CHECKERS ./configure --prefix=/usr --enable-gtk-doc
+  - if [ $CPU_COUNT -gt 1 ]; then
+  -     scan-build $CHECKERS --keep-cc -o html-report make -j $CPU_COUNT
+  - else
+  -     scan-build $CHECKERS --keep-cc -o html-report make
+  - fi
 
 after_scripts:
+  - if [ ${DISTRO_NAME} == "fedora" ];then
+  -   ./gen-index -i https://github.com/${OWNER_NAME}/${REPO_NAME}/raw/master/icons/hicolor_apps_16x16_mate.png
+  - fi
   - make distcheck
