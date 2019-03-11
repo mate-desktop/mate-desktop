@@ -928,7 +928,6 @@ paint_triangle (MateHSV  *hsv,
   int width, height;
   GtkStyleContext *context;
 
-  priv = hsv->priv;
   width = gtk_widget_get_allocated_width (widget); 
   height = gtk_widget_get_allocated_height (widget); 
   /* Compute triangle's vertices */
