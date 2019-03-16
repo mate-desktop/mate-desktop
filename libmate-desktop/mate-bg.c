@@ -2760,6 +2760,8 @@ handle_start_element (GMarkupParseContext *context,
 			 strcmp (parser->stack->tail->data, "to") == 0) {
 			slide->file2 = g_slist_prepend (slide->file2, size);
 		}
+		else
+			g_free (size);
 	}
 	g_queue_push_tail (parser->stack, g_strdup (name));
 }
