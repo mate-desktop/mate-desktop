@@ -2115,7 +2115,7 @@ mate_desktop_item_launch_on_screen_with_env (
 
 	/* make a new copy and get rid of spaces */
 	the_exec = g_alloca (strlen (exec) + 1);
-	strcpy (the_exec, exec);
+	g_strlcpy (the_exec, exec, strlen (exec) + 1);
 
 	if ( ! strip_the_amp (the_exec)) {
 		g_set_error (error,
