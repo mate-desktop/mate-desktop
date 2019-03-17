@@ -546,7 +546,7 @@ mate_rr_config_load_current (MateRRConfig *config, GError **error)
 	    }
 	    else
 	    {
-		strcpy (output->priv->vendor, "???");
+		g_strlcpy (output->priv->vendor, "???", sizeof (output->priv->vendor));
 		output->priv->product = 0;
 		output->priv->serial = 0;
 	    }
