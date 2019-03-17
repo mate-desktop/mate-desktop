@@ -91,7 +91,7 @@ test_ditem (const char *file)
 		 "Neu gesetzt!");
 
 	getcwd (path, 255 - strlen ("/foo.desktop"));
-	strcat (path, "/foo.desktop");
+	g_strlcat (path, "/foo.desktop", sizeof (path));
 
 	g_print ("Saving to foo.desktop\n");
 	uri = g_filename_to_uri (path, NULL, NULL);
