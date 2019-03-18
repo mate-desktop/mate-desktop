@@ -1074,7 +1074,7 @@ mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *facto
     }
   g_mutex_unlock (&factory->priv->lock);
 
-  if (have_script || mimetype_supported_by_gdk_pixbuf (mime_type))
+  if (uri && (have_script || mimetype_supported_by_gdk_pixbuf (mime_type)))
     {
       return !mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (factory,
                                                                           uri,
