@@ -157,9 +157,15 @@ mate_desktop_thumbnail_scale_down_pixbuf (GdkPixbuf *pixbuf,
 					*dest++ = 0;
 				}
 			} else {
-				*dest++ = r / n_pixels;
-				*dest++ = g / n_pixels;
-				*dest++ = b / n_pixels;
+				if (n_pixels != 0) {
+					*dest++ = r / n_pixels;
+					*dest++ = g / n_pixels;
+					*dest++ = b / n_pixels;
+				} else {
+					*dest++ = 0;
+					*dest++ = 0;
+					*dest++ = 0;
+				}
 			}
 			
 			s_x1 = s_x2;
