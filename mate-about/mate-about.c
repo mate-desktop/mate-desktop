@@ -54,7 +54,7 @@ void mate_about_run(void)
     gtk_about_dialog_set_logo_icon_name(mate_about_dialog, icon);
 
     // name
-    gtk_about_dialog_set_program_name(mate_about_dialog, gettext(program_name));
+    gtk_about_dialog_set_program_name(mate_about_dialog, _(program_name));
 
     // version
     gtk_about_dialog_set_version(mate_about_dialog, version);
