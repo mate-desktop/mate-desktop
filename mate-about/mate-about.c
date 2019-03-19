@@ -60,7 +60,7 @@ void mate_about_run(void)
     gtk_about_dialog_set_version(mate_about_dialog, version);
 
     // credits and website
-    gtk_about_dialog_set_copyright(mate_about_dialog, copyright);
+    gtk_about_dialog_set_copyright(mate_about_dialog, _(copyright));
     gtk_about_dialog_set_website(mate_about_dialog, website);
 
     /**
