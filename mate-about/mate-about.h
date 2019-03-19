@@ -26,7 +26,7 @@
 #include <libintl.h> // for gettext
 #include <glib/gi18n.h>
 
-const char* program_name = "MATE Desktop Environment";
+const char* program_name = N_("MATE Desktop Environment");
 const char* version = PACKAGE_VERSION;
 const char* icon = "mate";
 const char* website = "http://www.mate-desktop.org/";
