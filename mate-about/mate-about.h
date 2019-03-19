@@ -31,10 +31,9 @@ const char* version = PACKAGE_VERSION;
 const char* icon = "mate-desktop";
 const char* website = "http://www.mate-desktop.org/";
 
-const char* copyright =  ""
-    "Copyright © 1997-2011 GNOME developers\n"
-    "Copyright © 2011 Perberos\n"
-    "Copyright © 2012-2019 MATE developers";
+const char* copyright =  N_("Copyright © 1997-2011 GNOME developers\n"
+                            "Copyright © 2011 Perberos\n"
+                            "Copyright © 2012-2019 MATE developers");
 
 /* Increment comments_count if you add other comments. This will be
  * used to choose a random comment. */
