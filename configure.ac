@@ -7,6 +7,7 @@ m4_define(mate_version, [mate_platform.mate_minor.mate_micro]),
 AC_INIT([mate-desktop], mate_version, [https://github.com/mate-desktop/mate-desktop/])
 AC_CONFIG_SRCDIR([libmate-desktop])
 
+AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz tar-ustar check-news])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
