@@ -10,20 +10,11 @@ DISTCHECK_CONFIGURE_FLAGS = \
 	--enable-gtk-doc \
 	CFLAGS='-Wno-deprecated-declarations'
 
-if MATE_ABOUT_ENABLED
-versiondir = $(datadir)/mate-about
-version_DATA = mate-version.xml
-endif
-
-@INTLTOOL_XML_RULE@
-
 EXTRA_DIST =			\
 	autogen.sh		\
-	COPYING-DOCS		\
-	mate-version.xml.in.in
+	COPYING-DOCS
 
-CLEANFILES = \
-	$(version_DATA)
+CLEANFILES =
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/aclocal.m4 \

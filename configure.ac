@@ -238,13 +238,13 @@ fi
 AC_CONFIG_FILES([
 Makefile
 mate-about/Makefile
+mate-about/mate-version.xml.in
 libmate-desktop/Makefile
 libmate-desktop/mate-desktop-2.0.pc
 libmate-desktop/mate-desktop-2.0-uninstalled.pc
 docs/Makefile
 docs/reference/Makefile
 docs/reference/mate-desktop/Makefile
-mate-version.xml.in
 po/Makefile.in
 schemas/Makefile
 schemas/org.mate.accessibility-keyboard.gschema.xml
