@@ -15,11 +15,11 @@ mate_color_select_LDADD = \
 	$(top_builddir)/libmate-desktop/libmate-desktop-2.la \
 	$(MATE_DESKTOP_LIBS)
 
-@INTLTOOL_DESKTOP_RULE@
-
 desktopdir = $(datadir)/applications
 desktop_in_files = mate-color-select.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+mate-color-select.desktop: mate-color-select.desktop.in
+	$(AM_V_GEN)$(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 EXTRA_DIST = $(desktop_in_files)
 

@@ -31,8 +31,6 @@ AC_SUBST(LT_VERSION)
 
 AM_MAINTAINER_MODE
 
-IT_PROG_INTLTOOL([0.50.1])
-
 AC_PROG_CC
 AC_STDC_HEADERS
 AC_PROG_LIBTOOL
@@ -198,13 +196,14 @@ AC_SUBST(MATE_ABOUT_CFLAGS)
 AC_SUBST(MATE_ABOUT_LIBS)
 
 dnl Language Support
+AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION([0.19.8])
 
 GETTEXT_PACKAGE=mate-desktop
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",
 		   [The gettext translation domain])
 AC_SUBST(GETTEXT_PACKAGE)
-
-AM_GLIB_GNU_GETTEXT
+AC_PATH_PROG([ITSTOOL], [itstool], [notfound])
 
 GLIB_GSETTINGS
 
@@ -238,7 +237,7 @@ fi
 AC_CONFIG_FILES([
 Makefile
 mate-about/Makefile
-mate-about/mate-version.xml.in
+mate-about/mate-version.xml
 libmate-desktop/Makefile
 libmate-desktop/mate-desktop-2.0.pc
 libmate-desktop/mate-desktop-2.0-uninstalled.pc
@@ -247,24 +246,7 @@ docs/reference/Makefile
 docs/reference/mate-desktop/Makefile
 po/Makefile.in
 schemas/Makefile
-schemas/org.mate.accessibility-keyboard.gschema.xml
-schemas/org.mate.accessibility-startup.gschema.xml
-schemas/org.mate.applications-at-mobility.gschema.xml
-schemas/org.mate.applications-at-visual.gschema.xml
-schemas/org.mate.applications-browser.gschema.xml
-schemas/org.mate.applications-office.gschema.xml
-schemas/org.mate.applications-terminal.gschema.xml
 schemas/org.mate.background.gschema.xml
-schemas/org.mate.debug.gschema.xml
-schemas/org.mate.file-views.gschema.xml
-schemas/org.mate.interface.gschema.xml
-schemas/org.mate.lockdown.gschema.xml
-schemas/org.mate.peripherals-keyboard.gschema.xml
-schemas/org.mate.peripherals-mouse.gschema.xml
-schemas/org.mate.sound.gschema.xml
-schemas/org.mate.thumbnail-cache.gschema.xml
-schemas/org.mate.thumbnailers.gschema.xml
-schemas/org.mate.typing-break.gschema.xml
 man/Makefile
 tools/Makefile
 icons/Makefile
