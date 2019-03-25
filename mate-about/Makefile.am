@@ -15,9 +15,15 @@ desktopdir = $(datadir)/applications
 desktop_in_files = mate-about.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
-EXTRA_DIST = $(desktop_in_files)
+versiondir = $(datadir)/mate-about
+version_DATA = mate-version.xml
 
-CLEANFILES = $(desktop_DATA) $(bin_PROGRAMS)
+@INTLTOOL_XML_RULE@
+
+EXTRA_DIST = $(desktop_in_files)	\
+	     mate-version.xml.in
+
+CLEANFILES = $(desktop_DATA) $(bin_PROGRAMS) $(version_DATA)
 
 #-include $(top_srcdir)/git.mk
 
