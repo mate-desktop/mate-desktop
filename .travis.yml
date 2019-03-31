@@ -24,16 +24,22 @@ script:
   - ./docker-build --name ${DISTRO} --verbose --config .travis.yml --build scripts
 
 deploy:
-  provider: pages
-  github-token: $GITHUB_TOKEN
-  #keep-history: true
-  skip_cleanup: true
-  committer-from-gh: true
-  target-branch: gh-pages
-  local-dir: html-report
-  on:
-    all_branches: true
-    condition: ${DISTRO} =~ ^fedora.*$
+  - provider: pages
+    github-token: $GITHUB_TOKEN
+    #keep-history: true
+    skip_cleanup: true
+    committer-from-gh: true
+    target-branch: gh-pages
+    local-dir: html-report
+    on:
+      all_branches: true
+      condition: ${DISTRO} =~ ^fedora.*$
+  - provider: script
+    script: ./docker-build --verbose --config .travis.yml --release github
+    skip_cleanup: true
+    on:
+      tags: true
+      condition: "${TRAVIS_TAG} =~ ^v.*$ && ${DISTRO} =~ ^fedora.*$"
 
 after_success:
   - 'if [[ "$TRAVIS_SECURE_ENV_VARS" == "true" && "$TRAVIS_PULL_REQUEST" != "false" && ${DISTRO} =~ ^fedora.*$ ]]; then
@@ -170,3 +176,14 @@ after_scripts:
   -   ./gen-index -i https://github.com/${OWNER_NAME}/${REPO_NAME}/raw/master/icons/hicolor_apps_16x16_mate.png
   - fi
   - make distcheck
+
+releases:
+  draft: false
+  prerelease: false
+  checksum: true
+  file_glob: true
+  files: mate-desktop-*.tar.xz
+  github_release:
+    tags: true
+    overwrite: true
+    base_version: 1.20.0
