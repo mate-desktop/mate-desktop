@@ -21,7 +21,7 @@ install:
   - ./docker-build --name ${DISTRO} --config .travis.yml --install
 
 script:
-  - ./docker-build --name ${DISTRO} --verbose --config .travis.yml --build scripts
+  - ./docker-build --name ${DISTRO} --verbose --config .travis.yml --build scripts --build meson
 
 deploy:
   - provider: pages
