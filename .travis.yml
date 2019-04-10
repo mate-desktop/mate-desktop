@@ -173,10 +173,12 @@ build_scripts:
   - fi
 
 after_scripts:
-  - if [ ${DISTRO_NAME} == "fedora" ];then
-  -   ./gen-index -i https://github.com/${OWNER_NAME}/${REPO_NAME}/raw/master/icons/hicolor_apps_16x16_mate.png
+  - if [ ${BUILD_TYPE} == "scripts" ];then
+  -     if [ ${DISTRO_NAME} == "fedora" ];then
+  -         ./gen-index -i https://github.com/${OWNER_NAME}/${REPO_NAME}/raw/master/icons/hicolor_apps_16x16_mate.png
+  -     fi
+  -     make distcheck
   - fi
-  - make distcheck
 
 releases:
   draft: false
