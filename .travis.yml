@@ -72,6 +72,7 @@ requires:
     - intltool
     - iso-codes
     - librsvg
+    - meson
     - make
     - mate-common
     - startup-notification
@@ -100,6 +101,7 @@ requires:
     - libxml2-dev
     - libxrandr-dev
     - mate-common
+    - meson
 
   fedora:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-desktop.git
@@ -117,6 +119,7 @@ requires:
     - librsvg2-tools
     - make
     - mate-common
+    - meson
     - redhat-rpm-config
     - startup-notification-devel
 
@@ -140,6 +143,7 @@ requires:
     - libxml2-dev
     - libxrandr-dev
     - mate-common
+    - meson
 
 variables:
   - CFLAGS="-Wall -Werror=format-security"
