@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 23:20+0100\n"
+"POT-Creation-Date: 2019-03-19 15:14+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Bulgarian (https://www.transifex.com/mate/teams/13566/bg/)\n"
@@ -45,7 +45,18 @@ msgstr "Относно MATE"
 msgid "Learn more about MATE"
 msgstr "Научете повече за MATE"
 
-#: ../mate-about/mate-about.h:43
+#: ../mate-about/mate-about.h:29
+msgid "MATE Desktop Environment"
+msgstr ""
+
+#: ../mate-about/mate-about.h:34
+msgid ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE developers"
+msgstr ""
+
+#: ../mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -54,7 +65,7 @@ msgstr ""
 "за потребителите на Линукс, като използва традиционните метафори за графичен"
 " потребителски интерфейс (ГПИ) за една работна среда."
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -63,7 +74,7 @@ msgstr ""
 "включително мениджър на файлове, програма за преглед на документи, програма "
 "за преглед на изображения, менюта и много приложения."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -71,7 +82,7 @@ msgstr ""
 "„MATE“ е свободна, удобна, стабилна и достъпна работна среда за работен плот"
 " за семейството от операционни системи, които са подобни на Unix."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -83,7 +94,7 @@ msgstr ""
 "повече хора са допринесли по други важни начини, включително чрез преводи, "
 "писане на документация и осигуряване на крайното качество."
 
-#: ../mate-about/mate-about.h:56
+#: ../mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
@@ -92,7 +103,7 @@ msgstr ""
 "плотове за Линукс, но тя вече не е на разположение… MATE е тук, за да Ви "
 "предостави същата графична работна среда!"
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -134,7 +145,7 @@ msgid "Pick a Color"
 msgstr "Избор на цвят"
 
 #: ../libmate-desktop/mate-colorbutton.c:182
-#: ../libmate-desktop/mate-colorsel.c:286
+#: ../libmate-desktop/mate-colorsel.c:287
 msgid "Current Color"
 msgstr "Текущ цвят"
 
@@ -143,7 +154,7 @@ msgid "The selected color"
 msgstr "Избраният цвят"
 
 #: ../libmate-desktop/mate-colorbutton.c:197
-#: ../libmate-desktop/mate-colorsel.c:293
+#: ../libmate-desktop/mate-colorsel.c:294
 msgid "Current Alpha"
 msgstr "Текуща плътност"
 
@@ -157,41 +168,41 @@ msgstr ""
 msgid "Received invalid color data\n"
 msgstr "Получени са неправилни данни за цвят\n"
 
-#: ../libmate-desktop/mate-colorsel.c:272
+#: ../libmate-desktop/mate-colorsel.c:273
 msgid "Has Opacity Control"
 msgstr "Включва плътност"
 
-#: ../libmate-desktop/mate-colorsel.c:273
+#: ../libmate-desktop/mate-colorsel.c:274
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Дали изборът на цвят да позволява настройка на плътността"
 
-#: ../libmate-desktop/mate-colorsel.c:279
+#: ../libmate-desktop/mate-colorsel.c:280
 msgid "Has palette"
 msgstr "Включва палитра"
 
-#: ../libmate-desktop/mate-colorsel.c:280
+#: ../libmate-desktop/mate-colorsel.c:281
 msgid "Whether a palette should be used"
 msgstr "Дали трябва да се използва палитра"
 
-#: ../libmate-desktop/mate-colorsel.c:287
+#: ../libmate-desktop/mate-colorsel.c:288
 msgid "The current color"
 msgstr "Текущият цвят"
 
-#: ../libmate-desktop/mate-colorsel.c:294
+#: ../libmate-desktop/mate-colorsel.c:295
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Текущата стойност на плътността (0 — напълно прозрачен, 65535 — напълно "
 "плътен цвят)"
 
-#: ../libmate-desktop/mate-colorsel.c:300
+#: ../libmate-desktop/mate-colorsel.c:301
 msgid "HEX String"
 msgstr "Шестнадесетичен низ"
 
-#: ../libmate-desktop/mate-colorsel.c:301
+#: ../libmate-desktop/mate-colorsel.c:302
 msgid "The hexadecimal string of current color"
 msgstr "Шестнадесетичният низ на текущия цвят"
 
-#: ../libmate-desktop/mate-colorsel.c:347
+#: ../libmate-desktop/mate-colorsel.c:348
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -199,7 +210,7 @@ msgstr ""
 "Изберете желания цвят от външния пръстен. Изберете яркостта или наситеността"
 " на този цвят от вътрешния триъгълник."
 
-#: ../libmate-desktop/mate-colorsel.c:371
+#: ../libmate-desktop/mate-colorsel.c:372
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -207,68 +218,68 @@ msgstr ""
 "Щракнете капкомера, а след това щракнете с него на някое място от екрана, за"
 " да изберете цвета му."
 
-#: ../libmate-desktop/mate-colorsel.c:380
+#: ../libmate-desktop/mate-colorsel.c:381
 msgid "_Hue:"
 msgstr "_Оттенък:"
 
-#: ../libmate-desktop/mate-colorsel.c:381
+#: ../libmate-desktop/mate-colorsel.c:382
 msgid "Position on the color wheel."
 msgstr "Местоположението върху пръстена на цветовете."
 
-#: ../libmate-desktop/mate-colorsel.c:383
+#: ../libmate-desktop/mate-colorsel.c:384
 msgid "_Saturation:"
 msgstr "_Наситеност:"
 
-#: ../libmate-desktop/mate-colorsel.c:384
+#: ../libmate-desktop/mate-colorsel.c:385
 msgid "\"Deepness\" of the color."
 msgstr "„Дълбочината“ на цвета."
 
-#: ../libmate-desktop/mate-colorsel.c:385
+#: ../libmate-desktop/mate-colorsel.c:386
 msgid "_Value:"
 msgstr "С_тойност:"
 
-#: ../libmate-desktop/mate-colorsel.c:386
+#: ../libmate-desktop/mate-colorsel.c:387
 msgid "Brightness of the color."
 msgstr "Яркостта на цвета."
 
-#: ../libmate-desktop/mate-colorsel.c:387
+#: ../libmate-desktop/mate-colorsel.c:388
 msgid "_Red:"
 msgstr "_Червено:"
 
-#: ../libmate-desktop/mate-colorsel.c:388
+#: ../libmate-desktop/mate-colorsel.c:389
 msgid "Amount of red light in the color."
 msgstr "Количеството на червената светлина в цвета."
 
-#: ../libmate-desktop/mate-colorsel.c:389
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "_Green:"
 msgstr "_Зелено:"
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "Amount of green light in the color."
 msgstr "Количеството на зелената светлина в цвета."
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:392
 msgid "_Blue:"
 msgstr "_Синьо:"
 
-#: ../libmate-desktop/mate-colorsel.c:392
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "Amount of blue light in the color."
 msgstr "Количеството на синята светлина в цвета."
 
-#: ../libmate-desktop/mate-colorsel.c:395
+#: ../libmate-desktop/mate-colorsel.c:396
 msgid "Op_acity:"
 msgstr "_Плътност:"
 
-#: ../libmate-desktop/mate-colorsel.c:402
-#: ../libmate-desktop/mate-colorsel.c:412
+#: ../libmate-desktop/mate-colorsel.c:403
+#: ../libmate-desktop/mate-colorsel.c:413
 msgid "Transparency of the color."
 msgstr "Прозрачността на цвета."
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:420
 msgid "Color _name:"
 msgstr "И_ме на цвета:"
 
-#: ../libmate-desktop/mate-colorsel.c:433
+#: ../libmate-desktop/mate-colorsel.c:434
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -276,15 +287,15 @@ msgstr ""
 "Тук можете да въведете шестнадесетичен код на цвят, както в HTML, или просто"
 " име на цвят, например „оранжев“."
 
-#: ../libmate-desktop/mate-colorsel.c:463
+#: ../libmate-desktop/mate-colorsel.c:464
 msgid "_Palette:"
 msgstr "Па_литра:"
 
-#: ../libmate-desktop/mate-colorsel.c:493
+#: ../libmate-desktop/mate-colorsel.c:494
 msgid "Color Wheel"
 msgstr "Пръстен на цветовете"
 
-#: ../libmate-desktop/mate-colorsel.c:950
+#: ../libmate-desktop/mate-colorsel.c:951
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -294,7 +305,7 @@ msgstr ""
 "Можете да завлачите този цвят в поле от палитрата, или да го изберете като "
 "текущ, като го завлачите в другото поле за образеца на цвета."
 
-#: ../libmate-desktop/mate-colorsel.c:953
+#: ../libmate-desktop/mate-colorsel.c:954
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -302,26 +313,26 @@ msgstr ""
 "Избраният цвят. Можете да го завлачите в поле от палитрата, за да го "
 "запазите за бъдещо ползване."
 
-#: ../libmate-desktop/mate-colorsel.c:958
+#: ../libmate-desktop/mate-colorsel.c:959
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr ""
 "Предходно избраният цвят, за сравнение с цвета, който избирате в момента."
 
-#: ../libmate-desktop/mate-colorsel.c:961
+#: ../libmate-desktop/mate-colorsel.c:962
 msgid "The color you've chosen."
 msgstr "Избраният цвят."
 
-#: ../libmate-desktop/mate-colorsel.c:1366
+#: ../libmate-desktop/mate-colorsel.c:1367
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1371
+#: ../libmate-desktop/mate-colorsel.c:1372
 msgid "_Save color here"
 msgstr "Запазване на цвета _тук"
 
-#: ../libmate-desktop/mate-colorsel.c:1591
+#: ../libmate-desktop/mate-colorsel.c:1592
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""

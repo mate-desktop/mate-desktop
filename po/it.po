@@ -6,22 +6,24 @@
 # Translators:
 # Marco Giannini <giannini.marco@gmail.com>, 2018
 # Dario Di Nucci <linkin88mail@gmail.com>, 2018
-# Giuseppe Pignataro (Fastbyte01) <rogepix@gmail.com>, 2018
+# Giuseppe Pignataro <rogepix@gmail.com>, 2018
 # Matteo, 2018
 # Cristiano Venanzi, 2018
 # Marco Bartolucci <nap.84@live.it>, 2018
 # Marco Z. <minaz666@gmail.com>, 2018
 # l3nn4rt, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# andrea pittaro <transifex@andreapittaro.it>, 2019
+# Enrico B. <enricobe@hotmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 23:20+0100\n"
+"POT-Creation-Date: 2019-03-19 15:14+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Last-Translator: Enrico B. <enricobe@hotmail.com>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,7 +45,21 @@ msgstr "Informazioni su MATE"
 msgid "Learn more about MATE"
 msgstr "Per saperne di più su MATE"
 
-#: ../mate-about/mate-about.h:43
+#: ../mate-about/mate-about.h:29
+msgid "MATE Desktop Environment"
+msgstr "MATE Desktop Environment"
+
+#: ../mate-about/mate-about.h:34
+msgid ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE developers"
+msgstr ""
+"Copyright © 1997-2011 Gli sviluppatori di GNOME\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 Gli sviluppatori di MATE"
+
+#: ../mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -51,7 +67,7 @@ msgstr ""
 "MATE fornisce un desktop intuitivo e gradevole per gli utenti Linux, usando "
 "le metafore tradizionali."
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -59,7 +75,7 @@ msgstr ""
 "MATE include la maggior parte di quello che è visibile sul computer, "
 "compresi il file manager, il web browser, i menù e molte applicazioni."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -67,7 +83,7 @@ msgstr ""
 "MATE è un ambiente desktop libero, usabile, stabile e accessibile per la "
 "famiglia di sistemi operativi tipo UNIX."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -79,7 +95,7 @@ msgstr ""
 "hanno contribuito in altri modi importanti, come traduzioni, documentazione "
 "e controllo della qualità."
 
-#: ../mate-about/mate-about.h:56
+#: ../mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
@@ -87,7 +103,7 @@ msgstr ""
 "GNOME 2 è stato il desktop più popolare per Linux ma non è più "
 "disponibile... MATE è qui per fornire lo stesso desktop agli utenti!"
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -127,7 +143,7 @@ msgid "Pick a Color"
 msgstr "Scegliere un colore"
 
 #: ../libmate-desktop/mate-colorbutton.c:182
-#: ../libmate-desktop/mate-colorsel.c:286
+#: ../libmate-desktop/mate-colorsel.c:287
 msgid "Current Color"
 msgstr "Colore attuale"
 
@@ -136,7 +152,7 @@ msgid "The selected color"
 msgstr "Il colore selezionato"
 
 #: ../libmate-desktop/mate-colorbutton.c:197
-#: ../libmate-desktop/mate-colorsel.c:293
+#: ../libmate-desktop/mate-colorsel.c:294
 msgid "Current Alpha"
 msgstr "Alpha corrente"
 
@@ -150,43 +166,43 @@ msgstr ""
 msgid "Received invalid color data\n"
 msgstr "Ricevuti dati colore non validi\n"
 
-#: ../libmate-desktop/mate-colorsel.c:272
+#: ../libmate-desktop/mate-colorsel.c:273
 msgid "Has Opacity Control"
 msgstr "Ha il controller dell'opacità"
 
-#: ../libmate-desktop/mate-colorsel.c:273
+#: ../libmate-desktop/mate-colorsel.c:274
 msgid "Whether the color selector should allow setting opacity"
 msgstr ""
 "Indica se il selettore del colore dovrebbe permettere di impostare "
 "l'opacità."
 
-#: ../libmate-desktop/mate-colorsel.c:279
+#: ../libmate-desktop/mate-colorsel.c:280
 msgid "Has palette"
 msgstr "Ha la tavolozza"
 
-#: ../libmate-desktop/mate-colorsel.c:280
+#: ../libmate-desktop/mate-colorsel.c:281
 msgid "Whether a palette should be used"
 msgstr "Indica se la tavolozza dovrebbe essere usata"
 
-#: ../libmate-desktop/mate-colorsel.c:287
+#: ../libmate-desktop/mate-colorsel.c:288
 msgid "The current color"
 msgstr "Il colore attuale"
 
-#: ../libmate-desktop/mate-colorsel.c:294
+#: ../libmate-desktop/mate-colorsel.c:295
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Il valore di opacità attuale (0 completamente trasparente, 65535 "
 "completamente opaco)"
 
-#: ../libmate-desktop/mate-colorsel.c:300
+#: ../libmate-desktop/mate-colorsel.c:301
 msgid "HEX String"
 msgstr "Stringa esadecimale"
 
-#: ../libmate-desktop/mate-colorsel.c:301
+#: ../libmate-desktop/mate-colorsel.c:302
 msgid "The hexadecimal string of current color"
 msgstr "La stringa esadecimale del colore attuale"
 
-#: ../libmate-desktop/mate-colorsel.c:347
+#: ../libmate-desktop/mate-colorsel.c:348
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -194,7 +210,7 @@ msgstr ""
 "Seleziona il colore che vuoi dall'anello esterno. Seleziona la luminosità "
 "del colore usando il triangolo interno."
 
-#: ../libmate-desktop/mate-colorsel.c:371
+#: ../libmate-desktop/mate-colorsel.c:372
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -202,68 +218,68 @@ msgstr ""
 "Clicca sul contagocce, poi clicca un colore sul tuo schermo per selezionare "
 "quello schermo."
 
-#: ../libmate-desktop/mate-colorsel.c:380
+#: ../libmate-desktop/mate-colorsel.c:381
 msgid "_Hue:"
 msgstr "_Colore:"
 
-#: ../libmate-desktop/mate-colorsel.c:381
+#: ../libmate-desktop/mate-colorsel.c:382
 msgid "Position on the color wheel."
 msgstr "Posizione nella ruota del colore."
 
-#: ../libmate-desktop/mate-colorsel.c:383
+#: ../libmate-desktop/mate-colorsel.c:384
 msgid "_Saturation:"
 msgstr "_Saturazione:"
 
-#: ../libmate-desktop/mate-colorsel.c:384
+#: ../libmate-desktop/mate-colorsel.c:385
 msgid "\"Deepness\" of the color."
 msgstr "\"Profondità\" del colore."
 
-#: ../libmate-desktop/mate-colorsel.c:385
+#: ../libmate-desktop/mate-colorsel.c:386
 msgid "_Value:"
 msgstr "_Valore:"
 
-#: ../libmate-desktop/mate-colorsel.c:386
+#: ../libmate-desktop/mate-colorsel.c:387
 msgid "Brightness of the color."
 msgstr "Luminosità del colore."
 
-#: ../libmate-desktop/mate-colorsel.c:387
+#: ../libmate-desktop/mate-colorsel.c:388
 msgid "_Red:"
 msgstr "_Rosso:"
 
-#: ../libmate-desktop/mate-colorsel.c:388
+#: ../libmate-desktop/mate-colorsel.c:389
 msgid "Amount of red light in the color."
 msgstr "Quantità di rosso nel colore."
 
-#: ../libmate-desktop/mate-colorsel.c:389
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "_Green:"
 msgstr "_Verde:"
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "Amount of green light in the color."
 msgstr "Quantità di verde nel colore."
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:392
 msgid "_Blue:"
 msgstr "_Blu:"
 
-#: ../libmate-desktop/mate-colorsel.c:392
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "Amount of blue light in the color."
 msgstr "Quantità di blue nel colore."
 
-#: ../libmate-desktop/mate-colorsel.c:395
+#: ../libmate-desktop/mate-colorsel.c:396
 msgid "Op_acity:"
 msgstr "Op_acità:"
 
-#: ../libmate-desktop/mate-colorsel.c:402
-#: ../libmate-desktop/mate-colorsel.c:412
+#: ../libmate-desktop/mate-colorsel.c:403
+#: ../libmate-desktop/mate-colorsel.c:413
 msgid "Transparency of the color."
 msgstr "Trasparenza del colore."
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:420
 msgid "Color _name:"
 msgstr "_Nome colore:"
 
-#: ../libmate-desktop/mate-colorsel.c:433
+#: ../libmate-desktop/mate-colorsel.c:434
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -271,15 +287,15 @@ msgstr ""
 "Puoi inserire un valore di colore esadecimale in stile HTML o il nome di un "
 "colore come 'orange' in questo campo."
 
-#: ../libmate-desktop/mate-colorsel.c:463
+#: ../libmate-desktop/mate-colorsel.c:464
 msgid "_Palette:"
 msgstr "_Tavolozza:"
 
-#: ../libmate-desktop/mate-colorsel.c:493
+#: ../libmate-desktop/mate-colorsel.c:494
 msgid "Color Wheel"
 msgstr "Ruota dei colori"
 
-#: ../libmate-desktop/mate-colorsel.c:950
+#: ../libmate-desktop/mate-colorsel.c:951
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -289,7 +305,7 @@ msgstr ""
 "selezionando ora. Puoi spostare questo colore nella tavolozza o selezionare "
 "questo colore come attuale spostandolo affianco."
 
-#: ../libmate-desktop/mate-colorsel.c:953
+#: ../libmate-desktop/mate-colorsel.c:954
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -297,7 +313,7 @@ msgstr ""
 "Il colore che hai scelto. Puoi spostare questo colore nella tavolozza per "
 "salvarlo e usarlo in futuro."
 
-#: ../libmate-desktop/mate-colorsel.c:958
+#: ../libmate-desktop/mate-colorsel.c:959
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
@@ -305,19 +321,19 @@ msgstr ""
 "Il colore precedentemente selezionato, per compararlo con i colore che stai "
 "selezionando ora."
 
-#: ../libmate-desktop/mate-colorsel.c:961
+#: ../libmate-desktop/mate-colorsel.c:962
 msgid "The color you've chosen."
 msgstr "Il colore scelto."
 
-#: ../libmate-desktop/mate-colorsel.c:1366
+#: ../libmate-desktop/mate-colorsel.c:1367
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1371
+#: ../libmate-desktop/mate-colorsel.c:1372
 msgid "_Save color here"
 msgstr "_Salva colore qui"
 
-#: ../libmate-desktop/mate-colorsel.c:1591
+#: ../libmate-desktop/mate-colorsel.c:1592
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -636,6 +652,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Blocca i modificatori quando premuto due volte di fila, finché lo stesso "
+"modificatore non viene premuto un'altra volta"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Disable if two keys are pressed at the same time."
@@ -1268,13 +1286,15 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:71
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "Abilita il metodo di Incolla selezionato principale"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:72
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
+"Se impostato a vero, gtk+ usa il metodo principale di Incolla Selezione, di "
+"solito comandato con il click sulla rotella del mouse."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

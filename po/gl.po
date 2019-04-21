@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 23:20+0100\n"
+"POT-Creation-Date: 2019-03-19 15:14+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>, 2019\n"
 "Language-Team: Galician (https://www.transifex.com/mate/teams/13566/gl/)\n"
@@ -38,7 +38,21 @@ msgstr "Sobre MATE"
 msgid "Learn more about MATE"
 msgstr "Aprenda máis sobre MATE"
 
-#: ../mate-about/mate-about.h:43
+#: ../mate-about/mate-about.h:29
+msgid "MATE Desktop Environment"
+msgstr "Contorno de escritorio MATE"
+
+#: ../mate-about/mate-about.h:34
+msgid ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE developers"
+msgstr ""
+"Copyright © 1997-2011  Os desenvolvedores do GNOME\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019  Os desenvolvedores do MATE"
+
+#: ../mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -46,7 +60,7 @@ msgstr ""
 "MATE fornece un escritorio intuitivo e atractivo para os usuarios de Linux "
 "empregando as metáforas tradicionais."
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -54,7 +68,7 @@ msgstr ""
 "MATE inclúe a maior parte do que ve no seu computador, incluíndo o xestor de"
 " ficheiros, visor de documentos, visor de imaxes, menús e aplicativos."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -62,7 +76,7 @@ msgstr ""
 "MATE é un contorno de escritorio libre, doado de usar, estábel e accesíbel "
 "para a familia estilo-Unix de sistemas operativos."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -70,10 +84,10 @@ msgid ""
 "assurance."
 msgstr ""
 "MATE é unha continuación de GNOME 2. Centos de persoas aportaron código a "
-"GNOME desde que se iniciou en 1997, e moitos máis colaboraron doutros xeitos"
+"GNOME dende que se iniciou en 1997, e moitos máis colaboraron doutros xeitos"
 " importantes, incluíndo traducións, documentación e control de calidade."
 
-#: ../mate-about/mate-about.h:56
+#: ../mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
@@ -82,7 +96,7 @@ msgstr ""
 "dispoñíbel... MATE está aquí para fornecerlle a vostede ese mesmo "
 "escritorio!"
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -122,7 +136,7 @@ msgid "Pick a Color"
 msgstr "Seleccione unha cor"
 
 #: ../libmate-desktop/mate-colorbutton.c:182
-#: ../libmate-desktop/mate-colorsel.c:286
+#: ../libmate-desktop/mate-colorsel.c:287
 msgid "Current Color"
 msgstr "Cor actual"
 
@@ -131,7 +145,7 @@ msgid "The selected color"
 msgstr "A cor seleccionada"
 
 #: ../libmate-desktop/mate-colorbutton.c:197
-#: ../libmate-desktop/mate-colorsel.c:293
+#: ../libmate-desktop/mate-colorsel.c:294
 msgid "Current Alpha"
 msgstr "Alfa actual"
 
@@ -145,41 +159,41 @@ msgstr ""
 msgid "Received invalid color data\n"
 msgstr "Recibíronse datos de cor incorrectos\n"
 
-#: ../libmate-desktop/mate-colorsel.c:272
+#: ../libmate-desktop/mate-colorsel.c:273
 msgid "Has Opacity Control"
 msgstr "Ten control de opacidade"
 
-#: ../libmate-desktop/mate-colorsel.c:273
+#: ../libmate-desktop/mate-colorsel.c:274
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Indica se o selector de cor debe permitir axustar a opacidade"
 
-#: ../libmate-desktop/mate-colorsel.c:279
+#: ../libmate-desktop/mate-colorsel.c:280
 msgid "Has palette"
 msgstr "Ten paleta"
 
-#: ../libmate-desktop/mate-colorsel.c:280
+#: ../libmate-desktop/mate-colorsel.c:281
 msgid "Whether a palette should be used"
 msgstr "Indica se debe empregarse unha paleta"
 
-#: ../libmate-desktop/mate-colorsel.c:287
+#: ../libmate-desktop/mate-colorsel.c:288
 msgid "The current color"
 msgstr "A cor actual"
 
-#: ../libmate-desktop/mate-colorsel.c:294
+#: ../libmate-desktop/mate-colorsel.c:295
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "O valor da opacidade actual (0 completamente transparente, 65535 "
 "completamente opaca)"
 
-#: ../libmate-desktop/mate-colorsel.c:300
+#: ../libmate-desktop/mate-colorsel.c:301
 msgid "HEX String"
 msgstr "Cadea hexadecimal"
 
-#: ../libmate-desktop/mate-colorsel.c:301
+#: ../libmate-desktop/mate-colorsel.c:302
 msgid "The hexadecimal string of current color"
 msgstr "A cadea hexadecimal da cor actual"
 
-#: ../libmate-desktop/mate-colorsel.c:347
+#: ../libmate-desktop/mate-colorsel.c:348
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -187,7 +201,7 @@ msgstr ""
 "Seleccione a cor que queira para o anel exterior. Seleccione a escuridade ou"
 " a claridade desta cor empregando o  triangulo interior."
 
-#: ../libmate-desktop/mate-colorsel.c:371
+#: ../libmate-desktop/mate-colorsel.c:372
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -195,68 +209,68 @@ msgstr ""
 "prema no contagotas e, a seguir, prema nunha cor de calquera parte da "
 "pantalla para seleccionar esa cor."
 
-#: ../libmate-desktop/mate-colorsel.c:380
+#: ../libmate-desktop/mate-colorsel.c:381
 msgid "_Hue:"
 msgstr "_Matiz:"
 
-#: ../libmate-desktop/mate-colorsel.c:381
+#: ../libmate-desktop/mate-colorsel.c:382
 msgid "Position on the color wheel."
 msgstr "Posición na roda de cor."
 
-#: ../libmate-desktop/mate-colorsel.c:383
+#: ../libmate-desktop/mate-colorsel.c:384
 msgid "_Saturation:"
 msgstr "_Saturación:"
 
-#: ../libmate-desktop/mate-colorsel.c:384
+#: ../libmate-desktop/mate-colorsel.c:385
 msgid "\"Deepness\" of the color."
 msgstr "«Profundidade» da cor."
 
-#: ../libmate-desktop/mate-colorsel.c:385
+#: ../libmate-desktop/mate-colorsel.c:386
 msgid "_Value:"
 msgstr "_Valor:"
 
-#: ../libmate-desktop/mate-colorsel.c:386
+#: ../libmate-desktop/mate-colorsel.c:387
 msgid "Brightness of the color."
 msgstr "Brillo da cor."
 
-#: ../libmate-desktop/mate-colorsel.c:387
+#: ../libmate-desktop/mate-colorsel.c:388
 msgid "_Red:"
 msgstr "Ve_rmello:"
 
-#: ../libmate-desktop/mate-colorsel.c:388
+#: ../libmate-desktop/mate-colorsel.c:389
 msgid "Amount of red light in the color."
 msgstr "Cantidade de luz vermella na cor."
 
-#: ../libmate-desktop/mate-colorsel.c:389
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "_Green:"
 msgstr "V_erde:"
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "Amount of green light in the color."
 msgstr "Cantidade de luz verde na cor."
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:392
 msgid "_Blue:"
 msgstr "_Azul:"
 
-#: ../libmate-desktop/mate-colorsel.c:392
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "Amount of blue light in the color."
 msgstr "Cantidade de luz azul na cor."
 
-#: ../libmate-desktop/mate-colorsel.c:395
+#: ../libmate-desktop/mate-colorsel.c:396
 msgid "Op_acity:"
 msgstr "_Opacidade:"
 
-#: ../libmate-desktop/mate-colorsel.c:402
-#: ../libmate-desktop/mate-colorsel.c:412
+#: ../libmate-desktop/mate-colorsel.c:403
+#: ../libmate-desktop/mate-colorsel.c:413
 msgid "Transparency of the color."
 msgstr "Transparencia da cor."
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:420
 msgid "Color _name:"
 msgstr "_Nome da cor:"
 
-#: ../libmate-desktop/mate-colorsel.c:433
+#: ../libmate-desktop/mate-colorsel.c:434
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -264,15 +278,15 @@ msgstr ""
 "Pode introducir un valor hexadecimal da cor ao estilo HTML, ou simplemente o"
 " nome da cor en inglés, p.ex. «orange»."
 
-#: ../libmate-desktop/mate-colorsel.c:463
+#: ../libmate-desktop/mate-colorsel.c:464
 msgid "_Palette:"
 msgstr "_Paleta:"
 
-#: ../libmate-desktop/mate-colorsel.c:493
+#: ../libmate-desktop/mate-colorsel.c:494
 msgid "Color Wheel"
 msgstr "Roda de cor"
 
-#: ../libmate-desktop/mate-colorsel.c:950
+#: ../libmate-desktop/mate-colorsel.c:951
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -282,7 +296,7 @@ msgstr ""
 " agora.. Pode arrastrar esta cor a unha entrada de paleta ou seleccionar "
 "esta cor como actual arrastrándoa á beira doutra mostra de cor."
 
-#: ../libmate-desktop/mate-colorsel.c:953
+#: ../libmate-desktop/mate-colorsel.c:954
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -290,7 +304,7 @@ msgstr ""
 "A cor que escolleu. Pode arrastrar esta cor a unha entrada da paleta para "
 "gardala para o seu uso no futuro."
 
-#: ../libmate-desktop/mate-colorsel.c:958
+#: ../libmate-desktop/mate-colorsel.c:959
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
@@ -298,19 +312,19 @@ msgstr ""
 "A cor seleccionada previamente, para comparar coa cor que está a seleccionar"
 " agora."
 
-#: ../libmate-desktop/mate-colorsel.c:961
+#: ../libmate-desktop/mate-colorsel.c:962
 msgid "The color you've chosen."
 msgstr "A cor que escolleu."
 
-#: ../libmate-desktop/mate-colorsel.c:1366
+#: ../libmate-desktop/mate-colorsel.c:1367
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1371
+#: ../libmate-desktop/mate-colorsel.c:1372
 msgid "_Save color here"
 msgstr "_Gardar a cor aquí"
 
-#: ../libmate-desktop/mate-colorsel.c:1591
+#: ../libmate-desktop/mate-colorsel.c:1592
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""

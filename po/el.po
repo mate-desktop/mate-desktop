@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 23:20+0100\n"
+"POT-Creation-Date: 2019-03-19 15:14+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Greek (https://www.transifex.com/mate/teams/13566/el/)\n"
@@ -51,7 +51,18 @@ msgstr "Περί MATE"
 msgid "Learn more about MATE"
 msgstr "Μάθετε περισσότερα για το MATE"
 
-#: ../mate-about/mate-about.h:43
+#: ../mate-about/mate-about.h:29
+msgid "MATE Desktop Environment"
+msgstr ""
+
+#: ../mate-about/mate-about.h:34
+msgid ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE developers"
+msgstr ""
+
+#: ../mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -59,7 +70,7 @@ msgstr ""
 "Το MATE προσφέρει αισθητική και ελκυστική επιφάνεια εργασίας σε χρήστες "
 "Linux χρησιμοποιηόντας παραδοσιακές μεταφορές."
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -67,7 +78,7 @@ msgstr ""
 "Το MATE περιέχει ότι χρειάζεστε στον υπολογιστή σας, συμπεριλαμβαμένων των "
 "διαχειρηστή αρχείων, προβολέα κειμένων, menus και πολλές εφαρμογές."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -75,7 +86,7 @@ msgstr ""
 "Το MATE είναι ένα ελεύθερο, εύχρηστο, προσβάσιμο γραφικό περιβάλλον για την "
 "οικογένεια των λειτουργικών συστημάτων Unix."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -87,7 +98,7 @@ msgstr ""
 "συνεισφέρει σε άλλους σημαντικούς τομείς όπως μεταφράσεις, τεκμηριώσεις και "
 "διασφάλιση ποιότητας."
 
-#: ../mate-about/mate-about.h:56
+#: ../mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
@@ -96,7 +107,7 @@ msgstr ""
 "είναι πλέον διαθέσιμο... Το ΜΑΤΕ είναι εδώ για να σας παρέχει το ίδιο "
 "γραφικό περιβάλλον!"
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -136,7 +147,7 @@ msgid "Pick a Color"
 msgstr "Επιλέξτε ένα χρώμα"
 
 #: ../libmate-desktop/mate-colorbutton.c:182
-#: ../libmate-desktop/mate-colorsel.c:286
+#: ../libmate-desktop/mate-colorsel.c:287
 msgid "Current Color"
 msgstr "Τρέχον χρώμα"
 
@@ -145,7 +156,7 @@ msgid "The selected color"
 msgstr "Το επιλεγμένο χρώμα"
 
 #: ../libmate-desktop/mate-colorbutton.c:197
-#: ../libmate-desktop/mate-colorsel.c:293
+#: ../libmate-desktop/mate-colorsel.c:294
 msgid "Current Alpha"
 msgstr "Τρέχον άλφα"
 
@@ -158,40 +169,40 @@ msgstr ""
 msgid "Received invalid color data\n"
 msgstr "Ελήφθησαν μη έγκυρα δεδομένα χρώματος\n"
 
-#: ../libmate-desktop/mate-colorsel.c:272
+#: ../libmate-desktop/mate-colorsel.c:273
 msgid "Has Opacity Control"
 msgstr "Διαθέτει έλεγχο αδιαφάνειας"
 
-#: ../libmate-desktop/mate-colorsel.c:273
+#: ../libmate-desktop/mate-colorsel.c:274
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Εάν ο επιλογέας χρώματος θα επιτρέπει τον ορισμό της αδιαφάνειας"
 
-#: ../libmate-desktop/mate-colorsel.c:279
+#: ../libmate-desktop/mate-colorsel.c:280
 msgid "Has palette"
 msgstr "Έχει παλέτα."
 
-#: ../libmate-desktop/mate-colorsel.c:280
+#: ../libmate-desktop/mate-colorsel.c:281
 msgid "Whether a palette should be used"
 msgstr "Όταν θα πρέπει να χρησιμοποιηθεί μία παλέττα"
 
-#: ../libmate-desktop/mate-colorsel.c:287
+#: ../libmate-desktop/mate-colorsel.c:288
 msgid "The current color"
 msgstr "Τρέχον χρώμα"
 
-#: ../libmate-desktop/mate-colorsel.c:294
+#: ../libmate-desktop/mate-colorsel.c:295
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Η τρέχουσα τιμή αδιαφάνειας (0 πλήρης διαφάνεια, 65535 πλήρης αδιαφάνεια)"
 
-#: ../libmate-desktop/mate-colorsel.c:300
+#: ../libmate-desktop/mate-colorsel.c:301
 msgid "HEX String"
 msgstr "Αλφαριθμητικό HEX"
 
-#: ../libmate-desktop/mate-colorsel.c:301
+#: ../libmate-desktop/mate-colorsel.c:302
 msgid "The hexadecimal string of current color"
 msgstr "Η δεκαεξαδική αλφαριθμητική συμβολοσειρά του τρέχοντος χρώματος"
 
-#: ../libmate-desktop/mate-colorsel.c:347
+#: ../libmate-desktop/mate-colorsel.c:348
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -199,7 +210,7 @@ msgstr ""
 "Επιλέξτε το χρώμα που επιθυμείτε από τον εξωτερικό δακτύλιο. Επιλέξτε την "
 "σκοτεινότητα ή φωτεινότητα του χρώματος από το εσωτερικό τρίγωνο."
 
-#: ../libmate-desktop/mate-colorsel.c:371
+#: ../libmate-desktop/mate-colorsel.c:372
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -207,68 +218,68 @@ msgstr ""
 "Κάντε κλικ στο σταγονόμετρο, έπειτα κάντε κλικ σε ένα χρώμα οπουδήποτε στην "
 "οθόνη σας,  για να επιλέξτε το χρώμα αυτό."
 
-#: ../libmate-desktop/mate-colorsel.c:380
+#: ../libmate-desktop/mate-colorsel.c:381
 msgid "_Hue:"
 msgstr "_Απόχρωση:"
 
-#: ../libmate-desktop/mate-colorsel.c:381
+#: ../libmate-desktop/mate-colorsel.c:382
 msgid "Position on the color wheel."
 msgstr "Θέση της ρόδας χρώματος."
 
-#: ../libmate-desktop/mate-colorsel.c:383
+#: ../libmate-desktop/mate-colorsel.c:384
 msgid "_Saturation:"
 msgstr "_Κορεσμός:"
 
-#: ../libmate-desktop/mate-colorsel.c:384
+#: ../libmate-desktop/mate-colorsel.c:385
 msgid "\"Deepness\" of the color."
 msgstr "\"Βάθος\" του χρώματος"
 
-#: ../libmate-desktop/mate-colorsel.c:385
+#: ../libmate-desktop/mate-colorsel.c:386
 msgid "_Value:"
 msgstr "_Τιμή:"
 
-#: ../libmate-desktop/mate-colorsel.c:386
+#: ../libmate-desktop/mate-colorsel.c:387
 msgid "Brightness of the color."
 msgstr "Φωτεινότητα του χρώματος."
 
-#: ../libmate-desktop/mate-colorsel.c:387
+#: ../libmate-desktop/mate-colorsel.c:388
 msgid "_Red:"
 msgstr "_Κόκκινο:"
 
-#: ../libmate-desktop/mate-colorsel.c:388
+#: ../libmate-desktop/mate-colorsel.c:389
 msgid "Amount of red light in the color."
 msgstr "Ποσότητα του κόκκινου φωτός μέσα στο χρώμα."
 
-#: ../libmate-desktop/mate-colorsel.c:389
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "_Green:"
 msgstr "_Πράσινο:"
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "Amount of green light in the color."
 msgstr "Ποσότητα του πράσινου φωτός μέσα στο χρώμα."
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:392
 msgid "_Blue:"
 msgstr "_Μπλέ:"
 
-#: ../libmate-desktop/mate-colorsel.c:392
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "Amount of blue light in the color."
 msgstr "Ποσότητα του μπλε φωτός μέσα στο χρώμα."
 
-#: ../libmate-desktop/mate-colorsel.c:395
+#: ../libmate-desktop/mate-colorsel.c:396
 msgid "Op_acity:"
 msgstr "Δια_φάνεια:"
 
-#: ../libmate-desktop/mate-colorsel.c:402
-#: ../libmate-desktop/mate-colorsel.c:412
+#: ../libmate-desktop/mate-colorsel.c:403
+#: ../libmate-desktop/mate-colorsel.c:413
 msgid "Transparency of the color."
 msgstr "Διαφάνεια χρώματος"
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:420
 msgid "Color _name:"
 msgstr "Όνομα _χρώματος:"
 
-#: ../libmate-desktop/mate-colorsel.c:433
+#: ../libmate-desktop/mate-colorsel.c:434
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -276,15 +287,15 @@ msgstr ""
 "Εισαγάγετε δεκαεξαδική τιμή χρώματος γραφής HTML, ή απλώς ένα όνομα χρώματος"
 " όπως για παράδειγμα 'πορτοκαλί' σε αυτή την καταχώριση."
 
-#: ../libmate-desktop/mate-colorsel.c:463
+#: ../libmate-desktop/mate-colorsel.c:464
 msgid "_Palette:"
 msgstr "_Παλέτα:"
 
-#: ../libmate-desktop/mate-colorsel.c:493
+#: ../libmate-desktop/mate-colorsel.c:494
 msgid "Color Wheel"
 msgstr "Ρόδα Χρωμάτων"
 
-#: ../libmate-desktop/mate-colorsel.c:950
+#: ../libmate-desktop/mate-colorsel.c:951
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -295,7 +306,7 @@ msgstr ""
 "επιλέξετε αυτό το χρώμα ως τρέχον σέρνοντάς το στο άλλο χρωματικό δείγμα "
 "παραδίπλα."
 
-#: ../libmate-desktop/mate-colorsel.c:953
+#: ../libmate-desktop/mate-colorsel.c:954
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -303,7 +314,7 @@ msgstr ""
 "Το χρώμα που έχεις επιλέξει. Μπορείς να σύρεις αυτό το χρώμα σε μία "
 "καταχώριση παλέττας ώστε να το σώσεις για το μέλλον."
 
-#: ../libmate-desktop/mate-colorsel.c:958
+#: ../libmate-desktop/mate-colorsel.c:959
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
@@ -311,19 +322,19 @@ msgstr ""
 "Το προηγουμένως επιλεγμένο χρώμα, για σύγκριση με το χρώμα που επιλέγεις "
 "τώρα."
 
-#: ../libmate-desktop/mate-colorsel.c:961
+#: ../libmate-desktop/mate-colorsel.c:962
 msgid "The color you've chosen."
 msgstr "Το χρώμα που επιλέξατε."
 
-#: ../libmate-desktop/mate-colorsel.c:1366
+#: ../libmate-desktop/mate-colorsel.c:1367
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1371
+#: ../libmate-desktop/mate-colorsel.c:1372
 msgid "_Save color here"
 msgstr "_Αποθήκευσης χρώματος εδώ"
 
-#: ../libmate-desktop/mate-colorsel.c:1591
+#: ../libmate-desktop/mate-colorsel.c:1592
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""

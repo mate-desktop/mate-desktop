@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 23:20+0100\n"
+"POT-Creation-Date: 2019-03-19 15:14+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Микола Ткач <chistomov@gmail.com>, 2018\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
@@ -43,7 +43,18 @@ msgstr "Про MATE"
 msgid "Learn more about MATE"
 msgstr "Дізнайтеся більше про MATE"
 
-#: ../mate-about/mate-about.h:43
+#: ../mate-about/mate-about.h:29
+msgid "MATE Desktop Environment"
+msgstr ""
+
+#: ../mate-about/mate-about.h:34
+msgid ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE developers"
+msgstr ""
+
+#: ../mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -51,7 +62,7 @@ msgstr ""
 "MATE надає інтуїтивно зрозуміле та привабливе робоче оточення для Linux "
 "користувачів, що використовують традиційну концепцію."
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -60,7 +71,7 @@ msgstr ""
 "включаючи керівник файлами, переглядачі документів та зображень, меню і "
 "багато иньших додатків"
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -68,7 +79,7 @@ msgstr ""
 "MATE - це Вільне, зручне та доступне робоче середовище для Unix-подібних "
 "операційних систем."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -79,7 +90,7 @@ msgstr ""
 "миті його старту в 1997; а багато иньших добродіїв зробили внесок у иньші "
 "важливі напрямки, включаючи переклади, документацію та запоруку якости."
 
-#: ../mate-about/mate-about.h:56
+#: ../mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
@@ -88,7 +99,7 @@ msgstr ""
 " розробляється... Тепер є MATE для надання Вам того самого робочого "
 "середовища!"
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -127,7 +138,7 @@ msgid "Pick a Color"
 msgstr "Виберіть колір"
 
 #: ../libmate-desktop/mate-colorbutton.c:182
-#: ../libmate-desktop/mate-colorsel.c:286
+#: ../libmate-desktop/mate-colorsel.c:287
 msgid "Current Color"
 msgstr "Поточний колір"
 
@@ -136,7 +147,7 @@ msgid "The selected color"
 msgstr "Обраний колір"
 
 #: ../libmate-desktop/mate-colorbutton.c:197
-#: ../libmate-desktop/mate-colorsel.c:293
+#: ../libmate-desktop/mate-colorsel.c:294
 msgid "Current Alpha"
 msgstr "Поточна прозорість кольору"
 
@@ -150,41 +161,41 @@ msgstr ""
 msgid "Received invalid color data\n"
 msgstr "Отримано некоректні дані кольору\n"
 
-#: ../libmate-desktop/mate-colorsel.c:272
+#: ../libmate-desktop/mate-colorsel.c:273
 msgid "Has Opacity Control"
 msgstr "Є контроль над прозорістю"
 
-#: ../libmate-desktop/mate-colorsel.c:273
+#: ../libmate-desktop/mate-colorsel.c:274
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Чи дозволяє обирач кольору встановлювати рівень непрозорости"
 
-#: ../libmate-desktop/mate-colorsel.c:279
+#: ../libmate-desktop/mate-colorsel.c:280
 msgid "Has palette"
 msgstr "Наявність палітри"
 
-#: ../libmate-desktop/mate-colorsel.c:280
+#: ../libmate-desktop/mate-colorsel.c:281
 msgid "Whether a palette should be used"
 msgstr "Чи використовувати палітру кольорів"
 
-#: ../libmate-desktop/mate-colorsel.c:287
+#: ../libmate-desktop/mate-colorsel.c:288
 msgid "The current color"
 msgstr "Поточний колір"
 
-#: ../libmate-desktop/mate-colorsel.c:294
+#: ../libmate-desktop/mate-colorsel.c:295
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Обране значення непрозорости (0 - повністю прозорий, 65535 - повністю "
 "непрозорий)"
 
-#: ../libmate-desktop/mate-colorsel.c:300
+#: ../libmate-desktop/mate-colorsel.c:301
 msgid "HEX String"
 msgstr "Шістнідцятковий рядок"
 
-#: ../libmate-desktop/mate-colorsel.c:301
+#: ../libmate-desktop/mate-colorsel.c:302
 msgid "The hexadecimal string of current color"
 msgstr "Шістнадцятковий рядок поточного кольору"
 
-#: ../libmate-desktop/mate-colorsel.c:347
+#: ../libmate-desktop/mate-colorsel.c:348
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -192,74 +203,74 @@ msgstr ""
 "Оберіть колір із зовнішнього кільця. Для вибору світлішого або темнішого "
 "віддтінку використовуйте внутрішній трикутник."
 
-#: ../libmate-desktop/mate-colorsel.c:371
+#: ../libmate-desktop/mate-colorsel.c:372
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "Натисніть на \"піпетку\" для вибору кольору з будь-якої частини екрану."
 
-#: ../libmate-desktop/mate-colorsel.c:380
+#: ../libmate-desktop/mate-colorsel.c:381
 msgid "_Hue:"
 msgstr "В_ідтінок:"
 
-#: ../libmate-desktop/mate-colorsel.c:381
+#: ../libmate-desktop/mate-colorsel.c:382
 msgid "Position on the color wheel."
 msgstr "Позиція на кільці кольорів."
 
-#: ../libmate-desktop/mate-colorsel.c:383
+#: ../libmate-desktop/mate-colorsel.c:384
 msgid "_Saturation:"
 msgstr "Н_асиченість:"
 
-#: ../libmate-desktop/mate-colorsel.c:384
+#: ../libmate-desktop/mate-colorsel.c:385
 msgid "\"Deepness\" of the color."
 msgstr "Насиченість кольору."
 
-#: ../libmate-desktop/mate-colorsel.c:385
+#: ../libmate-desktop/mate-colorsel.c:386
 msgid "_Value:"
 msgstr "_Значення"
 
-#: ../libmate-desktop/mate-colorsel.c:386
+#: ../libmate-desktop/mate-colorsel.c:387
 msgid "Brightness of the color."
 msgstr "Яскравість кольору."
 
-#: ../libmate-desktop/mate-colorsel.c:387
+#: ../libmate-desktop/mate-colorsel.c:388
 msgid "_Red:"
 msgstr "_Червоний:"
 
-#: ../libmate-desktop/mate-colorsel.c:388
+#: ../libmate-desktop/mate-colorsel.c:389
 msgid "Amount of red light in the color."
 msgstr "Кількість червоного відтінку в кольорі."
 
-#: ../libmate-desktop/mate-colorsel.c:389
+#: ../libmate-desktop/mate-colorsel.c:390
 msgid "_Green:"
 msgstr "_Зелений:"
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: ../libmate-desktop/mate-colorsel.c:391
 msgid "Amount of green light in the color."
 msgstr "Кількість зеленого відтінку в кольорі."
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: ../libmate-desktop/mate-colorsel.c:392
 msgid "_Blue:"
 msgstr "_Синій:"
 
-#: ../libmate-desktop/mate-colorsel.c:392
+#: ../libmate-desktop/mate-colorsel.c:393
 msgid "Amount of blue light in the color."
 msgstr "Кількість синього відтінку в кольорі."
 
-#: ../libmate-desktop/mate-colorsel.c:395
+#: ../libmate-desktop/mate-colorsel.c:396
 msgid "Op_acity:"
 msgstr "Н_епрозорість:"
 
-#: ../libmate-desktop/mate-colorsel.c:402
-#: ../libmate-desktop/mate-colorsel.c:412
+#: ../libmate-desktop/mate-colorsel.c:403
+#: ../libmate-desktop/mate-colorsel.c:413
 msgid "Transparency of the color."
 msgstr "Рівень прозорости кольору."
 
-#: ../libmate-desktop/mate-colorsel.c:419
+#: ../libmate-desktop/mate-colorsel.c:420
 msgid "Color _name:"
 msgstr "_Назва кольору:"
 
-#: ../libmate-desktop/mate-colorsel.c:433
+#: ../libmate-desktop/mate-colorsel.c:434
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -267,15 +278,15 @@ msgstr ""
 "Ви можете увести або шістнадцяткове значення кольору(в HTML стилі), або його"
 " ім'я, наприклад, \"orange\"."
 
-#: ../libmate-desktop/mate-colorsel.c:463
+#: ../libmate-desktop/mate-colorsel.c:464
 msgid "_Palette:"
 msgstr "_Палітра:"
 
-#: ../libmate-desktop/mate-colorsel.c:493
+#: ../libmate-desktop/mate-colorsel.c:494
 msgid "Color Wheel"
 msgstr "Кільце кольорів"
 
-#: ../libmate-desktop/mate-colorsel.c:950
+#: ../libmate-desktop/mate-colorsel.c:951
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -285,7 +296,7 @@ msgstr ""
 "перетягнути цей колір на палітру кольорів або обрати цей колір як поточний, "
 "перетягнувши його на колір збоку."
 
-#: ../libmate-desktop/mate-colorsel.c:953
+#: ../libmate-desktop/mate-colorsel.c:954
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -293,25 +304,25 @@ msgstr ""
 "Обраний колір. Ви можете перетягнути його на елемент палітри кольорів для "
 "збереження його і використання в майбутньому. "
 
-#: ../libmate-desktop/mate-colorsel.c:958
+#: ../libmate-desktop/mate-colorsel.c:959
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Обраний раніше колір для порівняння з кольором, що обраний зараз."
 
-#: ../libmate-desktop/mate-colorsel.c:961
+#: ../libmate-desktop/mate-colorsel.c:962
 msgid "The color you've chosen."
 msgstr "Обраний Вами колір."
 
-#: ../libmate-desktop/mate-colorsel.c:1366
+#: ../libmate-desktop/mate-colorsel.c:1367
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1371
+#: ../libmate-desktop/mate-colorsel.c:1372
 msgid "_Save color here"
 msgstr "_Зберегти колір тут"
 
-#: ../libmate-desktop/mate-colorsel.c:1591
+#: ../libmate-desktop/mate-colorsel.c:1592
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
