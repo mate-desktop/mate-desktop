@@ -1,5 +1,29 @@
 ### mate-desktop 1.23.0
 
+  * sync with transifex
+  * [ci] run after_script when use autotools
+  * enable meson build on travis
+  * Use mate-desktop icon instead of mate for mate-about
+  * Simplify icons/Makefile.am
+  * Use radial gradient (Blur 13.9%, Opacity 73.4%) for MATE logo shadow
+  * i18n: port from intltool to gettext
+  * mate-about: subdir mate-version.xml.in.in
+  * configure.ac: subdir some of the build cruft
+  * mate-desktop-thumbnail: avoid 'NULL' parameter
+  * mate-thumbnail-pixbuf-utils: Fix division by zero
+  * mate-bg: Fix memory leak
+  * Make translatable the program name in mate about dialog
+  * Make translatable the copyright info in mate about dialog
+  * GEN png icons from hicolor_apps_scalable_mate.svg
+  * [Security] Use 'g_strlcpy' instead of 'strcpy'
+  * [Security] test-ditem: Use 'g_strlcat' instead of 'strcat'
+  * mate-hsv: avoid duplicate initialization in variable
+  * [ci] Enable Clang Static Analyzer
+  * mate-hsv: avoid deprecated 'gdk_device_grab/ungrab'
+  * mate-colorsel: avoid deprecated 'GtkHSV', use 'MateHSV' instead
+  * MateHSV implementation (GtkHSV fork)
+
+
 ### mate-desktop 1.22.0
 
   * Translations update
