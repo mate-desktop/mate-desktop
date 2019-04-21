@@ -4,24 +4,27 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Marco Giannini <giannini.marco@gmail.com>, 2018
-# Dario Di Nucci <linkin88mail@gmail.com>, 2018
-# Giuseppe Pignataro (Fastbyte01) <rogepix@gmail.com>, 2018
-# Matteo, 2018
-# Cristiano Venanzi, 2018
-# Marco Bartolucci <nap.84@live.it>, 2018
-# Marco Z. <minaz666@gmail.com>, 2018
-# l3nn4rt, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Marco Giannini <giannini.marco@gmail.com>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Dario Di Nucci <linkin88mail@gmail.com>, 2019
+# Giuseppe Pignataro <rogepix@gmail.com>, 2019
+# Matteo, 2019
+# Cristiano Venanzi, 2019
+# Marco Bartolucci <nap.84@live.it>, 2019
+# Marco Z. <minaz666@gmail.com>, 2019
+# l3nn4rt, 2019
+# Gianfilippo Tabacchini <kazefilippo@gmail.com>, 2019
+# andrea pittaro <transifex@andreapittaro.it>, 2019
+# Enrico B. <enricobe@hotmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 23:20+0100\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"POT-Creation-Date: 2019-03-22 23:06+0100\n"
+"PO-Revision-Date: 2019-03-13 13:14+0000\n"
+"Last-Translator: Enrico B. <enricobe@hotmail.com>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +36,7 @@ msgstr ""
 #. * displayed in the about box to give credit to the translator(s).
 #: ../mate-about/mate-about.c:77
 msgid "translator-credits"
-msgstr "Riconoscimenti-traduzione"
+msgstr "Riconoscimenti-traduttore"
 
 #: ../mate-about/mate-about.desktop.in.h:1
 msgid "About MATE"
@@ -43,7 +46,21 @@ msgstr "Informazioni su MATE"
 msgid "Learn more about MATE"
 msgstr "Per saperne di più su MATE"
 
-#: ../mate-about/mate-about.h:43
+#: ../mate-about/mate-about.h:29
+msgid "MATE Desktop Environment"
+msgstr "MATE Desktop Environment"
+
+#: ../mate-about/mate-about.h:34
+msgid ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE developers"
+msgstr ""
+"Copyright © 1997-2011 Gli sviluppatori di GNOME\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 Gli sviluppatori di MATE"
+
+#: ../mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -51,7 +68,7 @@ msgstr ""
 "MATE fornisce un desktop intuitivo e gradevole per gli utenti Linux, usando "
 "le metafore tradizionali."
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -59,7 +76,7 @@ msgstr ""
 "MATE include la maggior parte di quello che è visibile sul computer, "
 "compresi il file manager, il web browser, i menù e molte applicazioni."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -67,7 +84,7 @@ msgstr ""
 "MATE è un ambiente desktop libero, usabile, stabile e accessibile per la "
 "famiglia di sistemi operativi tipo UNIX."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -79,7 +96,7 @@ msgstr ""
 "hanno contribuito in altri modi importanti, come traduzioni, documentazione "
 "e controllo della qualità."
 
-#: ../mate-about/mate-about.h:56
+#: ../mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
@@ -87,7 +104,7 @@ msgstr ""
 "GNOME 2 è stato il desktop più popolare per Linux ma non è più "
 "disponibile... MATE è qui per fornire lo stesso desktop agli utenti!"
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -636,6 +653,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Blocca i modificatori quando premuto due volte di fila, finché lo stesso "
+"modificatore non viene premuto un'altra volta"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Disable if two keys are pressed at the same time."
@@ -1268,13 +1287,15 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:71
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "Abilita il metodo di Incolla selezionato principale"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:72
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
+"Se impostato a vero, gtk+ usa il metodo principale di Incolla Selezione, di "
+"solito comandato con il click sulla rotella del mouse."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

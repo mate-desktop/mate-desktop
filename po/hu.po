@@ -4,24 +4,25 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Falu <info@falu.me>, 2018
-# Zoltán Rápolthy <real_zolee@hotmail.com>, 2018
-# Rezső Páder <rezso@rezso.net>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Nagy Gábor <jackson.gabor@gmail.com>, 2018
-# Takler Tamás <taklertamas@gmail.com>, 2018
-# István Nagy <kisbela@gmail.com>, 2018
-# KAMI KAMI <kami911@gmail.com>, 2018
-# Balázs Meskó <meskobalazs@gmail.com>, 2018
+# Falu <info@falu.me>, 2019
+# Zoltán Rápolthy <real_zolee@hotmail.com>, 2019
+# KAMI KAMI <kami911@gmail.com>, 2019
+# Rezső Páder <rezso@rezso.net>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Nagy Gábor <jackson.gabor@gmail.com>, 2019
+# Takler Tamás <taklertamas@gmail.com>, 2019
+# Balázs Meskó <meskobalazs@gmail.com>, 2019
+# István Nagy <kisbela@gmail.com>, 2019
+# Csaba Székely <szekelycsaba76@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 23:20+0100\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Balázs Meskó <meskobalazs@gmail.com>, 2018\n"
+"POT-Creation-Date: 2019-03-22 23:06+0100\n"
+"PO-Revision-Date: 2019-03-13 13:14+0000\n"
+"Last-Translator: Csaba Székely <szekelycsaba76@gmail.com>, 2019\n"
 "Language-Team: Hungarian (https://www.transifex.com/mate/teams/13566/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,11 +38,12 @@ msgstr ""
 "Dvornik László<dvornik at mate dot hu>\n"
 "Kelemen Gábor<kelemeng at mate dot hu>\n"
 "Tímár András<timar at mate dot hu>\n"
-"Rezső Páder<rezso at rezso dot net>\n"
 "Kalman „KAMI” Szalai<kami911 at gmail dot com>\n"
 "Falu<info at falu dot me>\n"
+"Rezső Páder<rezso at rezso dot net>\n"
 "Zoltán Rápolthy<real_zolee at hotmail dot com>\n"
-"Meskó Balázs <mesko dot balazs at fsf dot hu>"
+"Meskó Balázs <mesko dot balazs at fsf dot hu>\n"
+"Székely Csaba <szekelycsaba76 at gmail dot com>"
 
 #: ../mate-about/mate-about.desktop.in.h:1
 msgid "About MATE"
@@ -51,7 +53,18 @@ msgstr "A MATE névjegye"
 msgid "Learn more about MATE"
 msgstr "Tudjon meg többet a MATE-ról"
 
-#: ../mate-about/mate-about.h:43
+#: ../mate-about/mate-about.h:29
+msgid "MATE Desktop Environment"
+msgstr ""
+
+#: ../mate-about/mate-about.h:34
+msgid ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE developers"
+msgstr ""
+
+#: ../mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -59,7 +72,7 @@ msgstr ""
 "A MATE környzet hagyományos, jól használható és lenyűgöző asztali felületet "
 "biztosít a Linux-felhasználók számára, "
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -68,7 +81,7 @@ msgstr ""
 " fájlkezelőt, dokumentummegjelenítőt, képnézőt, menüket és számos "
 "alkalmazást."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -76,7 +89,7 @@ msgstr ""
 "A MATE környzet nyílt, felhasználóbarát, stabil és akadálymentesített "
 "asztali környezet az UNIX-szerű operációs rendszerek felhasználói számára."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -88,7 +101,7 @@ msgstr ""
 "közre egyéb fontos módokon: fordításokkal, dokumentálással és "
 "minőségbiztosítással."
 
-#: ../mate-about/mate-about.h:56
+#: ../mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
@@ -97,7 +110,7 @@ msgstr ""
 "elérhető… A MATE környezet azért született, hogy ugyanazt az asztalt nyújtsa"
 " az Ön számára."
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -642,6 +655,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Módosítók zárolása egymás után kétszeri megnyomáskor addig, amíg újra meg "
+"nem nyomja azt a módosítót."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Disable if two keys are pressed at the same time."

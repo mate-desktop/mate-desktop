@@ -4,24 +4,25 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Nicolas Dobigeon <dobigeon@gmail.com>, 2018
-# mauron, 2018
-# Tubuntu <tubuntu@testimonium.be>, 2018
-# Étienne Deparis <etienne@depar.is>, 2018
-# Benjamin Teissier <enatheme@enatheme.org>, 2018
-# yoplait <yoplait@tememe.org>, 2018
-# Laurent Napias <tamplan+transifex@free.fr>, 2018
-# Charles Monzat <c.monzat@laposte.net>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# mauron, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Tubuntu <tubuntu@testimonium.be>, 2019
+# Charles Monzat <c.monzat@laposte.net>, 2019
+# Étienne Deparis <etienne@depar.is>, 2019
+# Nicolas Dobigeon <dobigeon@gmail.com>, 2019
+# Benjamin Teissier <enatheme@enatheme.org>, 2019
+# yoplait <yoplait@tememe.org>, 2019
+# Laurent Napias <tamplan+transifex@free.fr>, 2019
+# David D, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 23:20+0100\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"POT-Creation-Date: 2019-03-22 23:06+0100\n"
+"PO-Revision-Date: 2019-03-13 13:14+0000\n"
+"Last-Translator: David D, 2019\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,7 +58,18 @@ msgstr "À propos de MATE"
 msgid "Learn more about MATE"
 msgstr "En savoir plus sur MATE"
 
-#: ../mate-about/mate-about.h:43
+#: ../mate-about/mate-about.h:29
+msgid "MATE Desktop Environment"
+msgstr "Environnement de bureau MATE"
+
+#: ../mate-about/mate-about.h:34
+msgid ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE developers"
+msgstr ""
+
+#: ../mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -65,7 +77,7 @@ msgstr ""
 "MATE offre un bureau intuitif et attractif aux utilisateurs de GNU/Linux qui"
 " préfèrent les métaphores traditionnelles."
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -74,7 +86,7 @@ msgstr ""
 "incluant le gestionnaire de fichiers, les visionneuses de documents et "
 "d'images, les menus ainsi que de nombreuses applications."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -82,7 +94,7 @@ msgstr ""
 "MATE est un environnement de bureau libre, stable et cohérent pour les "
 "systèmes d'exploitation de la famille Unix."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -94,7 +106,7 @@ msgstr ""
 "contribué de façon tout aussi importante aux traductions, à la documentation"
 " et à l'assurance qualité."
 
-#: ../mate-about/mate-about.h:56
+#: ../mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
@@ -102,7 +114,7 @@ msgstr ""
 "GNOME 2 était le bureau GNU/Linux le plus populaire mais n'est plus "
 "disponible... MATE est là pour vous offrir le même bureau !"
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -649,6 +661,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Les modificateurs de loquet sont pressés deux fois de suite jusqu’à ce que "
+"le même modificateur soit pressé de nouveau."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Disable if two keys are pressed at the same time."
@@ -1296,13 +1310,15 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:71
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "Activer la sélection de collage primaire"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:72
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
+"Si vrai, gtk+ utilise la sélection de collage primaire, généralement "
+"déclenchée par un clic du bouton du milieu de la souris."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

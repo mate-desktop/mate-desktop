@@ -4,19 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Alan Lee <bkrhlim@aol.com>, 2018
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2018
-# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Alan Lee <bkrhlim@aol.com>, 2019
+# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 23:20+0100\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018\n"
+"POT-Creation-Date: 2019-03-22 23:06+0100\n"
+"PO-Revision-Date: 2019-03-13 13:14+0000\n"
+"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,13 +44,27 @@ msgstr "마테 정보"
 msgid "Learn more about MATE"
 msgstr "마테에 대해 더 알아보기"
 
-#: ../mate-about/mate-about.h:43
+#: ../mate-about/mate-about.h:29
+msgid "MATE Desktop Environment"
+msgstr "마테 데스크톱 환경"
+
+#: ../mate-about/mate-about.h:34
+msgid ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE developers"
+msgstr ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE developers"
+
+#: ../mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "마테는  전통적인 방식을 사용해 직관적이고  아름다운 데스크톱을 리눅스 사용자에게 제공합니다. "
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -58,13 +72,13 @@ msgstr ""
 "마테는  파일 관리자, 문서 보기, 이미지 보기,  메뉴,  많은 응용프로그램을 포함해 사용자가 컴퓨터에서 볼 수 있는 대부분을 포함하고"
 " 있습니다."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "마테는 유닉스 계열 운영 체제에서 사용하는 자유롭고 안정적이며 일상에서 사용 가능한  데스크톱 환경입니다."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -74,13 +88,13 @@ msgstr ""
 "마테는 그놈 2의 연장 프로젝트입니다. 수백명의 기여자가 1997년도부터 시작된 그놈 프로젝트에 코드를 기여하고 있습니다. 번역, "
 "문서화, 품질 향상 등의 다른 중요한 방법으로도 기여하고 있습니다."
 
-#: ../mate-about/mate-about.h:56
+#: ../mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "그놈 2는 가장 인기있는 리눅스 데스크톱이었지만 지금은 개발을 중단했습니다. 마테는 그놈 2와 똑같은 데스크톱을 제공합니다!"
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -592,7 +606,7 @@ msgstr "@delay 밀리초 동안 키를 누르기 전까지 허용하지 않습�
 msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
-msgstr ""
+msgstr "같은 조절기를 다시 누르기 전에 두 번 눌려지면 조절기를 잠그세요"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Disable if two keys are pressed at the same time."

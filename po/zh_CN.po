@@ -4,27 +4,28 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Wylmer Wang, 2018
-# nyanyh <rebuilty@gmail.com>, 2018
-# 775405984, 2018
-# liulitchi <xingzuo88@qq.com>, 2018
-# Cravix <dr.neemous@gmail.com>, 2018
-# 玉堂白鹤 <yjwork@qq.com>, 2018
-# Mingcong Bai <jeffbai@aosc.xyz>, 2018
-# liushuyu011 <liushuyu011@gmail.com>, 2018
-# Mingye Wang <arthur200126@gmail.com>, 2018
-# zhangxianwei8 <zhang.xianwei8@zte.com.cn>, 2018
-# biqiu-ssw <shenshuaiwen@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# 775405984, 2019
+# zhangxianwei8 <zhang.xianwei8@zte.com.cn>, 2019
+# Wylmer Wang, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# liulitchi <xingzuo88@qq.com>, 2019
+# nyanyh <rebuilty@gmail.com>, 2019
+# Cravix <dr.neemous@gmail.com>, 2019
+# 玉堂白鹤 <yjwork@qq.com>, 2019
+# liushuyu011 <liushuyu011@gmail.com>, 2019
+# Mingye Wang <arthur200126@gmail.com>, 2019
+# CNAmira <forucial@icloud.com>, 2019
+# biqiu-ssw <shenshuaiwen@gmail.com>, 2019
+# Mingcong Bai <jeffbai@aosc.xyz>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 23:20+0100\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"POT-Creation-Date: 2019-03-22 23:06+0100\n"
+"PO-Revision-Date: 2019-03-13 13:14+0000\n"
+"Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,7 +48,8 @@ msgstr ""
 "Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
 "白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
 "刘子兴 <liushuyu@aosc.xyz>, 2015-2016\n"
-"比丘<shenshuaiwen@gmail.com>,2018-2019"
+"比丘<shenshuaiwen@gmail.com>,2018-2019\n"
+"李克卿<auroracloud4096@gmail.com>,2018"
 
 #: ../mate-about/mate-about.desktop.in.h:1
 msgid "About MATE"
@@ -57,25 +59,36 @@ msgstr "关于MATE"
 msgid "Learn more about MATE"
 msgstr "进一步了解MATE"
 
-#: ../mate-about/mate-about.h:43
+#: ../mate-about/mate-about.h:29
+msgid "MATE Desktop Environment"
+msgstr ""
+
+#: ../mate-about/mate-about.h:34
+msgid ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE developers"
+msgstr ""
+
+#: ../mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr "MATE 为 Linux 用户提供了一个直观而有吸引力的桌面。"
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr " MATE 包含了文件管理器、文件浏览器、图像浏览器、菜单以及许多其它的应用程序。"
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr "MATE 是类 Unix 操作系统里免费、稳定及用处甚广的桌面环境。"
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -85,13 +98,13 @@ msgstr ""
 "MATE 是 GNOME 2 的一个分支。自从1997年 GNOME "
 "诞生以来，数以百计的志愿者就为它编写代码。也有更多的志愿者以其它的方式为其添砖加瓦，如翻译、编辑文档和保质改进。"
 
-#: ../mate-about/mate-about.h:56
+#: ../mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr "GNOME 2 是以前大受欢迎的 Linux 桌面，如今 MATE 定会让你眼前一亮。"
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -595,7 +608,7 @@ msgstr "仅在按下 @delay 毫秒不放后接受按键输入。"
 msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
-msgstr ""
+msgstr "在连续两次按下修饰键时锁定该键，直到再次按下。"
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Disable if two keys are pressed at the same time."
@@ -1156,13 +1169,13 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:71
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "启用首要粘贴选择。"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:72
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
-msgstr ""
+msgstr "如果为 True，GTK+ 将使用首要粘贴选择，一般由鼠标中键单击触发。"
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"

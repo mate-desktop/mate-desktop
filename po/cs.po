@@ -4,24 +4,25 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# phebix <dev@phebix.cz>, 2018
-# Ondřej Kolín <ondrej.kolin@gmail.com>, 2018
-# Michal <sinope@seznam.cz>, 2018
-# Radek kohout <radekpv@seznam.cz>, 2018
-# LiberteCzech <liberte.czech@gmail.com>, 2018
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2018
-# Lucas Lommer <drom@kdyne.net>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# ToMáš Marný, 2018
+# Lucas Lommer <drom@kdyne.net>, 2019
+# phebix <dev@phebix.cz>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Ondřej Kolín <ondrej.kolin@gmail.com>, 2019
+# Michal <sinope@seznam.cz>, 2019
+# Honza Lafek <hlafek99@gmail.com>, 2019
+# Radek kohout <radekpv@seznam.cz>, 2019
+# LiberteCzech <liberte.czech@gmail.com>, 2019
+# Stanislav Kučera <inactive+kacernator@transifex.com>, 2019
+# ToMáš Marný, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 23:20+0100\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: ToMáš Marný, 2018\n"
+"POT-Creation-Date: 2019-03-22 23:06+0100\n"
+"PO-Revision-Date: 2019-03-13 13:14+0000\n"
+"Last-Translator: ToMáš Marný, 2019\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +41,11 @@ msgstr ""
 "Petr Tomeš <ptomes@gmail.com>\n"
 "Jakub Friedl <jfriedl@suse.cz>\n"
 "Lucas Lommer <llommer@svn.gnome.org>\n"
-"Petr Kovář <pknbe@volny.cz>"
+"Kamil Páral <ripper42@gmail.com>\n"
+"Petr Kovář <pknbe@volny.cz>\n"
+"Adrian Guniš <andygun696@gmail.com>\n"
+"Roman Horník <roman.hornik@debian-linux.cz>\n"
+"Jan Lafek <hlafek99@gmail.com>"
 
 #: ../mate-about/mate-about.desktop.in.h:1
 msgid "About MATE"
@@ -50,7 +55,21 @@ msgstr "O MATE"
 msgid "Learn more about MATE"
 msgstr "Poznejte lépe MATE"
 
-#: ../mate-about/mate-about.h:43
+#: ../mate-about/mate-about.h:29
+msgid "MATE Desktop Environment"
+msgstr "Desktopové prostředí MATE"
+
+#: ../mate-about/mate-about.h:34
+msgid ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE developers"
+msgstr ""
+"Copyright © 1997-2011 Vývojáři GNOME\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 Vývojáři MATE"
+
+#: ../mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -58,7 +77,7 @@ msgstr ""
 "MATE poskytuje intuitivní a atraktivní prostředí pro uživatele Linuxu za "
 "použití tradičních postupů."
 
-#: ../mate-about/mate-about.h:46
+#: ../mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -67,7 +86,7 @@ msgstr ""
 "souborů, prohlížeče dokumentů, prohlížeče obrázků, různá menu a mnoho "
 "aplikací."
 
-#: ../mate-about/mate-about.h:49
+#: ../mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -75,7 +94,7 @@ msgstr ""
 "MATE je svobodné, použitelné, stabilní a přístupné prostředí pro rodinu "
 "Unixových operačních systémů."
 
-#: ../mate-about/mate-about.h:52
+#: ../mate-about/mate-about.h:51
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -86,7 +105,7 @@ msgstr ""
 " GNOME; a mnohem více přispívá v jiných důležitých oblastech, jako jsou "
 "překlady, dokumentace a podpora kvality."
 
-#: ../mate-about/mate-about.h:56
+#: ../mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
@@ -94,7 +113,7 @@ msgstr ""
 "GNOME 2 bylo nejpopulárnější Linuxové prostředí, ale není již více k "
 "dispozici... MATE je tu proto, aby vám poskytlo to stejné!"
 
-#: ../mate-about/mate-about.h:59
+#: ../mate-about/mate-about.h:58
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -131,7 +150,7 @@ msgstr "Název dialogu pro výběr barvy"
 #: ../libmate-desktop/mate-colorbutton.c:169
 #: ../libmate-desktop/mate-colorbutton.c:438
 msgid "Pick a Color"
-msgstr "Vyberte si barvu"
+msgstr "Vybrat barvu"
 
 #: ../libmate-desktop/mate-colorbutton.c:182
 #: ../libmate-desktop/mate-colorsel.c:286
@@ -408,7 +427,7 @@ msgstr "Žádné URL ke spuštění"
 #: ../libmate-desktop/mate-desktop-item.c:2101
 #, c-format
 msgid "Not a launchable item"
-msgstr "Nespustitelná položka"
+msgstr "Není spustitelnou položkou"
 
 #: ../libmate-desktop/mate-desktop-item.c:2111
 #, c-format
