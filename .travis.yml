@@ -84,6 +84,7 @@ requires:
     - autopoint
     - clang
     - clang-tools
+    - cppcheck
     - git
     - gobject-introspection
     - gtk-doc-tools
@@ -174,6 +175,9 @@ build_scripts:
   -     scan-build $CHECKERS --keep-cc -o html-report make -j $CPU_COUNT
   - else
   -     scan-build $CHECKERS --keep-cc -o html-report make
+  - fi
+  - if [ ${DISTRO_NAME} == "debian" ];then
+  -     cppcheck --enable=warning,style,performance,portability,information,missingInclude .
   - fi
 
 after_scripts:
