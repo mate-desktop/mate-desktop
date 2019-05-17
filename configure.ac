@@ -196,14 +196,12 @@ AC_SUBST(MATE_ABOUT_CFLAGS)
 AC_SUBST(MATE_ABOUT_LIBS)
 
 dnl Language Support
-AM_GNU_GETTEXT([external])
-AM_GNU_GETTEXT_VERSION([0.19.8])
-
+MATE_ARG_NLS
+MATE_CHECK_NLS
 GETTEXT_PACKAGE=mate-desktop
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",
 		   [The gettext translation domain])
 AC_SUBST(GETTEXT_PACKAGE)
-AC_PATH_PROG([ITSTOOL], [itstool], [notfound])
 
 GLIB_GSETTINGS
 
@@ -244,7 +242,7 @@ libmate-desktop/mate-desktop-2.0-uninstalled.pc
 docs/Makefile
 docs/reference/Makefile
 docs/reference/mate-desktop/Makefile
-po/Makefile.in
+po/Makefile
 schemas/Makefile
 schemas/org.mate.background.gschema.xml
 man/Makefile
