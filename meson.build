@@ -52,6 +52,7 @@ age = 1
 libversion = '@0@.@1@.@2@'.format(current, age, revision)
 
 cc = meson.get_compiler('c')
+nm = find_program('nm')
 
 config_h = configuration_data()
 
@@ -112,3 +113,12 @@ configure_file(
 )
 
 meson.add_install_script('utils/post_install.py')
+
+test('libmate-desktop symbols check',
+  find_program('abi-check'),
+  env: [
+    'LIB=@0@'.format(libmate_desktop.full_path()),
+    'NM=@0@'.format(nm.path()),
+    'ABI=@0@/libmate-desktop/mate-desktop.abi'.format(meson.source_root())
+  ]
+)
