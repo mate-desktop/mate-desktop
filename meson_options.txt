@@ -1,0 +1,20 @@
+option('gtk-doc',
+  type: 'boolean',
+  value: 'false',
+)
+option('introspection',
+  type: 'boolean',
+  value: 'false',
+)
+option('mate-about',
+  type: 'boolean',
+  value: 'true',
+)
+option('startup-notification',
+  type: 'boolean',
+  value: 'false',
+)
+option('pnp-ids-path',
+  type: 'string',
+  value: 'internal',
+)
