@@ -1,0 +1,45 @@
+#!/bin/bash
+set -eu
+
+RET=0
+
+if ! [[ -f "${LIB}" ]]; then
+	echo "Test library \"${LIB}\" does not exist"
+	exit 99;
+fi
+
+if ! [[ -n "${NM}" ]]; then
+	echo "NM environment variable not set"
+	exit 99;
+fi
+
+AVAIL_FUNCS="$(${NM} -D --format=bsd --defined-only ${LIB} | awk '{print $3}')"
+
+REQ_FUNCS="$(cat ${ABI})"
+
+NEW_ABI=$(echo "$AVAIL_FUNCS" | while read func; do
+	echo "$func" | grep -q "^_" && continue
+	echo "${REQ_FUNCS}" | grep -q "^${func}$" && continue
+
+	echo "$func"
+done)
+
+if [[ -n ${NEW_ABI} ]]; then
+	echo "New ABI detected - If intentional, update ${ABI}."
+	echo "${NEW_ABI}"
+	RET=1;
+fi
+
+REMOVED_ABI=$(echo "${REQ_FUNCS}" | while read func; do
+	echo "${AVAIL_FUNCS}" | grep -q "^${func}$" && continue
+
+	echo "${func}"
+done)
+
+if [[ -n ${REMOVED_ABI} ]]; then
+	echo "ABI break detected - required symbols no longer exported!"
+	echo "${REMOVED_ABI}"
+	RET=1
+fi
+
+exit ${RET}
