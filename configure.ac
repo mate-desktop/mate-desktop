@@ -203,7 +203,6 @@ GETTEXT_PACKAGE=mate-desktop
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",
 		   [The gettext translation domain])
 AC_SUBST(GETTEXT_PACKAGE)
-AC_PATH_PROG([ITSTOOL], [itstool], [notfound])
 
 GLIB_GSETTINGS
 
