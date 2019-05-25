@@ -24,7 +24,7 @@ AM_CPPFLAGS =							\
 	$(XLIB_CFLAGS)						\
 	$(DCONF_CFLAGS)						\
 	-DG_LOG_DOMAIN=\"MateDesktop\"				\
-	-DMATELOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale\""	\
+	-DMATELOCALEDIR=\""$(localedir)\""			\
 	-DPNP_IDS=\""$(PNP_IDS)"\"				\
 	-DISO_CODES_PREFIX=\""$(ISO_CODES_PREFIX)"\"		\
 	$(DISABLE_DEPRECATED_CFLAGS)
