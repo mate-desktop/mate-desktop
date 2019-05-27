@@ -19,9 +19,9 @@ script:
   - ./docker-build --name ${DISTRO} --verbose --config .travis.yml --build autotools
 
 env:
-  - DISTRO="archlinux/base"
+#  - DISTRO="archlinux/base"
   - DISTRO="debian:buster"
-  - DISTRO="fedora:29"
+  - DISTRO="fedora:28"
   - DISTRO="ubuntu:18.10"
 
 ##########################################################
