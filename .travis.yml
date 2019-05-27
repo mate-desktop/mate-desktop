@@ -191,9 +191,9 @@ after_scripts:
 releases:
   draft: false
   prerelease: false
-  checksum: true
+  checksum: false
   file_glob: true
-  files: mate-desktop-*.tar.xz
+  files: _build/meson-dist/mate-desktop-*.tar.xz*
   github_release:
     tags: true
     overwrite: true
