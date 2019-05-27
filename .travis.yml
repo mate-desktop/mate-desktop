@@ -55,8 +55,8 @@ after_success:
 env:
   - DISTRO="archlinux/base"
   - DISTRO="debian:sid"
-  - DISTRO="fedora:29"
-  - DISTRO="ubuntu:18.10"
+  - DISTRO="fedora:30"
+  - DISTRO="ubuntu:19.10"
 
 ##########################################################
 # THE FOLLOWING LINES IS USED BY docker-build
@@ -125,6 +125,7 @@ requires:
     - startup-notification-devel
 
   ubuntu:
+    - autopoint
     - clang
     - clang-tools
     - git
@@ -165,10 +166,11 @@ variables:
     -enable-checker security.insecureAPI.strcpy"'
 
 build_scripts:
-  - if [ ${DISTRO_NAME} == "fedora" ];then
-  -     curl -Ls -o fedora.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/fedora.sh
-  -     bash ./fedora.sh
-  - fi
+# build failed with f30 und using clang patch, fixed in f30?
+#  - if [ ${DISTRO_NAME} == "fedora" ];then
+#  -     curl -Ls -o fedora.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/fedora.sh
+#  -     bash ./fedora.sh
+#  - fi
   - ./autogen.sh
   - scan-build $CHECKERS ./configure --prefix=/usr --enable-gtk-doc
   - if [ $CPU_COUNT -gt 1 ]; then
