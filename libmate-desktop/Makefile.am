@@ -31,7 +31,7 @@ AM_CPPFLAGS =							\
 
 AM_CFLAGS = $(WARN_CFLAGS)
 
-noinst_PROGRAMS = test-ditem test
+noinst_PROGRAMS = test-ditem test test-languages
 
 CLEANFILES =
 
@@ -85,6 +85,12 @@ test_ditem_SOURCES = \
 test_ditem_LDADD = \
 	libmate-desktop-2.la		\
 	$(XLIB_LIBS)			\
+	$(MATE_DESKTOP_LIBS)
+
+test_languages_SOURCES = test-languages.c
+
+test_languages_LDADD = \
+	libmate-desktop-2.la		\
 	$(MATE_DESKTOP_LIBS)
 
 pkgconfigdir = $(libdir)/pkgconfig

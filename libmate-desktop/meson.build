@@ -143,3 +143,21 @@ if enable_gir
     install_dir_typelib: typelib_dir,
   )
 endif
+
+test_ditem = executable('test-ditem',
+  sources : 'test-ditem.c',
+  dependencies : libmate_desktop_dep,
+  install : false,
+)
+
+test_color_button = executable('test-color-button',
+  sources : 'test.c',
+  dependencies : libmate_desktop_dep,
+  install : false,
+)
+
+test_languages = executable('test-languages',
+  sources : 'test-languages.c',
+  dependencies : libmate_desktop_dep,
+  install : false,
+)

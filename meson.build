@@ -62,6 +62,7 @@ config_h.set_quoted('LOCALEDIR', matedt_localedir)
 
 common_flags = [
   '-DHAVE_CONFIG_H',
+  '-I' + meson.build_root(),
   '-DPACKAGE_VERSION="@0@"'.format(matedt_version),
 ]
 
