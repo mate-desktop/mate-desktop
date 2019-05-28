@@ -27,6 +27,8 @@
 #error    This is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including mate-languages.h
 #endif
 
+#include <glib.h>
+
 G_BEGIN_DECLS
 
 char *        mate_get_language_from_locale    (const char *locale,
