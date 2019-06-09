@@ -29,7 +29,7 @@
 const char* program_name = N_("MATE Desktop Environment");
 const char* version = PACKAGE_VERSION;
 const char* icon = "mate-desktop";
-const char* website = "http://www.mate-desktop.org/";
+const char* website = "https://mate-desktop.org/";
 
 const char* copyright =  N_("Copyright © 1997-2011 GNOME developers\n"
                             "Copyright © 2011 Perberos\n"
