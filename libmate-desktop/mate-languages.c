@@ -325,25 +325,12 @@ language_name_get_codeset_details (const char  *language_name,
         setlocale (LC_CTYPE, old_locale);
 }
 
-/**
- * mate_language_has_translations:
- * @code: an ISO 639 code string
- *
- * Returns %TRUE if there are translations for language @code.
- *
- * Return value: %TRUE if there are translations for language @code.
- *
- * Since: 1.22
- */
-gboolean
-mate_language_has_translations (const char *code)
+static gboolean
+locale_dir_has_mo_files (const gchar* path)
 {
         GDir        *dir;
         const char  *name;
         gboolean     has_translations;
-        g_autofree char *path = NULL;
-
-        path = g_build_filename (MATELOCALEDIR, code, "LC_MESSAGES", NULL);
 
         has_translations = FALSE;
         dir = g_dir_open (path, 0, NULL);
@@ -367,6 +354,35 @@ mate_language_has_translations (const char *code)
         g_dir_close (dir);
 
  out:
+        return has_translations;
+}
+
+/**
+ * mate_language_has_translations:
+ * @code: an ISO 639 code string
+ *
+ * Returns %TRUE if there are translations for language @code.
+ *
+ * Return value: %TRUE if there are translations for language @code.
+ *
+ * Since: 1.22
+ */
+gboolean
+mate_language_has_translations (const char *code)
+{
+        gboolean     has_translations;
+        gchar *path = NULL;
+
+        path = g_build_filename (MATELOCALEDIR, code, "LC_MESSAGES", NULL);
+        has_translations = locale_dir_has_mo_files (path);
+
+        if (!has_translations) {
+            g_free(path);
+            path = g_build_filename ("/usr/share/locale", code, "LC_MESSAGES", NULL);
+            has_translations = locale_dir_has_mo_files (path);
+        }
+
+        g_free(path);
         return has_translations;
 }
 
