@@ -192,7 +192,6 @@ after_scripts:
   -         ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/${REPO_NAME}/raw/master/icons/16x16/apps/mate-desktop.png
   -     fi
   -     make distcheck
-  -     tar tf mate-desktop-*.tar.xz|grep po #just for view
   - fi
 
 releases:
