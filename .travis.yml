@@ -191,16 +191,14 @@ after_scripts:
   -         ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/${REPO_NAME}/raw/master/icons/16x16/apps/mate-desktop.png
   -     fi
   -     make distcheck
-  - elif [ -d _build ];then
-  -     ninja -C _build dist
   - fi
 
 releases:
   draft: false
   prerelease: false
-  checksum: false
+  checksum: true
   file_glob: true
-  files: _build/meson-dist/mate-desktop-*.tar.xz*
+  files: mate-desktop-*.tar.xz
   github_release:
     tags: true
     overwrite: true
