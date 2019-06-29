@@ -1,9 +1,9 @@
 /* mate-rr.c
  *
  * Copyright 2007, 2008, Red Hat, Inc.
- * 
+ *
  * This file is part of the Mate Library.
- * 
+ *
  * The Mate Library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -13,12 +13,12 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Library General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Library General Public
  * License along with the Mate Library; see the file COPYING.LIB.  If not,
  * write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
  * Boston, MA 02110-1301, USA.
- * 
+ *
  * Author: Soren Sandmann <sandmann@redhat.com>
  */
 
@@ -77,7 +77,7 @@ struct MateRROutput
 {
     ScreenInfo *	info;
     RROutput		id;
-    
+
     char *		name;
     MateRRCrtc *	current_crtc;
     gboolean		connected;
@@ -101,13 +101,13 @@ struct MateRRCrtc
 {
     ScreenInfo *	info;
     RRCrtc		id;
-    
+
     MateRRMode *	current_mode;
     MateRROutput **	current_outputs;
     MateRROutput **	possible_outputs;
     int			x;
     int			y;
-    
+
     MateRRRotation	current_rotation;
     MateRRRotation	rotations;
     int			gamma_size;
@@ -195,15 +195,15 @@ static MateRROutput *
 mate_rr_output_by_id (ScreenInfo *info, RROutput id)
 {
     MateRROutput **output;
-    
+
     g_assert (info != NULL);
-    
+
     for (output = info->outputs; *output; ++output)
     {
 	if ((*output)->id == id)
 	    return *output;
     }
-    
+
     return NULL;
 }
 
@@ -211,16 +211,16 @@ static MateRRCrtc *
 crtc_by_id (ScreenInfo *info, RRCrtc id)
 {
     MateRRCrtc **crtc;
-    
+
     if (!info)
         return NULL;
-    
+
     for (crtc = info->crtcs; *crtc; ++crtc)
     {
 	if ((*crtc)->id == id)
 	    return *crtc;
     }
-    
+
     return NULL;
 }
 
@@ -228,15 +228,15 @@ static MateRRMode *
 mode_by_id (ScreenInfo *info, RRMode id)
 {
     MateRRMode **mode;
-    
+
     g_assert (info != NULL);
-    
+
     for (mode = info->modes; *mode; ++mode)
     {
 	if ((*mode)->id == id)
 	    return *mode;
     }
-    
+
     return NULL;
 }
 
@@ -246,32 +246,32 @@ screen_info_free (ScreenInfo *info)
     MateRROutput **output;
     MateRRCrtc **crtc;
     MateRRMode **mode;
-    
+
     g_assert (info != NULL);
 
 #ifdef HAVE_RANDR
     if (info->resources)
     {
 	XRRFreeScreenResources (info->resources);
-	
+
 	info->resources = NULL;
     }
 #endif
-    
+
     if (info->outputs)
     {
 	for (output = info->outputs; *output; ++output)
 	    output_free (*output);
 	g_free (info->outputs);
     }
-    
+
     if (info->crtcs)
     {
 	for (crtc = info->crtcs; *crtc; ++crtc)
 	    crtc_free (*crtc);
 	g_free (info->crtcs);
     }
-    
+
     if (info->modes)
     {
 	for (mode = info->modes; *mode; ++mode)
@@ -284,7 +284,7 @@ screen_info_free (ScreenInfo *info)
 	/* The modes themselves were freed above */
 	g_free (info->clone_modes);
     }
-    
+
     g_free (info);
 }
 
@@ -322,10 +322,10 @@ gather_clone_modes (ScreenInfo *info)
 	MateRROutput *output1, *output2;
 
 	output1 = info->outputs[i];
-	
+
 	if (!output1->connected)
 	    continue;
-	
+
 	for (j = 0; output1->modes[j] != NULL; ++j)
 	{
 	    MateRRMode *mode = output1->modes[j];
@@ -336,10 +336,10 @@ gather_clone_modes (ScreenInfo *info)
 	    for (k = 0; info->outputs[k] != NULL; ++k)
 	    {
 		output2 = info->outputs[k];
-		
+
 		if (!output2->connected)
 		    continue;
-		
+
 		if (!has_similar_mode (output2, mode))
 		{
 		    valid = FALSE;
@@ -353,7 +353,7 @@ gather_clone_modes (ScreenInfo *info)
     }
 
     g_ptr_array_add (result, NULL);
-    
+
     info->clone_modes = (MateRRMode **)g_ptr_array_free (result, FALSE);
 }
 
@@ -439,7 +439,7 @@ fill_out_screen_info (Display *xdisplay,
 #ifdef HAVE_RANDR
     XRRScreenResources *resources;
 	GdkDisplay *display;
-    
+
     g_assert (xdisplay != NULL);
     g_assert (info != NULL);
 
@@ -492,7 +492,7 @@ fill_out_screen_info (Display *xdisplay,
     }
     else
     {
-        mate_rr_screen_get_ranges (info->screen, 
+        mate_rr_screen_get_ranges (info->screen,
 					 &(info->min_width),
 					 &(info->max_width),
 					 &(info->min_height),
@@ -525,7 +525,7 @@ screen_info_new (MateRRScreen *screen, gboolean needs_reprobe, GError **error)
     info->crtcs = NULL;
     info->modes = NULL;
     info->screen = screen;
-    
+
     if (fill_out_screen_info (priv->xdisplay, priv->xroot, info, needs_reprobe, error))
     {
 	return info;
@@ -542,7 +542,7 @@ screen_update (MateRRScreen *screen, gboolean force_callback, gboolean needs_rep
 {
     ScreenInfo *info;
     gboolean changed = FALSE;
-    
+
     g_assert (screen != NULL);
 
     info = screen_info_new (screen, needs_reprobe, error);
@@ -555,12 +555,12 @@ screen_update (MateRRScreen *screen, gboolean force_callback, gboolean needs_rep
 #endif
 
     screen_info_free (screen->priv->info);
-	
+
     screen->priv->info = info;
 
     if (changed || force_callback)
 	g_signal_emit (G_OBJECT (screen), screen_signals[SCREEN_CHANGED], 0);
-    
+
     return changed;
 }
 
@@ -878,16 +878,16 @@ mate_rr_screen_get_ranges (MateRRScreen *screen,
     g_return_if_fail (MATE_IS_RR_SCREEN (screen));
 
     priv = screen->priv;
-    
+
     if (min_width)
 	*min_width = priv->info->min_width;
-    
+
     if (max_width)
 	*max_width = priv->info->max_width;
-    
+
     if (min_height)
 	*min_height = priv->info->min_height;
-    
+
     if (max_height)
 	*max_height = priv->info->max_height;
 }
@@ -1020,7 +1020,7 @@ mate_rr_screen_list_modes (MateRRScreen *screen)
 {
     g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
-    
+
     return screen->priv->info->modes;
 }
 
@@ -1052,7 +1052,7 @@ mate_rr_screen_list_crtcs (MateRRScreen *screen)
 {
     g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
-    
+
     return screen->priv->info->crtcs;
 }
 
@@ -1068,7 +1068,7 @@ mate_rr_screen_list_outputs (MateRRScreen *screen)
 {
     g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
-    
+
     return screen->priv->info->outputs;
 }
 
@@ -1083,18 +1083,18 @@ mate_rr_screen_get_crtc_by_id (MateRRScreen *screen,
 {
     MateRRCrtc **crtcs;
     int i;
-    
+
     g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
 
     crtcs = screen->priv->info->crtcs;
-    
+
     for (i = 0; crtcs[i] != NULL; ++i)
     {
 	if (crtcs[i]->id == id)
 	    return crtcs[i];
     }
-    
+
     return NULL;
 }
 
@@ -1109,7 +1109,7 @@ mate_rr_screen_get_output_by_id (MateRRScreen *screen,
 {
     MateRROutput **outputs;
     int i;
-    
+
     g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
 
@@ -1120,7 +1120,7 @@ mate_rr_screen_get_output_by_id (MateRRScreen *screen,
 	if (outputs[i]->id == id)
 	    return outputs[i];
     }
-    
+
     return NULL;
 }
 
@@ -1129,10 +1129,10 @@ static MateRROutput *
 output_new (ScreenInfo *info, RROutput id)
 {
     MateRROutput *output = g_slice_new0 (MateRROutput);
-    
+
     output->id = id;
     output->info = info;
-    
+
     return output;
 }
 
@@ -1148,13 +1148,13 @@ get_property (Display *dpy,
     unsigned long nitems, bytes_after;
     Atom actual_type;
     guint8 *result;
-    
+
     XRRGetOutputProperty (dpy, output, atom,
 			  0, 100, False, False,
 			  AnyPropertyType,
 			  &actual_type, &actual_format,
 			  &nitems, &bytes_after, &prop);
-    
+
     if (actual_type == XA_INTEGER && actual_format == 8)
     {
 	result = g_memdup (prop, nitems);
@@ -1165,9 +1165,9 @@ get_property (Display *dpy,
     {
 	result = NULL;
     }
-    
+
     XFree (prop);
-    
+
     return result;
 #else
     return NULL;
@@ -1198,7 +1198,7 @@ read_edid_data (MateRROutput *output, int *len)
 	else
 	    g_free (result);
     }
-    
+
     return NULL;
 }
 
@@ -1252,11 +1252,11 @@ output_initialize (MateRROutput *output, XRRScreenResources *res, GError **error
 	DISPLAY (output), res, output->id);
     GPtrArray *a;
     int i;
-    
+
 #if 0
     g_print ("Output %lx Timestamp: %u\n", output->id, (guint32)info->timestamp);
 #endif
-    
+
     if (!info || !output->info)
     {
 	/* FIXME: see the comment in crtc_initialize() */
@@ -1266,7 +1266,7 @@ output_initialize (MateRROutput *output, XRRScreenResources *res, GError **error
 		     (int) output->id);
 	return FALSE;
     }
-    
+
     output->name = g_strdup (info->name); /* FIXME: what is nameLen used for? */
     output->current_crtc = crtc_by_id (output->info, info->crtc);
     output->width_mm = info->mm_width;
@@ -1276,46 +1276,46 @@ output_initialize (MateRROutput *output, XRRScreenResources *res, GError **error
 
     /* Possible crtcs */
     a = g_ptr_array_new ();
-    
+
     for (i = 0; i < info->ncrtc; ++i)
     {
 	MateRRCrtc *crtc = crtc_by_id (output->info, info->crtcs[i]);
-	
+
 	if (crtc)
 	    g_ptr_array_add (a, crtc);
     }
     g_ptr_array_add (a, NULL);
     output->possible_crtcs = (MateRRCrtc **)g_ptr_array_free (a, FALSE);
-    
+
     /* Clones */
     a = g_ptr_array_new ();
     for (i = 0; i < info->nclone; ++i)
     {
 	MateRROutput *mate_rr_output = mate_rr_output_by_id (output->info, info->clones[i]);
-	
+
 	if (mate_rr_output)
 	    g_ptr_array_add (a, mate_rr_output);
     }
     g_ptr_array_add (a, NULL);
     output->clones = (MateRROutput **)g_ptr_array_free (a, FALSE);
-    
+
     /* Modes */
     a = g_ptr_array_new ();
     for (i = 0; i < info->nmode; ++i)
     {
 	MateRRMode *mode = mode_by_id (output->info, info->modes[i]);
-	
+
 	if (mode)
 	    g_ptr_array_add (a, mode);
     }
     g_ptr_array_add (a, NULL);
     output->modes = (MateRRMode **)g_ptr_array_free (a, FALSE);
-    
+
     output->n_preferred = info->npreferred;
-    
+
     /* Edid data */
     output->edid_data = read_edid_data (output, &output->edid_size);
-    
+
     XRRFreeOutputInfo (info);
 
     return TRUE;
@@ -1384,7 +1384,7 @@ guint32
 mate_rr_output_get_id (MateRROutput *output)
 {
     g_assert(output != NULL);
-    
+
     return output->id;
 }
 
@@ -1392,7 +1392,7 @@ const guint8 *
 mate_rr_output_get_edid_data (MateRROutput *output)
 {
     g_return_val_if_fail (output != NULL, NULL);
-    
+
     return output->edid_data;
 }
 
@@ -1406,18 +1406,18 @@ mate_rr_screen_get_output_by_name (MateRRScreen *screen,
 				    const char    *name)
 {
     int i;
-    
+
     g_return_val_if_fail (MATE_IS_RR_SCREEN (screen), NULL);
     g_return_val_if_fail (screen->priv->info != NULL, NULL);
-    
+
     for (i = 0; screen->priv->info->outputs[i] != NULL; ++i)
     {
 	MateRROutput *output = screen->priv->info->outputs[i];
-	
+
 	if (strcmp (output->name, name) == 0)
 	    return output;
     }
-    
+
     return NULL;
 }
 
@@ -1430,7 +1430,7 @@ MateRRCrtc *
 mate_rr_output_get_crtc (MateRROutput *output)
 {
     g_return_val_if_fail (output != NULL, NULL);
-    
+
     return output->current_crtc;
 }
 
@@ -1496,12 +1496,12 @@ MateRRMode *
 mate_rr_output_get_current_mode (MateRROutput *output)
 {
     MateRRCrtc *crtc;
-    
+
     g_return_val_if_fail (output != NULL, NULL);
-    
+
     if ((crtc = mate_rr_output_get_crtc (output)))
 	return mate_rr_crtc_get_current_mode (crtc);
-    
+
     return NULL;
 }
 
@@ -1517,9 +1517,9 @@ mate_rr_output_get_position (MateRROutput   *output,
 			      int             *y)
 {
     MateRRCrtc *crtc;
-    
+
     g_return_if_fail (output != NULL);
-    
+
     if ((crtc = mate_rr_output_get_crtc (output)))
 	mate_rr_crtc_get_position (crtc, x, y);
 }
@@ -1556,7 +1556,7 @@ mate_rr_output_get_preferred_mode (MateRROutput *output)
     g_return_val_if_fail (output != NULL, NULL);
     if (output->n_preferred)
 	return output->modes[0];
-    
+
     return NULL;
 }
 
@@ -1585,16 +1585,16 @@ mate_rr_output_supports_mode (MateRROutput *output,
 			       MateRRMode   *mode)
 {
     int i;
-    
+
     g_return_val_if_fail (output != NULL, FALSE);
     g_return_val_if_fail (mode != NULL, FALSE);
-    
+
     for (i = 0; output->modes[i] != NULL; ++i)
     {
 	if (output->modes[i] == mode)
 	    return TRUE;
     }
-    
+
     return FALSE;
 }
 
@@ -1603,16 +1603,16 @@ mate_rr_output_can_clone (MateRROutput *output,
 			   MateRROutput *clone)
 {
     int i;
-    
+
     g_return_val_if_fail (output != NULL, FALSE);
     g_return_val_if_fail (clone != NULL, FALSE);
-    
+
     for (i = 0; output->clones[i] != NULL; ++i)
     {
 	if (output->clones[i] == clone)
 	    return TRUE;
     }
-    
+
     return FALSE;
 }
 
@@ -1670,13 +1670,13 @@ mate_rr_rotation_from_xrotation (Rotation r)
 {
     int i;
     MateRRRotation result = 0;
-    
+
     for (i = 0; i < G_N_ELEMENTS (rotation_map); ++i)
     {
 	if (r & rotation_map[i].xrot)
 	    result |= rotation_map[i].rot;
     }
-    
+
     return result;
 }
 
@@ -1685,13 +1685,13 @@ xrotation_from_rotation (MateRRRotation r)
 {
     int i;
     Rotation result = 0;
-    
+
     for (i = 0; i < G_N_ELEMENTS (rotation_map); ++i)
     {
 	if (r & rotation_map[i].rot)
 	    result |= rotation_map[i].xrot;
     }
-    
+
     return result;
 }
 
@@ -1728,13 +1728,13 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
     Status status;
     gboolean result;
     int i;
-    
+
     g_return_val_if_fail (crtc != NULL, FALSE);
     g_return_val_if_fail (mode != NULL || outputs == NULL || n_outputs == 0, FALSE);
     g_return_val_if_fail (error == NULL || *error == NULL, FALSE);
-    
+
     info = crtc->info;
-    
+
     if (mode)
     {
 	if (x + mode->width > info->max_width
@@ -1753,9 +1753,9 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
 	    return FALSE;
 	}
     }
-    
+
     output_ids = g_array_new (FALSE, FALSE, sizeof (RROutput));
-    
+
     if (outputs)
     {
 	for (i = 0; i < n_outputs; ++i)
@@ -1765,13 +1765,13 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
 	display = gdk_display_get_default ();
     gdk_x11_display_error_trap_push (display);
     status = XRRSetCrtcConfig (DISPLAY (crtc), info->resources, crtc->id,
-			       timestamp, 
+			       timestamp,
 			       x, y,
 			       mode ? mode->id : None,
 			       xrotation_from_rotation (rotation),
 			       (RROutput *)output_ids->data,
 			       output_ids->len);
-    
+
     g_array_free (output_ids, TRUE);
 
     if (gdk_x11_display_error_trap_pop (display) || status != RRSetConfigSuccess) {
@@ -1785,7 +1785,7 @@ mate_rr_crtc_set_config_with_time (MateRRCrtc      *crtc,
     } else {
         result = TRUE;
     }
-    
+
     return result;
 #else
     return FALSE;
@@ -1801,7 +1801,7 @@ MateRRMode *
 mate_rr_crtc_get_current_mode (MateRRCrtc *crtc)
 {
     g_return_val_if_fail (crtc != NULL, NULL);
-    
+
     return crtc->current_mode;
 }
 
@@ -1809,7 +1809,7 @@ guint32
 mate_rr_crtc_get_id (MateRRCrtc *crtc)
 {
     g_return_val_if_fail (crtc != NULL, 0);
-    
+
     return crtc->id;
 }
 
@@ -1818,16 +1818,16 @@ mate_rr_crtc_can_drive_output (MateRRCrtc   *crtc,
 				MateRROutput *output)
 {
     int i;
-    
+
     g_return_val_if_fail (crtc != NULL, FALSE);
     g_return_val_if_fail (output != NULL, FALSE);
-    
+
     for (i = 0; crtc->possible_outputs[i] != NULL; ++i)
     {
 	if (crtc->possible_outputs[i] == output)
 	    return TRUE;
     }
-    
+
     return FALSE;
 }
 
@@ -1845,10 +1845,10 @@ mate_rr_crtc_get_position (MateRRCrtc *crtc,
 			    int         *y)
 {
     g_return_if_fail (crtc != NULL);
-    
+
     if (x)
 	*x = crtc->x;
-    
+
     if (y)
 	*y = crtc->y;
 }
@@ -1880,10 +1880,10 @@ static MateRRCrtc *
 crtc_new (ScreenInfo *info, RROutput id)
 {
     MateRRCrtc *crtc = g_slice_new0 (MateRRCrtc);
-    
+
     crtc->id = id;
     crtc->info = info;
-    
+
     return crtc;
 }
 
@@ -1929,11 +1929,11 @@ crtc_initialize (MateRRCrtc        *crtc,
     XRRCrtcInfo *info = XRRGetCrtcInfo (DISPLAY (crtc), res, crtc->id);
     GPtrArray *a;
     int i;
-    
+
 #if 0
     g_print ("CRTC %lx Timestamp: %u\n", crtc->id, (guint32)info->timestamp);
 #endif
-    
+
     if (!info)
     {
 	/* FIXME: We need to reaquire the screen resources */
@@ -1947,41 +1947,41 @@ crtc_initialize (MateRRCrtc        *crtc,
 		     (int) crtc->id);
 	return FALSE;
     }
-    
+
     /* MateRRMode */
     crtc->current_mode = mode_by_id (crtc->info, info->mode);
-    
+
     crtc->x = info->x;
     crtc->y = info->y;
-    
+
     /* Current outputs */
     a = g_ptr_array_new ();
     for (i = 0; i < info->noutput; ++i)
     {
 	MateRROutput *output = mate_rr_output_by_id (crtc->info, info->outputs[i]);
-	
+
 	if (output)
 	    g_ptr_array_add (a, output);
     }
     g_ptr_array_add (a, NULL);
     crtc->current_outputs = (MateRROutput **)g_ptr_array_free (a, FALSE);
-    
+
     /* Possible outputs */
     a = g_ptr_array_new ();
     for (i = 0; i < info->npossible; ++i)
     {
 	MateRROutput *output = mate_rr_output_by_id (crtc->info, info->possible[i]);
-	
+
 	if (output)
 	    g_ptr_array_add (a, output);
     }
     g_ptr_array_add (a, NULL);
     crtc->possible_outputs = (MateRROutput **)g_ptr_array_free (a, FALSE);
-    
+
     /* Rotations */
     crtc->current_rotation = mate_rr_rotation_from_xrotation (info->rotation);
     crtc->rotations = mate_rr_rotation_from_xrotation (info->rotations);
-    
+
     XRRFreeCrtcInfo (info);
 
     /* get an store gamma size */
@@ -2004,10 +2004,10 @@ static MateRRMode *
 mode_new (ScreenInfo *info, RRMode id)
 {
     MateRRMode *mode = g_slice_new0 (MateRRMode);
-    
+
     mode->id = id;
     mode->info = info;
-    
+
     return mode;
 }
 
@@ -2045,7 +2045,7 @@ mode_initialize (MateRRMode *mode, XRRModeInfo *info)
 {
     g_assert (mode != NULL);
     g_assert (info != NULL);
-    
+
     mode->name = g_strdup (info->name);
     mode->width = info->width;
     mode->height = info->height;

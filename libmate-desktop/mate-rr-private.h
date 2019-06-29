@@ -19,11 +19,11 @@ struct ScreenInfo
 #ifdef HAVE_RANDR
     XRRScreenResources *resources;
 #endif
-    
+
     MateRROutput **	outputs;
     MateRRCrtc **	crtcs;
     MateRRMode **	modes;
-    
+
     MateRRScreen *	screen;
 
     MateRRMode **	clone_modes;
@@ -41,11 +41,11 @@ struct MateRRScreenPrivate
     Screen *			xscreen;
     Window			xroot;
     ScreenInfo *		info;
-    
+
     int				randr_event_base;
     int				rr_major_version;
     int				rr_minor_version;
-    
+
     Atom                        connector_type_atom;
 };
 

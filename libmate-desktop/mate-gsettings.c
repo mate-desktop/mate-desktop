@@ -31,7 +31,7 @@
  * Check if a given schema is installed in GSettings.
  *
  * Return value: TRUE if schema exists, FALSE if not.
- * 
+ *
  * Since: 1.7.1
  */
 gboolean

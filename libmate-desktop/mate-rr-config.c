@@ -3,9 +3,9 @@
  *
  * Copyright 2007, 2008, Red Hat, Inc.
  * Copyright 2010 Giovanni Campagna
- * 
+ *
  * This file is part of the Mate Library.
- * 
+ *
  * The Mate Library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public License as
  * published by the Free Software Foundation; either version 2 of the
@@ -15,12 +15,12 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Library General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Library General Public
  * License along with the Mate Library; see the file COPYING.LIB.  If not,
  * write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
  * Boston, MA 02110-1301, USA.
- * 
+ *
  * Author: Soren Sandmann <sandmann@redhat.com>
  */
 
@@ -127,11 +127,11 @@ stack_is (Parser *parser,
     const char *s;
     GList *l1, *l2;
     va_list args;
-    
+
     stack = g_list_prepend (stack, (gpointer)s1);
-    
+
     va_start (args, s1);
-    
+
     s = va_arg (args, const char *);
     while (s)
     {
@@ -140,10 +140,10 @@ stack_is (Parser *parser,
     }
 
     va_end (args);
-	
+
     l1 = stack;
     l2 = parser->stack->head;
-    
+
     while (l1 && l2)
     {
 	if (strcmp (l1->data, l2->data) != 0)
@@ -151,13 +151,13 @@ stack_is (Parser *parser,
 	    g_list_free (stack);
 	    return FALSE;
 	}
-	
+
 	l1 = l1->next;
 	l2 = l2->next;
     }
-    
+
     g_list_free (stack);
-    
+
     return (!l1 && !l2);
 }
 
@@ -178,7 +178,7 @@ handle_start_element (GMarkupParseContext *context,
 
 	parser->output = g_object_new (MATE_TYPE_RR_OUTPUT_INFO, NULL);
 	parser->output->priv->rotation = 0;
-	
+
 	for (i = 0; attr_names[i] != NULL; ++i)
 	{
 	    if (strcmp (attr_names[i], "name") == 0)
@@ -194,9 +194,9 @@ handle_start_element (GMarkupParseContext *context,
 	     * something up than to crash later.
 	     */
 	    g_warning ("Malformed monitor configuration file");
-	    
+
 	    parser->output->priv->name = g_strdup ("default");
-	}	
+	}
 	parser->output->priv->connected = FALSE;
 	parser->output->priv->on = FALSE;
 	parser->output->priv->primary = FALSE;
@@ -204,7 +204,7 @@ handle_start_element (GMarkupParseContext *context,
     else if (strcmp (name, "configuration") == 0)
     {
 	g_assert (parser->configuration == NULL);
-	
+
 	parser->configuration = g_object_new (MATE_TYPE_RR_CONFIG, NULL);
 	parser->configuration->priv->clone = FALSE;
 	parser->configuration->priv->outputs = NULL;
@@ -233,13 +233,13 @@ handle_end_element (GMarkupParseContext *context,
 		    GError             **err)
 {
     Parser *parser = user_data;
-    
+
     if (strcmp (name, "output") == 0)
     {
 	/* If no rotation properties were set, just use MATE_RR_ROTATION_0 */
 	if (parser->output->priv->rotation == 0)
 	    parser->output->priv->rotation = MATE_RR_ROTATION_0;
-	
+
 	g_ptr_array_add (parser->outputs, parser->output);
 
 	parser->output = NULL;
@@ -253,7 +253,7 @@ handle_end_element (GMarkupParseContext *context,
 	g_ptr_array_add (parser->configurations, parser->configuration);
 	parser->configuration = NULL;
     }
-    
+
     g_free (g_queue_pop_tail (parser->stack));
 }
 
@@ -267,11 +267,11 @@ handle_text (GMarkupParseContext *context,
 	     GError             **err)
 {
     Parser *parser = user_data;
-    
+
     if (stack_is (parser, "vendor", "output", "configuration", TOPLEVEL_ELEMENT, NULL))
     {
 	parser->output->priv->connected = TRUE;
-	
+
 	strncpy ((gchar*) parser->output->priv->vendor, text, 3);
 	parser->output->priv->vendor[3] = 0;
     }
@@ -403,7 +403,7 @@ parser_free (Parser *parser)
     for (list = parser->stack->head; list; list = list->next)
 	g_free (list->data);
     g_queue_free (parser->stack);
-    
+
     g_free (parser);
 }
 
@@ -424,21 +424,21 @@ configurations_read_from_file (const gchar *filename, GError **error)
     parser->configurations = g_ptr_array_new ();
     parser->outputs = g_ptr_array_new ();
     parser->stack = g_queue_new ();
-    
+
     if (!parse_file_gmarkup (filename, &callbacks, parser, error))
     {
 	result = NULL;
-	
+
 	g_assert (parser->outputs);
 	goto out;
     }
 
     g_assert (parser->outputs);
-    
+
     g_ptr_array_add (parser->configurations, NULL);
     result = (MateRRConfig **)g_ptr_array_free (parser->configurations, FALSE);
     parser->configurations = g_ptr_array_new ();
-    
+
     g_assert (parser->outputs);
 out:
     parser_free (parser);
@@ -507,7 +507,7 @@ mate_rr_config_load_current (MateRRConfig *config, GError **error)
     rr_outputs = mate_rr_screen_list_outputs (config->priv->screen);
 
     config->priv->clone = FALSE;
-    
+
     for (i = 0; rr_outputs[i] != NULL; ++i)
     {
 	MateRROutput *rr_output = rr_outputs[i];
@@ -539,7 +539,7 @@ mate_rr_config_load_current (MateRRConfig *config, GError **error)
 	    {
 		memcpy (output->priv->vendor, info->manufacturer_code,
 			sizeof (output->priv->vendor));
-		
+
 		output->priv->product = info->product_code;
 		output->priv->serial = info->serial_number;
 		output->priv->aspect = info->aspect_ratio;
@@ -555,16 +555,16 @@ mate_rr_config_load_current (MateRRConfig *config, GError **error)
 		output->priv->display_name = g_strdup (_("Laptop"));
 	    else
 		output->priv->display_name = make_display_name (info);
-		
+
 	    g_free (info);
-		
+
 	    crtc = mate_rr_output_get_crtc (rr_output);
 	    mode = crtc? mate_rr_crtc_get_current_mode (crtc) : NULL;
-	    
+
 	    if (crtc && mode)
 	    {
 		output->priv->on = TRUE;
-		
+
 		mate_rr_crtc_get_position (crtc, &output->priv->x, &output->priv->y);
 		output->priv->width = mate_rr_mode_get_width (mode);
 		output->priv->height = mate_rr_mode_get_height (mode);
@@ -589,11 +589,11 @@ mate_rr_config_load_current (MateRRConfig *config, GError **error)
 
 	    /* Get preferred size for the monitor */
 	    mode = mate_rr_output_get_preferred_mode (rr_output);
-	    
+
 	    if (!mode)
 	    {
 		MateRRMode **modes = mate_rr_output_list_modes (rr_output);
-		
+
 		/* FIXME: we should pick the "best" mode here, where best is
 		 * sorted wrt
 		 *
@@ -607,7 +607,7 @@ mate_rr_config_load_current (MateRRConfig *config, GError **error)
 		if (modes[0])
 		    mode = modes[0];
 	    }
-	    
+
 	    if (mode)
 	    {
 		output->priv->pref_width = mate_rr_mode_get_width (mode);
@@ -622,12 +622,12 @@ mate_rr_config_load_current (MateRRConfig *config, GError **error)
 	}
 
         output->priv->primary = mate_rr_output_get_is_primary (rr_output);
- 
+
 	g_ptr_array_add (a, output);
     }
 
     g_ptr_array_add (a, NULL);
-    
+
     config->priv->outputs = (MateRROutputInfo **)g_ptr_array_free (a, FALSE);
 
     /* Walk the outputs computing the right-most edge of all
@@ -657,7 +657,7 @@ mate_rr_config_load_current (MateRRConfig *config, GError **error)
 	    last_x = output->priv->x + output->priv->width;
 	}
     }
-    
+
     g_assert (mate_rr_config_match (config, config));
 
     return TRUE;
@@ -782,7 +782,7 @@ parse_file_gmarkup (const gchar          *filename,
 	result = FALSE;
 	goto out;
     }
-    
+
     context = g_markup_parse_context_new (parser, 0, data, NULL);
 
     if (!g_markup_parse_context_parse (context, contents, len, err))
@@ -827,7 +827,7 @@ output_match (MateRROutputInfo *output1, MateRROutputInfo *output2)
 
     if (output1->priv->connected != output2->priv->connected)
 	return FALSE;
-    
+
     return TRUE;
 }
 
@@ -847,19 +847,19 @@ output_equal (MateRROutputInfo *output1, MateRROutputInfo *output2)
     {
 	if (output1->priv->width != output2->priv->width)
 	    return FALSE;
-	
+
 	if (output1->priv->height != output2->priv->height)
 	    return FALSE;
-	
+
 	if (output1->priv->rate != output2->priv->rate)
 	    return FALSE;
-	
+
 	if (output1->priv->x != output2->priv->x)
 	    return FALSE;
-	
+
 	if (output1->priv->y != output2->priv->y)
 	    return FALSE;
-	
+
 	if (output1->priv->rotation != output2->priv->rotation)
 	    return FALSE;
     }
@@ -875,7 +875,7 @@ find_output (MateRRConfig *config, const char *name)
     for (i = 0; config->priv->outputs[i] != NULL; ++i)
     {
 	MateRROutputInfo *output = config->priv->outputs[i];
-	
+
 	if (strcmp (name, output->priv->name) == 0)
 	    return output;
     }
@@ -902,7 +902,7 @@ mate_rr_config_match (MateRRConfig *c1, MateRRConfig *c2)
 	if (!output2 || !output_match (output1, output2))
 	    return FALSE;
     }
-    
+
     return TRUE;
 }
 
@@ -926,7 +926,7 @@ mate_rr_config_equal (MateRRConfig  *c1,
 	if (!output2 || !output_equal (output1, output2))
 	    return FALSE;
     }
-    
+
     return TRUE;
 }
 
@@ -940,7 +940,7 @@ make_outputs (MateRRConfig *config)
     outputs = g_ptr_array_new ();
 
     first_on = NULL;
-    
+
     for (i = 0; config->priv->outputs[i] != NULL; ++i)
     {
 	MateRROutputInfo *old = config->priv->outputs[i];
@@ -953,7 +953,7 @@ make_outputs (MateRRConfig *config)
 
 	if (old->priv->on && !first_on)
 	    first_on = old;
-	
+
 	if (config->priv->clone && new->priv->on)
 	{
 	    g_assert (first_on);
@@ -1071,14 +1071,14 @@ emit_configuration (MateRRConfig *config,
     g_string_append_printf (string, "  <configuration>\n");
 
     g_string_append_printf (string, "      <clone>%s</clone>\n", yes_no (config->priv->clone));
-    
+
     for (j = 0; config->priv->outputs[j] != NULL; ++j)
     {
 	MateRROutputInfo *output = config->priv->outputs[j];
-	
+
 	g_string_append_printf (
 	    string, "      <output name=\"%s\">\n", output->priv->name);
-	
+
 	if (output->priv->connected && *output->priv->vendor != '\0')
 	{
 	    g_string_append_printf (
@@ -1088,7 +1088,7 @@ emit_configuration (MateRRConfig *config,
 	    g_string_append_printf (
 		string, "          <serial>0x%08x</serial>\n", output->priv->serial);
 	}
-	
+
 	/* An unconnected output which is on does not make sense */
 	if (output->priv->connected && output->priv->on)
 	{
@@ -1111,10 +1111,10 @@ emit_configuration (MateRRConfig *config,
             g_string_append_printf (
                 string, "          <primary>%s</primary>\n", yes_no (output->priv->primary));
 	}
-	
+
 	g_string_append_printf (string, "      </output>\n");
     }
-    
+
     g_string_append_printf (string, "  </configuration>\n");
 }
 
@@ -1143,7 +1143,7 @@ mate_rr_config_sanitize (MateRRConfig *config)
     for (i = 0; config->priv->outputs[i]; ++i)
     {
 	MateRROutputInfo *output = config->priv->outputs[i];
-	
+
 	if (output->priv->on)
 	{
 	    output->priv->x -= x_offset;
@@ -1244,7 +1244,7 @@ mate_rr_config_save (MateRRConfig *configuration, GError **error)
     intended_filename = mate_rr_config_get_intended_filename ();
 
     configurations = configurations_read_from_file (intended_filename, NULL); /* NULL-GError */
-    
+
     g_string_append_printf (output, "<monitors version=\"1\">\n");
 
     if (configurations)
@@ -1300,7 +1300,7 @@ mate_rr_config_apply_with_time (MateRRConfig *config,
     for (i = 0; outputs[i] != NULL; i++)
 	g_object_unref (outputs[i]);
     g_free (outputs);
-    
+
     if (assignment)
     {
 	if (crtc_assignment_apply (assignment, timestamp, error))
@@ -1377,7 +1377,7 @@ mate_rr_config_apply_from_filename_with_time (MateRRScreen *screen, const char *
 	result = mate_rr_config_apply_with_time (stored, screen, timestamp, error);
 
 	g_object_unref (stored);
-	
+
 	return result;
     }
     else
@@ -1545,19 +1545,19 @@ crtc_assignment_assign (CrtcAssignment   *assign,
 	return TRUE;
     }
     else
-    {	
+    {
 	CrtcInfo *info = g_new0 (CrtcInfo, 1);
-	
+
 	info->mode = mode;
 	info->x = x;
 	info->y = y;
 	info->rotation = rotation;
 	info->outputs = g_ptr_array_new ();
-	
+
 	g_ptr_array_add (info->outputs, output);
-	
+
 	g_hash_table_insert (assign->info, crtc, info);
-	    
+
         if (primary && !assign->primary)
         {
             assign->primary = output;
@@ -1801,7 +1801,7 @@ get_required_virtual_size (CrtcAssignment *assign, int *width, int *height)
 	width = &d;
     if (!height)
 	height = &d;
-    
+
     /* Compute size of the screen */
     *width = *height = 1;
     for (list = active_crtcs; list != NULL; list = list->next)
@@ -1812,14 +1812,14 @@ get_required_virtual_size (CrtcAssignment *assign, int *width, int *height)
 
 	w = mate_rr_mode_get_width (info->mode);
 	h = mate_rr_mode_get_height (info->mode);
-	
+
 	if (mode_is_rotated (info))
 	{
 	    int tmp = h;
 	    h = w;
 	    w = tmp;
 	}
-	
+
 	*width = MAX (*width, info->x + w);
 	*height = MAX (*height, info->y + h);
     }
@@ -1865,13 +1865,13 @@ crtc_assignment_new (MateRRScreen *screen, MateRROutputInfo **outputs, GError **
 	}
 
 	assignment->screen = screen;
-	
+
 	return assignment;
     }
 
 fail:
     crtc_assignment_free (assignment);
-    
+
     return NULL;
 }
 
@@ -1931,7 +1931,7 @@ crtc_assignment_apply (CrtcAssignment *assign, guint32 timestamp, GError **error
 		h = w;
 		w = tmp;
 	    }
-	    
+
 	    if (x + w > width || y + h > height || !g_hash_table_lookup (assign->info, crtc))
 	    {
 		if (!mate_rr_crtc_set_config_with_time (crtc, timestamp, 0, 0, NULL, MATE_RR_ROTATION_0, NULL, 0, error))
@@ -1939,7 +1939,7 @@ crtc_assignment_apply (CrtcAssignment *assign, guint32 timestamp, GError **error
 		    success = FALSE;
 		    break;
 		}
-		
+
 	    }
 	}
     }
@@ -1962,7 +1962,7 @@ crtc_assignment_apply (CrtcAssignment *assign, guint32 timestamp, GError **error
 	state.timestamp = timestamp;
 	state.has_error = FALSE;
 	state.error = error;
-	
+
 	g_hash_table_foreach (assign->info, configure_crtc, &state);
 
 	success = !state.has_error;

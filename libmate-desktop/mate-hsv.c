@@ -75,14 +75,14 @@ struct _MateHSVPrivate
   double h;
   double s;
   double v;
-  
+
   /* Size and ring width */
   int size;
   int ring_width;
-  
+
   /* Window for capturing events */
   GdkWindow *window;
-  
+
   /* Dragging mode */
   DragMode mode;
 
@@ -495,13 +495,13 @@ compute_sv (MateHSV  *hsv,
   vy = center_y - ivy;
   x -= center_x;
   y = center_y - y;
-  
+
   if (vx * (x - sx) + vy * (y - sy) < 0.0)
     {
       *s = 1.0;
       *v = (((x - sx) * (hx - sx) + (y - sy) * (hy-sy))
             / ((hx - sx) * (hx - sx) + (hy - sy) * (hy - sy)));
-      
+
       if (*v < 0.0)
         *v = 0.0;
       else if (*v > 1.0)
@@ -512,7 +512,7 @@ compute_sv (MateHSV  *hsv,
       *s = 0.0;
       *v = (((x - sx) * (vx - sx) + (y - sy) * (vy - sy))
             / ((vx - sx) * (vx - sx) + (vy - sy) * (vy - sy)));
-      
+
       if (*v < 0.0)
         *v = 0.0;
       else if (*v > 1.0)
@@ -523,7 +523,7 @@ compute_sv (MateHSV  *hsv,
       *v = 1.0;
       *s = (((x - vx) * (hx - vx) + (y - vy) * (hy - vy)) /
             ((hx - vx) * (hx - vx) + (hy - vy) * (hy - vy)));
-      
+
       if (*s < 0.0)
         *s = 0.0;
       else if (*s > 1.0)
@@ -533,7 +533,7 @@ compute_sv (MateHSV  *hsv,
     {
       *v = (((x - sx) * (hy - vy) - (y - sy) * (hx - vx))
             / ((vx - sx) * (hy - vy) - (vy - sy) * (hx - vx)));
-      
+
       if (*v<= 0.0)
         {
           *v = 0.0;
@@ -565,14 +565,14 @@ is_in_triangle (MateHSV *hsv,
 {
   int hx, hy, sx, sy, vx, vy;
   double det, s, v;
-  
+
   compute_triangle (hsv, &hx, &hy, &sx, &sy, &vx, &vy);
-  
+
   det = (vx - sx) * (hy - sy) - (vy - sy) * (hx - sx);
-  
+
   s = ((x - sx) * (hy - sy) - (y - sy) * (hx - sx)) / det;
   v = ((vx - sx) * (y - sy) - (vy - sy) * (x - sx)) / det;
-  
+
   return (s >= 0.0 && v >= 0.0 && s + v <= 1.0);
 }
 
@@ -839,12 +839,12 @@ paint_ring (MateHSV *hsv,
    * will get properly clipped at the edges of the ring
    */
   source_cr = cairo_create (source);
-  
+
   r = priv->h;
   g = 1.0;
   b = 1.0;
   hsv_to_rgb (&r, &g, &b);
-  
+
   if (INTENSITY (r, g, b) > 0.5)
     cairo_set_source_rgb (source_cr, 0., 0., 0.);
   else
@@ -860,7 +860,7 @@ paint_ring (MateHSV *hsv,
   /* Draw the ring using the source image */
 
   cairo_save (cr);
-    
+
   cairo_set_source_surface (cr, source, 0, 0);
   cairo_surface_destroy (source);
 
@@ -871,9 +871,9 @@ paint_ring (MateHSV *hsv,
              priv->size / 2. - priv->ring_width / 2.,
              0, 2 * G_PI);
   cairo_stroke (cr);
-  
+
   cairo_restore (cr);
-  
+
   g_free (buf);
 }
 
@@ -887,7 +887,7 @@ get_color (gdouble h,
            gint   *b)
 {
   hsv_to_rgb (&h, &s, &v);
-  
+
   *r = floor (h * 255 + 0.5);
   *g = floor (s * 255 + 0.5);
   *b = floor (v * 255 + 0.5);
@@ -928,12 +928,12 @@ paint_triangle (MateHSV  *hsv,
   int width, height;
   GtkStyleContext *context;
 
-  width = gtk_widget_get_allocated_width (widget); 
-  height = gtk_widget_get_allocated_height (widget); 
+  width = gtk_widget_get_allocated_width (widget);
+  height = gtk_widget_get_allocated_height (widget);
   /* Compute triangle's vertices */
-  
+
   compute_triangle (hsv, &hx, &hy, &sx, &sy, &vx, &vy);
-  
+
   x1 = hx;
   y1 = hy;
   get_color (priv->h, 1.0, 1.0, &r1, &g1, &b1);
@@ -1044,25 +1044,25 @@ paint_triangle (MateHSV  *hsv,
   source = cairo_image_surface_create_for_data ((unsigned char *)buf,
                                                 CAIRO_FORMAT_RGB24,
                                                 width, height, stride);
-  
+
   /* Draw a triangle with the image as a source */
 
   cairo_set_source_surface (cr, source, 0, 0);
   cairo_surface_destroy (source);
-  
+
   cairo_move_to (cr, x1, y1);
   cairo_line_to (cr, x2, y2);
   cairo_line_to (cr, x3, y3);
   cairo_close_path (cr);
   cairo_fill (cr);
-  
+
   g_free (buf);
-  
+
   /* Draw value marker */
-  
+
   xx = floor (sx + (vx - sx) * priv->v + (hx - vx) * priv->s * priv->v + 0.5);
   yy = floor (sy + (vy - sy) * priv->v + (hy - vy) * priv->s * priv->v + 0.5);
-  
+
   r = priv->h;
   g = priv->s;
   b = priv->v;
@@ -1089,7 +1089,7 @@ paint_triangle (MateHSV  *hsv,
   cairo_new_path (cr);
   cairo_arc (cr, xx, yy, RADIUS, 0, 2 * G_PI);
   cairo_stroke (cr);
-  
+
   /* Draw focus outline */
 
   if (draw_focus && !priv->focus_on_ring)
@@ -1158,7 +1158,7 @@ mate_hsv_focus (GtkWidget       *widget,
       gtk_widget_grab_focus (GTK_WIDGET (hsv));
       return TRUE;
     }
-  
+
   switch (dir)
     {
     case GTK_DIR_UP:
@@ -1238,9 +1238,9 @@ mate_hsv_set_color (MateHSV *hsv,
   priv->h = h;
   priv->s = s;
   priv->v = v;
-  
+
   g_signal_emit (hsv, hsv_signals[CHANGED], 0);
-  
+
   gtk_widget_queue_draw (GTK_WIDGET (hsv));
 }
 
@@ -1303,7 +1303,7 @@ mate_hsv_set_metrics (MateHSV *hsv,
 
   priv->size = size;
   priv->ring_width = ring_width;
-  
+
   if (same_size)
     gtk_widget_queue_draw (GTK_WIDGET (hsv));
   else
@@ -1331,18 +1331,18 @@ mate_hsv_get_metrics (MateHSV *hsv,
 
   if (size)
     *size = priv->size;
-  
+
   if (ring_width)
     *ring_width = priv->ring_width;
 }
 
 /**
  * mate_hsv_is_adjusting:
- * @hsv: A #MateHSV 
+ * @hsv: A #MateHSV
  *
  * An HSV color selector can be said to be adjusting if multiple rapid
- * changes are being made to its value, for example, when the user is 
- * adjusting the value with the mouse. This function queries whether 
+ * changes are being made to its value, for example, when the user is
+ * adjusting the value with the mouse. This function queries whether
  * the HSV color selector is being adjusted or not.
  *
  * Returns: %TRUE if clients can ignore changes to the color value,
@@ -1433,7 +1433,7 @@ mate_hsv_move (MateHSV         *hsv,
     hue = 1.0;
   else if (hue > 1.0)
     hue = 0.0;
-  
+
   mate_hsv_set_color (hsv, hue, sat, val);
 }
 
