@@ -45,7 +45,7 @@
  * large amounts.
  *
  * Return value: (transfer full): a scaled pixbuf
- * 
+ *
  * Since: 2.2
  **/
 GdkPixbuf *
@@ -70,7 +70,7 @@ mate_desktop_thumbnail_scale_down_pixbuf (GdkPixbuf *pixbuf,
 	if (dest_width == 0 || dest_height == 0) {
 		return NULL;
 	}
-	
+
 	source_width = gdk_pixbuf_get_width (pixbuf);
 	source_height = gdk_pixbuf_get_height (pixbuf);
 
@@ -80,7 +80,7 @@ mate_desktop_thumbnail_scale_down_pixbuf (GdkPixbuf *pixbuf,
 	ddx = div (source_width, dest_width);
 	dx = ddx.quot;
 	dx_frac = ddx.rem;
-	
+
 	ddy = div (source_height, dest_height);
 	dy = ddy.quot;
 	dy_frac = ddy.rem;
@@ -95,7 +95,7 @@ mate_desktop_thumbnail_scale_down_pixbuf (GdkPixbuf *pixbuf,
 	dest_rowstride = gdk_pixbuf_get_rowstride (dest_pixbuf);
 
 	pixel_stride = (has_alpha)?4:3;
-	
+
 	s_y1 = 0;
 	s_yfrac = -dest_height/2;
 	while (s_y1 < source_height) {
@@ -126,7 +126,7 @@ mate_desktop_thumbnail_scale_down_pixbuf (GdkPixbuf *pixbuf,
 				if (has_alpha) {
 					for (x = 0; x < s_x2-s_x1; x++) {
 						n_pixels++;
-						
+
 						r += xsrc[3] * xsrc[0];
 						g += xsrc[3] * xsrc[1];
 						b += xsrc[3] * xsrc[2];
@@ -143,7 +143,7 @@ mate_desktop_thumbnail_scale_down_pixbuf (GdkPixbuf *pixbuf,
 				}
 				src += source_rowstride;
 			}
-			
+
 			if (has_alpha) {
 				if (a != 0) {
 					*dest++ = r / a;
@@ -167,12 +167,12 @@ mate_desktop_thumbnail_scale_down_pixbuf (GdkPixbuf *pixbuf,
 					*dest++ = 0;
 				}
 			}
-			
+
 			s_x1 = s_x2;
 		}
 		s_y1 = s_y2;
 		dest += dest_rowstride - dest_width * pixel_stride;
 	}
-	
+
 	return dest_pixbuf;
 }

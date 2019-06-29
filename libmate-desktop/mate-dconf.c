@@ -71,7 +71,7 @@ mate_dconf_write_sync (const gchar  *key,
  * @error: a variable to store the error, or NULL.
  *
  * Allow to reset a dconf path.
- * 
+ *
  * Since: 1.7.1
  */
 gboolean
@@ -97,7 +97,7 @@ mate_dconf_recursive_reset (const gchar  *dir,
  * Returns the list of subdirectories of the given dconf directory.
  *
  * Return value: the list of subdirectories.
- * 
+ *
  * Since: 1.7.1
  */
 gchar **
