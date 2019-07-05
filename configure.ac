@@ -229,9 +229,7 @@ GTK_DOC_CHECK([1.4])
 
 dnl ICONS: convert svg to png
 AC_PATH_PROG(RSVG_CONVERT, rsvg-convert)
-if test x$RSVG_CONVERT = x ; then
-    AC_MSG_ERROR([could not locate rsvg-convert])
-fi
+AM_CONDITIONAL([HAVE_RSVG_CONVERT], [test "x$RSVG_CONVERT" != x])
 
 AC_CONFIG_FILES([
 Makefile

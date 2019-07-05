@@ -29,6 +29,7 @@ update-icon-cache:
 		echo "***   $(gtk_update_icon_cache)"; \
 	fi
 
+if HAVE_RSVG_CONVERT
 build-png-icons:
 	$(RSVG_CONVERT) -w 16 -h 16 scalable/apps/mate-desktop.svg -o 16x16/apps/mate-desktop.png
 	$(RSVG_CONVERT) -w 22 -h 22 scalable/apps/mate-desktop.svg -o 22x22/apps/mate-desktop.png
@@ -36,6 +37,7 @@ build-png-icons:
 	$(RSVG_CONVERT) -w 32 -h 32 scalable/apps/mate-desktop.svg -o 32x32/apps/mate-desktop.png
 	$(RSVG_CONVERT) -w 48 -h 48 scalable/apps/mate-desktop.svg -o 48x48/apps/mate-desktop.png
 	$(RSVG_CONVERT) -w 128 -h 128 scalable/apps/mate-desktop.svg -o 128x128/apps/mate-desktop.png
+endif
 
 clean-png-icons:
 	rm -f $(png_icons)
