@@ -15,7 +15,8 @@ libmate_desktop_HEADERS = \
 	mate-colorbutton.h \
 	mate-colorsel.h \
 	mate-hsv.h \
-	mate-colorseldialog.h
+	mate-colorseldialog.h \
+	mate-gtkstock-replacement.h
 
 lib_LTLIBRARIES = libmate-desktop-2.la
 
@@ -53,7 +54,8 @@ introspection_sources = \
 	mate-colorsel.c \
 	mate-hsv.c \
 	mate-colorseldialog.c \
-	edid-parse.c
+	edid-parse.c \
+	mate-gtkstock-replacement.c
 
 libmate_desktop_2_la_SOURCES =		\
 	$(introspection_sources)	\
