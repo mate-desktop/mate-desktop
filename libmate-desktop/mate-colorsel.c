@@ -398,7 +398,7 @@ mate_color_selection_init (MateColorSelection *colorsel)
   gtk_grid_attach (GTK_GRID (grid), priv->opacity_label, 0, 4, 1, 1);
   adjust = GTK_ADJUSTMENT (gtk_adjustment_new (0.0, 0.0, 255.0, 1.0, 1.0, 0.0));
   g_object_set_data (G_OBJECT (adjust), "COLORSEL", colorsel);
-  priv->opacity_slider = gtk_hscale_new (adjust);
+  priv->opacity_slider = gtk_scale_new (GTK_ORIENTATION_HORIZONTAL, adjust);
   gtk_widget_set_tooltip_text (priv->opacity_slider,
                         _("Transparency of the color."));
   gtk_label_set_mnemonic_widget (GTK_LABEL (priv->opacity_label),
