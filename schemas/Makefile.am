@@ -14,7 +14,6 @@ gsettings_SCHEMAS = \
 	org.mate.interface.gschema.xml \
 	org.mate.lockdown.gschema.xml \
 	org.mate.peripherals-keyboard.gschema.xml \
-	org.mate.peripherals-mouse.gschema.xml \
 	org.mate.sound.gschema.xml \
 	org.mate.thumbnail-cache.gschema.xml \
 	org.mate.thumbnailers.gschema.xml \
