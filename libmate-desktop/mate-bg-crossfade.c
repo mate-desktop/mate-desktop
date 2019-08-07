@@ -267,11 +267,16 @@ tile_surface (cairo_surface_t *surface,
     }
     else
     {
+        static GtkCssProvider *provider = NULL;
         GtkStyleContext *context;
         GdkRGBA bg;
+
+        if (provider == NULL)
+              provider = gtk_css_provider_new ();
+
         context = gtk_style_context_new ();
         gtk_style_context_add_provider (context,
-                                        GTK_STYLE_PROVIDER (gtk_css_provider_get_default ()),
+                                        GTK_STYLE_PROVIDER (provider),
                                         GTK_STYLE_PROVIDER_PRIORITY_THEME);
         gtk_style_context_get_background_color (context, GTK_STATE_FLAG_NORMAL, &bg);
         gdk_cairo_set_source_rgba(cr, &bg);
