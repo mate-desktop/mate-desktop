@@ -48,25 +48,25 @@ typedef struct _MateBGCrossfadeClass MateBGCrossfadeClass;
 
 struct _MateBGCrossfade
 {
-	GObject parent_object;
+    GObject parent_object;
 
-	MateBGCrossfadePrivate *priv;
+    MateBGCrossfadePrivate *priv;
 };
 
 struct _MateBGCrossfadeClass
 {
-	GObjectClass parent_class;
+    GObjectClass parent_class;
 
-	void (* finished) (MateBGCrossfade *fade, GdkWindow *window);
+    void (* finished) (MateBGCrossfade *fade, GdkWindow *window);
 };
 
-GType             mate_bg_crossfade_get_type              (void);
-MateBGCrossfade *mate_bg_crossfade_new (int width, int height);
+GType             mate_bg_crossfade_get_type (void);
+MateBGCrossfade   *mate_bg_crossfade_new (int width, int height);
 
 gboolean          mate_bg_crossfade_set_start_surface (MateBGCrossfade *fade,
-						       cairo_surface_t *surface);
+                                                       cairo_surface_t *surface);
 gboolean          mate_bg_crossfade_set_end_surface (MateBGCrossfade *fade,
-						     cairo_surface_t *surface);
+                                                     cairo_surface_t *surface);
 
 void              mate_bg_crossfade_start (MateBGCrossfade *fade,
                                            GdkWindow        *window);
