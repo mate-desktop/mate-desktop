@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Developers
+# This file is distributed under the same license as the mate-desktop package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -21,9 +21,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 15:14+0100\n"
+"Project-Id-Version: mate-desktop 1.23.1\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
+"POT-Creation-Date: 2019-06-15 16:04+0200\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Greek (https://www.transifex.com/mate/teams/13566/el/)\n"
@@ -35,7 +35,7 @@ msgstr ""
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: ../mate-about/mate-about.c:77
+#: mate-about/mate-about.c:77
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα MATE\n"
@@ -43,26 +43,30 @@ msgstr ""
 "\n"
 "Για περισσότερες πληροφορίες, επισκεφθείτε την σελίδα http://www.mate.gr/"
 
-#: ../mate-about/mate-about.desktop.in.h:1
+#: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
 msgstr "Περί MATE"
 
-#: ../mate-about/mate-about.desktop.in.h:2
+#: mate-about/mate-about.desktop.in:4
 msgid "Learn more about MATE"
 msgstr "Μάθετε περισσότερα για το MATE"
 
-#: ../mate-about/mate-about.h:29
+#: mate-about/mate-about.desktop.in:6
+msgid "mate-desktop"
+msgstr ""
+
+#: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
 msgstr ""
 
-#: ../mate-about/mate-about.h:34
+#: mate-about/mate-about.h:34
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2019 MATE developers"
 msgstr ""
 
-#: ../mate-about/mate-about.h:42
+#: mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
@@ -70,7 +74,7 @@ msgstr ""
 "Το MATE προσφέρει αισθητική και ελκυστική επιφάνεια εργασίας σε χρήστες "
 "Linux χρησιμοποιηόντας παραδοσιακές μεταφορές."
 
-#: ../mate-about/mate-about.h:45
+#: mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
@@ -78,7 +82,7 @@ msgstr ""
 "Το MATE περιέχει ότι χρειάζεστε στον υπολογιστή σας, συμπεριλαμβαμένων των "
 "διαχειρηστή αρχείων, προβολέα κειμένων, menus και πολλές εφαρμογές."
 
-#: ../mate-about/mate-about.h:48
+#: mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
@@ -86,7 +90,7 @@ msgstr ""
 "Το MATE είναι ένα ελεύθερο, εύχρηστο, προσβάσιμο γραφικό περιβάλλον για την "
 "οικογένεια των λειτουργικών συστημάτων Unix."
 
-#: ../mate-about/mate-about.h:51
+#: mate-about/mate-about.h:51
 msgid ""
 "MATE is the continuation of GNOME 2. Hundreds of people have contributed "
 "code to GNOME since it was started in 1997; many more have contributed in "
@@ -98,7 +102,7 @@ msgstr ""
 "συνεισφέρει σε άλλους σημαντικούς τομείς όπως μεταφράσεις, τεκμηριώσεις και "
 "διασφάλιση ποιότητας."
 
-#: ../mate-about/mate-about.h:55
+#: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
@@ -107,7 +111,7 @@ msgstr ""
 "είναι πλέον διαθέσιμο... Το ΜΑΤΕ είναι εδώ για να σας παρέχει το ίδιο "
 "γραφικό περιβάλλον!"
 
-#: ../mate-about/mate-about.h:58
+#: mate-about/mate-about.h:58
 msgid ""
 "The name “MATE” comes from yerba maté, a species of holly native to "
 "subtropical South America. Its leaves contain caffeine and are used to make "
@@ -120,89 +124,87 @@ msgstr ""
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: ../libmate-desktop/display-name.c:264
+#: libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Άγνωστο"
 
-#: ../libmate-desktop/mate-colorbutton.c:152
+#: libmate-desktop/mate-colorbutton.c:152
 msgid "Use alpha"
 msgstr "Χρήση έκδοσης alpha"
 
-#: ../libmate-desktop/mate-colorbutton.c:153
+#: libmate-desktop/mate-colorbutton.c:153
 msgid "Whether or not to give the color an alpha value"
 msgstr "Εάν ή δεν θα δοθεί χρώμα στην τιμή άλφα"
 
-#: ../libmate-desktop/mate-colorbutton.c:167
+#: libmate-desktop/mate-colorbutton.c:167
 msgid "Title"
 msgstr "Τίτλος"
 
-#: ../libmate-desktop/mate-colorbutton.c:168
+#: libmate-desktop/mate-colorbutton.c:168
 msgid "The title of the color selection dialog"
 msgstr "Ο τίτλος του διαλόγου επιλογής χρώματος"
 
-#: ../libmate-desktop/mate-colorbutton.c:169
-#: ../libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:169
+#: libmate-desktop/mate-colorbutton.c:438
 msgid "Pick a Color"
 msgstr "Επιλέξτε ένα χρώμα"
 
-#: ../libmate-desktop/mate-colorbutton.c:182
-#: ../libmate-desktop/mate-colorsel.c:287
+#: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:287
 msgid "Current Color"
 msgstr "Τρέχον χρώμα"
 
-#: ../libmate-desktop/mate-colorbutton.c:183
+#: libmate-desktop/mate-colorbutton.c:183
 msgid "The selected color"
 msgstr "Το επιλεγμένο χρώμα"
 
-#: ../libmate-desktop/mate-colorbutton.c:197
-#: ../libmate-desktop/mate-colorsel.c:294
+#: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:294
 msgid "Current Alpha"
 msgstr "Τρέχον άλφα"
 
-#: ../libmate-desktop/mate-colorbutton.c:198
+#: libmate-desktop/mate-colorbutton.c:198
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Η επιλεγμένη τιμή αδιαφάνειας (0 πλήρης διαφάνεια, 65535 πλήρης αδιαφάνεια)"
 
-#: ../libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:331
 msgid "Received invalid color data\n"
 msgstr "Ελήφθησαν μη έγκυρα δεδομένα χρώματος\n"
 
-#: ../libmate-desktop/mate-colorsel.c:273
+#: libmate-desktop/mate-colorsel.c:273
 msgid "Has Opacity Control"
 msgstr "Διαθέτει έλεγχο αδιαφάνειας"
 
-#: ../libmate-desktop/mate-colorsel.c:274
+#: libmate-desktop/mate-colorsel.c:274
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Εάν ο επιλογέας χρώματος θα επιτρέπει τον ορισμό της αδιαφάνειας"
 
-#: ../libmate-desktop/mate-colorsel.c:280
+#: libmate-desktop/mate-colorsel.c:280
 msgid "Has palette"
 msgstr "Έχει παλέτα."
 
-#: ../libmate-desktop/mate-colorsel.c:281
+#: libmate-desktop/mate-colorsel.c:281
 msgid "Whether a palette should be used"
 msgstr "Όταν θα πρέπει να χρησιμοποιηθεί μία παλέττα"
 
-#: ../libmate-desktop/mate-colorsel.c:288
+#: libmate-desktop/mate-colorsel.c:288
 msgid "The current color"
 msgstr "Τρέχον χρώμα"
 
-#: ../libmate-desktop/mate-colorsel.c:295
+#: libmate-desktop/mate-colorsel.c:295
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Η τρέχουσα τιμή αδιαφάνειας (0 πλήρης διαφάνεια, 65535 πλήρης αδιαφάνεια)"
 
-#: ../libmate-desktop/mate-colorsel.c:301
+#: libmate-desktop/mate-colorsel.c:301
 msgid "HEX String"
 msgstr "Αλφαριθμητικό HEX"
 
-#: ../libmate-desktop/mate-colorsel.c:302
+#: libmate-desktop/mate-colorsel.c:302
 msgid "The hexadecimal string of current color"
 msgstr "Η δεκαεξαδική αλφαριθμητική συμβολοσειρά του τρέχοντος χρώματος"
 
-#: ../libmate-desktop/mate-colorsel.c:348
+#: libmate-desktop/mate-colorsel.c:348
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -210,7 +212,7 @@ msgstr ""
 "Επιλέξτε το χρώμα που επιθυμείτε από τον εξωτερικό δακτύλιο. Επιλέξτε την "
 "σκοτεινότητα ή φωτεινότητα του χρώματος από το εσωτερικό τρίγωνο."
 
-#: ../libmate-desktop/mate-colorsel.c:372
+#: libmate-desktop/mate-colorsel.c:372
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -218,68 +220,67 @@ msgstr ""
 "Κάντε κλικ στο σταγονόμετρο, έπειτα κάντε κλικ σε ένα χρώμα οπουδήποτε στην "
 "οθόνη σας,  για να επιλέξτε το χρώμα αυτό."
 
-#: ../libmate-desktop/mate-colorsel.c:381
+#: libmate-desktop/mate-colorsel.c:381
 msgid "_Hue:"
 msgstr "_Απόχρωση:"
 
-#: ../libmate-desktop/mate-colorsel.c:382
+#: libmate-desktop/mate-colorsel.c:382
 msgid "Position on the color wheel."
 msgstr "Θέση της ρόδας χρώματος."
 
-#: ../libmate-desktop/mate-colorsel.c:384
+#: libmate-desktop/mate-colorsel.c:384
 msgid "_Saturation:"
 msgstr "_Κορεσμός:"
 
-#: ../libmate-desktop/mate-colorsel.c:385
+#: libmate-desktop/mate-colorsel.c:385
 msgid "\"Deepness\" of the color."
 msgstr "\"Βάθος\" του χρώματος"
 
-#: ../libmate-desktop/mate-colorsel.c:386
+#: libmate-desktop/mate-colorsel.c:386
 msgid "_Value:"
 msgstr "_Τιμή:"
 
-#: ../libmate-desktop/mate-colorsel.c:387
+#: libmate-desktop/mate-colorsel.c:387
 msgid "Brightness of the color."
 msgstr "Φωτεινότητα του χρώματος."
 
-#: ../libmate-desktop/mate-colorsel.c:388
+#: libmate-desktop/mate-colorsel.c:388
 msgid "_Red:"
 msgstr "_Κόκκινο:"
 
-#: ../libmate-desktop/mate-colorsel.c:389
+#: libmate-desktop/mate-colorsel.c:389
 msgid "Amount of red light in the color."
 msgstr "Ποσότητα του κόκκινου φωτός μέσα στο χρώμα."
 
-#: ../libmate-desktop/mate-colorsel.c:390
+#: libmate-desktop/mate-colorsel.c:390
 msgid "_Green:"
 msgstr "_Πράσινο:"
 
-#: ../libmate-desktop/mate-colorsel.c:391
+#: libmate-desktop/mate-colorsel.c:391
 msgid "Amount of green light in the color."
 msgstr "Ποσότητα του πράσινου φωτός μέσα στο χρώμα."
 
-#: ../libmate-desktop/mate-colorsel.c:392
+#: libmate-desktop/mate-colorsel.c:392
 msgid "_Blue:"
 msgstr "_Μπλέ:"
 
-#: ../libmate-desktop/mate-colorsel.c:393
+#: libmate-desktop/mate-colorsel.c:393
 msgid "Amount of blue light in the color."
 msgstr "Ποσότητα του μπλε φωτός μέσα στο χρώμα."
 
-#: ../libmate-desktop/mate-colorsel.c:396
+#: libmate-desktop/mate-colorsel.c:396
 msgid "Op_acity:"
 msgstr "Δια_φάνεια:"
 
-#: ../libmate-desktop/mate-colorsel.c:403
-#: ../libmate-desktop/mate-colorsel.c:413
+#: libmate-desktop/mate-colorsel.c:403 libmate-desktop/mate-colorsel.c:413
 msgid "Transparency of the color."
 msgstr "Διαφάνεια χρώματος"
 
-#: ../libmate-desktop/mate-colorsel.c:420
+#: libmate-desktop/mate-colorsel.c:420
 msgid "Color _name:"
 msgstr "Όνομα _χρώματος:"
 
-#: ../libmate-desktop/mate-colorsel.c:434
+#: libmate-desktop/mate-colorsel.c:434
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -287,15 +288,15 @@ msgstr ""
 "Εισαγάγετε δεκαεξαδική τιμή χρώματος γραφής HTML, ή απλώς ένα όνομα χρώματος"
 " όπως για παράδειγμα 'πορτοκαλί' σε αυτή την καταχώριση."
 
-#: ../libmate-desktop/mate-colorsel.c:464
+#: libmate-desktop/mate-colorsel.c:464
 msgid "_Palette:"
 msgstr "_Παλέτα:"
 
-#: ../libmate-desktop/mate-colorsel.c:494
+#: libmate-desktop/mate-colorsel.c:494
 msgid "Color Wheel"
 msgstr "Ρόδα Χρωμάτων"
 
-#: ../libmate-desktop/mate-colorsel.c:951
+#: libmate-desktop/mate-colorsel.c:951
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -306,7 +307,7 @@ msgstr ""
 "επιλέξετε αυτό το χρώμα ως τρέχον σέρνοντάς το στο άλλο χρωματικό δείγμα "
 "παραδίπλα."
 
-#: ../libmate-desktop/mate-colorsel.c:954
+#: libmate-desktop/mate-colorsel.c:954
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -314,7 +315,7 @@ msgstr ""
 "Το χρώμα που έχεις επιλέξει. Μπορείς να σύρεις αυτό το χρώμα σε μία "
 "καταχώριση παλέττας ώστε να το σώσεις για το μέλλον."
 
-#: ../libmate-desktop/mate-colorsel.c:959
+#: libmate-desktop/mate-colorsel.c:959
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
@@ -322,19 +323,19 @@ msgstr ""
 "Το προηγουμένως επιλεγμένο χρώμα, για σύγκριση με το χρώμα που επιλέγεις "
 "τώρα."
 
-#: ../libmate-desktop/mate-colorsel.c:962
+#: libmate-desktop/mate-colorsel.c:962
 msgid "The color you've chosen."
 msgstr "Το χρώμα που επιλέξατε."
 
-#: ../libmate-desktop/mate-colorsel.c:1367
+#: libmate-desktop/mate-colorsel.c:1367
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: ../libmate-desktop/mate-colorsel.c:1372
+#: libmate-desktop/mate-colorsel.c:1372
 msgid "_Save color here"
 msgstr "_Αποθήκευσης χρώματος εδώ"
 
-#: ../libmate-desktop/mate-colorsel.c:1592
+#: libmate-desktop/mate-colorsel.c:1592
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -343,45 +344,45 @@ msgstr ""
 " Για να αλλάξετε αυτή την καταχώρηση, σύρετε ένα δείγμα χρώματος εδώ ή κάντε"
 " δεξί κλικ και επιλέξτε \"Αποθήκευση χρώματος εδώ.\" "
 
-#: ../libmate-desktop/mate-colorseldialog.c:99
-#: ../libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:99
+#: libmate-desktop/mate-colorseldialog.c:162
 msgid "Color Selection"
 msgstr "Επιλογή Χρώματος"
 
-#: ../libmate-desktop/mate-colorseldialog.c:100
+#: libmate-desktop/mate-colorseldialog.c:100
 msgid "The color selection embedded in the dialog."
 msgstr "Η επιλογή χρώματος ενσωματωμένη στο διάλογο."
 
-#: ../libmate-desktop/mate-colorseldialog.c:106
+#: libmate-desktop/mate-colorseldialog.c:106
 msgid "OK Button"
 msgstr "Πλήκτρο OK"
 
-#: ../libmate-desktop/mate-colorseldialog.c:107
+#: libmate-desktop/mate-colorseldialog.c:107
 msgid "The OK button of the dialog."
 msgstr "Το πλήκτρο OK του διαλόγου."
 
-#: ../libmate-desktop/mate-colorseldialog.c:113
+#: libmate-desktop/mate-colorseldialog.c:113
 msgid "Cancel Button"
 msgstr "Πλήκτρο Ακύρωσης"
 
-#: ../libmate-desktop/mate-colorseldialog.c:114
+#: libmate-desktop/mate-colorseldialog.c:114
 msgid "The cancel button of the dialog."
 msgstr "Το πλήκτρο ακύρωσης του διαλόγου."
 
-#: ../libmate-desktop/mate-colorseldialog.c:120
+#: libmate-desktop/mate-colorseldialog.c:120
 msgid "Help Button"
 msgstr "Πλήκτρο Βοήθειας"
 
-#: ../libmate-desktop/mate-colorseldialog.c:121
+#: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "Το πλήκτρο βοήθειας του διαλόγου."
 
-#: ../libmate-desktop/mate-desktop-item.c:220
+#: libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
 msgstr "Σφάλμα στην ανάγνωση του αρχείου '%s': %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:288
+#: libmate-desktop/mate-desktop-item.c:288
 #, c-format
 msgid "Error rewinding file '%s': %s"
 msgstr "Σφάλμα επαναφοράς αρχείου '%s': %s"
@@ -391,88 +392,79 @@ msgstr "Σφάλμα επαναφοράς αρχείου '%s': %s"
 #. * a document
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
-#: ../libmate-desktop/mate-desktop-item.c:380
-#: ../libmate-desktop/mate-desktop-item.c:3546
+#: libmate-desktop/mate-desktop-item.c:380
+#: libmate-desktop/mate-desktop-item.c:3546
 msgid "No name"
 msgstr "Χωρίς όνομα"
 
-#: ../libmate-desktop/mate-desktop-item.c:607
+#: libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
 msgstr "Το αρχείο '%s' δεν είναι κανονικό αρχείο ή κατάλογος."
 
-#: ../libmate-desktop/mate-desktop-item.c:791
+#: libmate-desktop/mate-desktop-item.c:791
 #, c-format
 msgid "Cannot find file '%s'"
 msgstr "Αδυναμία εύρεσης του αρχείου '%s'"
 
-#: ../libmate-desktop/mate-desktop-item.c:837
-#, c-format
+#: libmate-desktop/mate-desktop-item.c:837
 msgid "No filename to save to"
 msgstr "Δεν υπάρχει όνομα αρχείου για την αποθήκευση"
 
-#: ../libmate-desktop/mate-desktop-item.c:1848
+#: libmate-desktop/mate-desktop-item.c:1848
 #, c-format
 msgid "Starting %s"
 msgstr "Εκκίνηση %s"
 
-#: ../libmate-desktop/mate-desktop-item.c:2085
-#, c-format
+#: libmate-desktop/mate-desktop-item.c:2085
 msgid "No URL to launch"
 msgstr "Δεν υπάρχει URL προς εκκίνηση"
 
-#: ../libmate-desktop/mate-desktop-item.c:2101
-#, c-format
+#: libmate-desktop/mate-desktop-item.c:2101
 msgid "Not a launchable item"
 msgstr "Μη εκκινήσιμο αντικείμενο"
 
-#: ../libmate-desktop/mate-desktop-item.c:2111
-#, c-format
+#: libmate-desktop/mate-desktop-item.c:2111
 msgid "No command (Exec) to launch"
 msgstr "Δεν υπάρχει εντολή (Exec) για εκκίνηση"
 
-#: ../libmate-desktop/mate-desktop-item.c:2124
-#, c-format
+#: libmate-desktop/mate-desktop-item.c:2124
 msgid "Bad command (Exec) to launch"
 msgstr "Εσφαλμένη εντολή (Exec) για εκκίνηση"
 
-#: ../libmate-desktop/mate-desktop-item.c:3603
+#: libmate-desktop/mate-desktop-item.c:3603
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Άγνωστη κωδικοποίηση: %s"
 
-#: ../libmate-desktop/mate-desktop-utils.c:149
+#: libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr ""
 "Αδυναμία εύρεσης τερματικού, χρήση του xterm, ακόμα και αν μπορεί να μη "
 "δουλέψει"
 
-#: ../libmate-desktop/mate-languages.c:711
+#: libmate-desktop/mate-languages.c:727
 msgid "Unspecified"
 msgstr "Ακαθόριστο"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: ../libmate-desktop/mate-rr.c:462
-#, c-format
+#: libmate-desktop/mate-rr.c:462
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "αδυναμία λήψης των πηγών οθόνης (CRTCs, outputs, modes)"
 
-#: ../libmate-desktop/mate-rr.c:483
-#, c-format
+#: libmate-desktop/mate-rr.c:483
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "Μη χειριζόμενο σφάλμα X κατά τη λήψη του εύρους οθόνης"
 
-#: ../libmate-desktop/mate-rr.c:489
-#, c-format
+#: libmate-desktop/mate-rr.c:489
 msgid "could not get the range of screen sizes"
 msgstr "αδύνατη η λήψη του εύρους των μεγεθών οθόνης"
 
-#: ../libmate-desktop/mate-rr.c:708
-#, c-format
+#: libmate-desktop/mate-rr.c:708
 msgid "RANDR extension is not present"
 msgstr "Η επέκταση RANDR δεν υπάρχει"
 
-#: ../libmate-desktop/mate-rr.c:1265
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "Αδυναμία εύρεσης πληροφοριών για την έξοδο %d"
@@ -480,7 +472,7 @@ msgstr "Αδυναμία εύρεσης πληροφοριών για την έ�
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: ../libmate-desktop/mate-rr.c:1747
+#: libmate-desktop/mate-rr.c:1747
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -489,44 +481,43 @@ msgstr ""
 "η ζητούμενη θέση/μέγεθος για το CRTC %d είναι έξω από το επιτρεπτό όριο. "
 "θέση=(%d, %d), μέγεθος=(%d, %d), μέγιστο=(%d, %d)"
 
-#: ../libmate-desktop/mate-rr.c:1782
+#: libmate-desktop/mate-rr.c:1782
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "αδύνατη η ρύθμιση του CRTC %d"
 
-#: ../libmate-desktop/mate-rr.c:1946
+#: libmate-desktop/mate-rr.c:1946
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "Αδυναμία εύρεσης πληροφοριών για το CRTC %d"
 
-#: ../libmate-desktop/mate-rr-config.c:555
+#: libmate-desktop/mate-rr-config.c:555
 msgid "Laptop"
 msgstr "Φορητός υπολογιστής"
 
-#: ../libmate-desktop/mate-rr-config.c:713
-#, c-format
+#: libmate-desktop/mate-rr-config.c:713
 msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr ""
 "καμία από τις αποθηκευμένες ρυθμίσεις οθόνης δεν ταίριαζε με την ενεργή "
 "ρύθμιση"
 
-#: ../libmate-desktop/mate-rr-config.c:1486
+#: libmate-desktop/mate-rr-config.c:1486
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "Το CRTC %d δεν μπορεί να οδηγήσει την έξοδο %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1493
+#: libmate-desktop/mate-rr-config.c:1493
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "η έξοδος %s δεν υποστηρίζει την κατάσταση λειτουργίας %dx%d@%dHz"
 
-#: ../libmate-desktop/mate-rr-config.c:1504
+#: libmate-desktop/mate-rr-config.c:1504
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "Το CRTC %d δεν υποστηρίζει περιστροφή=%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1518
+#: libmate-desktop/mate-rr-config.c:1518
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -539,24 +530,24 @@ msgstr ""
 "υπάρχουσες συντεταγμένες =  (%d, %d), νέες συντεταγμένες = (%d, %d)\n"
 "υπάρχουσα περιστροφή = %s, νέα περιστροφή = %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1533
+#: libmate-desktop/mate-rr-config.c:1533
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "αδυναμία κλωνοποίησης στην έξοδο %s"
 
-#: ../libmate-desktop/mate-rr-config.c:1702
+#: libmate-desktop/mate-rr-config.c:1702
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Δοκιμή καταστάσεων λειτουργίας για το CRTC %d\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1726
+#: libmate-desktop/mate-rr-config.c:1726
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "Το CRTC %d: δοκιμάζει την κατάσταση λειτουργίας %dx%d@%dHz με την έξοδο στα "
 "%dx%d@%dHz (επιτυχής %d)\n"
 
-#: ../libmate-desktop/mate-rr-config.c:1773
+#: libmate-desktop/mate-rr-config.c:1773
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -565,7 +556,7 @@ msgstr ""
 "αδύνατη η αντιστοίχιση CRTC σε εξόδους\n"
 "%s"
 
-#: ../libmate-desktop/mate-rr-config.c:1777
+#: libmate-desktop/mate-rr-config.c:1777
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -577,7 +568,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: ../libmate-desktop/mate-rr-config.c:1859
+#: libmate-desktop/mate-rr-config.c:1859
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -592,82 +583,81 @@ msgstr ""
 #. * screen is the same as your external monitor.  Here, "Mirror" is being
 #. * used as an adjective, not as a verb.  For example, the Spanish
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
-#: ../libmate-desktop/mate-rr-labeler.c:406
-#, c-format
+#: libmate-desktop/mate-rr-labeler.c:406
 msgid "Mirror Screens"
 msgstr "Καθρεπτισμός οθονών"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:1
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:20
 msgid "minimum interval in milliseconds"
 msgstr "ελάχιστο διάστημα σε χιλιοστά του δευτερολέπτου"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:2
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:21
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
 msgstr ""
 "Αγνόηση πολλαπλών πατημάτων του _ίδιου_ πλήκτρου σε διάστημα @delay "
 "χιλιοστών του δευτερολ."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:3
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:31
 msgid "Pixels per seconds"
 msgstr "Εικονοστοιχεία ανά δευτερόλεπτα"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:4
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:32
 msgid "How many pixels per second to move at the maximum speed."
 msgstr ""
 "Αριθμός εικονοστοιχείων ανά δευτερόλεπτο, που θα μετακινούνται στη μέγιστη "
 "ταχύτητα."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:5
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:36
 msgid "How long to accelerate in milliseconds"
 msgstr "Διάρκεια συντόμευσης σε χιλιοστά δευτερολέπτου"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:6
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:37
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
 msgstr ""
 "Χιλιοστά δευτερολέπτου που χρειάζονται για τη μετάβαση από το 0 στη μέγιστη "
 "ταχύτητα"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:7
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:41
 msgid "Initial delay in milliseconds"
 msgstr "Αρχική καθυστέρηση σε χιλιοστά του δευτερολέπτου"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:8
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:42
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
 msgstr ""
 "Χιλιοστά δευτερολέπτου αναμονής μέχρι την έναρξη της λειτουργίας των "
 "πλήκτρων κίνησης ποντικιού "
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:9
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:49
 msgid "Minimum interval in milliseconds"
 msgstr "Ελάχιστο διάστημα σε χιλιοστά του δευτερολέπτου"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:10
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:50
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
 msgstr ""
 "Να μη γίνεται αποδοχή ενός πλήκτρου αν δεν πατηθεί και κρατηθεί @delay "
 "milliseconds"
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:11
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:66
 msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:70
 msgid "Disable if two keys are pressed at the same time."
 msgstr "Απενεργοποίησε εάν πιεστούν την ίδια στιγμή δύο πλήκτρα."
 
-#: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:13
+#: schemas/org.mate.accessibility-keyboard.gschema.xml:74
 msgid "Beep when a modifier is pressed."
 msgstr "Ήχος (μπιπ) όταν πιεστεί ένας τροποποιητής."
 
-#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:1
+#: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"
 msgstr "Εκκίνηση Εφαρμογών Βοηθητικής Τεχνολογίας"
 
-#: ../schemas/org.mate.accessibility-startup.gschema.xml.in.h:2
+#: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
@@ -675,11 +665,11 @@ msgstr ""
 "Μια λίστα εφαρμογών βοηθητικής τεχνολογίας που θα εκκινούνται μαζί με την "
 "εκκίνηση της επιφάνειας εργασίας του MATE "
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:1
+#: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
 msgstr "Προτεινόμενη εφαρμογή βοηθητικής τεχνολογίας κινητικότητας"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:2
+#: schemas/org.mate.applications-at-mobility.gschema.xml:6
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
@@ -687,12 +677,12 @@ msgstr ""
 "Προτεινόμενη εφαρμογή βοηθητικής τεχνολογίας κινητικότητας για χρήση στη "
 "σύνδεση στο σύστημα, σε μενού ή στη γραμμή εντολής."
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:3
+#: schemas/org.mate.applications-at-mobility.gschema.xml:10
 msgid "Start preferred Mobility assistive technology application"
 msgstr ""
 "Εκκίνηση της προτεινόμενης εφαρμογής βοηθητικής τεχνολογίας κινητικότητας"
 
-#: ../schemas/org.mate.applications-at-mobility.gschema.xml.in.h:4
+#: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
@@ -700,11 +690,11 @@ msgstr ""
 "Να εκκινήσει το MATE την προτεινόμενη εφαρμογή βοηθητικής τεχνολογίας "
 "κινητικότητας κατά τη σύνδεση στο σύστημα."
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:1
+#: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
 msgstr "Προτεινόμενη εφαρμογή βοηθητικής τεχνολογίας όρασης"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:2
+#: schemas/org.mate.applications-at-visual.gschema.xml:6
 msgid ""
 "Preferred Visual assistive technology application to be used for login, "
 "menu, or command line."
@@ -712,11 +702,11 @@ msgstr ""
 "Προτεινόμενη εφαρμογή βοηθητικής τεχνολογίας όρασης για χρήση στη σύνδεση "
 "στο σύστημα, σε μενού ή στη γραμμή εντολής"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:3
+#: schemas/org.mate.applications-at-visual.gschema.xml:10
 msgid "Start preferred Visual assistive technology application"
 msgstr "Εκκίνηση της προτεινόμενης εφαρμογής βοηθητικής τεχνολογίας όρασης"
 
-#: ../schemas/org.mate.applications-at-visual.gschema.xml.in.h:4
+#: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
@@ -724,110 +714,128 @@ msgstr ""
 "Να εκκινήσει το MATE την προτεινόμενη εφαρμογή βοηθητικής τεχνολογίας όρασης"
 " κατά τη σύνδεση στο σύστημα"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:1
+#: schemas/org.mate.applications-browser.gschema.xml:5
 msgid "Default browser"
 msgstr "Προεπιλεγμένος περιηγητής"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:2
+#: schemas/org.mate.applications-browser.gschema.xml:6
 msgid "Default browser for all URLs."
 msgstr "Προεπιλεγμένος περιηγητής για όλους τους URL."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:3
+#: schemas/org.mate.applications-browser.gschema.xml:10
 msgid "Browser needs terminal"
 msgstr "Ο περιηγητής χρειάζεται τερματικό"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:4
+#: schemas/org.mate.applications-browser.gschema.xml:11
 msgid "Whether the default browser needs a terminal to run."
 msgstr ""
 "Αν ο προεπιλεγμένος περιηγητής χρειάζεται τερματικό για να εκτελεσθεί."
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:5
+#: schemas/org.mate.applications-browser.gschema.xml:15
 msgid "Browser understands remote"
 msgstr "Ο περιηγητής κατανοεί αποκακρυσμένο"
 
-#: ../schemas/org.mate.applications-browser.gschema.xml.in.h:6
+#: schemas/org.mate.applications-browser.gschema.xml:16
 msgid "Whether the default browser understands netscape remote."
 msgstr "Αν ο προεπιλεγμένος περιηγητής κατανοεί το netscape remote."
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.h:1
+#: schemas/org.mate.applications-calculator.gschema.xml:5
+msgid "Calculator application"
+msgstr ""
+
+#: schemas/org.mate.applications-calculator.gschema.xml:6
+msgid "Calculator program to use when starting applications that require one."
+msgstr ""
+
+#: schemas/org.mate.applications-messenger.gschema.xml:5
+msgid "Instant Messaging application"
+msgstr ""
+
+#: schemas/org.mate.applications-messenger.gschema.xml:6
+msgid ""
+"Instant Messaging program to use when starting applications that require "
+"one."
+msgstr ""
+
+#: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
 msgstr "Προεπιλεγμένο ημερολόγιο"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.h:2
+#: schemas/org.mate.applications-office.gschema.xml:10
 msgid "Default calendar application"
 msgstr "Προεπιλεγμένη εφαρμογή ημερολογίου"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.h:3
+#: schemas/org.mate.applications-office.gschema.xml:14
 msgid "Calendar needs terminal"
 msgstr "Το ημερολόγιο χρειάζεται τερματικό"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.h:4
+#: schemas/org.mate.applications-office.gschema.xml:15
 msgid "Whether the default calendar application needs a terminal to run"
 msgstr ""
 "Αν η προεπιλεγμένη εφαρμογή ημερολογίου χρειάζεται ένα τερματικό για να "
 "εκτελεσθεί"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.h:5
+#: schemas/org.mate.applications-office.gschema.xml:21
 msgid "Default tasks"
 msgstr "Προεπιλεγμένες εργασίες"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.h:6
+#: schemas/org.mate.applications-office.gschema.xml:22
 msgid "Default tasks application"
 msgstr "Προεπιλεγμένη εφαρμογή εργασιών"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.h:7
+#: schemas/org.mate.applications-office.gschema.xml:26
 msgid "Tasks needs terminal"
 msgstr "Εργασίες που χρειάζονται τερματικό"
 
-#: ../schemas/org.mate.applications-office.gschema.xml.in.h:8
+#: schemas/org.mate.applications-office.gschema.xml:27
 msgid "Whether the default tasks application needs a terminal to run"
 msgstr ""
 "Αν η προεπιλεγμένη εφαρμογή εργασιών χρειάζεται τερματικό για να εκτελεσθεί"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:1
+#: schemas/org.mate.applications-terminal.gschema.xml:5
 msgid "Terminal application"
 msgstr "Εφαρμογή τερματικού"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:2
+#: schemas/org.mate.applications-terminal.gschema.xml:6
 msgid "Terminal program to use when starting applications that require one."
 msgstr ""
 "Πρόγραμμα τερματικού που χρησιμοποιείται κατά την εκκίνηση εφαρμογών που το "
 "απαιτούν."
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:3
+#: schemas/org.mate.applications-terminal.gschema.xml:10
 msgid "Exec Arguments"
 msgstr "Ορίσματα εκτέλεσης"
 
-#: ../schemas/org.mate.applications-terminal.gschema.xml.in.h:4
+#: schemas/org.mate.applications-terminal.gschema.xml:11
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
 msgstr ""
 "Όρισμα που χρησιμοποιείται για την εκτέλεση προγραμμάτων σε τερματικό που "
 "καθορίζονται από το 'exec' key."
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:1
+#: schemas/org.mate.background.gschema.xml.in:18
 msgid "Draw Desktop Background"
 msgstr "Σχεδίαση παρασκηνίου επιφάνειας εργασίας"
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:2
+#: schemas/org.mate.background.gschema.xml.in:19
 msgid "Have MATE draw the desktop background."
 msgstr "Χρήση του MATE για τη σχεδίαση του παρασκηνίου επιφάνειας εργασίας."
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:3
+#: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
 msgstr "Εμφάνιση εικονιδίων επιφάνειας εργασίας"
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:4
+#: schemas/org.mate.background.gschema.xml.in:24
 msgid "Have MATE file manager (Caja) draw the desktop icons."
 msgstr ""
 "Χρήση του διαχειριστή αρχείων του MATE (Caja) για τη σχεδίαση εικονιδίων "
 "στην επιφάνεια εργασίας"
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:5
+#: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
 msgstr "Ξεθώριασμα του παρασκηνίου κατά την αλλαγή"
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:6
+#: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
@@ -835,11 +843,11 @@ msgstr ""
 "Αν ρυθμιστεί σε \"αληθινό\", τότε το MATE θα αλλάζει το παρασκήνιο της "
 "επιφάνειας εργασίας χρησιμοποιώντας ένα εφέ ξεθωριάσματος."
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:7
+#: schemas/org.mate.background.gschema.xml.in:33
 msgid "Picture Options"
 msgstr "Επιλογές Εικόνας"
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:8
+#: schemas/org.mate.background.gschema.xml.in:34
 msgid ""
 "Determines how the image set by wallpaper_filename is rendered. Possible "
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
@@ -850,47 +858,47 @@ msgstr ""
 "\"κεντραρισμένη\", \"σε κλίμακα\", \"τεντωμένη\", \"σε μεγέθυνση\", "
 "\"εκτεταμένη\"."
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:9
+#: schemas/org.mate.background.gschema.xml.in:38
 msgid "Picture Filename"
 msgstr "Όνομα αρχείου Εικόνας"
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:10
+#: schemas/org.mate.background.gschema.xml.in:39
 msgid "File to use for the background image."
 msgstr "Αρχείο που θα χρησιμοποιείται για την εικόνα παρασκηνίου."
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:11
+#: schemas/org.mate.background.gschema.xml.in:43
 msgid "Picture Opacity"
 msgstr "Αδιαφάνεια Εικόνας"
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:12
+#: schemas/org.mate.background.gschema.xml.in:44
 msgid "Opacity with which to draw the background picture."
 msgstr "Αδιαφάνεια με την οποία θα σχεδιάζεται η εικόνα παρασκηνίου."
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:13
+#: schemas/org.mate.background.gschema.xml.in:48
 msgid "Primary Color"
 msgstr "Πρωτεύον Χρώμα"
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:14
+#: schemas/org.mate.background.gschema.xml.in:49
 msgid "Left or Top color when drawing gradients, or the solid color."
 msgstr ""
 "Αριστερό ή πάνω χρώμα κατά τη σχεδίαση διαβαθμίσεων, ή το συμπαγές χρώμα."
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:15
+#: schemas/org.mate.background.gschema.xml.in:53
 msgid "Secondary Color"
 msgstr "Δευτερεύον Χρώμα"
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:16
+#: schemas/org.mate.background.gschema.xml.in:54
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
 "Δεξιό ή κάτω χρώμα κατά τη σχεδίαση διαβαθμίσεων, δε χρησιμοποιείται για "
 "συμπαγές χρώμα."
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:17
+#: schemas/org.mate.background.gschema.xml.in:58
 msgid "Color Shading Type"
 msgstr "Τύπος Σκίασης Χρώματος"
 
-#: ../schemas/org.mate.background.gschema.xml.in.h:18
+#: schemas/org.mate.background.gschema.xml.in:59
 msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
@@ -898,27 +906,27 @@ msgstr ""
 "Πώς να σκιάζεται το χρώμα παρασκηνίου. Οι πιθανές τιμές είναι \"οριζόντια "
 "διαβάθμιση\", \"κάθετη διαβάθμιση\", και \"συμπαγές χρώμα\"."
 
-#: ../schemas/org.mate.file-views.gschema.xml.in.h:1
+#: schemas/org.mate.file-views.gschema.xml:5
 msgid "File Icon Theme"
 msgstr "Θέμα Εικονιδίου Αρχείου"
 
-#: ../schemas/org.mate.file-views.gschema.xml.in.h:2
+#: schemas/org.mate.file-views.gschema.xml:6
 msgid "Theme used for displaying file icons."
 msgstr "Θέμα που χρησιμοποιείται για την προβολή εικονιδίων αρχείων."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:1
+#: schemas/org.mate.interface.gschema.xml:5
 msgid "Enable Accessibility"
 msgstr "Ενεργοποίηση Προσιτότητας "
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:2
+#: schemas/org.mate.interface.gschema.xml:6
 msgid "Whether Applications should have accessibility support."
 msgstr "Αν οι εφαρμογές θα υποστηρίζουν προσιτότητα."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:3
+#: schemas/org.mate.interface.gschema.xml:10
 msgid "Enable Animations"
 msgstr "Ενεργοποίηση Κινουμένων Εικόνων"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:4
+#: schemas/org.mate.interface.gschema.xml:11
 msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
@@ -927,107 +935,109 @@ msgstr ""
 "κλειδί, αλλάζει τη συμπεριφορά του διαχειριστή παραθύρων, του πίνακα "
 "εφαρμογών κτλ."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:5
+#: schemas/org.mate.interface.gschema.xml:15
 msgid "Menus Have Tearoff"
 msgstr "Τα μενού είναι αποσπώμενα"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:6
+#: schemas/org.mate.interface.gschema.xml:16
 msgid "Whether menus should have a tearoff."
 msgstr "Αν τα μενού θα πρέπει να έχουν tearoff"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:7
+#: schemas/org.mate.interface.gschema.xml:20
 msgid "Toolbar Style"
 msgstr "Στυλ Εργαλειοθήκης"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:8
+#: schemas/org.mate.interface.gschema.xml:21
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
 msgstr ""
 "Στυλ εργαλειοθήκης. Οι έγκυρες τιμές είναι \"both\", \"both_horiz\", "
 "\"icons\", και \"text\""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:9
+#: schemas/org.mate.interface.gschema.xml:25
 msgid "Menus Have Icons"
 msgstr "Τα μενού έχουν εικονίδια"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:10
+#: schemas/org.mate.interface.gschema.xml:26
 msgid "Whether menus may display an icon next to a menu entry."
 msgstr "Αν τα μενού θα εμφανίζουν ένα εικονίδιο δίπλα στην καταχώρηση μενού."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:11
+#: schemas/org.mate.interface.gschema.xml:30
 msgid "Buttons Have Icons"
 msgstr "Τα κουμπιά διαθέτουν εικονίδια"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:12
+#: schemas/org.mate.interface.gschema.xml:31
 msgid "Whether buttons may display an icon in addition to the button text."
 msgstr "Αν τα κουμπιά θα εμφανίζουν εικονίδιο δίπλα στο κείμενό τους."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:13
+#: schemas/org.mate.interface.gschema.xml:35
 msgid "Menubar Detachable"
 msgstr "Αποσπώμενη μπάρα μενού"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:14
+#: schemas/org.mate.interface.gschema.xml:36
 msgid "Whether the user can detach menubars and move them around."
 msgstr ""
 "Αν ο χρήστης θα  μπορεί να αποσπά τα μενού και να τα μετακινεί τριγύρω."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:15
+#: schemas/org.mate.interface.gschema.xml:40
 msgid "Toolbar Detachable"
 msgstr "Αποσπώμενη εργαλειοθήκη"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:16
+#: schemas/org.mate.interface.gschema.xml:41
 msgid "Whether the user can detach toolbars and move them around."
 msgstr ""
 "Αν ο χρήστης θα  μπορεί να αποσπά τις εργαλειοθήκες και να τις μετακινεί "
 "τριγύρω."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:17
+#: schemas/org.mate.interface.gschema.xml:45
 msgid "Toolbar Icon Size"
 msgstr "Μέγεθος εικονιδίου εργαλειοθήκης"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:18
+#: schemas/org.mate.interface.gschema.xml:46
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
 "Μέγεθος των εικονιδίων στις εργαλειοθήκες, είτε \"small-toolbar\" ή \"large-"
 "toolbar\"."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:19
+#: schemas/org.mate.interface.gschema.xml:50
 msgid "Cursor Blink"
 msgstr "Παλλόμενος δρομέας"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:20
+#: schemas/org.mate.interface.gschema.xml:51
 msgid "Whether the cursor should blink."
 msgstr "Αν θα πάλλεται ο δρομέας."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:21
+#: schemas/org.mate.interface.gschema.xml:55
 msgid "Cursor Blink Time"
 msgstr "Χρόνος παλμών δρομέα"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:22
+#: schemas/org.mate.interface.gschema.xml:56
 msgid "Length of the cursor blink cycle, in milliseconds."
 msgstr "Διάρκεια του κύκλου εναλλαγής παλμού δρομέα σε χιλιοστά δευτερολ."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:23
+#: schemas/org.mate.interface.gschema.xml:60
 msgid "Icon Theme"
 msgstr "Θέμα εικονιδίου"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:24
+#: schemas/org.mate.interface.gschema.xml:61
 msgid "Icon theme to use for the panel, Caja etc."
 msgstr ""
 "Θέμα εικονιδίου που χρησιμοποιείται για το πίνακα εφαρμογών, το Nαυτίλο κτλ."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:25
+#: schemas/org.mate.interface.gschema.xml:65
+#: schemas/org.mate.interface.gschema.xml:70
 msgid "Gtk+ Theme"
 msgstr "Θέμα Gtk+"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:26
+#: schemas/org.mate.interface.gschema.xml:66
+#: schemas/org.mate.interface.gschema.xml:71
 msgid "Basename of the default theme used by gtk+."
 msgstr "Όνομα βάσης του εξ ορισμού θέματος που χρησιμοποιείται από το gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:27
+#: schemas/org.mate.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
 msgstr "Λίστα με συμβολικά ονόματα και ισοδύναμα χρώματα"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:28
+#: schemas/org.mate.interface.gschema.xml:76
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
@@ -1035,47 +1045,47 @@ msgstr ""
 "Μια '\\n' λίστα χωρισμένη σε \"name:color' όπως καθορίστηκε από τη ρύθμιση "
 "'gtk-color-scheme'"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:29
+#: schemas/org.mate.interface.gschema.xml:80
 msgid "Default font"
 msgstr "Προεπιλεγμένη γραμματοσειρά"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:30
+#: schemas/org.mate.interface.gschema.xml:81
 msgid "Name of the default font used by gtk+."
 msgstr "Όνομα της προεπιλεγμένης γραμματοσειράς για χρήση από το gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:31
+#: schemas/org.mate.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
 msgstr "Στυλ Preedit GTK IM "
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:32
+#: schemas/org.mate.interface.gschema.xml:86
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
 msgstr ""
 "Όνομα της μεθόδου εισαγωγής GTK+ Preedit Style που χρησιμοποιείται από το "
 "gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:33
+#: schemas/org.mate.interface.gschema.xml:90
 msgid "GTK IM Status Style"
 msgstr "Στυλ κατάστασης GTK IM "
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:34
+#: schemas/org.mate.interface.gschema.xml:91
 msgid "Name of the GTK+ input method Status Style used by gtk+."
 msgstr ""
 "Όνομα της μεθόδου εισαγωγής GTK+ Status Style που χρησιμοποείται από το "
 "gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:35
+#: schemas/org.mate.interface.gschema.xml:95
 msgid "GTK IM Module"
 msgstr "Άρθρωμα GTK IM "
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:36
+#: schemas/org.mate.interface.gschema.xml:96
 msgid "Name of the input method module used by GTK+."
 msgstr "Όνομα της μεθόδου εισαγωγής που χρησιμοποιείται από το GTK+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:37
+#: schemas/org.mate.interface.gschema.xml:100
 msgid "Use GTK3 header bar"
 msgstr "Χρησιμοποιήστε την μπάρα GTK3"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:38
+#: schemas/org.mate.interface.gschema.xml:101
 msgid ""
 "Whether builtin GTK+ dialogs such as the file chooser, the color chooser or "
 "the font chooser will use a header bar at the top to show action widgets, or"
@@ -1089,11 +1099,11 @@ msgstr ""
 "δεν επηρεάζει τους προσαρμοσμένους διαλόγους χρησιμοποιώντας το GtkDialog "
 "άμεσα, ή με μηνύματα διαλόγων. "
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:39
+#: schemas/org.mate.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
 msgstr "Χρησιμοποιήστε την κυλουμενη επικάλυψη GTK3"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:40
+#: schemas/org.mate.interface.gschema.xml:106
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
@@ -1102,57 +1112,57 @@ msgstr ""
 "κύλιση. Η επικαλυμμένη κύλιση κρύβει και μικραίνει το μέγεθος της μπάρας "
 "κύλισης μέχρι να επικεντρωθεί.  "
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:41
+#: schemas/org.mate.interface.gschema.xml:110
 msgid "Enable Gtk toolkit-wide animations"
 msgstr "Ενεργοποίηση ολόκληρης της εργαλειοθήκης κινούμενων σχεδίων Gtk"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:42
+#: schemas/org.mate.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
 msgstr ""
 "Αν θα είναι ενεργοποιημένες οι κινούμενες εικόνες σε όλη την εργαλειοθήκη."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:43
+#: schemas/org.mate.interface.gschema.xml:115
 msgid "Document font"
 msgstr "Γραμματοσειρά εγγράφου"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:44
+#: schemas/org.mate.interface.gschema.xml:116
 msgid "Name of the default font used for reading documents."
 msgstr ""
 "Όνομα της προεπιλεγμένης γραμματοσειράς για χρήση στην ανάγνωση εγγράφων."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:45
+#: schemas/org.mate.interface.gschema.xml:120
 msgid "Monospace font"
 msgstr "Γραμματοσειρά Monospace"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:46
+#: schemas/org.mate.interface.gschema.xml:121
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr ""
 "Όνομα γραμματοσειράς Monospace (σταθερού-πλάτους) για χρήση σε τοποθεσίες "
 "όπως τερματικά."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:47
+#: schemas/org.mate.interface.gschema.xml:125
 msgid "Use Custom Font"
 msgstr "Χρήση προσαρμοσμένης γραμματοσειράς"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:48
+#: schemas/org.mate.interface.gschema.xml:126
 msgid "Whether to use a custom font in gtk+ applications."
 msgstr ""
 "Αν θα χρησιμοποιείται προσαρμοσμένη γραμματοσειρά από τις εφαρμογές gtk+."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:49
+#: schemas/org.mate.interface.gschema.xml:130
 msgid "Status Bar on Right"
 msgstr "Γραμμή κατάστασης στα δεξιά"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:50
+#: schemas/org.mate.interface.gschema.xml:131
 msgid "Whether to display a status bar meter on the right."
 msgstr "Αν θα εμφανίζεται στα δεξιά μετρητής γραμμής κατάστασης"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:51
+#: schemas/org.mate.interface.gschema.xml:135
 msgid "Module for GtkFileChooser"
 msgstr "Λειτουργικό στοιχείο για GtkFileChooser"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:52
+#: schemas/org.mate.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
@@ -1160,19 +1170,19 @@ msgstr ""
 "Άρθρωμα για χρήση ως μοντέλο αρχείου συστήματος για το γραφικό συστατικό "
 "GtkFileChooser . Οι πιθανές τιμές είναι \"gio\" και \"gtk+\"."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:53
+#: schemas/org.mate.interface.gschema.xml:140
 msgid "Menubar accelerator"
 msgstr "Συντόμευση μενού"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:54
+#: schemas/org.mate.interface.gschema.xml:141
 msgid "Keyboard shortcut to open the menu bars."
 msgstr "Συντόμευση πληκτρολογίου για το άνοιγμα εργαλειοθηκών μενού."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:55
+#: schemas/org.mate.interface.gschema.xml:145
 msgid "Show the 'Input Methods' menu"
 msgstr "Εμφάνιση του μενού 'Μέθοδοι Εισαγωγής'"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:56
+#: schemas/org.mate.interface.gschema.xml:146
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
@@ -1180,11 +1190,11 @@ msgstr ""
 "Αν τα μενού περιεχομένων των προβολών καταχωρίσεων και κειμένου θα "
 "προσφέρουν τη δυνατότητα αλλαγής της μεθόδου εισαγωγής."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:57
+#: schemas/org.mate.interface.gschema.xml:150
 msgid "Show the 'Unicode Control Character' menu"
 msgstr "Προβολή του μενού 'Unicode Control Character'"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:58
+#: schemas/org.mate.interface.gschema.xml:151
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
@@ -1192,11 +1202,11 @@ msgstr ""
 "Αν τα μενού περιεχομένων των προβολών καταχωρίσεων και κειμένου θα "
 "προσφέρουν τη δυνατότητα εισαγωγής control characters."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:59
+#: schemas/org.mate.interface.gschema.xml:155
 msgid "Titlebar layout of GTK3 client-side decorated windows"
 msgstr "Διαρρύθμιση για διακόσμηση παραθύρων με διάταξη του GTK3 client-side"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:60
+#: schemas/org.mate.interface.gschema.xml:156
 msgid ""
 "This setting determines which buttons should be put in the titlebar of "
 "client-side decorated windows, and whether they should be placed at the left"
@@ -1210,11 +1220,11 @@ msgstr ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:61
+#: schemas/org.mate.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
 msgstr "Χρησιμοποιήστε ένα παγκόσμιο μενού για την εμφάνιση μενού εφαρμογών"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:62
+#: schemas/org.mate.interface.gschema.xml:161
 msgid ""
 "This setting determines where application menu will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
@@ -1226,12 +1236,12 @@ msgstr ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:63
+#: schemas/org.mate.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
 msgstr ""
 "Χρησιμοποιήστε ένα παγκόσμιο μενού για την εμφάνιση των μενού παραθύρων"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:64
+#: schemas/org.mate.interface.gschema.xml:166
 msgid ""
 "This setting determines where window menubars will be displayed - in a "
 "window or on a panel with MenuModel protocol. See "
@@ -1243,11 +1253,11 @@ msgstr ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-menubar."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:65
+#: schemas/org.mate.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
 msgstr "Να δείχνουν μόνο μνημονικά όταν πατηθεί το πλήκτρο Alt"
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:66
+#: schemas/org.mate.interface.gschema.xml:171
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
@@ -1255,11 +1265,11 @@ msgstr ""
 "Αν θα πρέπει μνημονικά να εμφανίζονται αυτόματα ή και να κρύβονται όταν ο "
 "χρήστης πατήσει το πλήκτρο Alt."
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:67
+#: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:68
+#: schemas/org.mate.interface.gschema.xml:177
 msgid ""
 "This controls the GTK scale factor that maps from window coordinates to the "
 "actual device pixels. On traditional systems this is 1, but on very high "
@@ -1267,11 +1277,11 @@ msgid ""
 "Set to 0 to auto-detect."
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:69
+#: schemas/org.mate.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:70
+#: schemas/org.mate.interface.gschema.xml:182
 msgid ""
 "This setting determines whether MATE controls the scale factor for QT "
 "applications. Enable to synchronize with the GTK scale factor when "
@@ -1279,21 +1289,21 @@ msgid ""
 "restarting your session."
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:71
+#: schemas/org.mate.interface.gschema.xml:186
 msgid "Enable the primary paste selection"
 msgstr ""
 
-#: ../schemas/org.mate.interface.gschema.xml.in.h:72
+#: schemas/org.mate.interface.gschema.xml:187
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
+#: schemas/org.mate.lockdown.gschema.xml:5
 msgid "Disable command line"
 msgstr "Απενεργοποίηση γραμμής εντολών"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:2
+#: schemas/org.mate.lockdown.gschema.xml:6
 msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
@@ -1303,11 +1313,11 @@ msgstr ""
 "μιας συγκεκριμένης εντολής. Για παράδειγμα, αυτό δεν θα επιτρέπει την "
 "πρόσβαση στο διάλογο του πίνακα εφαρμογών \"Εκτέλεση εφαρμογής\"."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:3
+#: schemas/org.mate.lockdown.gschema.xml:10
 msgid "Disable saving files to disk"
 msgstr "Απενεργοποίηση αποθήκευσης αρχείων στο δίσκο"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:4
+#: schemas/org.mate.lockdown.gschema.xml:11
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
@@ -1316,11 +1326,11 @@ msgstr ""
 "αυτό θα  αποτρέψει την  πρόσβαση στους διαλόγους \"Αποθήκευση ως\" σε όλες "
 "τις εφαρμογές."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:5
+#: schemas/org.mate.lockdown.gschema.xml:15
 msgid "Disable printing"
 msgstr "Απενεργοποίηση εκτύπωσης"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:6
+#: schemas/org.mate.lockdown.gschema.xml:16
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
@@ -1328,11 +1338,11 @@ msgstr ""
 "Δεν επιτρέπει στο χρήστη να εκτυπώσει. Για παράδειγμα αυτό θα αποτρέψει την "
 "πρόσβαση στους διαλόγους \"Εκτύπωση\" σε όλες τις εφαρμογές."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:7
+#: schemas/org.mate.lockdown.gschema.xml:20
 msgid "Disable print setup"
 msgstr "Απενεργοποίηση ρυθμίσεων εκτύπωσης"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:8
+#: schemas/org.mate.lockdown.gschema.xml:21
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
@@ -1341,11 +1351,11 @@ msgstr ""
 "παράδειγμα αυτό θα αποτρέψει την πρόσβαση στους διαλόγους \"Διαμόρφωση "
 "εκτύπωσης\" σε όλες τις εφαρμογές."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:9
+#: schemas/org.mate.lockdown.gschema.xml:25
 msgid "Disable user switching"
 msgstr "Απενεργοποίηση εναλλαγής χρήστη"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:10
+#: schemas/org.mate.lockdown.gschema.xml:26
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
@@ -1353,55 +1363,55 @@ msgstr ""
 "Αποτροπή του χρήστη να εναλλάσσει σε άλλο λογαριασμό όταν έχει ενεργή "
 "συνεδρία"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:11
+#: schemas/org.mate.lockdown.gschema.xml:30
 msgid "Disable lock screen"
 msgstr "Απενεργοποίηση κλειδώματος οθόνης"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:12
+#: schemas/org.mate.lockdown.gschema.xml:31
 msgid "Prevent the user from locking the screen."
 msgstr "Αποτροπή του χρήστη να κλειδώσει την οθόνη."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:13
+#: schemas/org.mate.lockdown.gschema.xml:35
 msgid "Disable URL and MIME type handlers"
 msgstr "Απενεργοποίηση των χειριστών URL και τύπων MIME"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:14
+#: schemas/org.mate.lockdown.gschema.xml:36
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr "Να εμποδίζεται οι εκτέλεση εφαρμογών χειριστών URL ή τύπων MIME."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:15
+#: schemas/org.mate.lockdown.gschema.xml:40
 msgid "Disable theme settings"
 msgstr "Απενεργοποίηση ρυθμίσεων θέματος"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:16
+#: schemas/org.mate.lockdown.gschema.xml:41
 msgid "Prevent the user from changing theme settings."
 msgstr "Απαγόρευσε στον χρήστη να αλλάξει τις ρυθμίσεις θέματος."
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:17
+#: schemas/org.mate.lockdown.gschema.xml:45
 msgid "Disable log out"
 msgstr "Απενεργοποίηση αποσύνδεσης"
 
-#: ../schemas/org.mate.lockdown.gschema.xml.in.h:18
+#: schemas/org.mate.lockdown.gschema.xml:46
 msgid "Prevent the user from logging out."
 msgstr "Αποτρέπει τον χρήστη από αποσύνδεση."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:1
+#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
 msgid "possible values are \"on\", \"off\", and \"custom\"."
 msgstr "πιθανές τιμές είναι \"ενεργό\", \"ανενεργό\" και \"προσαρμοσμένο\"."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:2
+#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
 msgid "Keyboard Bell Custom Filename"
 msgstr "Όνομα αρχείου προσαρμοσμένου ήχου πληκτρολογίου"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:3
+#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
 msgid "File name of the bell sound to be played."
 msgstr "Όνομα αρχείου του ήχου καμπάνας που θα αναπαράγεται."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:4
+#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
 msgid "Remember NumLock state"
 msgstr "Απομνημόνευση κατάστασης NumLock"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:5
+#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
 msgid ""
 "When set to true, MATE will remember the state of the NumLock LED between "
 "sessions."
@@ -1409,28 +1419,28 @@ msgstr ""
 "Αν ορισθεί σε true, το MATE θα απομνημονεύει την κατάσταση του NumLock "
 "ανάμεσα σε συνεδρίες."
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:6
+#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
 msgid "NumLock state"
 msgstr "Κατάσταση NumLock"
 
-#: ../schemas/org.mate.peripherals-keyboard.gschema.xml.in.h:7
+#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
 msgid "The remembered state of the NumLock LED."
 msgstr "Η κατάσταση απομνημόνευσης του NumLock LED."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:1
+#: schemas/org.mate.peripherals-mouse.gschema.xml:5
 msgid "Mouse button orientation"
 msgstr "Προσανατολισμός πλήκτρου ποντικιού"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:2
+#: schemas/org.mate.peripherals-mouse.gschema.xml:6
 msgid "Swap left and right mouse buttons for left-handed mice."
 msgstr ""
 "Εναλλαγή αριστερού και δεξιού κουμπιού σε ποντίκια για αριστερόχειρες."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:3
+#: schemas/org.mate.peripherals-mouse.gschema.xml:10
 msgid "Motion Acceleration"
 msgstr "Επιτάχυνση κίνησης"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:4
+#: schemas/org.mate.peripherals-mouse.gschema.xml:11
 msgid ""
 "Acceleration multiplier for mouse motion. A value of -1 is the system "
 "default."
@@ -1438,11 +1448,11 @@ msgstr ""
 "Πολλαπλασιαστής συντομεύσεως για τη κίνηση του ποντικιού. Η τιμή -1 είναι η "
 "προεπιλεγμένη από το σύστημα."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:5
+#: schemas/org.mate.peripherals-mouse.gschema.xml:15
 msgid "Motion Threshold"
 msgstr "Κατώφλι κίνησης"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:6
+#: schemas/org.mate.peripherals-mouse.gschema.xml:16
 msgid ""
 "Distance in pixels the pointer must move before accelerated mouse motion is "
 "activated. A value of -1 is the system default."
@@ -1451,27 +1461,27 @@ msgstr ""
 " ενεργοποιηθεί η κίνηση συντόμευσης του ποντικιού. Η τιμή -1 είναι η "
 "προεπιλεγμένη από το σύστημα."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:7
+#: schemas/org.mate.peripherals-mouse.gschema.xml:20
 msgid "Drag Threshold"
 msgstr "Κατώφλι drag"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:8
+#: schemas/org.mate.peripherals-mouse.gschema.xml:21
 msgid "Distance before a drag is started."
 msgstr "Απόσταση πριν από την έναρξη συρσίματος."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:9
+#: schemas/org.mate.peripherals-mouse.gschema.xml:25
 msgid "Double Click Time"
 msgstr "Χρόνος διπλού κλικ"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:10
+#: schemas/org.mate.peripherals-mouse.gschema.xml:26
 msgid "Length of a double click."
 msgstr "Διάρκεια διπλού κλικ."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:11
+#: schemas/org.mate.peripherals-mouse.gschema.xml:30
 msgid "Middle button emulation"
 msgstr "Μίμηση του μεσαίου κουμπιού"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:12
+#: schemas/org.mate.peripherals-mouse.gschema.xml:31
 msgid ""
 "Enables middle mouse button emulation through simultaneous left and right "
 "button click."
@@ -1479,11 +1489,11 @@ msgstr ""
 "Ενεργοποιεί την μίμηση του μεσαίου κουμπιού του ποντικού μέσω του "
 "ταυτόχρονου πατήματος του δεξιού και του αριστερού κουμπιού στο ποντίκι."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:13
+#: schemas/org.mate.peripherals-mouse.gschema.xml:35
 msgid "Locate Pointer"
 msgstr "Εντοπισμός δείκτη"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:14
+#: schemas/org.mate.peripherals-mouse.gschema.xml:36
 msgid ""
 "Highlights the current location of the pointer when the Control key is "
 "pressed and released."
@@ -1491,75 +1501,75 @@ msgstr ""
 "Επισημαίνει την τρέχουσα θέση του δρομέα όταν έχει πατηθεί και απελευθερωθεί"
 " το πλήκτρο Control."
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:15
+#: schemas/org.mate.peripherals-mouse.gschema.xml:40
 msgid "Cursor theme"
 msgstr "Θέμα δρομέα"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:16
+#: schemas/org.mate.peripherals-mouse.gschema.xml:41
 msgid "Cursor theme name."
 msgstr "Όνομα θέμα δρομέα"
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:17
+#: schemas/org.mate.peripherals-mouse.gschema.xml:45
 msgid "Cursor size"
 msgstr "Μέγεθος δρομέα "
 
-#: ../schemas/org.mate.peripherals-mouse.gschema.xml.in.h:18
+#: schemas/org.mate.peripherals-mouse.gschema.xml:46
 msgid "Size of the cursor referenced by cursor_theme."
 msgstr "Μέγεθος του δρομέα που αναφέρεται από το cursor_theme."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.h:1
+#: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "Προεπιλεγμένη συσκευή μίξης ήχου"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.h:2
+#: schemas/org.mate.sound.gschema.xml:6
 msgid "The default mixer device used by the multimedia key bindings."
 msgstr ""
 "Η προεπιλεγμένη συσκευή μίξης ήχου για χρήση από τις συντομεύσεις πλήκτρων "
 "πολυμέσων."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.h:3
+#: schemas/org.mate.sound.gschema.xml:10
 msgid "Default mixer tracks"
 msgstr "Προεπιλεγμένα track μίξης"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.h:4
+#: schemas/org.mate.sound.gschema.xml:11
 msgid "The default mixer tracks used by the multimedia key bindings."
 msgstr ""
 "Τα προεπιλεγμένα track μίξης για χρήση από τις συντομεύσεις πλήκτρων "
 "πολυμέσων."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.h:5
+#: schemas/org.mate.sound.gschema.xml:15
 msgid "Enable ESD"
 msgstr "Ενεργοποίηση ESD"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.h:6
+#: schemas/org.mate.sound.gschema.xml:16
 msgid "Enable sound server startup."
 msgstr "Ενεργοποίηση εκκίνησης εξυπηρετητή ήχων."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.h:7
+#: schemas/org.mate.sound.gschema.xml:20
 msgid "Sounds for events"
 msgstr "Ήχοι για συμβάντα"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.h:8
+#: schemas/org.mate.sound.gschema.xml:21
 msgid "Whether to play sounds on user events."
 msgstr "Αν θα αναπαράγονται ήχοι στα γεγονότα χρήστη."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.h:9
+#: schemas/org.mate.sound.gschema.xml:25
 msgid "Sound theme name"
 msgstr "Όνομα θέματος ήχων"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.h:10
+#: schemas/org.mate.sound.gschema.xml:26
 msgid "The XDG sound theme to use for event sounds."
 msgstr "Θέμα ήχων XDG για τους ήχους συμβάντων."
 
-#: ../schemas/org.mate.sound.gschema.xml.in.h:11
+#: schemas/org.mate.sound.gschema.xml:30
 msgid "Input feedback sounds"
 msgstr "Ήχοι ειδοποίησης εισόδου"
 
-#: ../schemas/org.mate.sound.gschema.xml.in.h:12
+#: schemas/org.mate.sound.gschema.xml:31
 msgid "Whether to play sounds on input events."
 msgstr "Αν θα αναπαράγονται ήχοι για συμβάντα εισόδου."
 
-#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:1
+#: schemas/org.mate.thumbnail-cache.gschema.xml:5
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
@@ -1567,7 +1577,7 @@ msgstr ""
 "Μέγιστος χρόνος διατήρησης μικρογραφιών στη μνήμη, σε ημέρες. Επιλέξτε -1 "
 "για να απενεργοποιήσετε την εκκαθάριση."
 
-#: ../schemas/org.mate.thumbnail-cache.gschema.xml.in.h:2
+#: schemas/org.mate.thumbnail-cache.gschema.xml:9
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
@@ -1575,11 +1585,11 @@ msgstr ""
 "Μέγιστο μέγεθος μικρογραφιών, σε megabyte. Επιλέξτε -1 για να "
 "απενεργοποιήσετε την εκκαθάριση."
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:1
+#: schemas/org.mate.thumbnailers.gschema.xml:5
 msgid "Disable all external thumbnailers"
 msgstr "Απενεργοποίηση όλων των εξωτερικών προγραμμάτων προεπισκόπησης"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:2
+#: schemas/org.mate.thumbnailers.gschema.xml:6
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
@@ -1587,14 +1597,14 @@ msgstr ""
 "Ορισμός σε true για την απενεργοποίηση όλων των εξωτερικών προγραμμάτων "
 "προεπισκόπησης ανεξάρτητα από το αν είναι απενεργοποιημένα ή ενεργοποιημένα."
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:3
+#: schemas/org.mate.thumbnailers.gschema.xml:10
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
 msgstr ""
 "Λίστα mime-type για την οποία θα απενεργοποιούνται εξωτερικά προγράμματα "
 "μικρογραφιών"
 
-#: ../schemas/org.mate.thumbnailers.gschema.xml.in.h:4
+#: schemas/org.mate.thumbnailers.gschema.xml:11
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
@@ -1602,46 +1612,54 @@ msgstr ""
 "Δεν θα δημιουργούνται μικρογραφίες για αρχεία των οποίων το mime-type "
 "περιέχεται στη λίστα."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.h:1
+#: schemas/org.mate.typing-break.gschema.xml:5
 msgid "Type time"
 msgstr "Χρόνος πληκτρολόγησης"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.h:2
+#: schemas/org.mate.typing-break.gschema.xml:6
 msgid "Number of minutes of typing time before break mode starts."
 msgstr "Αριθμός λεπτών πληκτρολόγησης πριν την έναρξη διαλείμματος."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.h:3
+#: schemas/org.mate.typing-break.gschema.xml:10
 msgid "Break time"
 msgstr "Ώρα διαλείμματος"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.h:4
+#: schemas/org.mate.typing-break.gschema.xml:11
 msgid "Number of minutes that the typing break should last."
 msgstr "Αριθμός λεπτών που διαρκεί το διάλειμμα πληκτρολόγησης."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.h:5
+#: schemas/org.mate.typing-break.gschema.xml:15
 msgid "Allow postponing of breaks"
 msgstr "Να επιτρέπεται η αναβολή διαλειμμάτων"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.h:6
+#: schemas/org.mate.typing-break.gschema.xml:16
 msgid "Whether or not the typing break screen can be postponed."
 msgstr "Αν θα αναβάλλεται ή όχι η οθόνη διαλείμματος πληκτρολόγησης."
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.h:7
+#: schemas/org.mate.typing-break.gschema.xml:20
 msgid "Whether or not keyboard locking is enabled"
 msgstr "Αν το κλείδωμα πληκτρολογίου θα είναι ενεργοποιημένο ή όχι"
 
-#: ../schemas/org.mate.typing-break.gschema.xml.in.h:8
+#: schemas/org.mate.typing-break.gschema.xml:21
 msgid "Whether or not keyboard locking is enabled."
 msgstr "ν το κλείδωμα πληκτρολογίου θα είναι ενεργοποιημένο ή όχι."
 
-#: ../tools/mate-color-select.c:64 ../tools/mate-color-select.desktop.in.h:1
+#: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
 msgid "MATE Color Selection"
 msgstr "Επιλογή χρωμάτων MATE"
 
-#: ../tools/mate-color-select.desktop.in.h:2
+#: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
 msgstr "Διάλογος επιλογής χρώματος"
 
-#: ../tools/mate-color-select.desktop.in.h:3
+#: tools/mate-color-select.desktop.in:5
 msgid "Choose colors from the palette or the screen"
 msgstr "Επιλογή χρωμάτων από παλέτα ή την οθόνη"
+
+#: tools/mate-color-select.desktop.in:7
+msgid "gtk-select-color"
+msgstr ""
+
+#: tools/mate-color-select.desktop.in:11
+msgid "MATE;color;chooser;pick;palette;screen;selection;"
+msgstr ""
