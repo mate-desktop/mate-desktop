@@ -148,6 +148,7 @@ variables:
   - CFLAGS="-Wall -Werror=format-security"
   - 'CHECKERS="
     -enable-checker deadcode.DeadStores
+    -enable-checker alpha.deadcode.UnreachableCode
     -enable-checker alpha.core.CastSize
     -enable-checker alpha.core.CastToStruct
     -enable-checker alpha.core.IdenticalExpr
