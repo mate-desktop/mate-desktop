@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-22 23:06+0100\n"
 "PO-Revision-Date: 2019-03-13 13:14+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2019\n"
 "Language-Team: Serbian (https://www.transifex.com/mate/teams/13566/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,7 +38,7 @@ msgstr "Сазнајте више о Мејту"
 
 #: ../mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr ""
+msgstr "Мејт окружење радне површи"
 
 #: ../mate-about/mate-about.h:34
 msgid ""
@@ -46,6 +46,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2019 MATE developers"
 msgstr ""
+"Ауторска права © 1997-2011 Програмери Гнома\n"
+"Ауторска права © 2011 Перберос\n"
+"Ауторска права © 2012-2019 Мејтови програмери"
 
 #: ../mate-about/mate-about.h:42
 msgid ""
@@ -629,6 +632,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Закачиње измењиваче када се притисну два пута у низу све док се исти "
+"измењивач поново не притисне."
 
 #: ../schemas/org.mate.accessibility-keyboard.gschema.xml.in.h:12
 msgid "Disable if two keys are pressed at the same time."
@@ -1212,7 +1217,7 @@ msgstr ""
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:67
 msgid "Window Scaling Factor"
-msgstr ""
+msgstr "Чинилац размере прозора"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:68
 msgid ""
@@ -1221,10 +1226,14 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Овим се контролише ГТК чинилац размере који се пресликава од координата "
+"прозора до стварних пиксела уређаја. Код традиционалних система ово је 1, "
+"али на екранима велике густине (нпр. HiDPI, Ретина) то може бити већа "
+"вредност (често 2). Подесите на 0 за самооткривање."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:69
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "Чинилац размере за КуТ програме"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:70
 msgid ""
@@ -1233,16 +1242,22 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Ово подешавање одређује да ли Мејт управља чиниоцем размере за КуТ програме."
+" Укључите да синхронизујете са ГТК чиниоцем размере приликом покретања "
+"сесије, искључите да управљате овом вредношћу на другом месту. Захтева "
+"поновно покретање сесије."
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:71
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "Укључује примарни избор убацивања"
 
 #: ../schemas/org.mate.interface.gschema.xml.in.h:72
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
+"Ако је изабрано, гтк+ користи примарни избор убацивања, обично покренут "
+"кликом на средње дугме миша."
 
 #: ../schemas/org.mate.lockdown.gschema.xml.in.h:1
 msgid "Disable command line"
