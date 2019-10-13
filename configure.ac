@@ -56,6 +56,9 @@ AC_DEFINE(MATE_MAJOR, [mate_platform], [Define to the major version])
 AC_DEFINE(MATE_MINOR, [mate_minor], [Define to the minor version])
 AC_DEFINE(MATE_MICRO, [mate_micro], [Define to the micro version])
 
+RELEASE_YEAR=`date +%Y`
+AC_SUBST([RELEASE_YEAR])
+
 MATE_COMMON_INIT
 MATE_DEBUG_CHECK
 MATE_COMPILE_WARNINGS([maximum])
@@ -234,6 +237,7 @@ AM_CONDITIONAL([HAVE_RSVG_CONVERT], [test "x$RSVG_CONVERT" != x])
 AC_CONFIG_FILES([
 Makefile
 mate-about/Makefile
+mate-about/mate-about.h
 mate-about/mate-version.xml
 libmate-desktop/Makefile
 libmate-desktop/mate-desktop-2.0.pc

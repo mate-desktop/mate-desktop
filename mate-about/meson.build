@@ -1,5 +1,6 @@
 date_exe = find_program('date')
 mate_date = run_command(date_exe, '+%Y-%m-%d').stdout().strip()
+mate_year = run_command(date_exe, '+%Y').stdout().strip()
 
 mate_data = configuration_data()
 
@@ -9,6 +10,9 @@ mate_data.set('MATE_DATE_COMMENT_END', '-->')
 mate_data.set('MATE_PLATFORM', mate_platform)
 mate_data.set('MATE_MINOR', mate_minor)
 mate_data.set('MATE_MICRO', mate_micro)
+
+mate_about_data = configuration_data()
+mate_about_data.set('RELEASE_YEAR', mate_year)
 
 executable('mate-about',
   'mate-about.c',
@@ -36,4 +40,11 @@ mate_version_xml_in = configure_file(
   configuration: mate_data,
   install: true,
   install_dir: join_paths(get_option('datadir'), 'mate-about'),
+)
+
+mate_about_h_in = configure_file(
+  input: 'mate-about.h.in',
+  output: 'mate-about.h',
+  configuration: mate_about_data,
+  install: false,
 )
