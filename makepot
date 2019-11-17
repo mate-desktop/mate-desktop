@@ -3,3 +3,4 @@
 PACKAGE=mate-desktop;
 
 make -C po $PACKAGE.pot && mv po/$PACKAGE.pot .
+sed -i "/#, fuzzy/d" $PACKAGE.pot
