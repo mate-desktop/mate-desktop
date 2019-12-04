@@ -154,9 +154,6 @@ static gboolean mate_color_selection_grab_broken (GtkWidget               *widge
 static void     mate_color_selection_set_palette_color   (MateColorSelection *colorsel,
                                                          gint               index,
                                                          GdkColor          *color);
-static void     set_focus_line_attributes               (GtkWidget         *drawing_area,
-							 cairo_t           *cr,
-							 gint              *focus_width);
 static void     default_noscreen_change_palette_func    (const GdkColor    *colors,
 							 gint               n_colors);
 static void     default_change_palette_func             (GdkScreen	   *screen,
