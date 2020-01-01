@@ -317,7 +317,7 @@ create_loader (GFile        *file,
   }
 
   if (loader == NULL && error != NULL) {
-    g_warning ("Unable to create loader for mime type %s: %s", mime_type, error->message);
+    g_debug ("Unable to create loader for mime type %s: %s", mime_type, error->message);
     g_clear_error (&error);
     loader = gdk_pixbuf_loader_new ();
   }
