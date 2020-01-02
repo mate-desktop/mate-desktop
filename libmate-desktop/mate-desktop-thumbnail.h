@@ -42,61 +42,61 @@ typedef enum {
   MATE_DESKTOP_THUMBNAIL_SIZE_LARGE
 } MateDesktopThumbnailSize;
 
-#define MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY		(mate_desktop_thumbnail_factory_get_type ())
-#define MATE_DESKTOP_THUMBNAIL_FACTORY(obj)	(G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactory))
-#define MATE_DESKTOP_THUMBNAIL_FACTORY_CLASS(klass)	(G_TYPE_CHECK_CLASS_CAST ((klass), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactoryClass))
-#define MATE_DESKTOP_IS_THUMBNAIL_FACTORY(obj)		(G_TYPE_INSTANCE_CHECK_TYPE ((obj), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY))
-#define MATE_DESKTOP_IS_THUMBNAIL_FACTORY_CLASS(klass)	(G_TYPE_CLASS_CHECK_CLASS_TYPE ((klass), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY))
+#define MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY    (mate_desktop_thumbnail_factory_get_type ())
+#define MATE_DESKTOP_THUMBNAIL_FACTORY(obj)    (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactory))
+#define MATE_DESKTOP_THUMBNAIL_FACTORY_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY, MateDesktopThumbnailFactoryClass))
+#define MATE_DESKTOP_IS_THUMBNAIL_FACTORY(obj)    (G_TYPE_INSTANCE_CHECK_TYPE ((obj), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY))
+#define MATE_DESKTOP_IS_THUMBNAIL_FACTORY_CLASS(klass)    (G_TYPE_CLASS_CHECK_CLASS_TYPE ((klass), MATE_DESKTOP_TYPE_THUMBNAIL_FACTORY))
 
 typedef struct _MateDesktopThumbnailFactory        MateDesktopThumbnailFactory;
 typedef struct _MateDesktopThumbnailFactoryClass   MateDesktopThumbnailFactoryClass;
 typedef struct _MateDesktopThumbnailFactoryPrivate MateDesktopThumbnailFactoryPrivate;
 
 struct _MateDesktopThumbnailFactory {
-	GObject parent;
+    GObject parent;
 
-	MateDesktopThumbnailFactoryPrivate *priv;
+    MateDesktopThumbnailFactoryPrivate *priv;
 };
 
 struct _MateDesktopThumbnailFactoryClass {
-	GObjectClass parent;
+    GObjectClass parent;
 };
 
-GType                  mate_desktop_thumbnail_factory_get_type (void);
+GType      mate_desktop_thumbnail_factory_get_type (void);
 MateDesktopThumbnailFactory *mate_desktop_thumbnail_factory_new      (MateDesktopThumbnailSize     size);
 
-char *                 mate_desktop_thumbnail_factory_lookup   (MateDesktopThumbnailFactory *factory,
-								 const char            *uri,
-								 time_t                 mtime);
+char *     mate_desktop_thumbnail_factory_lookup   (MateDesktopThumbnailFactory *factory,
+                                                    const char                  *uri,
+                                                    time_t                       mtime);
 
-gboolean               mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailFactory *factory,
-										   const char            *uri,
-										   time_t                 mtime);
-gboolean               mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *factory,
-								      const char            *uri,
-								      const char            *mime_type,
-								      time_t                 mtime);
-GdkPixbuf *            mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *factory,
-									   const char            *uri,
-									   const char            *mime_type);
-void                   mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *factory,
-								       GdkPixbuf             *thumbnail,
-								       const char            *uri,
-								       time_t                 original_mtime);
-void                   mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFactory *factory,
-										const char            *uri,
-										time_t                 mtime);
+gboolean   mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (MateDesktopThumbnailFactory *factory,
+                                                                      const char                  *uri,
+                                                                      time_t                       mtime);
+gboolean   mate_desktop_thumbnail_factory_can_thumbnail (MateDesktopThumbnailFactory *factory,
+                                                         const char                  *uri,
+                                                         const char                  *mime_type,
+                                                         time_t                       mtime);
+GdkPixbuf *  mate_desktop_thumbnail_factory_generate_thumbnail (MateDesktopThumbnailFactory *factory,
+                                                                const char                  *uri,
+                                                                const char                  *mime_type);
+void       mate_desktop_thumbnail_factory_save_thumbnail (MateDesktopThumbnailFactory *factory,
+                                                          GdkPixbuf                   *thumbnail,
+                                                          const char                  *uri,
+                                                          time_t                       original_mtime);
+void       mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopThumbnailFactory *factory,
+                                                                   const char                  *uri,
+                                                                   time_t                       mtime);
 
 
 /* Thumbnailing utils: */
 gboolean   mate_desktop_thumbnail_has_uri           (GdkPixbuf          *pixbuf,
-						      const char         *uri);
+                                                     const char         *uri);
 gboolean   mate_desktop_thumbnail_is_valid          (GdkPixbuf          *pixbuf,
-						      const char         *uri,
-						      time_t              mtime);
+                                                     const char         *uri,
+                                                     time_t              mtime);
 char *     mate_desktop_thumbnail_md5               (const char         *uri);
 char *     mate_desktop_thumbnail_path_for_uri      (const char         *uri,
-						      MateDesktopThumbnailSize  size);
+                                                     MateDesktopThumbnailSize  size);
 
 
 /* Pixbuf utils */
@@ -109,8 +109,8 @@ char *     mate_desktop_thumbnail_path_for_uri      (const char         *uri,
 
 MATE_DESKTOP_DEPRECATED_IN_1_24_FOR(gdk_pixbuf_scale_simple)
 GdkPixbuf *mate_desktop_thumbnail_scale_down_pixbuf (GdkPixbuf          *pixbuf,
-						      int                 dest_width,
-						      int                 dest_height);
+                                                     int                 dest_width,
+                                                     int                 dest_height);
 
 G_END_DECLS
 
