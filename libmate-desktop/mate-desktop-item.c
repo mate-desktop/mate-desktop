@@ -3056,86 +3056,6 @@ cannonize (const char *key, const char *value)
 }
 
 
-static char *
-decode_string_and_dup (const char *s)
-{
-	char *p = g_malloc (strlen (s) + 1);
-	char *q = p;
-
-	do {
-		if (*s == '\\'){
-			switch (*(++s)){
-			case 's':
-				*p++ = ' ';
-				break;
-			case 't':
-				*p++ = '\t';
-				break;
-			case 'n':
-				*p++ = '\n';
-				break;
-			case '\\':
-				*p++ = '\\';
-				break;
-			case 'r':
-				*p++ = '\r';
-				break;
-			default:
-				*p++ = '\\';
-				*p++ = *s;
-				break;
-			}
-		} else {
-			*p++ = *s;
-		}
-	} while (*s++);
-
-	return q;
-}
-
-static char *
-escape_string_and_dup (const char *s)
-{
-	char *return_value, *p;
-	const char *q;
-	int len = 0;
-
-	if (s == NULL)
-		return g_strdup("");
-
-	q = s;
-	while (*q){
-		len++;
-		if (strchr ("\n\r\t\\", *q) != NULL)
-			len++;
-		q++;
-	}
-	return_value = p = (char *) g_malloc (len + 1);
-	do {
-		switch (*s){
-		case '\t':
-			*p++ = '\\';
-			*p++ = 't';
-			break;
-		case '\n':
-			*p++ = '\\';
-			*p++ = 'n';
-			break;
-		case '\r':
-			*p++ = '\\';
-			*p++ = 'r';
-			break;
-		case '\\':
-			*p++ = '\\';
-			*p++ = '\\';
-			break;
-		default:
-			*p++ = *s;
-		}
-	} while (*s++);
-	return return_value;
-}
-
 static gboolean
 check_locale (const char *locale)
 {
@@ -3304,13 +3224,13 @@ decode_string (const char *value, Encoding encoding, const char *locale)
 		if (char_encoding == NULL)
 			return NULL;
 		if (strcmp (char_encoding, "ASCII") == 0) {
-			return decode_string_and_dup (value);
+			return g_strcompress (value);
 		}
 		utf8_string = g_convert (value, -1, "UTF-8", char_encoding,
 					NULL, NULL, NULL);
 		if (utf8_string == NULL)
 			return NULL;
-		retval = decode_string_and_dup (utf8_string);
+		retval = g_strcompress (utf8_string);
 		g_free (utf8_string);
 		return retval;
 	/* if utf8, then validate */
@@ -3318,10 +3238,10 @@ decode_string (const char *value, Encoding encoding, const char *locale)
 		if ( ! g_utf8_validate (value, -1, NULL))
 			/* invalid utf8, ignore this key */
 			return NULL;
-		return decode_string_and_dup (value);
+		return g_strcompress (value);
 	} else {
 		/* Meaning this is not a localized string */
-		return decode_string_and_dup (value);
+		return g_strcompress (value);
 	}
 }
 
@@ -3804,7 +3724,7 @@ dump_section (MateDesktopItem *item, GFileOutputStream *stream, Section *section
 		char *full = g_strdup_printf ("%s/%s", section->name, key);
 		const char *value = g_hash_table_lookup (item->main_hash, full);
 		if (value != NULL) {
-			char *val = escape_string_and_dup (value);
+			char *val = g_strescape (value, NULL);
 			stream_printf (stream, "%s=%s\n", key, val);
 			g_free (val);
 		}
@@ -3830,7 +3750,7 @@ ditem_save (MateDesktopItem *item, const char *uri, GError **error)
 		const char *key = li->data;
 		const char *value = g_hash_table_lookup (item->main_hash, key);
 		if (value != NULL) {
-			char *val = escape_string_and_dup (value);
+			char *val = g_strescape (value, NULL);
 			stream_printf (stream, "%s=%s\n", key, val);
 			g_free (val);
 		}
