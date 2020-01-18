@@ -8,12 +8,11 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Andi Chandler <andi@gowling.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>, 2018\n"
 "Language-Team: English (United Kingdom) (https://www.transifex.com/mate/teams/13566/en_GB/)\n"
@@ -37,7 +36,9 @@ msgstr "About MATE"
 msgid "Learn more about MATE"
 msgstr "Learn more about MATE"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
 msgstr ""
 
@@ -1338,126 +1339,6 @@ msgstr "Disable log out"
 msgid "Prevent the user from logging out."
 msgstr "Prevent the user from logging out."
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "possible values are \"on\", \"off\", and \"custom\"."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Keyboard Bell Custom Filename"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "File name of the bell sound to be played."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "Remember NumLock state"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "NumLock state"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "The remembered state of the NumLock LED."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Mouse button orientation"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "Swap left and right mouse buttons for left-handed mice."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr "Motion Acceleration"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Motion Threshold"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Drag Threshold"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Distance before a drag is started."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Double Click Time"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "Length of a double click."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "Middle button emulation"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Locate Pointer"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Cursor theme"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "Cursor theme name."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Cursor size"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Size of the cursor referenced by cursor_theme."
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "Default mixer device"
@@ -1592,10 +1473,14 @@ msgstr "Colour selection dialogue"
 msgid "Choose colors from the palette or the screen"
 msgstr "Choose colours from the palette or the screen"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
 msgstr ""
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

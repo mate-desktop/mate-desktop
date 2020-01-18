@@ -9,12 +9,11 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Anh Phan <vietnamesel10n@gmail.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Anh Phan <vietnamesel10n@gmail.com>, 2018\n"
 "Language-Team: Vietnamese (https://www.transifex.com/mate/teams/13566/vi/)\n"
@@ -38,7 +37,9 @@ msgstr "Dịch bởi Phan Anh"
 msgid "Learn more about MATE"
 msgstr "Xem thêm về MATE - Dịch bởi Phan Anh"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
 msgstr ""
 
@@ -1270,126 +1271,6 @@ msgstr ""
 msgid "Prevent the user from logging out."
 msgstr ""
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr ""
-"giá trị hợp lệ là:\n"
-" • on — bật,\n"
-" • off — tắt,\n"
-" • custom — tự chọn."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Tên tập tin chuông tự chọn của bàn phím"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "Tên tập tin của tiếng bíp cần phát."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "Nhớ tính trạng NumLock"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"Khi đặt là « true » (đúng), Mate sẽ nhớ tính trạng của LED NumLock (Khóa Số)"
-" giữa hai phiên chạy."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr ""
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Hướng nút chuột"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "Hoán đổi nút trái, phải của chuột cho người dùng thuận tay trái."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Bộ nhân gia tốc cho chuyển động chuột. Giá trị (-1) là mặc định hệ thống."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Ngưỡng di chuyển"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"Khoảng cách, tính theo điểm ảnh, mà con trỏ phải di chuyển trước khi kích "
-"hoạt chuyển động của con chuột. Giá trị (-1) là mặc định hệ thống."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Ngưỡng kéo"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Khoảng cách trước khi bắt đầu kéo."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Khoảng thời gian nhấp đúp"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "Độ dài nhấp đúp."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Định vị con trỏ"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr "Tô sáng vị trí hiện thời của con trỏ khi nhấn và nhả phím Control."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Sắc thái con trỏ"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Cỡ con trỏ"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr ""
-"Kích cỡ của con trỏ mà « cursor_theme » (sắc thái con trỏ) có tham chiếu."
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "Thiết bị hoà tiếng mặc định"
@@ -1519,10 +1400,14 @@ msgstr ""
 msgid "Choose colors from the palette or the screen"
 msgstr ""
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
 msgstr ""
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

@@ -7,12 +7,11 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Мирослав Николић <miroslavnikolic@rocketmail.com>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2019\n"
 "Language-Team: Serbian (https://www.transifex.com/mate/teams/13566/sr/)\n"
@@ -36,7 +35,9 @@ msgstr "О Мејту"
 msgid "Learn more about MATE"
 msgstr "Сазнајте више о Мејту"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
 msgstr "mate-desktop"
 
@@ -1367,125 +1368,6 @@ msgstr "Искључује одјављивање"
 msgid "Prevent the user from logging out."
 msgstr "Спречава корисника да се одјави."
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr ""
-"могуће вредност су „on“ (укљ.), „off“ (искљ.), и „custom“ (произвољно)."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Датотека произвољног звонца тастатуре"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "Назив датотеке звука звонца који ће бити пуштен."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "Памти стање закључаних бројева"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"Када је постављено, Мејт ће памтити стање ЛЕД лампице тастера закључаних "
-"бројева између сесија."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "Стање закључаних бројева"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "Запамћено стање ЛЕД лампице тастера закључаних бројева."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Усмереност дугмета миша"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "Размените лево и десно дугме миша за леворуке кориснике."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr "Убрзање покрета"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Множилац убрзања за кретање миша. Вредност од -1 је основна системска."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Застој покрета"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"Растојање у тачкицама које курсор мора да пређе пре него ли се активира "
-"убрзано кретање миша. Вредност од -1 је основна системска."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Праг превлачења"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Растојање пре почетка превлачења."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Време двоклика"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "Трајање дуплог клика."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "Опонашање средњег дугмета"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-"Омогућава опонашање средњег тастера миша кроз истовремени клик левог и "
-"десног тастера."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Налажење показивача"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Истиче тренутно место показивача када се притисне и пусти тастер Контрол."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Тема курсора"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "Назив теме курсора."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Величина курсора"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Величина курсора на који упућује тема курсора."
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "Основни уређај мешача"
@@ -1619,10 +1501,14 @@ msgstr "Прозорче за избор боје"
 msgid "Choose colors from the palette or the screen"
 msgstr "Изаберите боје са палете или са екрана"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
 msgstr "gtk-select-color"
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr "Мејт;боја;избирач;изабери;палета;екран;избор;"

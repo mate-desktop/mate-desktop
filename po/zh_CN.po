@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Wylmer Wang, 2018
-# nyanyh <rebuilty@gmail.com>, 2018
+# gtrslower, 2018
 # 775405984, 2018
 # liulitchi <xingzuo88@qq.com>, 2018
 # Cravix <dr.neemous@gmail.com>, 2018
@@ -19,12 +19,11 @@
 # Wenbin Lv <wenbin816@gmail.com>, 2019
 # zhineng404 <zhinengge@gmail.com>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: zhineng404 <zhinengge@gmail.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
@@ -59,7 +58,9 @@ msgstr "关于MATE"
 msgid "Learn more about MATE"
 msgstr "进一步了解MATE"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
 msgstr "mate-桌面"
 
@@ -1273,116 +1274,6 @@ msgstr "禁用注销"
 msgid "Prevent the user from logging out."
 msgstr "防止用户登出"
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "可取的值有 \"开\", \"关\", 和 \"自定义\""
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "自定义键盘铃声文件名"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "要播放的响铃声音的文件名。"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "记忆 NumLock 状态"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr "设定为 true 时，MATE 将在不同会话间记住 NumLock 灯的状态。"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "NumLock 状态"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "记忆的 NumLock LED 的状态"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "鼠标键方向"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "为左手鼠标交换左右鼠标按键。"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr "触摸板移动加速度"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr "鼠标运动加速度的乘数。-1 是系统默认值。"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "运动阈值"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr "启动鼠标运动加速前鼠标必须移动的像素点数。系统默认的值是 -1。"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "拖动阈值"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "拖动开始前的过渡距离"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "双击时间"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "双击间隔。"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "中键模拟"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr "通过同时按下鼠标左右键来模拟鼠标中键点击。"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "定位光标"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr "当按下并放开 Ctrl 键时，高亮显示鼠标指针的当前位置。"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "光标主题"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "光标主题名称"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "光标大小"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "cursor_theme 引用的光标大小。"
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "默认混音设备"
@@ -1508,10 +1399,14 @@ msgstr "颜色选择对话框"
 msgid "Choose colors from the palette or the screen"
 msgstr "在调色板或屏幕上选取颜色"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
 msgstr "gtk-选择-颜色"
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr "MATE;颜色;选择器;拾取;调色板;屏幕;选择;"

@@ -4,17 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Aputsiak Niels Janussen (Skjalden) <aj@isit.gl>, 2018
+# Aputsiak Niels Janussen <aj@isit.gl>, 2018
 # Allan Nordhøy <epost@anotheragency.no>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Joe Hansen <joedalton2@yahoo.dk>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2019\n"
 "Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
@@ -42,7 +41,9 @@ msgstr "Om Mate"
 msgid "Learn more about MATE"
 msgstr "Læs mere om Mate"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
 msgstr "mate-desktop"
 
@@ -1378,125 +1379,6 @@ msgstr "Deaktiver log ud"
 msgid "Prevent the user from logging out."
 msgstr "Forhindr brugeren i at logge ud."
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "mulige værdier er »on«, »off« og »custom«."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Brugerdefineret filnavn til tastaturklokke"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "Filnavn for den klokkelyd der skal afspilles."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "Husk NumLock-tilstand"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"Hvis sand (true) vil MATE huske tilstanden for NumLock-lyset mellem "
-"sessioner."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "NumLock-tilstand"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "Den huskede tilstand for NumLock-LED."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Retning for musetast"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "Skift venstre og højre musetaster for venstrehåndsmus."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr "Bevægelsesacceleration"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Accelerationsfaktor for musebevægelser. En værdi på -1 er systemets "
-"standard."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Bevægelsestærskel"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"Afstand i punkter som markøren skal flytte sig før den accelererede "
-"musebevægelse aktiveres. En værdi på -1 er systemets standard."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Trækketærskel"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Afstand før en træk og slip påbegyndes."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Dobbeltkliktid"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "Længden for et dobbeltklik."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "Emulering af midterste knap"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-"Aktiver emulering af midterste knap via samtidig venstre og højre museklik."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Find markør"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Fremhæv den aktuelle placering af markøren når Ctrl-tasten trykkes ned og "
-"slippes."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Markørtema"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "Temanavn for markør."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Markørstørrelse"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Størrelsen for den markør som bliver refereret af cursor_theme."
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "Forvalgt mixerenhed"
@@ -1635,11 +1517,15 @@ msgstr "Dialog for farvevalg"
 msgid "Choose colors from the palette or the screen"
 msgstr "Vælg farver fra paletten eller skærmen"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
 msgstr "gtk-select-color"
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
 "MATE;color;chooser;pick;palette;screen;selection;farve;vælger;vælg;palet:skærm:markering;"

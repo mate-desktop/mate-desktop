@@ -8,7 +8,7 @@
 # ebray187 <ebray187@gmail.com>, 2018
 # Emiliano Fascetti, 2018
 # Arcenio Cid <gusty.miliki@gmail.com>, 2018
-# Fito JB, 2018
+# Adolfo Jayme-Barrientos, 2018
 # happydogeface, 2018
 # Benjamin Perez Carrillo <benperezc@gmail.com>, 2018
 # Naresu Tenshi <naresutenshi@gmail.com>, 2018
@@ -16,12 +16,11 @@
 # Joel Barrios <darkshram@gmail.com>, 2018
 # Toni Estévez <toni.estevez@gmail.com>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
@@ -36,6 +35,7 @@ msgstr ""
 #: mate-about/mate-about.c:77
 msgid "translator-credits"
 msgstr ""
+"Toni Estevez <toni.estevez@gmail.com>, 2019\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2010\n"
 "Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2003-2006\n"
 "Pablo Gonzalo del Campo <pablodc@bigfoot.com>, 2002-2003"
@@ -48,7 +48,9 @@ msgstr "Acerca de MATE"
 msgid "Learn more about MATE"
 msgstr "Más información sobre MATE"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
 msgstr "mate-desktop"
 
@@ -89,7 +91,7 @@ msgid ""
 "like family of operating systems."
 msgstr ""
 "MATE es un entorno de escritorio libre, usable, estable y accesible para la "
-"familia de sistemas operativos similares a Unix."
+"familia de sistemas operativos tipo UNIX."
 
 #: mate-about/mate-about.h:51
 msgid ""
@@ -186,7 +188,7 @@ msgstr "Tiene paleta"
 
 #: libmate-desktop/mate-colorsel.c:281
 msgid "Whether a palette should be used"
-msgstr "Indica si debe usarse una paleta"
+msgstr "Si debe usarse una paleta"
 
 #: libmate-desktop/mate-colorsel.c:288
 msgid "The current color"
@@ -730,8 +732,7 @@ msgstr "El navegador necesita un terminal"
 
 #: schemas/org.mate.applications-browser.gschema.xml:11
 msgid "Whether the default browser needs a terminal to run."
-msgstr ""
-"Indica si el navegador predeterminado necesita un terminal para ejecutarse."
+msgstr "Si el navegador predeterminado necesita un terminal para ejecutarse."
 
 #: schemas/org.mate.applications-browser.gschema.xml:15
 msgid "Browser understands remote"
@@ -739,7 +740,7 @@ msgstr "El navegador implementa la opción «remote»"
 
 #: schemas/org.mate.applications-browser.gschema.xml:16
 msgid "Whether the default browser understands netscape remote."
-msgstr "Indica si el navegador predeterminado implementa «netscape remote»."
+msgstr "Si el navegador predeterminado implementa «netscape remote»."
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
@@ -778,8 +779,8 @@ msgstr "El calendario necesita un terminal"
 #: schemas/org.mate.applications-office.gschema.xml:15
 msgid "Whether the default calendar application needs a terminal to run"
 msgstr ""
-"Indica si la aplicación de calendario predeterminada necesita un terminal "
-"para ejecutarse"
+"Si la aplicación de calendario predeterminada necesita un terminal para "
+"ejecutarse"
 
 #: schemas/org.mate.applications-office.gschema.xml:21
 msgid "Default tasks"
@@ -796,7 +797,7 @@ msgstr "La aplicación de tareas necesita un terminal"
 #: schemas/org.mate.applications-office.gschema.xml:27
 msgid "Whether the default tasks application needs a terminal to run"
 msgstr ""
-"Indica si la aplicación de tareas predeterminada necesita un terminal para "
+"Si la aplicación de tareas predeterminada necesita un terminal para "
 "ejecutarse"
 
 #: schemas/org.mate.applications-terminal.gschema.xml:5
@@ -927,7 +928,7 @@ msgstr "Activar la accesibilidad"
 
 #: schemas/org.mate.interface.gschema.xml:6
 msgid "Whether Applications should have accessibility support."
-msgstr "Indica si las aplicaciones deben activar la accesibilidad."
+msgstr "Si las aplicaciones deben activar la accesibilidad."
 
 #: schemas/org.mate.interface.gschema.xml:10
 msgid "Enable Animations"
@@ -938,8 +939,8 @@ msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
 msgstr ""
-"Indica si deben mostrarse las animaciones. Nota: Esta es una clave global, "
-"cambia el comportamiento del gestor de ventanas, del panel, etc."
+"Si deben mostrarse las animaciones. Nota: Esta es una clave global, cambia "
+"el comportamiento del gestor de ventanas, del panel, etc."
 
 #: schemas/org.mate.interface.gschema.xml:15
 msgid "Menus Have Tearoff"
@@ -965,8 +966,7 @@ msgstr "Los menús tienen iconos"
 
 #: schemas/org.mate.interface.gschema.xml:26
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr ""
-"Indica si los menús deben mostrar un icono junto a la entrada de menú."
+msgstr "Si los menús deben mostrar un icono junto a la entrada de menú."
 
 #: schemas/org.mate.interface.gschema.xml:30
 msgid "Buttons Have Icons"
@@ -974,8 +974,7 @@ msgstr "Los botones tienen iconos"
 
 #: schemas/org.mate.interface.gschema.xml:31
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr ""
-"Indica si los botones deben mostrar un icono además del texto del botón."
+msgstr "Si los botones deben mostrar un icono además del texto del botón."
 
 #: schemas/org.mate.interface.gschema.xml:35
 msgid "Menubar Detachable"
@@ -984,8 +983,7 @@ msgstr "Barra de menú desprendible"
 #: schemas/org.mate.interface.gschema.xml:36
 msgid "Whether the user can detach menubars and move them around."
 msgstr ""
-"Indica si el usuario puede desprender las barras de menú y moverlas a otro "
-"lado."
+"Si el usuario puede desprender las barras de menú y moverlas a otro lado."
 
 #: schemas/org.mate.interface.gschema.xml:40
 msgid "Toolbar Detachable"
@@ -994,8 +992,8 @@ msgstr "Barra de herramientas desprendible"
 #: schemas/org.mate.interface.gschema.xml:41
 msgid "Whether the user can detach toolbars and move them around."
 msgstr ""
-"Indica si el usuario puede desprender las barras de herramientas y moverlas "
-"a otro lado."
+"Si el usuario puede desprender las barras de herramientas y moverlas a otro "
+"lado."
 
 #: schemas/org.mate.interface.gschema.xml:45
 msgid "Toolbar Icon Size"
@@ -1013,7 +1011,7 @@ msgstr "Parpadeo del cursor"
 
 #: schemas/org.mate.interface.gschema.xml:51
 msgid "Whether the cursor should blink."
-msgstr "Indica si el cursor debe parpadear."
+msgstr "Si el cursor debe parpadear."
 
 #: schemas/org.mate.interface.gschema.xml:55
 msgid "Cursor Blink Time"
@@ -1098,10 +1096,10 @@ msgid ""
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
 msgstr ""
-"Indica si los diálogos integrados de GTK+, como el selector de archivos, el "
+"Si los diálogos integrados de GTK+, como el selector de archivos, el "
 "selector de color o el selector de tipografías, usarán una barra de cabecera"
-" en la parte superior para mostrar elementos de acción o un área de acción "
-"en la parte inferior.  Este ajuste no afecta a los diálogos personalizados "
+" en la parte superior para mostrar componentes de acción o un área de acción"
+" en la parte inferior.  Este ajuste no afecta a los diálogos personalizados "
 "que utilizan directamente GtkDialog o a los diálogos de mensaje."
 
 #: schemas/org.mate.interface.gschema.xml:105
@@ -1113,9 +1111,9 @@ msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
-"Indica si las ventanas usarán barras de desplazamiento superpuestas de GTK3."
-" Las barras de desplazamiento superpuestas son de reducido tamaño y "
-"permanecen ocultas hasta que obtienen el foco."
+"Si las ventanas usarán barras de desplazamiento superpuestas de GTK3. Las "
+"barras de desplazamiento superpuestas son de reducido tamaño y permanecen "
+"ocultas hasta que obtienen el foco."
 
 #: schemas/org.mate.interface.gschema.xml:110
 msgid "Enable Gtk toolkit-wide animations"
@@ -1124,8 +1122,8 @@ msgstr "Activar las animaciones para todos los componentes de GTK"
 #: schemas/org.mate.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
 msgstr ""
-"Indica si se activan las animaciones para todos los componentes de la "
-"interfaz gráfica."
+"Si se activan las animaciones para todos los componentes de la interfaz "
+"gráfica."
 
 #: schemas/org.mate.interface.gschema.xml:115
 msgid "Document font"
@@ -1154,8 +1152,7 @@ msgstr "Usar tipografía personalizada"
 #: schemas/org.mate.interface.gschema.xml:126
 msgid "Whether to use a custom font in gtk+ applications."
 msgstr ""
-"Indica si se va que usar una tipografía personalizada en las aplicaciones de"
-" GTK+."
+"Si se va que usar una tipografía personalizada en las aplicaciones de GTK+."
 
 #: schemas/org.mate.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1163,7 +1160,7 @@ msgstr "Barra de estado a la derecha"
 
 #: schemas/org.mate.interface.gschema.xml:131
 msgid "Whether to display a status bar meter on the right."
-msgstr "Indica si se muestra un medidor de la barra de estado en la derecha."
+msgstr "Si se muestra un medidor de la barra de estado en la derecha."
 
 #: schemas/org.mate.interface.gschema.xml:135
 msgid "Module for GtkFileChooser"
@@ -1174,8 +1171,8 @@ msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
 msgstr ""
-"Módulo para usar como modelo de sistema de archivos para el elemento "
-"GtkFileChooser. Los valores posibles son \"gio\" y \"+ gtk\"."
+"Módulo para usar como modelo del sistema de archivos para el componente "
+"GtkFileChooser. Los valores posibles son «gio» y «gtk+»."
 
 #: schemas/org.mate.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1194,8 +1191,8 @@ msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr ""
-"Indica si los menús de contexto de las entradas y las vistas de texto deben "
-"ofrecer la posibilidad de cambiar el método de entrada."
+"Si los menús de contexto de las entradas y las vistas de texto deben ofrecer"
+" la posibilidad de cambiar el método de entrada."
 
 #: schemas/org.mate.interface.gschema.xml:150
 msgid "Show the 'Unicode Control Character' menu"
@@ -1206,8 +1203,8 @@ msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr ""
-"Indica si los menús contextuales de las entradas y las vistas de texto deben"
-" de ofrecer la posibilidad de insertar caracteres de control."
+"Si los menús contextuales de las entradas y las vistas de texto deben de "
+"ofrecer la posibilidad de insertar caracteres de control."
 
 #: schemas/org.mate.interface.gschema.xml:155
 msgid "Titlebar layout of GTK3 client-side decorated windows"
@@ -1240,8 +1237,8 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
 msgstr ""
-"Este ajuste determina dónde se mostrarán los menús de aplicaciones: en cada "
-"ventana o en un panel con el protocolo MenuModel. Consulte "
+"Este ajuste determina dónde se mostrarán los menús de las aplicaciones: en "
+"cada ventana o en un panel con el protocolo MenuModel. Consulte "
 "https://developer.GNOME.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
 
@@ -1270,8 +1267,8 @@ msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
 msgstr ""
-"Indica si se deben mostrar y ocultar automáticamente los mnemónicos cuando "
-"el usuario pulsa la tecla Alt."
+"Si se deben mostrar y ocultar automáticamente los mnemónicos cuando el "
+"usuario pulsa la tecla Alt."
 
 #: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
@@ -1413,129 +1410,6 @@ msgstr "Desactivar el cierre de sesión"
 msgid "Prevent the user from logging out."
 msgstr "Evita que el usuario cierre sesión"
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "los valores posibles son «on», «off» y «custom»."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Archivo personalizado de la campana del teclado"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "Nombre del archivo de sonido de la campana para reproducir."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "Recuerda el estado de la tecla de bloqueo numérica"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"Cuando se activa, MATE recordará el estado del LED de bloque numérico entre "
-"las sesiones."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "Estado de la tecla de bloqueo numérica"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "El estado recordado del LED de  la tecla de bloqueo numérica"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Orientación del botón del ratón"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr ""
-"Intercambia los botones derecho e izquierdo del ratón para crear un ratón "
-"para zurdos."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr "Aceleración de movimiento"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Multiplicador de aceleración para el movimiento del ratón. Un valor de -1 es"
-" el predeterminado del sistema."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Umbral de movimiento"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"Distancia en píxeles que el puntero se debe mover antes de que la "
-"aceleración del ratón sea activada. Un valor de -1 es el predeterminado del "
-"sistema."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Umbral de arrastre"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Distancia antes de iniciar un arrastre."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Tiempo de doble clic"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "Duración de una doble clic."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "Emulación del botón central del ratón"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-"Desactiva la emulación del botón central del ratón a través del clic "
-"simultáneo de los botones derecho e izquierdo"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Localiza el puntero"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Resalta la ubicación actual del puntero cuando se pulsa y se suelta la tecla"
-" Control."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Tema del cursor"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "Nombre del tema de punteros."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Tamaño del cursor"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Tamaño del cursor por referencia al tema del cursor"
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "Dispositivo mezclador por defecto"
@@ -1570,7 +1444,7 @@ msgstr "Sonidos para los eventos"
 
 #: schemas/org.mate.sound.gschema.xml:21
 msgid "Whether to play sounds on user events."
-msgstr "Indica si se van a reproducir sonidos en los eventos del usuario."
+msgstr "Si se van a reproducir sonidos en los eventos del usuario."
 
 #: schemas/org.mate.sound.gschema.xml:25
 msgid "Sound theme name"
@@ -1582,26 +1456,26 @@ msgstr "Tema de sonidos XDG que usar para eventos de sonidos."
 
 #: schemas/org.mate.sound.gschema.xml:30
 msgid "Input feedback sounds"
-msgstr "Sonidos de comentarios"
+msgstr "Sonidos de respuesta de la entrada"
 
 #: schemas/org.mate.sound.gschema.xml:31
 msgid "Whether to play sounds on input events."
-msgstr "Indica si se van a reproducir sonidos en los eventos de entrada."
+msgstr "Si se van a reproducir sonidos en los eventos de entrada."
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:5
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
 msgstr ""
-"Antigüedad máxima de las miniaturas en la caché, en días. Se establece en -1"
-" para desactivar la limpieza."
+"Antigüedad máxima de las miniaturas en la caché, en días. Ajustar a -1 para "
+"desactivar la limpieza."
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:9
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
 msgstr ""
-"Tamaño máximo de las miniaturas en la caché, en Mb. Se establece en -1 para "
+"Tamaño máximo de las miniaturas en la caché, en Mb. Ajustar a -1 para "
 "desactivar la limpieza."
 
 #: schemas/org.mate.thumbnailers.gschema.xml:5
@@ -1656,16 +1530,15 @@ msgstr "Permitir la postergación de los descansos"
 
 #: schemas/org.mate.typing-break.gschema.xml:16
 msgid "Whether or not the typing break screen can be postponed."
-msgstr ""
-"Indica si la pantalla de descanso de escritura puede o no ser pospuesta."
+msgstr "Si la pantalla de descanso de escritura puede o no ser pospuesta."
 
 #: schemas/org.mate.typing-break.gschema.xml:20
 msgid "Whether or not keyboard locking is enabled"
-msgstr "Indica si el bloqueo del teclado está activado"
+msgstr "Si el bloqueo del teclado está activado"
 
 #: schemas/org.mate.typing-break.gschema.xml:21
 msgid "Whether or not keyboard locking is enabled."
-msgstr "Indica si el bloqueo del teclado está activado."
+msgstr "Si el bloqueo del teclado está activado."
 
 #: tools/mate-color-select.c:64 tools/mate-color-select.desktop.in:3
 msgid "MATE Color Selection"
@@ -1679,10 +1552,14 @@ msgstr "Diálogo de la selección de color."
 msgid "Choose colors from the palette or the screen"
 msgstr "Elija los colores de la paleta o la pantalla"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
 msgstr "gtk-select-color"
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr "MATE;color;selector;selección;paleta;pantalla;"

@@ -8,15 +8,16 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Kenneth Jenssen <kennethjenssen@yahoo.com>, 2018
 # Allan Nordhøy <epost@anotheragency.no>, 2018
+# Kim Malmo <berencamlost@msn.com>, 2019
+# Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>, 2018\n"
+"Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2019\n"
 "Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,13 +49,15 @@ msgstr "Om MATE"
 msgid "Learn more about MATE"
 msgstr "Lær mer om MATE"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
-msgstr ""
+msgstr "mate-desktop"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr ""
+msgstr "MATE skrivebordsmiljø"
 
 #: mate-about/mate-about.h:34
 msgid ""
@@ -62,6 +65,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2019 MATE developers"
 msgstr ""
+"Opphavsrett © 1997-2011 GNOME utviklerne\n"
+"Opphavsrett © 2011 Perberos\n"
+"Opphavsrett © 2012-2019 MATE utviklerne"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -227,7 +233,7 @@ msgstr "_Metning:"
 
 #: libmate-desktop/mate-colorsel.c:385
 msgid "\"Deepness\" of the color."
-msgstr "\"Dybde\" på fargen."
+msgstr "Fargens «dybde»."
 
 #: libmate-desktop/mate-colorsel.c:386
 msgid "_Value:"
@@ -235,7 +241,7 @@ msgstr "_Verdi:"
 
 #: libmate-desktop/mate-colorsel.c:387
 msgid "Brightness of the color."
-msgstr "Lyshet for fargen."
+msgstr "Fargens lyshet."
 
 #: libmate-desktop/mate-colorsel.c:388
 msgid "_Red:"
@@ -267,7 +273,7 @@ msgstr "Dekk_evne:"
 
 #: libmate-desktop/mate-colorsel.c:403 libmate-desktop/mate-colorsel.c:413
 msgid "Transparency of the color."
-msgstr "Dekkevne for fargen."
+msgstr "Fargens dekkevne."
 
 #: libmate-desktop/mate-colorsel.c:420
 msgid "Color _name:"
@@ -348,15 +354,15 @@ msgstr "OK-knapp"
 
 #: libmate-desktop/mate-colorseldialog.c:107
 msgid "The OK button of the dialog."
-msgstr "OK-knappen for dialogvinduet."
+msgstr "Dialogvinduets OK-knapp."
 
 #: libmate-desktop/mate-colorseldialog.c:113
 msgid "Cancel Button"
-msgstr "Avbrytings-knapp"
+msgstr "Avbryt-knapp"
 
 #: libmate-desktop/mate-colorseldialog.c:114
 msgid "The cancel button of the dialog."
-msgstr "Avbrytnings-knapp for dialogvinduet."
+msgstr "Dialogvinduets Avbryt-knapp."
 
 #: libmate-desktop/mate-colorseldialog.c:120
 msgid "Help Button"
@@ -364,12 +370,12 @@ msgstr "Hjelpe-knapp"
 
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
-msgstr "Hjelpeknappen for dialogvinduet."
+msgstr "Dialogvinduets hjelpeknapp."
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
-msgstr "Feil under lesing av fil «%s»: %s"
+msgstr "Klarte ikke lese fil «%s»: %s"
 
 #: libmate-desktop/mate-desktop-item.c:288
 #, c-format
@@ -389,12 +395,12 @@ msgstr "Uten navn"
 #: libmate-desktop/mate-desktop-item.c:607
 #, c-format
 msgid "File '%s' is not a regular file or directory."
-msgstr "Filen «%s» er ikke en vanlig fil eller katalog."
+msgstr "Filen «%s» er ikke en vanlig fil eller mappe."
 
 #: libmate-desktop/mate-desktop-item.c:791
 #, c-format
 msgid "Cannot find file '%s'"
-msgstr "Kan ikke finne fil «%s»"
+msgstr "Finner ikke filen «%s»"
 
 #: libmate-desktop/mate-desktop-item.c:837
 msgid "No filename to save to"
@@ -623,6 +629,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Lås valgtast når den trykkes to ganger etter hverandre, fram til den trykkes"
+" på nytt."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:70
 msgid "Disable if two keys are pressed at the same time."
@@ -719,21 +727,24 @@ msgstr "Om forvalgt leser forstår netscape remote-protokollen."
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
-msgstr ""
+msgstr "Kalkulatorprogram"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
 msgstr ""
+"Kalkulatorprogram som skal brukes ved oppstart av programmer som krever det."
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr ""
+msgstr "Lynmeldingsprogram"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
 msgstr ""
+"Lynmeldingsprogram som skal brukes ved oppstart av programmer som krever "
+"det."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -991,7 +1002,7 @@ msgstr "Ikondrakt som skal brukes for panelet, Caja osv."
 #: schemas/org.mate.interface.gschema.xml:65
 #: schemas/org.mate.interface.gschema.xml:70
 msgid "Gtk+ Theme"
-msgstr "GTK+drakt"
+msgstr "GTK+-drakt"
 
 #: schemas/org.mate.interface.gschema.xml:66
 #: schemas/org.mate.interface.gschema.xml:71
@@ -1222,7 +1233,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
-msgstr ""
+msgstr "Vinduskaleringsfaktor"
 
 #: schemas/org.mate.interface.gschema.xml:177
 msgid ""
@@ -1231,10 +1242,14 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Dette styrer skaleringsfaktoren for GTK som avbilder fra vinduskoordinater "
+"til enhetspiksler. Velg 1 for tradisjonelle systemer, men kan økes for "
+"skjermer med veldig høy oppløsning (f.eks. HiDPI og Retina), ofte til "
+"verdien 2. Velg 0 for å gjenkjenne automatisk."
 
 #: schemas/org.mate.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "Skaleringsfaktor for QT-programmer"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
@@ -1243,16 +1258,22 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Dette valget avgjør om MATE styrer skaleringsfaktoren for QT-programmer. Slå"
+" på for å synkronisere med skaleringsfaktoren for GTK når økten startes, "
+"eller slå av for å velge denne verdien et annet sted. Dette krever omstart "
+"av økten. "
 
 #: schemas/org.mate.interface.gschema.xml:186
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "Slå på innliming fra X11s primær-utklippstavle"
 
 #: schemas/org.mate.interface.gschema.xml:187
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
+"Hvorvidt GTK+ limer inn fra primær-utklippstavlen, som vanligvis utløses med"
+" midtre museknapp."
 
 #: schemas/org.mate.lockdown.gschema.xml:5
 msgid "Disable command line"
@@ -1290,7 +1311,7 @@ msgid ""
 "all applications' \"Print\" dialogs."
 msgstr ""
 "Forhindre brukeren i å skrive ut. Dette begrenser tilgang til alle "
-"programmers 'Skriv ut'-dialoger."
+"programmers «Skriv ut»-dialoger."
 
 #: schemas/org.mate.lockdown.gschema.xml:20
 msgid "Disable print setup"
@@ -1345,126 +1366,6 @@ msgstr "Skru av utlogging"
 #: schemas/org.mate.lockdown.gschema.xml:46
 msgid "Prevent the user from logging out."
 msgstr "Hindre brukeren i å logge ut."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "mulige verdier er \"on, \"off\", og \"custom\"."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Filnavn for egendefinert tastaturpip"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "Filnavn for klokkelyden som skal avspilles."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "Husk NumLock-tilstand"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"MATE vil huske tilstand for NumLock mellom økter hvis denne settes til "
-"«true»."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "NumLock-tilstand"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "Husket tilstand for NumLock-LED"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Orientering for musknapper"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "Bytt om høyre og venstre musknapp for venstrehendte mus."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr "Bevegelsesakselerasjon"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Multipliserer for akselerasjon av musebevegelse. En verdi på -1 er systemets"
-" forvalg."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Bevegelsesterskel"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"Avstand i bildepunkter som pekeren skal flytte seg før akselerert "
-"musebevegelse aktiveres. Verdien -1 er systemforvalg."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Trekketerskel"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Avstand før dragning starter."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Dobbeltklikktid"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "Lengden på et dobbeltklikk"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "Emulering av midtknapp"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-"Aktiver emulering av midtre museknapp ved sammenfallende venstre og høyre "
-"museklikk."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Finn peker"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Uthever pekerens nåværende plassering når Ctrl-tasten trykkes ned og "
-"slippes."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Pekerdrakt"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "Draktnavn for peker."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Pekerstørrelse"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Størrelsen på peker det vises til av cursor_theme."
 
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
@@ -1601,10 +1502,14 @@ msgstr "Fargevalgsdialog"
 msgid "Choose colors from the palette or the screen"
 msgstr "Velg farger fra paletten på skjermen"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
-msgstr ""
+msgstr "gtk-select-color"
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
-msgstr ""
+msgstr "MATE;farge;plukker;velger;palett;skjerm;velg;"

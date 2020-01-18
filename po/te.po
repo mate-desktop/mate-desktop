@@ -8,12 +8,11 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # parijathakumar <parijathakumar@gmail.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: parijathakumar <parijathakumar@gmail.com>, 2018\n"
 "Language-Team: Telugu (https://www.transifex.com/mate/teams/13566/te/)\n"
@@ -37,7 +36,9 @@ msgstr "మేట్ గురించి"
 msgid "Learn more about MATE"
 msgstr "మేట్ గురించి మరింత తెలుసుకోండి "
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
 msgstr ""
 
@@ -1264,122 +1265,6 @@ msgstr ""
 msgid "Prevent the user from logging out."
 msgstr ""
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "సాధ్యమగు విలువలు \"on\", \"off\", మరియు \"custom\"."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "కీబోర్డు గంట మలచిన దస్త్రనామము"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "మోగించవలిసిన గంట శబ్ధముయొక్క దస్త్రనామము."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "NumLock స్థితిని గుర్తుంచుకొనుము"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"సత్యముకు అమర్చితే, MATE సెషన్ల మద్య NumLock LED స్థితిని గుర్తుంచుకొంటుంది."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr ""
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "మౌస్ బటన్ సర్దుబాటు"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "ఎడమ-చేతి మైకుకొరకు ఎడమ మరియు కుడి బటన్స్‍‌ను మార్చము."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"మౌస్ గమనము కొరకు త్వరుణము గుణించునది. -1 విలువ సిస్టమ్ యొక్క అప్రమేయము."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "గమనం త్రెష్‌హోల్డు"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"త్వరుణీకరించిన మౌస్ గమనము క్రియాశీలపరుచుటకు ముందు సూచిక తప్పుక కదులవలిసిన "
-"దూరము పిగ్జెల్స్‍‌లో. విలువ -1 సిస్టమ్‌యొక్క అప్రమేయము."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "డ్రాగ్ త్రెష్‌హోల్డ్‍"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "లాగుట ప్రారంభించుటకు ముందు దూరము"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "రెండు నొక్కుల సమయం"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "రెండు నొక్కలమద్య పొడవు"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "సూచకని గుర్తించుము"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Control కీ వత్తినప్పుడు మరియు వదిలినప్పుడు సూచికయొక్క ప్రస్తుత స్థానమును "
-"వుద్దీపనము చేయుము."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "కర్సర్ థీమ్"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "కర్సర్ పరిమాణము"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "cursor_theme చేత రిఫరెన్సు చేయబడిన కర్సర్ పరిమాణము."
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "అప్రమేయ మిశ్రమకారి పరికరము"
@@ -1512,10 +1397,14 @@ msgstr ""
 msgid "Choose colors from the palette or the screen"
 msgstr ""
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
 msgstr ""
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

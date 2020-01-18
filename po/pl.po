@@ -7,7 +7,6 @@
 # Piotr Strębski <strebski@gmail.com>, 2018
 # Dominik Adrian Grzywak, 2018
 # Darek Witkowski, 2018
-# Marcin Mikołajczak <me@mkljczk.pl>, 2018
 # Tomasz Gąsior, 2018
 # Robert Strojec <ross606@gmail.com>, 2018
 # Szymon Porwolik <szporwolik@gmail.com>, 2018
@@ -16,16 +15,15 @@
 # Beniamin Pawlus <kupwzywcu@o2.pl>, 2018
 # Piotr Drąg <piotrdrag@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Piotr Kowalik <pietrasagh@gmail.com>, 2019
+# pietrasagh <pietrasagh@gmail.com>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Piotr Kowalik <pietrasagh@gmail.com>, 2019\n"
+"Last-Translator: pietrasagh <pietrasagh@gmail.com>, 2019\n"
 "Language-Team: Polish (https://www.transifex.com/mate/teams/13566/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,9 +54,11 @@ msgstr "O środowisku MATE"
 msgid "Learn more about MATE"
 msgstr "Więcej informacji o środowisku MATE"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
-msgstr ""
+msgstr "mate-desktop"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
@@ -746,21 +746,21 @@ msgstr "Czy domyślna przeglądarka rozumie protokół netscape remote."
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
-msgstr ""
+msgstr "Aplikacja Kalkulator"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
-msgstr ""
+msgstr "Program kalkulatora używany podczas startu wymagającej go aplikacji."
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr ""
+msgstr "Aplikacja Komunikatora"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
-msgstr ""
+msgstr "Program Komunikatora używany podczas startu wymagającej go aplikacji."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -1386,127 +1386,6 @@ msgstr "Wyłącz wylogowanie"
 msgid "Prevent the user from logging out."
 msgstr "Uniemożliw użytkownikowi wylogowanie się."
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "dopuszczalne wartości to \"on\", \"off\" i \"custom\"."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Nazwa pliku standardowego dźwięku dzwonka klawiatury"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "Nazwa pliku dźwięku odtwarzanego dzwonka."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "Pamiętaj stan NumLocka"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"Jeśli ustawione na true, MATE będzie pamiętał stan diody klawisza NumLock "
-"pomiędzy sesjami."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "Stan NumLocka"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "Zapamiętany stan diody NumLocka."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Orientacja klawiszy myszy"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr ""
-"Zamień funkcje lewego klawisza myszy z prawym, w myszy dla osób "
-"leworęcznych."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr "Akceleracja ruchu"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Mnożnik akceleracji dla ruchów myszy. Wartość -1 jest wartością domyślną."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Próg ruchu"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"Odległość w pikselach który musi pokonać wskaźnik myszy zanim ruch "
-"przyspieszony zostanie włączony. Wartość -1 jest wartością domyślną."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Próg przeciągania"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Odległość rozpoczynająca przeciąganie."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Czas podwójnego kliknięcia"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "Długość podwójnego kliknięcia"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "Emulacja środkowego przycisku"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-"Włącz emulację środkowego przycisku myszy poprzez równoczesne wciśnięcie "
-"lewego i prawego przycisku myszy."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Ustalaj położenie wskaźnika"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Podświetl obecne położenie wskaźnika, gdy klawisz Ctrl jest wciskany i "
-"zwalniany."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Motyw kursora"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "Nazwa motywu kursora."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Rozmiar kursora"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Rozmiar kursora zwracany przez cursor_theme."
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "Domyślne urządzenie miksera"
@@ -1642,10 +1521,14 @@ msgstr "Okno dialogowe wyboru kolorów"
 msgid "Choose colors from the palette or the screen"
 msgstr "Wybór kolorów z palety lub ekranu"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
 msgstr ""
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
-msgstr ""
+msgstr "MATE;kolor;wybór;wybierz;paleta;ekran;wybór;"

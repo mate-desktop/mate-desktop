@@ -6,12 +6,11 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Bengali (https://www.transifex.com/mate/teams/13566/bn/)\n"
@@ -40,7 +39,9 @@ msgstr "জিনোম পরিচিতি"
 msgid "Learn more about MATE"
 msgstr "জিনোম সম্পর্কে আরও জানুন"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
 msgstr ""
 
@@ -1283,124 +1284,6 @@ msgstr ""
 msgid "Prevent the user from logging out."
 msgstr ""
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "সম্ভাব্য মান হল \"on (চালু)\", \"off (বন্ধ)\" ও \"custom (স্বনির্বাচিত)\"।"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "কীবোর্ড বেল রূপে ব্যবহৃত স্বনির্ধারিত ফাইলের নাম"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "ঘন্টাধ্বনির জন্য ব্যবহৃত ফাইলের নাম।"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "NumLock-এর সর্বশেষ অবস্থা মনে রাখা হবে"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"মান true (সত্য) হলে, MATE-এর দ্বারা বিভিন্ন সেশানে NumLock LED-এর সর্বশেষ "
-"অবস্থা সংরক্ষিত হবে।"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr ""
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "মাউস বোতামের স্থিতিবিন্যাস"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "বাঁহাতি মাউসের ক্ষেত্রে ডান ও বাঁদিকের বাটন অদলবদল করা হবে।"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"মাউসের গতিবিধির ক্ষেত্রে প্রযোজ্য গতিবর্ধকের গুণক। সিস্টেমের পূর্বনির্ধারিত "
-"মান -1 (-১)।"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "গতিবিধির সীমা"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"গতিবর্ধিত মাউস গতিবিধি সক্রিয় করার পূর্বে মাউস নির্দেশক স্থানান্তরণের "
-"ন্যূনতম দুরত্ব, পিক্সেল অনুসারে ব্যক্ত। সিস্টেমের পূর্বনির্ধারিত মান -1 "
-"(-১)।"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "ড্র্যাগ করার সীমা"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "ড্র্যাগ শুরু হওয়ার আগের অবধি মধ্যবর্তী দূরত্ব।"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "দুইবার ক্লিক করতে ব্যয়িত সময়"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "ডবল ক্লিকের দৈর্ঘ্য।"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "অবস্থান চিহ্নিতকরণ পয়েন্টার "
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"কন্ট্রোল-কী চেপে, ছেড়ে দেওয়ার পর পয়েন্টারের বর্তমান অবস্থান উজ্জ্বল করা হয়।"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "কার্সারের থীম"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "কার্সারের আকার"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "cursor_theme-এর মান দ্বারা উল্লিখিত কার্সারের মাপ।"
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "পূর্বনির্ধারিত মিক্সার ডিভাইস"
@@ -1534,10 +1417,14 @@ msgstr ""
 msgid "Choose colors from the palette or the screen"
 msgstr ""
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
 msgstr ""
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

@@ -9,16 +9,15 @@
 # Evolve32 <evolve32@yandex.ru>, 2018
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Микола Ткач <chistomov@gmail.com>, 2018
+# Микола Ткач <chistomov@gmail.com>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2018\n"
+"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2019\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,13 +42,15 @@ msgstr "Про MATE"
 msgid "Learn more about MATE"
 msgstr "Дізнайтеся більше про MATE"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
-msgstr ""
+msgstr "mate-desktop"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr ""
+msgstr "Стільничне середовище MATE"
 
 #: mate-about/mate-about.h:34
 msgid ""
@@ -57,6 +58,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2019 MATE developers"
 msgstr ""
+"Авторське право © 1997-2011 Розробники GNOME\n"
+"Авторське право © 2011 Perberos\n"
+"Авторське право © 2012-2019 Розробники MATE"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -72,8 +76,8 @@ msgid ""
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
 "MATE містить більшу частину того, що Ви бачите на своєму комп’ютері, "
-"включаючи керівник файлами, переглядачі документів та зображень, меню і "
-"багато иньших додатків"
+"включаючи упорядник файлів, переглядачі документів та зображень, меню і "
+"багато инших додатків"
 
 #: mate-about/mate-about.h:48
 msgid ""
@@ -91,7 +95,7 @@ msgid ""
 "assurance."
 msgstr ""
 "MATE — відгалуження від розробки GNOME 2. Сотні людей вклали код у GNOME з "
-"миті його старту в 1997; а багато иньших добродіїв зробили внесок у иньші "
+"миті його старту в 1997; а багато инших добродіїв зробили внесок у инші "
 "важливі напрямки, включаючи переклади, документацію та запоруку якости."
 
 #: mate-about/mate-about.h:55
@@ -110,7 +114,7 @@ msgid ""
 "infusions and a beverage called mate."
 msgstr ""
 "Ім’я «MATE» йде від мате́, виду падубу парагвайського. Його листя містить "
-"каваїн(кофеїн) й використовується для настоянок та напою, що зветься мате."
+"кофеїн й використовується для настоянок та напою, що зветься мате."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -343,11 +347,11 @@ msgstr "Вибір кольору вбудовано у діялоґ."
 
 #: libmate-desktop/mate-colorseldialog.c:106
 msgid "OK Button"
-msgstr "Кнопка \"OK\""
+msgstr "Кнопка \"Так\""
 
 #: libmate-desktop/mate-colorseldialog.c:107
 msgid "The OK button of the dialog."
-msgstr "Кнопка діялоґу \"OK\""
+msgstr "Кнопка діялоґу \"Так\""
 
 #: libmate-desktop/mate-colorseldialog.c:113
 msgid "Cancel Button"
@@ -428,7 +432,7 @@ msgstr "Невідоме кодування %s"
 #: libmate-desktop/mate-desktop-utils.c:149
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr ""
-"Не вдається знайти відповідний термінал, використовується проґрама xterm, "
+"Не вдається знайти відповідний термінал, використовується програма xterm, "
 "хоча й вона може не працювати"
 
 #: libmate-desktop/mate-languages.c:727
@@ -466,8 +470,8 @@ msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr ""
-"потрібна проґрама та розмір CRTC %d виходить за рамки припустимих меж: "
-"розташування=(%d, %d), розмір=(%d, %d), максимально=(%d, %d)"
+"потрібна програма та розмір CRTC %d виходить за рамки припустимих меж: "
+"розташування=(%d, %d), розмір=(%d, %d), щонайбільше=(%d, %d)"
 
 #: libmate-desktop/mate-rr.c:1782
 #, c-format
@@ -561,7 +565,7 @@ msgid ""
 "minimum=(%d, %d), maximum=(%d, %d)"
 msgstr ""
 "потрібний віртуальний розмір не вміщується у доступний простір: "
-"потрібно=(%d, %d), мінімум=(%d, %d), максимум=(%d, %d)"
+"потрібно=(%d, %d), щонайменше=(%d, %d), щонайбільше=(%d, %d)"
 
 #. Keep this string in sync with mate-control-center/capplets/display/xrandr-
 #. capplet.c:get_display_name()
@@ -575,12 +579,12 @@ msgstr "Дублювати зображення"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:20
 msgid "minimum interval in milliseconds"
-msgstr "мінімальний інтервал у мілісекундах"
+msgstr "щонайменший інтервал у мілісекундах"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:21
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
 msgstr ""
-"Не зважати на багаторазове натиснення однієї клявіші протягом @delay "
+"Не зважати на багаторазове натиснення однієї клавіші впродовж @delay "
 "мілісекунд."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:31
@@ -589,7 +593,7 @@ msgstr "Точок на секунду"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:32
 msgid "How many pixels per second to move at the maximum speed."
-msgstr "Як багато пікселів на секунду пересунути з максимальною швидкістю."
+msgstr "Як багато пікселів на секунду пересунути зі щонайбільшою швидкістю."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:36
 msgid "How long to accelerate in milliseconds"
@@ -597,7 +601,7 @@ msgstr "Як довго прискорюватися (у мілісекунда�
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:37
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr "Скільки мілісекунд займає перехід від 0 до максимальної швидкости."
+msgstr "Скільки мілісекунд займає перехід від 0 до щонайбільшої швидкости."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:41
 msgid "Initial delay in milliseconds"
@@ -607,17 +611,17 @@ msgstr "Початкова затримка у мілісекундах"
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
 msgstr ""
-"Скільки мілісекунд чекати перед початком опрацювання клявіш руху мишею."
+"Скільки мілісекунд чекати перед початком опрацювання клавіш руху мишею."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:49
 msgid "Minimum interval in milliseconds"
-msgstr "Мінімальний інтервал у мілісекундах"
+msgstr "Щонайменший інтервал у мілісекундах"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:50
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
 msgstr ""
-"Не приймати клявішу, як натиснуту, поки вона не утримувалася протягом @delay"
+"Не приймати клавішу, як натиснену, поки вона не утримувалася впродовж @delay"
 " мілісекунд."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:66
@@ -628,7 +632,7 @@ msgstr ""
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:70
 msgid "Disable if two keys are pressed at the same time."
-msgstr "Вимкнути, якщо дві клявіші натиснуто одночасно."
+msgstr "Вимкнути, якщо дві клавіші натиснуто одночасно."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:74
 msgid "Beep when a modifier is pressed."
@@ -636,43 +640,43 @@ msgstr "Подавати звуковий сигнал при натисканн
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"
-msgstr "Запускати при вході проґрами зі спеціяльними можливостями"
+msgstr "Запускати при вході програми зі спеціальними можливостями"
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
 msgstr ""
-"Перелік проґрам для людей з обмеженими можливостями, що запускаються при "
+"Перелік програм для людей з обмеженими можливостями, що запускаються при "
 "вході до сеансу середовища MATE."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
-msgstr "Обрана проґрама Мобільности спеціяльних можливостей"
+msgstr "Обрана програма Мобільности спеціальних можливостей"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:6
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
-"Обрана проґрама мобільности спеціяльних можливостей для використання під час"
+"Обрана програма мобільности спеціальних можливостей для використання під час"
 " входу у сеанс, роботи з меню та у командному рядку."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:10
 msgid "Start preferred Mobility assistive technology application"
-msgstr "Запускати обрану проґраму мобільности спеціяльних можливостей"
+msgstr "Запускати обрану програму мобільности спеціальних можливостей"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"Чи запускати під час входу у MATE проґраму мобільности спеціяльних "
+"Чи запускати під час входу у MATE програму мобільности спеціальних "
 "можливостей."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
-msgstr "Обрана Зорова проґрама спеціяльних можливостей"
+msgstr "Обрана Зорова програма спеціальних можливостей"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:6
 msgid ""
@@ -684,14 +688,14 @@ msgstr ""
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:10
 msgid "Start preferred Visual assistive technology application"
-msgstr "Запускати обрану Зорову проґраму спеціяльних можливостей"
+msgstr "Запускати обрану Зорову програму спеціальних можливостей"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
-"Чи запускати під час входу у MATE Зорову проґраму спеціяльних можливостей."
+"Чи запускати під час входу у MATE Зорову програму спеціальних можливостей."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
 msgid "Default browser"
@@ -703,7 +707,7 @@ msgstr "Типовий переглядач для усіх посилань."
 
 #: schemas/org.mate.applications-browser.gschema.xml:10
 msgid "Browser needs terminal"
-msgstr "Проґрамі перегляду потрібен термінал"
+msgstr "Програмі перегляду потрібен термінал"
 
 #: schemas/org.mate.applications-browser.gschema.xml:11
 msgid "Whether the default browser needs a terminal to run."
@@ -719,7 +723,7 @@ msgstr "Чи розуміє типовий переглядач віддален
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
-msgstr ""
+msgstr "Застосунок Рахівник"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
@@ -727,7 +731,7 @@ msgstr ""
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr ""
+msgstr "Додаток для миттєвих повідомлень"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
@@ -741,15 +745,15 @@ msgstr "Типовий календар"
 
 #: schemas/org.mate.applications-office.gschema.xml:10
 msgid "Default calendar application"
-msgstr "Типова проґрама календаря"
+msgstr "Типова програма календаря"
 
 #: schemas/org.mate.applications-office.gschema.xml:14
 msgid "Calendar needs terminal"
-msgstr "Проґрамі календаря потрібен термінал"
+msgstr "Програмі календаря потрібен термінал"
 
 #: schemas/org.mate.applications-office.gschema.xml:15
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr "Чи потрібен термінал для запуску проґрами календаря."
+msgstr "Чи потрібен термінал для запуску програми календаря."
 
 #: schemas/org.mate.applications-office.gschema.xml:21
 msgid "Default tasks"
@@ -757,33 +761,33 @@ msgstr "Типові завдання"
 
 #: schemas/org.mate.applications-office.gschema.xml:22
 msgid "Default tasks application"
-msgstr "Типова проґрама завдань"
+msgstr "Типова програма завдань"
 
 #: schemas/org.mate.applications-office.gschema.xml:26
 msgid "Tasks needs terminal"
-msgstr "Завдання, що потребують термінал"
+msgstr "Завдання, що потребують терміналу"
 
 #: schemas/org.mate.applications-office.gschema.xml:27
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr "Чи потрібен термінал для запуску проґрами завдань."
+msgstr "Чи потрібен термінал для запуску програми завдань."
 
 #: schemas/org.mate.applications-terminal.gschema.xml:5
 msgid "Terminal application"
-msgstr "Проґрама терміналу"
+msgstr "Програма терміналу"
 
 #: schemas/org.mate.applications-terminal.gschema.xml:6
 msgid "Terminal program to use when starting applications that require one."
-msgstr "Термінал, що використовуватиметься коли він потрібен проґрамам."
+msgstr "Термінал, що використовуватиметься коли він потрібен програмам."
 
 #: schemas/org.mate.applications-terminal.gschema.xml:10
 msgid "Exec Arguments"
-msgstr "Аргументи Exec"
+msgstr "Арґументи Exec"
 
 #: schemas/org.mate.applications-terminal.gschema.xml:11
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
 msgstr ""
-"Аргумент, що використовується для запуску проґрам в терміналі визначений "
+"Арґумент, що використовується для запуску програм в терміналі визначений "
 "ключем 'exec'."
 
 #: schemas/org.mate.background.gschema.xml.in:18
@@ -801,18 +805,18 @@ msgstr "Показати піктограми стільниці"
 #: schemas/org.mate.background.gschema.xml.in:24
 msgid "Have MATE file manager (Caja) draw the desktop icons."
 msgstr ""
-"Чи повинен керівник файлами МАТЕ (Caja) показувати піктограми на стільниці."
+"Чи повинен упорядник файлів МАТЕ (Caja) показувати піктограми на стільниці."
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
-msgstr "Чи використовувати плявний перехід при зміні тла?"
+msgstr "Чи використовувати плавний перехід при зміні тла?"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
 msgstr ""
-"Якщо налаштовано true, MATE буде змінювати тло стільниці з ефектом плявного "
+"Якщо налаштовано true, MATE буде змінювати тло стільниці з ефектом плавного "
 "переходу."
 
 #: schemas/org.mate.background.gschema.xml.in:33
@@ -888,11 +892,11 @@ msgstr "Тема, що використовуватиметься для пок�
 
 #: schemas/org.mate.interface.gschema.xml:5
 msgid "Enable Accessibility"
-msgstr "Увімкнути спеціяльні можливости"
+msgstr "Увімкнути спеціальні можливості"
 
 #: schemas/org.mate.interface.gschema.xml:6
 msgid "Whether Applications should have accessibility support."
-msgstr "Чи мають проґрами підтримувати спеціяльні можливости."
+msgstr "Чи мають програми підтримувати спеціальні можливості."
 
 #: schemas/org.mate.interface.gschema.xml:10
 msgid "Enable Animations"
@@ -904,7 +908,7 @@ msgid ""
 "changes the behaviour of the window manager, the panel etc."
 msgstr ""
 "Чи потрібно показувати анімацію. Зауважте: це глобальний ключ, його зміна "
-"вплине на поведінку керівника вікнами, панелі тощо."
+"вплине на поведінку упорядника вікон, панелі тощо."
 
 #: schemas/org.mate.interface.gschema.xml:15
 msgid "Menus Have Tearoff"
@@ -988,7 +992,7 @@ msgstr "Тема піктограм"
 
 #: schemas/org.mate.interface.gschema.xml:61
 msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Тема піктограм, для використання в панелі, Caja й иньших місцях."
+msgstr "Тема піктограм, для використання в панелі, Caja й инших місцях."
 
 #: schemas/org.mate.interface.gschema.xml:65
 #: schemas/org.mate.interface.gschema.xml:70
@@ -998,7 +1002,7 @@ msgstr "Тема GTK+"
 #: schemas/org.mate.interface.gschema.xml:66
 #: schemas/org.mate.interface.gschema.xml:71
 msgid "Basename of the default theme used by gtk+."
-msgstr "Базова назва типової теми для GTK+"
+msgstr "Базова назва усталеної теми для GTK+"
 
 #: schemas/org.mate.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1057,7 +1061,7 @@ msgid ""
 msgstr ""
 "Чи використовувати заголовок вікна згори для відображення віджетів дій таких"
 " діялоґів GTK+ як вибір файлів, вибір кольору або вибір шрифту, або область "
-"дій знизу. Ці налащтування не стосуються довільних діялоґів з використанням "
+"дій знизу. Ці налаштування не стосуються довільних діялоґів з використанням "
 "GtkDialog напряму або діялоґів повідомлень."
 
 #: schemas/org.mate.interface.gschema.xml:105
@@ -1101,11 +1105,11 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:125
 msgid "Use Custom Font"
-msgstr "Використовувати иньший шрифт"
+msgstr "Використовувати инший шрифт"
 
 #: schemas/org.mate.interface.gschema.xml:126
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Чи використовувати иньший шрифт у gtk+ додатках"
+msgstr "Чи використовувати инший шрифт у gtk+ додатках"
 
 #: schemas/org.mate.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1124,16 +1128,16 @@ msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
 msgstr ""
-"Модуль для використання у якости моделі файлової системи у віджеті "
+"Модуль для використання у якості моделі файлової системи у віджеті "
 "GtkFileChooser. Можливі значення: «gio» та «gtk+»."
 
 #: schemas/org.mate.interface.gschema.xml:140
 msgid "Menubar accelerator"
-msgstr "Прискорювач панелі меню"
+msgstr "Пришвидшувач панелі меню"
 
 #: schemas/org.mate.interface.gschema.xml:141
 msgid "Keyboard shortcut to open the menu bars."
-msgstr "Сполучення клявіш для відкривання панелів меню."
+msgstr "Сполучення клавіш для відкривання панелей меню."
 
 #: schemas/org.mate.interface.gschema.xml:145
 msgid "Show the 'Input Methods' menu"
@@ -1174,14 +1178,14 @@ msgid ""
 "decoration-layout."
 msgstr ""
 "Ця опція визначає наявність кнопок, що слід відображати у заголовках вікон, "
-"що використовують декорації на стороні клієнта, а також бік, де вони "
+"що використовують оздоблення на стороні клієнта, а також бік, де вони "
 "знаходитимуться. Для довідки див. "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
 
 #: schemas/org.mate.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
-msgstr "Використовувати глобальне меню для відображення меню проґрам"
+msgstr "Використовувати глобальне меню для відображення меню програм"
 
 #: schemas/org.mate.interface.gschema.xml:161
 msgid ""
@@ -1190,7 +1194,7 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
 msgstr ""
-"Дане налаштування визначає спосіб відображення меню проґрам - у вікні або на"
+"Дане налаштування визначає спосіб відображення меню програм - у вікні або на"
 " панелі за допомогою протоколу MenuModel. Див. "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
@@ -1213,7 +1217,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr "Показувати мнемоніки лише коли клявіша Alt натиснена"
+msgstr "Показувати мнемоніки лише коли клавіша Alt натиснена"
 
 #: schemas/org.mate.interface.gschema.xml:171
 msgid ""
@@ -1221,7 +1225,7 @@ msgid ""
 "presses the Alt key."
 msgstr ""
 "Чи повинні мнемоніки бути автоматично показані або приховані, коли "
-"користувач натискає клявішу Alt."
+"користувач натискає клавішу Alt."
 
 #: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
@@ -1252,7 +1256,7 @@ msgid ""
 msgstr ""
 "Це налаштування визначає, чи контролює MATE масштабовий коефіцієнт для "
 "додатків QT. Увімкніть для синхронізування з масштабовим коефіцієнтом GTK "
-"при ініціалізації сеансу, відімкніть для керування цим значенням в іншому "
+"при ініціалізації сеансу, відімкніть для керування цим значенням в иншому "
 "місці. Потребує перезапуску сеансу."
 
 #: schemas/org.mate.interface.gschema.xml:186
@@ -1279,7 +1283,7 @@ msgid ""
 msgstr ""
 "Забороняє користувачу доступ до терміналу або вказує командний рядок для "
 "виконання. Наприклад доступ до діялоґового вікна панелі \"Виконання "
-"проґрами\" буде вимкнено."
+"програми\" буде вимкнено."
 
 #: schemas/org.mate.lockdown.gschema.xml:10
 msgid "Disable saving files to disk"
@@ -1326,7 +1330,7 @@ msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
 msgstr ""
-"Забороняє користувачу перемикання на иньший обліковий запис, поки активний "
+"Забороняє користувачу перемикання на инший обліковий запис, поки активний "
 "його сеанс."
 
 #: schemas/org.mate.lockdown.gschema.xml:30
@@ -1343,7 +1347,7 @@ msgstr "Вимкнути опрацьовувачі URL та типів MIME"
 
 #: schemas/org.mate.lockdown.gschema.xml:36
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr "Запобігати запуску будь-яких проґрам опрацювання типів URL чи MIME."
+msgstr "Запобігати запуску будь-яких програм опрацювання типів URL чи MIME."
 
 #: schemas/org.mate.lockdown.gschema.xml:40
 msgid "Disable theme settings"
@@ -1361,125 +1365,6 @@ msgstr "Вимкнути вихід з сеансу"
 msgid "Prevent the user from logging out."
 msgstr "Забороняє користувачу завершувати сеанс."
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "можливі значення: «on», «off» та «custom»."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Назва файлу звукового сигналу набірниці"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "Назва файлу звукового сигналу, що буде відтворений."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "Запам'ятовувати стан NumLock"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"Якщо цей ключ встановлено, MATE буде зберігати стан перемикача NumLock між "
-"сеансами."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "Стан NumLock"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "Запам’ятований стан індикатора NumLock"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Орієнтація кнопок миші"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "Змінити місцями ліву і праву кнопки для мишей для шульгів."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr "Пришвидшення руху"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Множник прискорення руху миші. Значення -1 є типовим системним значенням."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Поріг руху"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"Відстань у точках, на яку має пересунутися вказівник, перед тим, як "
-"розпочнеться прискорення руху миші. Системним початковим значенням є -1."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Поріг перетягування"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Відстань до початку перетягування."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Час подвійного клацання"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "Тривалість подвійного клацання."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "Емуляція середньої кнопки"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-"Вмикає емуляцію середньої кнопки миші через одночасне натискання на ліву та "
-"праву кнопки."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Знайти вказівник"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Підсвічує поточне розташування вказівника, коли клявішу Control натиснуто та"
-" відпущено."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Тема вказівника"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "Ім’я теми вказівників."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Розмір вказівника"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Розмір вказівника, на який посилається ключ cursor_theme."
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "Типовий пристрій мікшера звуку"
@@ -1488,7 +1373,7 @@ msgstr "Типовий пристрій мікшера звуку"
 msgid "The default mixer device used by the multimedia key bindings."
 msgstr ""
 "Типовий пристрій мікшера, що використовується мультимедійними сполученнями "
-"клявіш."
+"клавіш."
 
 #: schemas/org.mate.sound.gschema.xml:10
 msgid "Default mixer tracks"
@@ -1498,7 +1383,7 @@ msgstr "Типові доріжки мікшера"
 msgid "The default mixer tracks used by the multimedia key bindings."
 msgstr ""
 "Типові доріжки мікшера, що використовуються мультимедійними сполученнями "
-"клявіш."
+"клавіш."
 
 #: schemas/org.mate.sound.gschema.xml:15
 msgid "Enable ESD"
@@ -1537,7 +1422,7 @@ msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
 msgstr ""
-"Максимальна давність мініатюр у кеші, у днях. Встановіть у -1 для вимкнення "
+"Щонайбільша давність мініатюр у кеші, у днях. Встановіть у -1 для вимкнення "
 "очищення кешу."
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:9
@@ -1545,26 +1430,26 @@ msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
 msgstr ""
-"Максимальний розмір кешу, у мегабайтах. Встановіть у -1 для вимкнення "
+"Щонайбільший розмір кешу, у мегабайтах. Встановіть у -1 для вимкнення "
 "очищення кешу."
 
 #: schemas/org.mate.thumbnailers.gschema.xml:5
 msgid "Disable all external thumbnailers"
-msgstr "Вимкнути усі зовнішні проґрами створення мініатюр"
+msgstr "Вимкнути усі зовнішні програми створення мініатюр"
 
 #: schemas/org.mate.thumbnailers.gschema.xml:6
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
 msgstr ""
-"Позначте, для вимикання усіх зовнішніх проґрам створення мініатюр, незалежно"
-" від того, чи вони увімкнені иньшими способами."
+"Позначте, для вимикання усіх зовнішніх програм створення мініатюр, незалежно"
+" від того, чи вони увімкнені иншими способами."
 
 #: schemas/org.mate.thumbnailers.gschema.xml:10
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
 msgstr ""
-"Перелік mime-типів, для яких зовнішні проґрами для мініатюр буде вимкнено"
+"Перелік mime-типів, для яких зовнішні програми для мініатюр буде вимкнено"
 
 #: schemas/org.mate.thumbnailers.gschema.xml:11
 msgid ""
@@ -1617,10 +1502,14 @@ msgstr "Діялоґ вибору кольору"
 msgid "Choose colors from the palette or the screen"
 msgstr "Виберіть колір із палітри або з екрану"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
-msgstr ""
+msgstr "gtk-select-color"
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr ""

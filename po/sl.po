@@ -9,15 +9,15 @@
 # worm <thewormhole@gmail.com>, 2018
 # Helena S <ele@tutamail.com>, 2018
 # Marko Šterman <marko.chamillionaire@gmail.com>, 2018
+# Arnold Marko <arnold.marko@gmail.com>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Marko Šterman <marko.chamillionaire@gmail.com>, 2018\n"
+"Last-Translator: Arnold Marko <arnold.marko@gmail.com>, 2019\n"
 "Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,13 +39,15 @@ msgstr "O MATE"
 msgid "Learn more about MATE"
 msgstr "Več podrobnosti o MATE"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
-msgstr ""
+msgstr "mate-namizje"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr ""
+msgstr "MATE namizno okolje"
 
 #: mate-about/mate-about.h:34
 msgid ""
@@ -53,6 +55,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2019 MATE developers"
 msgstr ""
+"Copyright © 1997-2011 GNOME razvijalci\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE razvijalci"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -153,8 +158,8 @@ msgstr "Trenutna alfa"
 #: libmate-desktop/mate-colorbutton.c:198
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
-"Izbrana vrednost motnosti (0 je popolnoma prozorno, 65535 je popolnoma "
-"motno)"
+"Izbrana vrednost neprosojnosti (0 je popolnoma prosojno, 65535 je popolnoma "
+"neprosojno)"
 
 #: libmate-desktop/mate-colorbutton.c:331
 msgid "Received invalid color data\n"
@@ -162,11 +167,11 @@ msgstr "Prejeta je neveljavna vrednost barve\n"
 
 #: libmate-desktop/mate-colorsel.c:273
 msgid "Has Opacity Control"
-msgstr "Ima nadzor motnosti"
+msgstr "Ima nadzor neprosojnosti"
 
 #: libmate-desktop/mate-colorsel.c:274
 msgid "Whether the color selector should allow setting opacity"
-msgstr "Ali naj izbirnik barve dovoli nastavljanje motnosti"
+msgstr "Ali naj izbirnik barve dovoli nastavljanje neprosojnosti"
 
 #: libmate-desktop/mate-colorsel.c:280
 msgid "Has palette"
@@ -183,8 +188,8 @@ msgstr "Trenutna barva"
 #: libmate-desktop/mate-colorsel.c:295
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
-"Trenutna vrednost motnosti (0 je popolnoma prozorno, 65535 je popolnoma "
-"motno)"
+"Trenutna vrednost neprosojnosti (0 je popolnoma prozorno, 65535 je popolnoma"
+" motno)"
 
 #: libmate-desktop/mate-colorsel.c:301
 msgid "HEX String"
@@ -679,6 +684,8 @@ msgid ""
 "Preferred Visual assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
+"Prednostno uporabljen program za vizualno pomoč, ki se lahko uporablja za "
+"prijavo, meni ali ukazno vrstico."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:10
 msgid "Start preferred Visual assistive technology application"
@@ -717,21 +724,22 @@ msgstr "Ali privzeti brskalnik razume oddaljeni netscape."
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
-msgstr ""
+msgstr "Kalkulatorski program"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
-msgstr ""
+msgstr "Kalkulatorski program za uporabo s programom, ki ga potrebuje."
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr ""
+msgstr "Program za neposredno sporočanje"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
 msgstr ""
+"Program, ki ga uporabljajo aplikacije, ki potrebujejo neposredno sporočanje."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -838,11 +846,11 @@ msgstr "Datoteka, ki naj se uporabi za sliko ozadja."
 
 #: schemas/org.mate.background.gschema.xml.in:43
 msgid "Picture Opacity"
-msgstr "Prosojnost slike"
+msgstr "Neprosojnost slike"
 
 #: schemas/org.mate.background.gschema.xml.in:44
 msgid "Opacity with which to draw the background picture."
-msgstr "Raven prekrivnosti, s katero naj se izriše slika ozadja."
+msgstr "Raven nepresojnosti, s katero naj se izriše slika ozadja."
 
 #: schemas/org.mate.background.gschema.xml.in:48
 msgid "Primary Color"
@@ -1043,7 +1051,7 @@ msgstr "Ime modula vhodnega načina, ki ga uporablja GTK+."
 
 #: schemas/org.mate.interface.gschema.xml:100
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "Uporabi GTK3 vrstico glave"
 
 #: schemas/org.mate.interface.gschema.xml:101
 msgid ""
@@ -1052,24 +1060,30 @@ msgid ""
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
 msgstr ""
+"Ali naj GTK+ pogovorna okna, kot je denimo izbirnik datotek, barv ali "
+"pisave, uporabljajo vrstico glave na vrhu za prikaz akcijskih widgetov, ali "
+"akcijsko področje na dnu. Ta nastavitev ne vpliva na prilagojena pogovorna "
+"okna, ki uporabljajo GtkDialog neposredno ali uporabljajo sporočilna okna."
 
 #: schemas/org.mate.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
-msgstr ""
+msgstr "Uporabi GTK3 prekrivno drsenje"
 
 #: schemas/org.mate.interface.gschema.xml:106
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
+"Ali naj vgrajena GTK+ drsna okna uporabljajo prekrivno drsenje. Prekivno "
+"drsenje skrije in zmanjša velikost drsnega traku, dokler ni fokusirano."
 
 #: schemas/org.mate.interface.gschema.xml:110
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "Omogoči animacije preko Gtk toolkit-wide"
 
 #: schemas/org.mate.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "Ali naj se omogoči toolkit-wide animacije."
 
 #: schemas/org.mate.interface.gschema.xml:115
 msgid "Document font"
@@ -1169,7 +1183,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
-msgstr ""
+msgstr "Uporabite globalni meni za prikazovanje menijev aplikacij"
 
 #: schemas/org.mate.interface.gschema.xml:161
 msgid ""
@@ -1178,10 +1192,14 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
 msgstr ""
+"Ta nastavitev določa, kje se bodo prikazovali meniji aplikacij - ali v oknu,"
+" ali na panoju preko MenuModel protokola. Glej "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-menubar."
 
 #: schemas/org.mate.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
-msgstr ""
+msgstr "Uporabite globalni meni za prikazovanje okenskih menijev"
 
 #: schemas/org.mate.interface.gschema.xml:166
 msgid ""
@@ -1190,6 +1208,10 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-menubar."
 msgstr ""
+"Ta nastavitev določa, kje se bodo prikazovali meniji oken - ali v oknu, ali "
+"na panoju preko MenuModel protokola. Glej "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-menubar."
 
 #: schemas/org.mate.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
@@ -1205,7 +1227,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
-msgstr ""
+msgstr "Faktor povečave oken"
 
 #: schemas/org.mate.interface.gschema.xml:177
 msgid ""
@@ -1214,10 +1236,14 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"To upravlja GTK faktor povečave, ki pretvarja koordinate okna v dejanske "
+"piksle naprave. Na tradicionalnih sistemih je ta vrednost 1, na zaslonih z "
+"veliko gostoto pik (npr. HiDPI, retina, ...) pa je lahko ta vrednost večja "
+"(pogosto 2). Nastavite na 0 za samodejno prepoznavanje."
 
 #: schemas/org.mate.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "Faktor povečave za QT aplikacije"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
@@ -1226,16 +1252,22 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Ta nastavitev določa ali MATE upravlja faktor povečave QT aplikacij. "
+"Omogočite za sinhronizacijo z GTK faktorjem povečave, ob inicializaciji "
+"seje. Onemogočite za upravljanje te vrednosti drugje. Zahteva ponovni zagon "
+"vaše seje."
 
 #: schemas/org.mate.interface.gschema.xml:186
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "Omogoči primarni izbor za prilepljenje"
 
 #: schemas/org.mate.interface.gschema.xml:187
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
+"Če je resnično, gtk+ uporablja primarni izbor za prilepljenje, ponavadi ga "
+"sproži klik na srednji gumb miške."
 
 #: schemas/org.mate.lockdown.gschema.xml:5
 msgid "Disable command line"
@@ -1328,124 +1360,6 @@ msgstr "Onemogoči odjavljanje"
 #: schemas/org.mate.lockdown.gschema.xml:46
 msgid "Prevent the user from logging out."
 msgstr "Prepreči uporabniku, da se odjavi."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "mogoče vrednosti so \"on\", \"off\" in \"custom\"."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Ime datoteke prilagojenega zvonca tipkovnice"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "Ime datoteke zvonca za predvajanje."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "Zapomni si stanje NumLock"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"Izbrana možnost omogoča, da si bo MATE zapomni stanje NumLock med sejami."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "Stanje tipke NumLock"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "Shranjeno stanje lučke LED tipke NumLock."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Usmerjenost gumbov miške"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "Zamenjaj levi in desni gumb miške za levičarsko miško."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr ""
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Množitelj pospeševanja za premikanje miške. Privzeta sistemska vrednost je "
-"-1."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Prag premikanja"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"Razdalja v slikovnih točkah, v kateri se mora premakniti kazalec, preden se "
-"omogoči premikanje miške. Privzeta sistemska vrednost je -1."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Prag vlečenja"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Razdalja, preden se začne vlečenje."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Čas dvojnega klika"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "Dolžina dvojnega klika."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "Posnemanje srednjega gumba"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-"Omogoči posnemanje srednjega gumba skozi sočasni klik na levi in desni gumb."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Najdi kazalnik"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Poudari trenutno mesto kazalnika, kadar je pritisnjena in spuščena tipka "
-"Control."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Tema kazalnika"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "Ime teme kazalnika."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Velikost kazalnika"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Velikost kazalnika, ki se sklicuje na cursor_theme."
 
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
@@ -1581,10 +1495,14 @@ msgstr "Pogovorno okno izbora barve"
 msgid "Choose colors from the palette or the screen"
 msgstr "Izberite barve s palete ali zaslona"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
-msgstr ""
+msgstr "gtk-izbira-barve"
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
-msgstr ""
+msgstr "MATE;barva;izbirnik;izbira;paleta;zaslon;izbor;"

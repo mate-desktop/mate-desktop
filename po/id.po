@@ -6,7 +6,6 @@
 # Translators:
 # Arif Budiman <arifpedia@gmail.com>, 2018
 # Rania el-Amina <reaamina@gmail.com>, 2018
-# Andika Triwidada <andika@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Ibnu Daru Aji, 2018
 # La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2018
@@ -15,15 +14,15 @@
 # Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018
 # Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2018
 # Hatta.z, 2018
+# Andika Triwidada <andika@gmail.com>, 2020
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Hatta.z, 2018\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>, 2020\n"
 "Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,13 +49,15 @@ msgstr "Tentang MATE"
 msgid "Learn more about MATE"
 msgstr "Lebih jauh tentang MATE"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
-msgstr ""
+msgstr "mate-desktop"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr ""
+msgstr "Lingkungan Desktop MATE"
 
 #: mate-about/mate-about.h:34
 msgid ""
@@ -64,6 +65,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2019 MATE developers"
 msgstr ""
+"Hak Cipta © 1997-2011 GNOME developers\n"
+"Hak Cipta © 2011 Perberos\n"
+"Hak Cipta © 2012-2019 MATE developers"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -728,7 +732,7 @@ msgstr "Apakah peramban bawaan mengerti netscape remote."
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
-msgstr ""
+msgstr "Aplikasi kalkulator"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
@@ -1355,126 +1359,6 @@ msgstr "Nonaktifkan Log Keluar"
 msgid "Prevent the user from logging out."
 msgstr "Mencegah pengguna untuk log keluar."
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "nilai yang mungkin adalah \"on\", \"off\", dan \"custom\"."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Nama Berkas Gubahan Bel Papan Tik"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "Nama berkas yang digunakan untuk suara bel."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "Ingat keadaan NumLock"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"Ketika ditetapkan sebagai benar, MATE akan mengingat keadaan LED NumLock "
-"diantara setiap sesi."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "Keadaan NumLock"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "Keadaan LED NumLock yang diingat."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Orientasi tombol mouse"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "Tukar tombol mouse kanan dan kiri untuk pengguna mouse kidal."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr "Akselerasi Gerak"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Faktor pengali kecepatan gerakan mouse. Nilai -1 adalah nilai awal sistem."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Threshold Gerak"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"Jarak dalam satuan piksel yang digunakan pointer untuk bergerak, sebelum "
-"faktor pengali kecepatan mouse diaktifkan. Nilai -1 adalah nilai awal "
-"sistem."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Ambang Drag"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Jarak sebelum drag dimulai."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Waktu Klik Ganda"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "Lamanya klik ganda."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "Emulasi tombol tengah"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-"Mengaktifkan tombol mouse tengah melalui simulasi klik tombol kiri dan "
-"kanan."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Pencari Pointer"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Sorot lokasi pointer mouse yang aktif saat tombol Control ditekan dan "
-"dilepas."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Tema kursor"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "Nama tema kursor."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Ukuran kursor"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Ukuran kursor sesuai dengan tema kursor."
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "Perangkat pencampur bawaan"
@@ -1609,10 +1493,14 @@ msgstr "Dialog pemilihan warna"
 msgid "Choose colors from the palette or the screen"
 msgstr "Pilih warna dari palet atau layar"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
-msgstr ""
+msgstr "gtk-select-color"
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
-msgstr ""
+msgstr "MATE;warna;pemilih;palet;layar;pemilihan;"

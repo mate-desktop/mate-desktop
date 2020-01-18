@@ -7,12 +7,11 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Miguel Anxo Bouzada <mbouzada@gmail.com>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>, 2019\n"
 "Language-Team: Galician (https://www.transifex.com/mate/teams/13566/gl/)\n"
@@ -38,7 +37,9 @@ msgstr "Sobre MATE"
 msgid "Learn more about MATE"
 msgstr "Aprenda máis sobre MATE"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
 msgstr "mate-desktop"
 
@@ -70,7 +71,7 @@ msgid ""
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
 "MATE inclúe a maior parte do que ve no seu computador, incluíndo o xestor de"
-" ficheiros, visor de documentos, visor de imaxes, menús e aplicativos."
+" ficheiros, visor de documentos, visor de imaxes, menús e aplicacións."
 
 #: mate-about/mate-about.h:48
 msgid ""
@@ -331,8 +332,8 @@ msgid ""
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
 "Prema nesta entrada da paleta para coller a cor actual. Para cambiar esta "
-"entrada, arrastre unha mostra da cor cara aquí ou prema no botón dereito e "
-"seleccione «Gardar a cor aquí»."
+"entrada, arrastre unha mostra da cor cara a aquí ou prema no botón dereito e"
+" seleccione «Gardar a cor aquí»."
 
 #: libmate-desktop/mate-colorseldialog.c:99
 #: libmate-desktop/mate-colorseldialog.c:162
@@ -643,63 +644,63 @@ msgstr "Emitir un ton de aviso ao premer un modificador."
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"
-msgstr "Iniciar aplicativos de tecnoloxías adaptadas"
+msgstr "Iniciar aplicacións de tecnoloxías adaptadas"
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
 msgstr ""
-"Lista de aplicativos de tecnoloxías adaptadas para executar ao iniciar "
+"Lista de aplicacións de tecnoloxías adaptadas para executar ao iniciar "
 "sesión no escritorio do MATE."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
-msgstr "Aplicativo preferido de tecnoloxía para mobilidade adaptada"
+msgstr "Aplicación preferida de tecnoloxía para mobilidade adaptada"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:6
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
-"Aplicativo preferido de tecnoloxía para mobilidade adaptada para ser usada "
+"Aplicación preferida de tecnoloxía para mobilidade adaptada para ser usada "
 "no inicio, menú, ou liña de ordes."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:10
 msgid "Start preferred Mobility assistive technology application"
-msgstr "Iniciar o aplicativo preferido de tecnoloxía para mobilidade adaptada"
+msgstr "Iniciar a aplicación preferida de tecnoloxía para mobilidade adaptada"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
-"Para que o MATE inicie o aplicativo preferido de tecnoloxía para mobilidade "
+"Para que o MATE inicie a aplicación preferida de tecnoloxía para mobilidade "
 "adaptada durante o inicio da sesión."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
-msgstr "Aplicativo preferido de tecnoloxía adaptada visual"
+msgstr "Aplicación preferida de tecnoloxía adaptada visual"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:6
 msgid ""
 "Preferred Visual assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
-"Aplicativo preferido de tecnoloxía adaptada visual para ser usada no inicio,"
+"Aplicación preferida de tecnoloxía adaptada visual para ser usada no inicio,"
 " menú, ou liña de ordes."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:10
 msgid "Start preferred Visual assistive technology application"
-msgstr "Iniciar aplicativo preferido de tecnoloxía adaptada visual"
+msgstr "Iniciar a aplicación preferida de tecnoloxía adaptada visual"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
-"Se MATE ha de iniciar o aplicativo preferido de tecnoloxía adaptada visual "
-"durante o inicio."
+"Se MATE ten que iniciar a aplicación preferida de tecnoloxía adaptada visual"
+" durante o inicio."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
 msgid "Default browser"
@@ -728,23 +729,23 @@ msgstr "Indica se o navegador predeterminado entende o netscape remote."
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
-msgstr "Aplicativo de calculadora"
+msgstr "Aplicación de calculadora"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
 msgstr ""
-"Programa da calculadora para usar ao iniciar aplicativos que precisen dun."
+"Programa da calculadora para usar ao iniciar aplicacións que precisen dun."
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr "Aplicativo de mensaxaría instantánea"
+msgstr "Aplicación de mensaxaría instantánea"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
 msgstr ""
-"Programa de mensaxaría instantánea para usar ao iniciar aplicativos que "
+"Programa de mensaxería instantánea para usar ao iniciar aplicacións que "
 "precisen dun."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
@@ -753,7 +754,7 @@ msgstr "Calendario predeterminado"
 
 #: schemas/org.mate.applications-office.gschema.xml:10
 msgid "Default calendar application"
-msgstr "Aplicativo de calendario predeterminado"
+msgstr "Aplicación predeterminada de calendario"
 
 #: schemas/org.mate.applications-office.gschema.xml:14
 msgid "Calendar needs terminal"
@@ -762,7 +763,7 @@ msgstr "O calendario precisa un terminal"
 #: schemas/org.mate.applications-office.gschema.xml:15
 msgid "Whether the default calendar application needs a terminal to run"
 msgstr ""
-"Indica se o aplicativo de calendario predeterminado precisa dun terminal "
+"Indica se a aplicación predeterminada de calendario precisa dun terminal "
 "para executarse"
 
 #: schemas/org.mate.applications-office.gschema.xml:21
@@ -771,7 +772,7 @@ msgstr "Tarefas predeterminadas"
 
 #: schemas/org.mate.applications-office.gschema.xml:22
 msgid "Default tasks application"
-msgstr "Aplicativo de tarefas predeterminado"
+msgstr "Aplicación predeterminada de tarefas"
 
 #: schemas/org.mate.applications-office.gschema.xml:26
 msgid "Tasks needs terminal"
@@ -780,17 +781,17 @@ msgstr "As tarefas precisan un terminal"
 #: schemas/org.mate.applications-office.gschema.xml:27
 msgid "Whether the default tasks application needs a terminal to run"
 msgstr ""
-"Indica se o aplicativo de tarefas predeterminadas precisa dun terminal para "
+"Indica se aplicación predeterminada de tarefas precisa dun terminal para "
 "executarse"
 
 #: schemas/org.mate.applications-terminal.gschema.xml:5
 msgid "Terminal application"
-msgstr "Aplicativo de terminal"
+msgstr "Aplicación de terminal"
 
 #: schemas/org.mate.applications-terminal.gschema.xml:6
 msgid "Terminal program to use when starting applications that require one."
 msgstr ""
-"Programa do terminal para usar ao iniciar aplicativos que precisen dun."
+"Programa do terminal para usar ao iniciar aplicacións que precisen dun."
 
 #: schemas/org.mate.applications-terminal.gschema.xml:10
 msgid "Exec Arguments"
@@ -909,7 +910,7 @@ msgstr "Activar a accesibilidade"
 
 #: schemas/org.mate.interface.gschema.xml:6
 msgid "Whether Applications should have accessibility support."
-msgstr "Indica se os aplicativos deben ter compatiblidade de accesibilidade."
+msgstr "Indica se as aplicacións deben ter compatiblidade de accesibilidade."
 
 #: schemas/org.mate.interface.gschema.xml:10
 msgid "Enable Animations"
@@ -1132,7 +1133,7 @@ msgstr "Usar tipo de letra personalizado"
 #: schemas/org.mate.interface.gschema.xml:126
 msgid "Whether to use a custom font in gtk+ applications."
 msgstr ""
-"Indica se se vai usar un tipo de letra personalizado nos aplicativos gtk+."
+"Indica se se vai usar un tipo de letra personalizado nas aplicacións gtk+."
 
 #: schemas/org.mate.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1206,7 +1207,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
-msgstr "Usar unha barra de menú global para amosar os menús do aplicativo"
+msgstr "Usar unha barra de menú global para amosar os menús da aplicación"
 
 #: schemas/org.mate.interface.gschema.xml:161
 msgid ""
@@ -1215,7 +1216,7 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
 msgstr ""
-"Este axuste determina onde se amosarán os menús de aplicativos: en cada "
+"Este axuste determina onde se amosarán os menús de aplicacións: en cada "
 "xanela ou nun panel co protocolo MenuModel. Vexa "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
@@ -1267,7 +1268,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"
-msgstr "Factor de escalado para aplicativos QT"
+msgstr "Factor de escalado para aplicacións QT"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
@@ -1276,8 +1277,8 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"Este axuste determina se o MATE controla o factor de escala para os "
-"aplicativos QT. Actíveo para sincronizar co factor de escala GTK ao iniciar "
+"Este axuste determina se o MATE controla o factor de escala para as "
+"aplicacións QT. Actíveo para sincronizar co factor de escala GTK ao iniciar "
 "a sesión, desactive para controlar este valor noutro lugar. Require "
 "reiniciar a súa sesión."
 
@@ -1305,7 +1306,7 @@ msgid ""
 msgstr ""
 "Impide que o usuario acceda ao terminal ou especifique unha liña de ordes "
 "para ser executada. Por exemplo, isto poderá desactivar o acceso ao panel de"
-" diálogo «Executar o aplicativo»."
+" diálogo «Executar a aplicación»."
 
 #: schemas/org.mate.lockdown.gschema.xml:10
 msgid "Disable saving files to disk"
@@ -1317,8 +1318,8 @@ msgid ""
 "access to all applications' \"Save as\" dialogs."
 msgstr ""
 "Impide que o usuario poida gardar ficheiros no disco. Por exemplo, isto "
-"podería desactivar o acceso a todos os diálogos «Gardar como» de todos os "
-"aplicativos."
+"podería desactivar o acceso a todos os diálogos «Gardar como» de toda as "
+"aplicacións."
 
 #: schemas/org.mate.lockdown.gschema.xml:15
 msgid "Disable printing"
@@ -1330,7 +1331,7 @@ msgid ""
 "all applications' \"Print\" dialogs."
 msgstr ""
 "Impide que o usuario imprima. Por exemplo, isto podería desactivar o acceso "
-"a todos os diálogos «Imprimir» de todos os aplicativos."
+"a todos os diálogos «Imprimir» de todas as aplicacións."
 
 #: schemas/org.mate.lockdown.gschema.xml:20
 msgid "Disable print setup"
@@ -1343,7 +1344,7 @@ msgid ""
 msgstr ""
 "Impide que o usuario modifique os axustes de impresión. Por exemplo, isto "
 "poderá desactivar o acceso a todos os diálogos «Configurar impresión» de "
-"todos os aplicativos."
+"todas as aplicacións."
 
 #: schemas/org.mate.lockdown.gschema.xml:25
 msgid "Disable user switching"
@@ -1372,7 +1373,7 @@ msgstr "Desactivar os manipuladores de tipo URL e MIME"
 #: schemas/org.mate.lockdown.gschema.xml:36
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr ""
-"Impide que calquer aplicativo execute calquera manipulador de URL ou tipo "
+"Impide que calquera aplicación execute calquera manipulador de URL ou tipo "
 "MIME."
 
 #: schemas/org.mate.lockdown.gschema.xml:40
@@ -1390,129 +1391,6 @@ msgstr "Desactivar o peche de sesión"
 #: schemas/org.mate.lockdown.gschema.xml:46
 msgid "Prevent the user from logging out."
 msgstr "Impide que o usuario peche a sesión"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "os valores posíbeis son «on», «off» e «custom»."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Nome de ficheiro personalizado da campá do teclado"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "Nome do ficheiro de son da campá para reproducir."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "Lembrar o estado de Bloq Num"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"Cando está definido como verdadeiro, MATE lembrará o estado do LED de Bloq "
-"Num entre as sesións."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "Estado de Bloq Num"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "O estado lembrado do LE do Bloq Num."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Orientación do botón do rato"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr ""
-"Intercambia os botóns dereito e esquerdo do rato para crear ratos para "
-"persoas zurdas."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr "Aceleración do movemento"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Multiplicador de aceleración para o movemento do rato. Un valor de -1 é o "
-"predeterminado do sistema."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Limiar de movemento"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"A distancia en píxeis que o punteiro se debe mover antes de que a "
-"aceleración do rato sexa activada. Un valor de -1 é o predeterminado do "
-"sistema."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Limiar de arrastre"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Distancia antes de iniciar un arrastre."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Tempo de dobre pulsación"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "Duración dunha dobre pulsación."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "Emulación de botón central"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-"Activa o botón central do rato mediante a emulación por presión simultánea "
-"dos botóns esquerdo e dereito."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Localizar o punteiro"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Realza a posición actual do punteiro cando se preme e se solta a tecla "
-"Control."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Tema do cursor"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "Nome do tema de cursor."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Tamaño do cursor"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Tamaño do cursor indicado polo tema de cursor."
 
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
@@ -1656,10 +1534,14 @@ msgstr "Diálogo de selección de cor"
 msgid "Choose colors from the palette or the screen"
 msgstr "Escolla cores da paleta ou da pantalla"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
 msgstr "gtk-select-color"
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr "MATE;cor;selector;seleccione;paleta;pantalla;selección;"

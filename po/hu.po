@@ -5,7 +5,6 @@
 # 
 # Translators:
 # Falu <info@falu.me>, 2018
-# Zoltán Rápolthy <real_zolee@hotmail.com>, 2018
 # Rezső Páder <rezso@rezso.net>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Nagy Gábor <jackson.gabor@gmail.com>, 2018
@@ -14,12 +13,11 @@
 # Balázs Meskó <meskobalazs@gmail.com>, 2019
 # KAMI KAMI <kami911@gmail.com>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: KAMI KAMI <kami911@gmail.com>, 2019\n"
 "Language-Team: Hungarian (https://www.transifex.com/mate/teams/13566/hu/)\n"
@@ -51,7 +49,9 @@ msgstr "A MATE névjegye"
 msgid "Learn more about MATE"
 msgstr "Tudjon meg többet a MATE-ról"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
 msgstr "mate-desktop"
 
@@ -1391,127 +1391,6 @@ msgstr "Kijelentkezés letiltása"
 msgid "Prevent the user from logging out."
 msgstr "A felhasználó nem jelentkezhet ki."
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr "lehetséges értékek: „on” (be), „off” (ki), és „custom” (egyéni)."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Billentyűzetcsengő egyéni fájlneve"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "A lejátszandó hangjelzés fájlneve."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "A NumLock állapotának megjegyzése"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"Ha be van állítva, a MATE megjegyzi a NumLock LED állapotát a munkamenetek "
-"között."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "NumLock állapota"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "A NumLock LED megjegyzett állapota"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Egérgombok elhelyezkedése"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "A bal és jobb egérgombok felcserélése balkezes egerekhez."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr "Mozgás gyorsítás"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Gyorsítási szorzó az egér mozgatásához. A -1 érték a rendszer "
-"alapértelmezése."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Mozgási küszöbérték"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"Az a távolság képpontokban, amit az egérnek meg kell tennie, mielőtt a "
-"gyorsított egérmozgatás aktivizálódik. A -1 érték a rendszer "
-"alapértelmezése."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Húzási küszöbérték"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Húzás indítása előtti távolság."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Dupla kattintás időköze"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "A dupla kattintás hossza."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "Középső gomb emulációja"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-"Középső egérgomb emulációjának engedélyezése a bal és jobb gomb együttes "
-"megnyomásával."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Mutató kiemelése"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Az egérmutató jelenlegi helyének kiemelése a Control billentyű lenyomásakor "
-"és felengedésekor."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Kurzortéma"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "Kurzortéma neve"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Kurzorméret"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "A cursor_theme kulcs által hivatkozott kurzor mérete."
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "Alapértelmezett keverőeszköz"
@@ -1651,11 +1530,15 @@ msgstr "Színválasztó párbeszédablak"
 msgid "Choose colors from the palette or the screen"
 msgstr "Válasszon színt a palettáról, vagy a képernyőről"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
 msgstr "gtk-select-color"
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
 "MATE;color;chooser;pick;palette;screen;selection;szín;választó;kiválasztás;paletta;kijelző;képernyő;kiválasztás"

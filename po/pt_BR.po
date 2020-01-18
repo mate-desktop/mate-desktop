@@ -4,7 +4,6 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Felipe Rozelio <feliperozelio@gmail.com>, 2018
 # Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2018
 # 642cf48d39bca7f9ad9d185d4bcea8c8, 2018
 # Allan Richardson <luke.downhill@gmail.com>, 2018
@@ -20,15 +19,15 @@
 # 58fae44c6c4ff84516f8c8656a7fb14d, 2018
 # Marcus Vinícius Marques, 2018
 # Danylo Sa <kaiserblast@gmail.com>, 2018
+# George Silva <algoritmo.linux@gmail.com>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.23.1\n"
+"Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-06-15 16:04+0200\n"
+"POT-Creation-Date: 2019-11-19 13:37+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Danylo Sa <kaiserblast@gmail.com>, 2018\n"
+"Last-Translator: George Silva <algoritmo.linux@gmail.com>, 2019\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -71,13 +70,15 @@ msgstr "Sobre o MATE"
 msgid "Learn more about MATE"
 msgstr "Saiba mais sobre o MATE"
 
-#: mate-about/mate-about.desktop.in:6
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
-msgstr ""
+msgstr "mate-área de trabalho "
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr ""
+msgstr "MATE Ambiente de trabalho"
 
 #: mate-about/mate-about.h:34
 msgid ""
@@ -85,6 +86,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2019 MATE developers"
 msgstr ""
+"Copyright © 1997-2011 GNOME desenvolvedores\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2019 MATE desenvolvedores"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -662,6 +666,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Trava os modificadores quando pressionados duas vezes seguidas até que o "
+"mesmo modificador seja pressionado novamente."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:70
 msgid "Disable if two keys are pressed at the same time."
@@ -1416,128 +1422,6 @@ msgstr "Desabilitar encerramento da sessão"
 msgid "Prevent the user from logging out."
 msgstr "Evita que o usuário encerre a sessão"
 
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:25
-msgid "possible values are \"on\", \"off\", and \"custom\"."
-msgstr ""
-"valores possíveis são \"on\" (ligado), \"off\" (desligado), e \"custom\" "
-"(personalizado)."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:35
-msgid "Keyboard Bell Custom Filename"
-msgstr "Nome do arquivo personalizado da campainha do teclado"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:36
-msgid "File name of the bell sound to be played."
-msgstr "Nome do arquivo de som a reproduzir para a campainha do teclado."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:40
-msgid "Remember NumLock state"
-msgstr "Lembrar estado da tecla NumLock"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:41
-msgid ""
-"When set to true, MATE will remember the state of the NumLock LED between "
-"sessions."
-msgstr ""
-"Se definido como verdadeiro, o MATE lembrará o estado da tecla NumLock de "
-"uma sessão para outra."
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:45
-msgid "NumLock state"
-msgstr "Estado do NumLock"
-
-#: schemas/org.mate.peripherals-keyboard.gschema.xml:46
-msgid "The remembered state of the NumLock LED."
-msgstr "O estado lembrado da tecla NumLock."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:5
-msgid "Mouse button orientation"
-msgstr "Orientação dos botões do mouse"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:6
-msgid "Swap left and right mouse buttons for left-handed mice."
-msgstr "Inverter botões esquerdo e direito do mouse para canhotos."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:10
-msgid "Motion Acceleration"
-msgstr "Aceleração de movimento"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:11
-msgid ""
-"Acceleration multiplier for mouse motion. A value of -1 is the system "
-"default."
-msgstr ""
-"Multiplicador de aceleração para o movimento do mouse. Um valor de -1 é o "
-"padrão do sistema."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:15
-msgid "Motion Threshold"
-msgstr "Limite de movimento"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:16
-msgid ""
-"Distance in pixels the pointer must move before accelerated mouse motion is "
-"activated. A value of -1 is the system default."
-msgstr ""
-"Distância em pixels que o cursor deve percorrer antes do movimento acelerado"
-" do mouse se iniciar. Um valor de -1 é o padrão do sistema."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:20
-msgid "Drag Threshold"
-msgstr "Limiar do arrasto"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:21
-msgid "Distance before a drag is started."
-msgstr "Distância antes de iniciar um arrasto."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:25
-msgid "Double Click Time"
-msgstr "Tempo de clique duplo"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:26
-msgid "Length of a double click."
-msgstr "Duração de um clique duplo."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:30
-msgid "Middle button emulation"
-msgstr "Emulação do botão do meio"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:31
-msgid ""
-"Enables middle mouse button emulation through simultaneous left and right "
-"button click."
-msgstr ""
-"Habilita emulação do botão do meio do mouse ao clicar os botões esquerdo e "
-"direito simultaneamente."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:35
-msgid "Locate Pointer"
-msgstr "Localizar cursor"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:36
-msgid ""
-"Highlights the current location of the pointer when the Control key is "
-"pressed and released."
-msgstr ""
-"Destaca a localização atual do cursor quando a tecla Control é pressionada e"
-" liberada."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:40
-msgid "Cursor theme"
-msgstr "Tema do cursor"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:41
-msgid "Cursor theme name."
-msgstr "Nome do tema do cursor."
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:45
-msgid "Cursor size"
-msgstr "Tamanho do cursor"
-
-#: schemas/org.mate.peripherals-mouse.gschema.xml:46
-msgid "Size of the cursor referenced by cursor_theme."
-msgstr "Tamanho do cursor referenciado por cursor_theme."
-
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
 msgstr "Dispositivo mixer padrão"
@@ -1679,10 +1563,14 @@ msgstr "Caixa de diálogo de seleção de cores"
 msgid "Choose colors from the palette or the screen"
 msgstr "Escolha cores da paleta ou da tela"
 
-#: tools/mate-color-select.desktop.in:7
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
 msgstr ""
 
-#: tools/mate-color-select.desktop.in:11
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
