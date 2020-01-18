@@ -1,21 +1,51 @@
+### mate-desktop 1.23.3
+
+  * Translations update
+  * thumbnail: Remove obsolete mate_desktop_thumbnail_md5()
+  * thumbnail: Remove obsolete pixbuf helper
+  * thumbnail: Use an array to store the thumbnailer's cmdline
+  * thumbnail: Use g_strcmp0() and remove a NULL check
+  * thumbnail: Simplify system includes
+  * thumbnail: Fix typo in optional
+  * thumbnail: Remove unused constant SECONDS_BETWEEN_STATS
+  * thumbnail: Remove unused #define GDK_PIXBUF_ENABLE_BACKEND
+  * thumbnail: Remove reference to MateIconFactory
+  * thumbnail: Simplify init_thumbnailers_dirs()
+  * thumbnail: some code-styling fixes
+  * Deprecate mate_desktop_thumbnail_scale_down_pixbuf()
+  * thumbnailer: Always prefer the backend provided preview
+  * thumbnail: Always use external gdk-pixbuf thumbnailer
+  * thumbnail: Demote a log message from WARNING to DEBUG
+  * thumbnail factory: Disconnect signal handlers in finalize
+  * thumbnail: Move thumbnail generation/saving to a few helper functions
+  * thumbnail: Clean up path generation code
+  * thumbnailer: Try harder to create a failed thumbnail
+  * Add missing cases to switch statement
+  * lib: Add thumbnail test application
+  * Increase the size of thumbnails to 256
+  * avoid redundant redeclarations
+  * desktop file: add missing hints for translators
+  * Treat time_t as gint64 to convert from/to string
+  * build: introduce RELEASE_YEAR variable for mate-about dialog
+
 ### mate-desktop 1.23.2
 
-    tx: sync with transifex
-    Move remaining peripheral schemas to mate-settings-daemon
-    schema: Move mouse schemas to mate-settings-daemon
-    Replace deprecated gtk_css_provider_get_default
-    mate-bg-crossfade: replace tabs with spaces
-    make 'rsvg-convert' optional
-    mate-colorsel: avoid deprecated 'gtk_hscale_new'
-    gettext needs .gmo files to install .mo locale
-    Remove trailing whitespaces
-    CI: fix make distcheck to remove .gmo files
-    CI: use autotoools for creating the tarball again
-    CI: fix meson distcheck
+  * Translations update
+  * Move remaining peripheral schemas to mate-settings-daemon
+  * schema: Move mouse schemas to mate-settings-daemon
+  * Replace deprecated gtk_css_provider_get_default
+  * mate-bg-crossfade: replace tabs with spaces
+  * make 'rsvg-convert' optional
+  * mate-colorsel: avoid deprecated 'gtk_hscale_new'
+  * gettext needs .gmo files to install .mo locale
+  * Remove trailing whitespaces
+  * CI: fix make distcheck to remove .gmo files
+  * CI: use autotoools for creating the tarball again
+  * CI: fix meson distcheck
 
 ### mate-desktop 1.23.1
 
-  * tx: sync with transifex
+  * Translations update
   * schemas: Define schema for a default messenger
   * check both {$prefix,/usr}/share/locale dirs for translation
   * Add test code for mate-languages.
@@ -28,7 +58,7 @@
 
 ### mate-desktop 1.23.0
 
-  * sync with transifex
+  * Translations update
   * [ci] run after_script when use autotools
   * enable meson build on travis
   * Use mate-desktop icon instead of mate for mate-about
