@@ -1709,15 +1709,29 @@ struct _SlideShow
 };
 
 
+#if GLIB_CHECK_VERSION(2,61,2)
 static double
 now (void)
 {
+	const double microseconds_per_second = (double) G_USEC_PER_SEC;
+	gint64 tv;
+
+	tv = g_get_real_time ();
+
+	return (double) (tv / microseconds_per_second);
+}
+#else
+static double
+now (void)
+{
+	const double microseconds_per_second = (double) G_USEC_PER_SEC;
 	GTimeVal tv;
 
 	g_get_current_time (&tv);
 
-	return (double)tv.tv_sec + (tv.tv_usec / 1000000.0);
+	return (double)tv.tv_sec + (tv.tv_usec / microseconds_per_second);
 }
+#endif
 
 static Slide *
 get_current_slide (SlideShow *show,
