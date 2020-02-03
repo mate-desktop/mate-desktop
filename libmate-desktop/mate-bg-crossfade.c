@@ -326,6 +326,18 @@ mate_bg_crossfade_set_start_surface (MateBGCrossfade* fade, cairo_surface_t *sur
     return fade->priv->start_surface != NULL;
 }
 
+#if GLIB_CHECK_VERSION(2,61,2)
+static gdouble
+get_current_time (void)
+{
+    const double microseconds_per_second = (double) G_USEC_PER_SEC;
+    gint64 tv;
+
+    tv = g_get_real_time ();
+
+    return (double) (tv / microseconds_per_second);
+}
+#else
 static gdouble
 get_current_time (void)
 {
@@ -340,6 +352,7 @@ get_current_time (void)
 
     return timestamp;
 }
+#endif
 
 /**
  * mate_bg_crossfade_set_end_surface:
