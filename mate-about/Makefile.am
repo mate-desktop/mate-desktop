@@ -1,6 +1,6 @@
 bin_PROGRAMS = mate-about
 mate_about_SOURCES = mate-about.c mate-about.h
-mate_about_CFLAGS = $(MATE_ABOUT_CFLAGS)
+mate_about_CFLAGS = $(WARN_CFLAGS) $(MATE_ABOUT_CFLAGS)
 mate_about_LDADD = $(MATE_ABOUT_LIBS)
 
 AM_CPPFLAGS = \

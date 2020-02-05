@@ -9,6 +9,7 @@ mate_color_select_SOURCES = \
 
 mate_color_select_CFLAGS = \
 	-DLOCALE_DIR=\"$(datadir)/locale\" \
+	$(WARN_CFLAGS) \
 	$(MATE_DESKTOP_CFLAGS)
 
 mate_color_select_LDADD = \
