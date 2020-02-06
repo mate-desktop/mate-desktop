@@ -22,7 +22,9 @@ EXTRA_DIST = $(desktop_in_files)	\
 	     mate-about.h.in		\
 	     mate-version.xml.in
 
-CLEANFILES = $(desktop_DATA) $(bin_PROGRAMS) $(version_DATA) mate-about.h
+CLEANFILES = $(desktop_DATA) $(bin_PROGRAMS) $(version_DATA)
+
+DISTCLEANFILES = mate-about.h
 
 #-include $(top_srcdir)/git.mk
 
