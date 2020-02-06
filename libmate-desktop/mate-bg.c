@@ -615,7 +615,7 @@ mate_bg_get_filename (MateBG *bg)
 }
 
 static inline gchar *
-get_wallpaper_cache_dir ()
+get_wallpaper_cache_dir (void)
 {
 	return g_build_filename (g_get_user_cache_dir(), MATE_BG_CACHE_DIR, NULL);
 }
