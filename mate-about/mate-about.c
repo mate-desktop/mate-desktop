@@ -32,7 +32,6 @@
 static void mate_about_on_activate(GtkApplication* app)
 {
     GList* list;
-    GtkWidget* window;
 
     list = gtk_application_get_windows(app);
 
