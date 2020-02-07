@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-11-19 13:37+0100\n"
+"POT-Creation-Date: 2020-01-19 00:40+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: jeiday, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
@@ -67,7 +67,7 @@ msgstr ""
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2019 MATE developers"
+"Copyright © 2012-2020 MATE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
@@ -144,7 +144,7 @@ msgstr "色の選択ダイアログのタイトル"
 msgid "Pick a Color"
 msgstr "色の選択"
 
-#: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:287
+#: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:284
 msgid "Current Color"
 msgstr "現在の色"
 
@@ -152,7 +152,7 @@ msgstr "現在の色"
 msgid "The selected color"
 msgstr "選択した色"
 
-#: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:294
+#: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:291
 msgid "Current Alpha"
 msgstr "現在のアルファ値"
 
@@ -164,156 +164,156 @@ msgstr "選択された透明度(0で完全に透明、65535で完全に不透�
 msgid "Received invalid color data\n"
 msgstr "不正な色データを受け取りました\n"
 
-#: libmate-desktop/mate-colorsel.c:273
+#: libmate-desktop/mate-colorsel.c:270
 msgid "Has Opacity Control"
 msgstr "透明度の設定"
 
-#: libmate-desktop/mate-colorsel.c:274
+#: libmate-desktop/mate-colorsel.c:271
 msgid "Whether the color selector should allow setting opacity"
 msgstr "カラーせレクターで透明度を設定できるかどうか"
 
-#: libmate-desktop/mate-colorsel.c:280
+#: libmate-desktop/mate-colorsel.c:277
 msgid "Has palette"
 msgstr "パレットの設定"
 
-#: libmate-desktop/mate-colorsel.c:281
+#: libmate-desktop/mate-colorsel.c:278
 msgid "Whether a palette should be used"
 msgstr "パレットが使用可能かどうか"
 
-#: libmate-desktop/mate-colorsel.c:288
+#: libmate-desktop/mate-colorsel.c:285
 msgid "The current color"
 msgstr "現在の色"
 
-#: libmate-desktop/mate-colorsel.c:295
+#: libmate-desktop/mate-colorsel.c:292
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "現在の透明度(0で完全に透明、65535で完全に不透明)"
 
-#: libmate-desktop/mate-colorsel.c:301
+#: libmate-desktop/mate-colorsel.c:298
 msgid "HEX String"
 msgstr "16 進文字列"
 
-#: libmate-desktop/mate-colorsel.c:302
+#: libmate-desktop/mate-colorsel.c:299
 msgid "The hexadecimal string of current color"
 msgstr "現在の色の 16 進文字列"
 
-#: libmate-desktop/mate-colorsel.c:348
+#: libmate-desktop/mate-colorsel.c:345
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "外の輪から色を選択して下さい。その後、中の三角形を使って明るさを選択して下さい。"
 
-#: libmate-desktop/mate-colorsel.c:372
+#: libmate-desktop/mate-colorsel.c:369
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "アイドロッパーをクリック後、任意の箇所をクリックすることで、その場所の色を取得できます。"
 
-#: libmate-desktop/mate-colorsel.c:381
+#: libmate-desktop/mate-colorsel.c:378
 msgid "_Hue:"
 msgstr "色相(_H):"
 
-#: libmate-desktop/mate-colorsel.c:382
+#: libmate-desktop/mate-colorsel.c:379
 msgid "Position on the color wheel."
 msgstr "色相環内の位置"
 
-#: libmate-desktop/mate-colorsel.c:384
+#: libmate-desktop/mate-colorsel.c:381
 msgid "_Saturation:"
 msgstr "彩度(_S):"
 
-#: libmate-desktop/mate-colorsel.c:385
+#: libmate-desktop/mate-colorsel.c:382
 msgid "\"Deepness\" of the color."
 msgstr "色の鮮やかさ"
 
-#: libmate-desktop/mate-colorsel.c:386
+#: libmate-desktop/mate-colorsel.c:383
 msgid "_Value:"
 msgstr "明度(_V):"
 
-#: libmate-desktop/mate-colorsel.c:387
+#: libmate-desktop/mate-colorsel.c:384
 msgid "Brightness of the color."
 msgstr "色の明るさ"
 
-#: libmate-desktop/mate-colorsel.c:388
+#: libmate-desktop/mate-colorsel.c:385
 msgid "_Red:"
 msgstr "赤(_R) :"
 
-#: libmate-desktop/mate-colorsel.c:389
+#: libmate-desktop/mate-colorsel.c:386
 msgid "Amount of red light in the color."
 msgstr "赤の強さ"
 
-#: libmate-desktop/mate-colorsel.c:390
+#: libmate-desktop/mate-colorsel.c:387
 msgid "_Green:"
 msgstr "緑(_G) :"
 
-#: libmate-desktop/mate-colorsel.c:391
+#: libmate-desktop/mate-colorsel.c:388
 msgid "Amount of green light in the color."
 msgstr "緑の強さ"
 
-#: libmate-desktop/mate-colorsel.c:392
+#: libmate-desktop/mate-colorsel.c:389
 msgid "_Blue:"
 msgstr "青(_B) :"
 
-#: libmate-desktop/mate-colorsel.c:393
+#: libmate-desktop/mate-colorsel.c:390
 msgid "Amount of blue light in the color."
 msgstr "青の強さ"
 
-#: libmate-desktop/mate-colorsel.c:396
+#: libmate-desktop/mate-colorsel.c:393
 msgid "Op_acity:"
 msgstr "透明度(_A) :"
 
-#: libmate-desktop/mate-colorsel.c:403 libmate-desktop/mate-colorsel.c:413
+#: libmate-desktop/mate-colorsel.c:400 libmate-desktop/mate-colorsel.c:410
 msgid "Transparency of the color."
 msgstr "色の透明度"
 
-#: libmate-desktop/mate-colorsel.c:420
+#: libmate-desktop/mate-colorsel.c:417
 msgid "Color _name:"
 msgstr "色の名前(_N):"
 
-#: libmate-desktop/mate-colorsel.c:434
+#: libmate-desktop/mate-colorsel.c:431
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "HTMLの16進数形式、または「orange」などの色名で色を指定できます。"
 
-#: libmate-desktop/mate-colorsel.c:464
+#: libmate-desktop/mate-colorsel.c:461
 msgid "_Palette:"
 msgstr "パレット(_P):"
 
-#: libmate-desktop/mate-colorsel.c:494
+#: libmate-desktop/mate-colorsel.c:491
 msgid "Color Wheel"
 msgstr "色相環"
 
-#: libmate-desktop/mate-colorsel.c:951
+#: libmate-desktop/mate-colorsel.c:948
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "選択中の色と比較するための前回選択した色です。カラーパレットにドラッグして再利用したり、この色を選択色として利用することができます。"
 
-#: libmate-desktop/mate-colorsel.c:954
+#: libmate-desktop/mate-colorsel.c:951
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "以前選択した色。色をパレットにドラッグすることで、色を保存しておくことができます。"
 
-#: libmate-desktop/mate-colorsel.c:959
+#: libmate-desktop/mate-colorsel.c:956
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "前回選択した色。現在選択中の色と比較することができます。"
 
-#: libmate-desktop/mate-colorsel.c:962
+#: libmate-desktop/mate-colorsel.c:959
 msgid "The color you've chosen."
 msgstr "今選択している色"
 
-#: libmate-desktop/mate-colorsel.c:1367
+#: libmate-desktop/mate-colorsel.c:1364
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: libmate-desktop/mate-colorsel.c:1372
+#: libmate-desktop/mate-colorsel.c:1369
 msgid "_Save color here"
 msgstr "ここに色を保存(_S)"
 
-#: libmate-desktop/mate-colorsel.c:1592
+#: libmate-desktop/mate-colorsel.c:1589
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""

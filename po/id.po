@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-11-19 13:37+0100\n"
+"POT-Creation-Date: 2020-01-19 00:40+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>, 2020\n"
 "Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
@@ -63,11 +63,8 @@ msgstr "Lingkungan Desktop MATE"
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2019 MATE developers"
+"Copyright © 2012-2020 MATE developers"
 msgstr ""
-"Hak Cipta © 1997-2011 GNOME developers\n"
-"Hak Cipta © 2011 Perberos\n"
-"Hak Cipta © 2012-2019 MATE developers"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -153,7 +150,7 @@ msgstr "Judul untuk dialog seleksi warna"
 msgid "Pick a Color"
 msgstr "Ambil Warna"
 
-#: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:287
+#: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:284
 msgid "Current Color"
 msgstr "Warna Sekarang"
 
@@ -161,7 +158,7 @@ msgstr "Warna Sekarang"
 msgid "The selected color"
 msgstr "Warna yang dipilih"
 
-#: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:294
+#: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:291
 msgid "Current Alpha"
 msgstr "Alpha saat ini"
 
@@ -174,39 +171,39 @@ msgstr ""
 msgid "Received invalid color data\n"
 msgstr "Menerima data warna yang tidak sah\n"
 
-#: libmate-desktop/mate-colorsel.c:273
+#: libmate-desktop/mate-colorsel.c:270
 msgid "Has Opacity Control"
 msgstr "Mempunyai Pengatur Tingkat Transparansi"
 
-#: libmate-desktop/mate-colorsel.c:274
+#: libmate-desktop/mate-colorsel.c:271
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Tentukan pemilih warna yang dibolehkan mengatur tingkat transparansi"
 
-#: libmate-desktop/mate-colorsel.c:280
+#: libmate-desktop/mate-colorsel.c:277
 msgid "Has palette"
 msgstr "Punya palet"
 
-#: libmate-desktop/mate-colorsel.c:281
+#: libmate-desktop/mate-colorsel.c:278
 msgid "Whether a palette should be used"
 msgstr "Menentukan apakah sebuah palet harus dipakai"
 
-#: libmate-desktop/mate-colorsel.c:288
+#: libmate-desktop/mate-colorsel.c:285
 msgid "The current color"
 msgstr "Warna yang sekarang"
 
-#: libmate-desktop/mate-colorsel.c:295
+#: libmate-desktop/mate-colorsel.c:292
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Nilai transparansi saat ini (0 full transparan, 65535 nampak semua)"
 
-#: libmate-desktop/mate-colorsel.c:301
+#: libmate-desktop/mate-colorsel.c:298
 msgid "HEX String"
 msgstr "HEX String"
 
-#: libmate-desktop/mate-colorsel.c:302
+#: libmate-desktop/mate-colorsel.c:299
 msgid "The hexadecimal string of current color"
 msgstr "String heksadesimal pada warna saat ini"
 
-#: libmate-desktop/mate-colorsel.c:348
+#: libmate-desktop/mate-colorsel.c:345
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -214,7 +211,7 @@ msgstr ""
 "Pilih warna yang Anda inginkan dari cincin terluar. Atur kegelapan atau "
 "kecerahan warna tersebut menggunakan bagian dalam segitiga."
 
-#: libmate-desktop/mate-colorsel.c:372
+#: libmate-desktop/mate-colorsel.c:369
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -222,67 +219,67 @@ msgstr ""
 "Klik eyedropper, kemudian klik sebuah warna dimana saja di layar Anda untuk "
 "memilih warna itu."
 
-#: libmate-desktop/mate-colorsel.c:381
+#: libmate-desktop/mate-colorsel.c:378
 msgid "_Hue:"
 msgstr "_Hue:"
 
-#: libmate-desktop/mate-colorsel.c:382
+#: libmate-desktop/mate-colorsel.c:379
 msgid "Position on the color wheel."
 msgstr "Posisi pada roda warna."
 
-#: libmate-desktop/mate-colorsel.c:384
+#: libmate-desktop/mate-colorsel.c:381
 msgid "_Saturation:"
 msgstr "_Saturasi:"
 
-#: libmate-desktop/mate-colorsel.c:385
+#: libmate-desktop/mate-colorsel.c:382
 msgid "\"Deepness\" of the color."
 msgstr "\"Kedalaman\" warna."
 
-#: libmate-desktop/mate-colorsel.c:386
+#: libmate-desktop/mate-colorsel.c:383
 msgid "_Value:"
 msgstr "_Nilai:"
 
-#: libmate-desktop/mate-colorsel.c:387
+#: libmate-desktop/mate-colorsel.c:384
 msgid "Brightness of the color."
 msgstr "Kecerahan warna."
 
-#: libmate-desktop/mate-colorsel.c:388
+#: libmate-desktop/mate-colorsel.c:385
 msgid "_Red:"
 msgstr "_Merah:"
 
-#: libmate-desktop/mate-colorsel.c:389
+#: libmate-desktop/mate-colorsel.c:386
 msgid "Amount of red light in the color."
 msgstr "Kuantitas dari cahaya merah pada warna."
 
-#: libmate-desktop/mate-colorsel.c:390
+#: libmate-desktop/mate-colorsel.c:387
 msgid "_Green:"
 msgstr "_Hijau:"
 
-#: libmate-desktop/mate-colorsel.c:391
+#: libmate-desktop/mate-colorsel.c:388
 msgid "Amount of green light in the color."
 msgstr "Kuantitas dari cahaya hijau pada warna."
 
-#: libmate-desktop/mate-colorsel.c:392
+#: libmate-desktop/mate-colorsel.c:389
 msgid "_Blue:"
 msgstr "_Biru:"
 
-#: libmate-desktop/mate-colorsel.c:393
+#: libmate-desktop/mate-colorsel.c:390
 msgid "Amount of blue light in the color."
 msgstr "Kuantitas dari cahaya biru pada warna."
 
-#: libmate-desktop/mate-colorsel.c:396
+#: libmate-desktop/mate-colorsel.c:393
 msgid "Op_acity:"
 msgstr "Op_acity:"
 
-#: libmate-desktop/mate-colorsel.c:403 libmate-desktop/mate-colorsel.c:413
+#: libmate-desktop/mate-colorsel.c:400 libmate-desktop/mate-colorsel.c:410
 msgid "Transparency of the color."
 msgstr "Transparansi warna."
 
-#: libmate-desktop/mate-colorsel.c:420
+#: libmate-desktop/mate-colorsel.c:417
 msgid "Color _name:"
 msgstr "_Nama warna:"
 
-#: libmate-desktop/mate-colorsel.c:434
+#: libmate-desktop/mate-colorsel.c:431
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -290,15 +287,15 @@ msgstr ""
 "Anda dapat memasukkan sebuah nilai heksadesimal warna HTML-style, atau "
 "menyederhanakan nama sebuah warna seperti \"orange\" di entri ini.  "
 
-#: libmate-desktop/mate-colorsel.c:464
+#: libmate-desktop/mate-colorsel.c:461
 msgid "_Palette:"
 msgstr "_Palet:"
 
-#: libmate-desktop/mate-colorsel.c:494
+#: libmate-desktop/mate-colorsel.c:491
 msgid "Color Wheel"
 msgstr "Roda Warna"
 
-#: libmate-desktop/mate-colorsel.c:951
+#: libmate-desktop/mate-colorsel.c:948
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -308,7 +305,7 @@ msgstr ""
 "pilih sekarang. Anda dapat menyeret warna ini ke entri palet, atau memilih "
 "warna ini sekarang dengan menyeretnya ke contoh warna lainnya bersamaan."
 
-#: libmate-desktop/mate-colorsel.c:954
+#: libmate-desktop/mate-colorsel.c:951
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -316,7 +313,7 @@ msgstr ""
 "Warna yang telah Anda pilih. Anda dapat menyeret warna ini ke entri palet "
 "untuk menyimpannya yang dapat digunakan nanti."
 
-#: libmate-desktop/mate-colorsel.c:959
+#: libmate-desktop/mate-colorsel.c:956
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
@@ -324,19 +321,19 @@ msgstr ""
 "Warna yang dipilih sebelumnya, untuk perbandingan dengan warna yang Anda "
 "pilih sekarang."
 
-#: libmate-desktop/mate-colorsel.c:962
+#: libmate-desktop/mate-colorsel.c:959
 msgid "The color you've chosen."
 msgstr "Warna yang telah Anda pilih."
 
-#: libmate-desktop/mate-colorsel.c:1367
+#: libmate-desktop/mate-colorsel.c:1364
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: libmate-desktop/mate-colorsel.c:1372
+#: libmate-desktop/mate-colorsel.c:1369
 msgid "_Save color here"
 msgstr "_Simpan warna disini"
 
-#: libmate-desktop/mate-colorsel.c:1592
+#: libmate-desktop/mate-colorsel.c:1589
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""

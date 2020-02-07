@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-11-19 13:37+0100\n"
+"POT-Creation-Date: 2020-01-19 00:40+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Siranush <ss.m.95@mail.ru>, 2018\n"
 "Language-Team: Armenian (https://www.transifex.com/mate/teams/13566/hy/)\n"
@@ -49,7 +49,7 @@ msgstr ""
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2019 MATE developers"
+"Copyright © 2012-2020 MATE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
@@ -136,7 +136,7 @@ msgstr "Գույնի ընտրության երկխոսության վերնագ�
 msgid "Pick a Color"
 msgstr "Ընտրեք գույնը"
 
-#: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:287
+#: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:284
 msgid "Current Color"
 msgstr "Ընթացիկ Գույնը"
 
@@ -144,7 +144,7 @@ msgstr "Ընթացիկ Գույնը"
 msgid "The selected color"
 msgstr "Ընտրված գույնը"
 
-#: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:294
+#: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:291
 msgid "Current Alpha"
 msgstr "Ընթացիկ Ալֆա"
 
@@ -157,40 +157,40 @@ msgstr ""
 msgid "Received invalid color data\n"
 msgstr "Ստացվել է անվավեր գույնի տվյալներ\n"
 
-#: libmate-desktop/mate-colorsel.c:273
+#: libmate-desktop/mate-colorsel.c:270
 msgid "Has Opacity Control"
 msgstr "Ունի Անթափանցիկության Վերահսկում"
 
-#: libmate-desktop/mate-colorsel.c:274
+#: libmate-desktop/mate-colorsel.c:271
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Արդյոք գույնի սելեկտորը թույլատրում էր անթափանցիկություն դնել"
 
-#: libmate-desktop/mate-colorsel.c:280
+#: libmate-desktop/mate-colorsel.c:277
 msgid "Has palette"
 msgstr "ՈՒնի ներկապնակ"
 
-#: libmate-desktop/mate-colorsel.c:281
+#: libmate-desktop/mate-colorsel.c:278
 msgid "Whether a palette should be used"
 msgstr "Արդյոք ներկապնակ պետք է օգտագործել"
 
-#: libmate-desktop/mate-colorsel.c:288
+#: libmate-desktop/mate-colorsel.c:285
 msgid "The current color"
 msgstr "Ընթացիկ Գույնը"
 
-#: libmate-desktop/mate-colorsel.c:295
+#: libmate-desktop/mate-colorsel.c:292
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Ներկայիս անթափանցիկության արժեքը (0 լիովին թափանցիկ, 65535 լրիվ անթափանց)"
 
-#: libmate-desktop/mate-colorsel.c:301
+#: libmate-desktop/mate-colorsel.c:298
 msgid "HEX String"
 msgstr "HEX տող"
 
-#: libmate-desktop/mate-colorsel.c:302
+#: libmate-desktop/mate-colorsel.c:299
 msgid "The hexadecimal string of current color"
 msgstr "Ընթացիկ գույնի տասնվեցական տողը"
 
-#: libmate-desktop/mate-colorsel.c:348
+#: libmate-desktop/mate-colorsel.c:345
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -198,7 +198,7 @@ msgstr ""
 "Ընտրել գույնը դուք ցանկանում եք արտաքին շրջանից։ Ընտրել այդ գույնի "
 "նթությունը և պայծառությունը օգտագործելով ներքին եռանկյունին։"
 
-#: libmate-desktop/mate-colorsel.c:372
+#: libmate-desktop/mate-colorsel.c:369
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -206,67 +206,67 @@ msgstr ""
 "Սեղմեք Eyedropper, ապա սեղմեք մի գույն ցանկացած տեղ Ձեր էկրանին այդ գույնը "
 "ընտրելու համար։"
 
-#: libmate-desktop/mate-colorsel.c:381
+#: libmate-desktop/mate-colorsel.c:378
 msgid "_Hue:"
 msgstr "_Երանգ։"
 
-#: libmate-desktop/mate-colorsel.c:382
+#: libmate-desktop/mate-colorsel.c:379
 msgid "Position on the color wheel."
 msgstr "Գույնի անիվի դիրքը"
 
-#: libmate-desktop/mate-colorsel.c:384
+#: libmate-desktop/mate-colorsel.c:381
 msgid "_Saturation:"
 msgstr "_Հագեցվածություն:"
 
-#: libmate-desktop/mate-colorsel.c:385
+#: libmate-desktop/mate-colorsel.c:382
 msgid "\"Deepness\" of the color."
 msgstr "Գույնի \"Մգություն\""
 
-#: libmate-desktop/mate-colorsel.c:386
+#: libmate-desktop/mate-colorsel.c:383
 msgid "_Value:"
 msgstr "_Արժեք։"
 
-#: libmate-desktop/mate-colorsel.c:387
+#: libmate-desktop/mate-colorsel.c:384
 msgid "Brightness of the color."
 msgstr "Գույնի պայծառությունը"
 
-#: libmate-desktop/mate-colorsel.c:388
+#: libmate-desktop/mate-colorsel.c:385
 msgid "_Red:"
 msgstr "_Կարմիր։"
 
-#: libmate-desktop/mate-colorsel.c:389
+#: libmate-desktop/mate-colorsel.c:386
 msgid "Amount of red light in the color."
 msgstr "Գույնի մեջ կարմիր լույսի քանակը։"
 
-#: libmate-desktop/mate-colorsel.c:390
+#: libmate-desktop/mate-colorsel.c:387
 msgid "_Green:"
 msgstr "_Կանաչ։"
 
-#: libmate-desktop/mate-colorsel.c:391
+#: libmate-desktop/mate-colorsel.c:388
 msgid "Amount of green light in the color."
 msgstr "Գույնի մեջ կանաչ լույսի քանակը։"
 
-#: libmate-desktop/mate-colorsel.c:392
+#: libmate-desktop/mate-colorsel.c:389
 msgid "_Blue:"
 msgstr "_Կապույտ"
 
-#: libmate-desktop/mate-colorsel.c:393
+#: libmate-desktop/mate-colorsel.c:390
 msgid "Amount of blue light in the color."
 msgstr "Գույնի մեջ կապույտ լույսի քանակը։"
 
-#: libmate-desktop/mate-colorsel.c:396
+#: libmate-desktop/mate-colorsel.c:393
 msgid "Op_acity:"
 msgstr "Ան_թափանցիկություն:"
 
-#: libmate-desktop/mate-colorsel.c:403 libmate-desktop/mate-colorsel.c:413
+#: libmate-desktop/mate-colorsel.c:400 libmate-desktop/mate-colorsel.c:410
 msgid "Transparency of the color."
 msgstr "Գույնի թափանցիկություն:"
 
-#: libmate-desktop/mate-colorsel.c:420
+#: libmate-desktop/mate-colorsel.c:417
 msgid "Color _name:"
 msgstr "Գույնի _անունը։"
 
-#: libmate-desktop/mate-colorsel.c:434
+#: libmate-desktop/mate-colorsel.c:431
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -274,15 +274,15 @@ msgstr ""
 "Դուք կարող եք մուտքագրել HTML ոճի գույնի տասնվեցական արժեքը, կամ պարզապես "
 "գույնի անունը, ինչպիսիք է 'նարնջագույն' այս մուտքում։"
 
-#: libmate-desktop/mate-colorsel.c:464
+#: libmate-desktop/mate-colorsel.c:461
 msgid "_Palette:"
 msgstr "_Ներկապնակ:"
 
-#: libmate-desktop/mate-colorsel.c:494
+#: libmate-desktop/mate-colorsel.c:491
 msgid "Color Wheel"
 msgstr "Գույնի Պտտում"
 
-#: libmate-desktop/mate-colorsel.c:951
+#: libmate-desktop/mate-colorsel.c:948
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -292,7 +292,7 @@ msgstr ""
 "հիմա։ Դուք կարող եք քաշել այս գույն է գունապնակի մուտքում կամ ընտրեք այս "
 "գույնը, որպես ընթացիկ, տեղափոխելով այն մեկ այլ գույնի կողքին։"
 
-#: libmate-desktop/mate-colorsel.c:954
+#: libmate-desktop/mate-colorsel.c:951
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -300,7 +300,7 @@ msgstr ""
 "Դուք գույնը ընտրել եք։ Դուք կարող եք քաշել այս գույն ներկապնակի մուտք "
 "պահպանելու համար, այն ապագայում օգտագործելու համար։"
 
-#: libmate-desktop/mate-colorsel.c:959
+#: libmate-desktop/mate-colorsel.c:956
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
@@ -308,19 +308,19 @@ msgstr ""
 "Նախկինում ընտրված գույնը, համեմատելու համար այն գույնի հետ, որ ընտրում եք "
 "հիմա։"
 
-#: libmate-desktop/mate-colorsel.c:962
+#: libmate-desktop/mate-colorsel.c:959
 msgid "The color you've chosen."
 msgstr "Գույնը դու ընտրել ես:"
 
-#: libmate-desktop/mate-colorsel.c:1367
+#: libmate-desktop/mate-colorsel.c:1364
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: libmate-desktop/mate-colorsel.c:1372
+#: libmate-desktop/mate-colorsel.c:1369
 msgid "_Save color here"
 msgstr "_Պահպանել գեւյնը այստեղ"
 
-#: libmate-desktop/mate-colorsel.c:1592
+#: libmate-desktop/mate-colorsel.c:1589
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""

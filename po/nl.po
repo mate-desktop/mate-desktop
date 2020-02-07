@@ -10,15 +10,15 @@
 # infirit <inactive+infirit@transifex.com>, 2018
 # closeddoors1559 <mrvnp@msn.com>, 2018
 # Volluta <volluta@tutanota.com>, 2018
-# Pjotr <pjotrvertaalt@gmail.com>, 2019
+# Pjotr <pjotrvertaalt@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2019-11-19 13:37+0100\n"
+"POT-Creation-Date: 2020-01-19 00:40+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2019\n"
+"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/mate/teams/13566/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,11 +65,11 @@ msgstr "MATE-werkomgeving"
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2019 MATE developers"
+"Copyright © 2012-2020 MATE developers"
 msgstr ""
 "Auteursrecht © 1997-2011 GNOME-ontwikkelaars\n"
 "Auteursrecht © 2011 Perberos\n"
-"Auteursrecht © 2012-2019 MATE-ontwikkelaars"
+"Auteursrecht © 2012-2020 MATE-ontwikkelaars"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -112,7 +112,7 @@ msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr ""
-"GNOME 2 was de populairste Linuxwerkomgeving, maar die is niet langer "
+"GNOME 2 was de populairste werkomgeving van Linux, maar die is niet langer "
 "beschikbaar... MATE is er om dezelfde werkomgeving te blijven leveren!"
 
 #: mate-about/mate-about.h:58
@@ -154,7 +154,7 @@ msgstr "De titel van de kleurkiezerdialoog"
 msgid "Pick a Color"
 msgstr "Kies een kleur"
 
-#: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:287
+#: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:284
 msgid "Current Color"
 msgstr "Huidige kleur"
 
@@ -162,7 +162,7 @@ msgstr "Huidige kleur"
 msgid "The selected color"
 msgstr "De geselecteerde kleur"
 
-#: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:294
+#: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:291
 msgid "Current Alpha"
 msgstr "Huidige alpha"
 
@@ -176,41 +176,41 @@ msgstr ""
 msgid "Received invalid color data\n"
 msgstr "Ongeldige kleurgegevens ontvangen \n"
 
-#: libmate-desktop/mate-colorsel.c:273
+#: libmate-desktop/mate-colorsel.c:270
 msgid "Has Opacity Control"
 msgstr "Heeft doorzichtigheidsbeheer"
 
-#: libmate-desktop/mate-colorsel.c:274
+#: libmate-desktop/mate-colorsel.c:271
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Of het instellen van doorzichtigheid is toegestaan in de kleurkiezer"
 
-#: libmate-desktop/mate-colorsel.c:280
+#: libmate-desktop/mate-colorsel.c:277
 msgid "Has palette"
 msgstr "Heeft palet"
 
-#: libmate-desktop/mate-colorsel.c:281
+#: libmate-desktop/mate-colorsel.c:278
 msgid "Whether a palette should be used"
 msgstr "Of er een palet gebruikt moet worden"
 
-#: libmate-desktop/mate-colorsel.c:288
+#: libmate-desktop/mate-colorsel.c:285
 msgid "The current color"
 msgstr "De huidige kleur"
 
-#: libmate-desktop/mate-colorsel.c:295
+#: libmate-desktop/mate-colorsel.c:292
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "De huidige doorzichtigheidswaarde (0 volledig doorzichtig, 65535 volledig "
 "ondoorzichtig)"
 
-#: libmate-desktop/mate-colorsel.c:301
+#: libmate-desktop/mate-colorsel.c:298
 msgid "HEX String"
 msgstr "HEX-tekenreeks"
 
-#: libmate-desktop/mate-colorsel.c:302
+#: libmate-desktop/mate-colorsel.c:299
 msgid "The hexadecimal string of current color"
 msgstr "De hexadecimale tekenreeks van de huidige kleur"
 
-#: libmate-desktop/mate-colorsel.c:348
+#: libmate-desktop/mate-colorsel.c:345
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -219,7 +219,7 @@ msgstr ""
 " donkerheid of lichtheid van de gekozen kleur bepalen met behulp van de "
 "binnenste driehoek."
 
-#: libmate-desktop/mate-colorsel.c:372
+#: libmate-desktop/mate-colorsel.c:369
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -227,67 +227,67 @@ msgstr ""
 "Klik op de pipet, en klik daarna ergens op uw scherm om die kleur te "
 "selecteren."
 
-#: libmate-desktop/mate-colorsel.c:381
+#: libmate-desktop/mate-colorsel.c:378
 msgid "_Hue:"
 msgstr "_Tint:"
 
-#: libmate-desktop/mate-colorsel.c:382
+#: libmate-desktop/mate-colorsel.c:379
 msgid "Position on the color wheel."
 msgstr "Positie op het kleurenschemawiel."
 
-#: libmate-desktop/mate-colorsel.c:384
+#: libmate-desktop/mate-colorsel.c:381
 msgid "_Saturation:"
 msgstr "_Verzadiging:"
 
-#: libmate-desktop/mate-colorsel.c:385
+#: libmate-desktop/mate-colorsel.c:382
 msgid "\"Deepness\" of the color."
 msgstr "'Diepte' van de kleur."
 
-#: libmate-desktop/mate-colorsel.c:386
+#: libmate-desktop/mate-colorsel.c:383
 msgid "_Value:"
 msgstr "_Waarde:"
 
-#: libmate-desktop/mate-colorsel.c:387
+#: libmate-desktop/mate-colorsel.c:384
 msgid "Brightness of the color."
 msgstr "Helderheid van de kleur."
 
-#: libmate-desktop/mate-colorsel.c:388
+#: libmate-desktop/mate-colorsel.c:385
 msgid "_Red:"
 msgstr "_Rood:"
 
-#: libmate-desktop/mate-colorsel.c:389
+#: libmate-desktop/mate-colorsel.c:386
 msgid "Amount of red light in the color."
 msgstr "Hoeveelheid rood licht in de kleur."
 
-#: libmate-desktop/mate-colorsel.c:390
+#: libmate-desktop/mate-colorsel.c:387
 msgid "_Green:"
 msgstr "_Groen:"
 
-#: libmate-desktop/mate-colorsel.c:391
+#: libmate-desktop/mate-colorsel.c:388
 msgid "Amount of green light in the color."
 msgstr "Hoeveelheid groen licht in de kleur."
 
-#: libmate-desktop/mate-colorsel.c:392
+#: libmate-desktop/mate-colorsel.c:389
 msgid "_Blue:"
 msgstr "_Blauw:"
 
-#: libmate-desktop/mate-colorsel.c:393
+#: libmate-desktop/mate-colorsel.c:390
 msgid "Amount of blue light in the color."
 msgstr "Hoeveelheid blauw licht in de kleur."
 
-#: libmate-desktop/mate-colorsel.c:396
+#: libmate-desktop/mate-colorsel.c:393
 msgid "Op_acity:"
 msgstr "_Ondoorzichtigheid:"
 
-#: libmate-desktop/mate-colorsel.c:403 libmate-desktop/mate-colorsel.c:413
+#: libmate-desktop/mate-colorsel.c:400 libmate-desktop/mate-colorsel.c:410
 msgid "Transparency of the color."
 msgstr "Doorzichtigheid van de kleur."
 
-#: libmate-desktop/mate-colorsel.c:420
+#: libmate-desktop/mate-colorsel.c:417
 msgid "Color _name:"
 msgstr "Kleur_naam:"
 
-#: libmate-desktop/mate-colorsel.c:434
+#: libmate-desktop/mate-colorsel.c:431
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -295,15 +295,15 @@ msgstr ""
 "U kunt in dit veld HTML-stijl hexadecimale kleurwaarde invoeren, of de naam "
 "van de kleur, zoals 'oranje'."
 
-#: libmate-desktop/mate-colorsel.c:464
+#: libmate-desktop/mate-colorsel.c:461
 msgid "_Palette:"
 msgstr "_Palet:"
 
-#: libmate-desktop/mate-colorsel.c:494
+#: libmate-desktop/mate-colorsel.c:491
 msgid "Color Wheel"
 msgstr "Kleurenschemawiel"
 
-#: libmate-desktop/mate-colorsel.c:951
+#: libmate-desktop/mate-colorsel.c:948
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -313,7 +313,7 @@ msgstr ""
 "kunt deze kleur verslepen naar een paletinvoer, of kies deze kleur als "
 "huidige door hem te slepen naar de andere kleurstaal hiernaast."
 
-#: libmate-desktop/mate-colorsel.c:954
+#: libmate-desktop/mate-colorsel.c:951
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -321,7 +321,7 @@ msgstr ""
 "De door u gekozen kleur. U kunt de kleur verslepen naar een paletinvoer om "
 "de kleur op te slaan voor toekomstig gebruik."
 
-#: libmate-desktop/mate-colorsel.c:959
+#: libmate-desktop/mate-colorsel.c:956
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
@@ -329,19 +329,19 @@ msgstr ""
 "De voorheen gekozen kleur, om de kleur te kunnen vergelijken met de huidige "
 "kleurkeuzen."
 
-#: libmate-desktop/mate-colorsel.c:962
+#: libmate-desktop/mate-colorsel.c:959
 msgid "The color you've chosen."
 msgstr "De door u gekozen kleur."
 
-#: libmate-desktop/mate-colorsel.c:1367
+#: libmate-desktop/mate-colorsel.c:1364
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: libmate-desktop/mate-colorsel.c:1372
+#: libmate-desktop/mate-colorsel.c:1369
 msgid "_Save color here"
 msgstr "_Sla kleur hier op"
 
-#: libmate-desktop/mate-colorsel.c:1592
+#: libmate-desktop/mate-colorsel.c:1589
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
