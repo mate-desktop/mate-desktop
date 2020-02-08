@@ -1,7 +1,7 @@
 project(
   'mate-desktop',
   'c',
-  version: '1.23.3',
+  version: '1.24.0',
   license: [ 'GPL-2', 'FDL-1.1', 'LGPL-2' ],
 )
 
@@ -11,7 +11,7 @@ mate_major_version = version_array[0].to_int()
 mate_minor_version = version_array[0].to_int()
 mate_micro_version = version_array[0].to_int()
 mate_platform = 1
-mate_minor = 22
+mate_minor = 24
 mate_micro = 0
 
 matedt_api_version = '2.0'
