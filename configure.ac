@@ -45,8 +45,10 @@ MATE_PLATFORM=mate_platform
 MATE_MINOR=mate_minor
 MATE_MICRO=mate_micro
 MATE_DATE=`date +"%Y-%m-%d"`
+if test "x$SOURCE_DATE_EPOCH" != "x"; then
+	MATE_DATE=`date -u -d "@$SOURCE_DATE_EPOCH" +%Y-%m-%d`
+fi
 
-MATE_DATE=
 MATE_DATE_COMMENT_START="<!--"
 MATE_DATE_COMMENT_END="-->"
 
@@ -62,6 +64,9 @@ AC_DEFINE(MATE_MINOR, [mate_minor], [Define to the minor version])
 AC_DEFINE(MATE_MICRO, [mate_micro], [Define to the micro version])
 
 RELEASE_YEAR=`date +%Y`
+if test "x$SOURCE_DATE_EPOCH" != "x"; then
+	RELEASE_YEAR=`date -u -d "@$SOURCE_DATE_EPOCH" +%Y`
+fi
 AC_SUBST([RELEASE_YEAR])
 
 AC_ARG_ENABLE(deprecation_flags,
