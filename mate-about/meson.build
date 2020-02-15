@@ -1,6 +1,11 @@
 date_exe = find_program('date')
-mate_date = run_command(date_exe, '+%Y-%m-%d').stdout().strip()
-mate_year = run_command(date_exe, '+%Y').stdout().strip()
+cmd = run_command('sh', '-c', 'echo $SOURCE_DATE_EPOCH')
+source_date_epoch = cmd.stdout().strip()
+if source_date_epoch == ''
+	source_date_epoch = run_command(date_exe, '+%s').stdout().strip()
+endif
+mate_date = run_command(date_exe, '-u', '-d', '@' + source_date_epoch, '+%Y-%m-%d').stdout().strip()
+mate_year = run_command(date_exe, '-u', '-d', '@' + source_date_epoch, '+%Y').stdout().strip()
 
 mate_data = configuration_data()
 
