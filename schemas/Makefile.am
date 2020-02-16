@@ -21,7 +21,8 @@ gsettings_SCHEMAS = \
 @GSETTINGS_RULES@
 
 EXTRA_DIST = \
-	$(gsettings_SCHEMAS)
+	$(gsettings_SCHEMAS) \
+	meson.build
 
 CLEANFILES = \
 	*.gschema.valid
