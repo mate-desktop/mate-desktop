@@ -10,9 +10,15 @@ DISTCHECK_CONFIGURE_FLAGS = \
 	--enable-gtk-doc \
 	CFLAGS='-Wno-deprecated-declarations'
 
-EXTRA_DIST =			\
-	autogen.sh		\
-	COPYING-DOCS
+EXTRA_DIST = \
+	abi-check \
+	autogen.sh \
+	config.meson.h\
+	COPYING-DOCS \
+	meson.build \
+	meson_options.txt \
+	po/meson.build \
+	utils/post_install.py
 
 CLEANFILES =
 

@@ -18,9 +18,11 @@ mate-about.desktop: mate-about.desktop.in
 versiondir = $(datadir)/mate-about
 version_DATA = mate-version.xml
 
-EXTRA_DIST = $(desktop_in_files)	\
-	     mate-about.h.in		\
-	     mate-version.xml.in
+EXTRA_DIST = \
+	$(desktop_in_files) \
+	meson.build \
+	mate-about.h.in \
+	mate-version.xml.in
 
 CLEANFILES = $(desktop_DATA) $(bin_PROGRAMS) $(version_DATA) mate-about.h
 
