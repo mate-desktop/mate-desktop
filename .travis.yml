@@ -13,14 +13,14 @@ install:
   - sudo apt-get install -y python3-pip python3-setuptools
   - sudo pip3 install --upgrade pip
   - sudo pip install PyGithub
-  - ./docker-build --name ${DISTRO} --config .travis.yml --install
+  - ./docker-build --name ${DISTRO} --config .build.yml --install
 
 script:
-  - ./docker-build --name ${DISTRO} --verbose --config .travis.yml --build autotools
+  - ./docker-build --name ${DISTRO} --verbose --config .build.yml --build autotools
 
 deploy:
   - provider: script
-    script: ./docker-build --verbose --config .travis.yml --release github
+    script: ./docker-build --verbose --config .build.yml --release github
     skip_cleanup: true
     on:
       tags: true
@@ -32,97 +32,3 @@ env:
   - DISTRO="fedora:latest"
   - DISTRO="ubuntu:19.10"
 
-##########################################################
-# THE FOLLOWING LINES IS USED BY docker-build
-##########################################################
-requires:
-  archlinux:
-    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/trunk?h=packages/mate-desktop
-    - gcc
-    - git
-    - gobject-introspection
-    - gtk3
-    - intltool
-    - iso-codes
-    - make
-    - mate-common
-    - startup-notification
-    - which
-
-  debian:
-    # Useful URL: https://github.com/mate-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-mate-team/mate-desktop
-    - git
-    - gobject-introspection
-    - gtk-doc-tools
-    - intltool
-    - iso-codes
-    - libdconf-dev
-    - libgirepository1.0-dev
-    - libglib2.0-dev
-    - libglib2.0-doc
-    - libgtk-3-dev
-    - libgtk-3-doc
-    - libstartup-notification0-dev
-    - libx11-dev
-    - libxml2-dev
-    - libxrandr-dev
-    - mate-common
-
-  fedora:
-    # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-desktop.git
-    - cairo-gobject-devel
-    - dconf-devel
-    - desktop-file-utils
-    - gcc
-    - git
-    - gobject-introspection-devel
-    - gtk3-devel
-    - iso-codes-devel
-    - itstool
-    - make
-    - mate-common
-    - redhat-rpm-config
-    - startup-notification-devel
-
-  ubuntu:
-    - git
-    - gobject-introspection
-    - gtk-doc-tools
-    - intltool
-    - iso-codes
-    - libdconf-dev
-    - libgirepository1.0-dev
-    - libglib2.0-dev
-    - libglib2.0-doc
-    - libgtk-3-dev
-    - libgtk-3-doc
-    - libstartup-notification0-dev
-    - libx11-dev
-    - libxml2-dev
-    - libxrandr-dev
-    - mate-common
-
-variables:
-  - CFLAGS="-Wall -Werror=format-security"
-
-configures:
-  autotools:
-    - --prefix=/usr
-    - --enable-gtk-doc
-
-after_scripts:
-  - make distcheck
-
-releases:
-  draft: false
-  prerelease: false
-  checksum: true
-  file_glob: true
-  files: mate-desktop-*.tar.xz
-  github_release:
-    tags: true
-    overwrite: true
-    base_version: 1.20.0
-    notify_servers:
-      - https://release.mate-desktop.org/release
