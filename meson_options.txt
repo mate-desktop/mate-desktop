@@ -1,20 +1,29 @@
 option('gtk-doc',
   type: 'boolean',
   value: 'false',
+  description: 'use gtk-doc to build documentation'
 )
+
 option('introspection',
   type: 'boolean',
   value: 'false',
+  description: 'Enable introspection for this build'
 )
+
 option('mate-about',
   type: 'boolean',
   value: 'true',
+  description: 'build mate-about'
 )
+
 option('startup-notification',
   type: 'boolean',
   value: 'false',
+  description: 'startup notification support'
 )
+
 option('pnp-ids-path',
   type: 'string',
   value: 'internal',
+  description: 'Specify the path to pnp.ids, default is "internal"'
 )
