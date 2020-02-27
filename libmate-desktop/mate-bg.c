@@ -2972,10 +2972,7 @@ slideshow_unref (SlideShow *show)
 	}
 
 	g_queue_free (show->slides);
-
-	g_list_foreach (show->stack->head, (GFunc) g_free, NULL);
-	g_queue_free (show->stack);
-
+	g_queue_free_full (show->stack, g_free);
 	g_free (show);
 }
 

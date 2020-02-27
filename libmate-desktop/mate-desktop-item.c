@@ -866,15 +866,14 @@ mate_desktop_item_ref (MateDesktopItem *item)
 }
 
 static void
-free_section (gpointer data, gpointer user_data)
+free_section (gpointer data)
 {
 	Section *section = data;
 
 	g_free (section->name);
 	section->name = NULL;
 
-	g_list_foreach (section->keys, (GFunc)g_free, NULL);
-	g_list_free (section->keys);
+	g_list_free_full (section->keys, g_free);
 	section->keys = NULL;
 
 	g_free (section);
@@ -897,16 +896,13 @@ mate_desktop_item_unref (MateDesktopItem *item)
 	if(item->refcount != 0)
 		return;
 
-	g_list_foreach (item->languages, (GFunc)g_free, NULL);
-	g_list_free (item->languages);
+	g_list_free_full (item->languages, g_free);
 	item->languages = NULL;
 
-	g_list_foreach (item->keys, (GFunc)g_free, NULL);
-	g_list_free (item->keys);
+	g_list_free_full (item->keys, g_free);
 	item->keys = NULL;
 
-	g_list_foreach (item->sections, free_section, NULL);
-	g_list_free (item->sections);
+	g_list_free_full (item->sections, (GDestroyNotify) free_section);
 	item->sections = NULL;
 
 	g_hash_table_destroy (item->main_hash);
@@ -1560,10 +1556,7 @@ free_startup_timeout (void *data)
 {
 	StartupTimeoutData *std = data;
 
-	g_slist_foreach (std->contexts,
-			 (GFunc) sn_launcher_context_unref,
-			 NULL);
-	g_slist_free (std->contexts);
+	g_slist_free_full (std->contexts, (GDestroyNotify) sn_launcher_context_unref);
 
 	if (std->timeout_id != 0) {
 		g_source_remove (std->timeout_id);
@@ -1947,8 +1940,7 @@ ditem_execute (const MateDesktopItem *item,
 		g_strfreev (temp_argv);
 
 		real_argv = list_to_vector (vector_list);
-		g_slist_foreach (vector_list, (GFunc)g_free, NULL);
-		g_slist_free (vector_list);
+		g_slist_free_full (vector_list, g_free);
 
 #ifdef HAVE_STARTUP_NOTIFICATION
 		if (sn_context != NULL &&
