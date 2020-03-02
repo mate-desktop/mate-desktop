@@ -13,7 +13,7 @@ desktopdir = $(datadir)/applications
 desktop_in_files = mate-about.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 mate-about.desktop: mate-about.desktop.in
-	$(AM_V_GEN)$(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
+	$(AM_V_GEN)$(MSGFMT) --desktop --keyword= --keyword=Name --keyword=Comment --template $< -d $(top_srcdir)/po -o $@
 
 versiondir = $(datadir)/mate-about
 version_DATA = mate-version.xml
