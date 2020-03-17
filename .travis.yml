@@ -5,14 +5,9 @@ language: bash
 services:
   - docker
 
-branches:
-  except:
-  - gh-pages
-
 before_install:
   - curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/docker-build
-  - curl -Ls -o gen-index https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/gen-index.sh
-  - chmod +x docker-build gen-index
+  - chmod +x docker-build
 
 install:
   - sudo apt-get install -y python3-pip python3-setuptools
@@ -24,16 +19,6 @@ script:
   - ./docker-build --name ${DISTRO} --verbose --config .build.yml --build scripts --build meson
 
 deploy:
-  - provider: pages
-    github-token: $GITHUB_TOKEN
-    #keep-history: true
-    skip_cleanup: true
-    committer-from-gh: true
-    target-branch: gh-pages
-    local-dir: html-report
-    on:
-      all_branches: true
-      condition: ${DISTRO} =~ ^fedora.*$
   - provider: script
     script: ./docker-build --verbose --config .build.yml --release github
     skip_cleanup: true
@@ -41,20 +26,8 @@ deploy:
       tags: true
       condition: "${TRAVIS_TAG} =~ ^v.*$ && ${DISTRO} =~ ^fedora.*$"
 
-after_success:
-  - 'if [[ "$TRAVIS_SECURE_ENV_VARS" == "true" && "$TRAVIS_PULL_REQUEST" != "false" && ${DISTRO} =~ ^fedora.*$ ]]; then
-        REPO_SLUG_ARRAY=(${TRAVIS_REPO_SLUG//\// });
-        REPO_NAME=${REPO_SLUG_ARRAY[1]};
-        URL="https://${REPO_NAME}.mate-desktop.dev";
-        COMMENT="Code analysis completed";
-        curl -H "Authorization: token $GITHUB_TOKEN" -X POST
-           -d "{\"state\": \"success\", \"description\": \"$COMMENT\", \"context\":\"scan-build\", \"target_url\": \"$URL\"}"
-           https://api.github.com/repos/${TRAVIS_REPO_SLUG}/statuses/${TRAVIS_PULL_REQUEST_SHA};
-     fi'
-
 env:
   - DISTRO="archlinux/base"
   - DISTRO="debian:testing"
   - DISTRO="fedora:latest"
   - DISTRO="ubuntu:19.10"
-

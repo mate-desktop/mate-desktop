@@ -48,7 +48,6 @@ requires:
     - cairo-gobject-devel
     - clang-analyzer
     - clang
-    - cppcheck-htmlreport
     - dconf-devel
     - desktop-file-utils
     - gcc
@@ -105,11 +104,6 @@ variables:
     -enable-checker security.insecureAPI.strcpy"'
 
 build_scripts:
-# build failed with f30 und using clang patch, fixed in f30?
-#  - if [ ${DISTRO_NAME} == "fedora" ];then
-#  -     curl -Ls -o fedora.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/fedora.sh
-#  -     bash ./fedora.sh
-#  - fi
   - ./autogen.sh
   - scan-build $CHECKERS ./configure --prefix=/usr --enable-gtk-doc
   - if [ $CPU_COUNT -gt 1 ]; then
@@ -123,11 +117,6 @@ build_scripts:
 
 after_scripts:
   - if [ ${BUILD_TYPE} == "scripts" ];then
-  -     if [ ${DISTRO_NAME} == "fedora" ];then
-  -         cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude .
-  -         cppcheck-htmlreport --title=${REPO_NAME} --file=cppcheck.xml --report-dir=cppcheck-htmlreport
-  -         ./gen-index -l 20 -i https://github.com/${OWNER_NAME}/${REPO_NAME}/raw/master/icons/16x16/apps/mate-desktop.png
-  -     fi
   -     make distcheck
   - fi
 
@@ -143,4 +132,3 @@ releases:
     base_version: 1.20.0
     notify_servers:
       - https://release.mate-desktop.org/release
-
