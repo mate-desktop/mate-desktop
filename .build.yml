@@ -45,6 +45,7 @@ requires:
 
   fedora:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-desktop.git
+    - autoconf-archive
     - cairo-gobject-devel
     - clang-analyzer
     - clang
@@ -103,6 +104,19 @@ variables:
     -enable-checker alpha.unix.cstring.OutOfBounds
     -enable-checker alpha.core.FixedAddr
     -enable-checker security.insecureAPI.strcpy"'
+
+before_scripts:
+  - cd ${START_DIR}
+  - '[ -f mate-common-1.24.1.tar.xz ] || curl -Ls -o mate-common-1.24.1.tar.xz https://github.com/mate-desktop/mate-common/releases/download/v1.24.1/mate-common-1.24.1.tar.xz'
+  - tar xf mate-common-1.24.1.tar.xz
+  - cd mate-common-1.24.1
+  - if [ ${DISTRO_NAME} == "debian" -o ${DISTRO_NAME} == "ubuntu" ];then
+  -     ./configure --prefix=/usr --libdir=/usr/lib/x86_64-linux-gnu --libexecdir=/usr/lib/x86_64-linux-gnu
+  - else
+  -     ./configure --prefix=/usr
+  - fi
+  - make
+  - make install
 
 build_scripts:
 # build failed with f30 und using clang patch, fixed in f30?
