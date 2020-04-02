@@ -124,7 +124,7 @@ build_scripts:
 #  -     curl -Ls -o fedora.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/fedora.sh
 #  -     bash ./fedora.sh
 #  - fi
-  - ./autogen.sh
+  - ./autogen.sh --enable-compile-warnings=maximum
   - scan-build $CHECKERS ./configure --prefix=/usr --enable-gtk-doc
   - if [ $CPU_COUNT -gt 1 ]; then
   -     scan-build $CHECKERS --keep-cc -o html-report make -j $CPU_COUNT
