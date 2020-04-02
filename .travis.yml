@@ -1,9 +1,15 @@
 # vim: set ts=2 sts=2 sw=2 expandtab :
-dist: xenial
+dist: bionic
 sudo: required
-language: bash
+language: shell
+os: linux
 services:
   - docker
+
+addons:
+  apt:
+    packages:
+      - python3-github
 
 branches:
   except:
@@ -15,9 +21,6 @@ before_install:
   - chmod +x docker-build gen-index
 
 install:
-  - sudo apt-get install -y python3-pip python3-setuptools
-  - sudo pip3 install --upgrade pip
-  - sudo pip install PyGithub
   - ./docker-build --name ${DISTRO} --config .build.yml --install
 
 script:
@@ -36,7 +39,6 @@ deploy:
       condition: ${DISTRO} =~ ^fedora.*$
   - provider: script
     script: ./docker-build --verbose --config .build.yml --release github
-    skip_cleanup: true
     on:
       tags: true
       condition: "${TRAVIS_TAG} =~ ^v.*$ && ${DISTRO} =~ ^fedora.*$"
@@ -53,7 +55,7 @@ after_success:
      fi'
 
 env:
-  - DISTRO="archlinux/base"
+  - DISTRO="archlinux:latest"
   - DISTRO="debian:testing"
   - DISTRO="fedora:latest"
   - DISTRO="ubuntu:devel"
