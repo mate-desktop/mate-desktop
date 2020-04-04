@@ -1,6 +1,5 @@
 # vim: set ts=2 sts=2 sw=2 expandtab :
 dist: bionic
-sudo: required
 language: shell
 os: linux
 services:
@@ -24,6 +23,7 @@ script:
 deploy:
   - provider: script
     script: ./docker-build --verbose --config .build.yml --release github
+    skip_cleanup: true
     on:
       tags: true
       condition: "${TRAVIS_TAG} =~ ^v.*$ && ${DISTRO} =~ ^fedora.*$"
