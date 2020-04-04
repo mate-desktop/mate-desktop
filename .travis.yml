@@ -1,6 +1,5 @@
 # vim: set ts=2 sts=2 sw=2 expandtab :
 dist: bionic
-sudo: required
 language: shell
 os: linux
 services:
@@ -28,17 +27,19 @@ script:
 
 deploy:
   - provider: pages
-    github-token: $GITHUB_TOKEN
-    #keep-history: true
+    token: $GITHUB_TOKEN
+    keep_history: false
     skip_cleanup: true
-    committer-from-gh: true
-    target-branch: gh-pages
-    local-dir: html-report
+    committer_from_gh: true
+    target_branch: gh-pages
+    local_dir: html-report
+    strategy: git
     on:
       all_branches: true
       condition: ${DISTRO} =~ ^fedora.*$
   - provider: script
     script: ./docker-build --verbose --config .build.yml --release github
+    skip_cleanup: true
     on:
       tags: true
       condition: "${TRAVIS_TAG} =~ ^v.*$ && ${DISTRO} =~ ^fedora.*$"
