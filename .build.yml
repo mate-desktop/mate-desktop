@@ -87,7 +87,6 @@ requires:
     - meson
 
 variables:
-  - CFLAGS="-Wall -Werror=format-security -Wredundant-decls"
   - 'CHECKERS="
     -enable-checker deadcode.DeadStores
     -enable-checker alpha.deadcode.UnreachableCode
@@ -119,12 +118,7 @@ before_scripts:
   - make install
 
 build_scripts:
-# build failed with f30 und using clang patch, fixed in f30?
-#  - if [ ${DISTRO_NAME} == "fedora" ];then
-#  -     curl -Ls -o fedora.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/fedora.sh
-#  -     bash ./fedora.sh
-#  - fi
-  - ./autogen.sh --enable-compile-warnings=maximum
+  - ./autogen.sh
   - scan-build $CHECKERS ./configure --prefix=/usr --enable-gtk-doc --enable-compile-warnings=maximum
   - if [ $CPU_COUNT -gt 1 ]; then
   -     scan-build $CHECKERS --keep-cc -o html-report make -j $CPU_COUNT
