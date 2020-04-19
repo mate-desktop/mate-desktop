@@ -118,7 +118,7 @@ before_scripts:
   - make install
 
 build_scripts:
-  - ./autogen.sh
+  - NOCONFIGURE=1 ./autogen.sh
   - scan-build $CHECKERS ./configure --prefix=/usr --enable-gtk-doc --enable-compile-warnings=maximum
   - if [ $CPU_COUNT -gt 1 ]; then
   -     scan-build $CHECKERS --keep-cc -o html-report make -j $CPU_COUNT
