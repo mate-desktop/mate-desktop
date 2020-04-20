@@ -20,6 +20,18 @@ install:
 script:
   - ./docker-build --name ${DISTRO} --verbose --config .build.yml --build scripts --build meson
 
+notifications:
+  irc:
+    if: branch = "1.24" AND
+        repo = "mate-desktop/mate-desktop"
+    channels:
+      - "irc.freenode.org#mate-dev"
+    template:
+      - "[%{repository_name}] %{author}: %{commit_subject}"
+      - "[%{branch}] %{commit} %{message} %{build_url}"
+    on_success: never
+    on_failure: always
+
 deploy:
   - provider: script
     edge: true
