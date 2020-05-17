@@ -167,6 +167,11 @@ MateBGCrossfade *mate_bg_set_surface_as_root_with_crossfade (GdkScreen       *sc
 							     cairo_surface_t *surface);
 cairo_surface_t *mate_bg_get_surface_from_root (GdkScreen *screen);
 
+void             mate_bg_set_background_from_filename (MateBG              *bg,
+						 const char            *filename);
+
+void             mate_bg_save_background_from_filename (const char          *filename);
+
 G_END_DECLS
 
 #endif

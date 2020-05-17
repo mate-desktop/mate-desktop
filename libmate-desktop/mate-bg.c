@@ -3280,3 +3280,33 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 	return result;
 }
 
+/**
+ * mate_bg_set_backgroud_from_filename:
+ *
+ * Set the given filename as background
+ */
+void
+mate_bg_set_background_from_filename (MateBG			*bg,
+									 const char		*filename)
+{
+	g_return_if_fail (filename != NULL);
+
+	mate_bg_set_filename (bg, filename);
+	mate_bg_save_to_preferences (bg);
+}
+
+/**
+ * mate_bg_save_backgroud_from_filename:
+ *
+ * Save the given filename as background and draw it
+ */
+void
+mate_bg_save_background_from_filename (const char		*filename)
+{
+	MateBG	*bg;
+
+	mate_bg_load_from_preferences (bg);
+	mate_bg_set_background_from_filename (bg, filename);
+
+	g_free (bg);
+}
