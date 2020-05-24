@@ -28,5 +28,5 @@ CLEANFILES = $(desktop_DATA) $(bin_PROGRAMS)
 
 DISTCLEANFILES = mate-about.h $(version_DATA)
 
-#-include $(top_srcdir)/git.mk
+-include $(top_srcdir)/git.mk
 

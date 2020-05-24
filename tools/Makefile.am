@@ -27,3 +27,5 @@ EXTRA_DIST = \
 	meson.build
 
 CLEANFILES = $(desktop_DATA) $(bin_PROGRAMS)
+
+-include $(top_srcdir)/git.mk

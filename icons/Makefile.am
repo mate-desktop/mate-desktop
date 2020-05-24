@@ -44,3 +44,5 @@ endif
 
 clean-png-icons:
 	rm -f $(png_icons)
+
+-include $(top_srcdir)/git.mk

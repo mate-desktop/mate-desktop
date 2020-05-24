@@ -26,3 +26,5 @@ EXTRA_DIST = \
 
 CLEANFILES = \
 	*.gschema.valid
+
+-include $(top_srcdir)/git.mk
