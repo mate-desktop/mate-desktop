@@ -8,13 +8,15 @@ services:
 addons:
   apt:
     packages:
-      - python3-github
+      - python3-pip
+      - python3-setuptools
 
 before_install:
   - curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/docker-build
   - chmod +x docker-build
 
 install:
+  - pip3 install PyGithub
   - ./docker-build --name ${DISTRO} --config .build.yml --install
 
 script:
