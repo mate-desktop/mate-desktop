@@ -81,21 +81,25 @@
       <description>Beep when a key is pressed while CapsLock is active.</description>
     </key>
     <key name="togglekeys-enable-beep-count" type="i">
+      <range min="0" max="8"/>
       <default>1</default>
       <summary>Beep count when enabling a modifier</summary>
       <description>Number of beeps to emit when enabling a modifier while togglekeys are enabled</description>
     </key>
     <key name="togglekeys-enable-beep-delay" type="i">
+      <range min="50" max="5000"/>
       <default>150</default>
       <summary>Delay between beeps when enabling a modifier</summary>
       <description>Delay in milliseconds between two beeps when enabling a modifier while togglekeys are enabled</description>
     </key>
     <key name="togglekeys-disable-beep-count" type="i">
+      <range min="0" max="8"/>
       <default>2</default>
       <summary>Beep count when disabling a modifier</summary>
       <description>Number of beeps to emit when disabling a modifier while togglekeys are enabled</description>
     </key>
     <key name="togglekeys-disable-beep-delay" type="i">
+      <range min="50" max="5000"/>
       <default>150</default>
       <summary>Delay between beeps when disabling a modifier</summary>
       <description>Delay in milliseconds between two beeps when disabling a modifier while togglekeys are enabled</description>
