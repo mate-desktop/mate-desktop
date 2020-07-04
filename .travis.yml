@@ -29,7 +29,7 @@ script:
 
 notifications:
   irc:
-    if: branch = master AND
+    if: (tag OR branch = master) AND
         repo = "mate-desktop/mate-desktop"
     channels:
       - "irc.freenode.org#mate-dev"
