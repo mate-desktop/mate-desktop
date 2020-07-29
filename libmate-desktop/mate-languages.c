@@ -370,19 +370,26 @@ locale_dir_has_mo_files (const gchar* path)
 gboolean
 mate_language_has_translations (const char *code)
 {
-        gboolean     has_translations;
-        gchar *path = NULL;
+        gboolean has_translations;
+        gchar *path;
 
         path = g_build_filename (MATELOCALEDIR, code, "LC_MESSAGES", NULL);
         has_translations = locale_dir_has_mo_files (path);
 
         if (!has_translations) {
-            g_free(path);
-            path = g_build_filename ("/usr/share/locale", code, "LC_MESSAGES", NULL);
-            has_translations = locale_dir_has_mo_files (path);
+                const char * const *system_data_dirs;
+                int i = 0;
+
+                system_data_dirs = g_get_system_data_dirs ();
+                while ((system_data_dirs[i] != NULL) && (has_translations == FALSE)) {
+                        g_free (path);
+                        path = g_build_filename (system_data_dirs[i], "locale", code, "LC_MESSAGES", NULL);
+                        has_translations = locale_dir_has_mo_files (path);
+                        ++i;
+                }
         }
 
-        g_free(path);
+        g_free (path);
         return has_translations;
 }
 
