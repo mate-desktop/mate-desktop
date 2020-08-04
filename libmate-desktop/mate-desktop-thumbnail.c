@@ -585,7 +585,7 @@ mate_desktop_thumbnail_factory_finalize (GObject *object)
 {
   MateDesktopThumbnailFactory *factory;
   MateDesktopThumbnailFactoryPrivate *priv;
-  
+
   factory = MATE_DESKTOP_THUMBNAIL_FACTORY (object);
 
   priv = factory->priv;
