@@ -1,5 +1,5 @@
 m4_define([mate_platform], [1])
-m4_define([mate_minor], [24])
+m4_define([mate_minor], [25])
 m4_define([mate_micro], [0])
 
 m4_define(mate_version, [mate_platform.mate_minor.mate_micro]),
