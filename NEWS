@@ -1,5 +1,29 @@
 ### mate-desktop 1.25.0
 
+  * Translations update
+  * mate-languages: portability of localedir fallback
+  * a11y-keyboard: Add togglekeys-backend setting
+  * a11y-keyboard: Add ranges for togglekeys beep settings
+  * a11y-keyboard: Add settings to control beeps used for togglekeys
+  * Bump version so other components can depend on it
+  * a11y-keyboard: Add capslock-beep-enable gsetting
+  * mate-desktop-thumbnail: Remove trailing spaces/tabs
+  * add git.mk to generate .gitignore
+  * build: silent build warnings for distcheck
+  * Set range for thumbnail cache maximum-age
+  * build: use MATE_COMPILE_WARNINGS = yes as default
+  * meson: add configuration item description
+  * mate-bg: remove warning function declaration isn’t a prototype
+  * Remove warnings: cast between incompatible function types
+  * mate-about.desktop: Do not collect the translation for Icon
+  * build: remove mate-version.xml on distclean target instead of clean
+  * mate-about: remove unused variable ‘window’
+  * build: remove mate-about.h on distclean target instead of clean
+  * build: add meson config files to EXTRA_DIST
+  * Remove GTimeVal deprecation warning for GLib 2.61.2+
+  * thumbnail: fix typo in function description
+  * Make the build reproducible
+
 ### mate-desktop 1.24.0
 
   * Translations update
