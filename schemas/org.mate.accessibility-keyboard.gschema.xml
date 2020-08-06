@@ -1,4 +1,9 @@
 <schemalist gettext-domain="mate-desktop">
+  <enum id="org.mate.accessibility-keyboard.TogglekeysBackend">
+    <value nick="xkb" value="0"/>
+    <value nick="internal" value="1"/>
+  </enum>
+
   <schema id="org.mate.accessibility-keyboard" path="/org/mate/desktop/accessibility/keyboard/">
     <key name="enable" type="b">
       <default>false</default>
@@ -84,25 +89,30 @@
       <range min="0" max="8"/>
       <default>1</default>
       <summary>Beep count when enabling a modifier</summary>
-      <description>Number of beeps to emit when enabling a modifier while togglekeys are enabled</description>
+      <description>Number of beeps to emit when enabling a modifier while togglekeys are enabled. Only works with the 'internal' backend.</description>
     </key>
     <key name="togglekeys-enable-beep-delay" type="i">
       <range min="50" max="5000"/>
       <default>150</default>
       <summary>Delay between beeps when enabling a modifier</summary>
-      <description>Delay in milliseconds between two beeps when enabling a modifier while togglekeys are enabled</description>
+      <description>Delay in milliseconds between two beeps when enabling a modifier while togglekeys are enabled. Only works with the 'internal' backend.</description>
     </key>
     <key name="togglekeys-disable-beep-count" type="i">
       <range min="0" max="8"/>
       <default>2</default>
       <summary>Beep count when disabling a modifier</summary>
-      <description>Number of beeps to emit when disabling a modifier while togglekeys are enabled</description>
+      <description>Number of beeps to emit when disabling a modifier while togglekeys are enabled. Only works with the 'internal' backend.</description>
     </key>
     <key name="togglekeys-disable-beep-delay" type="i">
       <range min="50" max="5000"/>
       <default>150</default>
       <summary>Delay between beeps when disabling a modifier</summary>
-      <description>Delay in milliseconds between two beeps when disabling a modifier while togglekeys are enabled</description>
+      <description>Delay in milliseconds between two beeps when disabling a modifier while togglekeys are enabled. Only works with the 'internal' backend.</description>
+    </key>
+    <key name="togglekeys-backend" enum="org.mate.accessibility-keyboard.TogglekeysBackend">
+      <default>'xkb'</default>
+      <summary>Implementation to use when togglekeys are enabled</summary>
+      <description>Selects the backend to use to provide the togglekeys feature. Valid values include 'xkb' (the stock X implementation) and 'internal' (a MATE-specific and more configurable implementation).</description>
     </key>
   </schema>
 </schemalist>
