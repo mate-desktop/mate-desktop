@@ -9,7 +9,7 @@
 # Ammuu5, 2018
 # nomen omen, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Kimmo Kujansuu <mrkujansuu@gmail.com>, 2019
+# Kimmo Kujansuu <mrkujansuu@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2020-01-19 00:40+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>, 2019\n"
+"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>, 2020\n"
 "Language-Team: Finnish (https://www.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,6 +60,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Tekijänoikeus © 1997-2011 GNOME kehittäjät\n"
+"Tekijänoikeus © 2011 Perberos\n"
+"Tekijänoikeus © 2012-2020 MATE kehittäjät"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -169,11 +172,11 @@ msgstr "Saatiin virheellisiä väritietoja\n"
 
 #: libmate-desktop/mate-colorsel.c:270
 msgid "Has Opacity Control"
-msgstr ""
+msgstr "Onko peittävyydessä ohjaus"
 
 #: libmate-desktop/mate-colorsel.c:271
 msgid "Whether the color selector should allow setting opacity"
-msgstr ""
+msgstr "Värivalitsimen salliminen peittävuuden määrittämisessä"
 
 #: libmate-desktop/mate-colorsel.c:277
 msgid "Has palette"
@@ -190,6 +193,7 @@ msgstr "Nykyinen väri"
 #: libmate-desktop/mate-colorsel.c:292
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
+"Nykyinen peittävyysarvo (0 täysin läpinäkyvä, 65535 täysin läpinäkymätön)"
 
 #: libmate-desktop/mate-colorsel.c:298
 msgid "HEX String"
@@ -204,12 +208,15 @@ msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr ""
+"Valitse haluamasi väri ulkorenkaasta. Valitse kyseisen värin tummuus tai "
+"keveys kolmion sisältä."
 
 #: libmate-desktop/mate-colorsel.c:369
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr ""
+"Napsauta pipettiä ja valitse väri napsauttamalla mitä tahansa näytön väriä."
 
 #: libmate-desktop/mate-colorsel.c:378
 msgid "_Hue:"
@@ -221,11 +228,11 @@ msgstr "Väriympyrän paikka."
 
 #: libmate-desktop/mate-colorsel.c:381
 msgid "_Saturation:"
-msgstr ""
+msgstr "_Kylläisyys:"
 
 #: libmate-desktop/mate-colorsel.c:382
 msgid "\"Deepness\" of the color."
-msgstr ""
+msgstr "Värin \"syvyys\"."
 
 #: libmate-desktop/mate-colorsel.c:383
 msgid "_Value:"
@@ -233,7 +240,7 @@ msgstr "_Arvo:"
 
 #: libmate-desktop/mate-colorsel.c:384
 msgid "Brightness of the color."
-msgstr ""
+msgstr "Värin kirkkaus."
 
 #: libmate-desktop/mate-colorsel.c:385
 msgid "_Red:"
@@ -241,7 +248,7 @@ msgstr "_Punainen:"
 
 #: libmate-desktop/mate-colorsel.c:386
 msgid "Amount of red light in the color."
-msgstr ""
+msgstr "Punaisen valon määrä värissä."
 
 #: libmate-desktop/mate-colorsel.c:387
 msgid "_Green:"
@@ -249,7 +256,7 @@ msgstr "_Vihreä:"
 
 #: libmate-desktop/mate-colorsel.c:388
 msgid "Amount of green light in the color."
-msgstr ""
+msgstr "Vihreän valon määrä värissä."
 
 #: libmate-desktop/mate-colorsel.c:389
 msgid "_Blue:"
@@ -257,11 +264,11 @@ msgstr "_Sininen:"
 
 #: libmate-desktop/mate-colorsel.c:390
 msgid "Amount of blue light in the color."
-msgstr ""
+msgstr "Sinisen valon määrä värissä."
 
 #: libmate-desktop/mate-colorsel.c:393
 msgid "Op_acity:"
-msgstr ""
+msgstr "Läpikuult_amattomuus:"
 
 #: libmate-desktop/mate-colorsel.c:400 libmate-desktop/mate-colorsel.c:410
 msgid "Transparency of the color."
@@ -276,6 +283,8 @@ msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
+"Voit kirjoittaa HTML-tyylisen heksadesimaalisen väriarvon tai vain "
+"värinimen, kuten \"oranssi\"."
 
 #: libmate-desktop/mate-colorsel.c:461
 msgid "_Palette:"
@@ -291,18 +300,23 @@ msgid ""
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr ""
+"Aiemmin valittu väri, jota verrataan nyt valitsemaasi väriin. Voit vetää "
+"tämän värin palettimerkintään tai valita tämän värin nykyiseksi vetämällä "
+"sen toiseen värimalliin."
 
 #: libmate-desktop/mate-colorsel.c:951
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr ""
+"Valitsemasi väri. Voit tallentaa tämän värin myöhemmin vetämällä tämän värin"
+" palettimerkintään."
 
 #: libmate-desktop/mate-colorsel.c:956
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
-msgstr ""
+msgstr "Aiemmin valittu väri, jota verrataan nyt valitsemaasi väriin."
 
 #: libmate-desktop/mate-colorsel.c:959
 msgid "The color you've chosen."
@@ -314,18 +328,21 @@ msgstr ""
 
 #: libmate-desktop/mate-colorsel.c:1369
 msgid "_Save color here"
-msgstr ""
+msgstr "_Tallenna väri tähän"
 
 #: libmate-desktop/mate-colorsel.c:1589
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
+"Napsauta tätä palettimerkintää, jos haluat tehdä siitä nykyisen värin. Jos "
+"haluat muuttaa tätä merkintää, vedä värimalli tähän tai napsauta sitä hiiren"
+" kakkospainikkeella ja valitse \"Tallenna väri tähän\"."
 
 #: libmate-desktop/mate-colorseldialog.c:99
 #: libmate-desktop/mate-colorseldialog.c:162
 msgid "Color Selection"
-msgstr ""
+msgstr "Värin valinta"
 
 #: libmate-desktop/mate-colorseldialog.c:100
 msgid "The color selection embedded in the dialog."
@@ -480,7 +497,7 @@ msgstr ""
 #: libmate-desktop/mate-rr-config.c:1486
 #, c-format
 msgid "CRTC %d cannot drive output %s"
-msgstr ""
+msgstr "CRTC %d ei voi ohjata lähtöä %s"
 
 #: libmate-desktop/mate-rr-config.c:1493
 #, c-format
@@ -490,7 +507,7 @@ msgstr "ulostulo %s ei tue tilaa %dx%d@%dHz"
 #: libmate-desktop/mate-rr-config.c:1504
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
-msgstr ""
+msgstr "CRTC %d ei tue kiertoa=%s"
 
 #: libmate-desktop/mate-rr-config.c:1518
 #, c-format
@@ -500,21 +517,26 @@ msgid ""
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
 msgstr ""
+"olostulolla %s ei ole samoja asetuksia kuin toisella kloonatulla ulostulolla:\n"
+"nykyinen tila = %d, uusi tila = %d\n"
+"olemassa olevat koordinaatit = (%d, %d), uudet koordinaatit = (%d, %d)\n"
+"olemassa oleva kierto = %s, uusi kierto = %s"
 
 #: libmate-desktop/mate-rr-config.c:1533
 #, c-format
 msgid "cannot clone to output %s"
-msgstr ""
+msgstr "ei voi kloonata ulostuloa %s"
 
 #: libmate-desktop/mate-rr-config.c:1702
 #, c-format
 msgid "Trying modes for CRTC %d\n"
-msgstr ""
+msgstr "Yritetään moodia CRTC:lle %d\n"
 
 #: libmate-desktop/mate-rr-config.c:1726
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
+"CRTC %d: kokeilutila %dx%d@%dHz jonka lähtö on %dx%d@%dHz (siirtää %d)\n"
 
 #: libmate-desktop/mate-rr-config.c:1773
 #, c-format
@@ -522,6 +544,8 @@ msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
 msgstr ""
+"ei voitu määrittää CRTC:tä lähtöille:\n"
+"%s"
 
 #: libmate-desktop/mate-rr-config.c:1777
 #, c-format
@@ -529,6 +553,8 @@ msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
 "%s"
 msgstr ""
+"mikään valituista tiloista ei ollut yhteensopiva mahdollisten tilojen kanssa:\n"
+"%s"
 
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
@@ -603,6 +629,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Salpa painetaan kahdesti peräkkäin, kunnes samaa muokkainta painetaan "
+"uudelleen."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:70
 msgid "Disable if two keys are pressed at the same time."
@@ -655,6 +683,8 @@ msgid ""
 "Preferred Visual assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
+"Ensisijainen näkörajoitteisten apuväline, jota käytetään kirjautumisessa, "
+"valikoissa ja komentorivillä."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:10
 msgid "Start preferred Visual assistive technology application"
@@ -694,21 +724,25 @@ msgstr "Ymmärtääkö oletusselain netscapen hallintakomentoja."
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
-msgstr ""
+msgstr "Laskin sovellus"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
 msgstr ""
+"Laskin ohjelma, jota käytetään käynnistämään sovelluksia, jotka sitä "
+"vaativat."
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr ""
+msgstr "Pikaviestisovellus"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
 msgstr ""
+"Pikaviestiohjelma, jota käytetään käynnistämään sovelluksia, jotka vaativat "
+"sitä."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -775,17 +809,18 @@ msgstr "Näytä Työpöydän Kuvakkeet"
 
 #: schemas/org.mate.background.gschema.xml.in:24
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr ""
+msgstr "Pyydä MATE-tiedostonhallintaa (Caja) piirtämään työpöydän kuvakkeet."
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
-msgstr ""
+msgstr "Taustan häivyttäminen muutoksen perusteella"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
 msgstr ""
+"Jos asetus on totta, MATE muuttaa työpöydän taustaa häipyvällä efektillä."
 
 #: schemas/org.mate.background.gschema.xml.in:33
 msgid "Picture Options"
@@ -797,6 +832,9 @@ msgid ""
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
 msgstr ""
+"Määrittää, kuinka taustakuva näytetään. Mahdollisia arvoja ovat "
+"\"taustakuva\", \"keskitetty\", \"skaalattu\", \"venytetty\", "
+"\"suurennettu\", \"mitoitettu\"."
 
 #: schemas/org.mate.background.gschema.xml.in:38
 msgid "Picture Filename"
@@ -952,7 +990,7 @@ msgstr "Kuvake Teema"
 
 #: schemas/org.mate.interface.gschema.xml:61
 msgid "Icon theme to use for the panel, Caja etc."
-msgstr ""
+msgstr "Kuvaketeema käytettäväksi paneelissa, Cajassa jne."
 
 #: schemas/org.mate.interface.gschema.xml:65
 #: schemas/org.mate.interface.gschema.xml:70
@@ -966,13 +1004,15 @@ msgstr "Gtk+:n käyttämän oletusteeman perusnimi."
 
 #: schemas/org.mate.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
-msgstr ""
+msgstr "Symbolisten nimien ja värien vastineiden luettelo"
 
 #: schemas/org.mate.interface.gschema.xml:76
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
 msgstr ""
+"'\\n' erotettu luettelo \"name:color\" sellaisena kuin se on määritelty "
+"'gtk-color-scheme' asetuksissa"
 
 #: schemas/org.mate.interface.gschema.xml:80
 msgid "Default font"
@@ -1008,7 +1048,7 @@ msgstr "GTK+:n oletus-syöttötapamoduulin nimi."
 
 #: schemas/org.mate.interface.gschema.xml:100
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "Käytä GTK3-otsikkopalkkia"
 
 #: schemas/org.mate.interface.gschema.xml:101
 msgid ""
@@ -1017,24 +1057,31 @@ msgid ""
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
 msgstr ""
+"Sisäänrakennettu GTK+-valintaikkunoissa, kuten tiedoston-, värin- tai "
+"fontin- valitsimessa, näyttää toimintosovelmat yläpalkin yläreunassa tai "
+"toiminta-alueen alareunassa. Tämä asetus ei vaikuta mukautettuihin "
+"ikkunoihin suoraan GtkDialogiin tai ilmoituksiin."
 
 #: schemas/org.mate.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
-msgstr ""
+msgstr "Käytä GTK3 peittävää kuvavieritystä"
 
 #: schemas/org.mate.interface.gschema.xml:106
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
+"Käyttävätkö sisäänrakennetut GTK+-vieritysikkunat pittävää vierimistä. "
+"Peittävä vieritys piilottaa ja pienentää vierityspalkin kokoa, kunnes se "
+"saavuttaa tarkennuksen."
 
 #: schemas/org.mate.interface.gschema.xml:110
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "Ota Gtk-työkalupakin laajuiset animaatiot käyttöön"
 
 #: schemas/org.mate.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "Otetaanko työkalupakin laajuiset animaatiot käyttöön."
 
 #: schemas/org.mate.interface.gschema.xml:115
 msgid "Document font"
@@ -1078,6 +1125,8 @@ msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
 msgstr ""
+"Tiedostojärjestelmän mallina käytettävä moduuli GtkFileChooser -sovelma. "
+"Mahdollisia arvoja ovat \"gio\" ja \"gtk +\"."
 
 #: schemas/org.mate.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1113,7 +1162,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:155
 msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr ""
+msgstr "Sisustettu ikkunoiden otsikkopalkki GTK3 käyttäjän puolella"
 
 #: schemas/org.mate.interface.gschema.xml:156
 msgid ""
@@ -1123,10 +1172,15 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
 msgstr ""
+"Tämä asetus määrittää, mitkä painikkeet tulisi asettaa asiakaspuolella "
+"sisustettujen ikkunoiden otsikkopalkkiin ja onko ne sijoitettava oikealle "
+"vai vasemmalle. Katso  "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"decoration-layout."
 
 #: schemas/org.mate.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
-msgstr ""
+msgstr "Käytä globaalia valikkopalkkia sovellusvalikkojen näyttämiseen"
 
 #: schemas/org.mate.interface.gschema.xml:161
 msgid ""
@@ -1135,10 +1189,14 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
 msgstr ""
+"Tämä asetus määrittää, missä sovellusvalikko näytetään - ikkunassa tai "
+"paneelissa, jossa on MenuModel-protokolla. Katso  "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-app-menu."
 
 #: schemas/org.mate.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
-msgstr ""
+msgstr "Käytä globaalia valikkopalkkia ikkunavalikkojen näyttämiseen"
 
 #: schemas/org.mate.interface.gschema.xml:166
 msgid ""
@@ -1147,20 +1205,26 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-menubar."
 msgstr ""
+"Tämä asetus määrittää, missä ikkunan valikkopalkit näytetään - ikkunassa tai"
+" paneelissa, jossa on MenuModel-protokolla. Katso  "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-menubar."
 
 #: schemas/org.mate.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "Näytä muistion päällä vain, kun Alt-näppäintä painetaan"
 
 #: schemas/org.mate.interface.gschema.xml:171
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
 msgstr ""
+"Pitäisikö muistio näyttää ja piilottaa automaattisesti käyttäjän "
+"painettaessa Alt-näppäintä."
 
 #: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
-msgstr ""
+msgstr "Ikkunoiden skaalauskerroin"
 
 #: schemas/org.mate.interface.gschema.xml:177
 msgid ""
@@ -1169,10 +1233,15 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Tämä ohjaa GTK-skaalauskerrointa, joka yhdistää ikkunan koordinaateista "
+"todellisiin laitteen kuvapisteisiin. Perinteisissä järjestelmissä tämä on 1,"
+" mutta erittäin suuren tiheyden näytöissä (esim. HiDPI, Retina) tämä voi "
+"olla arvoltaan suurempi (usein 2). Aseta arvoksi 0, jos haluat tunnistaa "
+"automaattisesti."
 
 #: schemas/org.mate.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "QT-sovellusten skaalauskerroin"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
@@ -1181,16 +1250,21 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Tämä asetus määrittää, ohjaako MATE QT-sovellusten skaalauskerrointa. Ota "
+"synkronointi käyttöön GTK:n alla, kun istunto alustetaan, poista tämä arvo "
+"käytöstä muualla. Edellyttää istunnon käynnistämistä uudelleen."
 
 #: schemas/org.mate.interface.gschema.xml:186
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "Ota ensisijainen liitäntä käyttöön"
 
 #: schemas/org.mate.interface.gschema.xml:187
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
+"Jos tosi, gtk+ käyttää ensisijaista liitäntää, joka yleensä käynnistyy "
+"hiiren keskimmäisellä napsautuksella."
 
 #: schemas/org.mate.lockdown.gschema.xml:5
 msgid "Disable command line"
@@ -1260,7 +1334,7 @@ msgstr "Estä näytön lukitseminen"
 
 #: schemas/org.mate.lockdown.gschema.xml:31
 msgid "Prevent the user from locking the screen."
-msgstr ""
+msgstr "Estä käyttäjää lukitsemasta näyttöä."
 
 #: schemas/org.mate.lockdown.gschema.xml:35
 msgid "Disable URL and MIME type handlers"
@@ -1272,19 +1346,19 @@ msgstr "Estä URL- tai MIME-tyyppien käsittelijäohjelmien suoritus."
 
 #: schemas/org.mate.lockdown.gschema.xml:40
 msgid "Disable theme settings"
-msgstr ""
+msgstr "Poista teema-asetukset käytöstä"
 
 #: schemas/org.mate.lockdown.gschema.xml:41
 msgid "Prevent the user from changing theme settings."
-msgstr ""
+msgstr "Estä käyttäjää muuttamasta teema-asetuksia."
 
 #: schemas/org.mate.lockdown.gschema.xml:45
 msgid "Disable log out"
-msgstr ""
+msgstr "Poista kirjautuminen ulos"
 
 #: schemas/org.mate.lockdown.gschema.xml:46
 msgid "Prevent the user from logging out."
-msgstr ""
+msgstr "Estä käyttäjää kirjautumasta ulos."
 
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
@@ -1366,12 +1440,14 @@ msgstr ""
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
 msgstr ""
+"Luettelo mime-tyypeistä, joista ulkoiset esikatselu -ohjelmat poistetaan "
+"käytöstä"
 
 #: schemas/org.mate.thumbnailers.gschema.xml:11
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr ""
+msgstr "Pikkukuvia ei luoda tiedostoille, joiden mime-tyyppi on luettelossa."
 
 #: schemas/org.mate.typing-break.gschema.xml:5
 msgid "Type time"
@@ -1415,7 +1491,7 @@ msgstr "Värinvalintaikkuna"
 
 #: tools/mate-color-select.desktop.in:5
 msgid "Choose colors from the palette or the screen"
-msgstr ""
+msgstr "Värien valitseminen paletista tai näytöstä"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
@@ -1428,3 +1504,4 @@ msgstr ""
 #: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
+"MATE;color;chooser;pick;palette;screen;selection;väri;valitsin;paletti;ruutu;valinta;"

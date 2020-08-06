@@ -10,6 +10,8 @@
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Микола Ткач <chistomov@gmail.com>, 2019
+# Yuri Chornoivan <yurchor@ukr.net>, 2020
+# Oleksii Khalikov <oleksii.khalikov@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -17,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2020-01-19 00:40+0100\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2019\n"
+"Last-Translator: Oleksii Khalikov <oleksii.khalikov@gmail.com>, 2020\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,6 +60,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"© Розробники GNOME, 1997–2011\n"
+"© Perberos, 2011\n"
+"© Розробники MATE, 2012–2020"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -74,7 +79,7 @@ msgid ""
 msgstr ""
 "MATE містить більшу частину того, що Ви бачите на своєму комп’ютері, "
 "включаючи упорядник файлів, переглядачі документів та зображень, меню і "
-"багато инших додатків"
+"багато інших додатків"
 
 #: mate-about/mate-about.h:48
 msgid ""
@@ -92,8 +97,8 @@ msgid ""
 "assurance."
 msgstr ""
 "MATE — відгалуження від розробки GNOME 2. Сотні людей вклали код у GNOME з "
-"миті його старту в 1997; а багато инших добродіїв зробили внесок у инші "
-"важливі напрямки, включаючи переклади, документацію та запоруку якости."
+"миті його старту в 1997; а багато інших добродіїв зробили внесок у інші "
+"важливі напрямки, включаючи переклади, документацію та запоруку якості."
 
 #: mate-about/mate-about.h:55
 msgid ""
@@ -192,7 +197,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorsel.c:298
 msgid "HEX String"
-msgstr "Шістнідцятковий рядок"
+msgstr "Шістнадцятковий рядок"
 
 #: libmate-desktop/mate-colorsel.c:299
 msgid "The hexadecimal string of current color"
@@ -512,7 +517,7 @@ msgid ""
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
 msgstr ""
-"параметри виходу %s відрізняються від параметрів иншого клонованого виходу:\n"
+"параметри виходу %s відрізняються від параметрів іншого клонованого виходу:\n"
 "режим = %d, новий режим = %d\n"
 "координати = (%d, %d), нові координати = (%d, %d)\n"
 "обертання = %s, нове обертання = %s"
@@ -626,6 +631,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Замикати клавіші-модифікатори при подвійному натисканні, аж доки ту саму "
+"клавішу-модифікатор не буде натиснуто знову."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:70
 msgid "Disable if two keys are pressed at the same time."
@@ -725,6 +732,8 @@ msgstr "Застосунок Рахівник"
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
 msgstr ""
+"Застосунок-калькулятор, який слід використовувати при запуску застосунків, "
+"які його потребують."
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
@@ -735,6 +744,8 @@ msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
 msgstr ""
+"Програма для миттєвого обміну повідомленнями, яку слід використовувати, якщо"
+" застосунки, які ви запускаєте її потребують."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -939,7 +950,7 @@ msgstr "Кнопки містять піктограми"
 
 #: schemas/org.mate.interface.gschema.xml:31
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr "Чи можуть у кнопках показуватися пікторами поруч з текстом."
+msgstr "Чи можуть у кнопках показуватися піктограми поруч з текстом."
 
 #: schemas/org.mate.interface.gschema.xml:35
 msgid "Menubar Detachable"
@@ -989,7 +1000,7 @@ msgstr "Тема піктограм"
 
 #: schemas/org.mate.interface.gschema.xml:61
 msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Тема піктограм, для використання в панелі, Caja й инших місцях."
+msgstr "Тема піктограм, для використання в панелі, Caja й інших місцях."
 
 #: schemas/org.mate.interface.gschema.xml:65
 #: schemas/org.mate.interface.gschema.xml:70
@@ -1102,11 +1113,11 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:125
 msgid "Use Custom Font"
-msgstr "Використовувати инший шрифт"
+msgstr "Використовувати інший шрифт"
 
 #: schemas/org.mate.interface.gschema.xml:126
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Чи використовувати инший шрифт у gtk+ додатках"
+msgstr "Чи використовувати інший шрифт у gtk+ додатках"
 
 #: schemas/org.mate.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1251,9 +1262,9 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"Це налаштування визначає, чи контролює MATE масштабовий коефіцієнт для "
-"додатків QT. Увімкніть для синхронізування з масштабовим коефіцієнтом GTK "
-"при ініціалізації сеансу, відімкніть для керування цим значенням в иншому "
+"Це налаштування визначає, чи контролює MATE масштабовний коефіцієнт для "
+"додатків QT. Увімкніть для синхронізування з масштабовним коефіцієнтом GTK "
+"при ініціалізації сеансу, відімкніть для керування цим значенням в іншому "
 "місці. Потребує перезапуску сеансу."
 
 #: schemas/org.mate.interface.gschema.xml:186
@@ -1327,7 +1338,7 @@ msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
 msgstr ""
-"Забороняє користувачу перемикання на инший обліковий запис, поки активний "
+"Забороняє користувачу перемикання на інший обліковий запис, поки активний "
 "його сеанс."
 
 #: schemas/org.mate.lockdown.gschema.xml:30
@@ -1440,7 +1451,7 @@ msgid ""
 "whether they are independently disabled/enabled."
 msgstr ""
 "Позначте, для вимикання усіх зовнішніх програм створення мініатюр, незалежно"
-" від того, чи вони увімкнені иншими способами."
+" від того, чи вони увімкнені іншими способами."
 
 #: schemas/org.mate.thumbnailers.gschema.xml:10
 msgid ""
@@ -1510,3 +1521,4 @@ msgstr "gtk-select-color"
 #: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
+"MATE;color;chooser;pick;palette;screen;selection;мате;колір;вибір;піпетка;палітра;екран;позначене;"
