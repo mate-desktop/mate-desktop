@@ -4,23 +4,25 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# phebix <dev@phebix.cz>, 2018
-# Ondřej Kolín <ondrej.kolin@gmail.com>, 2018
-# Michal <sinope@seznam.cz>, 2018
-# Radek kohout <radekpv@seznam.cz>, 2018
-# LiberteCzech <liberte.czech@gmail.com>, 2018
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Lucas Lommer <drom@kdyne.net>, 2019
+# Pavel Borecki <pavel.borecki@gmail.com>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# phebix <dev@phebix.cz>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Ondřej Kolín <ondrej.kolin@gmail.com>, 2020
 # ToMáš Marný, 2020
+# Michal <sinope@seznam.cz>, 2020
+# Radek kohout <radekpv@seznam.cz>, 2020
+# LiberteCzech <liberte.czech@gmail.com>, 2020
+# 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2020
+# Lucas Lommer <drom@kdyne.net>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2020-01-19 00:40+0100\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: ToMáš Marný, 2020\n"
+"PO-Revision-Date: 2020-02-15 13:36+0000\n"
+"Last-Translator: Lucas Lommer <drom@kdyne.net>, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,8 +40,13 @@ msgstr ""
 "Miloslav Trmač <mitr@volny.cz>\n"
 "Petr Tomeš <ptomes@gmail.com>\n"
 "Jakub Friedl <jfriedl@suse.cz>\n"
+"Petr Tomeš <ptomes@gmail.com>\n"
+"Lukáš Novotný <lukasnov@cvs.gnome.org>\n"
+"Kamil Páral <ripper42@gmail.com>\n"
+"Petr Kovář <pknbe@volny.cz>\n"
 "Lucas Lommer <drom@kdyne.net>\n"
-"Petr Kovář <pknbe@volny.cz>"
+"Tomas Bzatek <tbzatek@redhat.com>\n"
+"Roman Horník <roman.hornik@debian-linux.cz>"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -141,16 +148,16 @@ msgstr "Zda dát nebo nedat barvu na hodnotu  alfa"
 
 #: libmate-desktop/mate-colorbutton.c:167
 msgid "Title"
-msgstr "Název"
+msgstr "Nadpis"
 
 #: libmate-desktop/mate-colorbutton.c:168
 msgid "The title of the color selection dialog"
-msgstr "Název dialogu pro výběr barvy"
+msgstr "Nadpis dialogu výběru barvy"
 
 #: libmate-desktop/mate-colorbutton.c:169
 #: libmate-desktop/mate-colorbutton.c:438
 msgid "Pick a Color"
-msgstr "Vyberte si barvu"
+msgstr "Vybrat barvu"
 
 #: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:284
 msgid "Current Color"
@@ -442,7 +449,7 @@ msgstr "Nemohu najít terminál, používám xterm, i když to nemusí fungovat"
 
 #: libmate-desktop/mate-languages.c:727
 msgid "Unspecified"
-msgstr "Nedefinované"
+msgstr "Neurčeno"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: libmate-desktop/mate-rr.c:462
@@ -631,6 +638,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Pokud je modifikátor stisknut dvakrát za sebou, uzamknout jej do doby "
+"opětovného stisknutí."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:70
 msgid "Disable if two keys are pressed at the same time."

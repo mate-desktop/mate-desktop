@@ -4,20 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Miroslav Sido <miro_redhawk@hotmail.com>, 2018
-# Ján Ďanovský <dagsoftware@yahoo.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Tibor Kaputa <tibbbi2@gmail.com>, 2018
-# Dušan Kazik <prescott66@gmail.com>, 2018
-# Erik Bročko <erik.brocko@letemsvetemapplem.eu>, 2018
+# Miroslav Sido <miro_redhawk@hotmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Tibor Kaputa <tibbbi2@gmail.com>, 2020
+# Erik Bročko <erik.brocko@letemsvetemapplem.eu>, 2020
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2020
+# Dušan Kazik <prescott66@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2020-01-19 00:40+0100\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Erik Bročko <erik.brocko@letemsvetemapplem.eu>, 2018\n"
+"PO-Revision-Date: 2020-02-15 13:36+0000\n"
+"Last-Translator: Dušan Kazik <prescott66@gmail.com>, 2020\n"
 "Language-Team: Slovak (https://www.transifex.com/mate/teams/13566/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,8 @@ msgstr ""
 "Stanislav Višňovský\n"
 "Marcel Telka <marcel@telka.sk>\n"
 "Tibor Kaputa <tibbbi2@gmail.com>\n"
-"Dušan Kazik <prescott66@gmail.com>"
+"Dušan Kazik <prescott66@gmail.com>\n"
+"Ján Ďanovský <dagsoftware@yahoo.com>"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -47,11 +48,11 @@ msgstr "Naučiť sa viac o MATE"
 #. file name)!
 #: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
-msgstr ""
+msgstr "mate-desktop"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr ""
+msgstr "Pracovné prostredie MATE"
 
 #: mate-about/mate-about.h:34
 msgid ""
@@ -720,7 +721,7 @@ msgstr "Určuje, či predvolený prehliadač rozumie netscape remote."
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
-msgstr ""
+msgstr "Aplikácia kalkulačky"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
@@ -728,7 +729,7 @@ msgstr ""
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr ""
+msgstr "Aplikácia okamžitých správ"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
@@ -1234,12 +1235,12 @@ msgstr ""
 "Toto upravuje zväčšovací faktor GTK, ktorým sa prepočítavajú súradnice "
 "položiek na obrazovke na skutočné fyzické pixely zariadenia. Zvyčajne je "
 "táto hodnota nastavená na 1, ale na obrazovkách s veľmi vysokým rozlíšením "
-"je možné použiť vyššiu hodnotu (napr. 2). Nastavte na 0 pre automatickú "
-"detekciu."
+"(HiDPI, Retina) je možné použiť vyššiu hodnotu (napr. 2). Nastavte na 0 pre "
+"automatickú detekciu."
 
 #: schemas/org.mate.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"
-msgstr "Škálovací faktor QT aplikácií"
+msgstr "Škálovací faktor QT programov"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
@@ -1248,10 +1249,10 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
-"Toto nastavenie určuje, či MATE ovláda zväčšovací faktor QT aplikácií. "
-"Povoľte pre synchronizáciu s GTK škálovacím faktorom pri načítaní sedenia, "
-"zakážte pre úpravu tejto hodnoty niekde inde. Je potrebný reštart vášho "
-"sedenia."
+"Toto nastavenie určuje, či MATE ovláda škálovací faktor QT programov. "
+"Povoľte pre synchronizáciu s GTK škálovacím faktorom pri načítaní relácie, "
+"zakážte pre úpravu tejto hodnoty niekde inde. Je potrebný reštart vašej "
+"relácie."
 
 #: schemas/org.mate.interface.gschema.xml:186
 msgid "Enable the primary paste selection"
@@ -1499,10 +1500,10 @@ msgstr "Vyberte farby z palety, alebo obrazovky"
 #. file name)!
 #: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
-msgstr ""
+msgstr "gtk-select-color"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
-msgstr ""
+msgstr "MATE;farba;výber;voľba;zvoliť;vybrať;paleta;škála;obrazovka;displej;"

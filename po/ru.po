@@ -4,32 +4,33 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Alexander <alex.grushetskiy@gmail.com>, 2018
-# Ivan, 2018
-# павел назаров <nazar12101@gmail.com>, 2018
-# Pavel Zuev, 2018
-# Alexei Sorokin <sor.alexei@meowr.ru>, 2018
-# Дмитрий Михирев, 2018
-# Агафонов Владислав, 2018
-# Aleksandr <pc01.alex@yandex.ru>, 2018
-# AlexL <loginov.alex.valer@gmail.com>, 2018
-# Evolve32 <evolve32@yandex.ru>, 2018
-# monsta <monsta@inbox.ru>, 2018
-# alsoijw <alsoijw@yandex.ru>, 2018
-# theirix <theirix@gmail.com>, 2018
-# Dmitriy Kulikov <kulikov@dima.perm.ru>, 2018
-# Yevgeniy Goncharov <g.yevgeniy.p@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Alex Putz, 2018
-# Dzmitry Kamenda <kamenda@gmail.com>, 2019
+# Ivan Kuzmenko, 2020
+# павел назаров <nazar12101@gmail.com>, 2020
+# Pavel Zuev, 2020
+# Dzmitry Kamenda <kamenda@gmail.com>, 2020
+# Olesya Gerasimenko <gammaray@basealt.ru>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Alexei Sorokin, 2020
+# Дмитрий Михирев, 2020
+# Alexander <alex.grushetskiy@gmail.com>, 2020
+# 7175227a27711e76caf4f31ec1c821e6_3a93967, 2020
+# Aleksandr <pc01.alex@yandex.ru>, 2020
+# AlexL <loginov.alex.valer@gmail.com>, 2020
+# Evolve32 <evolve32@yandex.ru>, 2020
+# monsta <monsta@inbox.ru>, 2020
+# alsoijw <alsoijw@yandex.ru>, 2020
+# theirix <theirix@gmail.com>, 2020
+# Dmitriy Kulikov <kulikov@dima.perm.ru>, 2020
+# Alex Putz, 2020
+# Anna Vyalkova <cybertailor@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2020-01-19 00:40+0100\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Dzmitry Kamenda <kamenda@gmail.com>, 2019\n"
+"PO-Revision-Date: 2020-02-15 13:36+0000\n"
+"Last-Translator: Anna Vyalkova <cybertailor@gmail.com>, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,6 +68,7 @@ msgstr ""
 "Константин Гусев <kilolife@gmail.com>\n"
 "Леонид Кантер <leon@asplinux.ru>\n"
 "Макс Валянский <max.valjanski@gmail.com>\n"
+"Олеся Герасименко <gammaray@basealt.ru>\n"
 "Павел Жовнер <zhovner@ukr.net>\n"
 "Сергей Колосов <m17.admin@gmail.com>\n"
 "Сергей Панов <sipan@mit.edu>\n"
@@ -86,11 +88,11 @@ msgstr "Узнать больше о MATE"
 #. file name)!
 #: mate-about/mate-about.desktop.in:7
 msgid "mate-desktop"
-msgstr ""
+msgstr "mate-desktop"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr ""
+msgstr "Среда рабочего стола MATE"
 
 #: mate-about/mate-about.h:34
 msgid ""
@@ -98,6 +100,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Copyright © 1997-2011 GNOME developers\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2020 MATE developers"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -159,7 +164,7 @@ msgstr ""
 #: libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
-msgstr "Неизвестный"
+msgstr "Неизвестная"
 
 #: libmate-desktop/mate-colorbutton.c:152
 msgid "Use alpha"
@@ -668,6 +673,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"При нажатии клавиши-модификатора два раза подряд она блокируется до "
+"следующего нажатия."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:70
 msgid "Disable if two keys are pressed at the same time."
@@ -763,21 +770,25 @@ msgstr "Понимает ли браузер по умолчанию удалё�
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
-msgstr ""
+msgstr "Приложение калькулятора"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
 msgstr ""
+"Программа калькулятора, которая будет использована при запуске нуждающегося "
+"в нём приложения."
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr ""
+msgstr "Приложение мгновенного обмена сообщениями"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
 msgstr ""
+"Программа мгновенного обмена сообщениями, которая будет использована при "
+"запуске нуждающегося в ней приложения."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -1271,7 +1282,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
-msgstr "Коэффициент Масштабирования Окна"
+msgstr "Коэффициент масштабирования окна"
 
 #: schemas/org.mate.interface.gschema.xml:177
 msgid ""
@@ -1548,10 +1559,10 @@ msgstr "Выберите цвет из палитры цветов или с э�
 #. file name)!
 #: tools/mate-color-select.desktop.in:8
 msgid "gtk-select-color"
-msgstr ""
+msgstr "gtk-select-color"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
-msgstr ""
+msgstr "MATE;color;chooser;pick;palette;screen;selection;"

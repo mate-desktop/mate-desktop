@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Arif Budiman <arifpedia@gmail.com>, 2018
-# Rania el-Amina <reaamina@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Ibnu Daru Aji, 2018
-# La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2018
-# hpiece 8 <hpiece8@gmail.com>, 2018
-# Muhammad Herdiansyah <herdiansyah@openmailbox.org>, 2018
-# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018
-# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2018
-# Hatta.z, 2018
+# Arif Budiman <arifpedia@gmail.com>, 2020
+# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2020
+# Hatta.z, 2020
+# Rania el-Amina <reaamina@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Ibnu Daru Aji, 2020
+# La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2020
+# hpiece 8 <hpiece8@gmail.com>, 2020
+# Muhammad Herdiansyah <herdiansyah@openmailbox.org>, 2020
+# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2020
 # Andika Triwidada <andika@gmail.com>, 2020
 # 
 msgid ""
@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2020-01-19 00:40+0100\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
+"PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>, 2020\n"
 "Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,8 @@ msgstr ""
 "Ahmad Riza H Nst  <ari@160c.afraid.org>\n"
 "Dirgita <dirgita@gmail.com>\n"
 "Tim MATE Indonesia <http://id.mate.org>\n"
-"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017."
+"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
+"Andika Triwidada <andika@gmail.com>, 2020."
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -65,6 +66,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Hak Cipta © 1997-2011 pengembang GNOME\n"
+"Hak Cipta © 2011 Perberos\n"
+"Hak Cipta © 2012-2020 pengembang MATE"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -636,6 +640,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Tahan pengubah ketika ditekan dua kali berturutan sampai pengubah yang sama "
+"ditekan lagi."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:70
 msgid "Disable if two keys are pressed at the same time."
@@ -734,16 +740,19 @@ msgstr "Aplikasi kalkulator"
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
 msgstr ""
+"Program kalkulator yang dipakai ketika memulai aplikasi yang memerlukannya."
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr ""
+msgstr "Aplikasi Pesan Instan"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
 msgstr ""
+"Program Pesan Instan yang dipakai ketika memulai aplikasi yang "
+"memerlukannya."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -1241,10 +1250,14 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Ini mengendalikan faktor skala GTK yang memetakan dari koordinat jendela ke "
+"piksel perangkat sebenarnya. Pada sistem tradisional ini adalah 1, tapi pada"
+" tampilan densitas sangat tinggi (mis. HiDPI, Retina) ini bisa berupa nilai "
+"yang lebih tinggi (seringkali 2). Atur ke 0 untuk deteksi otomatis."
 
 #: schemas/org.mate.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "Faktor Penskalaan untuk aplikasi QT"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
@@ -1253,16 +1266,22 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Pengaturan ini menentukan apakah MATE mengendalikan faktor skala bagi "
+"aplikasi QT. Fungsikan untuk menyelaraskan dengan faktor skala GTK ketika "
+"menginisiasi sesi, nonatkfikan untuk mengendalikan nilai ini di tempat lain."
+" Perlu memulai ulang sesi."
 
 #: schemas/org.mate.interface.gschema.xml:186
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "Memfungsikan pemilihan penempelan primer"
 
 #: schemas/org.mate.interface.gschema.xml:187
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
+"Bila berisi true, gtk+ memakai pemilihan penempelan primer, biasanya dipicu "
+"oleh suatu klik tombol tetikus tengah."
 
 #: schemas/org.mate.lockdown.gschema.xml:5
 msgid "Disable command line"

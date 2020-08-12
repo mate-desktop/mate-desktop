@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Lluís Tusquellas <lutusq@gmail.com>, 2018
-# ebray187 <ebray187@gmail.com>, 2018
-# Emiliano Fascetti, 2018
-# Arcenio Cid <gusty.miliki@gmail.com>, 2018
-# Adolfo Jayme-Barrientos, 2018
-# happydogeface, 2018
-# Benjamin Perez Carrillo <benperezc@gmail.com>, 2018
-# Naresu Tenshi <naresutenshi@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Joel Barrios <darkshram@gmail.com>, 2018
+# Lluís Tusquellas <lutusq@gmail.com>, 2020
+# happydogeface, 2020
+# ebray187 <ebray187@gmail.com>, 2020
+# Emiliano Fascetti, 2020
+# Arcenio Cid <gusty.miliki@gmail.com>, 2020
+# Adolfo Jayme-Barrientos, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Benjamin Perez Carrillo <benperezc@gmail.com>, 2020
+# Naresu Tenshi <naresutenshi@gmail.com>, 2020
+# Joel Barrios <darkshram@gmail.com>, 2020
 # Toni Estévez <toni.estevez@gmail.com>, 2020
 # 
 msgid ""
@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2020-01-19 00:40+0100\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
+"PO-Revision-Date: 2020-02-15 13:36+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr ""
 #: mate-about/mate-about.c:77
 msgid "translator-credits"
 msgstr ""
-"Toni Estevez <toni.estevez@gmail.com>, 2019\n"
+"Toni Estevez <toni.estevez@gmail.com>, 2020\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2010\n"
 "Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2003-2006\n"
 "Pablo Gonzalo del Campo <pablodc@bigfoot.com>, 2002-2003"
@@ -145,12 +145,12 @@ msgstr "Título"
 
 #: libmate-desktop/mate-colorbutton.c:168
 msgid "The title of the color selection dialog"
-msgstr "Título del dialogo de selección de color"
+msgstr "Título del diálogo de selección de color"
 
 #: libmate-desktop/mate-colorbutton.c:169
 #: libmate-desktop/mate-colorbutton.c:438
 msgid "Pick a Color"
-msgstr "Escoja un color"
+msgstr "Seleccione un color"
 
 #: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:284
 msgid "Current Color"
@@ -172,7 +172,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorbutton.c:331
 msgid "Received invalid color data\n"
-msgstr "Datos no válidos de color recibidos\n"
+msgstr "Se han recibido datos de color no válidos\n"
 
 #: libmate-desktop/mate-colorsel.c:270
 msgid "Has Opacity Control"
@@ -647,8 +647,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
-"Bloquea las teclas modificadoras cuando se pulsan dos veces seguidas hasta "
-"que se pulsa de nuevo la misma tecla."
+"Bloquear las teclas modificadoras cuando se pulsen dos veces seguidas hasta "
+"que la misma tecla se pulse de nuevo."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:70
 msgid "Disable if two keys are pressed at the same time."
@@ -823,7 +823,7 @@ msgstr ""
 
 #: schemas/org.mate.background.gschema.xml.in:18
 msgid "Draw Desktop Background"
-msgstr "Dibujar fondo del escritorio"
+msgstr "Dibujar el fondo del escritorio"
 
 #: schemas/org.mate.background.gschema.xml.in:19
 msgid "Have MATE draw the desktop background."
@@ -831,7 +831,7 @@ msgstr "Hacer que MATE dibuje el fondo del escritorio."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
-msgstr "Mostrar Iconos de escritorio"
+msgstr "Mostrar los iconos del escritorio"
 
 #: schemas/org.mate.background.gschema.xml.in:24
 msgid "Have MATE file manager (Caja) draw the desktop icons."
@@ -1032,12 +1032,12 @@ msgstr "Tema de iconos para usar en el panel, Caja, etc."
 #: schemas/org.mate.interface.gschema.xml:65
 #: schemas/org.mate.interface.gschema.xml:70
 msgid "Gtk+ Theme"
-msgstr "Tema de GTK+"
+msgstr "Tema de GTK"
 
 #: schemas/org.mate.interface.gschema.xml:66
 #: schemas/org.mate.interface.gschema.xml:71
 msgid "Basename of the default theme used by gtk+."
-msgstr "Nombre base del tema predeterminado que usa GTK+."
+msgstr "Nombre base del tema predeterminado que usa GTK."
 
 #: schemas/org.mate.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1057,7 +1057,7 @@ msgstr "Tipografía predeterminada"
 
 #: schemas/org.mate.interface.gschema.xml:81
 msgid "Name of the default font used by gtk+."
-msgstr "Nombre de la tipografía predeterminada que usa GTK+."
+msgstr "Nombre de la tipografía predeterminada que usa GTK."
 
 #: schemas/org.mate.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
@@ -1066,7 +1066,7 @@ msgstr "Estilo de preedición del método de entrada de GTK"
 #: schemas/org.mate.interface.gschema.xml:86
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
 msgstr ""
-"Nombre del estilo de preedición del método de entrada de GTK+ que usa GTK+."
+"Nombre del estilo de preedición del método de entrada de GTK que usa GTK."
 
 #: schemas/org.mate.interface.gschema.xml:90
 msgid "GTK IM Status Style"
@@ -1074,8 +1074,7 @@ msgstr "Estilo de preedición del método de entrada de GTK"
 
 #: schemas/org.mate.interface.gschema.xml:91
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr ""
-"Nombre del estilo de estado del método de entrada de GTK+ que usa GTK+."
+msgstr "Nombre del estilo de estado del método de entrada de GTK que usa GTK."
 
 #: schemas/org.mate.interface.gschema.xml:95
 msgid "GTK IM Module"
@@ -1083,7 +1082,7 @@ msgstr "Módulo del método de entrada de GTK"
 
 #: schemas/org.mate.interface.gschema.xml:96
 msgid "Name of the input method module used by GTK+."
-msgstr "Nombre del módulo del método de entrada que usa GTK+."
+msgstr "Nombre del módulo del método de entrada que usa GTK."
 
 #: schemas/org.mate.interface.gschema.xml:100
 msgid "Use GTK3 header bar"
@@ -1096,11 +1095,11 @@ msgid ""
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
 msgstr ""
-"Si los diálogos integrados de GTK+, como el selector de archivos, el "
-"selector de color o el selector de tipografías, usarán una barra de cabecera"
-" en la parte superior para mostrar componentes de acción o un área de acción"
-" en la parte inferior.  Este ajuste no afecta a los diálogos personalizados "
-"que utilizan directamente GtkDialog o a los diálogos de mensaje."
+"Si los diálogos integrados de GTK, como el selector de archivos, el selector"
+" de color o el selector de tipografías, usarán una barra de cabecera en la "
+"parte superior para mostrar componentes de acción o un área de acción en la "
+"parte inferior.  Este ajuste no afecta a los diálogos personalizados que "
+"utilizan directamente GtkDialog o a los diálogos de mensaje."
 
 #: schemas/org.mate.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
@@ -1152,7 +1151,7 @@ msgstr "Usar tipografía personalizada"
 #: schemas/org.mate.interface.gschema.xml:126
 msgid "Whether to use a custom font in gtk+ applications."
 msgstr ""
-"Si se va que usar una tipografía personalizada en las aplicaciones de GTK+."
+"Si se va que usar una tipografía personalizada en las aplicaciones de GTK."
 
 #: schemas/org.mate.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1312,7 +1311,7 @@ msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
-"Si se activa, GTK+ usará el pegado directo de la selección, que se ejecuta "
+"Si se activa, GTK usará el pegado directo de la selección, que se ejecuta "
 "generalmente con un clic central del ratón."
 
 #: schemas/org.mate.lockdown.gschema.xml:5

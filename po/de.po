@@ -4,21 +4,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tim Schulz <timschulz1998@yahoo.de>, 2018
-# Maria Kor <korda.maria@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Moritz Bruder <muesli4@gmail.com>, 2018
-# Tobias Bannert <tobannert@gmail.com>, 2018
-# Ettore Atalan <atalanttore@googlemail.com>, 2019
+# Tim Schulz <timschulz1998@yahoo.de>, 2020
+# Marcel Artz <email@marcel-artz.de>, 2020
 # Daniel <daniel@teichm-sh.de>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Ettore Atalan <atalanttore@googlemail.com>, 2020
+# Moritz Bruder <muesli4@gmail.com>, 2020
+# Tobias Bannert <tobannert@gmail.com>, 2020
+# Maria Kor <korda.maria@gmail.com>, 2020
+# Michael Hartmann, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.23.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2020-01-19 00:40+0100\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Daniel <daniel@teichm-sh.de>, 2020\n"
+"PO-Revision-Date: 2020-02-15 13:36+0000\n"
+"Last-Translator: Michael Hartmann, 2020\n"
 "Language-Team: German (https://www.transifex.com/mate/teams/13566/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +39,8 @@ msgstr ""
 "Hendrik Richter\n"
 "Christian Kirbach\n"
 "Wolfgang Stoeggl\n"
-"Tobias Bannert"
+"Tobias Bannert\n"
+"Marcel Artz"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -747,6 +750,8 @@ msgstr "Taschenrechner"
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
 msgstr ""
+"Zu verwendende Taschenrechner-Anwendung beim Starten von Anwendungen, die "
+"ein Taschenrechner benötigen."
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
@@ -1277,9 +1282,10 @@ msgid ""
 "Set to 0 to auto-detect."
 msgstr ""
 "Interner Skalierungsfaktor, der von den Fensterkoordinaten auf die "
-"tatsächlichen Gerätepixel abbildet. Bei herkömmlichen Systemen ist es 1, "
-"aber bei Bildschirmen mit sehr hoher Dichte (z. B. HiDPI, Retina) kann es "
-"ein höherer Wert sein (oft 2). Auf 0 stellen, um automatisch zu erkennen."
+"tatsächlichen Gerätepixel abbildet. Bei herkömmlichen Systemen ist der Wert "
+"1, bei Bildschirmen mit sehr hoher Dichte (z.B. HiDPI, Retina) kann es ein "
+"höherer Wert sein (oftmals 2). Auf 0 stellen, um den Skalierungsfaktor "
+"automatisch zu erkennen."
 
 #: schemas/org.mate.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"
