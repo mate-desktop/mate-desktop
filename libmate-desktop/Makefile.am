@@ -4,6 +4,7 @@ libmate_desktop_HEADERS = \
 	mate-desktop-utils.h \
 	mate-desktop-item.h \
 	mate-dconf.h \
+	mate-dmi.h \
 	mate-gsettings.h \
 	mate-bg.h			\
 	mate-bg-crossfade.h		\
@@ -32,7 +33,7 @@ AM_CPPFLAGS =							\
 
 AM_CFLAGS = $(WARN_CFLAGS)
 
-noinst_PROGRAMS = test-desktop-thumbnail test-ditem test test-languages test-image-menu-item
+noinst_PROGRAMS = test-desktop-thumbnail test-ditem test test-languages test-image-menu-item test-dmi
 
 CLEANFILES =
 
@@ -40,6 +41,7 @@ introspection_sources = \
 	mate-desktop-utils.c	\
 	mate-desktop-thumbnail.c \
 	mate-dconf.c \
+	mate-dmi.c \
 	mate-gsettings.c \
 	mate-bg.c		\
 	mate-bg-crossfade.c	\
@@ -103,6 +105,12 @@ test_languages_LDADD = \
 test_image_menu_item_SOURCES = test-image-menu-item.c
 
 test_image_menu_item_LDADD = \
+	libmate-desktop-2.la		\
+	$(MATE_DESKTOP_LIBS)
+
+test_dmi_SOURCES = test-dmi.c
+
+test_dmi_LDADD = \
 	libmate-desktop-2.la		\
 	$(MATE_DESKTOP_LIBS)
 

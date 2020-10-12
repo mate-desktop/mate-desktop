@@ -5,6 +5,7 @@ headers = files(
   'mate-desktop-utils.h',
   'mate-desktop-item.h',
   'mate-dconf.h',
+  'mate-dmi.h',
   'mate-gsettings.h',
   'mate-bg.h',
   'mate-bg-crossfade.h',
@@ -30,6 +31,7 @@ sources = files(
   'mate-desktop-utils.c',
   'mate-desktop-thumbnail.c',
   'mate-dconf.c',
+  'mate-dmi.c',
   'mate-gsettings.c',
   'mate-bg.c',
   'mate-bg-crossfade.c',
@@ -165,6 +167,12 @@ test_languages = executable('test-languages',
 
 test_image_menu_item = executable('test-image-menu-item',
   sources : 'test-image-menu-item.c',
+  dependencies : libmate_desktop_dep,
+  install : false,
+)
+
+test_dmi = executable('test-dmi',
+  sources : 'test-dmi.c',
   dependencies : libmate_desktop_dep,
   install : false,
 )
