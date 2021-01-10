@@ -75,7 +75,7 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 	int term_argc = 0;
 	GSettings *settings;
 
-	gchar *terminal = NULL;
+	gchar *terminal;
 
 	char **the_argv;
 
@@ -100,12 +100,13 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 	settings = g_settings_new ("org.mate.applications-terminal");
 	terminal = g_settings_get_string (settings, "exec");
 
-	if (terminal) {
+	if (terminal && *terminal != '\0') {
 		gchar *command_line;
 		gchar *exec_flag;
+
 		exec_flag = g_settings_get_string (settings, "exec-arg");
 
-		if (exec_flag == NULL)
+		if (!exec_flag || *exec_flag == '\0')
 			command_line = g_strdup (terminal);
 		else
 			command_line = g_strdup_printf ("%s %s", terminal,
@@ -118,8 +119,8 @@ mate_desktop_prepend_terminal_to_vector (int *argc, char ***argv)
 
 		g_free (command_line);
 		g_free (exec_flag);
-		g_free (terminal);
 	}
+	g_free (terminal);
 	g_object_unref (settings);
 
 	if (term_argv == NULL) {
