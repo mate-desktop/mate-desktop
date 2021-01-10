@@ -195,15 +195,10 @@ static FileSize   *find_best_size      (GSList                *sizes,
 
 static void
 color_from_string (const char *string,
-		   GdkRGBA   *colorp)
+                   GdkRGBA    *colorp)
 {
-	/* If all else fails use black */
-	gdk_rgba_parse (colorp, "#000000");
-
-	if (!string)
-		return;
-
-	gdk_rgba_parse (colorp, string);
+	if (!string || *string == '\0' || !gdk_rgba_parse (colorp, string))
+		gdk_rgba_parse (colorp, "#000000"); /* If all else fails use black */
 }
 
 static char *
@@ -403,8 +398,7 @@ mate_bg_load_from_gsettings (MateBG    *bg,
 	mate_bg_set_placement (bg, placement);
 	mate_bg_set_filename (bg, filename);
 
-	if (filename != NULL)
-		g_free (filename);
+	g_free (filename);
 }
 
 void
