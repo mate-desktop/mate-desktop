@@ -54,6 +54,7 @@ main (int argc, char **argv)
     GtkWidget *color_dialog = NULL;
     GtkWidget *color_selection;
     GtkWidget *widget;
+    GtkWidget *image;
 
     mate_gettext (GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
 
@@ -68,11 +69,15 @@ main (int argc, char **argv)
     /* quit signal */
     g_signal_connect (color_dialog, "destroy", gtk_main_quit, NULL);
 
-    widget = gtk_button_new_from_stock (GTK_STOCK_COPY);
+    widget = gtk_button_new_with_mnemonic ("_Copy");
+    image = gtk_image_new_from_icon_name ("edit-copy", GTK_ICON_SIZE_BUTTON);
+    gtk_button_set_image (GTK_BUTTON (widget), image);
     gtk_container_add (GTK_CONTAINER (gtk_dialog_get_action_area (GTK_DIALOG (color_dialog))), widget);
     g_signal_connect (widget, "button-release-event", G_CALLBACK (copy_color), color_dialog);
 
-    widget = gtk_button_new_from_stock (GTK_STOCK_CLOSE);
+    widget = gtk_button_new_with_mnemonic ("_Close");
+    image = gtk_image_new_from_icon_name ("window-close", GTK_ICON_SIZE_BUTTON);
+    gtk_button_set_image (GTK_BUTTON (widget), image);
     gtk_container_add (GTK_CONTAINER (gtk_dialog_get_action_area (GTK_DIALOG (color_dialog))), widget);
     g_signal_connect (widget, "button-release-event", gtk_main_quit, NULL);
 
