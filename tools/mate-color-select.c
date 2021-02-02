@@ -69,13 +69,13 @@ main (int argc, char **argv)
     /* quit signal */
     g_signal_connect (color_dialog, "destroy", gtk_main_quit, NULL);
 
-    widget = gtk_button_new_with_mnemonic ("_Copy");
+    widget = gtk_button_new_with_mnemonic (_("_Copy"));
     image = gtk_image_new_from_icon_name ("edit-copy", GTK_ICON_SIZE_BUTTON);
     gtk_button_set_image (GTK_BUTTON (widget), image);
     gtk_container_add (GTK_CONTAINER (gtk_dialog_get_action_area (GTK_DIALOG (color_dialog))), widget);
     g_signal_connect (widget, "button-release-event", G_CALLBACK (copy_color), color_dialog);
 
-    widget = gtk_button_new_with_mnemonic ("_Close");
+    widget = gtk_button_new_with_mnemonic (_("_Close"));
     image = gtk_image_new_from_icon_name ("window-close", GTK_ICON_SIZE_BUTTON);
     gtk_button_set_image (GTK_BUTTON (widget), image);
     gtk_container_add (GTK_CONTAINER (gtk_dialog_get_action_area (GTK_DIALOG (color_dialog))), widget);
