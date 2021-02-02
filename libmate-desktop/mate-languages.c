@@ -556,6 +556,24 @@ collect_locales_from_localebin (void)
 }
 
 static void
+fill_count_map (GHashTable *count_map,
+                const char *code)
+{
+        int count;
+        gpointer pointer;
+
+        if (code == NULL)
+                return;
+
+        if ((pointer = g_hash_table_lookup (count_map, code)) != NULL)
+                count = GPOINTER_TO_INT (pointer) + 1;
+        else
+                count = 1;
+
+        g_hash_table_insert (count_map, g_strdup (code), GINT_TO_POINTER (count));
+}
+
+static void
 count_languages_and_territories (void)
 {
 	gpointer value;
@@ -566,25 +584,9 @@ count_languages_and_territories (void)
 
         g_hash_table_iter_init (&iter, mate_available_locales_map);
         while (g_hash_table_iter_next (&iter, NULL, &value)) {
-                MateLocale *locale;
-
-                locale = (MateLocale *) value;
-
-		if (locale->language_code != NULL) {
-			int count;
-
-			count = GPOINTER_TO_INT (g_hash_table_lookup (mate_language_count_map, locale->language_code));
-			count++;
-			g_hash_table_insert (mate_language_count_map, g_strdup (locale->language_code), GINT_TO_POINTER (count));
-		}
-
-		if (locale->territory_code != NULL) {
-			int count;
-
-			count = GPOINTER_TO_INT (g_hash_table_lookup (mate_territory_count_map, locale->territory_code));
-			count++;
-			g_hash_table_insert (mate_territory_count_map, g_strdup (locale->territory_code), GINT_TO_POINTER (count));
-		}
+                MateLocale *locale = (MateLocale *) value;
+                fill_count_map (mate_language_count_map, locale->language_code);
+                fill_count_map (mate_territory_count_map, locale->territory_code);
         }
 }
 
@@ -614,11 +616,16 @@ collect_locales (void)
 static gint
 get_language_count (const char *language)
 {
-        if (mate_language_count_map == NULL) {
-                collect_locales ();
-        }
+        gint count = 0;
+        gpointer pointer;
 
-	return GPOINTER_TO_INT (g_hash_table_lookup (mate_language_count_map, language));
+        if (mate_language_count_map == NULL)
+                collect_locales ();
+
+        if ((pointer = g_hash_table_lookup (mate_language_count_map, language)) != NULL)
+                count = GPOINTER_TO_INT (pointer);
+
+        return count;
 }
 
 static gboolean
@@ -630,11 +637,16 @@ is_unique_language (const char *language)
 static gint
 get_territory_count (const char *territory)
 {
-        if (mate_territory_count_map == NULL) {
-                collect_locales ();
-        }
+        gint count = 0;
+        gpointer pointer;
 
-	return GPOINTER_TO_INT (g_hash_table_lookup (mate_territory_count_map, territory));
+        if (mate_territory_count_map == NULL)
+                collect_locales ();
+
+        if ((pointer = g_hash_table_lookup (mate_territory_count_map, territory)) != NULL)
+                count = GPOINTER_TO_INT (pointer);
+
+        return count;
 }
 
 static gboolean

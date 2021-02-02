@@ -825,9 +825,9 @@ paint_ring (MateHSV *hsv,
           b = 1.0;
           hsv_to_rgb (&r, &g, &b);
 
-          *p++ = (((int)floor (r * 255 + 0.5) << 16) |
-                  ((int)floor (g * 255 + 0.5) << 8) |
-                  (int)floor (b * 255 + 0.5));
+          *p++ = (((int)(r * 255.0) << 16) |
+                  ((int)(g * 255.0) << 8) |
+                  (int)(b * 255.0));
         }
     }
 

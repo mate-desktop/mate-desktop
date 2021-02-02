@@ -1250,6 +1250,7 @@ palette_set_color (GtkWidget         *drawing_area,
 		   MateColorSelection *colorsel,
 		   gdouble           *color)
 {
+  gpointer pointer;
   gdouble *new_color = g_new (double, 4);
   GdkRGBA  box_color;
 
@@ -1260,7 +1261,8 @@ palette_set_color (GtkWidget         *drawing_area,
 
   override_background_color (drawing_area, &box_color);
 
-  if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (drawing_area), "color_set")) == 0)
+  pointer = g_object_get_data (G_OBJECT (drawing_area), "color_set");
+  if (!pointer || GPOINTER_TO_INT (pointer) == 0)
     {
       static const GtkTargetEntry targets[] = {
 	{ "application/x-color", 0 }
@@ -1458,7 +1460,8 @@ palette_release (GtkWidget      *drawing_area,
       g_object_get_data (G_OBJECT (drawing_area),
 			 "gtk-colorsel-have-pointer") != NULL)
     {
-      if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (drawing_area), "color_set")) != 0)
+      gpointer pointer = g_object_get_data (G_OBJECT (drawing_area), "color_set");
+      if (pointer && GPOINTER_TO_INT (pointer) != 0)
         {
           gdouble color[4];
           palette_get_color (drawing_area, color);
@@ -1517,7 +1520,8 @@ palette_activate (GtkWidget   *widget,
       (event->keyval == GDK_KEY_KP_Enter) ||
       (event->keyval == GDK_KEY_KP_Space))
     {
-      if (GPOINTER_TO_INT (g_object_get_data (G_OBJECT (widget), "color_set")) != 0)
+      gpointer pointer = g_object_get_data (G_OBJECT (widget), "color_set");
+      if (pointer && GPOINTER_TO_INT (pointer) != 0)
         {
           gdouble color[4];
           palette_get_color (widget, color);
@@ -2127,6 +2131,9 @@ update_color (MateColorSelection *colorsel)
   gchar entryval[12];
   gchar opacity_text[32];
   gchar *ptr;
+  double r;
+  double g;
+  double b;
 
   priv->changing = TRUE;
   color_sample_update_samples (colorsel);
@@ -2160,10 +2167,10 @@ update_color (MateColorSelection *colorsel)
   g_snprintf (opacity_text, 32, "%.0f", scale_round (priv->color[COLORSEL_OPACITY], 255));
   gtk_entry_set_text (GTK_ENTRY (priv->opacity_entry), opacity_text);
 
-  g_snprintf (entryval, 11, "#%2X%2X%2X",
-	      (guint) (scale_round (priv->color[COLORSEL_RED], 255)),
-	      (guint) (scale_round (priv->color[COLORSEL_GREEN], 255)),
-	      (guint) (scale_round (priv->color[COLORSEL_BLUE], 255)));
+  r = scale_round (priv->color[COLORSEL_RED],   255);
+  g = scale_round (priv->color[COLORSEL_GREEN], 255);
+  b = scale_round (priv->color[COLORSEL_BLUE],  255);
+  g_snprintf (entryval, 11, "#%2X%2X%2X", (guint) r, (guint) g, (guint) b);
 
   for (ptr = entryval; *ptr; ptr++)
     if (*ptr == ' ')

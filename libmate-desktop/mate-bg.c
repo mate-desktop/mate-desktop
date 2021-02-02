@@ -2375,12 +2375,14 @@ get_pixbuf_for_size (MateBG *bg,
 
 			if (show) {
 				double alpha;
+				double timeout;
 				Slide *slide;
 
 				slideshow_ref (show);
 
 				slide = get_current_slide (show, &alpha);
-				time_until_next_change = (guint)get_slide_timeout (slide);
+				timeout = get_slide_timeout (slide);
+				time_until_next_change = (guint) timeout;
 				if (slide->fixed) {
 					FileSize *size = find_best_size (slide->file1,
 									 best_width, best_height);
