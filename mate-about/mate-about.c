@@ -20,15 +20,6 @@
 
 #include "mate-about.h"
 
-/* get text macro, this should be on the common macros. or not?
- */
-#ifndef mate_gettext
-#define mate_gettext(package, locale, codeset) \
-    bindtextdomain(package, locale); \
-    bind_textdomain_codeset(package, codeset); \
-    textdomain(package);
-#endif
-
 static void mate_about_on_activate(GtkApplication* app)
 {
     GList* list;
@@ -86,7 +77,9 @@ int main(int argc, char** argv)
 {
     int status = 0;
 
-    mate_gettext(GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
+    bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
+    bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+    textdomain (GETTEXT_PACKAGE);
 
     GOptionContext* context = g_option_context_new(NULL);
     g_option_context_add_main_entries(context, command_entries, GETTEXT_PACKAGE);

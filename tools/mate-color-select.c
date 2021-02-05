@@ -28,11 +28,6 @@
 #include <libmate-desktop/mate-colorseldialog.h>
 #include <libmate-desktop/mate-colorsel.h>
 
-#define mate_gettext(package, locale, codeset) \
-    bindtextdomain(package, locale); \
-    bind_textdomain_codeset(package, codeset); \
-    textdomain(package);
-
 gboolean
 copy_color (GtkWidget *widget, GdkEvent  *event, MateColorSelectionDialog *color_dialog)
 {
@@ -56,7 +51,9 @@ main (int argc, char **argv)
     GtkWidget *widget;
     GtkWidget *image;
 
-    mate_gettext (GETTEXT_PACKAGE, LOCALE_DIR, "UTF-8");
+    bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
+    bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+    textdomain (GETTEXT_PACKAGE);
 
     /* initialize GTK+ */
     gtk_init (&argc, &argv);
