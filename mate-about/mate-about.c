@@ -57,7 +57,8 @@ void mate_about_run(void)
      * This generate a random message.
      * The comments index must not be more than comments_count - 1
      */
-    gtk_about_dialog_set_comments(mate_about_dialog, gettext(comments_array[g_random_int_range(0, comments_count - 1)]));
+    gtk_about_dialog_set_comments (mate_about_dialog,
+                                   _(comments_array[g_random_int_range (0, comments_count - 1)]));
 
     gtk_about_dialog_set_authors(mate_about_dialog, authors);
     gtk_about_dialog_set_artists(mate_about_dialog, artists);
@@ -89,7 +90,7 @@ int main(int argc, char** argv)
 
     if (mate_about_nogui == TRUE)
     {
-        printf("%s %s\n", gettext(program_name), version);
+        g_print ("%s %s\n", _(program_name), version);
     }
     else
     {
