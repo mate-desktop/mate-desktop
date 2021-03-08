@@ -43,7 +43,7 @@ deploy:
       condition: "${TRAVIS_TAG} =~ ^v.*$ && ${DISTRO} =~ ^fedora.*$"
 
 env:
-  - DISTRO="archlinux:latest"
+#  - DISTRO="archlinux:latest"
   - DISTRO="debian:testing"
   - DISTRO="fedora:latest"
   - DISTRO="ubuntu:rolling"
