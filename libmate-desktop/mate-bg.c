@@ -3071,7 +3071,7 @@ read_slideshow_file (const char *filename,
 	g_markup_parse_context_free (context);
 
 	if (show) {
-		int len;
+		guint num_items;
 
 		t = mktime (&show->start_tm);
 
@@ -3079,14 +3079,14 @@ read_slideshow_file (const char *filename,
 
 		dump_bg (show);
 
-		len = g_queue_get_length (show->slides);
+		num_items = g_queue_get_length (show->slides);
 
 		/* no slides, that's not a slideshow */
-		if (len == 0) {
+		if (num_items == 0) {
 			slideshow_unref (show);
 			show = NULL;
 		/* one slide, there's no transition */
-		} else if (len == 1) {
+		} else if (num_items == 1) {
 			Slide *slide = show->slides->head->data;
 			slide->duration = show->total_duration = G_MAXUINT;
 		}

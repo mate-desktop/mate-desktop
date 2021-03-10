@@ -376,9 +376,7 @@ fill_screen_info_from_resources (ScreenInfo *info,
     a = g_ptr_array_new ();
     for (i = 0; i < resources->ncrtc; ++i)
     {
-	MateRRCrtc *crtc = crtc_new (info, resources->crtcs[i]);
-
-	g_ptr_array_add (a, crtc);
+	g_ptr_array_add (a, crtc_new (info, resources->crtcs[i]));
     }
     g_ptr_array_add (a, NULL);
     info->crtcs = (MateRRCrtc **)g_ptr_array_free (a, FALSE);
@@ -386,9 +384,7 @@ fill_screen_info_from_resources (ScreenInfo *info,
     a = g_ptr_array_new ();
     for (i = 0; i < resources->noutput; ++i)
     {
-	MateRROutput *output = output_new (info, resources->outputs[i]);
-
-	g_ptr_array_add (a, output);
+	g_ptr_array_add (a, output_new (info, resources->outputs[i]));
     }
     g_ptr_array_add (a, NULL);
     info->outputs = (MateRROutput **)g_ptr_array_free (a, FALSE);
