@@ -1,0 +1,188 @@
+<html>
+<head>
+<title>rootdir - scan-build results</title>
+<link type="text/css" rel="stylesheet" href="scanview.css"/>
+<script src="sorttable.js"></script>
+<script language='javascript' type="text/javascript">
+function SetDisplay(RowClass, DisplayVal)
+{
+  var Rows = document.getElementsByTagName("tr");
+  for ( var i = 0 ; i < Rows.length; ++i ) {
+    if (Rows[i].className == RowClass) {
+      Rows[i].style.display = DisplayVal;
+    }
+  }
+}
+
+function CopyCheckedStateToCheckButtons(SummaryCheckButton) {
+  var Inputs = document.getElementsByTagName("input");
+  for ( var i = 0 ; i < Inputs.length; ++i ) {
+    if (Inputs[i].type == "checkbox") {
+      if(Inputs[i] != SummaryCheckButton) {
+        Inputs[i].checked = SummaryCheckButton.checked;
+        Inputs[i].onclick();
+      }
+    }
+  }
+}
+
+function returnObjById( id ) {
+    if (document.getElementById)
+        var returnVar = document.getElementById(id);
+    else if (document.all)
+        var returnVar = document.all[id];
+    else if (document.layers)
+        var returnVar = document.layers[id];
+    return returnVar;
+}
+
+var NumUnchecked = 0;
+
+function ToggleDisplay(CheckButton, ClassName) {
+  if (CheckButton.checked) {
+    SetDisplay(ClassName, "");
+    if (--NumUnchecked == 0) {
+      returnObjById("AllBugsCheck").checked = true;
+    }
+  }
+  else {
+    SetDisplay(ClassName, "none");
+    NumUnchecked++;
+    returnObjById("AllBugsCheck").checked = false;
+  }
+}
+</script>
+<!-- SUMMARYENDHEAD -->
+</head>
+<body>
+<h1>rootdir - scan-build results</h1>
+
+<table>
+<tr><th>User:</th><td>root@b05d5dc4c1df</td></tr>
+<tr><th>Working Directory:</th><td>/rootdir</td></tr>
+<tr><th>Command Line:</th><td>make -j 2</td></tr>
+<tr><th>Clang Version:</th><td>clang version 11.0.0 (Fedora 11.0.0-2.fc33)
+</td></tr>
+<tr><th>Date:</th><td>Fri Feb  5 22:18:13 2021</td></tr>
+</table>
+<h2>Bug Summary</h2><table>
+<thead><tr><td>Bug Type</td><td>Quantity</td><td class="sorttable_nosort">Display?</td></tr></thead>
+<tr style="font-weight:bold"><td class="SUMM_DESC">All Bugs</td><td class="Q">30</td><td><center><input type="checkbox" id="AllBugsCheck" onClick="CopyCheckedStateToCheckButtons(this);" checked/></center></td></tr>
+<tr><th>Dead code</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Unreachable code</td><td class="Q">4</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_dead_code_unreachable_code');" checked/></center></td></tr>
+<tr><th>Dead store</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Dead nested assignment</td><td class="Q">2</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_dead_store_dead_nested_assignment');" checked/></center></td></tr>
+<tr><th>Logic error</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Dereference of null pointer</td><td class="Q">2</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_dereference_of_null_pointer');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Garbage return value</td><td class="Q">2</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_garbage_return_value');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Out-of-bound access</td><td class="Q">18</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_out-of-bound_access');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Uninitialized argument value</td><td class="Q">2</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_uninitialized_argument_value');" checked/></center></td></tr>
+</table>
+<h2>Reports</h2>
+
+<table class="sortable" style="table-layout:automatic">
+<thead><tr>
+  <td>Bug Group</td>
+  <td class="sorttable_sorted">Bug Type<span id="sorttable_sortfwdind">&nbsp;&#x25BE;</span></td>
+  <td>File</td>
+  <td>Function/Method</td>
+  <td class="Q">Line</td>
+  <td class="Q">Path Length</td>
+  <td class="sorttable_nosort"></td>
+  <!-- REPORTBUGCOL -->
+</tr></thead>
+<tbody>
+<tr class="bt_dead_store_dead_nested_assignment"><td class="DESC">Dead store</td><td class="DESC">Dead nested assignment</td><td>docs/reference/mate-desktop/mate-desktop-scan.c</td><td class="DESC">output_object_signal</td><td class="Q">188</td><td class="Q">1</td><td><a href="report-2e3f84.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-2e3f84.html" -->
+</tr>
+<tr class="bt_dead_store_dead_nested_assignment"><td class="DESC">Dead store</td><td class="DESC">Dead nested assignment</td><td>docs/reference/mate-desktop/mate-desktop-scan.c</td><td class="DESC">output_object_signal</td><td class="Q">188</td><td class="Q">1</td><td><a href="report-37b795.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-37b795.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>libmate-desktop/mate-bg.c</td><td class="DESC">find_best_size</td><td class="Q">2333</td><td class="Q">106</td><td><a href="report-266a53.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-266a53.html" -->
+</tr>
+<tr class="bt_logic_error_dereference_of_null_pointer"><td class="DESC">Logic error</td><td class="DESC">Dereference of null pointer</td><td>libmate-desktop/mate-bg.c</td><td class="DESC">find_best_size</td><td class="Q">2333</td><td class="Q">106</td><td><a href="report-86d73c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-86d73c.html" -->
+</tr>
+<tr class="bt_logic_error_garbage_return_value"><td class="DESC">Logic error</td><td class="DESC">Garbage return value</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">ditem_execute</td><td class="Q">2034</td><td class="Q">52</td><td><a href="report-5973fb.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-5973fb.html" -->
+</tr>
+<tr class="bt_logic_error_garbage_return_value"><td class="DESC">Logic error</td><td class="DESC">Garbage return value</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">ditem_execute</td><td class="Q">2034</td><td class="Q">52</td><td><a href="report-be07a9.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-be07a9.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3140</td><td class="Q">24</td><td><a href="report-0ed60b.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-0ed60b.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3140</td><td class="Q">24</td><td><a href="report-1126b9.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-1126b9.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3124</td><td class="Q">37</td><td><a href="report-263797.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-263797.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3124</td><td class="Q">37</td><td><a href="report-3fbf2c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-3fbf2c.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3132</td><td class="Q">37</td><td><a href="report-6386a2.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-6386a2.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3136</td><td class="Q">37</td><td><a href="report-75cac4.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-75cac4.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3125</td><td class="Q">27</td><td><a href="report-893773.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-893773.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3137</td><td class="Q">27</td><td><a href="report-936a24.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-936a24.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3128</td><td class="Q">37</td><td><a href="report-991fe6.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-991fe6.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3136</td><td class="Q">37</td><td><a href="report-9ca19c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-9ca19c.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3129</td><td class="Q">27</td><td><a href="report-9f4a7a.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-9f4a7a.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3129</td><td class="Q">27</td><td><a href="report-b852e3.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-b852e3.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3125</td><td class="Q">27</td><td><a href="report-bf8d28.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-bf8d28.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3132</td><td class="Q">37</td><td><a href="report-c3c36b.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-c3c36b.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3128</td><td class="Q">37</td><td><a href="report-c41fb3.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-c41fb3.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3137</td><td class="Q">27</td><td><a href="report-d88e73.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d88e73.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3133</td><td class="Q">27</td><td><a href="report-e9120a.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-e9120a.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3133</td><td class="Q">27</td><td><a href="report-fd1ac3.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-fd1ac3.html" -->
+</tr>
+<tr class="bt_logic_error_uninitialized_argument_value"><td class="DESC">Logic error</td><td class="DESC">Uninitialized argument value</td><td>libmate-desktop/mate-bg.c</td><td class="DESC">create_img_thumbnail</td><td class="Q">2278</td><td class="Q">108</td><td><a href="report-2fca26.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-2fca26.html" -->
+</tr>
+<tr class="bt_logic_error_uninitialized_argument_value"><td class="DESC">Logic error</td><td class="DESC">Uninitialized argument value</td><td>libmate-desktop/mate-bg.c</td><td class="DESC">create_img_thumbnail</td><td class="Q">2278</td><td class="Q">108</td><td><a href="report-529e11.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-529e11.html" -->
+</tr>
+<tr class="bt_dead_code_unreachable_code"><td class="DESC">Dead code</td><td class="DESC">Unreachable code</td><td>libmate-desktop/mate-hsv.c</td><td class="DESC">mate_hsv_button_press</td><td class="Q">654</td><td class="Q">1</td><td><a href="report-001985.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-001985.html" -->
+</tr>
+<tr class="bt_dead_code_unreachable_code"><td class="DESC">Dead code</td><td class="DESC">Unreachable code</td><td>libmate-desktop/mate-hsv.c</td><td class="DESC">mate_hsv_button_press</td><td class="Q">672</td><td class="Q">1</td><td><a href="report-1206eb.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-1206eb.html" -->
+</tr>
+<tr class="bt_dead_code_unreachable_code"><td class="DESC">Dead code</td><td class="DESC">Unreachable code</td><td>libmate-desktop/mate-hsv.c</td><td class="DESC">mate_hsv_button_press</td><td class="Q">654</td><td class="Q">1</td><td><a href="report-88abed.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-88abed.html" -->
+</tr>
+<tr class="bt_dead_code_unreachable_code"><td class="DESC">Dead code</td><td class="DESC">Unreachable code</td><td>libmate-desktop/mate-hsv.c</td><td class="DESC">mate_hsv_button_press</td><td class="Q">672</td><td class="Q">1</td><td><a href="report-c67262.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-c67262.html" -->
+</tr>
+</tbody>
+</table>
+
+</body></html>

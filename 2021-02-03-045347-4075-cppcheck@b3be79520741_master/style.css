@@ -1,0 +1,137 @@
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+    width: auto;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.header {
+    border-bottom: thin solid #aaa;
+}
+
+.footer {
+    border-top: thin solid #aaa;
+    font-size: 90%;
+    margin-top: 5px;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer > p {
+    margin: 4px;
+}
+
+.wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+#menu,
+#menu_index {
+    text-align: left;
+    width: 350px;
+    height: 90vh;
+    min-height: 200px;
+    overflow: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 0 15px 15px 15px;
+}
+
+#menu > a {
+    display: block;
+    margin-left: 10px;
+    font-size: 12px;
+    z-index: 1;
+}
+
+#content,
+#content_index {
+    background-color: #fff;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 0 15px 15px 15px;
+    width: calc(100% - 350px);
+    height: 100%;
+    overflow-x: auto;
+}
+
+#filename {
+    margin-left: 10px;
+    font-size: 12px;
+    z-index: 1;
+}
+
+.error {
+    background-color: #ffb7b7;
+}
+
+.error2 {
+    background-color: #faa;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.inconclusive {
+    background-color: #b6b6b4;
+}
+
+.inconclusive2 {
+    background-color: #b6b6b4;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.verbose {
+    display: inline-block;
+    vertical-align: top;
+    cursor: help;
+}
+
+.verbose .content {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    margin: 4px;
+    max-width: 40%;
+    white-space: pre-wrap;
+    border: 1px solid #000;
+    background-color: #ffffcc;
+    cursor: auto;
+}
+
+.highlight .hll {
+    padding: 1px;
+}
+
+.highlighttable {
+    background-color: #fff;
+    z-index: 10;
+    position: relative;
+    margin: -10px;
+}
+
+.linenos {
+    border-right: thin solid #aaa;
+    color: #d3d3d3;
+    padding-right: 6px;
+}
+
+.d-none {
+    display: none;
+}
