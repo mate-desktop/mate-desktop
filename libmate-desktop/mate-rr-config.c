@@ -1546,7 +1546,7 @@ crtc_assignment_assign (CrtcAssignment   *assign,
     }
     else
     {
-	CrtcInfo *info = g_new0 (CrtcInfo, 1);
+	info = g_new0 (CrtcInfo, 1);
 
 	info->mode = mode;
 	info->x = x;
