@@ -58,7 +58,7 @@ void mate_about_run(void)
      * The comments index must not be more than comments_count - 1
      */
     gtk_about_dialog_set_comments (mate_about_dialog,
-                                   _(comments_array[g_random_int_range (0, comments_count - 1)]));
+                                   _(comments_array[g_random_int_range (0, comments_count)]));
 
     gtk_about_dialog_set_authors(mate_about_dialog, authors);
     gtk_about_dialog_set_artists(mate_about_dialog, artists);
