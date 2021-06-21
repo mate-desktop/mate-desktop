@@ -2,6 +2,7 @@
 
    Copyright (C) 2007 Red Hat, Inc.
    Copyright (C) 2012 Jasmine Hassan <jasmine.aura@gmail.com>
+   Copyright (C) 2012-2021 MATE Developers
 
    This file is part of the Mate Library.
 

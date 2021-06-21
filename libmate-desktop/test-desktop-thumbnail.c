@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2012,2017 Red Hat, Inc.
+ * Copyright (C) 2018-2021 MATE Developers
  *
  * This file is part of the Mate Library.
  *

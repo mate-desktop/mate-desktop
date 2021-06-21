@@ -2,6 +2,7 @@
  * mate-color.c: MATE color selection tool
  *
  * Copyright (C) 2014 Stefano Karapetsas
+ * Copyright (C) 2014-2021 MATE Developers
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

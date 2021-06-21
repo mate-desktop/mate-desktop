@@ -1,6 +1,7 @@
 /* HSV color selector for GTK+
  *
  * Copyright (C) 1999 The Free Software Foundation
+ * Copyright (C) 2019-2021 MATE Developers
  *
  * Authors: Simon Budig <Simon.Budig@unix-ag.org> (original code)
  *          Federico Mena-Quintero <federico@gimp.org> (cleanup for GTK+)

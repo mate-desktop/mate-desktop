@@ -2,6 +2,7 @@
  * mate-desktop.h: general functions for libmate-desktop
  *
  * Copyright (C) 2013 Stefano Karapetsas
+ * Copyright (C) 2013-2021 MATE Developers
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
