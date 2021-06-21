@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-02-02 16:23+0100\n"
+"POT-Creation-Date: 2021-06-21 18:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
-#: mate-about/mate-about.c:76
+#: mate-about/mate-about.c:68
 msgid "translator-credits"
 msgstr ""
 
@@ -270,15 +270,15 @@ msgstr ""
 msgid "The color you've chosen."
 msgstr ""
 
-#: libmate-desktop/mate-colorsel.c:1364
+#: libmate-desktop/mate-colorsel.c:1366
 msgid "gtk-color-sel"
 msgstr ""
 
-#: libmate-desktop/mate-colorsel.c:1369
+#: libmate-desktop/mate-colorsel.c:1371
 msgid "_Save color here"
 msgstr ""
 
-#: libmate-desktop/mate-colorsel.c:1589
+#: libmate-desktop/mate-colorsel.c:1593
 msgid ""
 "Click this palette entry to make it the current color. To change this entry, "
 "drag a color swatch here or right-click it and select \"Save color here.\""
@@ -377,32 +377,32 @@ msgstr ""
 msgid "Unknown encoding of: %s"
 msgstr ""
 
-#: libmate-desktop/mate-desktop-utils.c:149
+#: libmate-desktop/mate-desktop-utils.c:150
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr ""
 
-#: libmate-desktop/mate-languages.c:734
+#: libmate-desktop/mate-languages.c:746
 msgid "Unspecified"
 msgstr ""
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: libmate-desktop/mate-rr.c:462
+#: libmate-desktop/mate-rr.c:458
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr ""
 
-#: libmate-desktop/mate-rr.c:483
+#: libmate-desktop/mate-rr.c:479
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr ""
 
-#: libmate-desktop/mate-rr.c:489
+#: libmate-desktop/mate-rr.c:485
 msgid "could not get the range of screen sizes"
 msgstr ""
 
-#: libmate-desktop/mate-rr.c:708
+#: libmate-desktop/mate-rr.c:704
 msgid "RANDR extension is not present"
 msgstr ""
 
-#: libmate-desktop/mate-rr.c:1265
+#: libmate-desktop/mate-rr.c:1261
 #, c-format
 msgid "could not get information about output %d"
 msgstr ""
@@ -410,19 +410,19 @@ msgstr ""
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1747
+#: libmate-desktop/mate-rr.c:1743
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr ""
 
-#: libmate-desktop/mate-rr.c:1782
+#: libmate-desktop/mate-rr.c:1778
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr ""
 
-#: libmate-desktop/mate-rr.c:1946
+#: libmate-desktop/mate-rr.c:1942
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr ""
@@ -1374,15 +1374,15 @@ msgstr ""
 msgid "Whether or not keyboard locking is enabled."
 msgstr ""
 
-#: tools/mate-color-select.c:65 tools/mate-color-select.desktop.in:3
+#: tools/mate-color-select.c:63 tools/mate-color-select.desktop.in:3
 msgid "MATE Color Selection"
 msgstr ""
 
-#: tools/mate-color-select.c:72
+#: tools/mate-color-select.c:70
 msgid "_Copy"
 msgstr ""
 
-#: tools/mate-color-select.c:78
+#: tools/mate-color-select.c:76
 msgid "_Close"
 msgstr ""
 
