@@ -29,7 +29,7 @@
 #include <libmate-desktop/mate-colorseldialog.h>
 #include <libmate-desktop/mate-colorsel.h>
 
-gboolean
+static gboolean
 copy_color (GtkWidget *widget, GdkEvent  *event, MateColorSelectionDialog *color_dialog)
 {
     GdkColor color;
@@ -70,13 +70,13 @@ main (int argc, char **argv)
     widget = gtk_button_new_with_mnemonic (_("_Copy"));
     image = gtk_image_new_from_icon_name ("edit-copy", GTK_ICON_SIZE_BUTTON);
     gtk_button_set_image (GTK_BUTTON (widget), image);
-    gtk_container_add (GTK_CONTAINER (gtk_dialog_get_action_area (GTK_DIALOG (color_dialog))), widget);
+    gtk_dialog_add_action_widget (GTK_DIALOG (color_dialog), widget, GTK_RESPONSE_ACCEPT);
     g_signal_connect (widget, "button-release-event", G_CALLBACK (copy_color), color_dialog);
 
     widget = gtk_button_new_with_mnemonic (_("_Close"));
     image = gtk_image_new_from_icon_name ("window-close", GTK_ICON_SIZE_BUTTON);
     gtk_button_set_image (GTK_BUTTON (widget), image);
-    gtk_container_add (GTK_CONTAINER (gtk_dialog_get_action_area (GTK_DIALOG (color_dialog))), widget);
+    gtk_dialog_add_action_widget (GTK_DIALOG (color_dialog), widget, GTK_RESPONSE_CLOSE);
     g_signal_connect (widget, "button-release-event", gtk_main_quit, NULL);
 
     gtk_widget_show_all (color_dialog);

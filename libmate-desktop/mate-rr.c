@@ -1153,7 +1153,11 @@ get_property (Display *dpy,
 
     if (actual_type == XA_INTEGER && actual_format == 8)
     {
+#ifdef GLIB_VERSION_2_68
+	result = g_memdup2 (prop, nitems);
+#else
 	result = g_memdup (prop, nitems);
+#endif
 	if (len)
 	    *len = nitems;
     }
@@ -1359,8 +1363,11 @@ output_copy (const MateRROutput *from)
     output->modes = (MateRRMode**) g_ptr_array_free (array, FALSE);
 
     output->edid_size = from->edid_size;
+#ifdef GLIB_VERSION_2_68
+    output->edid_data = g_memdup2 (from->edid_data, from->edid_size);
+#else
     output->edid_data = g_memdup (from->edid_data, from->edid_size);
-
+#endif
     return output;
 }
 
