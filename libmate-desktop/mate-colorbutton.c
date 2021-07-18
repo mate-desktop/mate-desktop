@@ -260,7 +260,10 @@ draw (GtkWidget      *widget,
 {
   MateColorButton *color_button = MATE_COLOR_BUTTON (data);
   cairo_pattern_t *checkered;
+  GtkStyleContext *context;
+  GdkRGBA  rgba;
 
+  mate_color_button_get_rgba (color_button, &rgba);
   if (mate_color_button_has_alpha (color_button))
     {
       cairo_save (cr);
@@ -278,21 +281,23 @@ draw (GtkWidget      *widget,
       cairo_restore (cr);
 
       cairo_set_source_rgba (cr,
-                             color_button->priv->color.red / 65535.,
-                             color_button->priv->color.green / 65535.,
-                             color_button->priv->color.blue / 65535.,
-                             color_button->priv->alpha / 65535.);
+                             rgba.red,
+                             rgba.green,
+                             rgba.blue,
+                             rgba.alpha);
     }
   else
     {
-      gdk_cairo_set_source_color (cr, &color_button->priv->color);
+      gdk_cairo_set_source_rgba (cr, &rgba);
     }
 
   cairo_paint (cr);
 
   if (!gtk_widget_is_sensitive (GTK_WIDGET (color_button)))
     {
-      gdk_cairo_set_source_color (cr, &gtk_widget_get_style (GTK_WIDGET(color_button))->bg[GTK_STATE_INSENSITIVE]);
+      context = gtk_widget_get_style_context (widget);
+      gtk_style_context_get_color (context, GTK_STATE_INSENSITIVE, &rgba);
+      gdk_cairo_set_source_rgba (cr, &rgba);
       checkered = mate_color_button_get_checkered ();
       cairo_mask (cr, checkered);
       cairo_pattern_destroy (checkered);
@@ -402,7 +407,6 @@ mate_color_button_drag_data_get (GtkWidget        *widget,
 static void
 mate_color_button_init (MateColorButton *color_button)
 {
-  GtkWidget *alignment;
   GtkWidget *frame;
   PangoLayout *layout;
   PangoRectangle rect;
@@ -412,18 +416,17 @@ mate_color_button_init (MateColorButton *color_button)
   /* Create the widgets */
   color_button->priv = mate_color_button_get_instance_private (color_button);
 
-  alignment = gtk_alignment_new (0.5, 0.5, 0.5, 1.0);
-  gtk_container_set_border_width (GTK_CONTAINER (alignment), 1);
-  gtk_container_add (GTK_CONTAINER (color_button), alignment);
-  gtk_widget_show (alignment);
-
   frame = gtk_frame_new (NULL);
+  gtk_widget_set_valign (frame, GTK_ALIGN_CENTER);
+  gtk_widget_set_halign (frame, GTK_ALIGN_CENTER);
   gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_ETCHED_OUT);
-  gtk_container_add (GTK_CONTAINER (alignment), frame);
+  gtk_container_add (GTK_CONTAINER (color_button), frame);
   gtk_widget_show (frame);
 
   /* Just some widget we can hook to expose-event on */
-  color_button->priv->draw_area = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
+  color_button->priv->draw_area = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+  gtk_widget_set_valign (color_button->priv->draw_area, GTK_ALIGN_CENTER);
+  gtk_widget_set_halign (color_button->priv->draw_area, GTK_ALIGN_CENTER);
 
   layout = gtk_widget_create_pango_layout (GTK_WIDGET (color_button), "Black");
   pango_layout_get_pixel_extents (layout, NULL, &rect);
