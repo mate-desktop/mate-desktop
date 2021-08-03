@@ -1,3 +1,25 @@
+### mate-desktop 1.26.0
+
+  * Translations update
+  * Replace the obsolete API in mate-colorsel.c file
+  * Fix compilation warning
+  * update copyright to 2021
+  * travis-ci: use ubuntu focal as host system
+  * MATE About: Fix off-by-one error, display yerba mate comment
+  * travis: disable travis builds for ubuntu
+  * Remove shadow warnings [-Wshadow]
+  * mate-about: Use the macro _(String) instead of the macro gettext(Msgid)
+  * Drop local macro mate_gettext(package, locale, codeset)
+  * Remove warning -Wbad-function-cast
+  * g_settings_get_string always returns a newly-allocated string
+  * build: set GETTEXT_PACKAGE=AC_PACKAGE_NAME
+  * tx: update resource
+  * mate-color-select: Do not use deprecated gtk_button_new_from_stock
+  * update issue template
+  * Remove USE_MATE2_MACROS from autogen.sh (legacy)
+  * travis CI: use rolling tag for ubuntu docker image
+  * travis CI: fix build issue of gtk-doc module
+
 ### mate-desktop 1.25.0
 
   * Translations update
