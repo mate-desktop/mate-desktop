@@ -17,7 +17,7 @@ branches:
 
 before_install:
   - curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/docker-build
-  - chmod +x docker-build gen-index
+  - chmod +x docker-build gen
 
 install:
   - pip3 install PyGithub
