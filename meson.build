@@ -8,11 +8,11 @@ project(
 matedt_version = meson.project_version()
 version_array = matedt_version.split('.')
 mate_major_version = version_array[0].to_int()
-mate_minor_version = version_array[0].to_int()
-mate_micro_version = version_array[0].to_int()
-mate_platform = 1
-mate_minor = 24
-mate_micro = 0
+mate_minor_version = version_array[1].to_int()
+mate_micro_version = version_array[2].to_int()
+mate_platform = mate_major_version
+mate_minor = mate_minor_version
+mate_micro = mate_micro_version
 
 matedt_api_version = '2.0'
 matedt_api_name = '@0@-@1@'.format(meson.project_name(), matedt_api_version)
