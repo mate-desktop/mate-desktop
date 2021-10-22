@@ -954,6 +954,7 @@ expand_thumbnailing_script (const char  *script,
 
       g_ptr_array_add (array, expanded);
     }
+  g_strfreev (script_elems);
 
   if (!got_in)
     {
