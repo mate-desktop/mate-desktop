@@ -1423,7 +1423,6 @@ mate_rr_config_set_clone (MateRRConfig *self, gboolean clone)
     self->priv->clone = clone;
 }
 
-
 /*
  * CRTC assignment
  */

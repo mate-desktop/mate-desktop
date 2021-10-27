@@ -61,7 +61,6 @@
 /* Default ring width */
 #define DEFAULT_RING_WIDTH 10
 
-
 /* Dragging modes */
 typedef enum {
   DRAG_NONE,
@@ -89,7 +88,6 @@ struct _MateHSVPrivate
 
   guint focus_on_ring : 1;
 };
-
 
 /* Signal IDs */
 
@@ -336,7 +334,6 @@ mate_hsv_size_allocate (GtkWidget     *widget,
                             allocation->width,
                             allocation->height);
 }
-
 
 /* Utility functions */
 
@@ -761,7 +758,6 @@ mate_hsv_motion (GtkWidget      *widget,
   return FALSE;
 }
 
-
 /* Redrawing */
 
 /* Paints the hue ring */
@@ -1126,7 +1122,6 @@ mate_hsv_draw (GtkWidget *widget,
 
   paint_ring (hsv, cr);
   paint_triangle (hsv, cr, draw_focus);
-
 
   if (draw_focus && priv->focus_on_ring)
     {

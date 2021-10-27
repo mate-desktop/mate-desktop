@@ -44,7 +44,6 @@ G_BEGIN_DECLS
 #define MATE_IS_HSV_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_HSV))
 #define MATE_HSV_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_HSV, MateHSVClass))
 
-
 typedef struct _MateHSV              MateHSV;
 typedef struct _MateHSVPrivate       MateHSVPrivate;
 typedef struct _MateHSVClass         MateHSVClass;
@@ -74,7 +73,6 @@ struct _MateHSVClass
   void (*_gtk_reserved3) (void);
   void (*_gtk_reserved4) (void);
 };
-
 
 GType      mate_hsv_get_type     (void) G_GNUC_CONST;
 GtkWidget* mate_hsv_new          (void);

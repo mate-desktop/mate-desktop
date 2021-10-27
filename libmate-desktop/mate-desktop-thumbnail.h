@@ -87,7 +87,6 @@ void       mate_desktop_thumbnail_factory_create_failed_thumbnail (MateDesktopTh
                                                                    const char                  *uri,
                                                                    time_t                       mtime);
 
-
 /* Thumbnailing utils: */
 gboolean   mate_desktop_thumbnail_has_uri           (GdkPixbuf          *pixbuf,
                                                      const char         *uri);

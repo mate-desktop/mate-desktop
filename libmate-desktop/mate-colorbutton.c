@@ -113,7 +113,6 @@ static void mate_color_button_drag_data_received (GtkWidget        *widget,
 						 guint32           time,
 						 MateColorButton   *color_button);
 
-
 static guint color_button_signals[LAST_SIGNAL] = { 0 };
 
 static const GtkTargetEntry drop_types[] = { { "application/x-color", 0, 0 } };
@@ -337,7 +336,6 @@ mate_color_button_drag_data_received (GtkWidget        *widget,
       return;
     }
 
-
   dropped = (guint16 *)gtk_selection_data_get_data (selection_data);
 
   color_button->priv->color.red = dropped[0];
@@ -479,7 +477,6 @@ mate_color_button_finalize (GObject *object)
 
   G_OBJECT_CLASS (mate_color_button_parent_class)->finalize (object);
 }
-
 
 /**
  * mate_color_button_new:
@@ -791,7 +788,6 @@ mate_color_button_get_use_alpha (MateColorButton *color_button)
 
   return color_button->priv->use_alpha;
 }
-
 
 /**
  * mate_color_button_set_title:

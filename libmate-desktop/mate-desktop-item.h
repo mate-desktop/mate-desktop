@@ -225,7 +225,6 @@ char *                  mate_desktop_item_find_icon         (GtkIconTheme       
 							      int                         desired_size,
 							      int                         flags);
 
-
 /*
  * Reading/Writing different sections, NULL is the standard section
  */

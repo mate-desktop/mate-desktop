@@ -132,7 +132,6 @@ struct _MateColorSelectionPrivate
   gulong settings_connection;
 };
 
-
 static void mate_color_selection_dispose		(GObject		 *object);
 static void mate_color_selection_finalize        (GObject		 *object);
 static void update_color			(MateColorSelection	 *colorsel);
@@ -299,7 +298,6 @@ mate_color_selection_class_init (MateColorSelectionClass *klass)
                                                        _("The hexadecimal string of current color"),
                                                        "",
                                                        G_PARAM_READABLE));
-
 
   color_selection_signals[COLOR_CHANGED] =
     g_signal_new ("color-changed",
@@ -866,7 +864,6 @@ color_sample_draw_sample (MateColorSelection *colorsel, cairo_t *cr, int which)
   cairo_fill (cr);
 }
 
-
 static void
 color_sample_update_samples (MateColorSelection *colorsel)
 {
@@ -883,7 +880,6 @@ color_old_sample_draw (GtkWidget          *da,
   color_sample_draw_sample (colorsel, cr, 0);
   return FALSE;
 }
-
 
 static gboolean
 color_cur_sample_draw (GtkWidget          *da,
@@ -990,7 +986,6 @@ color_sample_new (MateColorSelection *colorsel)
 
   gtk_widget_show_all (priv->sample_area);
 }
-
 
 /*
  *
@@ -1383,7 +1378,6 @@ do_popup (MateColorSelection *colorsel,
                   3, timestamp);
 }
 
-
 static gboolean
 palette_enter (GtkWidget        *drawing_area,
 	       GdkEventCrossing *event,
@@ -1543,7 +1537,6 @@ palette_popup (GtkWidget *widget,
   return TRUE;
 }
 
-
 static GtkWidget*
 palette_new (MateColorSelection *colorsel)
 {
@@ -1593,7 +1586,6 @@ palette_new (MateColorSelection *colorsel)
                         _("Click this palette entry to make it the current color. To change this entry, drag a color swatch here or right-click it and select \"Save color here.\""));
   return retval;
 }
-
 
 /*
  *
@@ -2626,7 +2618,6 @@ mate_color_selection_set_previous_alpha (MateColorSelection *colorsel,
   priv->changing = FALSE;
 }
 
-
 /**
  * mate_color_selection_get_previous_color:
  * @colorsel: a #MateColorSelection.
@@ -2720,7 +2711,6 @@ mate_color_selection_is_adjusting (MateColorSelection *colorsel)
 
   return (mate_hsv_is_adjusting (MATE_HSV (priv->triangle_colorsel)));
 }
-
 
 /**
  * mate_color_selection_palette_from_string:
@@ -2930,5 +2920,4 @@ make_all_relations (AtkObject *atk_obj,
   make_control_relations (atk_obj, priv->green_spinbutton);
   make_control_relations (atk_obj, priv->blue_spinbutton);
 }
-
 
