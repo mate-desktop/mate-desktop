@@ -160,7 +160,6 @@ static void           mode_initialize   (MateRRMode        *mode,
 static MateRRMode *  mode_copy         (const MateRRMode  *from);
 static void           mode_free         (MateRRMode        *mode);
 
-
 static void mate_rr_screen_finalize (GObject*);
 static void mate_rr_screen_set_property (GObject*, guint, const GValue*, GParamSpec*);
 static void mate_rr_screen_get_property (GObject*, guint, GValue*, GParamSpec*);

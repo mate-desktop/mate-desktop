@@ -37,7 +37,6 @@
 
 G_BEGIN_DECLS
 
-
 /* The MateColorButton widget is a simple color picker in a button.
  * The button displays a sample of the currently selected color.  When
  * the user clicks on the button, a color selection dialog pops up.
@@ -75,7 +74,6 @@ struct _MateColorButtonClass {
   void (*_gtk_reserved4) (void);
 };
 
-
 GType      mate_color_button_get_type       (void) G_GNUC_CONST;
 GtkWidget *mate_color_button_new            (void);
 GtkWidget *mate_color_button_new_with_color (const GdkColor *color);
@@ -96,7 +94,6 @@ gboolean   mate_color_button_get_use_alpha  (MateColorButton *color_button);
 void       mate_color_button_set_title      (MateColorButton *color_button,
 					    const gchar    *title);
 const gchar *mate_color_button_get_title (MateColorButton *color_button);
-
 
 G_END_DECLS
 

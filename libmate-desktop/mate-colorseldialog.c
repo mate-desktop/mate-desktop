@@ -40,7 +40,6 @@ enum {
   PROP_HELP_BUTTON
 };
 
-
 /***************************/
 /* MateColorSelectionDialog */
 /***************************/

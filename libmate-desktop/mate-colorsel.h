@@ -40,11 +40,9 @@ G_BEGIN_DECLS
 #define MATE_IS_COLOR_SELECTION_CLASS(klass)		(G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_COLOR_SELECTION))
 #define MATE_COLOR_SELECTION_GET_CLASS(obj)              (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_COLOR_SELECTION, MateColorSelectionClass))
 
-
 typedef struct _MateColorSelection       MateColorSelection;
 typedef struct _MateColorSelectionClass  MateColorSelectionClass;
 typedef struct _MateColorSelectionPrivate    MateColorSelectionPrivate;
-
 
 typedef void (* MateColorSelectionChangePaletteFunc) (const GdkColor    *colors,
                                                      gint               n_colors);
@@ -73,7 +71,6 @@ struct _MateColorSelectionClass
   void (*_gtk_reserved4) (void);
 };
 
-
 /* ColorSelection */
 
 GType      mate_color_selection_get_type                (void) G_GNUC_CONST;
@@ -84,7 +81,6 @@ void       mate_color_selection_set_has_opacity_control (MateColorSelection *col
 gboolean   mate_color_selection_get_has_palette         (MateColorSelection *colorsel);
 void       mate_color_selection_set_has_palette         (MateColorSelection *colorsel,
 							gboolean           has_palette);
-
 
 void     mate_color_selection_set_current_color   (MateColorSelection *colorsel,
 						  const GdkColor    *color);

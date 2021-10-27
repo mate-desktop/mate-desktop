@@ -74,7 +74,6 @@ test_ditem (const char *file)
 		 "de");
 	g_print ("NAME(lang=de): |%s|\n", text);
 
-
 	text = mate_desktop_item_get_localestring_lang
 		(ditem, MATE_DESKTOP_ITEM_NAME,
 		 NULL);
@@ -126,7 +125,6 @@ launch_item (const char *file)
 	ret = mate_desktop_item_launch (ditem, file_list, 0, NULL);
 	g_print ("launch returned: %d\n", ret);
 }
-
 
 int
 main (int argc, char **argv)

@@ -223,7 +223,6 @@ static void read_pnp_ids(void)
 	}
 }
 
-
 static const char* find_vendor(const char* code)
 {
 	const char* vendor_name;

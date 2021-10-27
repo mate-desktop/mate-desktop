@@ -414,7 +414,6 @@ copy_string_hash (gpointer key, gpointer value, gpointer user_data)
 			      g_strdup (value));
 }
 
-
 /**
  * mate_desktop_item_copy:
  * @item: The item to be copied
@@ -508,7 +507,6 @@ make_fake_directory (GFile *dir)
 	item = mate_desktop_item_new ();
 	mate_desktop_item_set_entry_type (item,
 					   MATE_DESKTOP_ITEM_TYPE_DIRECTORY);
-
 
 	item->mtime = DONT_UPDATE_MTIME; /* it doesn't exist, we know that */
 	child = g_file_get_child (dir, ".directory");
@@ -975,7 +973,6 @@ key_basename (const char *key)
 	else
 		return key;
 }
-
 
 static const char *
 lookup (const MateDesktopItem *item, const char *key)
@@ -1824,7 +1821,6 @@ ditem_execute (const MateDesktopItem *item,
 				     sn_error_trap_push,
 				     sn_error_trap_pop);
 
-
 	/* Only initiate notification if desktop file supports it.
 	 * (we could avoid setting up the SnLauncherContext if we aren't going
 	 * to initiate, but why bother)
@@ -1977,7 +1973,6 @@ ditem_execute (const MateDesktopItem *item,
 		}
 #endif
 
-
 		if ( ! g_spawn_async (working_dir,
 				      real_argv,
 				      envp,
@@ -2059,7 +2054,6 @@ strip_the_amp (char *exec)
 	return TRUE;
 }
 
-
 static int
 mate_desktop_item_launch_on_screen_with_env (
 		const MateDesktopItem       *item,
@@ -2109,7 +2103,6 @@ mate_desktop_item_launch_on_screen_with_env (
 		return -1;
 	}
 
-
 	if (exec == NULL ||
 	    exec[0] == '\0') {
 		g_set_error (error,
@@ -2118,7 +2111,6 @@ mate_desktop_item_launch_on_screen_with_env (
 			     _("No command (Exec) to launch"));
 		return -1;
 	}
-
 
 	/* make a new copy and get rid of spaces */
 	the_exec = g_alloca (strlen (exec) + 1);
@@ -2436,8 +2428,6 @@ mate_desktop_item_set_entry_type (MateDesktopItem *item,
 	}
 }
 
-
-
 /**
  * mate_desktop_item_get_file_status:
  * @item: A desktop item
@@ -2525,7 +2515,6 @@ mate_desktop_item_find_icon (GtkIconTheme *icon_theme,
 		     strcmp (p, ".svg") == 0)) {
 		    *p = 0;
 		}
-
 
 		info = gtk_icon_theme_lookup_icon (icon_theme,
 						   icon_no_extension,
@@ -3062,7 +3051,6 @@ cannonize (const char *key, const char *value)
 	return NULL;
 }
 
-
 static char *
 decode_string_and_dup (const char *s)
 {
@@ -3448,7 +3436,6 @@ insert_key (MateDesktopItem *item,
 		}
 	}
 
-
 	if (cur_section == NULL) {
 		/* only add to list if we haven't seen it before */
 		if (g_hash_table_lookup (item->main_hash, k) == NULL) {
@@ -3520,7 +3507,6 @@ try_english_key (MateDesktopItem *item, const char *key)
 	}
 	return str;
 }
-
 
 static void
 sanitize (MateDesktopItem *item, const char *uri)

@@ -441,7 +441,6 @@ mate_bg_save_to_gsettings (MateBG    *bg,
 	g_free (secondary);
 }
 
-
 static void
 mate_bg_init (MateBG *bg)
 {
@@ -940,7 +939,6 @@ get_scaled_pixbuf (MateBGPlacement  placement,
 	return new;
 }
 
-
 static void
 draw_image_area (MateBG        *bg,
 		 gint           num_monitor,
@@ -1222,7 +1220,6 @@ mate_bg_create_surface_scale (MateBG      *bg,
 
 	return surface;
 }
-
 
 /* determine if a background is darker or lighter than average, to help
  * clients know what colors to draw on top with
@@ -1703,7 +1700,6 @@ struct _SlideShow
 	GQueue *stack;
 };
 
-
 #if GLIB_CHECK_VERSION(2,61,2)
 static double
 now (void)
@@ -2049,7 +2045,6 @@ blow_expensive_caches_in_idle (MateBG *bg)
 				    bg);
 	}
 }
-
 
 static gboolean
 on_timeout (gpointer data)
@@ -3061,7 +3056,6 @@ read_slideshow_file (const char *filename,
 		show = NULL;
 	}
 
-
 	if (show) {
 		if (!g_markup_parse_context_end_parse (context, err)) {
 			slideshow_unref (show);
@@ -3131,7 +3125,6 @@ create_thumbnail_for_filename (MateDesktopThumbnailFactory *factory,
 			int orig_height = gdk_pixbuf_get_height (orig);
 
 			result = pixbuf_scale_to_fit (orig, THUMBNAIL_SIZE, THUMBNAIL_SIZE);
-
 
 			g_object_set_data_full (G_OBJECT (result), "mate-thumbnail-height",
 						g_strdup_printf ("%d", orig_height), g_free);
@@ -3236,7 +3229,6 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 	if (!show)
 		return NULL;
 
-
 	if (frame_num < 0 || frame_num >= g_queue_get_length (show->slides))
 		return NULL;
 
@@ -3257,7 +3249,6 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 	}
 	if (!found)
 		return NULL;
-
 
 	result = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, dest_width, dest_height);
 

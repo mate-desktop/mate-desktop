@@ -64,7 +64,6 @@ char *mate_rr_output_info_get_name (MateRROutputInfo *self);
 gboolean mate_rr_output_info_is_active  (MateRROutputInfo *self);
 void     mate_rr_output_info_set_active (MateRROutputInfo *self, gboolean active);
 
-
 void mate_rr_output_info_get_geometry (MateRROutputInfo *self, int *x, int *y, int *width, int *height);
 void mate_rr_output_info_set_geometry (MateRROutputInfo *self, int  x, int  y, int  width, int  height);
 

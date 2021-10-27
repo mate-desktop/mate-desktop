@@ -39,10 +39,8 @@ G_BEGIN_DECLS
 #define MATE_IS_COLOR_SELECTION_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_COLOR_SELECTION_DIALOG))
 #define MATE_COLOR_SELECTION_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialogClass))
 
-
 typedef struct _MateColorSelectionDialog       MateColorSelectionDialog;
 typedef struct _MateColorSelectionDialogClass  MateColorSelectionDialogClass;
-
 
 struct _MateColorSelectionDialog
 {
@@ -65,12 +63,10 @@ struct _MateColorSelectionDialogClass
   void (*_gtk_reserved4) (void);
 };
 
-
 /* ColorSelectionDialog */
 GType      mate_color_selection_dialog_get_type            (void) G_GNUC_CONST;
 GtkWidget* mate_color_selection_dialog_new                 (const gchar *title);
 GtkWidget* mate_color_selection_dialog_get_color_selection (MateColorSelectionDialog *colorsel);
-
 
 G_END_DECLS
 
