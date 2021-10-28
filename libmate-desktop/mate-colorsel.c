@@ -892,7 +892,7 @@ static void
 color_sample_setup_dnd (MateColorSelection *colorsel, GtkWidget *sample)
 {
   static const GtkTargetEntry targets[] = {
-    { "application/x-color", 0 }
+    { .target = "application/x-color", .flags = 0, .info = 0 }
   };
   MateColorSelectionPrivate *priv;
   priv = colorsel->private_data;
@@ -1258,7 +1258,7 @@ palette_set_color (GtkWidget         *drawing_area,
   if (!pointer || GPOINTER_TO_INT (pointer) == 0)
     {
       static const GtkTargetEntry targets[] = {
-	{ "application/x-color", 0 }
+	{ .target = "application/x-color", .flags = 0, .info = 0 }
       };
       gtk_drag_source_set (drawing_area,
 			   GDK_BUTTON1_MASK | GDK_BUTTON3_MASK,
@@ -1539,7 +1539,7 @@ static GtkWidget*
 palette_new (MateColorSelection *colorsel)
 {
   static const GtkTargetEntry targets[] = {
-    { "application/x-color", 0 }
+    { .target = "application/x-color", .flags = 0, .info = 0 }
   };
 
   GtkWidget *retval = gtk_drawing_area_new ();
