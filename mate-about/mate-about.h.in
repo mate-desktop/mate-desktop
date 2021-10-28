@@ -664,7 +664,7 @@ static void mate_about_on_activate(GtkApplication* app);
 // arguments definitions
 static GOptionEntry command_entries[] = {
     {"version", 'v', 0, G_OPTION_ARG_NONE, &mate_about_nogui, "Show MATE version", NULL},
-    {NULL}
+    {NULL, 0, 0, G_OPTION_ARG_NONE, NULL, NULL, NULL}
 };
 
 #endif /* __MATE_ABOUT_H__ */
