@@ -3197,9 +3197,13 @@ mate_bg_changes_with_time (MateBG *bg)
 	if (!bg->filename)
 		return FALSE;
 
-	show = get_as_slideshow (bg, bg->filename);
-	if (show)
-		return g_queue_get_length (show->slides) > 1;
+	if ((show = get_as_slideshow (bg, bg->filename)) != NULL) {
+		gboolean result;
+
+		result = (g_queue_get_length (show->slides) > 1) ? TRUE : FALSE;
+		slideshow_unref (show);
+		return result;
+	}
 
 	return FALSE;
 }
