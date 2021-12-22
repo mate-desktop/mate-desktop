@@ -763,7 +763,7 @@ mate_color_button_set_use_alpha (MateColorButton *color_button,
 
   if (color_button->priv->use_alpha != use_alpha)
     {
-      color_button->priv->use_alpha = use_alpha;
+      color_button->priv->use_alpha = (use_alpha != FALSE);
 
       gtk_widget_queue_draw (color_button->priv->draw_area);
 
