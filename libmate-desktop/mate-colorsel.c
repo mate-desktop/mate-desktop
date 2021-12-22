@@ -2334,7 +2334,7 @@ mate_color_selection_set_has_opacity_control (MateColorSelection *colorsel,
 
   if (priv->has_opacity != has_opacity)
     {
-      priv->has_opacity = has_opacity;
+      priv->has_opacity = (has_opacity != FALSE);
       if (has_opacity)
 	{
 	  gtk_widget_show (priv->opacity_slider);
@@ -2393,7 +2393,7 @@ mate_color_selection_set_has_palette (MateColorSelection *colorsel,
 
   if (priv->has_palette != has_palette)
     {
-      priv->has_palette = has_palette;
+      priv->has_palette = (has_palette != FALSE);
       if (has_palette)
 	gtk_widget_show (priv->palette_frame);
       else
