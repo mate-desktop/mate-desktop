@@ -70,7 +70,7 @@ fi
 AC_SUBST([RELEASE_YEAR])
 
 AC_ARG_ENABLE(deprecation_flags,
-              [AC_HELP_STRING([--enable-deprecation-flags],
+              [AS_HELP_STRING([--enable-deprecation-flags],
                               [use *_DISABLE_DEPRECATED flags @<:@default=no@:>@])],,
               [enable_deprecation_flags=no])
 
@@ -90,7 +90,7 @@ AM_CONDITIONAL(MATE_ABOUT_ENABLED, test "x$enable_mate_about" = "xyes")
 # package, or an internal file
 
 AC_ARG_WITH(pnp-ids-path,
-              [AC_HELP_STRING([--with-pnp-ids-path],
+              [AS_HELP_STRING([--with-pnp-ids-path],
                               [Specify the path to pnp.ids @<:@default=(internal)@:>@])],,
                               [with_pnp_ids_path="\${pnpdatadir}/pnp.ids"])
 
@@ -127,7 +127,7 @@ STARTUP_NOTIFICATION_VERSION=0.5
 STARTUP_NOTIFICATION_PACKAGE=
 
 AC_ARG_ENABLE(startup-notification,
-	AC_HELP_STRING([--disable-startup-notification], [disable startup notification support]),, enable_startup_notification=auto)
+	AS_HELP_STRING([--disable-startup-notification], [disable startup notification support]),, enable_startup_notification=auto)
 
 AC_MSG_CHECKING([Startup notification library >= $STARTUP_NOTIFICATION_VERSION])
 
