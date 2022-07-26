@@ -292,8 +292,8 @@ has_similar_mode (MateRROutput *output, MateRRMode *mode)
 {
     int i;
     MateRRMode **modes = mate_rr_output_list_modes (output);
-    int width = mate_rr_mode_get_width (mode);
-    int height = mate_rr_mode_get_height (mode);
+    guint width = mate_rr_mode_get_width (mode);
+    guint height = mate_rr_mode_get_height (mode);
 
     for (i = 0; modes[i] != NULL; ++i)
     {
@@ -1670,7 +1670,7 @@ static const RotationMap rotation_map[] =
 static MateRRRotation
 mate_rr_rotation_from_xrotation (Rotation r)
 {
-    int i;
+    gsize i;
     MateRRRotation result = 0;
 
     for (i = 0; i < G_N_ELEMENTS (rotation_map); ++i)
@@ -1685,7 +1685,7 @@ mate_rr_rotation_from_xrotation (Rotation r)
 static Rotation
 xrotation_from_rotation (MateRRRotation r)
 {
-    int i;
+    gsize i;
     Rotation result = 0;
 
     for (i = 0; i < G_N_ELEMENTS (rotation_map); ++i)
