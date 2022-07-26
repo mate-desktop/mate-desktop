@@ -295,7 +295,7 @@ draw (GtkWidget      *widget,
   if (!gtk_widget_is_sensitive (GTK_WIDGET (color_button)))
     {
       context = gtk_widget_get_style_context (widget);
-      gtk_style_context_get_color (context, GTK_STATE_INSENSITIVE, &rgba);
+      gtk_style_context_get_color (context, GTK_STATE_FLAG_INSENSITIVE, &rgba);
       gdk_cairo_set_source_rgba (cr, &rgba);
       checkered = mate_color_button_get_checkered ();
       cairo_mask (cr, checkered);
