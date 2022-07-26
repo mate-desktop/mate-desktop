@@ -53,8 +53,6 @@
 #define DROPPER_X_HOT 2
 #define DROPPER_Y_HOT 16
 
-#define SAMPLE_WIDTH  64
-#define SAMPLE_HEIGHT 28
 #define CHECK_SIZE 16
 #define BIG_STEP 20
 
