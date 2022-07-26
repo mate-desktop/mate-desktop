@@ -371,7 +371,7 @@ handle_text (GMarkupParseContext *context,
 static void
 parser_free (Parser *parser)
 {
-    int i;
+    guint i;
     GList *list;
 
     g_assert (parser != NULL);
@@ -1448,7 +1448,7 @@ static gboolean
 can_clone (CrtcInfo *info,
 	   MateRROutput *output)
 {
-    int i;
+    guint i;
 
     for (i = 0; i < info->outputs->len; ++i)
     {
