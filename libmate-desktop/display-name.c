@@ -226,7 +226,7 @@ static void read_pnp_ids(void)
 static const char* find_vendor(const char* code)
 {
 	const char* vendor_name;
-	int i;
+	gsize i;
 
 	read_pnp_ids();
 
@@ -235,7 +235,7 @@ static const char* find_vendor(const char* code)
 	if (vendor_name)
 		return vendor_name;
 
-	for (i = 0; i < sizeof(vendors) / sizeof(vendors[0]); ++i)
+	for (i = 0; i < G_N_ELEMENTS (vendors); ++i)
 	{
 		const Vendor* v = &(vendors[i]);
 
