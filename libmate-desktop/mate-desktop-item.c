@@ -52,8 +52,6 @@
 #include <gtk/gtk.h>
 #endif
 
-#define sure_string(s) ((s)!=NULL?(s):"")
-
 #define MATE_DESKTOP_USE_UNSTABLE_API
 #undef MATE_DISABLE_DEPRECATED
 #include <mate-desktop-item.h>
