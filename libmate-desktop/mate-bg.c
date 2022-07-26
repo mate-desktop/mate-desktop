@@ -75,10 +75,6 @@ struct _FileSize {
 	char* file;
 };
 
-/* This is the size of the GdkRGB dither matrix, in order to avoid
- * bad dithering when tiling the gradient
- */
-#define GRADIENT_PIXMAP_TILE_SIZE 128
 #define THUMBNAIL_SIZE 256
 
 typedef struct FileCacheEntry FileCacheEntry;
