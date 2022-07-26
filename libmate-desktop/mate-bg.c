@@ -3229,7 +3229,7 @@ mate_bg_create_frame_thumbnail (MateBG			*bg,
 	if (!show)
 		return NULL;
 
-	if (frame_num < 0 || frame_num >= g_queue_get_length (show->slides))
+	if (frame_num < 0 || (guint) frame_num >= g_queue_get_length (show->slides))
 		return NULL;
 
 	i = 0;
