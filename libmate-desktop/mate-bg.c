@@ -104,7 +104,7 @@ struct _MateBG {
 
 	/* Cached information, only access through cache accessor functions */
 	SlideShow* slideshow;
-	time_t file_mtime;
+	gint64 file_mtime;
 	GdkPixbuf* pixbuf_cache;
 	int timeout_id;
 
@@ -172,7 +172,7 @@ static GdkPixbuf *get_pixbuf_for_size  (MateBG               *bg,
 static void       clear_cache          (MateBG               *bg);
 static gboolean   is_different         (MateBG               *bg,
 					const char            *filename);
-static time_t     get_mtime            (const char            *filename);
+static gint64     get_mtime            (const char            *filename);
 static GdkPixbuf *create_img_thumbnail (MateBG               *bg,
 					MateDesktopThumbnailFactory *factory,
 					GdkScreen             *screen,
@@ -684,16 +684,10 @@ static gboolean
 cache_file_is_valid (const char *filename,
 		     const char *cache_filename)
 {
-	time_t mtime;
-	time_t cache_mtime;
-
 	if (!g_file_test (cache_filename, G_FILE_TEST_IS_REGULAR))
 		return FALSE;
 
-	mtime = get_mtime (filename);
-	cache_mtime = get_mtime (cache_filename);
-
-	return (mtime < cache_mtime);
+	return (get_mtime (filename) < get_mtime (cache_filename));
 }
 
 static void
@@ -2099,14 +2093,12 @@ ensure_timeout (MateBG *bg,
 	}
 }
 
-static time_t
+static gint64
 get_mtime (const char *filename)
 {
 	GFile     *file;
 	GFileInfo *info;
-	time_t     mtime;
-
-	mtime = (time_t)-1;
+	gint64     mtime = (gint64)-1;
 
 	if (filename) {
 		file = g_file_new_for_path (filename);
@@ -2434,9 +2426,7 @@ is_different (MateBG    *bg,
 		return FALSE;
 	}
 	else {
-		time_t mtime = get_mtime (filename);
-
-		if (mtime != bg->file_mtime)
+		if (get_mtime (filename) != bg->file_mtime)
 			return TRUE;
 
 		if (strcmp (filename, bg->filename) != 0)
@@ -3098,13 +3088,12 @@ create_thumbnail_for_filename (MateDesktopThumbnailFactory *factory,
 			       const char            *filename)
 {
 	char *thumb;
-	time_t mtime;
+	gint64 mtime;
 	GdkPixbuf *orig, *result = NULL;
 	char *uri;
 
 	mtime = get_mtime (filename);
-
-	if (mtime == (time_t)-1)
+	if (mtime == (gint64)-1)
 		return NULL;
 
 	uri = g_filename_to_uri (filename, NULL, NULL);
