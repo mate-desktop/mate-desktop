@@ -82,14 +82,14 @@ struct _MateDesktopItem {
 
 	char *location;
 
-	time_t mtime;
+	gint64 mtime;
 
 	guint32 launch_time;
 };
 
 /* If mtime is set to this, set_location won't update mtime,
  * this is to be used internally only. */
-#define DONT_UPDATE_MTIME ((time_t)-2)
+#define DONT_UPDATE_MTIME ((gint64)-2)
 
 typedef struct {
 	char *name;
@@ -579,7 +579,7 @@ mate_desktop_item_new_from_gfile (GFile *file,
 	GFileInfo *info;
 	GFileType type;
 	GFile *parent;
-	time_t mtime = 0;
+	gint64 mtime = 0;
 	ReadBuf *rb;
 
 	g_return_val_if_fail (file != NULL, NULL);
@@ -838,7 +838,7 @@ mate_desktop_item_save (MateDesktopItem *item,
 		return FALSE;
 
 	item->modified = FALSE;
-	item->mtime = time (NULL);
+	item->mtime = g_get_real_time () / G_USEC_PER_SEC;
 
 	return TRUE;
 }
@@ -2456,7 +2456,7 @@ mate_desktop_item_get_file_status (const MateDesktopItem *item)
 
 	if (!g_file_info_has_attribute (info, G_FILE_ATTRIBUTE_TIME_MODIFIED))
 		retval = MATE_DESKTOP_ITEM_DISAPPEARED;
-	else if (item->mtime < g_file_info_get_attribute_uint64 (info, G_FILE_ATTRIBUTE_TIME_MODIFIED))
+	else if (((guint64) item->mtime) < g_file_info_get_attribute_uint64 (info, G_FILE_ATTRIBUTE_TIME_MODIFIED))
 		retval = MATE_DESKTOP_ITEM_CHANGED;
 
 	g_object_unref (info);
