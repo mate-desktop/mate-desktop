@@ -30,5 +30,17 @@
       <summary>Input feedback sounds</summary>
       <description>Whether to play sounds on input events.</description>
     </key>
+    <key name="volume-overamplifiable" type="b">
+      <default>false</default>
+      <summary>Permit the output volume to exceed 100%</summary>
+      <description>
+        If this is set to TRUE, the user will be allowed to set the output /
+        speaker volume to above 100%.  By setting the output volume above
+        100%, the sound server will amplify the audio above what the audio
+        hardware can do cleanly.  This can lead to audio quality degradation,
+        but may be useful for listening to extremely quiet audio recordings,
+        where the recording would otherwise be completely useless.
+      </description>
+    </key>
   </schema>
 </schemalist>
