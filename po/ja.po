@@ -7,22 +7,23 @@
 # semicolon <mail@semicln.com>, 2018
 # Kenzo Matsumoto <dicegeist@gmail.com>, 2018
 # あわしろいくや <ikunya@gmail.com>, 2018
-# ふうせん Fu-sen. | BALLOON a.k.a. Fu-sen., 2018
+# 🎈 BALLOON | FU-SEN, 2018
 # Ikuru K <kanumaiku@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # jeiday, 2019
+# fbc955180bc2b956cb4ef52d00eb80a0_91487f8, 2021
+# eletra, 2021
 # ABE Tsunehiko, 2021
-# Mika Kobayashi, 2021
-# E.T Master, 2021
-# Green, 2021
+# pivo thusr, 2021
+# Green, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.25.0\n"
+"Project-Id-Version: mate-desktop 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
+"POT-Creation-Date: 2022-10-29 15:22+0200\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Green, 2021\n"
+"Last-Translator: Green, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,11 +66,11 @@ msgstr "MATE デスクトップ環境"
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2021 MATE developers"
+"Copyright © 2012-2022 MATE developers"
 msgstr ""
 "Copyright © 1997-2011 GNOME 開発者\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2021 MATE 開発者"
+"Copyright © 2012-2022 MATE 開発者"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -118,247 +119,259 @@ msgstr ""
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: libmate-desktop/display-name.c:264
+#: libmate-desktop/display-name.c:263
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "不明"
 
-#: libmate-desktop/mate-colorbutton.c:152
+#: libmate-desktop/mate-colorbutton.c:151
 msgid "Use alpha"
 msgstr "アルファを使用"
 
-#: libmate-desktop/mate-colorbutton.c:153
+#: libmate-desktop/mate-colorbutton.c:152
 msgid "Whether or not to give the color an alpha value"
 msgstr "色指定にアルファ値を使用するかどうか"
 
-#: libmate-desktop/mate-colorbutton.c:167
+#: libmate-desktop/mate-colorbutton.c:166
 msgid "Title"
 msgstr "タイトル"
 
-#: libmate-desktop/mate-colorbutton.c:168
+#: libmate-desktop/mate-colorbutton.c:167
 msgid "The title of the color selection dialog"
 msgstr "色の選択ダイアログのタイトル"
 
-#: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:168
+#: libmate-desktop/mate-colorbutton.c:439
 msgid "Pick a Color"
 msgstr "色の選択"
 
-#: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:284
+#: libmate-desktop/mate-colorbutton.c:181 libmate-desktop/mate-colorsel.c:281
 msgid "Current Color"
 msgstr "現在の色"
 
-#: libmate-desktop/mate-colorbutton.c:183
+#: libmate-desktop/mate-colorbutton.c:182
 msgid "The selected color"
 msgstr "選択した色"
 
-#: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:291
+#: libmate-desktop/mate-colorbutton.c:196 libmate-desktop/mate-colorsel.c:288
 msgid "Current Alpha"
 msgstr "現在のアルファ値"
 
-#: libmate-desktop/mate-colorbutton.c:198
+#: libmate-desktop/mate-colorbutton.c:197
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "選択された透明度(0で完全に透明、65535で完全に不透明)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
 msgstr "不正な色データを受け取りました\n"
 
-#: libmate-desktop/mate-colorsel.c:270
+#: libmate-desktop/mate-colorsel.c:267
 msgid "Has Opacity Control"
 msgstr "透明度の設定"
 
-#: libmate-desktop/mate-colorsel.c:271
+#: libmate-desktop/mate-colorsel.c:268
 msgid "Whether the color selector should allow setting opacity"
 msgstr "カラーせレクターで透明度を設定できるかどうか"
 
-#: libmate-desktop/mate-colorsel.c:277
+#: libmate-desktop/mate-colorsel.c:274
 msgid "Has palette"
 msgstr "パレットの設定"
 
-#: libmate-desktop/mate-colorsel.c:278
+#: libmate-desktop/mate-colorsel.c:275
 msgid "Whether a palette should be used"
 msgstr "パレットが使用可能かどうか"
 
-#: libmate-desktop/mate-colorsel.c:285
+#: libmate-desktop/mate-colorsel.c:282
 msgid "The current color"
 msgstr "現在の色"
 
-#: libmate-desktop/mate-colorsel.c:292
+#: libmate-desktop/mate-colorsel.c:289
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "現在の透明度(0で完全に透明、65535で完全に不透明)"
 
-#: libmate-desktop/mate-colorsel.c:298
+#: libmate-desktop/mate-colorsel.c:295
 msgid "HEX String"
 msgstr "16 進文字列"
 
-#: libmate-desktop/mate-colorsel.c:299
+#: libmate-desktop/mate-colorsel.c:296
 msgid "The hexadecimal string of current color"
 msgstr "現在の色の 16 進文字列"
 
-#: libmate-desktop/mate-colorsel.c:345
+#: libmate-desktop/mate-colorsel.c:341
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr "外の輪から色を選択して下さい。その後、中の三角形を使って明るさを選択して下さい。"
 
-#: libmate-desktop/mate-colorsel.c:369
+#: libmate-desktop/mate-colorsel.c:365
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr "アイドロッパーをクリック後、任意の箇所をクリックすることで、その場所の色を取得できます。"
 
-#: libmate-desktop/mate-colorsel.c:378
+#: libmate-desktop/mate-colorsel.c:374
 msgid "_Hue:"
 msgstr "色相(_H):"
 
-#: libmate-desktop/mate-colorsel.c:379
+#: libmate-desktop/mate-colorsel.c:375
 msgid "Position on the color wheel."
 msgstr "色相環内の位置"
 
-#: libmate-desktop/mate-colorsel.c:381
+#: libmate-desktop/mate-colorsel.c:377
 msgid "_Saturation:"
 msgstr "彩度(_S):"
 
-#: libmate-desktop/mate-colorsel.c:382
+#: libmate-desktop/mate-colorsel.c:378
 msgid "\"Deepness\" of the color."
 msgstr "色の濃さ"
 
-#: libmate-desktop/mate-colorsel.c:383
+#: libmate-desktop/mate-colorsel.c:379
 msgid "_Value:"
 msgstr "明度(_V):"
 
-#: libmate-desktop/mate-colorsel.c:384
+#: libmate-desktop/mate-colorsel.c:380
 msgid "Brightness of the color."
 msgstr "色の明るさ"
 
-#: libmate-desktop/mate-colorsel.c:385
+#: libmate-desktop/mate-colorsel.c:381
 msgid "_Red:"
 msgstr "赤(_R) :"
 
-#: libmate-desktop/mate-colorsel.c:386
+#: libmate-desktop/mate-colorsel.c:382
 msgid "Amount of red light in the color."
 msgstr "赤の強さ"
 
-#: libmate-desktop/mate-colorsel.c:387
+#: libmate-desktop/mate-colorsel.c:383
 msgid "_Green:"
 msgstr "緑(_G) :"
 
-#: libmate-desktop/mate-colorsel.c:388
+#: libmate-desktop/mate-colorsel.c:384
 msgid "Amount of green light in the color."
 msgstr "緑の強さ"
 
-#: libmate-desktop/mate-colorsel.c:389
+#: libmate-desktop/mate-colorsel.c:385
 msgid "_Blue:"
 msgstr "青(_B) :"
 
-#: libmate-desktop/mate-colorsel.c:390
+#: libmate-desktop/mate-colorsel.c:386
 msgid "Amount of blue light in the color."
 msgstr "青の強さ"
 
-#: libmate-desktop/mate-colorsel.c:393
+#: libmate-desktop/mate-colorsel.c:389
 msgid "Op_acity:"
 msgstr "透明度(_A) :"
 
-#: libmate-desktop/mate-colorsel.c:400 libmate-desktop/mate-colorsel.c:410
+#: libmate-desktop/mate-colorsel.c:396 libmate-desktop/mate-colorsel.c:406
 msgid "Transparency of the color."
 msgstr "色の透明度"
 
-#: libmate-desktop/mate-colorsel.c:417
+#: libmate-desktop/mate-colorsel.c:413
 msgid "Color _name:"
 msgstr "色の名前(_N):"
 
-#: libmate-desktop/mate-colorsel.c:431
+#: libmate-desktop/mate-colorsel.c:427
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr "HTMLの16進数形式、または「orange」などの色名で色を指定できます。"
 
-#: libmate-desktop/mate-colorsel.c:461
+#: libmate-desktop/mate-colorsel.c:457
 msgid "_Palette:"
 msgstr "パレット(_P):"
 
-#: libmate-desktop/mate-colorsel.c:491
+#: libmate-desktop/mate-colorsel.c:487
 msgid "Color Wheel"
 msgstr "色相環"
 
-#: libmate-desktop/mate-colorsel.c:948
+#: libmate-desktop/mate-colorsel.c:942
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr "選択中の色と比較するための前回選択した色です。カラーパレットにドラッグして再利用したり、この色を選択色として利用することができます。"
 
-#: libmate-desktop/mate-colorsel.c:951
+#: libmate-desktop/mate-colorsel.c:945
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr "以前選択した色。色をパレットにドラッグすることで、色を保存しておくことができます。"
 
-#: libmate-desktop/mate-colorsel.c:956
+#: libmate-desktop/mate-colorsel.c:950
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "前回選択した色。現在選択中の色と比較することができます。"
 
-#: libmate-desktop/mate-colorsel.c:959
+#: libmate-desktop/mate-colorsel.c:953
 msgid "The color you've chosen."
 msgstr "今選択している色"
 
-#: libmate-desktop/mate-colorsel.c:1366
+#: libmate-desktop/mate-colorsel.c:1359
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: libmate-desktop/mate-colorsel.c:1371
+#: libmate-desktop/mate-colorsel.c:1364
 msgid "_Save color here"
 msgstr "ここに色を保存(_S)"
 
-#: libmate-desktop/mate-colorsel.c:1593
+#: libmate-desktop/mate-colorsel.c:1584
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
 "パレットをクリックすることでその色を選択できます。パレットの内容を変更するには、別の色をドラッグするか、右クリックして「ここに色を保存」を選択します。"
 
-#: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:98
+#: libmate-desktop/mate-colorseldialog.c:184
 msgid "Color Selection"
 msgstr "色の選択"
 
-#: libmate-desktop/mate-colorseldialog.c:100
+#: libmate-desktop/mate-colorseldialog.c:99
 msgid "The color selection embedded in the dialog."
 msgstr "ダイアログに埋め込まれた選択色です。"
 
-#: libmate-desktop/mate-colorseldialog.c:106
+#: libmate-desktop/mate-colorseldialog.c:105
 msgid "OK Button"
 msgstr "OK ボタン"
 
-#: libmate-desktop/mate-colorseldialog.c:107
+#: libmate-desktop/mate-colorseldialog.c:106
 msgid "The OK button of the dialog."
 msgstr "ダイアログのOKボタン。"
 
-#: libmate-desktop/mate-colorseldialog.c:113
+#: libmate-desktop/mate-colorseldialog.c:112
 msgid "Cancel Button"
 msgstr "キャンセルボタン"
 
-#: libmate-desktop/mate-colorseldialog.c:114
+#: libmate-desktop/mate-colorseldialog.c:113
 msgid "The cancel button of the dialog."
 msgstr "ダイアログのキャンセルボタン。"
 
-#: libmate-desktop/mate-colorseldialog.c:120
+#: libmate-desktop/mate-colorseldialog.c:119
 msgid "Help Button"
 msgstr "ヘルプボタン"
 
-#: libmate-desktop/mate-colorseldialog.c:121
+#: libmate-desktop/mate-colorseldialog.c:120
 msgid "The help button of the dialog."
 msgstr "ダイアログのヘルプボタン。"
 
-#: libmate-desktop/mate-desktop-item.c:220
+#: libmate-desktop/mate-colorseldialog.c:162
+msgid "_Cancel"
+msgstr "キャンセル(_C)"
+
+#: libmate-desktop/mate-colorseldialog.c:167
+msgid "_OK"
+msgstr "OK(_O)"
+
+#: libmate-desktop/mate-colorseldialog.c:175
+msgid "Help"
+msgstr "ヘルプ"
+
+#: libmate-desktop/mate-desktop-item.c:218
 #, c-format
 msgid "Error reading file '%s': %s"
 msgstr "'%s' を読み込む際にエラーが発生しました: %s"
 
-#: libmate-desktop/mate-desktop-item.c:288
+#: libmate-desktop/mate-desktop-item.c:286
 #, c-format
 msgid "Error rewinding file '%s': %s"
 msgstr "'%s' を戻している最中にエラーが発生しました: %s"
@@ -368,47 +381,47 @@ msgstr "'%s' を戻している最中にエラーが発生しました: %s"
 #. * a document
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
-#: libmate-desktop/mate-desktop-item.c:380
-#: libmate-desktop/mate-desktop-item.c:3553
+#: libmate-desktop/mate-desktop-item.c:378
+#: libmate-desktop/mate-desktop-item.c:3537
 msgid "No name"
 msgstr "ここに名前を入力してください"
 
-#: libmate-desktop/mate-desktop-item.c:607
+#: libmate-desktop/mate-desktop-item.c:603
 #, c-format
 msgid "File '%s' is not a regular file or directory."
 msgstr "ファイル '%s' は通常のファイルあるいはフォルダではありません"
 
-#: libmate-desktop/mate-desktop-item.c:791
+#: libmate-desktop/mate-desktop-item.c:787
 #, c-format
 msgid "Cannot find file '%s'"
 msgstr "ファイル '%s' が見つかりません"
 
-#: libmate-desktop/mate-desktop-item.c:837
+#: libmate-desktop/mate-desktop-item.c:833
 msgid "No filename to save to"
 msgstr "保存先のファイル名が不明です"
 
-#: libmate-desktop/mate-desktop-item.c:1856
+#: libmate-desktop/mate-desktop-item.c:1850
 #, c-format
 msgid "Starting %s"
 msgstr "%s の起動中です"
 
-#: libmate-desktop/mate-desktop-item.c:2092
+#: libmate-desktop/mate-desktop-item.c:2084
 msgid "No URL to launch"
 msgstr "起動する URL が不明です"
 
-#: libmate-desktop/mate-desktop-item.c:2108
+#: libmate-desktop/mate-desktop-item.c:2100
 msgid "Not a launchable item"
 msgstr "起動できないアイテムです"
 
-#: libmate-desktop/mate-desktop-item.c:2118
+#: libmate-desktop/mate-desktop-item.c:2109
 msgid "No command (Exec) to launch"
 msgstr "起動するコマンドが指定されていません"
 
-#: libmate-desktop/mate-desktop-item.c:2131
+#: libmate-desktop/mate-desktop-item.c:2121
 msgid "Bad command (Exec) to launch"
 msgstr "起動するコマンドの指定が正しくありません"
 
-#: libmate-desktop/mate-desktop-item.c:3610
+#: libmate-desktop/mate-desktop-item.c:3594
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "エンコーディングが不明です: %s"
@@ -422,23 +435,23 @@ msgid "Unspecified"
 msgstr "未設定"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: libmate-desktop/mate-rr.c:458
+#: libmate-desktop/mate-rr.c:457
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "画面のリソース (いろいろな CRTC、出力、モード等) を取得できませんでした"
 
-#: libmate-desktop/mate-rr.c:479
+#: libmate-desktop/mate-rr.c:478
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr "画面の解像度を取得する際にXサーバで原因不明のエラーが発生しました"
 
-#: libmate-desktop/mate-rr.c:485
+#: libmate-desktop/mate-rr.c:484
 msgid "could not get the range of screen sizes"
 msgstr "画面の解像度を取得できませんでした"
 
-#: libmate-desktop/mate-rr.c:704
+#: libmate-desktop/mate-rr.c:703
 msgid "RANDR extension is not present"
 msgstr "RANDR 拡張がインストールされていません"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1264
 #, c-format
 msgid "could not get information about output %d"
 msgstr "出力 %d に関する情報を取得できませんでした"
@@ -446,7 +459,7 @@ msgstr "出力 %d に関する情報を取得できませんでした"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1749
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -454,12 +467,12 @@ msgid ""
 msgstr ""
 "要求した CRTC %d の位置やサイズが許容範囲を超えました: 位置 (%d, %d)、サイズ (%d, %d) / 許容範囲 (%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "CRTC %d の設定をセットできませんでした"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "CRTC %d に関する情報を取得できませんでした"
@@ -473,22 +486,22 @@ msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "保存したディスプレイの設定に一致する現在の設定はありません"
 
-#: libmate-desktop/mate-rr-config.c:1486
+#: libmate-desktop/mate-rr-config.c:1485
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d は出力 %s をドライブできません"
 
-#: libmate-desktop/mate-rr-config.c:1493
+#: libmate-desktop/mate-rr-config.c:1492
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "出力 %s は %dx%d@%dHz のモードをサポートしていません"
 
-#: libmate-desktop/mate-rr-config.c:1504
+#: libmate-desktop/mate-rr-config.c:1503
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d は rotation=%s をサポートしていません"
 
-#: libmate-desktop/mate-rr-config.c:1518
+#: libmate-desktop/mate-rr-config.c:1517
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -501,22 +514,22 @@ msgstr ""
 "現在 coordinates = (%d, %d), 新 coordinates = (%d, %d)\n"
 "現在 rotation = %s, 新 rotation = %s"
 
-#: libmate-desktop/mate-rr-config.c:1533
+#: libmate-desktop/mate-rr-config.c:1532
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "出力 %s をクローンできません"
 
-#: libmate-desktop/mate-rr-config.c:1702
+#: libmate-desktop/mate-rr-config.c:1701
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "CRTC %d のモードを試します\n"
 
-#: libmate-desktop/mate-rr-config.c:1726
+#: libmate-desktop/mate-rr-config.c:1725
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr "CRTC %d: %dx%d@%dHz のモードを %dx%d@%dHz (%d パス) の出力で試します\n"
 
-#: libmate-desktop/mate-rr-config.c:1773
+#: libmate-desktop/mate-rr-config.c:1772
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -525,7 +538,7 @@ msgstr ""
 "CRTC を出力に割り当てできませんでした:\n"
 "%s"
 
-#: libmate-desktop/mate-rr-config.c:1777
+#: libmate-desktop/mate-rr-config.c:1776
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -537,7 +550,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: libmate-desktop/mate-rr-config.c:1859
+#: libmate-desktop/mate-rr-config.c:1858
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -672,33 +685,33 @@ msgstr ""
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"
-msgstr "スタートアップ時の支援技術アプリケーション"
+msgstr "スタートアップ時の操作支援技術アプリケーション"
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
-msgstr "MATE デスクトップにログインした直後に自動的に起動する支援技術アプリケーションの一覧です。"
+msgstr "MATE デスクトップにログインした直後に自動的に起動する操作支援技術アプリケーションの一覧です。"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
-msgstr "起動する移動性支援技術アプリケーション"
+msgstr "起動する移動支援技術アプリケーション"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:6
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
-msgstr "ログインやメニュー、あるいはコマンドラインで利用する移動性支援技術アプリケーションです。"
+msgstr "ログインやメニュー、あるいはコマンドラインで利用する移動支援技術アプリケーションです。"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:10
 msgid "Start preferred Mobility assistive technology application"
-msgstr "移動性支援技術アプリケーションを起動する"
+msgstr "移動支援技術アプリケーションを起動する"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr "ログイン中に移動性支援技術アプリケーションを起動します。"
+msgstr "ログイン中に移動支援技術アプリケーションを起動します。"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
@@ -722,15 +735,15 @@ msgstr "ログイン中に視覚支援技術アプリケーションを起動し
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
 msgid "Default browser"
-msgstr "標準のブラウザー"
+msgstr "標準のブラウザ"
 
 #: schemas/org.mate.applications-browser.gschema.xml:6
 msgid "Default browser for all URLs."
-msgstr "全ての URL に対して使用する標準のブラウザーです。"
+msgstr "全ての URL に対して使用する標準のブラウザです。"
 
 #: schemas/org.mate.applications-browser.gschema.xml:10
 msgid "Browser needs terminal"
-msgstr "ブラウザーを端末から起動する"
+msgstr "ブラウザを端末から起動する"
 
 #: schemas/org.mate.applications-browser.gschema.xml:11
 msgid "Whether the default browser needs a terminal to run."
@@ -738,11 +751,11 @@ msgstr "標準のブラウザを起動する際端末が必要かどうかを設
 
 #: schemas/org.mate.applications-browser.gschema.xml:15
 msgid "Browser understands remote"
-msgstr "remote を利用できるブラウザー"
+msgstr "remote を利用できるブラウザ"
 
 #: schemas/org.mate.applications-browser.gschema.xml:16
 msgid "Whether the default browser understands netscape remote."
-msgstr "標準のブラウザーが Netscape remote を利用できるかどうかを設定します。"
+msgstr "標準のブラウザが Netscape remote を利用できるかどうかを設定します。"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
@@ -754,13 +767,13 @@ msgstr "計算を必要とするアプリケーションの起動時に使用す
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr "インスタント・メッセンジャのアプリ"
+msgstr "インスタントメッセンジャのアプリ"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
-msgstr "インスタント・メッセンジャーが端末から起動する際に使用するアプリを設定します。"
+msgstr "インスタントメッセンジャが端末から起動する際に使用するアプリを設定します。"
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -905,11 +918,11 @@ msgstr "ファイルアイコンを表図する際に使用するテーマです
 
 #: schemas/org.mate.interface.gschema.xml:5
 msgid "Enable Accessibility"
-msgstr "アクセシビリティを有効にする"
+msgstr "操作支援を有効にする"
 
 #: schemas/org.mate.interface.gschema.xml:6
 msgid "Whether Applications should have accessibility support."
-msgstr "アプリケーションがアクセシビリティをサポートするかどうかを設定します。"
+msgstr "アプリケーションが操作支援をサポートするかどうかを設定します。"
 
 #: schemas/org.mate.interface.gschema.xml:10
 msgid "Enable Animations"
@@ -1389,6 +1402,22 @@ msgstr "入力フィードバック音"
 #: schemas/org.mate.sound.gschema.xml:31
 msgid "Whether to play sounds on input events."
 msgstr "入力イベント発生時に音を鳴らすかどうかです。"
+
+#: schemas/org.mate.sound.gschema.xml:35
+msgid "Permit the output volume to exceed 100%"
+msgstr "音量が 100％ 超過するのを有効にする"
+
+#: schemas/org.mate.sound.gschema.xml:36
+msgid ""
+"If this is set to TRUE, the user will be allowed to set the output / speaker"
+" volume to above 100%. By setting the output volume above 100%, the sound "
+"server will amplify the audio above what the audio hardware can do cleanly. "
+"This can lead to audio quality degradation, but may be useful for listening "
+"to extremely quiet audio recordings, where the recording would otherwise be "
+"completely useless."
+msgstr ""
+"この値を TRUE に設定すると、ユーザーは出力/スピーカーの音量を 100% 以上に設定できます。出力音量を 100% "
+"以上に設定すると、サウンドサーバーはオーディオハードウェアが明瞭に処理できる限度を越えて音声を増幅します。これは音質の劣化につながりますが、その録音が全く意味をなさないくらい極端に小さな音声を再生するのに役立ちます。"
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:6
 msgid ""

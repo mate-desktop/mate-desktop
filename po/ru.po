@@ -8,31 +8,32 @@
 # Ivan Kuzmenko, 2018
 # павел назаров <nazar12101@gmail.com>, 2018
 # Pavel Zuev, 2018
-# Alexei Sorokin, 2018
 # Дмитрий Михирев, 2018
 # 7175227a27711e76caf4f31ec1c821e6_3a93967, 2018
 # Aleksandr <pc01.alex@yandex.ru>, 2018
 # AlexL <loginov.alex.valer@gmail.com>, 2018
 # Evolve32 <evolve32@yandex.ru>, 2018
-# monsta <monsta@inbox.ru>, 2018
 # alsoijw <alsoijw@yandex.ru>, 2018
 # theirix <theirix@gmail.com>, 2018
 # Dmitriy Kulikov <kulikov@dima.perm.ru>, 2018
 # Yevgeniy Goncharov <g.yevgeniy.p@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Alex Putz, 2018
 # Dzmitry Kamenda <kamenda@gmail.com>, 2019
-# Anna Vyalkova <cybertailor@gmail.com>, 2020
+# Cyber Tailor <cyber@sysrq.in>, 2020
 # Victor Kukshiev <andrey0bolkonsky@gmail.com>, 2021
 # Дмитрий Астанков <mornie@basealt.ru>, 2021
+# XRevan86, 2021
+# monsta <monsta@inbox.ru>, 2021
+# Alex Puts, 2021
+# Павел Коваленко, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.25.0\n"
+"Project-Id-Version: mate-desktop 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
+"POT-Creation-Date: 2022-10-29 15:22+0200\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Дмитрий Астанков <mornie@basealt.ru>, 2021\n"
+"Last-Translator: Павел Коваленко, 2021\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -75,7 +76,8 @@ msgstr ""
 "Сергей Панов <sipan@mit.edu>\n"
 "Сергей Яковлев\n"
 "Юрий Козлов <yuray@komyakino.ru>\n"
-"Evolve32 <evolve32@ya.ru>"
+"Evolve32 <evolve32@ya.ru>\n"
+"Павел Коваленко <kovalenkopavel@mail.ru>"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -93,7 +95,7 @@ msgstr "Среда рабочего стола MATE"
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2021 MATE developers"
+"Copyright © 2012-2022 MATE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
@@ -153,89 +155,89 @@ msgstr ""
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: libmate-desktop/display-name.c:264
+#: libmate-desktop/display-name.c:263
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Неизвестный"
 
-#: libmate-desktop/mate-colorbutton.c:152
+#: libmate-desktop/mate-colorbutton.c:151
 msgid "Use alpha"
 msgstr "Использовать альфа-канал"
 
-#: libmate-desktop/mate-colorbutton.c:153
+#: libmate-desktop/mate-colorbutton.c:152
 msgid "Whether or not to give the color an alpha value"
 msgstr "Использовать прозрачность цвета или нет."
 
-#: libmate-desktop/mate-colorbutton.c:167
+#: libmate-desktop/mate-colorbutton.c:166
 msgid "Title"
 msgstr "Заголовок"
 
-#: libmate-desktop/mate-colorbutton.c:168
+#: libmate-desktop/mate-colorbutton.c:167
 msgid "The title of the color selection dialog"
 msgstr "Заголовок окна диалога выбора цвета"
 
-#: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:168
+#: libmate-desktop/mate-colorbutton.c:439
 msgid "Pick a Color"
 msgstr "Выбрать цвет"
 
-#: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:284
+#: libmate-desktop/mate-colorbutton.c:181 libmate-desktop/mate-colorsel.c:281
 msgid "Current Color"
 msgstr "Текущий цвет"
 
-#: libmate-desktop/mate-colorbutton.c:183
+#: libmate-desktop/mate-colorbutton.c:182
 msgid "The selected color"
 msgstr "Выбранный цвет"
 
-#: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:291
+#: libmate-desktop/mate-colorbutton.c:196 libmate-desktop/mate-colorsel.c:288
 msgid "Current Alpha"
 msgstr "Текущее значение альфа-канала"
 
-#: libmate-desktop/mate-colorbutton.c:198
+#: libmate-desktop/mate-colorbutton.c:197
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Выбранное значение прозрачности (0 – максимальная прозрачность, 65535 – "
 "прозрачность отсутствует)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
 msgstr "Получены некорректные данные о цвете\n"
 
-#: libmate-desktop/mate-colorsel.c:270
+#: libmate-desktop/mate-colorsel.c:267
 msgid "Has Opacity Control"
 msgstr "Регулировать прозрачность"
 
-#: libmate-desktop/mate-colorsel.c:271
+#: libmate-desktop/mate-colorsel.c:268
 msgid "Whether the color selector should allow setting opacity"
 msgstr "Включить или выключить возможность установки прозрачности"
 
-#: libmate-desktop/mate-colorsel.c:277
+#: libmate-desktop/mate-colorsel.c:274
 msgid "Has palette"
 msgstr "Задать палитру"
 
-#: libmate-desktop/mate-colorsel.c:278
+#: libmate-desktop/mate-colorsel.c:275
 msgid "Whether a palette should be used"
 msgstr "Включить или выключить возможность использования палитры"
 
-#: libmate-desktop/mate-colorsel.c:285
+#: libmate-desktop/mate-colorsel.c:282
 msgid "The current color"
 msgstr "Текущий цвет"
 
-#: libmate-desktop/mate-colorsel.c:292
+#: libmate-desktop/mate-colorsel.c:289
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 "Текущее значение прозрачности (0 – полная прозрачность, 65535 – прозрачность"
 " отсутствует)"
 
-#: libmate-desktop/mate-colorsel.c:298
+#: libmate-desktop/mate-colorsel.c:295
 msgid "HEX String"
 msgstr "Шестнадцатеричная строка"
 
-#: libmate-desktop/mate-colorsel.c:299
+#: libmate-desktop/mate-colorsel.c:296
 msgid "The hexadecimal string of current color"
 msgstr "Шестнадцатеричная строка текущего цвета"
 
-#: libmate-desktop/mate-colorsel.c:345
+#: libmate-desktop/mate-colorsel.c:341
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -243,7 +245,7 @@ msgstr ""
 "Выберите желаемый цвет на внешнем круге. Выберите более тёмный или светлый "
 "оттенок, используя внутренний треугольник."
 
-#: libmate-desktop/mate-colorsel.c:369
+#: libmate-desktop/mate-colorsel.c:365
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -251,67 +253,67 @@ msgstr ""
 "Выберите пипетку, затем кликните на любой участок экрана, чтобы выбрать "
 "цвет, находящийся под курсором."
 
-#: libmate-desktop/mate-colorsel.c:378
+#: libmate-desktop/mate-colorsel.c:374
 msgid "_Hue:"
 msgstr "_Оттенок"
 
-#: libmate-desktop/mate-colorsel.c:379
+#: libmate-desktop/mate-colorsel.c:375
 msgid "Position on the color wheel."
 msgstr "Положение на цветовом круге."
 
-#: libmate-desktop/mate-colorsel.c:381
+#: libmate-desktop/mate-colorsel.c:377
 msgid "_Saturation:"
 msgstr "_Насыщенность:"
 
-#: libmate-desktop/mate-colorsel.c:382
+#: libmate-desktop/mate-colorsel.c:378
 msgid "\"Deepness\" of the color."
 msgstr "\"Глубина\" цвета"
 
-#: libmate-desktop/mate-colorsel.c:383
+#: libmate-desktop/mate-colorsel.c:379
 msgid "_Value:"
 msgstr "_Значение:"
 
-#: libmate-desktop/mate-colorsel.c:384
+#: libmate-desktop/mate-colorsel.c:380
 msgid "Brightness of the color."
 msgstr "Яркость цвета."
 
-#: libmate-desktop/mate-colorsel.c:385
+#: libmate-desktop/mate-colorsel.c:381
 msgid "_Red:"
 msgstr "_Красный:"
 
-#: libmate-desktop/mate-colorsel.c:386
+#: libmate-desktop/mate-colorsel.c:382
 msgid "Amount of red light in the color."
 msgstr "Красная составляющая цвета"
 
-#: libmate-desktop/mate-colorsel.c:387
+#: libmate-desktop/mate-colorsel.c:383
 msgid "_Green:"
 msgstr "_Зелёный:"
 
-#: libmate-desktop/mate-colorsel.c:388
+#: libmate-desktop/mate-colorsel.c:384
 msgid "Amount of green light in the color."
 msgstr "Зелёная составляющая цвета."
 
-#: libmate-desktop/mate-colorsel.c:389
+#: libmate-desktop/mate-colorsel.c:385
 msgid "_Blue:"
 msgstr "_Синий:"
 
-#: libmate-desktop/mate-colorsel.c:390
+#: libmate-desktop/mate-colorsel.c:386
 msgid "Amount of blue light in the color."
 msgstr "Синяя составляющая цвета."
 
-#: libmate-desktop/mate-colorsel.c:393
+#: libmate-desktop/mate-colorsel.c:389
 msgid "Op_acity:"
 msgstr "Пр_озрачность:"
 
-#: libmate-desktop/mate-colorsel.c:400 libmate-desktop/mate-colorsel.c:410
+#: libmate-desktop/mate-colorsel.c:396 libmate-desktop/mate-colorsel.c:406
 msgid "Transparency of the color."
 msgstr "Прозрачность цвета."
 
-#: libmate-desktop/mate-colorsel.c:417
+#: libmate-desktop/mate-colorsel.c:413
 msgid "Color _name:"
 msgstr "Наи_менование цвета:"
 
-#: libmate-desktop/mate-colorsel.c:431
+#: libmate-desktop/mate-colorsel.c:427
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -319,15 +321,15 @@ msgstr ""
 "Вы можете ввести в это поле или шестнадцатеричное значение цвета (в HTML "
 "стиле), или его название, например, \"orange\"."
 
-#: libmate-desktop/mate-colorsel.c:461
+#: libmate-desktop/mate-colorsel.c:457
 msgid "_Palette:"
 msgstr "_Шаблон:"
 
-#: libmate-desktop/mate-colorsel.c:491
+#: libmate-desktop/mate-colorsel.c:487
 msgid "Color Wheel"
 msgstr "Цветовой круг"
 
-#: libmate-desktop/mate-colorsel.c:948
+#: libmate-desktop/mate-colorsel.c:942
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -337,7 +339,7 @@ msgstr ""
 "перетянуть этот цвет на тот, что находится сбоку, чтобы сделать его текущим "
 "цветом или перетянуть его на палитру дополнительных цветов."
 
-#: libmate-desktop/mate-colorsel.c:951
+#: libmate-desktop/mate-colorsel.c:945
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -345,25 +347,25 @@ msgstr ""
 "Выбранный вами цвет. Вы можете перетащить его на палитру дополнительных "
 "цветов, тем самым сохранив его для дальнейшего использования."
 
-#: libmate-desktop/mate-colorsel.c:956
+#: libmate-desktop/mate-colorsel.c:950
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Выбранный ранее цвет для сравнения с цветом, выбранным сейчас."
 
-#: libmate-desktop/mate-colorsel.c:959
+#: libmate-desktop/mate-colorsel.c:953
 msgid "The color you've chosen."
 msgstr "Выбранный вами цвет."
 
-#: libmate-desktop/mate-colorsel.c:1366
+#: libmate-desktop/mate-colorsel.c:1359
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: libmate-desktop/mate-colorsel.c:1371
+#: libmate-desktop/mate-colorsel.c:1364
 msgid "_Save color here"
 msgstr "Со_хранить цвет здесь"
 
-#: libmate-desktop/mate-colorsel.c:1593
+#: libmate-desktop/mate-colorsel.c:1584
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -372,45 +374,57 @@ msgstr ""
 "изменить эту ячейку, перетащите в нее образец цвета или нажмите ПКМ на ней и"
 " выберите \"Сохранить цвет здесь\"."
 
-#: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:98
+#: libmate-desktop/mate-colorseldialog.c:184
 msgid "Color Selection"
 msgstr "Выбор цвета"
 
-#: libmate-desktop/mate-colorseldialog.c:100
+#: libmate-desktop/mate-colorseldialog.c:99
 msgid "The color selection embedded in the dialog."
 msgstr "Выбор цвета, встроенный в диалог."
 
-#: libmate-desktop/mate-colorseldialog.c:106
+#: libmate-desktop/mate-colorseldialog.c:105
 msgid "OK Button"
 msgstr "Кнопка \"OK\""
 
-#: libmate-desktop/mate-colorseldialog.c:107
+#: libmate-desktop/mate-colorseldialog.c:106
 msgid "The OK button of the dialog."
 msgstr "Кнопка диалога \"OK\"."
 
-#: libmate-desktop/mate-colorseldialog.c:113
+#: libmate-desktop/mate-colorseldialog.c:112
 msgid "Cancel Button"
 msgstr "Кнопка \"Отмена\""
 
-#: libmate-desktop/mate-colorseldialog.c:114
+#: libmate-desktop/mate-colorseldialog.c:113
 msgid "The cancel button of the dialog."
 msgstr "Кнопка диалога \"Отмена\"."
 
-#: libmate-desktop/mate-colorseldialog.c:120
+#: libmate-desktop/mate-colorseldialog.c:119
 msgid "Help Button"
 msgstr "Кнопка \"Помощь\"."
 
-#: libmate-desktop/mate-colorseldialog.c:121
+#: libmate-desktop/mate-colorseldialog.c:120
 msgid "The help button of the dialog."
 msgstr "Кнопка диалога \"Помощь\"."
 
-#: libmate-desktop/mate-desktop-item.c:220
+#: libmate-desktop/mate-colorseldialog.c:162
+msgid "_Cancel"
+msgstr "О_тмена"
+
+#: libmate-desktop/mate-colorseldialog.c:167
+msgid "_OK"
+msgstr "_OK"
+
+#: libmate-desktop/mate-colorseldialog.c:175
+msgid "Help"
+msgstr "Справка"
+
+#: libmate-desktop/mate-desktop-item.c:218
 #, c-format
 msgid "Error reading file '%s': %s"
 msgstr "Ошибка чтения файла «%s»: %s"
 
-#: libmate-desktop/mate-desktop-item.c:288
+#: libmate-desktop/mate-desktop-item.c:286
 #, c-format
 msgid "Error rewinding file '%s': %s"
 msgstr "Ошибка перемотки файла «%s»: %s"
@@ -420,47 +434,47 @@ msgstr "Ошибка перемотки файла «%s»: %s"
 #. * a document
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
-#: libmate-desktop/mate-desktop-item.c:380
-#: libmate-desktop/mate-desktop-item.c:3553
+#: libmate-desktop/mate-desktop-item.c:378
+#: libmate-desktop/mate-desktop-item.c:3537
 msgid "No name"
 msgstr "Без имени"
 
-#: libmate-desktop/mate-desktop-item.c:607
+#: libmate-desktop/mate-desktop-item.c:603
 #, c-format
 msgid "File '%s' is not a regular file or directory."
 msgstr "Файл «%s» не является обычным файлом или каталогом."
 
-#: libmate-desktop/mate-desktop-item.c:791
+#: libmate-desktop/mate-desktop-item.c:787
 #, c-format
 msgid "Cannot find file '%s'"
 msgstr "Не удалось найти файл «%s»"
 
-#: libmate-desktop/mate-desktop-item.c:837
+#: libmate-desktop/mate-desktop-item.c:833
 msgid "No filename to save to"
 msgstr "Не указано имя файла для сохранения"
 
-#: libmate-desktop/mate-desktop-item.c:1856
+#: libmate-desktop/mate-desktop-item.c:1850
 #, c-format
 msgid "Starting %s"
 msgstr "Запускается %s"
 
-#: libmate-desktop/mate-desktop-item.c:2092
+#: libmate-desktop/mate-desktop-item.c:2084
 msgid "No URL to launch"
 msgstr "Не указан URL для запуска"
 
-#: libmate-desktop/mate-desktop-item.c:2108
+#: libmate-desktop/mate-desktop-item.c:2100
 msgid "Not a launchable item"
 msgstr "Незапускаемый объект"
 
-#: libmate-desktop/mate-desktop-item.c:2118
+#: libmate-desktop/mate-desktop-item.c:2109
 msgid "No command (Exec) to launch"
 msgstr "Отсутствует команда (Exec) для запуска"
 
-#: libmate-desktop/mate-desktop-item.c:2131
+#: libmate-desktop/mate-desktop-item.c:2121
 msgid "Bad command (Exec) to launch"
 msgstr "Команда (Exec) для запуска недопустима"
 
-#: libmate-desktop/mate-desktop-item.c:3610
+#: libmate-desktop/mate-desktop-item.c:3594
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Неизвестная кодировка %s"
@@ -476,24 +490,24 @@ msgid "Unspecified"
 msgstr "Не указано"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: libmate-desktop/mate-rr.c:458
+#: libmate-desktop/mate-rr.c:457
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "не удалось получить доступ к ресурсам экрана (CRTC, выходы, режимы)"
 
-#: libmate-desktop/mate-rr.c:479
+#: libmate-desktop/mate-rr.c:478
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr ""
 "возникла неизвестная ошибка X при получении допустимых размеров экрана"
 
-#: libmate-desktop/mate-rr.c:485
+#: libmate-desktop/mate-rr.c:484
 msgid "could not get the range of screen sizes"
 msgstr "не удалось получить допустимые размеры экрана"
 
-#: libmate-desktop/mate-rr.c:704
+#: libmate-desktop/mate-rr.c:703
 msgid "RANDR extension is not present"
 msgstr "Расширение RANDR отсутствует"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1264
 #, c-format
 msgid "could not get information about output %d"
 msgstr "не удалось получить информацию о выходе %d"
@@ -501,7 +515,7 @@ msgstr "не удалось получить информацию о выход�
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1749
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -510,12 +524,12 @@ msgstr ""
 "требуемое положение или размер для CRTC %d выходит за рамки допустимых "
 "пределов: положение=(%d, %d), размер=(%d, %d), максимально=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "не удалось установить конфигурацию контроллера CRT %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "не удалось получить информацию о контроллере CRT %d"
@@ -529,22 +543,22 @@ msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "ни одна из сохранённых конфигураций не совпадает с текущей"
 
-#: libmate-desktop/mate-rr-config.c:1486
+#: libmate-desktop/mate-rr-config.c:1485
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "контроллер CRT %d не может управлять выходом %s"
 
-#: libmate-desktop/mate-rr-config.c:1493
+#: libmate-desktop/mate-rr-config.c:1492
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "выход %s не поддерживает режим %dx%d@%dГц"
 
-#: libmate-desktop/mate-rr-config.c:1504
+#: libmate-desktop/mate-rr-config.c:1503
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "контроллер CRT %d не поддерживает вращение=%s"
 
-#: libmate-desktop/mate-rr-config.c:1518
+#: libmate-desktop/mate-rr-config.c:1517
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -557,24 +571,24 @@ msgstr ""
 "координаты = (%d, %d), новые координаты = (%d, %d)\n"
 "вращениe = %s, новое вращение = %s"
 
-#: libmate-desktop/mate-rr-config.c:1533
+#: libmate-desktop/mate-rr-config.c:1532
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "не удалось клонировать в выход %s"
 
-#: libmate-desktop/mate-rr-config.c:1702
+#: libmate-desktop/mate-rr-config.c:1701
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "Проверка режимов для контроллера CRT %d\n"
 
-#: libmate-desktop/mate-rr-config.c:1726
+#: libmate-desktop/mate-rr-config.c:1725
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "контроллер CRT %d: пробный режим %dx%d@%dГц с выходом на %dx%d@%dГц (попытка"
 " %d)\n"
 
-#: libmate-desktop/mate-rr-config.c:1773
+#: libmate-desktop/mate-rr-config.c:1772
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -583,7 +597,7 @@ msgstr ""
 "не удалось установить CRTC для выходов:\n"
 "%s"
 
-#: libmate-desktop/mate-rr-config.c:1777
+#: libmate-desktop/mate-rr-config.c:1776
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -595,7 +609,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: libmate-desktop/mate-rr-config.c:1859
+#: libmate-desktop/mate-rr-config.c:1858
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -678,51 +692,61 @@ msgstr "Подавать сигнал, когда модификатор наж�
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:86
 msgid "Beep when a key is pressed while CapsLock is active."
-msgstr ""
+msgstr "Звуковой сигнал при нажатии клавиши при активном CapsLock."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:91
 msgid "Beep count when enabling a modifier"
-msgstr ""
+msgstr "Количество звуковых сигналов при включении модификатора"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:92
 msgid ""
 "Number of beeps to emit when enabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Количество звуковых сигналов, издаваемых при включении модификатора при "
+"включенных переключателях. Работает только со «встроенным» бэкендом."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:97
 msgid "Delay between beeps when enabling a modifier"
-msgstr ""
+msgstr "Задержка между звуковыми сигналами при включении модификатора"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:98
 msgid ""
 "Delay in milliseconds between two beeps when enabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Задержка в миллисекундах между двумя звуковыми сигналами при включении "
+"модификатора при включенных переключателях. Работает только со «встроенным» "
+"бэкендом."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:103
 msgid "Beep count when disabling a modifier"
-msgstr ""
+msgstr "Количество звуковых сигналов при выключении модификатора"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:104
 msgid ""
 "Number of beeps to emit when disabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Количество звуковых сигналов, издаваемых при отключении модификатора при "
+"включенных переключателях. Работает только со «встроенным» бэкендом."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:109
 msgid "Delay between beeps when disabling a modifier"
-msgstr ""
+msgstr "Задержка между звуковыми сигналами при отключении модификатора"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:110
 msgid ""
 "Delay in milliseconds between two beeps when disabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Задержка в миллисекундах между двумя звуковыми сигналами при отключении "
+"модификатора при включенных переключателях. Работает только со «встроенным» "
+"бэкендом."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:114
 msgid "Implementation to use when togglekeys are enabled"
-msgstr ""
+msgstr "Реализация для использования при включенных переключателях"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:115
 msgid ""
@@ -730,6 +754,9 @@ msgid ""
 "include 'xkb' (the stock X implementation) and 'internal' (a MATE-specific "
 "and more configurable implementation)."
 msgstr ""
+"Выбирает бэкенд для использования в качестве функции переключения клавиш. "
+"Допустимые значения включают «xkb» (стандартная реализация X) и «Встроенный»"
+" (специфичная для MATE и более настраиваемая реализация)."
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"
@@ -1515,6 +1542,20 @@ msgstr "Звуки реакции на действия пользователя
 #: schemas/org.mate.sound.gschema.xml:31
 msgid "Whether to play sounds on input events."
 msgstr "Следует ли проигрывать звуки при возникновении событий."
+
+#: schemas/org.mate.sound.gschema.xml:35
+msgid "Permit the output volume to exceed 100%"
+msgstr ""
+
+#: schemas/org.mate.sound.gschema.xml:36
+msgid ""
+"If this is set to TRUE, the user will be allowed to set the output / speaker"
+" volume to above 100%. By setting the output volume above 100%, the sound "
+"server will amplify the audio above what the audio hardware can do cleanly. "
+"This can lead to audio quality degradation, but may be useful for listening "
+"to extremely quiet audio recordings, where the recording would otherwise be "
+"completely useless."
+msgstr ""
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:6
 msgid ""

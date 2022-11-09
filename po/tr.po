@@ -4,23 +4,24 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Mehmet, 2018
-# Umut Barış GÖKMEN <umtbrsgkmn@gmail.com>, 2018
 # Emre FIRAT <emrefirat93@gmail.com>, 2018
+# Umut Barış GÖKMEN <umtbrsgkmn@gmail.com>, 2018
 # Butterfly <gokhanlnx@gmail.com>, 2018
 # Yaşar Çiv <yasarciv@protonmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # 0d1bdb3b9a0d4e8f77bc854af8bf3dfc_e6913f4, 2019
 # tarakbumba <tarakbumba@gmail.com>, 2021
 # mauron, 2021
+# Mehmet, 2021
+# Sabri Ünal <libreajans@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-desktop 1.25.0\n"
+"Project-Id-Version: mate-desktop 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
+"POT-Creation-Date: 2022-10-29 15:22+0200\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: mauron, 2021\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>, 2022\n"
 "Language-Team: Turkish (https://www.transifex.com/mate/teams/13566/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,7 +61,7 @@ msgstr "MATE Masaüstü Ortamı"
 msgid ""
 "Copyright © 1997-2011 GNOME developers\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2021 MATE developers"
+"Copyright © 2012-2022 MATE developers"
 msgstr ""
 
 #: mate-about/mate-about.h:42
@@ -121,85 +122,85 @@ msgstr ""
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
 #. * vendor is used.
-#: libmate-desktop/display-name.c:264
+#: libmate-desktop/display-name.c:263
 msgctxt "Monitor vendor"
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
-#: libmate-desktop/mate-colorbutton.c:152
+#: libmate-desktop/mate-colorbutton.c:151
 msgid "Use alpha"
 msgstr "Alfa kullan"
 
-#: libmate-desktop/mate-colorbutton.c:153
+#: libmate-desktop/mate-colorbutton.c:152
 msgid "Whether or not to give the color an alpha value"
 msgstr "Renge bir alfa değeri verilip verilmeyeceği"
 
-#: libmate-desktop/mate-colorbutton.c:167
+#: libmate-desktop/mate-colorbutton.c:166
 msgid "Title"
 msgstr "Başlık"
 
-#: libmate-desktop/mate-colorbutton.c:168
+#: libmate-desktop/mate-colorbutton.c:167
 msgid "The title of the color selection dialog"
 msgstr "Renk seçme penceresinin başlığı"
 
-#: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:168
+#: libmate-desktop/mate-colorbutton.c:439
 msgid "Pick a Color"
 msgstr "Bir Renk Seçin"
 
-#: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:284
+#: libmate-desktop/mate-colorbutton.c:181 libmate-desktop/mate-colorsel.c:281
 msgid "Current Color"
 msgstr "Şimdiki Renk"
 
-#: libmate-desktop/mate-colorbutton.c:183
+#: libmate-desktop/mate-colorbutton.c:182
 msgid "The selected color"
 msgstr "Seçili renk"
 
-#: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:291
+#: libmate-desktop/mate-colorbutton.c:196 libmate-desktop/mate-colorsel.c:288
 msgid "Current Alpha"
-msgstr "Güncel alfa değeri"
+msgstr "Şimdiki Alfa"
 
-#: libmate-desktop/mate-colorbutton.c:198
+#: libmate-desktop/mate-colorbutton.c:197
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr "Seçilen donukluk değeri (0 tamamen şeffaf, 65535 tamamen donuk)"
+msgstr "Seçilen matlık değeri (0 tamamen şeffaf, 65535 tamamen mat)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
 msgstr "Geçersiz renk verisi alındı\n"
 
-#: libmate-desktop/mate-colorsel.c:270
+#: libmate-desktop/mate-colorsel.c:267
 msgid "Has Opacity Control"
-msgstr "Donukluk Kontrolü Var"
+msgstr "Matlık Kontrolü Var"
 
-#: libmate-desktop/mate-colorsel.c:271
+#: libmate-desktop/mate-colorsel.c:268
 msgid "Whether the color selector should allow setting opacity"
-msgstr "Renk seçicinin donukluğun ayarlanmasına izin verip vermeyeceği"
+msgstr "Renk seçicinin matlığı ayarlanmasına izin verip vermeyeceği"
 
-#: libmate-desktop/mate-colorsel.c:277
+#: libmate-desktop/mate-colorsel.c:274
 msgid "Has palette"
 msgstr "Paleti Var"
 
-#: libmate-desktop/mate-colorsel.c:278
+#: libmate-desktop/mate-colorsel.c:275
 msgid "Whether a palette should be used"
 msgstr "Bir renk paletinin kullanılıp kullanılmayacağı"
 
-#: libmate-desktop/mate-colorsel.c:285
+#: libmate-desktop/mate-colorsel.c:282
 msgid "The current color"
 msgstr "Şimdiki renk"
 
-#: libmate-desktop/mate-colorsel.c:292
+#: libmate-desktop/mate-colorsel.c:289
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr "Güncel donukluk değeri (0 tamamen şeffaf, 65535 tamamen donuk)"
+msgstr "Güncel matlık değeri (0 tamamen şeffaf, 65535 tamamen mat)"
 
-#: libmate-desktop/mate-colorsel.c:298
+#: libmate-desktop/mate-colorsel.c:295
 msgid "HEX String"
 msgstr "Onaltılık Dizgi"
 
-#: libmate-desktop/mate-colorsel.c:299
+#: libmate-desktop/mate-colorsel.c:296
 msgid "The hexadecimal string of current color"
 msgstr "Geçerli rengin onaltılık dizgisi"
 
-#: libmate-desktop/mate-colorsel.c:345
+#: libmate-desktop/mate-colorsel.c:341
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
@@ -207,7 +208,7 @@ msgstr ""
 "Dış halkadan istediğiniz rengi seçin. Bu rengin koyuluğunu ya da açıklığını "
 "da iç üçgeni kullanarak seçin."
 
-#: libmate-desktop/mate-colorsel.c:369
+#: libmate-desktop/mate-colorsel.c:365
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
@@ -215,67 +216,67 @@ msgstr ""
 "Damlalığa tıklayın, ardından ekranın herhangi bir yerine oradaki rengi "
 "seçmek için tıklayın."
 
-#: libmate-desktop/mate-colorsel.c:378
+#: libmate-desktop/mate-colorsel.c:374
 msgid "_Hue:"
 msgstr "Renk _Özü:"
 
-#: libmate-desktop/mate-colorsel.c:379
+#: libmate-desktop/mate-colorsel.c:375
 msgid "Position on the color wheel."
 msgstr "Renk dairesindeki konum."
 
-#: libmate-desktop/mate-colorsel.c:381
+#: libmate-desktop/mate-colorsel.c:377
 msgid "_Saturation:"
 msgstr "_Doygunluk:"
 
-#: libmate-desktop/mate-colorsel.c:382
+#: libmate-desktop/mate-colorsel.c:378
 msgid "\"Deepness\" of the color."
 msgstr "Rengin \"derinliği\"."
 
-#: libmate-desktop/mate-colorsel.c:383
+#: libmate-desktop/mate-colorsel.c:379
 msgid "_Value:"
 msgstr "_Değer:"
 
-#: libmate-desktop/mate-colorsel.c:384
+#: libmate-desktop/mate-colorsel.c:380
 msgid "Brightness of the color."
 msgstr "Rengin parlaklığı:"
 
-#: libmate-desktop/mate-colorsel.c:385
+#: libmate-desktop/mate-colorsel.c:381
 msgid "_Red:"
 msgstr "_Kırmızı:"
 
-#: libmate-desktop/mate-colorsel.c:386
+#: libmate-desktop/mate-colorsel.c:382
 msgid "Amount of red light in the color."
 msgstr "Renkteki kırmızı ışığın miktarı."
 
-#: libmate-desktop/mate-colorsel.c:387
+#: libmate-desktop/mate-colorsel.c:383
 msgid "_Green:"
 msgstr "_Yeşil:"
 
-#: libmate-desktop/mate-colorsel.c:388
+#: libmate-desktop/mate-colorsel.c:384
 msgid "Amount of green light in the color."
 msgstr "Renkteki yeşil ışığın miktarı."
 
-#: libmate-desktop/mate-colorsel.c:389
+#: libmate-desktop/mate-colorsel.c:385
 msgid "_Blue:"
 msgstr "_Mavi:"
 
-#: libmate-desktop/mate-colorsel.c:390
+#: libmate-desktop/mate-colorsel.c:386
 msgid "Amount of blue light in the color."
 msgstr "Renkteki mavi ışığın miktarı."
 
-#: libmate-desktop/mate-colorsel.c:393
+#: libmate-desktop/mate-colorsel.c:389
 msgid "Op_acity:"
 msgstr "Do_nukluk:"
 
-#: libmate-desktop/mate-colorsel.c:400 libmate-desktop/mate-colorsel.c:410
+#: libmate-desktop/mate-colorsel.c:396 libmate-desktop/mate-colorsel.c:406
 msgid "Transparency of the color."
 msgstr "Rengin şeffaflığı."
 
-#: libmate-desktop/mate-colorsel.c:417
+#: libmate-desktop/mate-colorsel.c:413
 msgid "Color _name:"
 msgstr "Renk _ismi:"
 
-#: libmate-desktop/mate-colorsel.c:431
+#: libmate-desktop/mate-colorsel.c:427
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
@@ -283,15 +284,15 @@ msgstr ""
 "Buraya HTML tarzı onaltılık bir renk değeri ya da sadece 'orange' gibi bir "
 "renk ismi girebilirsiniz."
 
-#: libmate-desktop/mate-colorsel.c:461
+#: libmate-desktop/mate-colorsel.c:457
 msgid "_Palette:"
 msgstr "_Palet:"
 
-#: libmate-desktop/mate-colorsel.c:491
+#: libmate-desktop/mate-colorsel.c:487
 msgid "Color Wheel"
 msgstr "Renk Dairesi"
 
-#: libmate-desktop/mate-colorsel.c:948
+#: libmate-desktop/mate-colorsel.c:942
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now. You can drag this color to a palette entry, or select this color as "
@@ -301,7 +302,7 @@ msgstr ""
 "renk. Bu rengi, renk paletine sürükleyebilir veya diğer renk çetelesine "
 "sürükleyerek geçerli renk olarak seçebilirsiniz."
 
-#: libmate-desktop/mate-colorsel.c:951
+#: libmate-desktop/mate-colorsel.c:945
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
@@ -309,25 +310,25 @@ msgstr ""
 "Seçtiğiniz renk. Bu rengi bir palet girdisine kaydırarak gelecekte kullanmak"
 " için kaydedebilirsiniz."
 
-#: libmate-desktop/mate-colorsel.c:956
+#: libmate-desktop/mate-colorsel.c:950
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr "Önceki renk, şimdi seçtiğiniz renk ile karşılaştırmak için."
 
-#: libmate-desktop/mate-colorsel.c:959
+#: libmate-desktop/mate-colorsel.c:953
 msgid "The color you've chosen."
 msgstr "Seçtiğiniz renk."
 
-#: libmate-desktop/mate-colorsel.c:1366
+#: libmate-desktop/mate-colorsel.c:1359
 msgid "gtk-color-sel"
 msgstr "gtk-color-sel"
 
-#: libmate-desktop/mate-colorsel.c:1371
+#: libmate-desktop/mate-colorsel.c:1364
 msgid "_Save color here"
 msgstr "Rengi burada _kaydet"
 
-#: libmate-desktop/mate-colorsel.c:1593
+#: libmate-desktop/mate-colorsel.c:1584
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
@@ -336,45 +337,57 @@ msgstr ""
 "girdiyi değiştirmek için buraya bir renk örneği kaydırın ya da farenin sağ "
 "düğmesine basıp \"Rengi burada kaydet\" şıkkını seçin."
 
-#: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:98
+#: libmate-desktop/mate-colorseldialog.c:184
 msgid "Color Selection"
 msgstr "Renk Seçimi"
 
-#: libmate-desktop/mate-colorseldialog.c:100
+#: libmate-desktop/mate-colorseldialog.c:99
 msgid "The color selection embedded in the dialog."
 msgstr "Diyaloğa gömülü renk seçimi."
 
-#: libmate-desktop/mate-colorseldialog.c:106
+#: libmate-desktop/mate-colorseldialog.c:105
 msgid "OK Button"
 msgstr "Tamam Düğmesi"
 
-#: libmate-desktop/mate-colorseldialog.c:107
+#: libmate-desktop/mate-colorseldialog.c:106
 msgid "The OK button of the dialog."
 msgstr "Diyaloğun tamam düğmesi"
 
-#: libmate-desktop/mate-colorseldialog.c:113
+#: libmate-desktop/mate-colorseldialog.c:112
 msgid "Cancel Button"
 msgstr "İptal Düğmesi"
 
-#: libmate-desktop/mate-colorseldialog.c:114
+#: libmate-desktop/mate-colorseldialog.c:113
 msgid "The cancel button of the dialog."
 msgstr "Diyaloğun iptal düğmesi"
 
-#: libmate-desktop/mate-colorseldialog.c:120
+#: libmate-desktop/mate-colorseldialog.c:119
 msgid "Help Button"
 msgstr "Yardım Düğmesi"
 
-#: libmate-desktop/mate-colorseldialog.c:121
+#: libmate-desktop/mate-colorseldialog.c:120
 msgid "The help button of the dialog."
 msgstr "Diyaloğun yardım düğmesi."
 
-#: libmate-desktop/mate-desktop-item.c:220
+#: libmate-desktop/mate-colorseldialog.c:162
+msgid "_Cancel"
+msgstr "_Vazgeç"
+
+#: libmate-desktop/mate-colorseldialog.c:167
+msgid "_OK"
+msgstr "_Tamam"
+
+#: libmate-desktop/mate-colorseldialog.c:175
+msgid "Help"
+msgstr "Yardım"
+
+#: libmate-desktop/mate-desktop-item.c:218
 #, c-format
 msgid "Error reading file '%s': %s"
 msgstr "'%s' dosyası okunamadı: %s"
 
-#: libmate-desktop/mate-desktop-item.c:288
+#: libmate-desktop/mate-desktop-item.c:286
 #, c-format
 msgid "Error rewinding file '%s': %s"
 msgstr "'%s' dosyası geri alınırken hata: %s"
@@ -384,47 +397,47 @@ msgstr "'%s' dosyası geri alınırken hata: %s"
 #. * a document
 #. Translators: the "name" mentioned here is the name of
 #. * an application or a document
-#: libmate-desktop/mate-desktop-item.c:380
-#: libmate-desktop/mate-desktop-item.c:3553
+#: libmate-desktop/mate-desktop-item.c:378
+#: libmate-desktop/mate-desktop-item.c:3537
 msgid "No name"
 msgstr "İsimsiz"
 
-#: libmate-desktop/mate-desktop-item.c:607
+#: libmate-desktop/mate-desktop-item.c:603
 #, c-format
 msgid "File '%s' is not a regular file or directory."
 msgstr "'%s' bir dosya ya da dizin değil."
 
-#: libmate-desktop/mate-desktop-item.c:791
+#: libmate-desktop/mate-desktop-item.c:787
 #, c-format
 msgid "Cannot find file '%s'"
 msgstr "'%s' dosyası bulunamadı"
 
-#: libmate-desktop/mate-desktop-item.c:837
+#: libmate-desktop/mate-desktop-item.c:833
 msgid "No filename to save to"
 msgstr "Kaydedilmek üzere bir dosya adı yok"
 
-#: libmate-desktop/mate-desktop-item.c:1856
+#: libmate-desktop/mate-desktop-item.c:1850
 #, c-format
 msgid "Starting %s"
 msgstr "%s başlatılıyor"
 
-#: libmate-desktop/mate-desktop-item.c:2092
+#: libmate-desktop/mate-desktop-item.c:2084
 msgid "No URL to launch"
 msgstr "Başlatılacak URL yok"
 
-#: libmate-desktop/mate-desktop-item.c:2108
+#: libmate-desktop/mate-desktop-item.c:2100
 msgid "Not a launchable item"
 msgstr "Başlatılabilir bir öğe değil"
 
-#: libmate-desktop/mate-desktop-item.c:2118
+#: libmate-desktop/mate-desktop-item.c:2109
 msgid "No command (Exec) to launch"
 msgstr "Çalıştırılacak komut (Exec) yok"
 
-#: libmate-desktop/mate-desktop-item.c:2131
+#: libmate-desktop/mate-desktop-item.c:2121
 msgid "Bad command (Exec) to launch"
 msgstr "Başlatmak için hatalı komut (Exec)"
 
-#: libmate-desktop/mate-desktop-item.c:3610
+#: libmate-desktop/mate-desktop-item.c:3594
 #, c-format
 msgid "Unknown encoding of: %s"
 msgstr "Bilinmeyen kodlama: %s"
@@ -438,24 +451,24 @@ msgid "Unspecified"
 msgstr "Belirtilmemiş"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
-#: libmate-desktop/mate-rr.c:458
+#: libmate-desktop/mate-rr.c:457
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr "Ekran kaynakları alınamadı (CRTC'ler, çıkışlar, kipler)"
 
-#: libmate-desktop/mate-rr.c:479
+#: libmate-desktop/mate-rr.c:478
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr ""
 "Ekran boyutlarının aralığı alınırken idare edilemeyen bir X hatası oluştu"
 
-#: libmate-desktop/mate-rr.c:485
+#: libmate-desktop/mate-rr.c:484
 msgid "could not get the range of screen sizes"
 msgstr "Ekran boyutlarının aralığı alınamadı"
 
-#: libmate-desktop/mate-rr.c:704
+#: libmate-desktop/mate-rr.c:703
 msgid "RANDR extension is not present"
 msgstr "RANDR uzantısı mevcut değil"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1264
 #, c-format
 msgid "could not get information about output %d"
 msgstr "Çıktı hakkında bilgi alınamadı %d"
@@ -463,7 +476,7 @@ msgstr "Çıktı hakkında bilgi alınamadı %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1749
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -472,12 +485,12 @@ msgstr ""
 "CRTC %d için istenilen konum/boyut izin verilen limitlerin dışında: "
 "pozisyon=(%d, %d), boyut=(%d, %d), en fazla=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "CRTC %d için yapılandırma ayarları tanımlanamadı"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "CRTC %d hakkında bilgi alınamadı"
@@ -491,22 +504,22 @@ msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr "Hiçbir kayıtlı ekran yapılandırması aktif yapılandırma ile eşleşmiyor"
 
-#: libmate-desktop/mate-rr-config.c:1486
+#: libmate-desktop/mate-rr-config.c:1485
 #, c-format
 msgid "CRTC %d cannot drive output %s"
 msgstr "CRTC %d %s çıktısını yönetemez"
 
-#: libmate-desktop/mate-rr-config.c:1493
+#: libmate-desktop/mate-rr-config.c:1492
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
 msgstr "%s çıktısı %dx%d@%dHz kipini desteklemiyor"
 
-#: libmate-desktop/mate-rr-config.c:1504
+#: libmate-desktop/mate-rr-config.c:1503
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
 msgstr "CRTC %d döndürme=%s değerini desteklemiyor"
 
-#: libmate-desktop/mate-rr-config.c:1518
+#: libmate-desktop/mate-rr-config.c:1517
 #, c-format
 msgid ""
 "output %s does not have the same parameters as another cloned output:\n"
@@ -519,24 +532,24 @@ msgstr ""
 "mevcut koordinatlar = (%d, %d), yeni koordinatlar = (%d, %d)\n"
 "mevcut döndürme = %s, yeni döndürme = %s"
 
-#: libmate-desktop/mate-rr-config.c:1533
+#: libmate-desktop/mate-rr-config.c:1532
 #, c-format
 msgid "cannot clone to output %s"
 msgstr "%s çıktısına klonlanamaz"
 
-#: libmate-desktop/mate-rr-config.c:1702
+#: libmate-desktop/mate-rr-config.c:1701
 #, c-format
 msgid "Trying modes for CRTC %d\n"
 msgstr "CRTC %d için kipler deneniyor\n"
 
-#: libmate-desktop/mate-rr-config.c:1726
+#: libmate-desktop/mate-rr-config.c:1725
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
 "CRTC %d:  %dx%d@%dHz kipi %dx%d@%dHz değerine çıktı ile (geçiş %d) "
 "deneniyor\n"
 
-#: libmate-desktop/mate-rr-config.c:1773
+#: libmate-desktop/mate-rr-config.c:1772
 #, c-format
 msgid ""
 "could not assign CRTCs to outputs:\n"
@@ -545,7 +558,7 @@ msgstr ""
 "CRTCler çıktılara atanamadı:\n"
 "%s"
 
-#: libmate-desktop/mate-rr-config.c:1777
+#: libmate-desktop/mate-rr-config.c:1776
 #, c-format
 msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
@@ -557,7 +570,7 @@ msgstr ""
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
 #. * translate them as usual.
-#: libmate-desktop/mate-rr-config.c:1859
+#: libmate-desktop/mate-rr-config.c:1858
 #, c-format
 msgid ""
 "required virtual size does not fit available size: requested=(%d, %d), "
@@ -639,7 +652,7 @@ msgstr "Herhangi bir yardımcı tuşa basıldığında bip sesi çal."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:86
 msgid "Beep when a key is pressed while CapsLock is active."
-msgstr ""
+msgstr "CapsLock etkinken bir tuşa basıldığında bip sesi"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:91
 msgid "Beep count when enabling a modifier"
@@ -776,25 +789,28 @@ msgstr "Tarayıcı remote seçeneğini anlar"
 
 #: schemas/org.mate.applications-browser.gschema.xml:16
 msgid "Whether the default browser understands netscape remote."
-msgstr "Öntanımlı tarayıcının uzaktan netscape anlayıp anlamayacağı."
+msgstr "Varsayılan tarayıcının uzaktan netscape anlayıp anlamayacağı."
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
-msgstr ""
+msgstr "Hesap uygulaması"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
 msgstr ""
+"Hesap programı gerektiren uygulamaları başlatırken kullanılacak uygulama."
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr ""
+msgstr "Anlık Mesajlaşma uygulaması"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
 msgstr ""
+"Anlık Mesajlaşma programı gerektiren uygulamaları başlatırken kullanılacak "
+"uygulama."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -839,8 +855,7 @@ msgstr "Uçbirim uygulaması"
 #: schemas/org.mate.applications-terminal.gschema.xml:6
 msgid "Terminal program to use when starting applications that require one."
 msgstr ""
-"Gerekli olduğunda uygulamaları başlatılmak için kullanılacak uçbirim "
-"uygulaması."
+"Uçbirim programı gerektiren uygulamaları başlatırken kullanılacak uygulama."
 
 #: schemas/org.mate.applications-terminal.gschema.xml:10
 msgid "Exec Arguments"
@@ -863,12 +878,11 @@ msgstr "MATE'in masaüstü arkaplanını çizmesini sağlar."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
-msgstr "Masaüstü Simgelerini Göster"
+msgstr "Masaüstü İkonlarını Göster"
 
 #: schemas/org.mate.background.gschema.xml.in:24
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr ""
-"MATE dosya yöneticisinin (Caja) masaüstü simgelerini çizmesini belirler."
+msgstr "MATE dosya yöneticisinin (Caja) masaüstü ikonları çizmesini belirler."
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -906,11 +920,11 @@ msgstr "Arkaplan görüntüsü için kullanılacak dosya"
 
 #: schemas/org.mate.background.gschema.xml.in:43
 msgid "Picture Opacity"
-msgstr "Resim Saydamlığı"
+msgstr "Resim Matlığı"
 
 #: schemas/org.mate.background.gschema.xml.in:44
 msgid "Opacity with which to draw the background picture."
-msgstr "Arkaplan resminin çizileceği saydamlık."
+msgstr "Arkaplan resminin çizileceği matlık."
 
 #: schemas/org.mate.background.gschema.xml.in:48
 msgid "Primary Color"
@@ -943,11 +957,11 @@ msgstr ""
 
 #: schemas/org.mate.file-views.gschema.xml:5
 msgid "File Icon Theme"
-msgstr "Dosya Simgesi Teması"
+msgstr "Dosya İkon Teması"
 
 #: schemas/org.mate.file-views.gschema.xml:6
 msgid "Theme used for displaying file icons."
-msgstr "Bu tema dosya simgelerinin görüntülenmesinde kullanılır."
+msgstr "Bu tema dosya ikonlarının görüntülenmesinde kullanılır."
 
 #: schemas/org.mate.interface.gschema.xml:5
 msgid "Enable Accessibility"
@@ -987,19 +1001,19 @@ msgstr "Araç çubuğu biçemi. Geçerli değerler  \"both\", \"both-horiz\", \"
 
 #: schemas/org.mate.interface.gschema.xml:25
 msgid "Menus Have Icons"
-msgstr "Menülerde Simge Gösterimi"
+msgstr "Menülerde İkon Gösterimi"
 
 #: schemas/org.mate.interface.gschema.xml:26
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr "Menülerde girdilerin yanında simgelerin gösterilip gösterilmeyeceği."
+msgstr "Menülerde girdilerin yanında ikonların gösterilip gösterilmeyeceği."
 
 #: schemas/org.mate.interface.gschema.xml:30
 msgid "Buttons Have Icons"
-msgstr "Düğmelerde Simge Gösterimi"
+msgstr "Düğmelerde İkon Gösterimi"
 
 #: schemas/org.mate.interface.gschema.xml:31
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr "Düğmelerde girdilerin yanında simgelerin gösterilip gösterilmeyeceği."
+msgstr "Düğmelerde girdilerin yanında ikonların gösterilip gösterilmeyeceği."
 
 #: schemas/org.mate.interface.gschema.xml:35
 msgid "Menubar Detachable"
@@ -1023,13 +1037,11 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:45
 msgid "Toolbar Icon Size"
-msgstr "Araç Çubuğu Simge Boyutu"
+msgstr "Araç Çubuğu İkon Boyutu"
 
 #: schemas/org.mate.interface.gschema.xml:46
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr ""
-"Araç çubuğundaki simgelerin boyutu, \"small-toolbar\" ya da \"large-"
-"toolbar\"."
+msgstr "Araç çubuğundaki ikonların boyutu, \"small-toolbar\" ya da \"large-toolbar\"."
 
 #: schemas/org.mate.interface.gschema.xml:50
 msgid "Cursor Blink"
@@ -1049,11 +1061,11 @@ msgstr "İmlecin yanıp sönme döngü uzunluğu, milisaniye olarak."
 
 #: schemas/org.mate.interface.gschema.xml:60
 msgid "Icon Theme"
-msgstr "Simge Teması"
+msgstr "İkon Teması"
 
 #: schemas/org.mate.interface.gschema.xml:61
 msgid "Icon theme to use for the panel, Caja etc."
-msgstr "Panel, caja vs. için kullanılacak simge teması."
+msgstr "Panel, caja vs. için kullanılacak ikon teması."
 
 #: schemas/org.mate.interface.gschema.xml:65
 #: schemas/org.mate.interface.gschema.xml:70
@@ -1083,7 +1095,7 @@ msgstr "Varsayılan yazıtipi"
 
 #: schemas/org.mate.interface.gschema.xml:81
 msgid "Name of the default font used by gtk+."
-msgstr "Gtk+ tarafından öntanımlı olarak kullanılan yazıtipinin adı."
+msgstr "Gtk+ tarafından varsayılan olarak kullanılan yazıtipinin adı."
 
 #: schemas/org.mate.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
@@ -1173,7 +1185,7 @@ msgstr "Özel Yazıtipi Kullan"
 
 #: schemas/org.mate.interface.gschema.xml:126
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Gtk+ uygulamalarında özel yazı tipi kullanımı olup olmaması."
+msgstr "Gtk+ uygulamalarında özel yazıtipi kullanımı olup olmaması."
 
 #: schemas/org.mate.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1426,7 +1438,7 @@ msgstr "Oturum kapatmayı devredışı bırak"
 
 #: schemas/org.mate.lockdown.gschema.xml:46
 msgid "Prevent the user from logging out."
-msgstr "Kullanıcının çıkış yapmasını önle."
+msgstr "Kullanıcının oturumu kapatmasını önle."
 
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
@@ -1440,7 +1452,7 @@ msgstr ""
 
 #: schemas/org.mate.sound.gschema.xml:10
 msgid "Default mixer tracks"
-msgstr "Öntanımlı karıştırıcı parçaları"
+msgstr "Varsayılan karıştırıcı unsurları"
 
 #: schemas/org.mate.sound.gschema.xml:11
 msgid "The default mixer tracks used by the multimedia key bindings."
@@ -1479,6 +1491,20 @@ msgstr "Girdi geri bildirim sesleri"
 #: schemas/org.mate.sound.gschema.xml:31
 msgid "Whether to play sounds on input events."
 msgstr "Girdi olaylarında ses çalınması."
+
+#: schemas/org.mate.sound.gschema.xml:35
+msgid "Permit the output volume to exceed 100%"
+msgstr ""
+
+#: schemas/org.mate.sound.gschema.xml:36
+msgid ""
+"If this is set to TRUE, the user will be allowed to set the output / speaker"
+" volume to above 100%. By setting the output volume above 100%, the sound "
+"server will amplify the audio above what the audio hardware can do cleanly. "
+"This can lead to audio quality degradation, but may be useful for listening "
+"to extremely quiet audio recordings, where the recording would otherwise be "
+"completely useless."
+msgstr ""
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:6
 msgid ""
@@ -1579,4 +1605,4 @@ msgstr "Paletten ya da ekrandan renkleri seçin"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
-msgstr ""
+msgstr "MATE;renk;seçeci;seç;palet;ekran;seçim;color;screen;"
