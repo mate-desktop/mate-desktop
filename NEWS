@@ -1,3 +1,31 @@
+### mate-desktop 1.27.0
+
+  * tx: sync with transifex
+  * Revert "[mate-bg] small cleanup"
+  * tx: update resource
+  * tx: migrate config file
+  * mate-desktop-item: time_t mtime -> gint64 mtime
+  * mate-bg: time_t mtime -> gint64 mtime
+  * Fix implicit conversion changes signedness: 'gboolean' to 'guint'
+  * mate-desktop-thumbnail: fix memory leak
+  * Fix build warnings about missing field initializer
+  * mate-bg: fix memory leak
+  * mate-bg: Dereference of null pointer
+  * configure.ac: The macro 'AC_HELP_STRING' is obsolete
+  * mate-desktop-item: macro is not used [-Wunused-macros]
+  * mate-colorsel: macro is not used [-Wunused-macros]
+  * mate-bg: macro is not used [-Wunused-macros]
+  * mate-colorbutton: fix -Wenum-conversion warning
+  * mate-rr: fix -Wsign-compare warning
+  * mate-rr-config: fix -Wsign-compare warning
+  * mate-bg: fix -Wsign-compare warning
+  * display-name: fix -Wsign-compare warning
+  * Add setting for adjustment of audio volume above 100 per cent:  Part 1
+  * ci: drop -Wunused-parameter compiler cflag from debian build
+  * Use a blank line at most
+  * Fix versions
+  * fix meson version
+
 ### mate-desktop 1.26.0
 
   * Translations update
