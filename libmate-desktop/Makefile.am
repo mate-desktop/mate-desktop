@@ -15,7 +15,8 @@ libmate_desktop_HEADERS = \
 	mate-colorbutton.h \
 	mate-colorsel.h \
 	mate-hsv.h \
-	mate-colorseldialog.h
+	mate-colorseldialog.h \
+	mate-image-menu-item.h
 
 lib_LTLIBRARIES = libmate-desktop-2.la
 
@@ -31,7 +32,7 @@ AM_CPPFLAGS =							\
 
 AM_CFLAGS = $(WARN_CFLAGS)
 
-noinst_PROGRAMS = test-desktop-thumbnail test-ditem test test-languages
+noinst_PROGRAMS = test-desktop-thumbnail test-ditem test test-languages test-image-menu-item
 
 CLEANFILES =
 
@@ -52,7 +53,8 @@ introspection_sources = \
 	mate-colorsel.c \
 	mate-hsv.c \
 	mate-colorseldialog.c \
-	edid-parse.c
+	edid-parse.c \
+	mate-image-menu-item.c
 
 libmate_desktop_2_la_SOURCES =		\
 	$(introspection_sources)	\
@@ -95,6 +97,12 @@ test_ditem_LDADD = \
 test_languages_SOURCES = test-languages.c
 
 test_languages_LDADD = \
+	libmate-desktop-2.la		\
+	$(MATE_DESKTOP_LIBS)
+
+test_image_menu_item_SOURCES = test-image-menu-item.c
+
+test_image_menu_item_LDADD = \
 	libmate-desktop-2.la		\
 	$(MATE_DESKTOP_LIBS)
 
