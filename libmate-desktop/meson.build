@@ -11,6 +11,7 @@ headers = files(
   'mate-desktop-thumbnail.h',
   'mate-rr.h',
   'mate-languages.h',
+  'mate-image-menu-item.h',
   'mate-rr-config.h',
   'mate-rr-labeler.h',
   'mate-colorbutton.h',
@@ -35,6 +36,7 @@ sources = files(
   'display-name.c',
   'mate-rr.c',
   'mate-languages.c',
+  'mate-image-menu-item.c',
   'mate-rr-config.c',
   'mate-rr-output-info.c',
   'mate-rr-labeler.c',
@@ -157,6 +159,12 @@ test_color_button = executable('test-color-button',
 
 test_languages = executable('test-languages',
   sources : 'test-languages.c',
+  dependencies : libmate_desktop_dep,
+  install : false,
+)
+
+test_image_menu_item = executable('test-image-menu-item',
+  sources : 'test-image-menu-item.c',
   dependencies : libmate_desktop_dep,
   install : false,
 )
