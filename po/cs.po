@@ -10,10 +10,10 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Lukáš Lommer <drom@kdyne.net>, 2020
 # 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2021
-# ToMáš Marný, 2021
 # Radek kohout <radekpv@seznam.cz>, 2021
 # LiberteCzech <martin.kriz.czech@gmail.com>, 2021
 # Roman Horník <roman.hornik@debian-linux.cz>, 2021
+# ToMáš Marný, 2022
 # 
 msgid ""
 msgstr ""
@@ -21,8 +21,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2022-10-29 15:22+0200\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Roman Horník <roman.hornik@debian-linux.cz>, 2021\n"
-"Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
+"Last-Translator: ToMáš Marný, 2022\n"
+"Language-Team: Czech (https://app.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -61,6 +61,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2022 MATE developers"
 msgstr ""
+"Copyright © 1997-2011 Vývojáři GNOME\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2020 Vývojáři MATE"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -660,6 +663,8 @@ msgid ""
 "Number of beeps to emit when enabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Počet pípnutí při aktivaci modifikátoru, když je povoleno ozvučení kláves. "
+"Funguje pouze s „interním“ backendem."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:97
 msgid "Delay between beeps when enabling a modifier"
@@ -670,6 +675,8 @@ msgid ""
 "Delay in milliseconds between two beeps when enabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Prodleva v milisekundách mezi dvěma pípnutími při povolení modifikátoru, "
+"když je povoleno ozvučení kláves. Funguje pouze s „interním“ backendem."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:103
 msgid "Beep count when disabling a modifier"
@@ -680,6 +687,8 @@ msgid ""
 "Number of beeps to emit when disabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Počet pípnutí při deaktivaci modifikátoru, když je zapnuté ozvučení kláves. "
+"Funguje pouze s „interním“ backendem."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:109
 msgid "Delay between beeps when disabling a modifier"
@@ -690,10 +699,12 @@ msgid ""
 "Delay in milliseconds between two beeps when disabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Prodleva v milisekundách mezi dvěma pípnutími při deaktivaci modifikátoru "
+"při zapnutém ozvučení kláves. Funguje pouze s „interním“ backendem."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:114
 msgid "Implementation to use when togglekeys are enabled"
-msgstr ""
+msgstr "Implementace používaná, když je povoleno ozvučení kláves"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:115
 msgid ""
@@ -701,6 +712,9 @@ msgid ""
 "include 'xkb' (the stock X implementation) and 'internal' (a MATE-specific "
 "and more configurable implementation)."
 msgstr ""
+"Vybírá backend, který se použije k poskytnutí funkce ozvučení kláves. Platné"
+" hodnoty zahrnují „xkb“ (implementace z X) a „internal“ (implementace "
+"specifická pro MATE a lépe konfigurovatelná)."
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"
@@ -1484,7 +1498,7 @@ msgstr "Zda přehrávat zvuky při událostech vstupu."
 
 #: schemas/org.mate.sound.gschema.xml:35
 msgid "Permit the output volume to exceed 100%"
-msgstr ""
+msgstr "Povolit, aby výstupní hlasitost překročila 100 %"
 
 #: schemas/org.mate.sound.gschema.xml:36
 msgid ""
@@ -1495,6 +1509,11 @@ msgid ""
 "to extremely quiet audio recordings, where the recording would otherwise be "
 "completely useless."
 msgstr ""
+"Pokud je toto povoleno, uživatel bude moci nastavit výstup / hlasitost "
+"reproduktoru na více než 100 %. Nastavením výstupní hlasitosti nad 100 % "
+"zvukový server zesílí zvuk nad to, co dokáže čistě zvukový hardware. To může"
+" vést ke zhoršení kvality zvuku, ale může se to hodit při poslechu extrémně "
+"tichých zvukových nahrávek, kde by nahrávka byla jinak nepoužitelná."
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:6
 msgid ""
@@ -1595,4 +1614,4 @@ msgstr "Vyberte si barvy z palety, nebo na obrazovce"
 #: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
-"MATE;barva;výběr;paleta;obrazovka;volič;vybrat;vybírat;vybírání;zvolit;"
+"MATE;barva;barvy;barev;paleta;obrazovka;volič;výběr;vybrat;vybírat;vybírání;zvolit;"

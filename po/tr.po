@@ -13,6 +13,7 @@
 # tarakbumba <tarakbumba@gmail.com>, 2021
 # mauron, 2021
 # Mehmet, 2021
+# KrmSk <keremsoke@gmail.com>, 2022
 # Sabri Ünal <libreajans@gmail.com>, 2022
 # 
 msgid ""
@@ -22,7 +23,7 @@ msgstr ""
 "POT-Creation-Date: 2022-10-29 15:22+0200\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>, 2022\n"
-"Language-Team: Turkish (https://www.transifex.com/mate/teams/13566/tr/)\n"
+"Language-Team: Turkish (https://app.transifex.com/mate/teams/13566/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -63,6 +64,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2022 MATE developers"
 msgstr ""
+"Telif Hakkı © 1997-2011 GNOME geliştiricileri\n"
+"Telif Hakkı © 2011 Perberos\n"
+"Telif Hakkı © 2012-2022 MATE geliştiricileri"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -641,6 +645,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Aynı değiştiriciye tekrar basılana kadar arka arkaya iki kez basıldığında "
+"değiştiricileri kilitleyin."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:75
 msgid "Disable if two keys are pressed at the same time."
@@ -656,47 +662,58 @@ msgstr "CapsLock etkinken bir tuşa basıldığında bip sesi"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:91
 msgid "Beep count when enabling a modifier"
-msgstr ""
+msgstr "Bir değiştiriciyi etkinleştirirken bip sayısı"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:92
 msgid ""
 "Number of beeps to emit when enabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Geçiş tuşları etkinken bir değiştirici etkinleştirildiğinde verilecek bip "
+"sesi sayısı. Yalnızca 'dahili' arka uçla çalışır."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:97
 msgid "Delay between beeps when enabling a modifier"
-msgstr ""
+msgstr "Bir değiştiriciyi etkinleştirirken bip sesleri arasındaki gecikme"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:98
 msgid ""
 "Delay in milliseconds between two beeps when enabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Geçiş tuşları etkinken bir değiştiriciyi etkinleştirirken iki bip sesi "
+"arasındaki milisaniye cinsinden gecikme. Yalnızca 'dahili' arka uçla "
+"çalışır."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:103
 msgid "Beep count when disabling a modifier"
-msgstr ""
+msgstr "Bir değiştiriciyi devre dışı bırakırkenki bip sayısı"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:104
 msgid ""
 "Number of beeps to emit when disabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Geçiş tuşları etkinken bir değiştirici devre dışı bırakıldığında verilecek "
+"bip sesi sayısı. Yalnızca 'dahili' arka uçla çalışır."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:109
 msgid "Delay between beeps when disabling a modifier"
 msgstr ""
+"Bir değiştiriciyi devre dışı bırakırken bip sesleri arasındaki gecikme"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:110
 msgid ""
 "Delay in milliseconds between two beeps when disabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Geçiş tuşları etkinken bir değiştiriciyi devre dışı bırakırken iki bip sesi "
+"arasındaki milisaniye cinsinden gecikme. Yalnızca 'dahili' arka uçla "
+"çalışır."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:114
 msgid "Implementation to use when togglekeys are enabled"
-msgstr ""
+msgstr "Geçiş tuşları etkinleştirildiğinde kullanılacak uygulama"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:115
 msgid ""
@@ -704,6 +721,9 @@ msgid ""
 "include 'xkb' (the stock X implementation) and 'internal' (a MATE-specific "
 "and more configurable implementation)."
 msgstr ""
+"Geçiş tuşları özelliğini sağlamak için kullanılacak arka ucu seçer. Geçerli "
+"değerler arasında \"xkb\" (stok X uygulaması) ve \"dahili\" (MATE'ye özgü ve"
+" daha yapılandırılabilir bir uygulama) bulunur."
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"
