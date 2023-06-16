@@ -1163,6 +1163,7 @@ mate_bg_create_surface_scale (MateBG      *bg,
 
 	cairo_surface_t *surface;
 	cairo_t *cr;
+	GdkDisplay *display;
 
 	g_return_val_if_fail (bg != NULL, NULL);
 	g_return_val_if_fail (window != NULL, NULL);
@@ -1177,7 +1178,9 @@ mate_bg_create_surface_scale (MateBG      *bg,
 
 	mate_bg_get_pixmap_size (bg, width, height, &pm_width, &pm_height);
 
-	if (root)
+	display = gdk_display_get_default ();
+
+	if ((root) &&  GDK_IS_X11_DISPLAY (display))
 	{
 		surface = make_root_pixmap (window, pm_width * scale, pm_height * scale);
 	}
