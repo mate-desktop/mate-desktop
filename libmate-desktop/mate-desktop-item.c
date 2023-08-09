@@ -1459,6 +1459,7 @@ expand_string (const MateDesktopItem  *item,
 	return g_string_free (gs, FALSE);
 }
 
+/*Functions in this code block should only ever be reached in x11*/
 #ifdef HAVE_STARTUP_NOTIFICATION
 static void
 sn_error_trap_push (SnDisplay *display,
@@ -1657,7 +1658,7 @@ add_startup_timeout (GdkScreen         *screen,
 						data);
 	}
 }
-#endif /* HAVE_STARTUP_NOTIFICATION */
+#endif /* HAVE_STARTUP_NOTIFICATION - functions should only be reached in x11*/
 
 static inline char *
 stringify_uris (GSList *args)
@@ -1810,63 +1811,67 @@ ditem_execute (const MateDesktopItem *item,
 	arg_ptr = make_args (file_list);
 
 #ifdef HAVE_STARTUP_NOTIFICATION
-	if (screen)
-		gdkdisplay = gdk_screen_get_display (screen);
-	else
-		gdkdisplay = gdk_display_get_default ();
+	GdkDisplay *display = gdk_screen_get_display (gdk_screen_get_default());
+	if (GDK_IS_X11_DISPLAY (display))
+	{
+		if (screen)
+			gdkdisplay = gdk_screen_get_display (screen);
+		else
+			gdkdisplay = gdk_display_get_default ();
 
-	sn_display = sn_display_new (GDK_DISPLAY_XDISPLAY (gdkdisplay),
-				     sn_error_trap_push,
-				     sn_error_trap_pop);
+		sn_display = sn_display_new (GDK_DISPLAY_XDISPLAY (gdkdisplay),
+					     sn_error_trap_push,
+					     sn_error_trap_pop);
 
-	/* Only initiate notification if desktop file supports it.
-	 * (we could avoid setting up the SnLauncherContext if we aren't going
-	 * to initiate, but why bother)
-	 */
+		/* Only initiate notification if desktop file supports it.
+		 * (we could avoid setting up the SnLauncherContext if we aren't going
+		 * to initiate, but why bother)
+		 */
 
-	startup_class = mate_desktop_item_get_string (item,
-						       "StartupWMClass");
-	if (startup_class ||
-	    mate_desktop_item_get_boolean (item, "StartupNotify")) {
-		const char *name;
-		const char *icon;
+		startup_class = mate_desktop_item_get_string (item,
+							      "StartupWMClass");
+		if (startup_class ||
+		    mate_desktop_item_get_boolean (item, "StartupNotify")) {
+			const char *name;
+			const char *icon;
 
-		sn_context = sn_launcher_context_new (sn_display,
-						      screen ? gdk_x11_screen_get_screen_number (screen) :
-						      DefaultScreen (GDK_DISPLAY_XDISPLAY (gdkdisplay)));
+			sn_context = sn_launcher_context_new (sn_display,
+							      screen ? gdk_x11_screen_get_screen_number (screen) :
+							      DefaultScreen (GDK_DISPLAY_XDISPLAY (gdkdisplay)));
 
-		name = mate_desktop_item_get_localestring (item,
-							    MATE_DESKTOP_ITEM_NAME);
-
-		if (name == NULL)
 			name = mate_desktop_item_get_localestring (item,
-								    MATE_DESKTOP_ITEM_GENERIC_NAME);
+								   MATE_DESKTOP_ITEM_NAME);
 
-		if (name != NULL) {
-			char *description;
+			if (name == NULL)
+				name = mate_desktop_item_get_localestring (item,
+									   MATE_DESKTOP_ITEM_GENERIC_NAME);
 
-			sn_launcher_context_set_name (sn_context, name);
+			if (name != NULL) {
+				char *description;
 
-			description = g_strdup_printf (_("Starting %s"), name);
+				sn_launcher_context_set_name (sn_context, name);
 
-			sn_launcher_context_set_description (sn_context, description);
+				description = g_strdup_printf (_("Starting %s"), name);
 
-			g_free (description);
+				sn_launcher_context_set_description (sn_context, description);
+
+				g_free (description);
+			}
+
+			icon = mate_desktop_item_get_string (item,
+							     MATE_DESKTOP_ITEM_ICON);
+
+			if (icon != NULL)
+				sn_launcher_context_set_icon_name (sn_context, icon);
+
+			sn_launcher_context_set_workspace (sn_context, workspace);
+
+			if (startup_class != NULL)
+				sn_launcher_context_set_wmclass (sn_context,
+								 startup_class);
+		} else {
+			sn_context = NULL;
 		}
-
-		icon = mate_desktop_item_get_string (item,
-						      MATE_DESKTOP_ITEM_ICON);
-
-		if (icon != NULL)
-			sn_launcher_context_set_icon_name (sn_context, icon);
-
-		sn_launcher_context_set_workspace (sn_context, workspace);
-
-		if (startup_class != NULL)
-			sn_launcher_context_set_wmclass (sn_context,
-							 startup_class);
-	} else {
-		sn_context = NULL;
 	}
 #endif
 
@@ -1937,7 +1942,7 @@ ditem_execute (const MateDesktopItem *item,
 		g_slist_free_full (vector_list, g_free);
 
 #ifdef HAVE_STARTUP_NOTIFICATION
-		if (sn_context != NULL &&
+		if (sn_context != NULL && (GDK_IS_X11_DISPLAY (display)) &&
 		    !sn_launcher_context_get_initiated (sn_context)) {
 			guint32 launch_time;
 
@@ -2003,7 +2008,7 @@ ditem_execute (const MateDesktopItem *item,
 
 	g_free (exec_locale);
 #ifdef HAVE_STARTUP_NOTIFICATION
-	if (sn_context != NULL) {
+	if ((sn_context != NULL) && (GDK_IS_X11_DISPLAY (display))){
 		if (ret < 0)
 			sn_launcher_context_complete (sn_context); /* end sequence */
 		else
@@ -2012,8 +2017,9 @@ ditem_execute (const MateDesktopItem *item,
 					     sn_context);
 		sn_launcher_context_unref (sn_context);
 	}
+	if (GDK_IS_X11_DISPLAY (display))
+		sn_display_unref (sn_display);
 
-	sn_display_unref (sn_display);
 #endif /* HAVE_STARTUP_NOTIFICATION */
 
 	free_args (args);
