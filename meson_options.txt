@@ -17,8 +17,8 @@ option('mate-about',
 )
 
 option('startup-notification',
-  type: 'boolean',
-  value: 'false',
+  type: 'feature',
+  value: 'auto',
   description: 'startup notification support'
 )
 
