@@ -76,17 +76,19 @@ randr_dep = dependency('xrandr', version: '>= 1.3', required: false)
 config_h.set('HAVE_RANDR', randr_dep.found())
 iso_codes = dependency('iso-codes')
 iso_codes_prefix = iso_codes.get_pkgconfig_variable('prefix')
+libstartup_dep = dependency('libstartup-notification-1.0', version: '>= 0.5',
+    required: enable_startup_notification )
 libmdt_dep = [
   dependency('gdk-pixbuf-2.0'),
   dependency('gobject-2.0'),
   dependency('glib-2.0', version: '>= 2.50.0'),
   dependency('gio-2.0', version: '>= 2.26.0'),
-  dependency('libstartup-notification-1.0', version: '>= 0.5',
-    required: enable_startup_notification ),
+  libstartup_dep,
   randr_dep,
   iso_codes,
 ]
 
+config_h.set('HAVE_STARTUP_NOTIFICATION', libstartup_dep.found())
 gnome = import('gnome')
 i18n = import('i18n')
 pkg = import('pkgconfig')
