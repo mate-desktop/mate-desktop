@@ -257,6 +257,7 @@ schemas/org.mate.background.gschema.xml
 man/Makefile
 tools/Makefile
 icons/Makefile
+xdg-portal/Makefile
 ])
 
 AC_OUTPUT

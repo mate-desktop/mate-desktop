@@ -104,6 +104,7 @@ endif
 subdir('po')
 subdir('tools')
 subdir('schemas')
+subdir('xdg-portal')
 if get_option('mate-about')
   subdir('mate-about')
 endif
