@@ -4,22 +4,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# zubr139, 2018
-# Max Lyashuk <m_lyashuk@ukr.net>, 2018
-# Evolve32 <evolve32@yandex.ru>, 2018
-# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Yuri Chornoivan <yurchor@ukr.net>, 2020
+# zubr139, 2021
+# Yuri Chornoivan <yurchor@ukr.net>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Микола Ткач <chistomov@gmail.com>, 2021
+# Max Lyashuk <m_lyashuk@ukr.net>, 2021
+# Evolve32 <evolve32@yandex.ru>, 2021
+# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2021
+# Юрій Яновський <lytvyn349@ukr.net>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2021\n"
-"Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: Юрій Яновський <lytvyn349@ukr.net>, 2021\n"
+"Language-Team: Ukrainian (https://app.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,7 +34,8 @@ msgid "translator-credits"
 msgstr ""
 "Yarema aka Knedlyk <yupadmin@gmail.com>,\n"
 "Микола Ткач <Stuartlittle1970@gmail.com>,\n"
-"Oleh Tsyupka <myr4yk@gmail.com>"
+"Oleh Tsyupka <myr4yk@gmail.com>\n"
+"Юрій Яновський <lytvyn349@ukr.net>"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -62,8 +64,8 @@ msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
-"MATE надає інтуїтивно зрозуміле та привабливе робоче оточення для Linux "
-"користувачів, що використовують традиційну концепцію."
+"MATE надає інтуїтивно зрозуміле та привабливе робоче оточення для "
+"користувачів Linux, що використовують традиційну концепцію."
 
 #: mate-about/mate-about.h:45
 msgid ""
@@ -125,7 +127,7 @@ msgstr "Використати прозорість кольору"
 
 #: libmate-desktop/mate-colorbutton.c:153
 msgid "Whether or not to give the color an alpha value"
-msgstr "Використовувати прозорість кольору чи ні"
+msgstr "Використовувати прозорість кольору, чи ні"
 
 #: libmate-desktop/mate-colorbutton.c:167
 msgid "Title"
@@ -136,7 +138,7 @@ msgid "The title of the color selection dialog"
 msgstr "Заголовок діалогу вибору кольору"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Оберіть колір"
 
@@ -158,7 +160,7 @@ msgstr ""
 "Обране значення непрозорости (0 - повністю прозорий, 65535 - повністю "
 "непрозорий)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Отримано некоректні дані кольору\n"
 
@@ -332,7 +334,7 @@ msgstr ""
 "\"Зберегти колір тут\"."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Вибір кольору"
 
@@ -364,10 +366,22 @@ msgstr "Кнопка \"Довідка\""
 msgid "The help button of the dialog."
 msgstr "Кнопка діалогу \"Довідка\"."
 
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Скасувати"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_Так"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Довідка"
+
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
-msgstr "Помилка зчитування файлу \"%s\": %s"
+msgstr "Помилка читання файлу \"%s\": %s"
 
 #: libmate-desktop/mate-desktop-item.c:288
 #, c-format
@@ -451,7 +465,7 @@ msgstr "не вдається отримати дозволені розміри
 msgid "RANDR extension is not present"
 msgstr "Розширення RANDR не підтримується"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "не вдається отримати інформацію про вихід %d"
@@ -459,7 +473,7 @@ msgstr "не вдається отримати інформацію про ви�
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -468,12 +482,12 @@ msgstr ""
 "потрібна програма та розмір CRTC %d виходить за рамки дозволених меж: "
 "розташування=(%d, %d), розмір=(%d, %d), щонайбільше=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "не вдається встановити конфігурацію контролера CRTC %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "не вдається отримати інформацію про контролер CRTC %d"
@@ -1075,14 +1089,14 @@ msgstr "Базова назва усталеної теми для GTK+"
 
 #: schemas/org.mate.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
-msgstr "Перелік символічних імен та еквівалентів кольорів."
+msgstr "Перелік символічних імен і еквівалентів кольорів."
 
 #: schemas/org.mate.interface.gschema.xml:76
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
 msgstr ""
-"Відокремлений перелік '\\n' \"name:color\" визначений опцією 'gtk-color-"
+"Відокремлений перелік '\\n' \"name:color\" визначено опцією 'gtk-color-"
 "scheme'"
 
 #: schemas/org.mate.interface.gschema.xml:80
@@ -1095,11 +1109,11 @@ msgstr "Назва типового шрифту GTK+."
 
 #: schemas/org.mate.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
-msgstr "Стиль методу уведення GTK IM"
+msgstr "Стиль методу введення GTK IM"
 
 #: schemas/org.mate.interface.gschema.xml:86
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr "Ім’я стилю стану методу уведення GTK+, що використовується gtk+."
+msgstr "Ім’я стилю стану методу введення GTK+, що використовується gtk+."
 
 #: schemas/org.mate.interface.gschema.xml:90
 msgid "GTK IM Status Style"
@@ -1107,7 +1121,7 @@ msgstr "Стиль статусу GTK IM"
 
 #: schemas/org.mate.interface.gschema.xml:91
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr "Назва методу уведення стилю стану GTK+, що використовується gtk+"
+msgstr "Назва методу введення стилю стану GTK+, що використовується gtk+"
 
 #: schemas/org.mate.interface.gschema.xml:95
 msgid "GTK IM Module"
@@ -1115,7 +1129,7 @@ msgstr "Модуль GTK IM"
 
 #: schemas/org.mate.interface.gschema.xml:96
 msgid "Name of the input method module used by GTK+."
-msgstr "Назва модулю методу уведення, що використовується GTK+."
+msgstr "Назва модулю методу введення, що використовується GTK+."
 
 #: schemas/org.mate.interface.gschema.xml:100
 msgid "Use GTK3 header bar"
@@ -1235,8 +1249,8 @@ msgstr ""
 #: schemas/org.mate.interface.gschema.xml:155
 msgid "Titlebar layout of GTK3 client-side decorated windows"
 msgstr ""
-"Компонування заголовку в GTK3 вікнах, що використовують декорації на стороні"
-" клієнта."
+"Компонування заголовку в GTK3 вікнах, що використовують оздоблення на "
+"стороні клієнта."
 
 #: schemas/org.mate.interface.gschema.xml:156
 msgid ""

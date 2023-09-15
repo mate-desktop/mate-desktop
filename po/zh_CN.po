@@ -4,30 +4,30 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2018
-# gtrslower, 2018
-# 775405984, 2018
-# liulitchi <xingzuo88@qq.com>, 2018
-# Cravix <dr.neemous@gmail.com>, 2018
-# Mingye Wang <arthur200126@gmail.com>, 2018
-# zhangxianwei8 <zhang.xianwei8@zte.com.cn>, 2018
-# biqiu-ssw <shenshuaiwen@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Mingcong Bai <jeffbai@aosc.xyz>, 2019
-# zhineng404 <zhinengge@gmail.com>, 2019
+# 775405984, 2021
+# zhangxianwei8 <zhang.xianwei8@zte.com.cn>, 2021
+# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# liu lizhi <xingzuo88@qq.com>, 2021
+# gtrslower, 2021
+# Cravix <dr.neemous@gmail.com>, 2021
 # 玉堂白鹤 <yjwork@qq.com>, 2021
+# Mingcong Bai <jeffbai@aosc.xyz>, 2021
 # shuyu liu <liushuyu011@gmail.com>, 2021
-# OkayPJ <1535253694@qq.com>, 2021
+# Mingye Wang <arthur200126@gmail.com>, 2021
+# biqiu-ssw <shenshuaiwen@gmail.com>, 2021
 # Wenbin Lv <wenbin816@gmail.com>, 2021
+# zhineng404 <zhinengge@gmail.com>, 2021
+# OkayPJ <1535253694@qq.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2021\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: OkayPJ <1535253694@qq.com>, 2021\n"
+"Language-Team: Chinese (China) (https://app.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,17 +39,18 @@ msgstr ""
 #: mate-about/mate-about.c:68
 msgid "translator-credits"
 msgstr ""
-"Christopher Meng <i@cicku.me>, 2012-2013\n"
-"ravix <dr.neemous@gmail.com>, 2013\n"
+"Christopher Meng , 2012-2013\n"
+"ravix , 2013\n"
 "Dianjin Wang <1132321739qq@gmail.com>, 2012\n"
-"Cravix <dr.neemous@gmail.com>, 2013\n"
-"nyanyh <rebuilty@gmail.com>, 2013\n"
-"liulitchi <xingzuo88@qq.com>, 2013\n"
-"玉堂白鹤 <yjwork@qq.com>, 2015\n"
-"Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
-"白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
-"刘子兴 <liushuyu@aosc.xyz>, 2015-2016\n"
-"比丘<shenshuaiwen@gmail.com>,2018-2019"
+"Cravix , 2013\n"
+"nyanyh , 2013\n"
+"liulitchi , 2013\n"
+"玉堂白鹤 , 2015\n"
+"Mingye Wang , 2015-2016\n"
+"白铭骢 , 2015-2016\n"
+"刘子兴 , 2015-2016\n"
+"比丘 , 2018-2019\n"
+"OkayPJ , 2020"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -139,7 +140,7 @@ msgid "The title of the color selection dialog"
 msgstr "颜色选择对话框标题"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "拾取颜色"
 
@@ -159,7 +160,7 @@ msgstr "当前 Alpha 值"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "目前的不透明度值(0表示完全透明, 65535表示完全不透明)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "接收到非法颜色数据\n"
 
@@ -319,7 +320,7 @@ msgid ""
 msgstr "点击调色板项来将其设置为当前颜色。拖拽一个颜色样本至此或右击并选择 \"保存颜色至此\""
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "颜色选择"
 
@@ -350,6 +351,18 @@ msgstr "帮助按钮"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "对话框中的帮助按钮。"
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "确定(_O)"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "帮助"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -436,7 +449,7 @@ msgstr "无法获知屏幕大小"
 msgid "RANDR extension is not present"
 msgstr "没有 RANDR 扩展"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "无法得到输出 %d 的有关信息"
@@ -444,19 +457,19 @@ msgstr "无法得到输出 %d 的有关信息"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr "CRTC %d 需要的位置/大小在限制允许之外：位置=(%d, %d)，大小=(%d, %d)，最大=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "无法为 CRTC %d 设定配置"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "无法获取CRTC %d的相关信息。"

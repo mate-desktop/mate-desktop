@@ -4,19 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Aputsiak Niels Janussen <aj@isit.gl>, 2018
-# Allan Nordhøy <epost@anotheragency.no>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Allan Nordhøy <epost@anotheragency.no>, 2021
+# Aputsiak Niels Janussen <aputtu@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Joe Hansen <joedalton2@yahoo.dk>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2021\n"
-"Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
+"Language-Team: Danish (https://app.transifex.com/mate/teams/13566/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,10 +28,10 @@ msgstr ""
 #: mate-about/mate-about.c:68
 msgid "translator-credits"
 msgstr ""
-"\"Joe Hansen, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019.\\n\"\n"
-"\"\\n\"\n"
-"\"Dansk-gruppen <dansk@dansk-gruppen.dk>\\n\"\n"
-"\"Mere info: http://www.dansk-gruppen.dk\""
+"Joe Hansen 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.\n"
+"\n"
+"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
+"Mere info: http://www.dansk-gruppen.dk"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -134,7 +134,7 @@ msgid "The title of the color selection dialog"
 msgstr "Titlen på vinduet til farvevalg"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Vælg en farve"
 
@@ -156,7 +156,7 @@ msgstr ""
 "Den valgte værdi for uigennemsighed  (0 for komplet gennemsigtig, 65535 for "
 "komplet uigennemsig)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Modtog ugyldig farvedata\n"
 
@@ -333,7 +333,7 @@ msgstr ""
 " farve her«."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Farvevalg"
 
@@ -364,6 +364,18 @@ msgstr "Hjælp-knap"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "Hjælp-knappen for vinduet."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Afbryd"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_O.k."
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Hjælp"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -450,7 +462,7 @@ msgstr "kunne ikke hente tabeller til skærmstørrelser"
 msgid "RANDR extension is not present"
 msgstr "RANDR-udvidelsen er ikke tilstede"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "kunne ikke hente information om uddata %d"
@@ -458,7 +470,7 @@ msgstr "kunne ikke hente information om uddata %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -467,12 +479,12 @@ msgstr ""
 "anmodet placering/størrelse til CRTC %d er uden for de tilladte grænser: "
 "Position=(%d, %d), størrelse=(%d, %d), maksimum=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "kunne ikke sætte indstillinger til CRTC %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "kunne ikke hente information om CRTC %d"

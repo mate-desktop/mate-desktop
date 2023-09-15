@@ -4,21 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Damir Jerovšek <jierro@windowslive.com>, 2018
-# Marko Šterman <marko.chamillionaire@gmail.com>, 2018
-# Arnold Marko <arnold.marko@gmail.com>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# 392dbed06ed0617bcf734e5c3b88c2de_a806767 <56c3eb2cbfedb81f02a0c7d6830fdbf3_19707>, 2021
+# Damir Jerovšek <jierro@windowslive.com>, 2021
 # worm <thewormhole@gmail.com>, 2021
 # Helena S <ele@tutamail.com>, 2021
+# Arnold Marko <arnold.marko@gmail.com>, 2021
+# Martin Srebotnjak <miles@filmsi.net>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Helena S <ele@tutamail.com>, 2021\n"
-"Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>, 2022\n"
+"Language-Team: Slovenian (https://app.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,6 +50,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Copyright © 1997-2011 Razvijalci GNOME\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2021 Razvijalci MATE"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -127,10 +131,10 @@ msgstr "Naziv"
 
 #: libmate-desktop/mate-colorbutton.c:168
 msgid "The title of the color selection dialog"
-msgstr "Naziv pogovornega okna za izbor barve"
+msgstr "Naziv pogovornega okna za izbiro barve"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Izberite barvo"
 
@@ -152,7 +156,7 @@ msgstr ""
 "Izbrana vrednost neprosojnosti (0 je popolnoma prosojno, 65535 je popolnoma "
 "neprosojno)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Prejeta je neveljavna vrednost barve\n"
 
@@ -329,7 +333,7 @@ msgstr ""
 "\"Shrani barvo sem.\""
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Izbor barve"
 
@@ -360,6 +364,18 @@ msgstr "Gumb Pomoč"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "Gumb Pomoč pogovornega okna."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Prekliči"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_V redu"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Pomoč"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -449,7 +465,7 @@ msgstr "ni mogoče dobiti obsega velikosti zaslona"
 msgid "RANDR extension is not present"
 msgstr "Razširitev RANDR ni na voljo"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "ni mogoče dobiti podatkov o odvodu %d"
@@ -457,7 +473,7 @@ msgstr "ni mogoče dobiti podatkov o odvodu %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -466,12 +482,12 @@ msgstr ""
 "zahtevan položaj/velikost za CRTC %d je izven dovoljenih omejitev: "
 "položaj=(%d, %d), velikost=(%d, %d), največja dovoljena vrednost=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "ni mogoče določiti nastavitve za CRTC %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "ni mogoče pridobiti podatkov o CRTC %d"
@@ -634,51 +650,59 @@ msgstr "Zapiskaj, ko je pritisnjena tipka."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:86
 msgid "Beep when a key is pressed while CapsLock is active."
-msgstr ""
+msgstr "Zapiskaj, ko je pritisnjena tipka ob dejavni tipki CapsLock"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:91
 msgid "Beep count when enabling a modifier"
-msgstr ""
+msgstr "Število piskov ob omogočanju spremenilne tipke"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:92
 msgid ""
 "Number of beeps to emit when enabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Število izvedenih piskov, ko je omogočena spremenilna tipka, medtem ko so "
+"omogočene preklopne tipke. Deluje le z \"internim\" ozadjem."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:97
 msgid "Delay between beeps when enabling a modifier"
-msgstr ""
+msgstr "Časovni zamik med piski za vklop spremenilne tipke"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:98
 msgid ""
 "Delay in milliseconds between two beeps when enabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Zamik v ms med dvema piskoma, ko omogočite spremenilno tipko, medtem ko so "
+"omogočene preklopne tipke. Deluje le z \"internim\" ozadjem."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:103
 msgid "Beep count when disabling a modifier"
-msgstr ""
+msgstr "Ševilo piskov ob onemogočanju spremenilne tipke"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:104
 msgid ""
 "Number of beeps to emit when disabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Število izvedenih piskov, ko onemogočite spremenilno tipko, medtem ko so "
+"omogočene preklopne tipke. Deluje le z \"internim\" ozadjem."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:109
 msgid "Delay between beeps when disabling a modifier"
-msgstr ""
+msgstr "Časovni zamik med piski za izklop spremenilne tipke"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:110
 msgid ""
 "Delay in milliseconds between two beeps when disabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Zamik v ms med dvema piskoma, ko onemogočite spremenilno tipko, medtem ko so"
+" omogočene preklopne tipke. Deluje le z \"internim\" ozadjem."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:114
 msgid "Implementation to use when togglekeys are enabled"
-msgstr ""
+msgstr "Uporabljena implementacija, ko so omogočene preklopne tipke"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:115
 msgid ""
@@ -686,6 +710,9 @@ msgid ""
 "include 'xkb' (the stock X implementation) and 'internal' (a MATE-specific "
 "and more configurable implementation)."
 msgstr ""
+"Izbere ozadje, ki bo uporabljeno za funkcionalnost preklopnih tipk. Veljavni"
+" vrednosti sta \"xkb\" (klasična implementacija X) in \"internal\" "
+"(specifična MATE-implementacija, ki je bolj prilagodljiva)."
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"

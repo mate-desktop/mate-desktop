@@ -4,36 +4,38 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Alexander <alex.grushetskiy@gmail.com>, 2018
-# Ivan Kuzmenko, 2018
-# павел назаров <nazar12101@gmail.com>, 2018
-# Pavel Zuev, 2018
-# Alexei Sorokin, 2018
-# Дмитрий Михирев, 2018
-# 7175227a27711e76caf4f31ec1c821e6_3a93967, 2018
-# Aleksandr <pc01.alex@yandex.ru>, 2018
-# AlexL <loginov.alex.valer@gmail.com>, 2018
-# Evolve32 <evolve32@yandex.ru>, 2018
-# monsta <monsta@inbox.ru>, 2018
-# alsoijw <alsoijw@yandex.ru>, 2018
-# theirix <theirix@gmail.com>, 2018
-# Dmitriy Kulikov <kulikov@dima.perm.ru>, 2018
-# Yevgeniy Goncharov <g.yevgeniy.p@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Alex Putz, 2018
-# Dzmitry Kamenda <kamenda@gmail.com>, 2019
-# Anna Vyalkova <cybertailor@gmail.com>, 2020
 # Victor Kukshiev <andrey0bolkonsky@gmail.com>, 2021
+# павел назаров <nazar12101@gmail.com>, 2021
+# Pavel Zuev, 2021
+# Dzmitry Kamenda <kamenda@gmail.com>, 2021
+# Olesya Gerasimenko <gammaray@basealt.ru>, 2021
 # Дмитрий Астанков <mornie@basealt.ru>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# XRevan86, 2021
+# Дмитрий Михирев, 2021
+# Alexander <alex.grushetskiy@gmail.com>, 2021
+# 7175227a27711e76caf4f31ec1c821e6_3a93967, 2021
+# Aleksandr <pc01.alex@yandex.ru>, 2021
+# AlexL <loginov.alex.valer@gmail.com>, 2021
+# Evolve32 <evolve32@yandex.ru>, 2021
+# Cyber Tailor <cyber@sysrq.in>, 2021
+# monsta <monsta@inbox.ru>, 2021
+# alsoijw <alsoijw@yandex.ru>, 2021
+# theirix <theirix@gmail.com>, 2021
+# Dmitriy Kulikov <kulikov@dima.perm.ru>, 2021
+# Alex Puts, 2021
+# Alexey Rodionov <melenki@yandex.ru>, 2021
+# Павел Коваленко, 2021
+# Andrei Stepanov, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Дмитрий Астанков <mornie@basealt.ru>, 2021\n"
-"Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: Andrei Stepanov, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,6 +51,7 @@ msgstr ""
 "Александр Сигачёв <ajvol2@gmail.com>\n"
 "Александр Соколов\n"
 "Александр Хромин\n"
+"Алексей Родионов <alexey.rodionov@red-soft.ru>\n"
 "Алексей Рочев <equeim@gmail.com>\n"
 "Алексей Сорокин <sor.alexei@meowr.ru>\n"
 "Андрей Иванков\n"
@@ -95,6 +98,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Copyright © 1997-2011 Разработчики GNOME\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2021 Разработчики MATE"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -156,7 +162,7 @@ msgstr ""
 #: libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
-msgstr "Неизвестный"
+msgstr "Неизвестная"
 
 #: libmate-desktop/mate-colorbutton.c:152
 msgid "Use alpha"
@@ -175,7 +181,7 @@ msgid "The title of the color selection dialog"
 msgstr "Заголовок окна диалога выбора цвета"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Выбрать цвет"
 
@@ -197,7 +203,7 @@ msgstr ""
 "Выбранное значение прозрачности (0 – максимальная прозрачность, 65535 – "
 "прозрачность отсутствует)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Получены некорректные данные о цвете\n"
 
@@ -373,7 +379,7 @@ msgstr ""
 " выберите \"Сохранить цвет здесь\"."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Выбор цвета"
 
@@ -399,11 +405,23 @@ msgstr "Кнопка диалога \"Отмена\"."
 
 #: libmate-desktop/mate-colorseldialog.c:120
 msgid "Help Button"
-msgstr "Кнопка \"Помощь\"."
+msgstr "Кнопка «Справка»."
 
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
-msgstr "Кнопка диалога \"Помощь\"."
+msgstr "Кнопка диалога «Справка»."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "О_тмена"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_OK"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Справка"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -493,7 +511,7 @@ msgstr "не удалось получить допустимые размеры
 msgid "RANDR extension is not present"
 msgstr "Расширение RANDR отсутствует"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "не удалось получить информацию о выходе %d"
@@ -501,7 +519,7 @@ msgstr "не удалось получить информацию о выход�
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -510,12 +528,12 @@ msgstr ""
 "требуемое положение или размер для CRTC %d выходит за рамки допустимых "
 "пределов: положение=(%d, %d), размер=(%d, %d), максимально=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "не удалось установить конфигурацию контроллера CRT %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "не удалось получить информацию о контроллере CRT %d"
@@ -678,51 +696,61 @@ msgstr "Подавать сигнал, когда модификатор наж�
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:86
 msgid "Beep when a key is pressed while CapsLock is active."
-msgstr ""
+msgstr "Звуковой сигнал при нажатии клавиши при активном CapsLock."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:91
 msgid "Beep count when enabling a modifier"
-msgstr ""
+msgstr "Количество звуковых сигналов при включении модификатора"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:92
 msgid ""
 "Number of beeps to emit when enabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Количество звуковых сигналов, издаваемых при включении модификатора при "
+"включенных переключателях. Работает только с «внутренним» бэкендом."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:97
 msgid "Delay between beeps when enabling a modifier"
-msgstr ""
+msgstr "Задержка между звуковыми сигналами при включении модификатора"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:98
 msgid ""
 "Delay in milliseconds between two beeps when enabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Задержка в миллисекундах между двумя звуковыми сигналами при отключении "
+"модификатора при включенных переключателях. Работает только с «внутренним» "
+"бэкендом."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:103
 msgid "Beep count when disabling a modifier"
-msgstr ""
+msgstr "Количество звуковых сигналов при выключении модификатора"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:104
 msgid ""
 "Number of beeps to emit when disabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Количество звуковых сигналов, издаваемых при выключении модификатора при "
+"включенных переключателях. Работает только с «внутренним» бэкендом."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:109
 msgid "Delay between beeps when disabling a modifier"
-msgstr ""
+msgstr "Задержка между звуковыми сигналами при отключении модификатора"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:110
 msgid ""
 "Delay in milliseconds between two beeps when disabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Задержка в миллисекундах между двумя звуковыми сигналами при отключении "
+"модификатора при включенных переключателях. Работает только с «внутренним» "
+"бэкендом."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:114
 msgid "Implementation to use when togglekeys are enabled"
-msgstr ""
+msgstr "Реализация для использования при включенных переключателях"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:115
 msgid ""
@@ -730,6 +758,9 @@ msgid ""
 "include 'xkb' (the stock X implementation) and 'internal' (a MATE-specific "
 "and more configurable implementation)."
 msgstr ""
+"Выбирает бэкенд для использования в качестве функции переключения клавиш. "
+"Допустимые значения включают «xkb» (стандартная реализация X) и «internal» "
+"(специфичная для MATE и более настраиваемая реализация)."
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"
@@ -900,7 +931,7 @@ msgstr "Должна ли среда MATE отрисовывать рабочи�
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
-msgstr "Показать иконки рабочего стола"
+msgstr "Показать значки рабочего стола"
 
 #: schemas/org.mate.background.gschema.xml.in:24
 msgid "Have MATE file manager (Caja) draw the desktop icons."
@@ -987,7 +1018,7 @@ msgstr "Тема файловых значков"
 
 #: schemas/org.mate.file-views.gschema.xml:6
 msgid "Theme used for displaying file icons."
-msgstr "Тема используемая для для показа иконок."
+msgstr "Тема, используемая для отображения значков файлов."
 
 #: schemas/org.mate.interface.gschema.xml:5
 msgid "Enable Accessibility"
@@ -1329,7 +1360,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
-msgstr "Коэффициент Масштабирования Окна"
+msgstr "Коэффициент масштабирования окна"
 
 #: schemas/org.mate.interface.gschema.xml:177
 msgid ""

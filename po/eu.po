@@ -4,18 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Egoitz Rodriguez <egoitzro@gmail.com>, 2018
 # Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Egoitz Rodriguez <egoitzro@gmail.com>, 2021
+# Alexander Gabilondo <alexgabi@disroot.org>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
-"Language-Team: Basque (https://www.transifex.com/mate/teams/13566/eu/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: Alexander Gabilondo <alexgabi@disroot.org>, 2022\n"
+"Language-Team: Basque (https://app.transifex.com/mate/teams/13566/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,7 +41,7 @@ msgstr "Ikasi gehiago MATEri buruz"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr ""
+msgstr "MATE mahaigaineko ingurunea"
 
 #: mate-about/mate-about.h:34
 msgid ""
@@ -48,6 +49,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Copyright © 1997-2011 GNOME garatzaileak\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2021 MATE garatzaieleak"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -129,7 +133,7 @@ msgid "The title of the color selection dialog"
 msgstr "Kolore-hautapenaren elkarrizketa-koadroaren izenburua"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Hautatu kolorea"
 
@@ -149,7 +153,7 @@ msgstr "Uneko alfa"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Hautatutako opakutasun balioa (0 guztiz gardena, 65535 guztiz opakua)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Baliogabeko kolore-datua jaso da\n"
 
@@ -283,18 +287,26 @@ msgid ""
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr ""
+"Aurretik hautatutako kolorea, orain hautatzen ari zaren kolorearekin "
+"alderatzeko. Kolore hau paleta-sarrera batera arrastatu dezakezu edo kolore "
+"hau uneko gisa hauta dezakezu ondoan dagoen beste kolore-lagin batera "
+"arrastatuz."
 
 #: libmate-desktop/mate-colorsel.c:951
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr ""
+"Aukeratu duzun kolorea. Kolore hau paleta-sarrera batera arrastatu eta gorde"
+" dezakezu etorkizunean erabiltzeko."
 
 #: libmate-desktop/mate-colorsel.c:956
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr ""
+"Aurretik hautatutako kolorea, orain hautatzen ari zaren kolorearekin "
+"alderatzeko."
 
 #: libmate-desktop/mate-colorsel.c:959
 msgid "The color you've chosen."
@@ -302,7 +314,7 @@ msgstr "Hautatu duzun kolorea."
 
 #: libmate-desktop/mate-colorsel.c:1366
 msgid "gtk-color-sel"
-msgstr ""
+msgstr "gtk-color-sel"
 
 #: libmate-desktop/mate-colorsel.c:1371
 msgid "_Save color here"
@@ -313,15 +325,18 @@ msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
+"Egin klik paleta-sarrera honetan uneko kolorea hautatzeko. Sarrera hau "
+"aldatzeko, arrastatu kolore-lagin bat hona edo egin klik eskuineko "
+"botoiarekin eta hautatu \"Gorde kolorea hemen\"."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Kolore-hautapena"
 
 #: libmate-desktop/mate-colorseldialog.c:100
 msgid "The color selection embedded in the dialog."
-msgstr ""
+msgstr "Elkarrizketa-koadroan txertatutako kolore-hautapena."
 
 #: libmate-desktop/mate-colorseldialog.c:106
 msgid "OK Button"
@@ -346,6 +361,18 @@ msgstr "Laguntza botoia"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "Elkarrizketa-koadroaren Laguntza botoia."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Utzi"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_Ados"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Laguntza"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -434,7 +461,7 @@ msgstr "ezin izan da pantailen tamainen barrutia lortu"
 msgid "RANDR extension is not present"
 msgstr "RANDR hedapena ez dago"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "ezin izan da %d irteerari buruzko informazioa lortu"
@@ -442,7 +469,7 @@ msgstr "ezin izan da %d irteerari buruzko informazioa lortu"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -451,12 +478,12 @@ msgstr ""
 "eskatutako %d. CRTCaren posizioa/tamaina baimendutako mugatik at dago: "
 "posizioa=(%d, %d), tamaina=(%d, %d), gehienezkoa=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "ezin izan da %d. CRTCaren konfigurazioa ezarri"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "ezin izan da %d. CRTCari buruzko informazioa lortu"
@@ -611,6 +638,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Lotu modifikatzaileak bi aldiz jarraian sakatzen direnean modifikatzaile "
+"bera berriro sakatu arte."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:75
 msgid "Disable if two keys are pressed at the same time."
@@ -623,10 +652,11 @@ msgstr "Jo soinu-seinalea aldatzailea sakatutakoan."
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:86
 msgid "Beep when a key is pressed while CapsLock is active."
 msgstr ""
+"Bip soinua tekla bat sakatzen denean BlocMayus aktibo dagoen bitartean."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:91
 msgid "Beep count when enabling a modifier"
-msgstr ""
+msgstr "Bip-zenbaketa aldatzaile bat gaitzean"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:92
 msgid ""
@@ -636,7 +666,7 @@ msgstr ""
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:97
 msgid "Delay between beeps when enabling a modifier"
-msgstr ""
+msgstr "Bipen arteko atzerapena aldagailu bat gaitzean"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:98
 msgid ""

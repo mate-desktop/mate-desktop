@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Ivan Pejić <ipejic@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Ivan Pejić <ipejic@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
-"Language-Team: Serbian (Latin) (https://www.transifex.com/mate/teams/13566/sr@latin/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: Ivan Pejić <ipejic@gmail.com>, 2021\n"
+"Language-Team: Serbian (Latin) (https://app.transifex.com/mate/teams/13566/sr@latin/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -129,7 +129,7 @@ msgid "The title of the color selection dialog"
 msgstr "Naziv prozora za izbor boja"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Izaberi boju"
 
@@ -151,7 +151,7 @@ msgstr ""
 "Izabrana vrednost za neprozirnost (0 za providno, 65535 za potpuno "
 "neprovidno)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Primljene su neispravne vrednosti za boju\n"
 
@@ -325,7 +325,7 @@ msgstr ""
 "ovde neko drugo polje ili na desni klik izaberi \"Ubaci ovde boju\"."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Izbor boje"
 
@@ -356,6 +356,18 @@ msgstr "Pomoć - taster"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "Pomoć - taster u dijalog komponenti."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Otkaži"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr ""
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Pomoć"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -446,7 +458,7 @@ msgstr "Nije moguće iščitati opseg veličina za screen."
 msgid "RANDR extension is not present"
 msgstr "Ne postoji RANDR ekstenzija za X sistem."
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "Nije moguće iščitati podatke za video izlaz %d"
@@ -454,7 +466,7 @@ msgstr "Nije moguće iščitati podatke za video izlaz %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -463,12 +475,12 @@ msgstr ""
 "Tražena pozicija i veličina za CRTC %d je izvan dozvoljenih vrenosti: "
 "pozicija=(%d, %d), veličina=(%d, %d), maksimum=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "Neuspešno postavljanje konfiguracije za CRTC %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "Neuspešno iščitavanje podataka vezanih za CRTC %d"

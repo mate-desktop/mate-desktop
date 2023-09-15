@@ -4,41 +4,43 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# fc2d9c36d73e741383fbbf46a4aac49f_013445b, 2018
-# Diogo Oliveira <diogodesigns@gmail.com>, 2018
-# Sérgio Marques <smarquespt@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# ogalho Carlos Dias Martins <ogalho@gmail.com>, 2018
-# Luis Filipe Teixeira <lufilte@gmail.com>, 2018
-# Mateus Pinho <mateusleitepinho@gmail.com>, 2018
-# Manel Tinoco <maneltinoco@gmail.com>, 2018
-# Rui <xymarior@yandex.com>, 2018
-# Manuela Silva <mmsrs@sky.com>, 2019
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2019
-# Guilherme Campos <guilhermemiguel97@hotmail.com>, 2020
-# Carlos Nova Duarte <cnova1998@gmail.com>, 2020
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021
+# fc2d9c36d73e741383fbbf46a4aac49f_013445b, 2021
+# Diogo Oliveira <diogodesigns@gmail.com>, 2021
+# Guilherme Campos <guilhermemiguel97@hotmail.com>, 2021
+# Sérgio Marques <smarquespt@gmail.com>, 2021
 # Carlos Moreira, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# ogalho Carlos Dias Martins <ogalho@gmail.com>, 2021
+# Rui <xymarior@yandex.com>, 2021
+# Luis Filipe Teixeira <lufilte@gmail.com>, 2021
+# Mateus Pinho <mateusleitepinho@gmail.com>, 2021
+# Manuela Silva <mmsrs@sky.com>, 2021
+# Manel Tinoco <maneltinoco@gmail.com>, 2021
 # José Vieira <jvieira33@sapo.pt>, 2021
+# Carlos Nova Duarte <cnova1998@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: José Vieira <jvieira33@sapo.pt>, 2021\n"
-"Language-Team: Portuguese (https://www.transifex.com/mate/teams/13566/pt/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: Carlos Nova Duarte <cnova1998@gmail.com>, 2021\n"
+"Language-Team: Portuguese (https://app.transifex.com/mate/teams/13566/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
 #: mate-about/mate-about.c:68
 msgid "translator-credits"
-msgstr "Hugo Carvalho <hugokarvalho@gmail.com>"
+msgstr ""
+"Hugo Carvalho <hugokarvalho@hotmail.com>, 2018\n"
+"José Vieira <jvieira33@sapo.pt>, 2021"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -75,8 +77,8 @@ msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"O MATE possui a maioria daquilo que vê no seu computador, incluindo o gestor"
-" de ficheiros, um visualizador de documentos, um visualizador de imagens, "
+"O MATE possui a maior parte do que se vê no computador, incluindo o gestor "
+"de ficheiros, um visualizador de documentos, um visualizador de imagens, "
 "menus e diversas aplicações."
 
 #: mate-about/mate-about.h:48
@@ -94,10 +96,10 @@ msgid ""
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE é a continuação do GNOME 2. Centenas de pessoas contribuíram com código"
-" para o GNOME desde que começou em 1997; muitas mais contribuíram de outras "
-"maneiras importantes, tal como em traduções, documentação, e controlo de "
-"qualidade."
+"O MATE é a continuação do GNOME 2. Centenas de pessoas contribuíram com "
+"código para o GNOME desde que começou em 1997; muitas mais contribuíram de "
+"outras maneiras importantes, tais como traduções, documentação, e controlo "
+"de qualidade."
 
 #: mate-about/mate-about.h:55
 msgid ""
@@ -143,7 +145,7 @@ msgid "The title of the color selection dialog"
 msgstr "O título do diálogo de seleção da cor"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Escolha uma Cor"
 
@@ -165,7 +167,7 @@ msgstr ""
 "O valor escolhido da opacidade (0 completamente transparente, 65535 "
 "totalmente opaco)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Dados inválidos de cor recebidos\n"
 
@@ -342,7 +344,7 @@ msgstr ""
 "direito do rato, e selecione \"Gravar cor aqui\"."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Seleção de Cor"
 
@@ -373,6 +375,18 @@ msgstr "Botão de Ajuda"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "O botão de ajuda no diálogo."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_OK"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Ajuda"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -460,7 +474,7 @@ msgstr "não foi possível obter o intervalo de tamanhos de ecrã"
 msgid "RANDR extension is not present"
 msgstr "a extensão RANDR não está presente"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "não foi possível obter a informação sobre a saída %d"
@@ -468,7 +482,7 @@ msgstr "não foi possível obter a informação sobre a saída %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -477,12 +491,12 @@ msgstr ""
 "posição/tamanho pedido para o CRTC %d está fora dos limites permitidos: "
 "posição=(%d, %d), tamanho=(%d, %d), máximo=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "não foi possível definir a configuração para o CRTC %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "não foi possível obter informação sobre o CRTC %d"
@@ -642,55 +656,67 @@ msgstr "Desativar se forem premidas duas teclas ao mesmo tempo."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:79
 msgid "Beep when a modifier is pressed."
-msgstr "Emitir som ao premir um modificador"
+msgstr "Apitar ao premir um modificador"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:86
 msgid "Beep when a key is pressed while CapsLock is active."
-msgstr ""
+msgstr "Apitar quando uma tecla é premida com o CapsLock ativo."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:91
 msgid "Beep count when enabling a modifier"
-msgstr ""
+msgstr "Número de apitos ao ativar um modificador"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:92
 msgid ""
 "Number of beeps to emit when enabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Número de apitos a efectuar quando for ativado um modificador com teclas de "
+"alternância ativadas. Só funciona com a interface de sistema (backend) "
+"'interna'."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:97
 msgid "Delay between beeps when enabling a modifier"
-msgstr ""
+msgstr "Intervalo entre apitos ao ativar um modificador"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:98
 msgid ""
 "Delay in milliseconds between two beeps when enabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Intervalo em milisegundos entre dois apitos ao ativar um modificador com as "
+"teclas de alternância ativadas. Só funciona com a interface de sistema "
+"(backend) 'interna'."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:103
 msgid "Beep count when disabling a modifier"
-msgstr ""
+msgstr "Número de apitos ao desativar um modificador"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:104
 msgid ""
 "Number of beeps to emit when disabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Número de apitos a efectuar quando for desativado um modificador com teclas "
+"de alternância ativadas. Só funciona com a interface de sistema (backend) "
+"'interna'."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:109
 msgid "Delay between beeps when disabling a modifier"
-msgstr ""
+msgstr "Intervalo entre apitos ao desativar um modificador"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:110
 msgid ""
 "Delay in milliseconds between two beeps when disabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Intervalo em milisegundos entre dois apitos ao desativar um modificador com "
+"as teclas de alternância ativadas. Só funciona com a interface de sistema "
+"(backend) 'interna'."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:114
 msgid "Implementation to use when togglekeys are enabled"
-msgstr ""
+msgstr "Variante a usar quando as teclas de alternância estiverem ativadas"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:115
 msgid ""
@@ -698,6 +724,10 @@ msgid ""
 "include 'xkb' (the stock X implementation) and 'internal' (a MATE-specific "
 "and more configurable implementation)."
 msgstr ""
+"Seleciona a interface de sistema (backend) a usar para a funcionalidade de "
+"teclas de alternância. Os valores válidos são 'xkb' (a variante usada "
+"normalmente no X) e 'interna' (uma variante específica do MATE, mais "
+"configurável)."
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"
@@ -1251,9 +1281,9 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
 msgstr ""
-"Esta configuração determina que botões devem aparecer na barra de título de "
-"janelas com moldura no lado do cliente, e se devem ser posicionados do lado "
-"esquerdo ou direito. Ver "
+"Esta definição determina quais os botões que deverão aparecer na barra de "
+"título das janelas com moldura no lado do cliente, e se deverão ser "
+"colocados no lado esquerdo ou direito. Consulte "
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
 

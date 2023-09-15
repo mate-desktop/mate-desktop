@@ -4,19 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Cédric Valmary <cvalmary@yahoo.fr>, 2021
-# Quentin PAGÈS, 2021
+# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2021
+# Quentin PAGÈS, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Quentin PAGÈS, 2021\n"
-"Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: Quentin PAGÈS, 2022\n"
+"Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,7 +37,7 @@ msgstr "A prepaus de MATE"
 
 #: mate-about/mate-about.desktop.in:4
 msgid "Learn more about MATE"
-msgstr "Aprene mai de MATE"
+msgstr "Ne saber mai a prepaus de MATE"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
@@ -85,9 +85,9 @@ msgid ""
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
-"MATE es la continuacion de GNOME 2. Centenas de gens  an contribuit al còdi "
-"de GNOME dempuèi que començat en 1997 ; encara mai an contribuit d’autres "
-"biaisses importants, que siá la traduccion, la documentacion e assegurança "
+"MATE es la continuacion de GNOME 2. Centenas de gens contribuiguèron al còdi"
+" de GNOME dempuèi que comencèt en 1997 ; encara mai contribuiguèron d’autres"
+" biaisses importants, que siá la traduccion, la documentacion e assegurança "
 "qualitat."
 
 #: mate-about/mate-about.h:55
@@ -130,7 +130,7 @@ msgid "The title of the color selection dialog"
 msgstr "Lo títol de la bóstia de seleccion de color"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Causissètz una color"
 
@@ -152,7 +152,7 @@ msgstr ""
 "La valor d'opacitat seleccionada (0 : totalament transparent, 65535 : "
 "totalament opac)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Donadas de color invalidas recebudas\n"
 
@@ -195,7 +195,7 @@ msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr ""
-"Seleccionatz la color que volètz dempuèi l'anèl exterior. Seleccionatz la "
+"Seleccionatz la color que volètz a partir l'anèl exterior. Seleccionatz la "
 "luminositat de la color en utilizant lo triangle interior."
 
 #: libmate-desktop/mate-colorsel.c:369
@@ -323,7 +323,7 @@ msgstr ""
 "dessús e seleccionatz « Enregistrar la color aicí »."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Seleccion de la color"
 
@@ -355,6 +355,18 @@ msgstr "Boton d’ajuda"
 msgid "The help button of the dialog."
 msgstr "Lo boton « Ajuda » de la bóstia de dialòg."
 
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Anullar"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_D’acòrdi"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Ajuda"
+
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
@@ -373,7 +385,7 @@ msgstr "Error en rebobinant lo fichièr « %s » : %s"
 #: libmate-desktop/mate-desktop-item.c:380
 #: libmate-desktop/mate-desktop-item.c:3553
 msgid "No name"
-msgstr "Pas de nom"
+msgstr "Cap de nom"
 
 #: libmate-desktop/mate-desktop-item.c:607
 #, c-format
@@ -387,7 +399,7 @@ msgstr "Impossible de trobar lo fichièr « %s »"
 
 #: libmate-desktop/mate-desktop-item.c:837
 msgid "No filename to save to"
-msgstr "I a pas de nom de fichièr ont enregistrar"
+msgstr "Cap de nom de fichièr ont enregistrar"
 
 #: libmate-desktop/mate-desktop-item.c:1856
 #, c-format
@@ -442,7 +454,7 @@ msgstr ""
 msgid "RANDR extension is not present"
 msgstr ""
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr ""
@@ -450,19 +462,19 @@ msgstr ""
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr ""
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr ""
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr ""
@@ -791,7 +803,7 @@ msgstr "Aplicacion de prètzfaches per defaut"
 
 #: schemas/org.mate.applications-office.gschema.xml:26
 msgid "Tasks needs terminal"
-msgstr "Los prètzfaches an besonh d'un terminal"
+msgstr "Los prètzfaiches an besonh d'un terminal"
 
 #: schemas/org.mate.applications-office.gschema.xml:27
 msgid "Whether the default tasks application needs a terminal to run"
@@ -835,7 +847,7 @@ msgstr ""
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
-msgstr ""
+msgstr "Fondre l’imatge de fons al cambiament"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
@@ -915,6 +927,7 @@ msgstr "Activar l'accessibilitat"
 #: schemas/org.mate.interface.gschema.xml:6
 msgid "Whether Applications should have accessibility support."
 msgstr ""
+"Indica se las aplicacions devon aver la presa en carga de l’accessibilitat"
 
 #: schemas/org.mate.interface.gschema.xml:10
 msgid "Enable Animations"
@@ -958,7 +971,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:30
 msgid "Buttons Have Icons"
-msgstr ""
+msgstr "Los botons an d’icònas"
 
 #: schemas/org.mate.interface.gschema.xml:31
 msgid "Whether buttons may display an icon in addition to the button text."
@@ -1022,7 +1035,7 @@ msgstr "Tèma GTK+"
 #: schemas/org.mate.interface.gschema.xml:66
 #: schemas/org.mate.interface.gschema.xml:71
 msgid "Basename of the default theme used by gtk+."
-msgstr "Nom de base del tèma per defaut utilisat per GTK+."
+msgstr "Nom de base del tèma per defaut utilizat per GTK+."
 
 #: schemas/org.mate.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1038,11 +1051,11 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:80
 msgid "Default font"
-msgstr "Poliça per defaut"
+msgstr "Polissa per defaut"
 
 #: schemas/org.mate.interface.gschema.xml:81
 msgid "Name of the default font used by gtk+."
-msgstr "Nom de la poliça per defaut utilisada per GTK+."
+msgstr "Nom de la polissa per defaut utilizada per GTK+."
 
 #: schemas/org.mate.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
@@ -1101,26 +1114,26 @@ msgstr "Indica se cal activar las animacions per l'ensemble dels components."
 
 #: schemas/org.mate.interface.gschema.xml:115
 msgid "Document font"
-msgstr "Poliça del document"
+msgstr "Polissa del document"
 
 #: schemas/org.mate.interface.gschema.xml:116
 msgid "Name of the default font used for reading documents."
-msgstr "Nom de la poliça per defaut utilizada per legir los documents."
+msgstr "Nom de la polissa per defaut utilizada per legir los documents."
 
 #: schemas/org.mate.interface.gschema.xml:120
 msgid "Monospace font"
-msgstr "Poliça pas proporcionala"
+msgstr "Polissa pas proporcionala"
 
 #: schemas/org.mate.interface.gschema.xml:121
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr ""
-"Nom d'una poliça pas proporcionala (largor fixa) d'utilizar a d'endrech tal "
-"coma de terminals."
+"Nom d'una polissa pas proporcionala (largor fixa) d'utilizar a d'endrech tal"
+" coma de terminals."
 
 #: schemas/org.mate.interface.gschema.xml:125
 msgid "Use Custom Font"
-msgstr "Utilizar una poliça personalisada"
+msgstr "Utilizar una polissa personalizada"
 
 #: schemas/org.mate.interface.gschema.xml:126
 msgid "Whether to use a custom font in gtk+ applications."
@@ -1221,7 +1234,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
-msgstr "Factor d'omotecia per las fenèstras"
+msgstr "Factor d’escala per las fenèstras"
 
 #: schemas/org.mate.interface.gschema.xml:177
 msgid ""
@@ -1437,8 +1450,8 @@ msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
 msgstr ""
-"Las vinhetas son pas creadas per los fichièrs dont lo tipe MIME es contengut"
-" dins la lista."
+"Las vinhetas son pas creadas pels fichièrs que lo tipe MIME es contengut "
+"dins la lista."
 
 #: schemas/org.mate.typing-break.gschema.xml:5
 msgid "Type time"
@@ -1486,7 +1499,7 @@ msgstr "_Tampar"
 
 #: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
-msgstr ""
+msgstr "Fenèstra de seleccion de color"
 
 #: tools/mate-color-select.desktop.in:5
 msgid "Choose colors from the palette or the screen"

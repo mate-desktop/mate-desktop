@@ -4,40 +4,38 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Marco Giannini <giannini.marco@gmail.com>, 2018
-# Marco Z. <minaz666@gmail.com>, 2018
-# Giuseppe Pignataro <rogepix@gmail.com>, 2018
-# Matteo, 2018
-# Cristiano Venanzi, 2018
-# Marco Bartolucci <nap.84@live.it>, 2018
-# l3nn4rt, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# andrea pittaro <transifex@andreapittaro.it>, 2019
-# Enrico B. <enricobe@hotmail.com>, 2020
+# Marco Giannini <giannini.marco@gmail.com>, 2021
+# Marco Z. <minaz666@gmail.com>, 2021
+# andrea pittaro <transifex@andreapittaro.it>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Dario Di Nucci <linkin88mail@gmail.com>, 2021
+# Giuseppe Pignataro <rogepix@gmail.com>, 2021
+# Enrico B. <enricobe@hotmail.com>, 2021
+# Matteo, 2021
+# Cristiano Venanzi, 2021
+# Marco Bartolucci, 2021
+# l3nn4rt, 2021
 # Alessandro Volturno <alelvb@inwind.it>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
 "Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2021\n"
-"Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
+"Language-Team: Italian (https://app.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
 #: mate-about/mate-about.c:68
 msgid "translator-credits"
-msgstr ""
-"Enrico Bella, 2019\n"
-"Alessandro Volturno, 2020"
+msgstr "Alessandro Volturno, 2021"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -141,7 +139,7 @@ msgid "The title of the color selection dialog"
 msgstr "Il titolo della finestra di dialogo per la selezione del colore"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Scegli un colore"
 
@@ -163,7 +161,7 @@ msgstr ""
 "Il valore di opacità selezionato (0 completamente trasparente, 65535 "
 "completamente opaco)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Ricevuti dati del colore non validi\n"
 
@@ -342,7 +340,7 @@ msgstr ""
 "con il tasto destro e selezionate \"Salva il colore qui.\""
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Selezione colore"
 
@@ -373,6 +371,18 @@ msgstr "Pulsante aiuto"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "Il pulsante aiuto della finestra di dialogo."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "Annulla"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_OK"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Aiuto"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -411,7 +421,7 @@ msgstr "Nessun nome di file su cui salvare"
 #: libmate-desktop/mate-desktop-item.c:1856
 #, c-format
 msgid "Starting %s"
-msgstr "Avvio di «%s»"
+msgstr "Avvio di %s"
 
 #: libmate-desktop/mate-desktop-item.c:2092
 msgid "No URL to launch"
@@ -419,7 +429,7 @@ msgstr "Nessun URL da lanciare"
 
 #: libmate-desktop/mate-desktop-item.c:2108
 msgid "Not a launchable item"
-msgstr "Non è un oggetto lanciabile"
+msgstr "Non è un oggetto avviabile"
 
 #: libmate-desktop/mate-desktop-item.c:2118
 msgid "No command (Exec) to launch"
@@ -464,7 +474,7 @@ msgstr "impossibile ottenere l'intervallo delle dimensioni dello schermo"
 msgid "RANDR extension is not present"
 msgstr "l'estensione RANDR non è presente"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "impossibile ottenere informazioni sull'output%d"
@@ -472,7 +482,7 @@ msgstr "impossibile ottenere informazioni sull'output%d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -481,12 +491,12 @@ msgstr ""
 "la posizione/dimensione richiesta per CRTC %d è fuori dal limite consentito:"
 " posizione=(%d, %d), dimensione=(%d, %d), massimo=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "impossibile impostare la configurazione per CRTC %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "impossibile ottenere informazioni su CRTC %d"

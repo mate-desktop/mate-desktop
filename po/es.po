@@ -4,38 +4,38 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Lluís Tusquellas <lutusq@gmail.com>, 2018
-# ebray187 <ebray187@gmail.com>, 2018
-# Arcenio Cid <gusty.miliki@gmail.com>, 2018
-# Adolfo Jayme Barrientos, 2018
-# happydogeface, 2018
-# Benjamin Perez Carrillo <benperezc@gmail.com>, 2018
-# Naresu Tenshi <naresutenshi@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Joel Barrios <darkshram@gmail.com>, 2018
+# Lluís Tusquellas <lutusq@gmail.com>, 2021
+# happydogeface, 2021
+# ebray187 <ebray187@gmail.com>, 2021
+# Adolfo Jayme-Barrientos, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Benjamin Perez Carrillo <benperezc@gmail.com>, 2021
+# Naresu Tenshi <naresutenshi@gmail.com>, 2021
 # Emiliano Fascetti, 2021
+# Joel Barrios <darkshram@gmail.com>, 2021
 # Toni Estévez <toni.estevez@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
+"Language-Team: Spanish (https://app.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
 #: mate-about/mate-about.c:68
 msgid "translator-credits"
 msgstr ""
-"Toni Estevez <toni.estevez@gmail.com>, 2019\n"
+"Toni Estevez <toni.estevez@gmail.com>, 2020-2021\n"
+"Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2018\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2010\n"
 "Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2003-2006\n"
 "Pablo Gonzalo del Campo <pablodc@bigfoot.com>, 2002-2003"
@@ -123,7 +123,7 @@ msgstr ""
 #: libmate-desktop/display-name.c:264
 msgctxt "Monitor vendor"
 msgid "Unknown"
-msgstr "Desconocido"
+msgstr "Se desconoce"
 
 #: libmate-desktop/mate-colorbutton.c:152
 msgid "Use alpha"
@@ -131,7 +131,7 @@ msgstr "Usar alfa"
 
 #: libmate-desktop/mate-colorbutton.c:153
 msgid "Whether or not to give the color an alpha value"
-msgstr "Define si dar o no color a un valor alfa"
+msgstr "Si dar o no un valor alfa al color"
 
 #: libmate-desktop/mate-colorbutton.c:167
 msgid "Title"
@@ -139,12 +139,12 @@ msgstr "Título"
 
 #: libmate-desktop/mate-colorbutton.c:168
 msgid "The title of the color selection dialog"
-msgstr "Título del dialogo de selección de color"
+msgstr "Título del diálogo de selección de color"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
-msgstr "Escoja un color"
+msgstr "Seleccione un color"
 
 #: libmate-desktop/mate-colorbutton.c:182 libmate-desktop/mate-colorsel.c:284
 msgid "Current Color"
@@ -164,9 +164,9 @@ msgstr ""
 "El valor seleccionado de la opacidad (0 totalmente transparente, 65535 "
 "totalmente opaco)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
-msgstr "Datos no válidos de color recibidos\n"
+msgstr "Se han recibido datos de color no válidos\n"
 
 #: libmate-desktop/mate-colorsel.c:270
 msgid "Has Opacity Control"
@@ -174,7 +174,7 @@ msgstr "Tiene Control de Opacidad"
 
 #: libmate-desktop/mate-colorsel.c:271
 msgid "Whether the color selector should allow setting opacity"
-msgstr "Define si el selector de color debe permitir la ajuste de la opacidad"
+msgstr "Si el selector de color debe permitir el ajuste de la opacidad"
 
 #: libmate-desktop/mate-colorsel.c:277
 msgid "Has palette"
@@ -343,7 +343,7 @@ msgstr ""
 " y seleccione \"Guardar color aquí.\""
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Selección de color"
 
@@ -374,6 +374,18 @@ msgstr "Botón de ayuda"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "El botón de ayuda del diálogo."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_Aceptar"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Ayuda"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -438,7 +450,7 @@ msgstr "Codificación desconocida de: %s"
 #: libmate-desktop/mate-desktop-utils.c:150
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr ""
-"No se puede encontrar un terminal, se utilizará xterm aunque puede que no "
+"No se puede encontrar un terminal, se usará xterm aunque puede que no "
 "funcione"
 
 #: libmate-desktop/mate-languages.c:746
@@ -465,7 +477,7 @@ msgstr "no se ha podido obtener el intervalo de tamaños de las pantallas"
 msgid "RANDR extension is not present"
 msgstr "la extensión RANDR no está presente"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "no se ha podido obtener información sobre la salida %d"
@@ -473,7 +485,7 @@ msgstr "no se ha podido obtener información sobre la salida %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -482,12 +494,12 @@ msgstr ""
 "la posición y/o tamaño requeridos para el CRTC %d está fuera de los límites "
 "permitidos: posición=(%d, %d), tamaño=(%d, %d), máximo=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "no se ha podido establecer la configuración para el CRTC %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "no se ha podido obtener información sobre el CRTC %d"
@@ -641,8 +653,8 @@ msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
-"Bloquea las teclas modificadoras cuando se pulsan dos veces seguidas hasta "
-"que se pulsa de nuevo la misma tecla."
+"Bloquear las teclas modificadoras cuando se pulsen dos veces seguidas hasta "
+"que la misma tecla se pulse de nuevo."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:75
 msgid "Disable if two keys are pressed at the same time."
@@ -889,7 +901,7 @@ msgstr ""
 
 #: schemas/org.mate.background.gschema.xml.in:18
 msgid "Draw Desktop Background"
-msgstr "Dibujar fondo del escritorio"
+msgstr "Dibujar el fondo del escritorio"
 
 #: schemas/org.mate.background.gschema.xml.in:19
 msgid "Have MATE draw the desktop background."
@@ -897,7 +909,7 @@ msgstr "Hacer que MATE dibuje el fondo del escritorio."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
-msgstr "Mostrar Iconos de escritorio"
+msgstr "Mostrar los iconos del escritorio"
 
 #: schemas/org.mate.background.gschema.xml.in:24
 msgid "Have MATE file manager (Caja) draw the desktop icons."
@@ -976,7 +988,7 @@ msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr ""
-"Como sombrear el color de fondo. Los valores posibles son «horizontal-"
+"Cómo sombrear el color de fondo. Los valores posibles son «horizontal-"
 "gradient» (degradado horizontal), «vertical-gradient» (degradado vertical) y"
 " «solid» (sólido)."
 
@@ -1165,7 +1177,7 @@ msgstr ""
 " de color o el selector de tipografías, usarán una barra de cabecera en la "
 "parte superior para mostrar componentes de acción o un área de acción en la "
 "parte inferior.  Este ajuste no afecta a los diálogos personalizados que "
-"utilizan directamente GtkDialog o a los diálogos de mensaje."
+"usan directamente GtkDialog o a los diálogos de mensaje."
 
 #: schemas/org.mate.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
@@ -1241,7 +1253,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:140
 msgid "Menubar accelerator"
-msgstr "Acceso rápido a la barra de menú"
+msgstr "Acceso rápido a la barra de menús"
 
 #: schemas/org.mate.interface.gschema.xml:141
 msgid "Keyboard shortcut to open the menu bars."
@@ -1377,7 +1389,7 @@ msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
-"Si se activa, GTK usará el pegado directo de la selección, que se ejecuta "
+"Si se activa', GTK usará el pegado directo de la selección, que se activa "
 "generalmente con un clic central del ratón."
 
 #: schemas/org.mate.lockdown.gschema.xml:5

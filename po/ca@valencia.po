@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Pilar Embid <embid.mar@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Jose Alfredo Murcia Andrés <joamuran@gmail.com>, 2021
+# Pilar Embid <embid.mar@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Jose Alfredo Murcia Andrés <joamuran@gmail.com>, 2021\n"
-"Language-Team: Catalan (Valencian) (https://www.transifex.com/mate/teams/13566/ca@valencia/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: Pilar Embid <embid.mar@gmail.com>, 2021\n"
+"Language-Team: Catalan (Valencian) (https://app.transifex.com/mate/teams/13566/ca@valencia/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -135,7 +135,7 @@ msgid "The title of the color selection dialog"
 msgstr "El títol del diàleg de selecció de color"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Selecciona un color"
 
@@ -157,7 +157,7 @@ msgstr ""
 "El valor seleccionat de l'opacitat (0 totalment transparent, 65535 totalment"
 " opac)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "S'han rebut dades de color no vàlides\n"
 
@@ -336,7 +336,7 @@ msgstr ""
 "del ratolí a la cel·la i seleccioneu \"Guarda ací el color\"."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Selecció de color"
 
@@ -367,6 +367,18 @@ msgstr "Botó d'ajuda"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "El botó d'ajuda del diàleg."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Cancel·la"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "D'ac_ord"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Ajuda"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -457,7 +469,7 @@ msgstr "no s'ha pogut obtindre l'interval de les mides de pantalla"
 msgid "RANDR extension is not present"
 msgstr "no hi ha l'extensió RANDR"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "no s'ha pogut obtindre la informació sobre l'eixida %d"
@@ -465,7 +477,7 @@ msgstr "no s'ha pogut obtindre la informació sobre l'eixida %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -474,12 +486,12 @@ msgstr ""
 "la posició/mida sol·licitades per al CRTC %d són fora dels límits permesos: "
 "posició=(%d, %d), mida=(%d, %d), màxim=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "no s'ha pogut establir la configuració per al CRTC %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "no s'ha pogut obtindre la informació sobre el CRTC %d"

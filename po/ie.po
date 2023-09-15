@@ -4,16 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Caarmi, 2021
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# Caarmi, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Caarmi, 2021\n"
-"Language-Team: Interlingue (https://www.transifex.com/mate/teams/13566/ie/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: Caarmi, 2022\n"
+"Language-Team: Interlingue (https://app.transifex.com/mate/teams/13566/ie/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,11 +25,11 @@ msgstr ""
 #. * displayed in the about box to give credit to the translator(s).
 #: mate-about/mate-about.c:68
 msgid "translator-credits"
-msgstr "OIS <mistresssilvara@hotmail.com>, 2019"
+msgstr "OIS <mistresssilvara@hotmail.com>, 2020"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
-msgstr ""
+msgstr "Pri MATE"
 
 #: mate-about/mate-about.desktop.in:4
 msgid "Learn more about MATE"
@@ -36,7 +37,7 @@ msgstr ""
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr ""
+msgstr "Ambientie MATE"
 
 #: mate-about/mate-about.h:34
 msgid ""
@@ -94,7 +95,7 @@ msgstr "Ínconosset"
 
 #: libmate-desktop/mate-colorbutton.c:152
 msgid "Use alpha"
-msgstr ""
+msgstr "Usar alfa"
 
 #: libmate-desktop/mate-colorbutton.c:153
 msgid "Whether or not to give the color an alpha value"
@@ -109,7 +110,7 @@ msgid "The title of the color selection dialog"
 msgstr "Li titul del dialog de selection de color"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Selecte un color"
 
@@ -123,13 +124,13 @@ msgstr "Li selectet color"
 
 #: libmate-desktop/mate-colorbutton.c:197 libmate-desktop/mate-colorsel.c:291
 msgid "Current Alpha"
-msgstr ""
+msgstr "Actual alfa"
 
 #: libmate-desktop/mate-colorbutton.c:198
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr ""
 
@@ -143,7 +144,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorsel.c:277
 msgid "Has palette"
-msgstr ""
+msgstr "Have un palette"
 
 #: libmate-desktop/mate-colorsel.c:278
 msgid "Whether a palette should be used"
@@ -151,7 +152,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorsel.c:285
 msgid "The current color"
-msgstr ""
+msgstr "Li actual color"
 
 #: libmate-desktop/mate-colorsel.c:292
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
@@ -187,7 +188,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorsel.c:381
 msgid "_Saturation:"
-msgstr ""
+msgstr "_Saturation:"
 
 #: libmate-desktop/mate-colorsel.c:382
 msgid "\"Deepness\" of the color."
@@ -195,7 +196,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorsel.c:383
 msgid "_Value:"
-msgstr ""
+msgstr "_Valore:"
 
 #: libmate-desktop/mate-colorsel.c:384
 msgid "Brightness of the color."
@@ -203,7 +204,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorsel.c:385
 msgid "_Red:"
-msgstr ""
+msgstr "_Rubi:"
 
 #: libmate-desktop/mate-colorsel.c:386
 msgid "Amount of red light in the color."
@@ -211,7 +212,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorsel.c:387
 msgid "_Green:"
-msgstr ""
+msgstr "Ver_di:"
 
 #: libmate-desktop/mate-colorsel.c:388
 msgid "Amount of green light in the color."
@@ -219,7 +220,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorsel.c:389
 msgid "_Blue:"
-msgstr ""
+msgstr "_Blu:"
 
 #: libmate-desktop/mate-colorsel.c:390
 msgid "Amount of blue light in the color."
@@ -227,7 +228,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorsel.c:393
 msgid "Op_acity:"
-msgstr ""
+msgstr "Op_acitá:"
 
 #: libmate-desktop/mate-colorsel.c:400 libmate-desktop/mate-colorsel.c:410
 msgid "Transparency of the color."
@@ -249,7 +250,7 @@ msgstr "_Palette:"
 
 #: libmate-desktop/mate-colorsel.c:491
 msgid "Color Wheel"
-msgstr ""
+msgstr "Rote de color"
 
 #: libmate-desktop/mate-colorsel.c:948
 msgid ""
@@ -289,9 +290,9 @@ msgid ""
 msgstr ""
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
-msgstr ""
+msgstr "Selection de color"
 
 #: libmate-desktop/mate-colorseldialog.c:100
 msgid "The color selection embedded in the dialog."
@@ -299,7 +300,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorseldialog.c:106
 msgid "OK Button"
-msgstr ""
+msgstr "Buton OK"
 
 #: libmate-desktop/mate-colorseldialog.c:107
 msgid "The OK button of the dialog."
@@ -307,7 +308,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorseldialog.c:113
 msgid "Cancel Button"
-msgstr ""
+msgstr "Buton Anullar"
 
 #: libmate-desktop/mate-colorseldialog.c:114
 msgid "The cancel button of the dialog."
@@ -315,11 +316,23 @@ msgstr ""
 
 #: libmate-desktop/mate-colorseldialog.c:120
 msgid "Help Button"
-msgstr ""
+msgstr "Buton Auxilie"
 
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr ""
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Anullar"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_OK"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Auxilie"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -339,7 +352,7 @@ msgstr ""
 #: libmate-desktop/mate-desktop-item.c:380
 #: libmate-desktop/mate-desktop-item.c:3553
 msgid "No name"
-msgstr "Null nómine"
+msgstr "Sin nómine"
 
 #: libmate-desktop/mate-desktop-item.c:607
 #, c-format
@@ -379,7 +392,7 @@ msgstr ""
 #: libmate-desktop/mate-desktop-item.c:3610
 #, c-format
 msgid "Unknown encoding of: %s"
-msgstr ""
+msgstr "Ínconosset codification de: %s"
 
 #: libmate-desktop/mate-desktop-utils.c:150
 msgid "Cannot find a terminal, using xterm, even if it may not work"
@@ -406,7 +419,7 @@ msgstr ""
 msgid "RANDR extension is not present"
 msgstr ""
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr ""
@@ -414,26 +427,26 @@ msgstr ""
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr ""
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr ""
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr ""
 
 #: libmate-desktop/mate-rr-config.c:555
 msgid "Laptop"
-msgstr ""
+msgstr "Portatibile"
 
 #: libmate-desktop/mate-rr-config.c:713
 msgid ""
@@ -448,12 +461,12 @@ msgstr ""
 #: libmate-desktop/mate-rr-config.c:1493
 #, c-format
 msgid "output %s does not support mode %dx%d@%dHz"
-msgstr ""
+msgstr "exeada %s ne supporta li mode %dx%d@%dHz"
 
 #: libmate-desktop/mate-rr-config.c:1504
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
-msgstr ""
+msgstr "CRTC %d ne supporta li rotation=%s"
 
 #: libmate-desktop/mate-rr-config.c:1518
 #, c-format
@@ -523,7 +536,7 @@ msgstr ""
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:36
 msgid "Pixels per seconds"
-msgstr ""
+msgstr "Pixeles per seconde"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:37
 msgid "How many pixels per second to move at the maximum speed."
@@ -676,7 +689,7 @@ msgstr ""
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
 msgid "Default browser"
-msgstr ""
+msgstr "Navigator predefinit"
 
 #: schemas/org.mate.applications-browser.gschema.xml:6
 msgid "Default browser for all URLs."
@@ -718,7 +731,7 @@ msgstr ""
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
-msgstr ""
+msgstr "Calendare predefinit"
 
 #: schemas/org.mate.applications-office.gschema.xml:10
 msgid "Default calendar application"
@@ -812,7 +825,7 @@ msgstr ""
 
 #: schemas/org.mate.background.gschema.xml.in:43
 msgid "Picture Opacity"
-msgstr ""
+msgstr "Opacitá del image"
 
 #: schemas/org.mate.background.gschema.xml.in:44
 msgid "Opacity with which to draw the background picture."
@@ -820,7 +833,7 @@ msgstr ""
 
 #: schemas/org.mate.background.gschema.xml.in:48
 msgid "Primary Color"
-msgstr ""
+msgstr "Primari color"
 
 #: schemas/org.mate.background.gschema.xml.in:49
 msgid "Left or Top color when drawing gradients, or the solid color."
@@ -828,7 +841,7 @@ msgstr ""
 
 #: schemas/org.mate.background.gschema.xml.in:53
 msgid "Secondary Color"
-msgstr ""
+msgstr "Secundari color"
 
 #: schemas/org.mate.background.gschema.xml.in:54
 msgid ""
@@ -863,7 +876,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:10
 msgid "Enable Animations"
-msgstr ""
+msgstr "Permisser animationes"
 
 #: schemas/org.mate.interface.gschema.xml:11
 msgid ""
@@ -945,7 +958,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:60
 msgid "Icon Theme"
-msgstr ""
+msgstr "Tema de icones"
 
 #: schemas/org.mate.interface.gschema.xml:61
 msgid "Icon theme to use for the panel, Caja etc."
@@ -954,7 +967,7 @@ msgstr ""
 #: schemas/org.mate.interface.gschema.xml:65
 #: schemas/org.mate.interface.gschema.xml:70
 msgid "Gtk+ Theme"
-msgstr ""
+msgstr "Tema de Gtk+"
 
 #: schemas/org.mate.interface.gschema.xml:66
 #: schemas/org.mate.interface.gschema.xml:71
@@ -973,7 +986,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:80
 msgid "Default font"
-msgstr ""
+msgstr "Fonde predefinit"
 
 #: schemas/org.mate.interface.gschema.xml:81
 msgid "Name of the default font used by gtk+."
@@ -1035,7 +1048,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:115
 msgid "Document font"
-msgstr ""
+msgstr "Fonde de document"
 
 #: schemas/org.mate.interface.gschema.xml:116
 msgid "Name of the default font used for reading documents."

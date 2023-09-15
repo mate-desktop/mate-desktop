@@ -4,40 +4,43 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2018
-# 642cf48d39bca7f9ad9d185d4bcea8c8, 2018
-# Allan Richardson <luke.downhill@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2018
-# 3f37d448649cd548fa5a733e33387c2a_dee4ccf, 2018
-# Victor Gonçalves <hotcyv@gmail.com>, 2018
-# Lucas Mezêncio <lucas.mezencio@gmail.com>, 2018
-# Roger Araújo <roger.rf@gmail.com>, 2018
-# Jonatas da Silva Teixeira <jonatasteixeira@id.uff.br>, 2018
-# 18ab4449a00621534598e84a949423ea, 2018
-# Lucas Dias <lucasdiaas@outlook.com>, 2018
-# 58fae44c6c4ff84516f8c8656a7fb14d, 2018
-# 65f2af3cfa184c075942a0418b98d2de_d688669, 2018
-# Danylo Sa <kaiserblast@gmail.com>, 2018
-# George Silva <algoritmo.linux@gmail.com>, 2019
-# gustavo s, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
 # Samuel Henrique <samueloph@debian.org>, 2021
 # Willian Nunes de Oliveira <williangd@yahoo.com.br>, 2021
+# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2021
+# 18ab4449a00621534598e84a949423ea, 2021
+# Laíres Sales <lairess@gmail.com>, 2021
+# Lucas Dias <lucasdiaas@outlook.com>, 2021
+# George Silva <algoritmo.linux@gmail.com>, 2021
 # Rafael Sachetto <rsachetto@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2021
+# 3f37d448649cd548fa5a733e33387c2a_dee4ccf, 2021
+# 65f2af3cfa184c075942a0418b98d2de_d688669, 2021
+# Victor Gonçalves <hotcyv@gmail.com>, 2021
+# Lucas Mezêncio <lucas.mezencio@gmail.com>, 2021
+# Cleber Teixeira, 2021
+# Roger Araújo <roger.rf@gmail.com>, 2021
+# Jonatas da Silva Teixeira <jonatasteixeira@id.uff.br>, 2021
+# 58fae44c6c4ff84516f8c8656a7fb14d, 2021
+# Danylo Sa <kaiserblast@gmail.com>, 2021
+# gustavo s, 2021
+# Josué Teodoro Moreira <jteodomo@gmail.com>, 2021
+# Luciano Luck, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Rafael Sachetto <rsachetto@gmail.com>, 2021\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: Luciano Luck, 2022\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/mate/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
@@ -64,7 +67,10 @@ msgstr ""
 "Matheus Martins https://www.transifex.com/accounts/profile/Matheus_Martins\n"
 "Michele dos Santos da Silva https://www.transifex.com/accounts/profile/mchelem\n"
 "Thiago Cangussu https://www.transifex.com/accounts/profile/cangussu.thg\n"
-"vitorgatti https://www.transifex.com/accounts/profile/vitorgatti"
+"vitorgatti https://www.transifex.com/accounts/profile/vitorgatti\n"
+"Ítalo Rangel Penaforte https://www.transifex.com/accounts/profile/italo.penaforte\n"
+"George Salu da Silva https://www.transifex.com/user/profile/George_salu_da_silva/\n"
+"Josué Teodoro Moreira https://www.transifex.com/user/profile/J0sueTM/"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -84,6 +90,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Copyright © 1997-2011 desenvolvedores do GNOME\n"
+"Direitos autorais © 2011 Perberos\n"
+"Copyright © 2012-2021 desenvolvedores MATE"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -166,7 +175,7 @@ msgid "The title of the color selection dialog"
 msgstr "O título da caixa de diálogo de seleção de cores"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Escolha uma cor"
 
@@ -188,7 +197,7 @@ msgstr ""
 "O valor de opacidade selecionado (0 totalmente transparente, 65535 "
 "totalmente opaco)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Foram recebidos dados inválidos de cor\n"
 
@@ -367,7 +376,7 @@ msgstr ""
 " selecione \"Salvar cor aqui\"."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Seleção de cores"
 
@@ -399,6 +408,18 @@ msgstr "Botão Ajuda"
 msgid "The help button of the dialog."
 msgstr "O botão Ajuda da caixa de diálogo."
 
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_OK"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Ajuda"
+
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
 msgid "Error reading file '%s': %s"
@@ -417,7 +438,7 @@ msgstr "Erro ao voltar no arquivo '%s': %s"
 #: libmate-desktop/mate-desktop-item.c:380
 #: libmate-desktop/mate-desktop-item.c:3553
 msgid "No name"
-msgstr "Nenhum nome"
+msgstr "Sem nome"
 
 #: libmate-desktop/mate-desktop-item.c:607
 #, c-format
@@ -486,7 +507,7 @@ msgstr "não foi possível obter a lista de tamanhos de tela"
 msgid "RANDR extension is not present"
 msgstr "a extensão RANDR não está presente"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "não foi possível obter informações sobre a saída %d"
@@ -494,7 +515,7 @@ msgstr "não foi possível obter informações sobre a saída %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -503,12 +524,12 @@ msgstr ""
 "posição/tamanho requisitado para o CRTC %d está fora do limite permitido: "
 "posição=(%d, %d), tamanho=(%d, %d), máximo=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "não foi possível definir a configuração para o CRTC %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "não foi possível obter informações sobre o CRTC %d"
@@ -674,11 +695,11 @@ msgstr "Emitir um bipe quando um modificador for pressionado."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:86
 msgid "Beep when a key is pressed while CapsLock is active."
-msgstr ""
+msgstr "Beep quando uma tecla é pressionada enquanto CapsLock está ativo."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:91
 msgid "Beep count when enabling a modifier"
-msgstr ""
+msgstr "Contagem de bipes ao ativar um modificador"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:92
 msgid ""
@@ -688,7 +709,7 @@ msgstr ""
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:97
 msgid "Delay between beeps when enabling a modifier"
-msgstr ""
+msgstr "Atraso entre bipes ao ativar um modificador"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:98
 msgid ""
@@ -1315,8 +1336,8 @@ msgid ""
 msgstr ""
 "Esta configuração determina onde as barras do menu da janela serão exibidas "
 "- em uma janela ou em um painel com o protocolo MenuModel (Modelo de Menu). "
-"Veja https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings"
-"--gtk-shell-shows-menubar."
+"Veja https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--"
+"gtk-shell-shows-menubar."
 
 #: schemas/org.mate.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"

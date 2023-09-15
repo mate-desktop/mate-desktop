@@ -4,21 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Lasse Liehu <larso@gmx.com>, 2018
-# Ammuu5, 2018
-# nomen omen, 2018
-# Kimmo Kujansuu <mrkujansuu@gmail.com>, 2020
+# Lasse Liehu <larso@gmx.com>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Eslam Ali <talvikahvi@gmail.com>, 2021
+# nomen omen, 2021
+# Ammuu5, 2021
+# Kimmo Kujansuu <mrkujansuu@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Eslam Ali <talvikahvi@gmail.com>, 2021\n"
-"Language-Team: Finnish (https://www.transifex.com/mate/teams/13566/fi/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>, 2021\n"
+"Language-Team: Finnish (https://app.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -135,7 +135,7 @@ msgid "The title of the color selection dialog"
 msgstr "Värinvalintaikkunan otsikko"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Valitse väri"
 
@@ -157,7 +157,7 @@ msgstr ""
 "Valittu läpikuultamattomuus arvo (0 täysin läpinäkyvä, 65535 täysin "
 "läpikuultamaton)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Saatiin virheellisiä väritietoja\n"
 
@@ -331,7 +331,7 @@ msgstr ""
 " kakkospainikkeella ja valitse \"Tallenna väri tähän\"."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Värin valinta"
 
@@ -362,6 +362,18 @@ msgstr "Ohje-painike"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "Ikkunan Ohje-painike."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Peru"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_OK"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Ohje"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -448,7 +460,7 @@ msgstr "näytön kokoluetteloa ei saatu noudettua"
 msgid "RANDR extension is not present"
 msgstr "RANDR-laajennos ei ole saatavilla"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "Tietoja ulostulosta %d ei saatu."
@@ -456,7 +468,7 @@ msgstr "Tietoja ulostulosta %d ei saatu."
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -465,12 +477,12 @@ msgstr ""
 "pyydetty sijainti tai koko CRTC:lle %d ei ole sallituissa rajoissa: "
 "sijainti=(%d,%d), koko=(%d,%d), maksimi=(%d,%d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "Asetuksia CRTC:lle %d ei voitu asettaa"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "Tietoja CRTC:stä %d ei saatu."
@@ -787,8 +799,8 @@ msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
 msgstr ""
-"Pikaviestiohjelma, jota käytetään käynnistämään sovelluksia, jotka vaativat "
-"sitä."
+"Pikaviesti ohjelma, jota käytetään käynnistämään sovelluksia, jotka vaativat"
+" sitä."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -855,7 +867,7 @@ msgstr "Näytä Työpöydän Kuvakkeet"
 
 #: schemas/org.mate.background.gschema.xml.in:24
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr "Pyydä MATE-tiedostonhallintaa (Caja) piirtämään työpöydän kuvakkeet."
+msgstr "Pyydä MATE tiedostohallintaa (Caja) piirtämään työpöydän kuvakkeet."
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -1103,10 +1115,10 @@ msgid ""
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
 msgstr ""
-"Sisäänrakennettu GTK+-valintaikkunoissa, kuten tiedoston-, värin- tai "
-"fontin- valitsimessa, näyttää toimintosovelmat yläpalkin yläreunassa tai "
-"toiminta-alueen alareunassa. Tämä asetus ei vaikuta mukautettuihin "
-"ikkunoihin suoraan GtkDialogiin tai ilmoituksiin."
+"Sisäänrakennettu GTK+-valintaikkunoissa, kuten tiedosto-, väri- tai fontti- "
+"valitsimessa, näyttää toimintosovelmat yläpalkin yläreunassa tai toiminta-"
+"alueen alareunassa. Tämä asetus ei vaikuta mukautettuihin ikkunoihin suoraan"
+" GtkDialogiin tai ilmoituksiin."
 
 #: schemas/org.mate.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
@@ -1208,7 +1220,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:155
 msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr "Sisustettu ikkunoiden otsikkopalkki GTK3 käyttäjän puolella"
+msgstr "Sisustettu ikkunoiden otsikkopalkki GTK3 asiakaspuolella"
 
 #: schemas/org.mate.interface.gschema.xml:156
 msgid ""

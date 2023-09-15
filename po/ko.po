@@ -4,20 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Alan Lee <bkrhlim@aol.com>, 2018
+# Alan Lee <bkrhlim@aol.com>, 2021
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2021
-# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# 1763f4a4329a2376c933c5e919a36cbc_341ca53 <1f851310383599d03339229d772e1290_119292>, 2021
 # JungHee Lee <daemul72@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
 "Last-Translator: JungHee Lee <daemul72@gmail.com>, 2021\n"
-"Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
+"Language-Team: Korean (https://app.transifex.com/mate/teams/13566/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -131,7 +131,7 @@ msgid "The title of the color selection dialog"
 msgstr "색상 선택 대화 상자 제목"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "색상 선택"
 
@@ -151,7 +151,7 @@ msgstr "현재 알파 값"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "선택한 불투명 값(0: 완전 투명, 65535: 완전 불투명)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "잘못된 색상 데이터를 받았습니다\n"
 
@@ -315,7 +315,7 @@ msgstr ""
 "오른쪽 버튼을 누르고 \"이 색상 저장\"을 선택하십시오."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "색상 선택"
 
@@ -346,6 +346,18 @@ msgstr "도움말 버튼"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "대화 상자의 도움말 버튼입니다."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "취소(_C)"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "확인(_O)"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "도움말"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -432,7 +444,7 @@ msgstr "화면 크기 범위를  읽어 올 수 없습니다"
 msgid "RANDR extension is not present"
 msgstr "RANDR 확장 기능이 없습니다"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "출력 %d번에 대한 정보를 읽어 올 수 없습니다"
@@ -440,7 +452,7 @@ msgstr "출력 %d번에 대한 정보를 읽어 올 수 없습니다"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -449,12 +461,12 @@ msgstr ""
 "CRTC %d번의 요청한 위치/크기가 허용하는 크기 제한을 넘어갑니다. 위치=(%d, %d), 크기=(%d, %d), 최대=(%d, "
 "%d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "CRTC %d번을 설정할 수 없습니다"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "CRTC %d번에 대한 정보를 읽어 올 수 없습니다"

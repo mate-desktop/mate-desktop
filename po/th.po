@@ -4,7 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Rockers <sumorock@hotmail.com>, 2021
 # Akom <knight2000@gmail.com>, 2021
 # Aefgh Threenine <aefgh3962@gmail.com>, 2021
 # 
@@ -12,10 +13,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
 "Last-Translator: Aefgh Threenine <aefgh3962@gmail.com>, 2021\n"
-"Language-Team: Thai (https://www.transifex.com/mate/teams/13566/th/)\n"
+"Language-Team: Thai (https://app.transifex.com/mate/teams/13566/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,7 +27,7 @@ msgstr ""
 #. * displayed in the about box to give credit to the translator(s).
 #: mate-about/mate-about.c:68
 msgid "translator-credits"
-msgstr "Akom Chotiphantawanon <knight2000@gmail.com>, 2016"
+msgstr "Akom Chotiphantawanon <knight2000@gmail.com>"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -111,7 +112,7 @@ msgid "The title of the color selection dialog"
 msgstr "หัวเรื่องของกล่องโต้ตอบเลือกสี"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "เลือกสี"
 
@@ -131,7 +132,7 @@ msgstr ""
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "ได้รับข้อมูลสีที่ผิดรูปแบบ\n"
 
@@ -291,7 +292,7 @@ msgid ""
 msgstr ""
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr ""
 
@@ -322,6 +323,18 @@ msgstr ""
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr ""
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_ยกเลิก"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr ""
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "วิธีใช้"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -409,7 +422,7 @@ msgstr "ไม่สามารถอ่านค่าช่วงของข
 msgid "RANDR extension is not present"
 msgstr "ไม่มีส่วนขยาย RANDR"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "ไม่สามารถอ่านข้อมูลเกี่ยวกับเอาต์พุต %d"
@@ -417,7 +430,7 @@ msgstr "ไม่สามารถอ่านข้อมูลเกี่ย
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -426,12 +439,12 @@ msgstr ""
 "ตำแหน่ง/ขนาดสำหรับ CRTC %d ที่ร้องขอ มีค่าอยู่นอกขีดจำกัดที่กำหนด: "
 "ตำแหน่ง=(%d, %d), ขนาด=(%d, %d), ค่าสูงสุด=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "ไม่สามารถกำหนดค่าสำหรับ CRTC %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "ไม่สามารถอ่านข้อมูลเกี่ยวกับ CRTC %d"

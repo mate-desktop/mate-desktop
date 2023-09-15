@@ -4,21 +4,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Miroslav Sido <miro_redhawk@hotmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Erik Bročko <erik.brocko@letemsvetemapplem.eu>, 2018
-# Dušan Kazik <prescott66@gmail.com>, 2020
+# Pavol Šimo <palo.simo@gmail.com>, 2021
 # Ján Ďanovský <dagsoftware@yahoo.com>, 2021
+# Dušan Kazik <prescott66@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Tibor Kaputa <tibbbi2@gmail.com>, 2021
+# peter, 2021
+# Miroslav Sido <miro_redhawk@hotmail.com>, 2021
+# Erik Bročko <erik.brocko@letemsvetemapplem.eu>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Tibor Kaputa <tibbbi2@gmail.com>, 2021\n"
-"Language-Team: Slovak (https://www.transifex.com/mate/teams/13566/sk/)\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
+"Last-Translator: Erik Bročko <erik.brocko@letemsvetemapplem.eu>, 2021\n"
+"Language-Team: Slovak (https://app.transifex.com/mate/teams/13566/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -134,7 +136,7 @@ msgid "The title of the color selection dialog"
 msgstr "Titulok dialógu „Výber farby“"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Zvoľte farbu"
 
@@ -154,7 +156,7 @@ msgstr "Súčasná hodnota priesvitnosti"
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr "Vybraná hodnota krytia (0 plne priehľadná, 65535 plne nepriehľadná)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Bol prijatý neplatný údaj o farbe\n"
 
@@ -328,7 +330,7 @@ msgstr ""
 "pravým tlačidlom myši a zvoľte \"Uložiť sem farbu\"."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Výber farby"
 
@@ -359,6 +361,18 @@ msgstr "Tlačidlo Pomocník"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "Tlačidlo Pomocník dialógového okna."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Zrušiť"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_Ok"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Pomocník"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -447,7 +461,7 @@ msgstr "nepodarilo sa získať rozsah veľkostí obrazovky"
 msgid "RANDR extension is not present"
 msgstr "rozšírenie RANDR nie je prítomné"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "nepodarilo sa získať informácie o výstupe %d"
@@ -455,7 +469,7 @@ msgstr "nepodarilo sa získať informácie o výstupe %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -464,12 +478,12 @@ msgstr ""
 "vyžiadaná poloha/veľkosť pre CRTC %d je mimo povolenú hranicu: poloha=(%d, "
 "%d), veľkosť=(%d, %d), maximum=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "nepodarilo sa nastaviť konfiguráciu pre CRTC %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "nepodarilo sa získať informáciu o CRTC %d"
@@ -1284,8 +1298,8 @@ msgstr ""
 "Toto upravuje zväčšovací faktor GTK, ktorým sa prepočítavajú súradnice "
 "položiek na obrazovke na skutočné fyzické pixely zariadenia. Zvyčajne je "
 "táto hodnota nastavená na 1, ale na obrazovkách s veľmi vysokým rozlíšením "
-"je možné použiť vyššiu hodnotu (napr. 2). Nastavte na 0 pre automatickú "
-"detekciu."
+"(HiDPI, Retina) je možné použiť vyššiu hodnotu (napr. 2). Nastavte na 0 pre "
+"automatickú detekciu."
 
 #: schemas/org.mate.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"

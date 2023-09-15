@@ -4,21 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# 83471bf16eb03bd248ce865f88678158_08f49ba <b37580a9d5c210d723d81df1f8c6f8f2_815>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2018
-# Kim Malmo <berencamlost@msn.com>, 2019
+# 83471bf16eb03bd248ce865f88678158_08f49ba <b37580a9d5c210d723d81df1f8c6f8f2_815>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Allan Nordhøy <epost@anotheragency.no>, 2021
+# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2021
+# Kim Malmo <berencamlost@msn.com>, 2021
 # heskjestad <cato@heskjestad.xyz>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
-"POT-Creation-Date: 2021-06-21 18:40+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
+"POT-Creation-Date: 2021-08-03 02:30+0200\n"
+"PO-Revision-Date: 2021-09-19 12:56+0000\n"
 "Last-Translator: heskjestad <cato@heskjestad.xyz>, 2021\n"
-"Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
+"Language-Team: Norwegian Bokmål (https://app.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,7 +51,7 @@ msgstr "Lær mer om MATE"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr "MATE skrivebordsmiljø"
+msgstr "Skrivebordsmiljøet MATE"
 
 #: mate-about/mate-about.h:34
 msgid ""
@@ -104,7 +104,7 @@ msgid ""
 "MATE is here to provide that same desktop to you!"
 msgstr ""
 "GNOME 2 var det mest populære Linux-skrivebordet, men det er ikke lenger "
-"tilgjengelig… MATE er her i kraft av å tilby dette skrivebordet til deg!"
+"tilgjengelig … MATE er her i kraft av å tilby dette skrivebordet til deg!"
 
 #: mate-about/mate-about.h:58
 msgid ""
@@ -112,9 +112,9 @@ msgid ""
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
-"Navnet “MATE” kommer fra yerba maté, er en type beinved hjemmehørende til "
-"subtropiske Sør-Amerika. Den inneholder koffein og brukes til å lage brygg "
-"og drikker kalt mate."
+"Navnet «MATE» kommer fra «yerba maté», er en type beinved som hører hjemme i"
+" subtropiske Sør-Amerika. Den inneholder koffein og brukes til å lage brygg "
+"og drikker kalt «mate»."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -141,7 +141,7 @@ msgid "The title of the color selection dialog"
 msgstr "Tittelen på fargevalgsdialogen"
 
 #: libmate-desktop/mate-colorbutton.c:169
-#: libmate-desktop/mate-colorbutton.c:438
+#: libmate-desktop/mate-colorbutton.c:441
 msgid "Pick a Color"
 msgstr "Velg en farge"
 
@@ -159,9 +159,9 @@ msgstr "Gjeldende alfa"
 
 #: libmate-desktop/mate-colorbutton.c:198
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr "Valgt dekkevne ( 0 helt gjennomsiktig, 65535 helt diffust)"
+msgstr "Valgt dekkevne (0 helt gjennomsiktig, 65535 full dekkevne)"
 
-#: libmate-desktop/mate-colorbutton.c:331
+#: libmate-desktop/mate-colorbutton.c:336
 msgid "Received invalid color data\n"
 msgstr "Mottok ugyldig fargedata\n"
 
@@ -187,7 +187,7 @@ msgstr "Gjeldende farge"
 
 #: libmate-desktop/mate-colorsel.c:292
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
-msgstr "Gjeldende dekkevne ( 0 helt gjennomsiktig, 65535 helt diffust)"
+msgstr "Gjeldende dekkevne (0 helt gjennomsiktig, 65535 full dekkevne)"
 
 #: libmate-desktop/mate-colorsel.c:298
 msgid "HEX String"
@@ -271,7 +271,7 @@ msgstr "Fargens dekkevne."
 
 #: libmate-desktop/mate-colorsel.c:417
 msgid "Color _name:"
-msgstr "Farge _navn:"
+msgstr "Farge_navn:"
 
 #: libmate-desktop/mate-colorsel.c:431
 msgid ""
@@ -331,10 +331,10 @@ msgid ""
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
 "Klikk på denne oppføringen for å gjøre den til nåværende farge, dra en "
-"fargeprøve hit eller høyreklikk den og velg \"Lagre farge her\""
+"fargeprøve hit eller høyreklikk den og velg «Lagre farge her»."
 
 #: libmate-desktop/mate-colorseldialog.c:99
-#: libmate-desktop/mate-colorseldialog.c:162
+#: libmate-desktop/mate-colorseldialog.c:185
 msgid "Color Selection"
 msgstr "Fargevalg"
 
@@ -365,6 +365,18 @@ msgstr "Hjelpe-knapp"
 #: libmate-desktop/mate-colorseldialog.c:121
 msgid "The help button of the dialog."
 msgstr "Dialogvinduets hjelpeknapp."
+
+#: libmate-desktop/mate-colorseldialog.c:163
+msgid "_Cancel"
+msgstr "_Avbryt"
+
+#: libmate-desktop/mate-colorseldialog.c:168
+msgid "_OK"
+msgstr "_Ok"
+
+#: libmate-desktop/mate-colorseldialog.c:176
+msgid "Help"
+msgstr "Hjelp"
 
 #: libmate-desktop/mate-desktop-item.c:220
 #, c-format
@@ -429,7 +441,8 @@ msgstr "Ukjent koding for: %s"
 #: libmate-desktop/mate-desktop-utils.c:150
 msgid "Cannot find a terminal, using xterm, even if it may not work"
 msgstr ""
-"Kan ikke finne en terminal, bruker xterm selv om den kanskje ikke virker"
+"Kan ikke finne en terminal. Bruker derfor xterm selv om den kanskje ikke "
+"virker."
 
 #: libmate-desktop/mate-languages.c:746
 msgid "Unspecified"
@@ -452,7 +465,7 @@ msgstr "kunne ikke hente område med skjermstørrelser"
 msgid "RANDR extension is not present"
 msgstr "RANDR-tillegget er ikke tilstede"
 
-#: libmate-desktop/mate-rr.c:1261
+#: libmate-desktop/mate-rr.c:1265
 #, c-format
 msgid "could not get information about output %d"
 msgstr "kunne ikke hente informasjon om utdata %d"
@@ -460,7 +473,7 @@ msgstr "kunne ikke hente informasjon om utdata %d"
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
 #. * as usual.  A CRTC is a CRT Controller (this is X terminology)
-#: libmate-desktop/mate-rr.c:1743
+#: libmate-desktop/mate-rr.c:1750
 #, c-format
 msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
@@ -469,12 +482,12 @@ msgstr ""
 "forespurt posisjon/størrelse for CRTC %d er utenfor tillatt område: "
 "posisjon=(%d, %d), størrelse=(%d, %d), maksimum=(%d, %d)"
 
-#: libmate-desktop/mate-rr.c:1778
+#: libmate-desktop/mate-rr.c:1785
 #, c-format
 msgid "could not set the configuration for CRTC %d"
 msgstr "kunne ikke sette oppsettet for CRTC %d"
 
-#: libmate-desktop/mate-rr.c:1942
+#: libmate-desktop/mate-rr.c:1949
 #, c-format
 msgid "could not get information about CRTC %d"
 msgstr "kunne ikke hente informasjon om CRTC %d"
@@ -591,7 +604,7 @@ msgstr ""
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:41
 msgid "How long to accelerate in milliseconds"
-msgstr "Hvor lenge det skal aksellereres i millisekunder"
+msgstr "Hvor lenge det skal akselereres i millisekunder"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:42
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
@@ -944,8 +957,8 @@ msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr ""
-"Hvordan bakgrunnsfargen skal tegnes. Mulige verdier er \"horizontal-"
-"gradient\", \"vertical-gradient\", og \"solid\"."
+"Hvordan bakgrunnsfargen skal tegnes. Mulige verdier er «horizontal-"
+"gradient», «vertical-gradient», og «solid»."
 
 #: schemas/org.mate.file-views.gschema.xml:5
 msgid "File Icon Theme"
