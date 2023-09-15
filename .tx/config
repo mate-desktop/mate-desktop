@@ -1,9 +1,10 @@
 [main]
 host = https://www.transifex.com
- 
-[MATE.1-26--mate-desktop]
-file_filter = po/<lang>.po
-source_file = po/mate-desktop.pot
-source_lang = en
-type = PO
+
+[o:mate:p:MATE:r:1-26--mate-desktop]
+file_filter  = po/<lang>.po
+source_file  = po/mate-desktop.pot
+source_lang  = en
+type         = PO
 minimum_perc = 2
+
