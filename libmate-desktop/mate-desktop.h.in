@@ -40,6 +40,8 @@ G_BEGIN_DECLS
         (MATE_MAJOR == (major) && MATE_MINOR == (minor) && \
         MATE_MICRO >= (micro)))
 
+#define MATE_DESKTOP_VERSION "@PACKAGE_VERSION@"
+
 G_END_DECLS
 
 #endif /* __MATE_DESKTOP_H__ */

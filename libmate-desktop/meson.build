@@ -1,7 +1,16 @@
 libmdt_inc = include_directories('.')
 
-headers = files(
-  'mate-desktop.h',
+version_conf = configuration_data()
+version_conf.set('PACKAGE_VERSION', matedt_version)
+
+mate_desktop_header_file = configure_file(
+  input: 'mate-desktop.h.in',
+  output: 'mate-desktop.h',
+  configuration: version_conf,
+)
+
+headers = [
+   mate_desktop_header_file,
   'mate-desktop-utils.h',
   'mate-desktop-item.h',
   'mate-dconf.h',
@@ -18,7 +27,7 @@ headers = files(
   'mate-colorsel.h',
   'mate-hsv.h',
   'mate-colorseldialog.h',
-)
+]
 
 install_headers(
   headers,

@@ -246,6 +246,7 @@ mate-about/Makefile
 mate-about/mate-about.h
 mate-about/mate-version.xml
 libmate-desktop/Makefile
+libmate-desktop/mate-desktop.h
 libmate-desktop/mate-desktop-2.0.pc
 libmate-desktop/mate-desktop-2.0-uninstalled.pc
 docs/Makefile
