@@ -59,10 +59,6 @@ AC_SUBST(MATE_DATE)
 AC_SUBST(MATE_DATE_COMMENT_START)
 AC_SUBST(MATE_DATE_COMMENT_END)
 
-AC_DEFINE(MATE_MAJOR, [mate_platform], [Define to the major version])
-AC_DEFINE(MATE_MINOR, [mate_minor], [Define to the minor version])
-AC_DEFINE(MATE_MICRO, [mate_micro], [Define to the micro version])
-
 RELEASE_YEAR=`date +%Y`
 if test "x$SOURCE_DATE_EPOCH" != "x"; then
 	RELEASE_YEAR=`date -u -d "@$SOURCE_DATE_EPOCH" +%Y`

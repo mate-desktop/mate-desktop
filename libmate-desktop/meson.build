@@ -2,6 +2,9 @@ libmdt_inc = include_directories('.')
 
 version_conf = configuration_data()
 version_conf.set('PACKAGE_VERSION', matedt_version)
+version_conf.set('MATE_PLATFORM', mate_platform)
+version_conf.set('MATE_MINOR', mate_minor)
+version_conf.set('MATE_MICRO', mate_micro)
 
 mate_desktop_header_file = configure_file(
   input: 'mate-desktop.h.in',
