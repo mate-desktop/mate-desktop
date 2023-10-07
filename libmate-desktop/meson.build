@@ -26,7 +26,6 @@ headers = [
   'mate-image-menu-item.h',
   'mate-rr-config.h',
   'mate-rr-labeler.h',
-  'mate-colorbutton.h',
   'mate-colorsel.h',
   'mate-hsv.h',
   'mate-colorseldialog.h',
@@ -52,7 +51,6 @@ sources = files(
   'mate-rr-config.c',
   'mate-rr-output-info.c',
   'mate-rr-labeler.c',
-  'mate-colorbutton.c',
   'mate-colorsel.c',
   'mate-hsv.c',
   'mate-colorseldialog.c',
@@ -159,12 +157,6 @@ endif
 
 test_ditem = executable('test-ditem',
   sources : 'test-ditem.c',
-  dependencies : libmate_desktop_dep,
-  install : false,
-)
-
-test_color_button = executable('test-color-button',
-  sources : 'test.c',
   dependencies : libmate_desktop_dep,
   install : false,
 )

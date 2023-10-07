@@ -12,7 +12,6 @@ libmate_desktop_HEADERS = \
 	mate-languages.h		\
 	mate-rr-config.h		\
 	mate-rr-labeler.h \
-	mate-colorbutton.h \
 	mate-colorsel.h \
 	mate-hsv.h \
 	mate-colorseldialog.h \
@@ -32,7 +31,7 @@ AM_CPPFLAGS =							\
 
 AM_CFLAGS = $(WARN_CFLAGS)
 
-noinst_PROGRAMS = test-desktop-thumbnail test-ditem test test-languages test-image-menu-item
+noinst_PROGRAMS = test-desktop-thumbnail test-ditem test-languages test-image-menu-item
 
 CLEANFILES =
 
@@ -49,7 +48,6 @@ introspection_sources = \
 	mate-rr-config.c	\
 	mate-rr-output-info.c	\
 	mate-rr-labeler.c	\
-	mate-colorbutton.c \
 	mate-colorsel.c \
 	mate-hsv.c \
 	mate-colorseldialog.c \
@@ -72,9 +70,6 @@ libmate_desktop_2_la_LDFLAGS = \
 	-version-info $(LT_VERSION) \
 	-export-symbols-regex "^mate_.*" \
 	-no-undefined
-
-test_SOURCES = \
-	test.c
 
 test_LDADD = \
 	libmate-desktop-2.la		\
