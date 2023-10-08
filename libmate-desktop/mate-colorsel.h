@@ -44,10 +44,10 @@ typedef struct _MateColorSelection       MateColorSelection;
 typedef struct _MateColorSelectionClass  MateColorSelectionClass;
 typedef struct _MateColorSelectionPrivate    MateColorSelectionPrivate;
 
-typedef void (* MateColorSelectionChangePaletteFunc) (const GdkColor    *colors,
+typedef void (* MateColorSelectionChangePaletteFunc) (const GdkRGBA    *colors,
                                                      gint               n_colors);
 typedef void (* MateColorSelectionChangePaletteWithScreenFunc) (GdkScreen         *screen,
-							       const GdkColor    *colors,
+							       const GdkRGBA    *colors,
 							       gint               n_colors);
 
 struct _MateColorSelection
@@ -82,27 +82,27 @@ gboolean   mate_color_selection_get_has_palette         (MateColorSelection *col
 void       mate_color_selection_set_has_palette         (MateColorSelection *colorsel,
 							gboolean           has_palette);
 
-void     mate_color_selection_set_current_color   (MateColorSelection *colorsel,
-						  const GdkColor    *color);
+void     mate_color_selection_set_current_rgba   (MateColorSelection *colorsel,
+						  const GdkRGBA    *color);
 void     mate_color_selection_set_current_alpha   (MateColorSelection *colorsel,
 						  guint16            alpha);
-void     mate_color_selection_get_current_color   (MateColorSelection *colorsel,
-						  GdkColor          *color);
+void     mate_color_selection_get_current_rgba   (MateColorSelection *colorsel,
+						  GdkRGBA          *color);
 guint16  mate_color_selection_get_current_alpha   (MateColorSelection *colorsel);
 void     mate_color_selection_set_previous_color  (MateColorSelection *colorsel,
-						  const GdkColor    *color);
+						  const GdkRGBA    *color);
 void     mate_color_selection_set_previous_alpha  (MateColorSelection *colorsel,
 						  guint16            alpha);
 void     mate_color_selection_get_previous_color  (MateColorSelection *colorsel,
-						  GdkColor          *color);
+						  GdkRGBA          *color);
 guint16  mate_color_selection_get_previous_alpha  (MateColorSelection *colorsel);
 
 gboolean mate_color_selection_is_adjusting        (MateColorSelection *colorsel);
 
 gboolean mate_color_selection_palette_from_string (const gchar       *str,
-                                                  GdkColor         **colors,
+                                                  GdkRGBA         **colors,
                                                   gint              *n_colors);
-gchar*   mate_color_selection_palette_to_string   (const GdkColor    *colors,
+gchar*   mate_color_selection_palette_to_string   (const GdkRGBA    *colors,
                                                   gint               n_colors);
 
 #ifndef GTK_DISABLE_DEPRECATED

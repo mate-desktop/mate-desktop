@@ -32,10 +32,10 @@
 static gboolean
 copy_color (GtkWidget *widget, GdkEvent  *event, MateColorSelectionDialog *color_dialog)
 {
-    GdkColor color;
+    GdkRGBA color;
     gchar *color_string;
 
-    mate_color_selection_get_current_color (MATE_COLOR_SELECTION (color_dialog->colorsel), &color);
+    mate_color_selection_get_current_rgba (MATE_COLOR_SELECTION (color_dialog->colorsel), &color);
     g_object_get (color_dialog->colorsel, "hex-string", &color_string, NULL);
 
     gtk_clipboard_set_text (gtk_clipboard_get (GDK_SELECTION_CLIPBOARD), color_string, -1);
