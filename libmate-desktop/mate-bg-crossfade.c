@@ -278,7 +278,7 @@ tile_surface (cairo_surface_t *surface,
         gtk_style_context_add_provider (context,
                                         GTK_STYLE_PROVIDER (provider),
                                         GTK_STYLE_PROVIDER_PRIORITY_THEME);
-        gtk_style_context_get_background_color (context, GTK_STATE_FLAG_NORMAL, &bg);
+        gtk_style_context_get (context, GTK_STATE_FLAG_NORMAL, "background-color", &bg, NULL);
         gdk_cairo_set_source_rgba(cr, &bg);
         g_object_unref (G_OBJECT (context));
     }
