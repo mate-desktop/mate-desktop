@@ -1873,6 +1873,10 @@ ditem_execute (const MateDesktopItem *item,
 			sn_context = NULL;
 		}
 	}
+	else {
+		sn_context = NULL;
+		sn_display = NULL;
+	}
 #endif
 
 	if (screen) {
