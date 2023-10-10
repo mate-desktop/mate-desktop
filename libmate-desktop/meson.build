@@ -88,7 +88,7 @@ if cc.has_link_argument(test_ldflag)
   ldflags += test_ldflag
 endif
 
-libmate_desktop = shared_library(
+libmate_desktop = library(
   'mate-desktop-2',
   sources: sources,
   version: libversion,
