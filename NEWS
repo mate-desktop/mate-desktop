@@ -1,3 +1,18 @@
+### mate-desktop 1.27.4
+
+  * Translations update
+  * mate-colorsel: Fix compilation warnings use rgba replace color
+  * meson: Add meson support for static library
+  * Fix compilation warning replace gtk_style_context_get_background_color
+  * wayland: fix uninitialized variable
+  * mate-rr-labeler: Fix compilation warnings use css replace gtk_widget_override_color
+  * mate-colorseldialog: Fix compilation warnings remove deprecated function
+  * Add meson build libstartup-notification support type is auto
+  * Remove useless mate_color_button apis
+  * Fix MATE_DESKTOP_CHECK_VERSION
+  * Remove useless code
+  * Rename mate-desktop.h => mate-desktop.h.in add MATE_DESKTOP_VERSION marco
+
 ### mate-desktop 1.27.3
 
   * Translations update
