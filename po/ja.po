@@ -15,7 +15,7 @@
 # eletra, 2021
 # ABE Tsunehiko, 2021
 # pivo thusr, 2021
-# Green <usergreen@users.osdn.me>, 2022
+# Green <usergreen@users.osdn.me>, 2024
 # 
 msgid ""
 msgstr ""
@@ -23,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2023-09-02 16:57+0200\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Green <usergreen@users.osdn.me>, 2022\n"
+"Last-Translator: Green <usergreen@users.osdn.me>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -68,12 +68,15 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2023 MATE developers"
 msgstr ""
+"Copyright © 1997-2011 GNOME 開発者\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2023 MATE 開発者"
 
 #: mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
-msgstr "MATE は伝統的なメタファーを用いた、直感的かつ魅力的な、Linux ユーザーのためのデスクトップです。"
+msgstr "MATE は伝統的なメタファを用いた、直感的かつ魅力的な、Linux ユーザのためのデスクトップです。"
 
 #: mate-about/mate-about.h:45
 msgid ""
@@ -930,7 +933,7 @@ msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
 msgstr ""
-"アニメーションを有効にするかどうかを設定します。[注意] これはグローバルな設定なので、ウィンドウマネージャーやパネルなどの挙動に影響します。"
+"アニメーションを有効にするかどうかを設定します。[注意] これはグローバルな設定なので、ウィンドウマネージャやパネルなどの挙動に影響します。"
 
 #: schemas/org.mate.interface.gschema.xml:15
 msgid "Menus Have Tearoff"
@@ -1020,7 +1023,7 @@ msgstr "GTK+ テーマ"
 #: schemas/org.mate.interface.gschema.xml:66
 #: schemas/org.mate.interface.gschema.xml:71
 msgid "Basename of the default theme used by gtk+."
-msgstr "GTK+ が使用するデフォルトのテーマの名前です。"
+msgstr "GTK+ が使用する既定テーマの名前です。"
 
 #: schemas/org.mate.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1034,11 +1037,11 @@ msgstr "'gtk-color-scheme' で定義された \"色名:色\" の '\\n' 区切り
 
 #: schemas/org.mate.interface.gschema.xml:80
 msgid "Default font"
-msgstr "デフォルトのフォント"
+msgstr "既定のフォント"
 
 #: schemas/org.mate.interface.gschema.xml:81
 msgid "Name of the default font used by gtk+."
-msgstr "GTK+ が使用するデフォルトのフォント名です。"
+msgstr "GTK+ が使用する既定のフォント名です。"
 
 #: schemas/org.mate.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
@@ -1076,7 +1079,7 @@ msgid ""
 "using GtkDialog directly, or message dialogs."
 msgstr ""
 "ファイル選択、色選択、フォント選択などの GTK+ "
-"組み込みダイアログが、アクションウィジェットを表示するために、上部のヘッダーバーや下部のアクションエリアを使用するかどうかを設定します。この設定は "
+"組み込みダイアログが、アクションウィジェットを表示するために、上部のヘッダバーや下部のアクションエリアを使用するかどうかを設定します。この設定は "
 "GtkDialog を直接使用するカスタムダイアログやメッセージダイアログには効果がありません。"
 
 #: schemas/org.mate.interface.gschema.xml:105
@@ -1105,7 +1108,7 @@ msgstr "文書のフォント"
 
 #: schemas/org.mate.interface.gschema.xml:116
 msgid "Name of the default font used for reading documents."
-msgstr "文書で使用するデフォルトのフォント名です。"
+msgstr "文書で使用する既定のフォント名です。"
 
 #: schemas/org.mate.interface.gschema.xml:120
 msgid "Monospace font"
@@ -1144,7 +1147,7 @@ msgstr "GtkFileChooser ウィジェットがファイルシステムモデルと
 
 #: schemas/org.mate.interface.gschema.xml:140
 msgid "Menubar accelerator"
-msgstr "メニューバーのアクセラレーター"
+msgstr "メニューバーのアクセラレータ"
 
 #: schemas/org.mate.interface.gschema.xml:141
 msgid "Keyboard shortcut to open the menu bars."
@@ -1158,7 +1161,7 @@ msgstr "'入力メソッド' のメニューを表示する"
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
-msgstr "入力エントリーとテキストビューのコンテキストメニューに入力メソッドを切り替えるメニュー項目を追加するかどうかを指定します。"
+msgstr "入力エントリとテキストビューのコンテキストメニューに入力メソッドを切り替えるメニュー項目を追加するかどうかを指定します。"
 
 #: schemas/org.mate.interface.gschema.xml:150
 msgid "Show the 'Unicode Control Character' menu"
@@ -1168,7 +1171,7 @@ msgstr "'Unicode 制御文字の挿入' メニューを表示する"
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
-msgstr "入力エントリーとテキストビューのコンテキストメニューに制御文字を挿入するメニュー項目を追加するかどうかを指定します。"
+msgstr "入力エントリとテキストビューのコンテキストメニューに制御文字を挿入するメニュー項目を追加するかどうかを指定します。"
 
 #: schemas/org.mate.interface.gschema.xml:155
 msgid "Titlebar layout of GTK3 client-side decorated windows"
@@ -1225,7 +1228,7 @@ msgstr "Alt キーが押された時だけニーモニックを表示する"
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
-msgstr "ユーザーが Alt キーを押している間だけニーモニックを表示するかどうかを設定します。"
+msgstr "ユーザが Alt キーを押している間だけニーモニックを表示するかどうかを設定します。"
 
 #: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
@@ -1254,7 +1257,7 @@ msgid ""
 "restarting your session."
 msgstr ""
 "この設定は、MATE が QT "
-"アプリケーションのスケールファクターを制御するかどうかを決定します。セッションの初期化時にGTKのスケールファクターと同期させる場合は "
+"アプリケーションのスケールファクタを制御するかどうかを決定します。セッションの初期化時にGTKのスケールファクタと同期させる場合は "
 "Enable、他の場所でこの値を制御する場合は Disable です。セッションの再起動が必要となります。"
 
 #: schemas/org.mate.interface.gschema.xml:186
@@ -1276,8 +1279,7 @@ msgid ""
 "Prevent the user from accessing the terminal or specifying a command line to"
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
-msgstr ""
-"ユーザーの端末やコマンドラインの実行を不可能にします。たとえば、これはパネルの \"アプリケーションの実行\" ダイアログへのアクセスを禁止します。"
+msgstr "ユーザの端末やコマンドラインの実行を不可能にします。たとえば、これはパネルの \"アプリケーションの実行\" ダイアログへのアクセスを禁止します。"
 
 #: schemas/org.mate.lockdown.gschema.xml:10
 msgid "Disable saving files to disk"
@@ -1287,8 +1289,7 @@ msgstr "ファイルをディスクに保存しない"
 msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
-msgstr ""
-"ユーザーによるファイルの保存を不可能にします。たとえば、すべてのアプリケーションが提供する \"別名で保存\" ダイアログへのアクセスを禁止します。"
+msgstr "ユーザによるファイルの保存を不可能にします。たとえば、すべてのアプリケーションが提供する \"別名で保存\" ダイアログへのアクセスを禁止します。"
 
 #: schemas/org.mate.lockdown.gschema.xml:15
 msgid "Disable printing"
@@ -1298,7 +1299,7 @@ msgstr "印刷を利用不可にする"
 msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
-msgstr "ユーザーからの印刷実行を不可能にします。たとえば、すべてのアプリケーションが提供する \"印刷\" ダイアログへのアクセスを禁止します。"
+msgstr "ユーザからの印刷実行を不可能にします。たとえば、すべてのアプリケーションが提供する \"印刷\" ダイアログへのアクセスを禁止します。"
 
 #: schemas/org.mate.lockdown.gschema.xml:20
 msgid "Disable print setup"
@@ -1308,17 +1309,17 @@ msgstr "印刷設定を利用不可にする"
 msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
-msgstr "ユーザーによる印刷設定の変更を不可能にします。たとえば、すべてのアプリケーションが提供する \"印刷設定\" ダイアログへのアクセスを禁止します。"
+msgstr "ユーザによる印刷設定の変更を不可能にします。たとえば、すべてのアプリケーションが提供する \"印刷設定\" ダイアログへのアクセスを禁止します。"
 
 #: schemas/org.mate.lockdown.gschema.xml:25
 msgid "Disable user switching"
-msgstr "ユーザーの切り換えを利用不可にする"
+msgstr "ユーザの切り換えを利用不可にする"
 
 #: schemas/org.mate.lockdown.gschema.xml:26
 msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
-msgstr "ユーザーのセッションが有効な間は他のアカウントへ切り換えることを禁止します。"
+msgstr "ユーザのセッションが有効な間は他のアカウントへ切り換えることを禁止します。"
 
 #: schemas/org.mate.lockdown.gschema.xml:30
 msgid "Disable lock screen"
@@ -1326,15 +1327,15 @@ msgstr "画面のロックを利用不可にする"
 
 #: schemas/org.mate.lockdown.gschema.xml:31
 msgid "Prevent the user from locking the screen."
-msgstr "ユーザーが画面をロックできないようにします。"
+msgstr "ユーザが画面をロックできないようにします。"
 
 #: schemas/org.mate.lockdown.gschema.xml:35
 msgid "Disable URL and MIME type handlers"
-msgstr "URL と MIME 型のハンドラーを無効にする"
+msgstr "URL と MIME タイプのハンドラを無効にする"
 
 #: schemas/org.mate.lockdown.gschema.xml:36
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr "URL または MIME 型に対応したハンドラーのアプリケーションを起動しないようにします。"
+msgstr "URL または MIME タイプに対応したハンドラのアプリケーションを起動しないようにします。"
 
 #: schemas/org.mate.lockdown.gschema.xml:40
 msgid "Disable theme settings"
@@ -1342,7 +1343,7 @@ msgstr "テーマの設定を無効にする"
 
 #: schemas/org.mate.lockdown.gschema.xml:41
 msgid "Prevent the user from changing theme settings."
-msgstr "ユーザーがテーマの設定を変更できないようにします。"
+msgstr "ユーザがテーマの設定を変更できないようにします。"
 
 #: schemas/org.mate.lockdown.gschema.xml:45
 msgid "Disable log out"
@@ -1350,23 +1351,23 @@ msgstr "ログアウトを無効にする"
 
 #: schemas/org.mate.lockdown.gschema.xml:46
 msgid "Prevent the user from logging out."
-msgstr "ユーザーがログアウトできないようにします。"
+msgstr "ユーザがログアウトできないようにします。"
 
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
-msgstr "デフォルトミキサーデバイス"
+msgstr "既定のミキサデバイス"
 
 #: schemas/org.mate.sound.gschema.xml:6
 msgid "The default mixer device used by the multimedia key bindings."
-msgstr "マルチメディアキーの割り当てで使用するデフォルトのミキサーデバイスです。"
+msgstr "マルチメディアキーの割り当てで使用する既定のミキサデバイスです。"
 
 #: schemas/org.mate.sound.gschema.xml:10
 msgid "Default mixer tracks"
-msgstr "デフォルトミキサートラック"
+msgstr "既定のミキサトラック"
 
 #: schemas/org.mate.sound.gschema.xml:11
 msgid "The default mixer tracks used by the multimedia key bindings."
-msgstr "マルチメディアキーの割り当てで使用するデフォルトのミキサートラックです。"
+msgstr "マルチメディアキーの割り当てで使用する、既定のミキサトラックです。"
 
 #: schemas/org.mate.sound.gschema.xml:15
 msgid "Enable ESD"
@@ -1374,7 +1375,7 @@ msgstr "ESD を有効にする"
 
 #: schemas/org.mate.sound.gschema.xml:16
 msgid "Enable sound server startup."
-msgstr "起動時にサウンドサーバーを有効にします。"
+msgstr "起動時にサウンドサーバを有効にします。"
 
 #: schemas/org.mate.sound.gschema.xml:20
 msgid "Sounds for events"
@@ -1382,7 +1383,7 @@ msgstr "イベント発生時に音を鳴らす"
 
 #: schemas/org.mate.sound.gschema.xml:21
 msgid "Whether to play sounds on user events."
-msgstr "ユーザーのイベント発生時に音を鳴らすかどうかです。"
+msgstr "ユーザのイベント発生時に音を鳴らすかどうかです。"
 
 #: schemas/org.mate.sound.gschema.xml:25
 msgid "Sound theme name"
@@ -1413,8 +1414,8 @@ msgid ""
 "to extremely quiet audio recordings, where the recording would otherwise be "
 "completely useless."
 msgstr ""
-"この値を TRUE に設定すると、ユーザーは出力/スピーカーの音量を 100% 以上に設定できます。出力音量を 100% "
-"以上に設定すると、サウンドサーバーはオーディオハードウェアが明瞭に処理できる限度を越えて音声を増幅します。これは音質の劣化につながりますが、その録音が全く意味をなさないくらい極端に小さな音声を再生するのに役立ちます。"
+"この値を TRUE に設定すると、ユーザは出力/スピーカの音量を 100% 以上に設定できます。出力音量を 100% "
+"以上に設定すると、サウンドサーバはオーディオハードウェアが明瞭に処理できる限度を越えて音声を増幅します。これは音質の劣化につながりますが、その録音が全く意味をなさないくらい極端に小さな音声を再生するのに役立ちます。"
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:6
 msgid ""

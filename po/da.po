@@ -7,7 +7,7 @@
 # Aputsiak Niels Janussen <aputtu@gmail.com>, 2018
 # Allan Nordhøy <epost@anotheragency.no>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Joe Hansen <joedalton2@yahoo.dk>, 2021
+# Joe Hansen <joedalton2@yahoo.dk>, 2023
 # 
 msgid ""
 msgstr ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2023-09-02 16:57+0200\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2021\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2023\n"
 "Language-Team: Danish (https://app.transifex.com/mate/teams/13566/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,6 +51,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2023 MATE developers"
 msgstr ""
+"Ophavsret 1997-2011 GNOME-udviklere\n"
+"Ophavsret 2011 Perberos\n"
+"Ophavsret 2012-2023 MATE-udviklerne"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -1500,7 +1503,7 @@ msgstr "Hvorvidt der skal afspilles lyde ved inddatahændelser."
 
 #: schemas/org.mate.sound.gschema.xml:35
 msgid "Permit the output volume to exceed 100%"
-msgstr ""
+msgstr "Tillad at lydstyrken er højere end 100 %"
 
 #: schemas/org.mate.sound.gschema.xml:36
 msgid ""
@@ -1511,6 +1514,12 @@ msgid ""
 "to extremely quiet audio recordings, where the recording would otherwise be "
 "completely useless."
 msgstr ""
+"Hvis denne er sandt til SAND (TRUE), så kan brugeren sætte "
+"udgangen/højtalerlydstyrken til over 100 %. Ved at sætte lydstyrken over 100"
+" %, så vil lydserveren forstærke lyden over hvad lydudstyret kan håndtere "
+"ordenligt. Dette kan medføre lavere lydkvalitet, men kan være nyttigt hvis "
+"der lyttes til meget lave lydoptagelser, hvor optagelsen ellers ville være "
+"helt ubrugelig."
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:6
 msgid ""
