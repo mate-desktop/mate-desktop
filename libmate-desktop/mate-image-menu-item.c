@@ -26,7 +26,6 @@ struct _MateImageMenuItem
 {
     GtkMenuItem  menu_item;
     GtkWidget   *image;
-    gchar       *label;
 };
 
 enum {
@@ -323,40 +322,6 @@ mate_image_menu_item_toggle_size_request (GtkMenuItem *menu_item,
 }
 
 static void
-mate_image_menu_item_set_label (GtkMenuItem *menu_item,
-                                const gchar *label)
-{
-    MateImageMenuItem *image_menu_item = MATE_IMAGE_MENU_ITEM (menu_item);
-
-    if (image_menu_item->label != label)
-    {
-        g_free (image_menu_item->label);
-        image_menu_item->label = g_strdup (label);
-        GTK_MENU_ITEM_CLASS (mate_image_menu_item_parent_class)->set_label (menu_item, label);
-        g_object_notify (G_OBJECT (menu_item), "label");
-    }
-}
-
-static const gchar *
-mate_image_menu_item_get_label (GtkMenuItem *menu_item)
-{
-    MateImageMenuItem *image_menu_item = MATE_IMAGE_MENU_ITEM (menu_item);
-
-    return image_menu_item->label;
-}
-
-static void
-mate_image_menu_item_finalize (GObject *object)
-{
-    MateImageMenuItem *image_menu_item = MATE_IMAGE_MENU_ITEM (object);
-
-    g_free (image_menu_item->label);
-    image_menu_item->label  = NULL;
-
-    G_OBJECT_CLASS (mate_image_menu_item_parent_class)->finalize (object);
-}
-
-static void
 mate_image_menu_item_set_property (GObject      *object,
                                    guint         prop_id,
                                    const GValue *value,
@@ -414,10 +379,7 @@ mate_image_menu_item_class_init (MateImageMenuItemClass *class)
     container_class->remove = mate_image_menu_item_remove;
 
     menu_item_class->toggle_size_request = mate_image_menu_item_toggle_size_request;
-    menu_item_class->set_label           = mate_image_menu_item_set_label;
-    menu_item_class->get_label           = mate_image_menu_item_get_label;
 
-    gobject_class->finalize     = mate_image_menu_item_finalize;
     gobject_class->set_property = mate_image_menu_item_set_property;
     gobject_class->get_property = mate_image_menu_item_get_property;
 
@@ -440,7 +402,6 @@ static void
 mate_image_menu_item_init (MateImageMenuItem *image_menu_item)
 {
     image_menu_item->image = NULL;
-    image_menu_item->label  = NULL;
 }
 
 /**
