@@ -22,10 +22,9 @@
 
 #include "mate-image-menu-item.h"
 
-struct _MateImageMenuItem
+struct _MateImageMenuItemPrivate
 {
-    GtkMenuItem  menu_item;
-    GtkWidget   *image;
+    GtkWidget *image;
 };
 
 enum {
@@ -33,16 +32,17 @@ enum {
     PROP_IMAGE,
 };
 
-G_DEFINE_TYPE (MateImageMenuItem, mate_image_menu_item, GTK_TYPE_MENU_ITEM)
+G_DEFINE_TYPE_WITH_PRIVATE (MateImageMenuItem, mate_image_menu_item, GTK_TYPE_MENU_ITEM)
 
 static void
 mate_image_menu_item_destroy (GtkWidget *widget)
 {
     MateImageMenuItem *image_menu_item = MATE_IMAGE_MENU_ITEM (widget);
+    MateImageMenuItemPrivate *priv = image_menu_item->priv;
 
-    if (image_menu_item->image)
+    if (priv->image)
         gtk_container_remove (GTK_CONTAINER (image_menu_item),
-                              image_menu_item->image);
+                              priv->image);
 
     GTK_WIDGET_CLASS (mate_image_menu_item_parent_class)->destroy (widget);
 }
@@ -53,6 +53,7 @@ mate_image_menu_item_get_preferred_width (GtkWidget *widget,
                                           gint      *natural)
 {
     MateImageMenuItem *image_menu_item = MATE_IMAGE_MENU_ITEM (widget);
+    MateImageMenuItemPrivate *priv = image_menu_item->priv;
     GtkPackDirection pack_dir;
     GtkWidget *parent;
 
@@ -66,12 +67,12 @@ mate_image_menu_item_get_preferred_width (GtkWidget *widget,
     GTK_WIDGET_CLASS (mate_image_menu_item_parent_class)->get_preferred_width (widget, minimum, natural);
 
     if ((pack_dir == GTK_PACK_DIRECTION_TTB || pack_dir == GTK_PACK_DIRECTION_BTT) &&
-        image_menu_item->image &&
-        gtk_widget_get_visible (image_menu_item->image))
+        priv->image &&
+        gtk_widget_get_visible (priv->image))
     {
         gint child_minimum, child_natural;
 
-        gtk_widget_get_preferred_width (image_menu_item->image, &child_minimum, &child_natural);
+        gtk_widget_get_preferred_width (priv->image, &child_minimum, &child_natural);
 
         *minimum = MAX (*minimum, child_minimum);
         *natural = MAX (*natural, child_natural);
@@ -84,6 +85,7 @@ mate_image_menu_item_get_preferred_height (GtkWidget *widget,
                                            gint      *natural)
 {
     MateImageMenuItem *image_menu_item = MATE_IMAGE_MENU_ITEM (widget);
+    MateImageMenuItemPrivate *priv = image_menu_item->priv;
     gint child_height = 0;
     GtkPackDirection pack_dir;
     GtkWidget *parent;
@@ -95,11 +97,11 @@ mate_image_menu_item_get_preferred_height (GtkWidget *widget,
     else
         pack_dir = GTK_PACK_DIRECTION_LTR;
 
-    if (image_menu_item->image && gtk_widget_get_visible (image_menu_item->image))
+    if (priv->image && gtk_widget_get_visible (priv->image))
     {
         GtkRequisition child_requisition;
 
-        gtk_widget_get_preferred_size (image_menu_item->image, &child_requisition, NULL);
+        gtk_widget_get_preferred_size (priv->image, &child_requisition, NULL);
 
         child_height = child_requisition.height;
     }
@@ -120,6 +122,7 @@ mate_image_menu_item_get_preferred_height_for_width (GtkWidget *widget,
                                                      gint      *natural)
 {
     MateImageMenuItem *image_menu_item = MATE_IMAGE_MENU_ITEM (widget);
+    MateImageMenuItemPrivate *priv = image_menu_item->priv;
     gint child_height = 0;
     GtkPackDirection pack_dir;
     GtkWidget *parent;
@@ -131,11 +134,11 @@ mate_image_menu_item_get_preferred_height_for_width (GtkWidget *widget,
     else
         pack_dir = GTK_PACK_DIRECTION_LTR;
 
-    if (image_menu_item->image && gtk_widget_get_visible (image_menu_item->image))
+    if (priv->image && gtk_widget_get_visible (priv->image))
     {
         GtkRequisition child_requisition;
 
-        gtk_widget_get_preferred_size (image_menu_item->image, &child_requisition, NULL);
+        gtk_widget_get_preferred_size (priv->image, &child_requisition, NULL);
 
         child_height = child_requisition.height;
     }
@@ -154,6 +157,7 @@ mate_image_menu_item_size_allocate (GtkWidget     *widget,
                                     GtkAllocation *allocation)
 {
     MateImageMenuItem *image_menu_item = MATE_IMAGE_MENU_ITEM (widget);
+    MateImageMenuItemPrivate *priv = image_menu_item->priv;
     GtkAllocation widget_allocation;
     GtkRequisition image_requisition;
     GtkPackDirection pack_dir;
@@ -176,11 +180,11 @@ mate_image_menu_item_size_allocate (GtkWidget     *widget,
 
     GTK_WIDGET_CLASS (mate_image_menu_item_parent_class)->size_allocate (widget, allocation);
 
-    if (!image_menu_item->image || !gtk_widget_get_visible (image_menu_item->image))
+    if (!priv->image || !gtk_widget_get_visible (priv->image))
         return;
 
     gtk_widget_get_allocation (widget, &widget_allocation);
-    gtk_widget_get_preferred_size (image_menu_item->image, &image_requisition, NULL);
+    gtk_widget_get_preferred_size (priv->image, &image_requisition, NULL);
 
     context = gtk_widget_get_style_context (widget);
     state = gtk_style_context_get_state (context);
@@ -225,7 +229,7 @@ mate_image_menu_item_size_allocate (GtkWidget     *widget,
     image_allocation.width = image_requisition.width;
     image_allocation.height = image_requisition.height;
 
-    gtk_widget_size_allocate (image_menu_item->image, &image_allocation);
+    gtk_widget_size_allocate (priv->image, &image_allocation);
 }
 
 static void
@@ -242,14 +246,15 @@ mate_image_menu_item_forall (GtkContainer   *container,
                              gpointer        callback_data)
 {
     MateImageMenuItem *image_menu_item = MATE_IMAGE_MENU_ITEM (container);
+    MateImageMenuItemPrivate *priv = image_menu_item->priv;
 
     GTK_CONTAINER_CLASS (mate_image_menu_item_parent_class)->forall (container,
                                                                      include_internals,
                                                                      callback,
                                                                      callback_data);
 
-    if (include_internals && image_menu_item->image)
-        (* callback) (image_menu_item->image, callback_data);
+    if (include_internals && priv->image)
+        (* callback) (priv->image, callback_data);
 }
 
 static void
@@ -257,15 +262,16 @@ mate_image_menu_item_remove (GtkContainer *container,
                              GtkWidget    *child)
 {
     MateImageMenuItem *image_menu_item = MATE_IMAGE_MENU_ITEM (container);
+    MateImageMenuItemPrivate *priv = image_menu_item->priv;
 
-    if (child == image_menu_item->image)
+    if (child == priv->image)
     {
         gboolean widget_was_visible;
 
         widget_was_visible = gtk_widget_get_visible (child);
 
         gtk_widget_unparent (child);
-        image_menu_item->image = NULL;
+        priv->image = NULL;
 
         if (widget_was_visible &&
             gtk_widget_get_visible (GTK_WIDGET (container)))
@@ -284,6 +290,7 @@ mate_image_menu_item_toggle_size_request (GtkMenuItem *menu_item,
                                           gint        *requisition)
 {
     MateImageMenuItem *image_menu_item = MATE_IMAGE_MENU_ITEM (menu_item);
+    MateImageMenuItemPrivate *priv = image_menu_item->priv;
     GtkPackDirection pack_dir;
     GtkWidget *parent;
     GtkWidget *widget = GTK_WIDGET (menu_item);
@@ -297,12 +304,12 @@ mate_image_menu_item_toggle_size_request (GtkMenuItem *menu_item,
 
     *requisition = 0;
 
-    if (image_menu_item->image && gtk_widget_get_visible (image_menu_item->image))
+    if (priv->image && gtk_widget_get_visible (priv->image))
     {
         GtkRequisition image_requisition;
         guint toggle_spacing;
 
-        gtk_widget_get_preferred_size (image_menu_item->image, &image_requisition, NULL);
+        gtk_widget_get_preferred_size (priv->image, &image_requisition, NULL);
 
         gtk_widget_style_get (GTK_WIDGET (menu_item),
                              "toggle-spacing", &toggle_spacing,
@@ -401,7 +408,12 @@ mate_image_menu_item_class_init (MateImageMenuItemClass *class)
 static void
 mate_image_menu_item_init (MateImageMenuItem *image_menu_item)
 {
-    image_menu_item->image = NULL;
+    MateImageMenuItemPrivate *priv;
+
+    image_menu_item->priv = mate_image_menu_item_get_instance_private (image_menu_item);
+    priv = image_menu_item->priv;
+
+    priv->image = NULL;
 }
 
 /**
@@ -470,16 +482,20 @@ void
 mate_image_menu_item_set_image (MateImageMenuItem *image_menu_item,
                                 GtkWidget         *image)
 {
+    MateImageMenuItemPrivate *priv;
+
     g_return_if_fail (MATE_IS_IMAGE_MENU_ITEM (image_menu_item));
 
-    if (image == image_menu_item->image)
+    priv = image_menu_item->priv;
+
+    if (image == priv->image)
         return;
 
-    if (image_menu_item->image)
+    if (priv->image)
         gtk_container_remove (GTK_CONTAINER (image_menu_item),
-                              image_menu_item->image);
+                              priv->image);
 
-    image_menu_item->image = image;
+    priv->image = image;
 
     if (image == NULL)
         return;
@@ -509,5 +525,5 @@ mate_image_menu_item_get_image (MateImageMenuItem *image_menu_item)
 {
     g_return_val_if_fail (MATE_IS_IMAGE_MENU_ITEM (image_menu_item), NULL);
 
-    return image_menu_item->image;
+    return image_menu_item->priv->image;
 }
