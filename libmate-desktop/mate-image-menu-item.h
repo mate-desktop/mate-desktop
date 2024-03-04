@@ -23,8 +23,34 @@
 G_BEGIN_DECLS
 
 #define MATE_TYPE_IMAGE_MENU_ITEM            (mate_image_menu_item_get_type ())
+#define MATE_IMAGE_MENU_ITEM(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_IMAGE_MENU_ITEM, MateImageMenuItem))
+#define MATE_IMAGE_MENU_ITEM_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_IMAGE_MENU_ITEM, MateImageMenuItemClass))
+#define MATE_IS_IMAGE_MENU_ITEM(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_IMAGE_MENU_ITEM))
+#define MATE_IS_IMAGE_MENU_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_IMAGE_MENU_ITEM))
+#define MATE_IMAGE_MENU_ITEM_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_IMAGE_MENU_ITEM, MateImageMenuItemClass))
 
-G_DECLARE_FINAL_TYPE (MateImageMenuItem, mate_image_menu_item, MATE, IMAGE_MENU_ITEM, GtkMenuItem);
+typedef struct _MateImageMenuItem              MateImageMenuItem;
+typedef struct _MateImageMenuItemPrivate       MateImageMenuItemPrivate;
+typedef struct _MateImageMenuItemClass         MateImageMenuItemClass;
+
+struct _MateImageMenuItem
+{
+    GtkMenuItem menu_item;
+
+  /*< private >*/
+    MateImageMenuItemPrivate *priv;
+};
+
+/**
+ * MateImageMenuItemClass:
+ * @parent_class: The parent class.
+ */
+struct _MateImageMenuItemClass
+{
+    GtkMenuItemClass parent_class;
+};
+
+GType      mate_image_menu_item_get_type          (void) G_GNUC_CONST;
 
 GtkWidget* mate_image_menu_item_new               (void);
 
