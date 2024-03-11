@@ -1,0 +1,199 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cppcheck - HTML report - mate-desktop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+    <script>
+      function getStyle(el, styleProp) {
+        var y;
+
+        if (el.currentStyle) {
+          y = el.currentStyle[styleProp];
+        } else if (window.getComputedStyle) {
+          y = document.defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+        }
+
+        return y;
+      }
+
+      function toggle() {
+        var el = this.expandable_content;
+        var mark = this.expandable_marker;
+
+        if (el.style.display === "block") {
+          el.style.display = "none";
+          mark.textContent = "[+]";
+        } else {
+          el.style.display = "block";
+          mark.textContent = "[-]";
+        }
+      }
+
+      function initExpandables() {
+        var elements = document.querySelectorAll(".expandable");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var el = elements[i];
+          var clickable = el.querySelector("span");
+          var marker = clickable.querySelector(".marker");
+          var content = el.querySelector(".content");
+          var width = clickable.clientWidth - parseInt(getStyle(content, "padding-left")) - parseInt(getStyle(content, "padding-right"));
+          content.style.width = width + "px";
+          clickable.expandable_content = content;
+          clickable.expandable_marker = marker;
+          clickable.addEventListener("click", toggle);
+        }
+      }
+
+      function toggleDisplay(cb) {
+        var elements = document.querySelectorAll("." + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("id-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleSeverity(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+        var elements = document.querySelectorAll(".sev_" + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("severity-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleTool(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+
+        var elements;
+        if (cb.id == "clang-tidy")
+            elements = document.querySelectorAll("[class^=clang-tidy-]");
+        else
+            elements = document.querySelectorAll(".issue:not([class^=clang-tidy-])");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("tool-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleAll() {
+        var elements = document.querySelectorAll(".idToggle");
+
+        // starting from 1 since 0 is the "toggle all" input
+        for (var i = 1, len = elements.length; i < len; i++) {
+          var changed = elements[i].checked != elements[0].checked;
+          if (changed) {
+            elements[i].checked = elements[0].checked;
+            toggleDisplay(elements[i]);
+          }
+        }
+      }
+
+      function filterFile(filter) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector("tr").querySelector("td").textContent.toLowerCase().includes(filter.toLowerCase());
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+      }
+
+      function filterText(text) {
+        filter = text.toLowerCase();
+        var elements = document.querySelectorAll(".issue");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = false;
+          var fields = elements[i].querySelectorAll("td");
+          for (var n = 0, num = fields.length; n < num; n++) {
+            if (fields[n].textContent.toLowerCase().includes(filter)) {
+              visible = true;
+              break;
+            }
+          }
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+
+        updateFileRows();
+      }
+
+      function updateFileRows(element) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector(".issue:not(.id-filtered):not(.severity-filtered):not(.tool-filtered):not(.text-filtered)");
+          elements[i].classList.toggle("file-filtered", !visible);
+        }
+      }
+
+      window.addEventListener("load", initExpandables);
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+    <div id="header" class="header">
+      <h1>Cppcheck report - mate-desktop: Statistics</h1>
+
+    </div>
+
+    <div id="menu_index">
+     <p><a href="index.html">Back to summary</a> </p>
+
+    </div>
+    <div id="content_index">
+<p><span class="statHeader">Top 10 files for error severity, total findings: 10</span><br>
+&#160;&#160;&#160;1&#160;<a href="29.html">  libmate-desktop/mate-rr.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="28.html">  libmate-desktop/mate-rr-output-info.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="23.html">  libmate-desktop/mate-rr-config.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="19.html">  libmate-desktop/mate-image-menu-item.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="18.html">  libmate-desktop/mate-hsv.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="14.html">  libmate-desktop/mate-desktop-thumbnail.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="9.html">  libmate-desktop/mate-colorseldialog.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="5.html">  libmate-desktop/mate-colorsel.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="4.html">  libmate-desktop/mate-bg.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="2.html">  libmate-desktop/mate-bg-crossfade.c</a><br>
+</p>
+<p><span class="statHeader">Top 10 files for portability severity, total findings: 23</span><br>
+&#160;&#160;&#160;23&#160;<a href="13.html">  libmate-desktop/mate-desktop-item.c</a><br>
+</p>
+<p><span class="statHeader">Top 10 files for style severity, total findings: 17</span><br>
+&#160;&#160;&#160;7&#160;<a href="13.html">  libmate-desktop/mate-desktop-item.c</a><br>
+&#160;&#160;&#160;3&#160;<a href="21.html">  libmate-desktop/mate-languages.c</a><br>
+&#160;&#160;&#160;2&#160;<a href="27.html">  libmate-desktop/mate-rr-labeler.c</a><br>
+&#160;&#160;&#160;2&#160;<a href="16.html">  libmate-desktop/mate-desktop-utils.c</a><br>
+&#160;&#160;&#160;2&#160;<a href="0.html">  libmate-desktop/display-name.c</a><br>
+&#160;&#160;&#160;1&#160;<a href="31.html">  libmate-desktop/test-ditem.c</a><br>
+</p>
+<p><span class="statHeader">Top 10 files for information severity, total findings: 172</span><br>
+&#160;&#160;&#160;20&#160;<a href="13.html">  libmate-desktop/mate-desktop-item.c</a><br>
+&#160;&#160;&#160;14&#160;<a href="21.html">  libmate-desktop/mate-languages.c</a><br>
+&#160;&#160;&#160;13&#160;<a href="4.html">  libmate-desktop/mate-bg.c</a><br>
+&#160;&#160;&#160;12&#160;<a href="2.html">  libmate-desktop/mate-bg-crossfade.c</a><br>
+&#160;&#160;&#160;8&#160;&#160;<a href="29.html">  libmate-desktop/mate-rr.c</a><br>
+&#160;&#160;&#160;8&#160;&#160;<a href="27.html">  libmate-desktop/mate-rr-labeler.c</a><br>
+&#160;&#160;&#160;8&#160;&#160;<a href="23.html">  libmate-desktop/mate-rr-config.c</a><br>
+&#160;&#160;&#160;7&#160;&#160;<a href="16.html">  libmate-desktop/mate-desktop-utils.c</a><br>
+&#160;&#160;&#160;7&#160;&#160;<a href="5.html">  libmate-desktop/mate-colorsel.c</a><br>
+&#160;&#160;&#160;7&#160;&#160;<a href="0.html">  libmate-desktop/display-name.c</a><br>
+</p>
+
+    </div>
+    <div id="footer" class="footer">
+      <p>
+        Created by Cppcheck 2.13.0 (<a href="https://cppcheck.sourceforge.io">Sourceforge</a>, <a href="irc://irc.freenode.net/cppcheck">IRC</a>)
+      </p>
+    </div>
+    </div>
+  </body>
+</html>

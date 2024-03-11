@@ -1,0 +1,537 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cppcheck - HTML report - mate-desktop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #ffffff; }
+.highlight .c { color: #888888 } /* Comment */
+.highlight .err { color: #FF0000; background-color: #FFAAAA } /* Error */
+.highlight .k { color: #008800; font-weight: bold } /* Keyword */
+.highlight .o { color: #333333 } /* Operator */
+.highlight .ch { color: #888888 } /* Comment.Hashbang */
+.highlight .cm { color: #888888 } /* Comment.Multiline */
+.highlight .cp { color: #557799 } /* Comment.Preproc */
+.highlight .cpf { color: #888888 } /* Comment.PreprocFile */
+.highlight .c1 { color: #888888 } /* Comment.Single */
+.highlight .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008800; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008800; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008800; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #003388; font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { color: #008800; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #333399; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #6600EE; font-weight: bold } /* Literal.Number */
+.highlight .s { background-color: #fff0f0 } /* Literal.String */
+.highlight .na { color: #0000CC } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #BB0066; font-weight: bold } /* Name.Class */
+.highlight .no { color: #003366; font-weight: bold } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #880000; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #FF0000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0066BB; font-weight: bold } /* Name.Function */
+.highlight .nl { color: #997700; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #007700 } /* Name.Tag */
+.highlight .nv { color: #996633 } /* Name.Variable */
+.highlight .ow { color: #000000; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #6600EE; font-weight: bold } /* Literal.Number.Bin */
+.highlight .mf { color: #6600EE; font-weight: bold } /* Literal.Number.Float */
+.highlight .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
+.highlight .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
+.highlight .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.highlight .sa { background-color: #fff0f0 } /* Literal.String.Affix */
+.highlight .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
+.highlight .sc { color: #0044DD } /* Literal.String.Char */
+.highlight .dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
+.highlight .sd { color: #DD4422 } /* Literal.String.Doc */
+.highlight .s2 { background-color: #fff0f0 } /* Literal.String.Double */
+.highlight .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
+.highlight .sh { background-color: #fff0f0 } /* Literal.String.Heredoc */
+.highlight .si { background-color: #eeeeee } /* Literal.String.Interpol */
+.highlight .sx { color: #DD2200; background-color: #fff0f0 } /* Literal.String.Other */
+.highlight .sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */
+.highlight .s1 { background-color: #fff0f0 } /* Literal.String.Single */
+.highlight .ss { color: #AA6600 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
+.highlight .vc { color: #336699 } /* Name.Variable.Class */
+.highlight .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
+.highlight .vi { color: #3333BB } /* Name.Variable.Instance */
+.highlight .vm { color: #996633 } /* Name.Variable.Magic */
+.highlight .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
+    </style>
+    <script>
+      function getStyle(el, styleProp) {
+        var y;
+
+        if (el.currentStyle) {
+          y = el.currentStyle[styleProp];
+        } else if (window.getComputedStyle) {
+          y = document.defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+        }
+
+        return y;
+      }
+
+      function toggle() {
+        var el = this.expandable_content;
+        var mark = this.expandable_marker;
+
+        if (el.style.display === "block") {
+          el.style.display = "none";
+          mark.textContent = "[+]";
+        } else {
+          el.style.display = "block";
+          mark.textContent = "[-]";
+        }
+      }
+
+      function initExpandables() {
+        var elements = document.querySelectorAll(".expandable");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var el = elements[i];
+          var clickable = el.querySelector("span");
+          var marker = clickable.querySelector(".marker");
+          var content = el.querySelector(".content");
+          var width = clickable.clientWidth - parseInt(getStyle(content, "padding-left")) - parseInt(getStyle(content, "padding-right"));
+          content.style.width = width + "px";
+          clickable.expandable_content = content;
+          clickable.expandable_marker = marker;
+          clickable.addEventListener("click", toggle);
+        }
+      }
+
+      function toggleDisplay(cb) {
+        var elements = document.querySelectorAll("." + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("id-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleSeverity(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+        var elements = document.querySelectorAll(".sev_" + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("severity-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleTool(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+
+        var elements;
+        if (cb.id == "clang-tidy")
+            elements = document.querySelectorAll("[class^=clang-tidy-]");
+        else
+            elements = document.querySelectorAll(".issue:not([class^=clang-tidy-])");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("tool-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleAll() {
+        var elements = document.querySelectorAll(".idToggle");
+
+        // starting from 1 since 0 is the "toggle all" input
+        for (var i = 1, len = elements.length; i < len; i++) {
+          var changed = elements[i].checked != elements[0].checked;
+          if (changed) {
+            elements[i].checked = elements[0].checked;
+            toggleDisplay(elements[i]);
+          }
+        }
+      }
+
+      function filterFile(filter) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector("tr").querySelector("td").textContent.toLowerCase().includes(filter.toLowerCase());
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+      }
+
+      function filterText(text) {
+        filter = text.toLowerCase();
+        var elements = document.querySelectorAll(".issue");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = false;
+          var fields = elements[i].querySelectorAll("td");
+          for (var n = 0, num = fields.length; n < num; n++) {
+            if (fields[n].textContent.toLowerCase().includes(filter)) {
+              visible = true;
+              break;
+            }
+          }
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+
+        updateFileRows();
+      }
+
+      function updateFileRows(element) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector(".issue:not(.id-filtered):not(.severity-filtered):not(.tool-filtered):not(.text-filtered)");
+          elements[i].classList.toggle("file-filtered", !visible);
+        }
+      }
+
+      window.addEventListener("load", initExpandables);
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+    <div id="header" class="header">
+      <h1>Cppcheck report - mate-desktop: libmate-desktop/mate-rr-config.h</h1>
+
+    </div>
+
+    <div id="menu">
+     <p><a href="index.html">Defects:</a> mate-rr-config.h</p>
+<a href="25.html#line-34"> missingIncludeSystem 34</a><a href="25.html#line-35"> missingIncludeSystem 35</a>
+    </div>
+    <div id="content">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/* mate-rr-config.h</span>
+<a id="line-2" name="line-2"></a><span class="cm"> * -*- c-basic-offset: 4 -*-</span>
+<a id="line-3" name="line-3"></a><span class="cm"> *</span>
+<a id="line-4" name="line-4"></a><span class="cm"> * Copyright 2007, 2008, Red Hat, Inc.</span>
+<a id="line-5" name="line-5"></a><span class="cm"> * Copyright 2010 Giovanni Campagna</span>
+<a id="line-6" name="line-6"></a><span class="cm"> *</span>
+<a id="line-7" name="line-7"></a><span class="cm"> * This file is part of the Mate Library.</span>
+<a id="line-8" name="line-8"></a><span class="cm"> *</span>
+<a id="line-9" name="line-9"></a><span class="cm"> * The Mate Library is free software; you can redistribute it and/or</span>
+<a id="line-10" name="line-10"></a><span class="cm"> * modify it under the terms of the GNU Library General Public License as</span>
+<a id="line-11" name="line-11"></a><span class="cm"> * published by the Free Software Foundation; either version 2 of the</span>
+<a id="line-12" name="line-12"></a><span class="cm"> * License, or (at your option) any later version.</span>
+<a id="line-13" name="line-13"></a><span class="cm"> *</span>
+<a id="line-14" name="line-14"></a><span class="cm"> * The Mate Library is distributed in the hope that it will be useful,</span>
+<a id="line-15" name="line-15"></a><span class="cm"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a id="line-16" name="line-16"></a><span class="cm"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span>
+<a id="line-17" name="line-17"></a><span class="cm"> * Library General Public License for more details.</span>
+<a id="line-18" name="line-18"></a><span class="cm"> *</span>
+<a id="line-19" name="line-19"></a><span class="cm"> * You should have received a copy of the GNU Library General Public</span>
+<a id="line-20" name="line-20"></a><span class="cm"> * License along with the Mate Library; see the file COPYING.LIB.  If not,</span>
+<a id="line-21" name="line-21"></a><span class="cm"> * write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,</span>
+<a id="line-22" name="line-22"></a><span class="cm"> * Boston, MA  02110-1301, USA.</span>
+<a id="line-23" name="line-23"></a><span class="cm"> *</span>
+<a id="line-24" name="line-24"></a><span class="cm"> * Author: Soren Sandmann &lt;sandmann@redhat.com&gt;</span>
+<a id="line-25" name="line-25"></a><span class="cm"> */</span>
+<a id="line-26" name="line-26"></a><span class="cp">#ifndef MATE_RR_CONFIG_H</span>
+<a id="line-27" name="line-27"></a><span class="cp">#define MATE_RR_CONFIG_H</span>
+<a id="line-28" name="line-28"></a>
+<a id="line-29" name="line-29"></a><span class="cp">#ifndef MATE_DESKTOP_USE_UNSTABLE_API</span>
+<a id="line-30" name="line-30"></a><span class="cp">#error   mate-rr-config.h is unstable API. You must define MATE_DESKTOP_USE_UNSTABLE_API before including mate-rr-config.h</span>
+<a id="line-31" name="line-31"></a><span class="cp">#endif</span>
+<a id="line-32" name="line-32"></a>
+<a id="line-33" name="line-33"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mate-rr.h&quot;</span>
+<a id="line-34" name="line-34"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;glib.h&gt;</span><span class="error2">&lt;--- Include file: <glib.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.</span>
+</span><a id="line-35" name="line-35"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;glib-object.h&gt;</span><span class="error2">&lt;--- Include file: <glib-object.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.</span>
+</span><a id="line-36" name="line-36"></a>
+<a id="line-37" name="line-37"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">MateRROutputInfoPrivate</span><span class="w"> </span><span class="n">MateRROutputInfoPrivate</span><span class="p">;</span>
+<a id="line-38" name="line-38"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">MateRRConfigPrivate</span><span class="w"> </span><span class="n">MateRRConfigPrivate</span><span class="p">;</span>
+<a id="line-39" name="line-39"></a>
+<a id="line-40" name="line-40"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
+<a id="line-41" name="line-41"></a><span class="p">{</span>
+<a id="line-42" name="line-42"></a><span class="w">    </span><span class="n">GObject</span><span class="w"> </span><span class="n">parent</span><span class="p">;</span>
+<a id="line-43" name="line-43"></a>
+<a id="line-44" name="line-44"></a><span class="w">    </span><span class="cm">/*&lt; private &gt;*/</span>
+<a id="line-45" name="line-45"></a><span class="w">    </span><span class="n">MateRROutputInfoPrivate</span><span class="w"> </span><span class="o">*</span><span class="n">priv</span><span class="p">;</span>
+<a id="line-46" name="line-46"></a><span class="p">}</span><span class="w"> </span><span class="n">MateRROutputInfo</span><span class="p">;</span>
+<a id="line-47" name="line-47"></a>
+<a id="line-48" name="line-48"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
+<a id="line-49" name="line-49"></a><span class="p">{</span>
+<a id="line-50" name="line-50"></a><span class="w">    </span><span class="n">GObjectClass</span><span class="w"> </span><span class="n">parent_class</span><span class="p">;</span>
+<a id="line-51" name="line-51"></a><span class="p">}</span><span class="w"> </span><span class="n">MateRROutputInfoClass</span><span class="p">;</span>
+<a id="line-52" name="line-52"></a>
+<a id="line-53" name="line-53"></a><span class="cp">#define MATE_TYPE_RR_OUTPUT_INFO                  (mate_rr_output_info_get_type())</span>
+<a id="line-54" name="line-54"></a><span class="cp">#define MATE_RR_OUTPUT_INFO(obj)                  (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_RR_OUTPUT_INFO, MateRROutputInfo))</span>
+<a id="line-55" name="line-55"></a><span class="cp">#define MATE_IS_RR_OUTPUT_INFO(obj)               (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_RR_OUTPUT_INFO))</span>
+<a id="line-56" name="line-56"></a><span class="cp">#define MATE_RR_OUTPUT_INFO_CLASS(klass)          (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_RR_OUTPUT_INFO, MateRROutputInfoClass))</span>
+<a id="line-57" name="line-57"></a><span class="cp">#define MATE_IS_RR_OUTPUT_INFO_CLASS(klass)       (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_RR_OUTPUT_INFO))</span>
+<a id="line-58" name="line-58"></a><span class="cp">#define MATE_RR_OUTPUT_INFO_GET_CLASS(obj)        (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_RR_OUTPUT_INFO, MateRROutputInfoClass))</span>
+<a id="line-59" name="line-59"></a>
+<a id="line-60" name="line-60"></a><span class="n">GType</span><span class="w"> </span><span class="nf">mate_rr_output_info_get_type</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="line-61" name="line-61"></a>
+<a id="line-62" name="line-62"></a><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">mate_rr_output_info_get_name</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span>
+<a id="line-63" name="line-63"></a>
+<a id="line-64" name="line-64"></a><span class="n">gboolean</span><span class="w"> </span><span class="nf">mate_rr_output_info_is_active</span><span class="w">  </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span>
+<a id="line-65" name="line-65"></a><span class="kt">void</span><span class="w">     </span><span class="nf">mate_rr_output_info_set_active</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">gboolean</span><span class="w"> </span><span class="n">active</span><span class="p">);</span>
+<a id="line-66" name="line-66"></a>
+<a id="line-67" name="line-67"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mate_rr_output_info_get_geometry</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">height</span><span class="p">);</span>
+<a id="line-68" name="line-68"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mate_rr_output_info_set_geometry</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span><span class="n">height</span><span class="p">);</span>
+<a id="line-69" name="line-69"></a>
+<a id="line-70" name="line-70"></a><span class="kt">int</span><span class="w">  </span><span class="nf">mate_rr_output_info_get_refresh_rate</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span>
+<a id="line-71" name="line-71"></a><span class="kt">void</span><span class="w"> </span><span class="nf">mate_rr_output_info_set_refresh_rate</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">rate</span><span class="p">);</span>
+<a id="line-72" name="line-72"></a>
+<a id="line-73" name="line-73"></a><span class="n">MateRRRotation</span><span class="w"> </span><span class="nf">mate_rr_output_info_get_rotation</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span>
+<a id="line-74" name="line-74"></a><span class="kt">void</span><span class="w">            </span><span class="nf">mate_rr_output_info_set_rotation</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">MateRRRotation</span><span class="w"> </span><span class="n">rotation</span><span class="p">);</span>
+<a id="line-75" name="line-75"></a>
+<a id="line-76" name="line-76"></a><span class="n">gboolean</span><span class="w"> </span><span class="nf">mate_rr_output_info_is_connected</span><span class="w">     </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span>
+<a id="line-77" name="line-77"></a><span class="kt">void</span><span class="w">     </span><span class="nf">mate_rr_output_info_get_vendor</span><span class="w">       </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">vendor</span><span class="p">);</span>
+<a id="line-78" name="line-78"></a><span class="n">guint</span><span class="w">    </span><span class="nf">mate_rr_output_info_get_product</span><span class="w">      </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span>
+<a id="line-79" name="line-79"></a><span class="n">guint</span><span class="w">    </span><span class="nf">mate_rr_output_info_get_serial</span><span class="w">       </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span>
+<a id="line-80" name="line-80"></a><span class="kt">double</span><span class="w">   </span><span class="nf">mate_rr_output_info_get_aspect_ratio</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span>
+<a id="line-81" name="line-81"></a><span class="kt">char</span><span class="w">    </span><span class="o">*</span><span class="nf">mate_rr_output_info_get_display_name</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span>
+<a id="line-82" name="line-82"></a>
+<a id="line-83" name="line-83"></a><span class="n">gboolean</span><span class="w"> </span><span class="nf">mate_rr_output_info_get_primary</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span>
+<a id="line-84" name="line-84"></a><span class="kt">void</span><span class="w">     </span><span class="nf">mate_rr_output_info_set_primary</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">gboolean</span><span class="w"> </span><span class="n">primary</span><span class="p">);</span>
+<a id="line-85" name="line-85"></a>
+<a id="line-86" name="line-86"></a><span class="kt">int</span><span class="w"> </span><span class="nf">mate_rr_output_info_get_preferred_width</span><span class="w">  </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span>
+<a id="line-87" name="line-87"></a><span class="kt">int</span><span class="w"> </span><span class="nf">mate_rr_output_info_get_preferred_height</span><span class="w"> </span><span class="p">(</span><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">);</span>
+<a id="line-88" name="line-88"></a>
+<a id="line-89" name="line-89"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
+<a id="line-90" name="line-90"></a><span class="p">{</span>
+<a id="line-91" name="line-91"></a><span class="w">    </span><span class="n">GObject</span><span class="w"> </span><span class="n">parent</span><span class="p">;</span>
+<a id="line-92" name="line-92"></a>
+<a id="line-93" name="line-93"></a><span class="w">    </span><span class="cm">/*&lt; private &gt;*/</span>
+<a id="line-94" name="line-94"></a><span class="w">    </span><span class="n">MateRRConfigPrivate</span><span class="w"> </span><span class="o">*</span><span class="n">priv</span><span class="p">;</span>
+<a id="line-95" name="line-95"></a><span class="p">}</span><span class="w"> </span><span class="n">MateRRConfig</span><span class="p">;</span>
+<a id="line-96" name="line-96"></a>
+<a id="line-97" name="line-97"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
+<a id="line-98" name="line-98"></a><span class="p">{</span>
+<a id="line-99" name="line-99"></a><span class="w">    </span><span class="n">GObjectClass</span><span class="w"> </span><span class="n">parent_class</span><span class="p">;</span>
+<a id="line-100" name="line-100"></a><span class="p">}</span><span class="w"> </span><span class="n">MateRRConfigClass</span><span class="p">;</span>
+<a id="line-101" name="line-101"></a>
+<a id="line-102" name="line-102"></a><span class="cp">#define MATE_TYPE_RR_CONFIG                  (mate_rr_config_get_type())</span>
+<a id="line-103" name="line-103"></a><span class="cp">#define MATE_RR_CONFIG(obj)                  (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_RR_CONFIG, MateRRConfig))</span>
+<a id="line-104" name="line-104"></a><span class="cp">#define MATE_IS_RR_CONFIG(obj)               (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_RR_CONFIG))</span>
+<a id="line-105" name="line-105"></a><span class="cp">#define MATE_RR_CONFIG_CLASS(klass)          (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_RR_CONFIG, MateRRConfigClass))</span>
+<a id="line-106" name="line-106"></a><span class="cp">#define MATE_IS_RR_CONFIG_CLASS(klass)       (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_RR_CONFIG))</span>
+<a id="line-107" name="line-107"></a><span class="cp">#define MATE_RR_CONFIG_GET_CLASS(obj)        (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_RR_CONFIG, MateRRConfigClass))</span>
+<a id="line-108" name="line-108"></a>
+<a id="line-109" name="line-109"></a><span class="n">GType</span><span class="w">               </span><span class="nf">mate_rr_config_get_type</span><span class="w">     </span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="line-110" name="line-110"></a>
+<a id="line-111" name="line-111"></a><span class="n">MateRRConfig</span><span class="w">      </span><span class="o">*</span><span class="nf">mate_rr_config_new_current</span><span class="w">  </span><span class="p">(</span><span class="n">MateRRScreen</span><span class="w">  </span><span class="o">*</span><span class="n">screen</span><span class="p">,</span>
+<a id="line-112" name="line-112"></a><span class="w">						  </span><span class="n">GError</span><span class="w">        </span><span class="o">**</span><span class="n">error</span><span class="p">);</span>
+<a id="line-113" name="line-113"></a><span class="n">MateRRConfig</span><span class="w">      </span><span class="o">*</span><span class="nf">mate_rr_config_new_stored</span><span class="w">   </span><span class="p">(</span><span class="n">MateRRScreen</span><span class="w">  </span><span class="o">*</span><span class="n">screen</span><span class="p">,</span>
+<a id="line-114" name="line-114"></a><span class="w">						  </span><span class="n">GError</span><span class="w">        </span><span class="o">**</span><span class="n">error</span><span class="p">);</span>
+<a id="line-115" name="line-115"></a><span class="n">gboolean</span><span class="w">                </span><span class="nf">mate_rr_config_load_current</span><span class="w"> </span><span class="p">(</span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">self</span><span class="p">,</span>
+<a id="line-116" name="line-116"></a><span class="w">						      </span><span class="n">GError</span><span class="w">        </span><span class="o">**</span><span class="n">error</span><span class="p">);</span>
+<a id="line-117" name="line-117"></a><span class="n">gboolean</span><span class="w">                </span><span class="nf">mate_rr_config_load_filename</span><span class="w"> </span><span class="p">(</span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">self</span><span class="p">,</span>
+<a id="line-118" name="line-118"></a><span class="w">						       </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="w">    </span><span class="o">*</span><span class="n">filename</span><span class="p">,</span>
+<a id="line-119" name="line-119"></a><span class="w">						       </span><span class="n">GError</span><span class="w">        </span><span class="o">**</span><span class="n">error</span><span class="p">);</span>
+<a id="line-120" name="line-120"></a><span class="n">gboolean</span><span class="w">            </span><span class="nf">mate_rr_config_match</span><span class="w">        </span><span class="p">(</span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">config1</span><span class="p">,</span>
+<a id="line-121" name="line-121"></a><span class="w">						  </span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">config2</span><span class="p">);</span>
+<a id="line-122" name="line-122"></a><span class="n">gboolean</span><span class="w">            </span><span class="nf">mate_rr_config_equal</span><span class="w">	 </span><span class="p">(</span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">config1</span><span class="p">,</span>
+<a id="line-123" name="line-123"></a><span class="w">						  </span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">config2</span><span class="p">);</span>
+<a id="line-124" name="line-124"></a><span class="n">gboolean</span><span class="w">            </span><span class="nf">mate_rr_config_save</span><span class="w">         </span><span class="p">(</span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">configuration</span><span class="p">,</span>
+<a id="line-125" name="line-125"></a><span class="w">						  </span><span class="n">GError</span><span class="w">        </span><span class="o">**</span><span class="n">error</span><span class="p">);</span>
+<a id="line-126" name="line-126"></a><span class="kt">void</span><span class="w">                </span><span class="nf">mate_rr_config_sanitize</span><span class="w">     </span><span class="p">(</span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">configuration</span><span class="p">);</span>
+<a id="line-127" name="line-127"></a><span class="n">gboolean</span><span class="w">            </span><span class="nf">mate_rr_config_ensure_primary</span><span class="w"> </span><span class="p">(</span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">configuration</span><span class="p">);</span>
+<a id="line-128" name="line-128"></a>
+<a id="line-129" name="line-129"></a><span class="n">gboolean</span><span class="w">	    </span><span class="nf">mate_rr_config_apply_with_time</span><span class="w"> </span><span class="p">(</span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">configuration</span><span class="p">,</span>
+<a id="line-130" name="line-130"></a><span class="w">						     </span><span class="n">MateRRScreen</span><span class="w">  </span><span class="o">*</span><span class="n">screen</span><span class="p">,</span>
+<a id="line-131" name="line-131"></a><span class="w">						     </span><span class="n">guint32</span><span class="w">         </span><span class="n">timestamp</span><span class="p">,</span>
+<a id="line-132" name="line-132"></a><span class="w">						     </span><span class="n">GError</span><span class="w">        </span><span class="o">**</span><span class="n">error</span><span class="p">);</span>
+<a id="line-133" name="line-133"></a>
+<a id="line-134" name="line-134"></a><span class="n">gboolean</span><span class="w">            </span><span class="nf">mate_rr_config_apply_from_filename_with_time</span><span class="w"> </span><span class="p">(</span><span class="n">MateRRScreen</span><span class="w">  </span><span class="o">*</span><span class="n">screen</span><span class="p">,</span>
+<a id="line-135" name="line-135"></a><span class="w">								   </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w">     </span><span class="o">*</span><span class="n">filename</span><span class="p">,</span>
+<a id="line-136" name="line-136"></a><span class="w">								   </span><span class="n">guint32</span><span class="w">         </span><span class="n">timestamp</span><span class="p">,</span>
+<a id="line-137" name="line-137"></a><span class="w">								   </span><span class="n">GError</span><span class="w">        </span><span class="o">**</span><span class="n">error</span><span class="p">);</span>
+<a id="line-138" name="line-138"></a>
+<a id="line-139" name="line-139"></a><span class="n">gboolean</span><span class="w">            </span><span class="nf">mate_rr_config_applicable</span><span class="w">   </span><span class="p">(</span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">configuration</span><span class="p">,</span>
+<a id="line-140" name="line-140"></a><span class="w">						  </span><span class="n">MateRRScreen</span><span class="w">  </span><span class="o">*</span><span class="n">screen</span><span class="p">,</span>
+<a id="line-141" name="line-141"></a><span class="w">						  </span><span class="n">GError</span><span class="w">        </span><span class="o">**</span><span class="n">error</span><span class="p">);</span>
+<a id="line-142" name="line-142"></a>
+<a id="line-143" name="line-143"></a><span class="n">gboolean</span><span class="w">            </span><span class="nf">mate_rr_config_get_clone</span><span class="w">    </span><span class="p">(</span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">configuration</span><span class="p">);</span>
+<a id="line-144" name="line-144"></a><span class="kt">void</span><span class="w">                </span><span class="nf">mate_rr_config_set_clone</span><span class="w">    </span><span class="p">(</span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">configuration</span><span class="p">,</span><span class="w"> </span><span class="n">gboolean</span><span class="w"> </span><span class="n">clone</span><span class="p">);</span>
+<a id="line-145" name="line-145"></a><span class="n">MateRROutputInfo</span><span class="w"> </span><span class="o">**</span><span class="nf">mate_rr_config_get_outputs</span><span class="w">  </span><span class="p">(</span><span class="n">MateRRConfig</span><span class="w">  </span><span class="o">*</span><span class="n">configuration</span><span class="p">);</span>
+<a id="line-146" name="line-146"></a>
+<a id="line-147" name="line-147"></a><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">mate_rr_config_get_backup_filename</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="line-148" name="line-148"></a><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">mate_rr_config_get_intended_filename</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="line-149" name="line-149"></a>
+<a id="line-150" name="line-150"></a><span class="cp">#endif</span>
+</pre></div></td></tr></table></div>
+
+    </div>
+    <div id="footer" class="footer">
+      <p>
+        Created by Cppcheck 2.13.0 (<a href="https://cppcheck.sourceforge.io">Sourceforge</a>, <a href="irc://irc.freenode.net/cppcheck">IRC</a>)
+      </p>
+    </div>
+    </div>
+  </body>
+</html>

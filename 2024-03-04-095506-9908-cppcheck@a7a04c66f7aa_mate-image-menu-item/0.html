@@ -1,0 +1,863 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cppcheck - HTML report - mate-desktop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #ffffff; }
+.highlight .c { color: #888888 } /* Comment */
+.highlight .err { color: #FF0000; background-color: #FFAAAA } /* Error */
+.highlight .k { color: #008800; font-weight: bold } /* Keyword */
+.highlight .o { color: #333333 } /* Operator */
+.highlight .ch { color: #888888 } /* Comment.Hashbang */
+.highlight .cm { color: #888888 } /* Comment.Multiline */
+.highlight .cp { color: #557799 } /* Comment.Preproc */
+.highlight .cpf { color: #888888 } /* Comment.PreprocFile */
+.highlight .c1 { color: #888888 } /* Comment.Single */
+.highlight .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008800; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008800; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008800; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #003388; font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { color: #008800; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #333399; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #6600EE; font-weight: bold } /* Literal.Number */
+.highlight .s { background-color: #fff0f0 } /* Literal.String */
+.highlight .na { color: #0000CC } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #BB0066; font-weight: bold } /* Name.Class */
+.highlight .no { color: #003366; font-weight: bold } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #880000; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #FF0000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0066BB; font-weight: bold } /* Name.Function */
+.highlight .nl { color: #997700; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #007700 } /* Name.Tag */
+.highlight .nv { color: #996633 } /* Name.Variable */
+.highlight .ow { color: #000000; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #6600EE; font-weight: bold } /* Literal.Number.Bin */
+.highlight .mf { color: #6600EE; font-weight: bold } /* Literal.Number.Float */
+.highlight .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
+.highlight .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
+.highlight .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.highlight .sa { background-color: #fff0f0 } /* Literal.String.Affix */
+.highlight .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
+.highlight .sc { color: #0044DD } /* Literal.String.Char */
+.highlight .dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
+.highlight .sd { color: #DD4422 } /* Literal.String.Doc */
+.highlight .s2 { background-color: #fff0f0 } /* Literal.String.Double */
+.highlight .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
+.highlight .sh { background-color: #fff0f0 } /* Literal.String.Heredoc */
+.highlight .si { background-color: #eeeeee } /* Literal.String.Interpol */
+.highlight .sx { color: #DD2200; background-color: #fff0f0 } /* Literal.String.Other */
+.highlight .sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */
+.highlight .s1 { background-color: #fff0f0 } /* Literal.String.Single */
+.highlight .ss { color: #AA6600 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
+.highlight .vc { color: #336699 } /* Name.Variable.Class */
+.highlight .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
+.highlight .vi { color: #3333BB } /* Name.Variable.Instance */
+.highlight .vm { color: #996633 } /* Name.Variable.Magic */
+.highlight .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
+    </style>
+    <script>
+      function getStyle(el, styleProp) {
+        var y;
+
+        if (el.currentStyle) {
+          y = el.currentStyle[styleProp];
+        } else if (window.getComputedStyle) {
+          y = document.defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+        }
+
+        return y;
+      }
+
+      function toggle() {
+        var el = this.expandable_content;
+        var mark = this.expandable_marker;
+
+        if (el.style.display === "block") {
+          el.style.display = "none";
+          mark.textContent = "[+]";
+        } else {
+          el.style.display = "block";
+          mark.textContent = "[-]";
+        }
+      }
+
+      function initExpandables() {
+        var elements = document.querySelectorAll(".expandable");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var el = elements[i];
+          var clickable = el.querySelector("span");
+          var marker = clickable.querySelector(".marker");
+          var content = el.querySelector(".content");
+          var width = clickable.clientWidth - parseInt(getStyle(content, "padding-left")) - parseInt(getStyle(content, "padding-right"));
+          content.style.width = width + "px";
+          clickable.expandable_content = content;
+          clickable.expandable_marker = marker;
+          clickable.addEventListener("click", toggle);
+        }
+      }
+
+      function toggleDisplay(cb) {
+        var elements = document.querySelectorAll("." + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("id-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleSeverity(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+        var elements = document.querySelectorAll(".sev_" + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("severity-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleTool(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+
+        var elements;
+        if (cb.id == "clang-tidy")
+            elements = document.querySelectorAll("[class^=clang-tidy-]");
+        else
+            elements = document.querySelectorAll(".issue:not([class^=clang-tidy-])");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("tool-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleAll() {
+        var elements = document.querySelectorAll(".idToggle");
+
+        // starting from 1 since 0 is the "toggle all" input
+        for (var i = 1, len = elements.length; i < len; i++) {
+          var changed = elements[i].checked != elements[0].checked;
+          if (changed) {
+            elements[i].checked = elements[0].checked;
+            toggleDisplay(elements[i]);
+          }
+        }
+      }
+
+      function filterFile(filter) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector("tr").querySelector("td").textContent.toLowerCase().includes(filter.toLowerCase());
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+      }
+
+      function filterText(text) {
+        filter = text.toLowerCase();
+        var elements = document.querySelectorAll(".issue");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = false;
+          var fields = elements[i].querySelectorAll("td");
+          for (var n = 0, num = fields.length; n < num; n++) {
+            if (fields[n].textContent.toLowerCase().includes(filter)) {
+              visible = true;
+              break;
+            }
+          }
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+
+        updateFileRows();
+      }
+
+      function updateFileRows(element) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector(".issue:not(.id-filtered):not(.severity-filtered):not(.tool-filtered):not(.text-filtered)");
+          elements[i].classList.toggle("file-filtered", !visible);
+        }
+      }
+
+      window.addEventListener("load", initExpandables);
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+    <div id="header" class="header">
+      <h1>Cppcheck report - mate-desktop: libmate-desktop/display-name.c</h1>
+
+    </div>
+
+    <div id="menu">
+     <p><a href="index.html">Defects:</a> display-name.c</p>
+<a href="0.html#line-25"> missingIncludeSystem 25</a><a href="0.html#line-26"> missingIncludeSystem 26</a><a href="0.html#line-27"> missingIncludeSystem 27</a><a href="0.html#line-28"> missingIncludeSystem 28</a><a href="0.html#line-29"> missingIncludeSystem 29</a><a href="0.html#line-30"> missingIncludeSystem 30</a><a href="0.html#line-31"> missingIncludeSystem 31</a><a href="0.html#line-196"> variableScope 196</a><a href="0.html#line-196"> variableScope 196</a>
+    </div>
+    <div id="content">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/*</span>
+<a id="line-2" name="line-2"></a><span class="cm"> * Copyright 2007 Red Hat, Inc.</span>
+<a id="line-3" name="line-3"></a><span class="cm"> *</span>
+<a id="line-4" name="line-4"></a><span class="cm"> * Permission is hereby granted, free of charge, to any person obtaining a</span>
+<a id="line-5" name="line-5"></a><span class="cm"> * copy of this software and associated documentation files (the &quot;Software&quot;),</span>
+<a id="line-6" name="line-6"></a><span class="cm"> * to deal in the Software without restriction, including without limitation</span>
+<a id="line-7" name="line-7"></a><span class="cm"> * on the rights to use, copy, modify, merge, publish, distribute, sub</span>
+<a id="line-8" name="line-8"></a><span class="cm"> * license, and/or sell copies of the Software, and to permit persons to whom</span>
+<a id="line-9" name="line-9"></a><span class="cm"> * the Software is furnished to do so, subject to the following conditions:</span>
+<a id="line-10" name="line-10"></a><span class="cm"> *</span>
+<a id="line-11" name="line-11"></a><span class="cm"> * The above copyright notice and this permission notice (including the next</span>
+<a id="line-12" name="line-12"></a><span class="cm"> * paragraph) shall be included in all copies or substantial portions of the</span>
+<a id="line-13" name="line-13"></a><span class="cm"> * Software.</span>
+<a id="line-14" name="line-14"></a><span class="cm"> *</span>
+<a id="line-15" name="line-15"></a><span class="cm"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<a id="line-16" name="line-16"></a><span class="cm"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<a id="line-17" name="line-17"></a><span class="cm"> * FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.  IN NO EVENT SHALL</span>
+<a id="line-18" name="line-18"></a><span class="cm"> * THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER</span>
+<a id="line-19" name="line-19"></a><span class="cm"> * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN</span>
+<a id="line-20" name="line-20"></a><span class="cm"> * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span>
+<a id="line-21" name="line-21"></a><span class="cm"> */</span>
+<a id="line-22" name="line-22"></a>
+<a id="line-23" name="line-23"></a><span class="cm">/* Author: Soren Sandmann &lt;sandmann@redhat.com&gt; */</span>
+<a id="line-24" name="line-24"></a>
+<a id="line-25" name="line-25"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;config.h&gt;</span><span class="error2">&lt;--- Include file: <config.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.</span>
+</span><a id="line-26" name="line-26"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;glib/gi18n-lib.h&gt;</span><span class="error2">&lt;--- Include file: <glib/gi18n-lib.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.</span>
+</span><a id="line-27" name="line-27"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="error2">&lt;--- Include file: <stdlib.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.</span>
+</span><a id="line-28" name="line-28"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span><span class="error2">&lt;--- Include file: <math.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.</span>
+</span><a id="line-29" name="line-29"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="error2">&lt;--- Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.</span>
+</span><a id="line-30" name="line-30"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span><span class="error2">&lt;--- Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.</span>
+</span><a id="line-31" name="line-31"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;glib.h&gt;</span><span class="error2">&lt;--- Include file: <glib.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.</span>
+</span><a id="line-32" name="line-32"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;edid.h&quot;</span>
+<a id="line-33" name="line-33"></a>
+<a id="line-34" name="line-34"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Vendor</span><span class="w"> </span><span class="n">Vendor</span><span class="p">;</span>
+<a id="line-35" name="line-35"></a>
+<a id="line-36" name="line-36"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Vendor</span><span class="w"> </span><span class="p">{</span>
+<a id="line-37" name="line-37"></a><span class="w">	</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">vendor_id</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<a id="line-38" name="line-38"></a><span class="w">	</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">vendor_name</span><span class="p">[</span><span class="mi">28</span><span class="p">];</span>
+<a id="line-39" name="line-39"></a><span class="p">};</span>
+<a id="line-40" name="line-40"></a>
+<a id="line-41" name="line-41"></a><span class="cm">/* This list of vendor codes derived from lshw</span>
+<a id="line-42" name="line-42"></a><span class="cm"> *</span>
+<a id="line-43" name="line-43"></a><span class="cm"> * http://ezix.org/project/wiki/HardwareLiSter</span>
+<a id="line-44" name="line-44"></a><span class="cm"> *</span>
+<a id="line-45" name="line-45"></a><span class="cm"> * Note: we now prefer to use data coming from hwdata (and shipped with</span>
+<a id="line-46" name="line-46"></a><span class="cm"> * mate-desktop). See</span>
+<a id="line-47" name="line-47"></a><span class="cm"> * http://git.fedorahosted.org/git/?p=hwdata.git;a=blob_plain;f=pnp.ids;hb=HEAD</span>
+<a id="line-48" name="line-48"></a><span class="cm"> * All contributions to the list of vendors should go there.</span>
+<a id="line-49" name="line-49"></a><span class="cm"> */</span>
+<a id="line-50" name="line-50"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Vendor</span><span class="w"> </span><span class="n">vendors</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="line-51" name="line-51"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;AIC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;AG Neovo&quot;</span><span class="p">},</span>
+<a id="line-52" name="line-52"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ACR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Acer&quot;</span><span class="p">},</span>
+<a id="line-53" name="line-53"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;DEL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DELL&quot;</span><span class="p">},</span>
+<a id="line-54" name="line-54"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SAM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SAMSUNG&quot;</span><span class="p">},</span>
+<a id="line-55" name="line-55"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SNY&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SONY&quot;</span><span class="p">},</span>
+<a id="line-56" name="line-56"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SEC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Epson&quot;</span><span class="p">},</span>
+<a id="line-57" name="line-57"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;WAC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Wacom&quot;</span><span class="p">},</span>
+<a id="line-58" name="line-58"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;NEC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NEC&quot;</span><span class="p">},</span>
+<a id="line-59" name="line-59"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;CMO&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CMO&quot;</span><span class="p">},</span><span class="w">	</span><span class="cm">/* Chi Mei */</span>
+<a id="line-60" name="line-60"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;BNQ&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;BenQ&quot;</span><span class="p">},</span>
+<a id="line-61" name="line-61"></a>
+<a id="line-62" name="line-62"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ABP&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Advansys&quot;</span><span class="p">},</span>
+<a id="line-63" name="line-63"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ACC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Accton&quot;</span><span class="p">},</span>
+<a id="line-64" name="line-64"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ACE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Accton&quot;</span><span class="p">},</span>
+<a id="line-65" name="line-65"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ADP&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Adaptec&quot;</span><span class="p">},</span>
+<a id="line-66" name="line-66"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ADV&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;AMD&quot;</span><span class="p">},</span>
+<a id="line-67" name="line-67"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;AIR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;AIR&quot;</span><span class="p">},</span>
+<a id="line-68" name="line-68"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;AMI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;AMI&quot;</span><span class="p">},</span>
+<a id="line-69" name="line-69"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ASU&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ASUS&quot;</span><span class="p">},</span>
+<a id="line-70" name="line-70"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ATI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ATI&quot;</span><span class="p">},</span>
+<a id="line-71" name="line-71"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ATK&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Allied Telesyn&quot;</span><span class="p">},</span>
+<a id="line-72" name="line-72"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;AZT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Aztech&quot;</span><span class="p">},</span>
+<a id="line-73" name="line-73"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;BAN&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Banya&quot;</span><span class="p">},</span>
+<a id="line-74" name="line-74"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;BRI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Boca Research&quot;</span><span class="p">},</span>
+<a id="line-75" name="line-75"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;BUS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Buslogic&quot;</span><span class="p">},</span>
+<a id="line-76" name="line-76"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;CCI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Cache Computers Inc.&quot;</span><span class="p">},</span>
+<a id="line-77" name="line-77"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;CHA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Chase&quot;</span><span class="p">},</span>
+<a id="line-78" name="line-78"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;CMD&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CMD Technology, Inc.&quot;</span><span class="p">},</span>
+<a id="line-79" name="line-79"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;COG&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Cogent&quot;</span><span class="p">},</span>
+<a id="line-80" name="line-80"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;CPQ&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Compaq&quot;</span><span class="p">},</span>
+<a id="line-81" name="line-81"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;CRS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Crescendo&quot;</span><span class="p">},</span>
+<a id="line-82" name="line-82"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;CSC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Crystal&quot;</span><span class="p">},</span>
+<a id="line-83" name="line-83"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;CSI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CSI&quot;</span><span class="p">},</span>
+<a id="line-84" name="line-84"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;CTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Creative Labs&quot;</span><span class="p">},</span>
+<a id="line-85" name="line-85"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;DBI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Digi&quot;</span><span class="p">},</span>
+<a id="line-86" name="line-86"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;DEC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Digital Equipment&quot;</span><span class="p">},</span>
+<a id="line-87" name="line-87"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;DBK&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Databook&quot;</span><span class="p">},</span>
+<a id="line-88" name="line-88"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;EGL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Eagle Technology&quot;</span><span class="p">},</span>
+<a id="line-89" name="line-89"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ELS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ELSA&quot;</span><span class="p">},</span>
+<a id="line-90" name="line-90"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ESS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ESS&quot;</span><span class="p">},</span>
+<a id="line-91" name="line-91"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;FAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Farallon&quot;</span><span class="p">},</span>
+<a id="line-92" name="line-92"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;FDC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Future Domain&quot;</span><span class="p">},</span>
+<a id="line-93" name="line-93"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;HWP&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hewlett-Packard&quot;</span><span class="p">},</span>
+<a id="line-94" name="line-94"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;IBM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;IBM&quot;</span><span class="p">},</span>
+<a id="line-95" name="line-95"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;INT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Intel&quot;</span><span class="p">},</span>
+<a id="line-96" name="line-96"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ISA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Iomega&quot;</span><span class="p">},</span>
+<a id="line-97" name="line-97"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;LEN&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lenovo&quot;</span><span class="p">},</span>
+<a id="line-98" name="line-98"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;MDG&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Madge&quot;</span><span class="p">},</span>
+<a id="line-99" name="line-99"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;MDY&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Microdyne&quot;</span><span class="p">},</span>
+<a id="line-100" name="line-100"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;MET&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Metheus&quot;</span><span class="p">},</span>
+<a id="line-101" name="line-101"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;MIC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Micronics&quot;</span><span class="p">},</span>
+<a id="line-102" name="line-102"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;MLX&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mylex&quot;</span><span class="p">},</span>
+<a id="line-103" name="line-103"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;NVL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Novell&quot;</span><span class="p">},</span>
+<a id="line-104" name="line-104"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;OLC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Olicom&quot;</span><span class="p">},</span>
+<a id="line-105" name="line-105"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;PRO&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Proteon&quot;</span><span class="p">},</span>
+<a id="line-106" name="line-106"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;RII&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Racal&quot;</span><span class="p">},</span>
+<a id="line-107" name="line-107"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;RTL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Realtek&quot;</span><span class="p">},</span>
+<a id="line-108" name="line-108"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SCM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SCM&quot;</span><span class="p">},</span>
+<a id="line-109" name="line-109"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SKD&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SysKonnect&quot;</span><span class="p">},</span>
+<a id="line-110" name="line-110"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SGI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SGI&quot;</span><span class="p">},</span>
+<a id="line-111" name="line-111"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SMC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SMC&quot;</span><span class="p">},</span>
+<a id="line-112" name="line-112"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SNI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Siemens Nixdorf&quot;</span><span class="p">},</span>
+<a id="line-113" name="line-113"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;STL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Stallion Technologies&quot;</span><span class="p">},</span>
+<a id="line-114" name="line-114"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SUN&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Sun&quot;</span><span class="p">},</span>
+<a id="line-115" name="line-115"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SUP&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SupraExpress&quot;</span><span class="p">},</span>
+<a id="line-116" name="line-116"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SVE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;SVEC&quot;</span><span class="p">},</span>
+<a id="line-117" name="line-117"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;TCC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Thomas-Conrad&quot;</span><span class="p">},</span>
+<a id="line-118" name="line-118"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;TCI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tulip&quot;</span><span class="p">},</span>
+<a id="line-119" name="line-119"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;TCM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;3Com&quot;</span><span class="p">},</span>
+<a id="line-120" name="line-120"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;TCO&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Thomas-Conrad&quot;</span><span class="p">},</span>
+<a id="line-121" name="line-121"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;TEC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tecmar&quot;</span><span class="p">},</span>
+<a id="line-122" name="line-122"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;TRU&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Truevision&quot;</span><span class="p">},</span>
+<a id="line-123" name="line-123"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;TOS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Toshiba&quot;</span><span class="p">},</span>
+<a id="line-124" name="line-124"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;TYN&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tyan&quot;</span><span class="p">},</span>
+<a id="line-125" name="line-125"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;UBI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ungermann-Bass&quot;</span><span class="p">},</span>
+<a id="line-126" name="line-126"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;USC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;UltraStor&quot;</span><span class="p">},</span>
+<a id="line-127" name="line-127"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;VDM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vadem&quot;</span><span class="p">},</span>
+<a id="line-128" name="line-128"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;VMI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vermont&quot;</span><span class="p">},</span>
+<a id="line-129" name="line-129"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;WDC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Western Digital&quot;</span><span class="p">},</span>
+<a id="line-130" name="line-130"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ZDS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Zeos&quot;</span><span class="p">},</span>
+<a id="line-131" name="line-131"></a>
+<a id="line-132" name="line-132"></a><span class="w">	</span><span class="cm">/* From http://faydoc.tripod.com/structures/01/0136.htm */</span>
+<a id="line-133" name="line-133"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ACT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Targa&quot;</span><span class="p">},</span>
+<a id="line-134" name="line-134"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ADI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ADI&quot;</span><span class="p">},</span>
+<a id="line-135" name="line-135"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;AOC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;AOC Intl&quot;</span><span class="p">},</span>
+<a id="line-136" name="line-136"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;API&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Acer America&quot;</span><span class="p">},</span>
+<a id="line-137" name="line-137"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;APP&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Apple Computer&quot;</span><span class="p">},</span>
+<a id="line-138" name="line-138"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ART&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ArtMedia&quot;</span><span class="p">},</span>
+<a id="line-139" name="line-139"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;AST&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;AST Research&quot;</span><span class="p">},</span>
+<a id="line-140" name="line-140"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;CPL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Compal&quot;</span><span class="p">},</span>
+<a id="line-141" name="line-141"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;CTX&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Chuntex Electronic Co.&quot;</span><span class="p">},</span>
+<a id="line-142" name="line-142"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;DPC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Delta Electronics&quot;</span><span class="p">},</span>
+<a id="line-143" name="line-143"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;DWE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Daewoo&quot;</span><span class="p">},</span>
+<a id="line-144" name="line-144"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ECS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ELITEGROUP&quot;</span><span class="p">},</span>
+<a id="line-145" name="line-145"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;EIZ&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;EIZO&quot;</span><span class="p">},</span>
+<a id="line-146" name="line-146"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;FCM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Funai&quot;</span><span class="p">},</span>
+<a id="line-147" name="line-147"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;GSM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;LG Electronics&quot;</span><span class="p">},</span>
+<a id="line-148" name="line-148"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;GWY&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Gateway 2000&quot;</span><span class="p">},</span>
+<a id="line-149" name="line-149"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;HEI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hyundai&quot;</span><span class="p">},</span>
+<a id="line-150" name="line-150"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;HIT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hitachi&quot;</span><span class="p">},</span>
+<a id="line-151" name="line-151"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;HSL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hansol&quot;</span><span class="p">},</span>
+<a id="line-152" name="line-152"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;HTC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hitachi&quot;</span><span class="p">},</span>
+<a id="line-153" name="line-153"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ICL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Fujitsu ICL&quot;</span><span class="p">},</span>
+<a id="line-154" name="line-154"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;IVM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Idek Iiyama&quot;</span><span class="p">},</span>
+<a id="line-155" name="line-155"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;KFC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;KFC Computek&quot;</span><span class="p">},</span>
+<a id="line-156" name="line-156"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;LKM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ADLAS&quot;</span><span class="p">},</span>
+<a id="line-157" name="line-157"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;LNK&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;LINK Tech&quot;</span><span class="p">},</span>
+<a id="line-158" name="line-158"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;LTN&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lite-On&quot;</span><span class="p">},</span>
+<a id="line-159" name="line-159"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;MAG&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MAG InnoVision&quot;</span><span class="p">},</span>
+<a id="line-160" name="line-160"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;MAX&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Maxdata&quot;</span><span class="p">},</span>
+<a id="line-161" name="line-161"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;MEI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Panasonic&quot;</span><span class="p">},</span>
+<a id="line-162" name="line-162"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;MEL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mitsubishi&quot;</span><span class="p">},</span>
+<a id="line-163" name="line-163"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;MIR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;miro&quot;</span><span class="p">},</span>
+<a id="line-164" name="line-164"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;MTC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MITAC&quot;</span><span class="p">},</span>
+<a id="line-165" name="line-165"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;NAN&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NANAO&quot;</span><span class="p">},</span>
+<a id="line-166" name="line-166"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;NEC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;NEC Tech&quot;</span><span class="p">},</span>
+<a id="line-167" name="line-167"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;NOK&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Nokia&quot;</span><span class="p">},</span>
+<a id="line-168" name="line-168"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;OQI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;OPTIQUEST&quot;</span><span class="p">},</span>
+<a id="line-169" name="line-169"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;PBN&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Packard Bell&quot;</span><span class="p">},</span>
+<a id="line-170" name="line-170"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;PGS&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Princeton&quot;</span><span class="p">},</span>
+<a id="line-171" name="line-171"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;PHL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Philips&quot;</span><span class="p">},</span>
+<a id="line-172" name="line-172"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;REL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Relisys&quot;</span><span class="p">},</span>
+<a id="line-173" name="line-173"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SDI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Samtron&quot;</span><span class="p">},</span>
+<a id="line-174" name="line-174"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SMI&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Smile&quot;</span><span class="p">},</span>
+<a id="line-175" name="line-175"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SPT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Sceptre&quot;</span><span class="p">},</span>
+<a id="line-176" name="line-176"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;SRC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Shamrock Technology&quot;</span><span class="p">},</span>
+<a id="line-177" name="line-177"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;STP&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Sceptre&quot;</span><span class="p">},</span>
+<a id="line-178" name="line-178"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;TAT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tatung&quot;</span><span class="p">},</span>
+<a id="line-179" name="line-179"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;TRL&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Royal Information Company&quot;</span><span class="p">},</span>
+<a id="line-180" name="line-180"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;TSB&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Toshiba, Inc.&quot;</span><span class="p">},</span>
+<a id="line-181" name="line-181"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;UNM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Unisys&quot;</span><span class="p">},</span>
+<a id="line-182" name="line-182"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;VSC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ViewSonic&quot;</span><span class="p">},</span>
+<a id="line-183" name="line-183"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;WTC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Wen Tech&quot;</span><span class="p">},</span>
+<a id="line-184" name="line-184"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;ZCM&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Zenith Data Systems&quot;</span><span class="p">},</span>
+<a id="line-185" name="line-185"></a>
+<a id="line-186" name="line-186"></a><span class="w">	</span><span class="p">{</span><span class="s">&quot;???&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Unknown&quot;</span><span class="p">},</span>
+<a id="line-187" name="line-187"></a><span class="p">};</span>
+<a id="line-188" name="line-188"></a>
+<a id="line-189" name="line-189"></a><span class="k">static</span><span class="w"> </span><span class="n">GHashTable</span><span class="o">*</span><span class="w"> </span><span class="n">pnp_ids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="line-190" name="line-190"></a>
+<a id="line-191" name="line-191"></a><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">read_pnp_ids</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<a id="line-192" name="line-192"></a><span class="p">{</span>
+<a id="line-193" name="line-193"></a><span class="w">	</span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">contents</span><span class="p">;</span>
+<a id="line-194" name="line-194"></a><span class="w">	</span><span class="n">gchar</span><span class="o">**</span><span class="w"> </span><span class="n">lines</span><span class="p">;</span>
+<a id="line-195" name="line-195"></a><span class="w">	</span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">line</span><span class="p">;</span>
+<a id="line-196" name="line-196"></a><span class="hll"><span class="w">	</span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">;</span><div class="verbose expandable"><span class="error2">&lt;--- The scope of the variable 'code' can be reduced. <span class="marker">[+]</span></span><div class="content">The scope of the variable &apos;code&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:
+void f(int x)
+{
+    int i = 0;
+    if (x) {
+        // it&apos;s safe to move &apos;int i = 0;&apos; here
+        for (int n = 0; n &lt; 10; ++n) {
+            // it is possible but not safe to move &apos;int i = 0;&apos; here
+            do_something(&amp;i);
+        }
+    }
+}
+When you see this message it is always safe to reduce the variable scope 1 level.</div></div><div class="verbose expandable"><span class="error2">&lt;--- The scope of the variable 'name' can be reduced. <span class="marker">[+]</span></span><div class="content">The scope of the variable &apos;name&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:
+void f(int x)
+{
+    int i = 0;
+    if (x) {
+        // it&apos;s safe to move &apos;int i = 0;&apos; here
+        for (int n = 0; n &lt; 10; ++n) {
+            // it is possible but not safe to move &apos;int i = 0;&apos; here
+            do_something(&amp;i);
+        }
+    }
+}
+When you see this message it is always safe to reduce the variable scope 1 level.</div></div>
+</span><a id="line-197" name="line-197"></a><span class="w">	</span><span class="n">gint</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="line-198" name="line-198"></a>
+<a id="line-199" name="line-199"></a><span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pnp_ids</span><span class="p">)</span>
+<a id="line-200" name="line-200"></a><span class="w">		</span><span class="k">return</span><span class="p">;</span>
+<a id="line-201" name="line-201"></a>
+<a id="line-202" name="line-202"></a><span class="w">	</span><span class="n">pnp_ids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_hash_table_new_full</span><span class="p">(</span><span class="n">g_str_hash</span><span class="p">,</span><span class="w"> </span><span class="n">g_str_equal</span><span class="p">,</span><span class="w"> </span><span class="n">g_free</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<a id="line-203" name="line-203"></a>
+<a id="line-204" name="line-204"></a><span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">g_file_get_contents</span><span class="p">(</span><span class="n">PNP_IDS</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">contents</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">))</span>
+<a id="line-205" name="line-205"></a><span class="w">	</span><span class="p">{</span>
+<a id="line-206" name="line-206"></a><span class="w">		</span><span class="n">lines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_strsplit</span><span class="p">(</span><span class="n">contents</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span>
+<a id="line-207" name="line-207"></a>
+<a id="line-208" name="line-208"></a><span class="w">		</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="line-209" name="line-209"></a><span class="w">		</span><span class="p">{</span>
+<a id="line-210" name="line-210"></a><span class="w">			 </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="line-211" name="line-211"></a>
+<a id="line-212" name="line-212"></a><span class="w">			 </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">line</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">line</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;\t&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">line</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<a id="line-213" name="line-213"></a><span class="w">			 </span><span class="p">{</span>
+<a id="line-214" name="line-214"></a><span class="w">				 </span><span class="n">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">line</span><span class="p">;</span>
+<a id="line-215" name="line-215"></a><span class="w">				 </span><span class="n">line</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+<a id="line-216" name="line-216"></a><span class="w">				 </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<a id="line-217" name="line-217"></a><span class="w">				 </span><span class="n">g_hash_table_insert</span><span class="p">(</span><span class="n">pnp_ids</span><span class="p">,</span><span class="w"> </span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+<a id="line-218" name="line-218"></a><span class="w">			 </span><span class="p">}</span>
+<a id="line-219" name="line-219"></a><span class="w">		</span><span class="p">}</span>
+<a id="line-220" name="line-220"></a>
+<a id="line-221" name="line-221"></a><span class="w">		</span><span class="n">g_free</span><span class="p">(</span><span class="n">lines</span><span class="p">);</span>
+<a id="line-222" name="line-222"></a><span class="w">		</span><span class="n">g_free</span><span class="p">(</span><span class="n">contents</span><span class="p">);</span>
+<a id="line-223" name="line-223"></a><span class="w">	</span><span class="p">}</span>
+<a id="line-224" name="line-224"></a><span class="p">}</span>
+<a id="line-225" name="line-225"></a>
+<a id="line-226" name="line-226"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">find_vendor</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">code</span><span class="p">)</span>
+<a id="line-227" name="line-227"></a><span class="p">{</span>
+<a id="line-228" name="line-228"></a><span class="w">	</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">vendor_name</span><span class="p">;</span>
+<a id="line-229" name="line-229"></a><span class="w">	</span><span class="n">gsize</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="line-230" name="line-230"></a>
+<a id="line-231" name="line-231"></a><span class="w">	</span><span class="n">read_pnp_ids</span><span class="p">();</span>
+<a id="line-232" name="line-232"></a>
+<a id="line-233" name="line-233"></a><span class="w">	</span><span class="n">vendor_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_hash_table_lookup</span><span class="p">(</span><span class="n">pnp_ids</span><span class="p">,</span><span class="w"> </span><span class="n">code</span><span class="p">);</span>
+<a id="line-234" name="line-234"></a>
+<a id="line-235" name="line-235"></a><span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vendor_name</span><span class="p">)</span>
+<a id="line-236" name="line-236"></a><span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">vendor_name</span><span class="p">;</span>
+<a id="line-237" name="line-237"></a>
+<a id="line-238" name="line-238"></a><span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">G_N_ELEMENTS</span><span class="w"> </span><span class="p">(</span><span class="n">vendors</span><span class="p">);</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<a id="line-239" name="line-239"></a><span class="w">	</span><span class="p">{</span>
+<a id="line-240" name="line-240"></a><span class="w">		</span><span class="k">const</span><span class="w"> </span><span class="n">Vendor</span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="p">(</span><span class="n">vendors</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<a id="line-241" name="line-241"></a>
+<a id="line-242" name="line-242"></a><span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">v</span><span class="o">-&gt;</span><span class="n">vendor_id</span><span class="p">,</span><span class="w"> </span><span class="n">code</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="line-243" name="line-243"></a><span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="o">-&gt;</span><span class="n">vendor_name</span><span class="p">;</span>
+<a id="line-244" name="line-244"></a><span class="w">	</span><span class="p">}</span>
+<a id="line-245" name="line-245"></a>
+<a id="line-246" name="line-246"></a><span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">code</span><span class="p">;</span>
+<a id="line-247" name="line-247"></a><span class="p">}</span>
+<a id="line-248" name="line-248"></a>
+<a id="line-249" name="line-249"></a><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">make_display_name</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">MonitorInfo</span><span class="o">*</span><span class="w"> </span><span class="n">info</span><span class="p">)</span>
+<a id="line-250" name="line-250"></a><span class="p">{</span>
+<a id="line-251" name="line-251"></a><span class="w">	</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">vendor</span><span class="p">;</span>
+<a id="line-252" name="line-252"></a><span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">width_mm</span><span class="p">,</span><span class="w"> </span><span class="n">height_mm</span><span class="p">,</span><span class="w"> </span><span class="n">inches</span><span class="p">;</span>
+<a id="line-253" name="line-253"></a>
+<a id="line-254" name="line-254"></a><span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+<a id="line-255" name="line-255"></a><span class="w">	</span><span class="p">{</span>
+<a id="line-256" name="line-256"></a><span class="w">		</span><span class="n">vendor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">find_vendor</span><span class="p">(</span><span class="n">info</span><span class="o">-&gt;</span><span class="n">manufacturer_code</span><span class="p">);</span>
+<a id="line-257" name="line-257"></a><span class="w">	</span><span class="p">}</span>
+<a id="line-258" name="line-258"></a><span class="w">	</span><span class="k">else</span>
+<a id="line-259" name="line-259"></a><span class="w">	</span><span class="p">{</span>
+<a id="line-260" name="line-260"></a><span class="w">		</span><span class="cm">/* Translators: &quot;Unknown&quot; here is used to identify a monitor for which</span>
+<a id="line-261" name="line-261"></a><span class="cm">		 * we don&#39;t know the vendor. When a vendor is known, the name of the</span>
+<a id="line-262" name="line-262"></a><span class="cm">		 * vendor is used. */</span>
+<a id="line-263" name="line-263"></a><span class="w">		</span><span class="n">vendor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C_</span><span class="p">(</span><span class="s">&quot;Monitor vendor&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Unknown&quot;</span><span class="p">);</span>
+<a id="line-264" name="line-264"></a><span class="w">	</span><span class="p">}</span>
+<a id="line-265" name="line-265"></a>
+<a id="line-266" name="line-266"></a><span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">info</span><span class="o">-&gt;</span><span class="n">width_mm</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">info</span><span class="o">-&gt;</span><span class="n">height_mm</span><span class="p">)</span>
+<a id="line-267" name="line-267"></a><span class="w">	</span><span class="p">{</span>
+<a id="line-268" name="line-268"></a><span class="w">		</span><span class="n">width_mm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="o">-&gt;</span><span class="n">width_mm</span><span class="p">;</span>
+<a id="line-269" name="line-269"></a><span class="w">		</span><span class="n">height_mm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="o">-&gt;</span><span class="n">height_mm</span><span class="p">;</span>
+<a id="line-270" name="line-270"></a><span class="w">	</span><span class="p">}</span>
+<a id="line-271" name="line-271"></a><span class="w">	</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">info</span><span class="o">-&gt;</span><span class="n">n_detailed_timings</span><span class="p">)</span>
+<a id="line-272" name="line-272"></a><span class="w">	</span><span class="p">{</span>
+<a id="line-273" name="line-273"></a><span class="w">		</span><span class="n">width_mm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="o">-&gt;</span><span class="n">detailed_timings</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">width_mm</span><span class="p">;</span>
+<a id="line-274" name="line-274"></a><span class="w">		</span><span class="n">height_mm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="o">-&gt;</span><span class="n">detailed_timings</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">height_mm</span><span class="p">;</span>
+<a id="line-275" name="line-275"></a><span class="w">	</span><span class="p">}</span>
+<a id="line-276" name="line-276"></a><span class="w">	</span><span class="k">else</span>
+<a id="line-277" name="line-277"></a><span class="w">	</span><span class="p">{</span>
+<a id="line-278" name="line-278"></a><span class="w">		</span><span class="n">width_mm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<a id="line-279" name="line-279"></a><span class="w">		</span><span class="n">height_mm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<a id="line-280" name="line-280"></a><span class="w">	</span><span class="p">}</span>
+<a id="line-281" name="line-281"></a>
+<a id="line-282" name="line-282"></a><span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">width_mm</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">height_mm</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span>
+<a id="line-283" name="line-283"></a><span class="w">	</span><span class="p">{</span>
+<a id="line-284" name="line-284"></a><span class="w">		</span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="w"> </span><span class="p">(</span><span class="n">width_mm</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">width_mm</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">height_mm</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">height_mm</span><span class="p">);</span>
+<a id="line-285" name="line-285"></a>
+<a id="line-286" name="line-286"></a><span class="w">		</span><span class="n">inches</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">d</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">25.4</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<a id="line-287" name="line-287"></a><span class="w">	</span><span class="p">}</span>
+<a id="line-288" name="line-288"></a><span class="w">	</span><span class="k">else</span>
+<a id="line-289" name="line-289"></a><span class="w">	</span><span class="p">{</span>
+<a id="line-290" name="line-290"></a><span class="w">		</span><span class="n">inches</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<a id="line-291" name="line-291"></a><span class="w">	</span><span class="p">}</span>
+<a id="line-292" name="line-292"></a>
+<a id="line-293" name="line-293"></a><span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inches</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="line-294" name="line-294"></a><span class="w">	</span><span class="p">{</span>
+<a id="line-295" name="line-295"></a><span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">g_strdup_printf</span><span class="p">(</span><span class="s">&quot;%s %d</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">vendor</span><span class="p">,</span><span class="w"> </span><span class="n">inches</span><span class="p">);</span>
+<a id="line-296" name="line-296"></a><span class="w">	</span><span class="p">}</span>
+<a id="line-297" name="line-297"></a><span class="w">	</span><span class="k">else</span>
+<a id="line-298" name="line-298"></a><span class="w">	</span><span class="p">{</span>
+<a id="line-299" name="line-299"></a><span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">g_strdup</span><span class="p">(</span><span class="n">vendor</span><span class="p">);</span>
+<a id="line-300" name="line-300"></a><span class="w">	</span><span class="p">}</span>
+<a id="line-301" name="line-301"></a><span class="p">}</span>
+</pre></div></td></tr></table></div>
+
+    </div>
+    <div id="footer" class="footer">
+      <p>
+        Created by Cppcheck 2.13.0 (<a href="https://cppcheck.sourceforge.io">Sourceforge</a>, <a href="irc://irc.freenode.net/cppcheck">IRC</a>)
+      </p>
+    </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,383 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cppcheck - HTML report - mate-desktop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #ffffff; }
+.highlight .c { color: #888888 } /* Comment */
+.highlight .err { color: #FF0000; background-color: #FFAAAA } /* Error */
+.highlight .k { color: #008800; font-weight: bold } /* Keyword */
+.highlight .o { color: #333333 } /* Operator */
+.highlight .ch { color: #888888 } /* Comment.Hashbang */
+.highlight .cm { color: #888888 } /* Comment.Multiline */
+.highlight .cp { color: #557799 } /* Comment.Preproc */
+.highlight .cpf { color: #888888 } /* Comment.PreprocFile */
+.highlight .c1 { color: #888888 } /* Comment.Single */
+.highlight .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008800; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008800; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008800; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #003388; font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { color: #008800; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #333399; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #6600EE; font-weight: bold } /* Literal.Number */
+.highlight .s { background-color: #fff0f0 } /* Literal.String */
+.highlight .na { color: #0000CC } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #BB0066; font-weight: bold } /* Name.Class */
+.highlight .no { color: #003366; font-weight: bold } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #880000; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #FF0000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0066BB; font-weight: bold } /* Name.Function */
+.highlight .nl { color: #997700; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #007700 } /* Name.Tag */
+.highlight .nv { color: #996633 } /* Name.Variable */
+.highlight .ow { color: #000000; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #6600EE; font-weight: bold } /* Literal.Number.Bin */
+.highlight .mf { color: #6600EE; font-weight: bold } /* Literal.Number.Float */
+.highlight .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
+.highlight .mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
+.highlight .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
+.highlight .sa { background-color: #fff0f0 } /* Literal.String.Affix */
+.highlight .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
+.highlight .sc { color: #0044DD } /* Literal.String.Char */
+.highlight .dl { background-color: #fff0f0 } /* Literal.String.Delimiter */
+.highlight .sd { color: #DD4422 } /* Literal.String.Doc */
+.highlight .s2 { background-color: #fff0f0 } /* Literal.String.Double */
+.highlight .se { color: #666666; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
+.highlight .sh { background-color: #fff0f0 } /* Literal.String.Heredoc */
+.highlight .si { background-color: #eeeeee } /* Literal.String.Interpol */
+.highlight .sx { color: #DD2200; background-color: #fff0f0 } /* Literal.String.Other */
+.highlight .sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */
+.highlight .s1 { background-color: #fff0f0 } /* Literal.String.Single */
+.highlight .ss { color: #AA6600 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0066BB; font-weight: bold } /* Name.Function.Magic */
+.highlight .vc { color: #336699 } /* Name.Variable.Class */
+.highlight .vg { color: #dd7700; font-weight: bold } /* Name.Variable.Global */
+.highlight .vi { color: #3333BB } /* Name.Variable.Instance */
+.highlight .vm { color: #996633 } /* Name.Variable.Magic */
+.highlight .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
+    </style>
+    <script>
+      function getStyle(el, styleProp) {
+        var y;
+
+        if (el.currentStyle) {
+          y = el.currentStyle[styleProp];
+        } else if (window.getComputedStyle) {
+          y = document.defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+        }
+
+        return y;
+      }
+
+      function toggle() {
+        var el = this.expandable_content;
+        var mark = this.expandable_marker;
+
+        if (el.style.display === "block") {
+          el.style.display = "none";
+          mark.textContent = "[+]";
+        } else {
+          el.style.display = "block";
+          mark.textContent = "[-]";
+        }
+      }
+
+      function initExpandables() {
+        var elements = document.querySelectorAll(".expandable");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var el = elements[i];
+          var clickable = el.querySelector("span");
+          var marker = clickable.querySelector(".marker");
+          var content = el.querySelector(".content");
+          var width = clickable.clientWidth - parseInt(getStyle(content, "padding-left")) - parseInt(getStyle(content, "padding-right"));
+          content.style.width = width + "px";
+          clickable.expandable_content = content;
+          clickable.expandable_marker = marker;
+          clickable.addEventListener("click", toggle);
+        }
+      }
+
+      function toggleDisplay(cb) {
+        var elements = document.querySelectorAll("." + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("id-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleSeverity(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+        var elements = document.querySelectorAll(".sev_" + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("severity-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleTool(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+
+        var elements;
+        if (cb.id == "clang-tidy")
+            elements = document.querySelectorAll("[class^=clang-tidy-]");
+        else
+            elements = document.querySelectorAll(".issue:not([class^=clang-tidy-])");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("tool-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleAll() {
+        var elements = document.querySelectorAll(".idToggle");
+
+        // starting from 1 since 0 is the "toggle all" input
+        for (var i = 1, len = elements.length; i < len; i++) {
+          var changed = elements[i].checked != elements[0].checked;
+          if (changed) {
+            elements[i].checked = elements[0].checked;
+            toggleDisplay(elements[i]);
+          }
+        }
+      }
+
+      function filterFile(filter) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector("tr").querySelector("td").textContent.toLowerCase().includes(filter.toLowerCase());
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+      }
+
+      function filterText(text) {
+        filter = text.toLowerCase();
+        var elements = document.querySelectorAll(".issue");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = false;
+          var fields = elements[i].querySelectorAll("td");
+          for (var n = 0, num = fields.length; n < num; n++) {
+            if (fields[n].textContent.toLowerCase().includes(filter)) {
+              visible = true;
+              break;
+            }
+          }
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+
+        updateFileRows();
+      }
+
+      function updateFileRows(element) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector(".issue:not(.id-filtered):not(.severity-filtered):not(.tool-filtered):not(.text-filtered)");
+          elements[i].classList.toggle("file-filtered", !visible);
+        }
+      }
+
+      window.addEventListener("load", initExpandables);
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+    <div id="header" class="header">
+      <h1>Cppcheck report - mate-desktop: libmate-desktop/mate-colorseldialog.h</h1>
+
+    </div>
+
+    <div id="menu">
+     <p><a href="index.html">Defects:</a> mate-colorseldialog.h</p>
+<a href="10.html#line-30"> missingIncludeSystem 30</a><a href="10.html#line-31"> missingIncludeSystem 31</a>
+    </div>
+    <div id="content">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span></pre></div></td><td class="code"><div><pre><span></span><a id="line-1" name="line-1"></a><span class="cm">/* GTK - The GIMP Toolkit</span>
+<a id="line-2" name="line-2"></a><span class="cm"> * Copyright (C) 1995-1997 Peter Mattis, Spencer Kimball and Josh MacDonald</span>
+<a id="line-3" name="line-3"></a><span class="cm"> *</span>
+<a id="line-4" name="line-4"></a><span class="cm"> * This library is free software; you can redistribute it and/or</span>
+<a id="line-5" name="line-5"></a><span class="cm"> * modify it under the terms of the GNU Lesser General Public</span>
+<a id="line-6" name="line-6"></a><span class="cm"> * License as published by the Free Software Foundation; either</span>
+<a id="line-7" name="line-7"></a><span class="cm"> * version 2 of the License, or (at your option) any later version.</span>
+<a id="line-8" name="line-8"></a><span class="cm"> *</span>
+<a id="line-9" name="line-9"></a><span class="cm"> * This library is distributed in the hope that it will be useful,</span>
+<a id="line-10" name="line-10"></a><span class="cm"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a id="line-11" name="line-11"></a><span class="cm"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span>
+<a id="line-12" name="line-12"></a><span class="cm"> * Lesser General Public License for more details.</span>
+<a id="line-13" name="line-13"></a><span class="cm"> *</span>
+<a id="line-14" name="line-14"></a><span class="cm"> * You should have received a copy of the GNU Lesser General Public</span>
+<a id="line-15" name="line-15"></a><span class="cm"> * License along with this library; if not, write to the</span>
+<a id="line-16" name="line-16"></a><span class="cm"> * Free Software Foundation, Inc., 59 Temple Place - Suite 330,</span>
+<a id="line-17" name="line-17"></a><span class="cm"> * Boston, MA 02111-1307, USA.</span>
+<a id="line-18" name="line-18"></a><span class="cm"> */</span>
+<a id="line-19" name="line-19"></a>
+<a id="line-20" name="line-20"></a><span class="cm">/*</span>
+<a id="line-21" name="line-21"></a><span class="cm"> * Modified by the GTK+ Team and others 1997-2000.  See the AUTHORS</span>
+<a id="line-22" name="line-22"></a><span class="cm"> * file for a list of people on the GTK+ Team.  See the ChangeLog</span>
+<a id="line-23" name="line-23"></a><span class="cm"> * files for a list of changes.  These files are distributed with</span>
+<a id="line-24" name="line-24"></a><span class="cm"> * GTK+ at ftp://ftp.gtk.org/pub/gtk/.</span>
+<a id="line-25" name="line-25"></a><span class="cm"> */</span>
+<a id="line-26" name="line-26"></a>
+<a id="line-27" name="line-27"></a><span class="cp">#ifndef __MATE_COLOR_SELECTION_DIALOG_H__</span>
+<a id="line-28" name="line-28"></a><span class="cp">#define __MATE_COLOR_SELECTION_DIALOG_H__</span>
+<a id="line-29" name="line-29"></a>
+<a id="line-30" name="line-30"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;glib.h&gt;</span><span class="error2">&lt;--- Include file: <glib.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.</span>
+</span><a id="line-31" name="line-31"></a><span class="hll"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;gtk/gtk.h&gt;</span><span class="error2">&lt;--- Include file: <gtk/gtk.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.</span>
+</span><a id="line-32" name="line-32"></a>
+<a id="line-33" name="line-33"></a><span class="n">G_BEGIN_DECLS</span>
+<a id="line-34" name="line-34"></a>
+<a id="line-35" name="line-35"></a><span class="cp">#define MATE_TYPE_COLOR_SELECTION_DIALOG            (mate_color_selection_dialog_get_type ())</span>
+<a id="line-36" name="line-36"></a><span class="cp">#define MATE_COLOR_SELECTION_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), MATE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialog))</span>
+<a id="line-37" name="line-37"></a><span class="cp">#define MATE_COLOR_SELECTION_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), MATE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialogClass))</span>
+<a id="line-38" name="line-38"></a><span class="cp">#define MATE_IS_COLOR_SELECTION_DIALOG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), MATE_TYPE_COLOR_SELECTION_DIALOG))</span>
+<a id="line-39" name="line-39"></a><span class="cp">#define MATE_IS_COLOR_SELECTION_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), MATE_TYPE_COLOR_SELECTION_DIALOG))</span>
+<a id="line-40" name="line-40"></a><span class="cp">#define MATE_COLOR_SELECTION_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), MATE_TYPE_COLOR_SELECTION_DIALOG, MateColorSelectionDialogClass))</span>
+<a id="line-41" name="line-41"></a>
+<a id="line-42" name="line-42"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">_MateColorSelectionDialog</span><span class="w">       </span><span class="n">MateColorSelectionDialog</span><span class="p">;</span>
+<a id="line-43" name="line-43"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">_MateColorSelectionDialogClass</span><span class="w">  </span><span class="n">MateColorSelectionDialogClass</span><span class="p">;</span>
+<a id="line-44" name="line-44"></a>
+<a id="line-45" name="line-45"></a><span class="k">struct</span><span class="w"> </span><span class="nc">_MateColorSelectionDialog</span>
+<a id="line-46" name="line-46"></a><span class="p">{</span>
+<a id="line-47" name="line-47"></a><span class="w">  </span><span class="n">GtkDialog</span><span class="w"> </span><span class="n">parent_instance</span><span class="p">;</span>
+<a id="line-48" name="line-48"></a>
+<a id="line-49" name="line-49"></a><span class="w">  </span><span class="n">GtkWidget</span><span class="w"> </span><span class="o">*</span><span class="n">colorsel</span><span class="p">;</span>
+<a id="line-50" name="line-50"></a><span class="w">  </span><span class="n">GtkWidget</span><span class="w"> </span><span class="o">*</span><span class="n">ok_button</span><span class="p">;</span>
+<a id="line-51" name="line-51"></a><span class="w">  </span><span class="n">GtkWidget</span><span class="w"> </span><span class="o">*</span><span class="n">cancel_button</span><span class="p">;</span>
+<a id="line-52" name="line-52"></a><span class="w">  </span><span class="n">GtkWidget</span><span class="w"> </span><span class="o">*</span><span class="n">help_button</span><span class="p">;</span>
+<a id="line-53" name="line-53"></a><span class="p">};</span>
+<a id="line-54" name="line-54"></a>
+<a id="line-55" name="line-55"></a><span class="k">struct</span><span class="w"> </span><span class="nc">_MateColorSelectionDialogClass</span>
+<a id="line-56" name="line-56"></a><span class="p">{</span>
+<a id="line-57" name="line-57"></a><span class="w">  </span><span class="n">GtkDialogClass</span><span class="w"> </span><span class="n">parent_class</span><span class="p">;</span>
+<a id="line-58" name="line-58"></a>
+<a id="line-59" name="line-59"></a><span class="w">  </span><span class="cm">/* Padding for future expansion */</span>
+<a id="line-60" name="line-60"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">_gtk_reserved1</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="line-61" name="line-61"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">_gtk_reserved2</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="line-62" name="line-62"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">_gtk_reserved3</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="line-63" name="line-63"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">_gtk_reserved4</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="line-64" name="line-64"></a><span class="p">};</span>
+<a id="line-65" name="line-65"></a>
+<a id="line-66" name="line-66"></a><span class="cm">/* ColorSelectionDialog */</span>
+<a id="line-67" name="line-67"></a><span class="n">GType</span><span class="w">      </span><span class="nf">mate_color_selection_dialog_get_type</span><span class="w">            </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="n">G_GNUC_CONST</span><span class="p">;</span>
+<a id="line-68" name="line-68"></a><span class="n">GtkWidget</span><span class="o">*</span><span class="w"> </span><span class="nf">mate_color_selection_dialog_new</span><span class="w">                 </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="w"> </span><span class="o">*</span><span class="n">title</span><span class="p">);</span>
+<a id="line-69" name="line-69"></a><span class="n">GtkWidget</span><span class="o">*</span><span class="w"> </span><span class="nf">mate_color_selection_dialog_get_color_selection</span><span class="w"> </span><span class="p">(</span><span class="n">MateColorSelectionDialog</span><span class="w"> </span><span class="o">*</span><span class="n">colorsel</span><span class="p">);</span>
+<a id="line-70" name="line-70"></a>
+<a id="line-71" name="line-71"></a><span class="n">G_END_DECLS</span>
+<a id="line-72" name="line-72"></a>
+<a id="line-73" name="line-73"></a><span class="cp">#endif </span><span class="cm">/* __MATE_COLOR_SELECTION_DIALOG_H__ */</span>
+</pre></div></td></tr></table></div>
+
+    </div>
+    <div id="footer" class="footer">
+      <p>
+        Created by Cppcheck 2.13.0 (<a href="https://cppcheck.sourceforge.io">Sourceforge</a>, <a href="irc://irc.freenode.net/cppcheck">IRC</a>)
+      </p>
+    </div>
+    </div>
+  </body>
+</html>
