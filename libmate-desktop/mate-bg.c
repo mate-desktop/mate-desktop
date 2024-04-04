@@ -2135,9 +2135,27 @@ scale_thumbnail (MateBGPlacement placement,
 
 	if (get_thumb_annotations (thumb, &o_width, &o_height)		||
 	    (filename && get_original_size (filename, &o_width, &o_height))) {
+		GdkDisplay *display;
+		int scr_height;
+		int scr_width;
 
-		int scr_height = HeightOfScreen (gdk_x11_screen_get_xscreen (screen));
-		int scr_width = WidthOfScreen (gdk_x11_screen_get_xscreen (screen));
+		display = gdk_screen_get_display (screen);
+
+		/*Since we can use this in wayland, only use x11 specific code when in x11*/
+		if (GDK_IS_X11_DISPLAY (gdk_screen_get_display (screen)))
+		{
+			scr_height = HeightOfScreen (gdk_x11_screen_get_xscreen (screen));
+			scr_width = WidthOfScreen (gdk_x11_screen_get_xscreen (screen));
+		}
+		else
+		{
+			GdkRectangle geometry = {0};
+			GdkMonitor *monitor;
+			monitor = gdk_display_get_monitor (display, 0);
+			gdk_monitor_get_geometry (monitor, &geometry);
+			scr_height = geometry.width;
+			scr_width = geometry.height;
+		}
 		int thumb_width = gdk_pixbuf_get_width (thumb);
 		int thumb_height = gdk_pixbuf_get_height (thumb);
 		double screen_to_dest = fit_factor (scr_width, scr_height,
