@@ -1,7 +1,7 @@
 project(
   'mate-desktop',
   'c',
-  version: '1.28.2',
+  version: '1.29.0',
   license: [ 'GPL-2', 'FDL-1.1', 'LGPL-2' ],
 )
 
