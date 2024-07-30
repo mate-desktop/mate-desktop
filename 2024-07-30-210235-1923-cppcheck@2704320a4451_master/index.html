@@ -1,0 +1,498 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cppcheck - HTML report - mate-desktop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+    <script>
+      function getStyle(el, styleProp) {
+        var y;
+
+        if (el.currentStyle) {
+          y = el.currentStyle[styleProp];
+        } else if (window.getComputedStyle) {
+          y = document.defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+        }
+
+        return y;
+      }
+
+      function toggle() {
+        var el = this.expandable_content;
+        var mark = this.expandable_marker;
+
+        if (el.style.display === "block") {
+          el.style.display = "none";
+          mark.textContent = "[+]";
+        } else {
+          el.style.display = "block";
+          mark.textContent = "[-]";
+        }
+      }
+
+      function initExpandables() {
+        var elements = document.querySelectorAll(".expandable");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var el = elements[i];
+          var clickable = el.querySelector("span");
+          var marker = clickable.querySelector(".marker");
+          var content = el.querySelector(".content");
+          var width = clickable.clientWidth - parseInt(getStyle(content, "padding-left")) - parseInt(getStyle(content, "padding-right"));
+          content.style.width = width + "px";
+          clickable.expandable_content = content;
+          clickable.expandable_marker = marker;
+          clickable.addEventListener("click", toggle);
+        }
+      }
+
+      function toggleDisplay(cb) {
+        var elements = document.querySelectorAll("." + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("id-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleSeverity(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+        var elements = document.querySelectorAll(".sev_" + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("severity-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleTool(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+
+        var elements;
+        if (cb.id == "clang-tidy")
+            elements = document.querySelectorAll("[class^=clang-tidy-]");
+        else
+            elements = document.querySelectorAll(".issue:not([class^=clang-tidy-])");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("tool-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleAll() {
+        var elements = document.querySelectorAll(".idToggle");
+
+        // starting from 1 since 0 is the "toggle all" input
+        for (var i = 1, len = elements.length; i < len; i++) {
+          var changed = elements[i].checked != elements[0].checked;
+          if (changed) {
+            elements[i].checked = elements[0].checked;
+            toggleDisplay(elements[i]);
+          }
+        }
+      }
+
+      function filterFile(filter) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector("tr").querySelector("td").textContent.toLowerCase().includes(filter.toLowerCase());
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+      }
+
+      function filterText(text) {
+        filter = text.toLowerCase();
+        var elements = document.querySelectorAll(".issue");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = false;
+          var fields = elements[i].querySelectorAll("td");
+          for (var n = 0, num = fields.length; n < num; n++) {
+            if (fields[n].textContent.toLowerCase().includes(filter)) {
+              visible = true;
+              break;
+            }
+          }
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+
+        updateFileRows();
+      }
+
+      function updateFileRows(element) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector(".issue:not(.id-filtered):not(.severity-filtered):not(.tool-filtered):not(.text-filtered)");
+          elements[i].classList.toggle("file-filtered", !visible);
+        }
+      }
+
+      window.addEventListener("load", initExpandables);
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+    <div id="header" class="header">
+      <h1>Cppcheck report - mate-desktop</h1>
+      <div id="filters">
+
+        <label class="checkBtn"><input type="checkbox" onclick="toggleSeverity(this)" id="error"checked/>error</label>
+        <label class="checkBtn disabled"><input type="checkbox" onclick="toggleSeverity(this)" id="warning"disabled/>warning</label>
+        <label class="checkBtn"><input type="checkbox" onclick="toggleSeverity(this)" id="portability"checked/>portability</label>
+        <label class="checkBtn disabled"><input type="checkbox" onclick="toggleSeverity(this)" id="performance"disabled/>performance</label>
+        <label class="checkBtn"><input type="checkbox" onclick="toggleSeverity(this)" id="style"checked/>style</label>
+        <label class="checkBtn"><input type="checkbox" onclick="toggleSeverity(this)" id="information"checked/>information</label>
+        | 
+        <label class="checkBtn"><input type="checkbox" onclick="toggleTool(this)" id="cppcheck"checked/>cppcheck</label>
+        <label class="checkBtn disabled"><input type="checkbox" onclick="toggleTool(this)" id="clang-tidy"disabled/>clang-tidy</label>
+        | 
+        <label class="severityHeader">File: <input type="search" oninput="filterFile(this.value)"/></label>
+        <label class="severityHeader">Filter: <input type="search" oninput="filterText(this.value)"/></label>
+      </div>
+
+    </div>
+
+    <div id="menu_index">
+     <p><a href="index.html">Defect summary</a> </p>
+
+       <label><input type="checkbox" class="idToggle" onclick="toggleAll()" checked> Toggle all</label>
+       <table>
+           <tr><th>Show</th><th>#</th><th>Defect ID</th></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="missingIncludeSystem" name="missingIncludeSystem" checked></td><td>166</td><td>missingIncludeSystem</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="varFuncNullUB" name="varFuncNullUB" checked></td><td>23</td><td>varFuncNullUB</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="unknownMacro" name="unknownMacro" checked></td><td>10</td><td>unknownMacro</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="constVariablePointer" name="constVariablePointer" checked></td><td>9</td><td>constVariablePointer</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="missingInclude" name="missingInclude" checked></td><td>6</td><td>missingInclude</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="variableScope" name="variableScope" checked></td><td>6</td><td>variableScope</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="normalCheckLevelMaxBranches" name="normalCheckLevelMaxBranches" checked></td><td>3</td><td>normalCheckLevelMaxBranches</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="constParameterPointer" name="constParameterPointer" checked></td><td>2</td><td>constParameterPointer</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="checkersReport" name="checkersReport" checked></td><td>1</td><td>checkersReport</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="multiCondition" name="multiCondition" checked></td><td>1</td><td>multiCondition</td></tr>
+           <tr><td></td><td>227</td><td>total</td></tr>
+       </table>
+       <p><a href="stats.html">Statistics</a></p>
+    </div>
+    <div id="content_index">
+
+       <table class="summaryTable">
+       <tr><th>Line</th><th>Id</th><th>CWE</th><th>Severity</th><th>Message</th></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="35.html"></a></td></tr>
+         <tr class="checkersReport sev_information issue"><td></td><td>checkersReport</td><td></td><td>information</td><td>Active checkers: There was critical errors (use --checkers-report=&lt;filename&gt; to see details)</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="0.html">libmate-desktop/display-name.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="0.html#line-25">25</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;config.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="0.html#line-26">26</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gi18n-lib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="0.html#line-27">27</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="0.html#line-28">28</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;math.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="0.html#line-29">29</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="0.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="0.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="0.html#line-196">196</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;code&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="0.html#line-196">196</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;name&apos; can be reduced.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="1.html">libmate-desktop/edid-parse.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="1.html#line-26">26</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="1.html#line-27">27</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="1.html#line-28">28</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;math.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="1.html#line-29">29</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="2.html">libmate-desktop/mate-bg-crossfade.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="2.html#line-22">22</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="2.html#line-23">23</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;math.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="2.html#line-24">24</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdarg.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="2.html#line-26">26</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gio/gio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="2.html#line-28">28</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="2.html#line-29">29</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdkx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="2.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/Xlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="2.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/Xatom.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="2.html#line-32">32</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="2.html#line-34">34</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;cairo.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="2.html#line-35">35</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;cairo-xlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="2.html#line-38">38</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;mate-bg.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="2.html#line-69">69</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="3.html">libmate-desktop/mate-bg-crossfade.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="3.html#line-32">32</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="3.html#line-33">33</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="3.html#line-34">34</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="4.html">libmate-desktop/mate-bg.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-33">33</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-34">34</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;math.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-35">35</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdarg.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-36">36</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-38">38</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gstdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-39">39</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gio/gio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-41">41</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdkx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-42">42</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/Xlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-43">43</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/Xatom.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-45">45</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;cairo.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-48">48</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;mate-bg.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-49">49</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;mate-bg-crossfade.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="4.html#line-51">51</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;cairo-xlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="4.html#line-122">122</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="5.html">libmate-desktop/mate-colorsel.c</a></td></tr>
+         <tr class="missingInclude sev_information issue"><td><a href="5.html#line-28">28</a></td><td>missingInclude</td><td></td><td>information</td><td>Include file: &quot;config.h&quot; not found.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="5.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;math.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="5.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="5.html#line-33">33</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdkx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="5.html#line-34">34</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdkkeysyms.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="5.html#line-35">35</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="5.html#line-36">36</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gi18n-lib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="5.html#line-243">243</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="7.html">libmate-desktop/mate-colorsel.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="7.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="7.html#line-32">32</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="9.html">libmate-desktop/mate-colorseldialog.c</a></td></tr>
+         <tr class="missingInclude sev_information issue"><td><a href="9.html#line-26">26</a></td><td>missingInclude</td><td></td><td>information</td><td>Include file: &quot;config.h&quot; not found.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="9.html#line-28">28</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="9.html#line-29">29</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="9.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="9.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gi18n-lib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="9.html#line-52">52</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_CODE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="10.html">libmate-desktop/mate-colorseldialog.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="10.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="10.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="11.html">libmate-desktop/mate-dconf.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="11.html#line-29">29</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;config.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="11.html#line-32">32</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="11.html#line-34">34</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;dconf.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="12.html">libmate-desktop/mate-dconf.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="12.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="13.html">libmate-desktop/mate-desktop-item.c</a></td></tr>
+         <tr class="normalCheckLevelMaxBranches sev_information issue"><td><a href="13.html#line-0">0</a></td><td>normalCheckLevelMaxBranches</td><td></td><td>information</td><td>Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches.</td></tr>
+         <tr class="missingInclude sev_information issue"><td><a href="13.html#line-30">30</a></td><td>missingInclude</td><td></td><td>information</td><td>Include file: &quot;config.h&quot; not found.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-32">32</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;limits.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-33">33</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;ctype.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-34">34</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-35">35</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-36">36</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;sys/types.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-37">37</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;dirent.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-38">38</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;unistd.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-39">39</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;time.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-40">40</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-41">41</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gi18n-lib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-42">42</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;locale.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-43">43</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-45">45</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gio/gio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-49">49</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;libsn/sn.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-50">50</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-51">51</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdkx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-52">52</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-57">57</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;mate-desktop-item.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="13.html#line-58">58</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;mate-desktop-utils.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="constVariablePointer sev_style issue"><td><a href="13.html#line-916">916</a></td><td>constVariablePointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Variable &apos;li&apos; can be declared as pointer to const</td></tr>
+         <tr class="constVariablePointer sev_style issue"><td><a href="13.html#line-945">945</a></td><td>constVariablePointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Variable &apos;p&apos; can be declared as pointer to const</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="13.html#line-2338">2338</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;exec&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="13.html#line-2497">2497</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;info&apos; can be reduced.</td></tr>
+         <tr class="constVariablePointer sev_style issue"><td><a href="13.html#line-2844">2844</a></td><td>constVariablePointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Variable &apos;l&apos; can be declared as pointer to const</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="13.html#line-3156">3156</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;s&apos; can be reduced.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3175">3175</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3177">3177</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3178">3178</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3179">3179</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3181">3181</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3183">3183</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3185">3185</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3186">3186</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3188">3188</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3189">3189</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3190">3190</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3191">3191</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3192">3192</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3193">3193</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3194">3194</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3195">3195</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3196">3196</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3197">3197</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3198">3198</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3199">3199</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3201">3201</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3203">3203</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="varFuncNullUB sev_portability issue"><td><a href="13.html#line-3205">3205</a></td><td>varFuncNullUB</td><td><a href="https://cwe.mitre.org/data/definitions/475.html">475</a></td><td>portability</td><td>Passing NULL after the last typed argument to a variadic function leads to undefined behaviour.</td></tr>
+         <tr class="constVariablePointer sev_style issue"><td><a href="13.html#line-3422">3422</a></td><td>constVariablePointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Variable &apos;brace&apos; can be declared as pointer to const</td></tr>
+         <tr class="constParameterPointer sev_style issue"><td><a href="13.html#line-3497">3497</a></td><td>constParameterPointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Parameter &apos;item&apos; can be declared as pointer to const</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="14.html">libmate-desktop/mate-desktop-thumbnail.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="14.html#line-27">27</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;config.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="14.html#line-28">28</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="14.html#line-29">29</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gstdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="14.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk-pixbuf/gdk-pixbuf.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="14.html#line-32">32</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="14.html#line-33">33</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="14.html#line-62">62</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="15.html">libmate-desktop/mate-desktop-thumbnail.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="15.html#line-33">33</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="15.html#line-34">34</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib-object.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="15.html#line-35">35</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;time.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="15.html#line-36">36</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk-pixbuf/gdk-pixbuf.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="16.html">libmate-desktop/mate-desktop-utils.c</a></td></tr>
+         <tr class="normalCheckLevelMaxBranches sev_information issue"><td><a href="16.html#line-0">0</a></td><td>normalCheckLevelMaxBranches</td><td></td><td>information</td><td>Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="16.html#line-27">27</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;config.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="16.html#line-28">28</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="16.html#line-29">29</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gio/gio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="16.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gi18n-lib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="16.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="16.html#line-32">32</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="16.html#line-35">35</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;mate-desktop-utils.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="multiCondition sev_style issue"><td><a href="16.html#line-139">139</a></td><td>multiCondition</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Expression is always true because &apos;else if&apos; condition is opposite to previous condition at line 133.</td></tr>
+         <tr class="constParameterPointer sev_style issue"><td><a href="16.html#line-243">243</a></td><td>constParameterPointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Parameter &apos;a&apos; can be declared as pointer to const</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="17.html">libmate-desktop/mate-gsettings.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="17.html#line-29">29</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="17.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gio/gio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="18.html">libmate-desktop/mate-hsv.c</a></td></tr>
+         <tr class="missingInclude sev_information issue"><td><a href="18.html#line-34">34</a></td><td>missingInclude</td><td></td><td>information</td><td>Include file: &quot;config.h&quot; not found.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="18.html#line-39">39</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;math.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="18.html#line-40">40</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="18.html#line-42">42</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="18.html#line-128">128</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="8.html">libmate-desktop/mate-hsv.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="8.html#line-36">36</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="19.html">libmate-desktop/mate-image-menu-item.c</a></td></tr>
+         <tr class="missingInclude sev_information issue"><td><a href="19.html#line-18">18</a></td><td>missingInclude</td><td></td><td>information</td><td>Include file: &quot;config.h&quot; not found.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="19.html#line-19">19</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="19.html#line-20">20</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gi18n.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="19.html#line-21">21</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gstdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="19.html#line-35">35</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="20.html">libmate-desktop/mate-image-menu-item.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="20.html#line-21">21</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="21.html">libmate-desktop/mate-languages.c</a></td></tr>
+         <tr class="normalCheckLevelMaxBranches sev_information issue"><td><a href="21.html#line-0">0</a></td><td>normalCheckLevelMaxBranches</td><td></td><td>information</td><td>Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches.</td></tr>
+         <tr class="missingInclude sev_information issue"><td><a href="21.html#line-23">23</a></td><td>missingInclude</td><td></td><td>information</td><td>Include file: &quot;config.h&quot; not found.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-25">25</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-26">26</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-27">27</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;unistd.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-28">28</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-29">29</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;errno.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;dirent.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;locale.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-32">32</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;langinfo.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-33">33</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;sys/stat.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-35">35</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-36">36</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gi18n.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-37">37</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gstdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="21.html#line-42">42</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;langinfo.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="constVariablePointer sev_style issue"><td><a href="21.html#line-401">401</a></td><td>constVariablePointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Variable &apos;old_locale&apos; can be declared as pointer to const</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="21.html#line-534">534</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;linep&apos; can be reduced.</td></tr>
+         <tr class="constVariablePointer sev_style issue"><td><a href="21.html#line-587">587</a></td><td>constVariablePointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Variable &apos;locale&apos; can be declared as pointer to const</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="22.html">libmate-desktop/mate-languages.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="22.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="23.html">libmate-desktop/mate-rr-config.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="23.html#line-29">29</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;config.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="23.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gi18n-lib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="23.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="23.html#line-32">32</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="23.html#line-33">33</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="23.html#line-34">34</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gstdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="23.html#line-36">36</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/Xlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="23.html#line-37">37</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdkx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="23.html#line-94">94</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="25.html">libmate-desktop/mate-rr-config.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="25.html#line-34">34</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="25.html#line-35">35</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib-object.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="27.html">libmate-desktop/mate-rr-labeler.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="27.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;config.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="27.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gi18n-lib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="27.html#line-32">32</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="27.html#line-34">34</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/Xproto.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="27.html#line-35">35</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/Xlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="27.html#line-36">36</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/Xutil.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="27.html#line-37">37</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/Xatom.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="27.html#line-38">38</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdkx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="constVariablePointer sev_style issue"><td><a href="27.html#line-110">110</a></td><td>constVariablePointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Variable &apos;workareas&apos; can be declared as pointer to const</td></tr>
+         <tr class="constVariablePointer sev_style issue"><td><a href="27.html#line-170">170</a></td><td>constVariablePointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Variable &apos;xev&apos; can be declared as pointer to const</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="28.html">libmate-desktop/mate-rr-output-info.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="28.html#line-26">26</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;config.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="28.html#line-33">33</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="26.html">libmate-desktop/mate-rr-private.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="26.html#line-4">4</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/Xlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="26.html#line-7">7</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/extensions/Xrandr.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="29.html">libmate-desktop/mate-rr.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="29.html#line-27">27</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;config.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="29.html#line-28">28</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gi18n-lib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="29.html#line-29">29</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="29.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/Xlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="29.html#line-33">33</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/extensions/Xrandr.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="29.html#line-36">36</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="29.html#line-37">37</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdkx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="29.html#line-38">38</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;X11/Xatom.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="29.html#line-168">168</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_CODE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="24.html">libmate-desktop/mate-rr.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="24.html#line-31">31</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="24.html#line-32">32</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gdk/gdk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="6.html">libmate-desktop/private.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="6.html#line-28">28</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="30.html">libmate-desktop/test-desktop-thumbnail.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="30.html#line-27">27</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="31.html">libmate-desktop/test-ditem.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="31.html#line-19">19</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;config.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="31.html#line-20">20</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="31.html#line-21">21</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;unistd.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="31.html#line-23">23</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;mate-desktop-item.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="31.html#line-25">25</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;locale.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="31.html#line-26">26</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="constVariablePointer sev_style issue"><td><a href="31.html#line-132">132</a></td><td>constVariablePointer</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>Variable &apos;file&apos; can be declared as pointer to const</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="32.html">libmate-desktop/test-languages.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="32.html#line-18">18</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="32.html#line-19">19</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;locale.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="33.html">mate-about/mate-about.h</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="33.html#line-25">25</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;config.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="33.html#line-26">26</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="33.html#line-27">27</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gi18n.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="34.html">tools/mate-color-select.c</a></td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="34.html#line-26">26</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;config.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="34.html#line-27">27</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;gtk/gtk.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="34.html#line-28">28</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;glib/gi18n.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="34.html#line-29">29</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;libmate-desktop/mate-colorseldialog.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+         <tr class="missingIncludeSystem sev_information issue"><td><a href="34.html#line-30">30</a></td><td>missingIncludeSystem</td><td></td><td>information</td><td>Include file: &lt;libmate-desktop/mate-colorsel.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.</td></tr>
+      </tbody>
+       </table>
+    </div>
+    <div id="footer" class="footer">
+      <p>
+        Created by Cppcheck 2.14.2 (<a href="https://cppcheck.sourceforge.io">Sourceforge</a>, <a href="irc://irc.freenode.net/cppcheck">IRC</a>)
+      </p>
+    </div>
+    </div>
+  </body>
+</html>

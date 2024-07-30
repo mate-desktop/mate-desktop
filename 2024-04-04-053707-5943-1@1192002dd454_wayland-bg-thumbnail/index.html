@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>rootdir - scan-build results</title>
+<link type="text/css" rel="stylesheet" href="scanview.css"/>
+<script src="sorttable.js"></script>
+<script language='javascript' type="text/javascript">
+function SetDisplay(RowClass, DisplayVal)
+{
+  var Rows = document.getElementsByTagName("tr");
+  for ( var i = 0 ; i < Rows.length; ++i ) {
+    if (Rows[i].className == RowClass) {
+      Rows[i].style.display = DisplayVal;
+    }
+  }
+}
+
+function CopyCheckedStateToCheckButtons(SummaryCheckButton) {
+  var Inputs = document.getElementsByTagName("input");
+  for ( var i = 0 ; i < Inputs.length; ++i ) {
+    if (Inputs[i].type == "checkbox") {
+      if(Inputs[i] != SummaryCheckButton) {
+        Inputs[i].checked = SummaryCheckButton.checked;
+        Inputs[i].onclick();
+      }
+    }
+  }
+}
+
+function returnObjById( id ) {
+    if (document.getElementById)
+        var returnVar = document.getElementById(id);
+    else if (document.all)
+        var returnVar = document.all[id];
+    else if (document.layers)
+        var returnVar = document.layers[id];
+    return returnVar;
+}
+
+var NumUnchecked = 0;
+
+function ToggleDisplay(CheckButton, ClassName) {
+  if (CheckButton.checked) {
+    SetDisplay(ClassName, "");
+    if (--NumUnchecked == 0) {
+      returnObjById("AllBugsCheck").checked = true;
+    }
+  }
+  else {
+    SetDisplay(ClassName, "none");
+    NumUnchecked++;
+    returnObjById("AllBugsCheck").checked = false;
+  }
+}
+</script>
+<!-- SUMMARYENDHEAD -->
+</head>
+<body>
+<h1>rootdir - scan-build results</h1>
+
+<table>
+<tr><th>User:</th><td>root@7204d9fef646</td></tr>
+<tr><th>Working Directory:</th><td>/rootdir</td></tr>
+<tr><th>Command Line:</th><td>make -j 2</td></tr>
+<tr><th>Clang Version:</th><td>clang version 17.0.6 (Fedora 17.0.6-2.fc39)
+</td></tr>
+<tr><th>Date:</th><td>Thu Apr  4 05:37:07 2024</td></tr>
+</table>
+<h2>Bug Summary</h2><table>
+<thead><tr><td>Bug Type</td><td>Quantity</td><td class="sorttable_nosort">Display?</td></tr></thead>
+<tr style="font-weight:bold"><td class="SUMM_DESC">All Bugs</td><td class="Q">16</td><td><center><input type="checkbox" id="AllBugsCheck" onClick="CopyCheckedStateToCheckButtons(this);" checked/></center></td></tr>
+<tr><th>Logic error</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Garbage return value</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_garbage_return_value');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Out-of-bound access</td><td class="Q">5</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_out-of-bound_access');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Uninitialized argument value</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_uninitialized_argument_value');" checked/></center></td></tr>
+<tr><th>Memory error</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Use-after-free</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_memory_error_use-after-free');" checked/></center></td></tr>
+<tr><th>Unused code</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Dead nested assignment</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_unused_code_dead_nested_assignment');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Unreachable code</td><td class="Q">7</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_unused_code_unreachable_code');" checked/></center></td></tr>
+</table>
+<h2>Reports</h2>
+
+<table class="sortable" style="table-layout:automatic">
+<thead><tr>
+  <td>Bug Group</td>
+  <td class="sorttable_sorted">Bug Type<span id="sorttable_sortfwdind">&nbsp;&#x25BE;</span></td>
+  <td>File</td>
+  <td>Function/Method</td>
+  <td class="Q">Line</td>
+  <td class="Q">Path Length</td>
+  <td class="sorttable_nosort"></td>
+  <!-- REPORTBUGCOL -->
+</tr></thead>
+<tbody>
+<tr class="bt_unused_code_dead_nested_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead nested assignment</td><td>docs/reference/mate-desktop/mate-desktop-scan.c</td><td class="DESC">output_object_signal</td><td class="Q">188</td><td class="Q">1</td><td><a href="report-25ea44.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-25ea44.html" -->
+</tr>
+<tr class="bt_logic_error_garbage_return_value"><td class="DESC">Logic error</td><td class="DESC">Garbage return value</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">ditem_execute</td><td class="Q">2037</td><td class="Q">53</td><td><a href="report-6a2986.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-6a2986.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3121</td><td class="Q">27</td><td><a href="report-30e8a4.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-30e8a4.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3129</td><td class="Q">27</td><td><a href="report-425c9c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-425c9c.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3125</td><td class="Q">27</td><td><a href="report-689d47.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-689d47.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3120</td><td class="Q">37</td><td><a href="report-8fac16.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-8fac16.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>libmate-desktop/mate-desktop-item.c</td><td class="DESC">escape_string_and_dup</td><td class="Q">3136</td><td class="Q">24</td><td><a href="report-d0e85f.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d0e85f.html" -->
+</tr>
+<tr class="bt_logic_error_uninitialized_argument_value"><td class="DESC">Logic error</td><td class="DESC">Uninitialized argument value</td><td>libmate-desktop/mate-bg.c</td><td class="DESC">create_img_thumbnail</td><td class="Q">2276</td><td class="Q">76</td><td><a href="report-f1d0a2.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f1d0a2.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>libmate-desktop/mate-hsv.c</td><td class="DESC">mate_hsv_button_press</td><td class="Q">670</td><td class="Q">1</td><td><a href="report-413fe6.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-413fe6.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>libmate-desktop/mate-hsv.c</td><td class="DESC">mate_hsv_button_press</td><td class="Q">652</td><td class="Q">1</td><td><a href="report-4a69b4.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-4a69b4.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>libmate-desktop/mate-languages.c</td><td class="DESC">mate_get_language_from_locale</td><td class="Q">1163</td><td class="Q">1</td><td><a href="report-563e6a.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-563e6a.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>libmate-desktop/mate-languages.c</td><td class="DESC">mate_get_country_from_locale</td><td class="Q">1218</td><td class="Q">1</td><td><a href="report-6e323f.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-6e323f.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>libmate-desktop/mate-languages.c</td><td class="DESC">mate_get_language_from_locale</td><td class="Q">1137</td><td class="Q">1</td><td><a href="report-a7ec2e.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-a7ec2e.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>libmate-desktop/mate-languages.c</td><td class="DESC">mate_get_country_from_locale</td><td class="Q">1244</td><td class="Q">1</td><td><a href="report-f4adeb.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f4adeb.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>libmate-desktop/tmp-introspectv9kvk83f/MateDesktop-2.0.c</td><td class="DESC">value_to_string</td><td class="Q">181</td><td class="Q">1</td><td><a href="report-fb6164.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-fb6164.html" -->
+</tr>
+<tr class="bt_memory_error_use-after-free"><td class="DESC">Memory error</td><td class="DESC">Use-after-free</td><td>libmate-desktop/mate-colorsel.c</td><td class="DESC">hex_changed</td><td class="Q">1876</td><td class="Q">13</td><td><a href="report-2f348d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-2f348d.html" -->
+</tr>
+</tbody>
+</table>
+
+</body></html>
