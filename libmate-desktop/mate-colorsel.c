@@ -43,6 +43,8 @@
 #define GTK_CUSTOM_PALETTE_WIDTH 9
 #define GTK_CUSTOM_PALETTE_HEIGHT 4
 
+#define SIZE_OF_COLOR_PALETTE (GTK_CUSTOM_PALETTE_WIDTH * GTK_CUSTOM_PALETTE_HEIGHT * 8)
+
 #define CUSTOM_PALETTE_ENTRY_WIDTH   20
 #define CUSTOM_PALETTE_ENTRY_HEIGHT  20
 
@@ -205,6 +207,8 @@ static guint color_selection_signals[LAST_SIGNAL] = { 0 };
 
 static MateColorSelectionChangePaletteFunc noscreen_change_palette_hook = default_noscreen_change_palette_func;
 static MateColorSelectionChangePaletteWithScreenFunc change_palette_hook = default_change_palette_func;
+
+static gchar color_palette[SIZE_OF_COLOR_PALETTE] = "#ef2929:#fcaf3e:#fce94f:#8ae234:#729fcf:#ad7fa8:#e9b96e:#888a85:#eeeeec:#cc0000:#f57900:#edd400:#73d216:#3465a4:#75507b:#c17d11:#555753:#d3d7cf:#a40000:#ce5c00:#c4a000:#4e9a06:#204a87:#5c3566:#8f5902:#2e3436:#babdb6:#000000:#2e3436:#555753:#888a85:#babdb6:#d3d7cf:#eeeeec:#f3f3f3:#ffffff";
 
 static const guchar dropper_bits[] = {
 "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
@@ -1149,7 +1153,7 @@ get_current_colors (MateColorSelection *colorsel)
   GdkRGBA *colors = NULL;
   gint n_colors = 0;
 
-  mate_color_selection_palette_from_string (DEFAULT_COLOR_PALETTE,
+  mate_color_selection_palette_from_string (color_palette,
                                             &colors,
                                             &n_colors);
 
@@ -2202,6 +2206,8 @@ default_change_palette_func (GdkScreen	    *screen,
 
   str = mate_color_selection_palette_to_string (colors, n_colors);
 
+  g_strlcpy(color_palette, str, SIZE_OF_COLOR_PALETTE);
+
   g_object_set (G_OBJECT (gtk_settings_get_for_screen (screen)),
                 "gtk-color-palette",
                 str,
@@ -2779,9 +2785,9 @@ mate_color_selection_palette_to_string (const GdkRGBA *colors,
 
       strs[i] =
         g_strdup_printf ("#%2X%2X%2X",
-                         (unsigned int)colors[i].red * 255,
-                         (unsigned int)colors[i].green * 255,
-                         (unsigned int)colors[i].blue * 255);
+                         (guint) scale_round (colors[i].red, 255),
+                         (guint) scale_round (colors[i].green, 255),
+                         (guint) scale_round (colors[i].blue, 255));
 
       for (ptr = strs[i]; *ptr; ptr++)
         if (*ptr == ' ')
