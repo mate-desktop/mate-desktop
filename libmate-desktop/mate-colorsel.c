@@ -208,7 +208,7 @@ static guint color_selection_signals[LAST_SIGNAL] = { 0 };
 static MateColorSelectionChangePaletteFunc noscreen_change_palette_hook = default_noscreen_change_palette_func;
 static MateColorSelectionChangePaletteWithScreenFunc change_palette_hook = default_change_palette_func;
 
-static gchar color_palette[SIZE_OF_COLOR_PALETTE] = DEFAULT_COLOR_PALETTE;
+static gchar color_palette[SIZE_OF_COLOR_PALETTE] = { 0 };
 
 static const guchar dropper_bits[] = {
 "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"
@@ -1151,7 +1151,23 @@ static GdkRGBA *
 get_current_colors (MateColorSelection *colorsel)
 {
   GdkRGBA *colors = NULL;
+  GSettings *settings;
+  gchar *str = NULL;
   gint n_colors = 0;
+
+  if (!*color_palette)
+    {
+      settings = g_settings_new ("org.mate.interface");
+      str = g_settings_get_string (settings, "gtk-color-palette");
+      g_object_unref (settings);
+
+      if (str && *str)
+        g_strlcpy(color_palette, str, SIZE_OF_COLOR_PALETTE);
+      else
+        g_strlcpy(color_palette, DEFAULT_COLOR_PALETTE, SIZE_OF_COLOR_PALETTE);
+
+      g_free (str);
+    }
 
   mate_color_selection_palette_from_string (color_palette,
                                             &colors,
@@ -2202,11 +2218,14 @@ default_change_palette_func (GdkScreen	    *screen,
                              const GdkRGBA  *colors,
                              gint            n_colors)
 {
+  GSettings *settings;
   gchar *str;
 
   str = mate_color_selection_palette_to_string (colors, n_colors);
 
   g_strlcpy(color_palette, str, SIZE_OF_COLOR_PALETTE);
+  settings = g_settings_new ("org.mate.interface");
+  g_settings_set_string (settings, "gtk-color-palette", str);
 
   g_object_set (G_OBJECT (gtk_settings_get_for_screen (screen)),
                 "gtk-color-palette",
@@ -2214,6 +2233,7 @@ default_change_palette_func (GdkScreen	    *screen,
                 NULL);
 
   g_free (str);
+  g_object_unref (settings);
 }
 
 /**
