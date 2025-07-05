@@ -1,0 +1,8 @@
+# Enable dependabot to keep our GHA pins automatically
+# updated, so we don't fall too far behind in the future
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly

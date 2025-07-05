@@ -1,0 +1,84 @@
+name: CI Build
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+# cancel already running builds of the same branch or pull request
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.head_ref || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: ${{matrix.container}} (${{matrix.cc}} ${{matrix.build-system}})
+    runs-on: ubuntu-latest
+    container:
+      image: ${{matrix.container}}
+      volumes:
+        - /tmp/.cache
+        - /var/cache/apt
+
+    strategy:
+      fail-fast: false # don't cancel other jobs in the matrix if one fails
+      matrix:
+        container:
+          [
+            "debian:testing",
+            "fedora:latest",
+            "ubuntu:rolling",
+            "archlinux:latest",
+          ]
+        cc: ["gcc"]
+        cxx: ["g++"]
+        build-system: ["autotools", "meson"]
+        include:
+          - container: "archlinux:latest"
+            build-system: "autotools"
+            cc: "clang"
+            cxx: "clang++"
+          - container: "archlinux:latest"
+            build-system: "meson"
+            cc: "clang"
+            cxx: "clang++"
+
+    env:
+      # Speed up build with ccache
+      CC: ccache ${{ matrix.cc }}
+      CXX: ccache ${{ matrix.cxx }}
+      CONTAINER: ${{ matrix.container }}
+
+    steps:
+      - name: Setup environment variables
+        id: distro-name
+        shell: bash
+        run: |
+          split=(${CONTAINER//:/ })
+          distro=${split[0]}
+          short_sha=${SHA:0:8}
+          echo "DISTRO=$distro" | tee -a  $GITHUB_ENV
+      - name: Install git command
+        shell: bash
+        run: |
+          echo "::group::Install git ..."
+          apt-get update -qq && apt-get install --assume-yes git || true
+          dnf update -y && dnf install -y git || true
+          pacman --noconfirm -Sy git || true
+          echo "::endgroup::"
+      - name: Repository checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: "true"
+      - name: Install dependency packages
+        run: .github/workflows/${{ env.DISTRO }}.sh
+      - name: Enable ccache to speed up builds
+        uses: hendrikmuhs/ccache-action@v1.2
+        with:
+          key: ${{ env.DISTRO }}-${{ matrix.cc }}
+      - name: Build the source code
+        run: .github/workflows/builds.sh ${{ matrix.build-system }}
