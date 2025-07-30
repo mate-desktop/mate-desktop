@@ -37,11 +37,11 @@
 #include "mate-colorsel.h"
 #include "mate-hsv.h"
 
-#define DEFAULT_COLOR_PALETTE "#ef2929:#fcaf3e:#fce94f:#8ae234:#729fcf:#ad7fa8:#e9b96e:#888a85:#eeeeec:#cc0000:#f57900:#edd400:#73d216:#3465a4:#75507b:#c17d11:#555753:#d3d7cf:#a40000:#ce5c00:#c4a000:#4e9a06:#204a87:#5c3566:#8f5902:#2e3436:#babdb6:#000000:#2e3436:#555753:#888a85:#babdb6:#d3d7cf:#eeeeec:#f3f3f3:#ffffff"
+#define DEFAULT_COLOR_PALETTE "#ef2929:#fcaf3e:#fce94f:#8ae234:#729fcf:#ad7fa8:#e9b96e:#888a85:#eeeeec:#cc0000:#f57900:#edd400:#73d216:#3465a4:#75507b:#c17d11:#555753:#d3d7cf:#a40000:#ce5c00:#c4a000:#4e9a06:#204a87:#5c3566:#8f5902:#2e3436:#babdb6:#000000:#2e3436:#555753:#888a85:#babdb6:#d3d7cf:#eeeeec:#f3f3f3:#ffffff:#ffffff:#ffffff:#ffffff:#ffffff:#ffffff:#ffffff:#ffffff:#ffffff:#ffffff"
 
 /* Number of elements in the custom palatte */
 #define GTK_CUSTOM_PALETTE_WIDTH 9
-#define GTK_CUSTOM_PALETTE_HEIGHT 4
+#define GTK_CUSTOM_PALETTE_HEIGHT 5
 
 #define SIZE_OF_COLOR_PALETTE (GTK_CUSTOM_PALETTE_WIDTH * GTK_CUSTOM_PALETTE_HEIGHT * 8)
 
@@ -116,7 +116,7 @@ struct _MateColorSelectionPrivate
   GtkWidget *hex_entry;
 
   /* The Palette code */
-  GtkWidget *custom_palette [GTK_CUSTOM_PALETTE_WIDTH][GTK_CUSTOM_PALETTE_HEIGHT];
+  GtkWidget *custom_palette [GTK_CUSTOM_PALETTE_HEIGHT][GTK_CUSTOM_PALETTE_WIDTH];
 
   /* The color_sample stuff */
   GtkWidget *sample_area;
@@ -153,11 +153,8 @@ static gboolean mate_color_selection_grab_broken (GtkWidget               *widge
 static void     mate_color_selection_set_palette_color   (MateColorSelection *colorsel,
                                                          gint               index,
                                                          GdkRGBA          *color);
-static void     default_noscreen_change_palette_func    (const GdkRGBA    *colors,
-							 gint               n_colors);
 static void     default_change_palette_func             (GdkScreen	   *screen,
-							 const GdkRGBA    *colors,
-							 gint               n_colors);
+                                                         gchar             *pal);
 static void     make_control_relations                  (AtkObject         *atk_obj,
                                                          GtkWidget         *widget);
 static void     make_all_relations                      (AtkObject         *atk_obj,
@@ -186,11 +183,11 @@ static void 	make_label_spinbutton     		(MateColorSelection *colorsel,
 	    				  		 const gchar       *tooltip);
 static void 	make_palette_frame                      (MateColorSelection *colorsel,
 							 GtkWidget         *grid,
-							 gint               i,
-							 gint               j);
+							 gint               row,
+							 gint               col);
 static void 	set_selected_palette                    (MateColorSelection *colorsel,
-							 int                x,
-							 int                y);
+							 int                row,
+							 int                col);
 static void 	set_focus_line_attributes               (GtkWidget 	   *drawing_area,
 							 cairo_t   	   *cr,
 							 gint      	   *focus_width);
@@ -204,9 +201,6 @@ static void update_palette (MateColorSelection *colorsel);
 static void shutdown_eyedropper (GtkWidget *widget);
 
 static guint color_selection_signals[LAST_SIGNAL] = { 0 };
-
-static MateColorSelectionChangePaletteFunc noscreen_change_palette_hook = default_noscreen_change_palette_func;
-static MateColorSelectionChangePaletteWithScreenFunc change_palette_hook = default_change_palette_func;
 
 static gchar color_palette[SIZE_OF_COLOR_PALETTE] = { 0 };
 
@@ -322,7 +316,6 @@ mate_color_selection_init (MateColorSelection *colorsel)
   GtkWidget *grid, *label, *hbox, *frame, *vbox, *button;
   GtkAdjustment *adjust;
   GtkWidget *picker_image;
-  gint i, j;
   MateColorSelectionPrivate *priv;
   AtkObject *atk_obj;
   GList *focus_chain = NULL;
@@ -445,20 +438,18 @@ mate_color_selection_init (MateColorSelection *colorsel)
   focus_chain = g_list_append (focus_chain, priv->opacity_slider);
   focus_chain = g_list_append (focus_chain, priv->opacity_entry);
   focus_chain = g_list_append (focus_chain, priv->hex_entry);
-  gtk_container_set_focus_chain (GTK_CONTAINER (grid), focus_chain);
+//  gtk_container_set_focus_chain (GTK_CONTAINER (grid), focus_chain);
   g_list_free (focus_chain);
 
   /* Set up the palette */
   grid = gtk_grid_new ();
-  gtk_grid_set_row_spacing (GTK_GRID (grid), 1);
-  gtk_grid_set_column_spacing (GTK_GRID (grid), 1);
-  for (i = 0; i < GTK_CUSTOM_PALETTE_WIDTH; i++)
-    {
-      for (j = 0; j < GTK_CUSTOM_PALETTE_HEIGHT; j++)
-	{
-	  make_palette_frame (colorsel, grid, i, j);
-	}
-    }
+  gtk_grid_set_row_spacing (GTK_GRID (grid), 3);
+  gtk_grid_set_column_spacing (GTK_GRID (grid), 3);
+
+  for (int i=0; i < GTK_CUSTOM_PALETTE_HEIGHT; ++i)
+    for (int j=0; j < GTK_CUSTOM_PALETTE_WIDTH; ++j)
+      make_palette_frame (colorsel, grid, i, j);
+
   set_selected_palette (colorsel, 0, 0);
   priv->palette_frame = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   label = gtk_label_new_with_mnemonic (_("_Palette:"));
@@ -1152,24 +1143,27 @@ get_current_colors (MateColorSelection *colorsel)
 {
   GdkRGBA *colors = NULL;
   GSettings *settings;
-  gchar *str = NULL;
+  gchar *pal;
+  gchar *str;
   gint n_colors = 0;
 
-  if (!*color_palette)
+  pal = color_palette;
+
+  if (!*pal)
     {
-      settings = g_settings_new ("org.mate.interface");
-      str = g_settings_get_string (settings, "gtk-color-palette");
+      settings = g_settings_new ("org.mate.applications-colors");
+      str = g_settings_get_string (settings, "color-select");
       g_object_unref (settings);
 
       if (str && *str)
-        g_strlcpy(color_palette, str, SIZE_OF_COLOR_PALETTE);
+        g_strlcpy(pal, str, SIZE_OF_COLOR_PALETTE);
       else
-        g_strlcpy(color_palette, DEFAULT_COLOR_PALETTE, SIZE_OF_COLOR_PALETTE);
+        g_strlcpy(pal, DEFAULT_COLOR_PALETTE, SIZE_OF_COLOR_PALETTE);
 
       g_free (str);
     }
 
-  mate_color_selection_palette_from_string (color_palette,
+  mate_color_selection_palette_from_string (pal,
                                             &colors,
                                             &n_colors);
 
@@ -1181,15 +1175,16 @@ get_current_colors (MateColorSelection *colorsel)
 
 /* Changes the model color */
 static void
-palette_change_color (GtkWidget         *drawing_area,
+palette_change_color (GtkWidget          *drawing_area,
                       MateColorSelection *colorsel,
-                      gdouble           *color)
+                      gdouble            *color)
 {
-  gint x, y;
   MateColorSelectionPrivate *priv;
   GdkRGBA gdk_color;
   GdkRGBA *current_colors;
   GdkScreen *screen;
+  gchar *pal;
+  gint row, col;
 
   g_return_if_fail (MATE_IS_COLOR_SELECTION (colorsel));
   g_return_if_fail (GTK_IS_DRAWING_AREA (drawing_area));
@@ -1200,52 +1195,32 @@ palette_change_color (GtkWidget         *drawing_area,
   gdk_color.green = color[1];
   gdk_color.blue = color[2];
 
-  x = 0;
-  y = 0;			/* Quiet GCC */
-  while (x < GTK_CUSTOM_PALETTE_WIDTH)
-    {
-      y = 0;
-      while (y < GTK_CUSTOM_PALETTE_HEIGHT)
-        {
-          if (priv->custom_palette[x][y] == drawing_area)
-            goto out;
-
-          ++y;
-        }
-
-      ++x;
-    }
-
+  for (row=0; row < GTK_CUSTOM_PALETTE_HEIGHT; ++row)
+    for (col=0; col < GTK_CUSTOM_PALETTE_WIDTH; ++col)
+      if (priv->custom_palette[row][col] == drawing_area)
+        goto out;
  out:
 
-  g_assert (x < GTK_CUSTOM_PALETTE_WIDTH || y < GTK_CUSTOM_PALETTE_HEIGHT);
+  g_assert (row < GTK_CUSTOM_PALETTE_HEIGHT || col < GTK_CUSTOM_PALETTE_WIDTH);
 
   current_colors = get_current_colors (colorsel);
-  current_colors[y * GTK_CUSTOM_PALETTE_WIDTH + x] = gdk_color;
+  current_colors[row * GTK_CUSTOM_PALETTE_WIDTH + col] = gdk_color;
 
   screen = gtk_widget_get_screen (GTK_WIDGET (colorsel));
-  if (change_palette_hook != default_change_palette_func)
-    (* change_palette_hook) (screen, current_colors,
-			     GTK_CUSTOM_PALETTE_WIDTH * GTK_CUSTOM_PALETTE_HEIGHT);
-  else if (noscreen_change_palette_hook != default_noscreen_change_palette_func)
-    {
-      if (screen != gdk_screen_get_default ())
-	g_warning ("mate_color_selection_set_change_palette_hook used by widget is not on the default screen.");
-      (* noscreen_change_palette_hook) (current_colors,
-					GTK_CUSTOM_PALETTE_WIDTH * GTK_CUSTOM_PALETTE_HEIGHT);
-    }
-  else
-    (* change_palette_hook) (screen, current_colors,
-			     GTK_CUSTOM_PALETTE_WIDTH * GTK_CUSTOM_PALETTE_HEIGHT);
+  pal = mate_color_selection_palette_to_string (current_colors,
+			     GTK_CUSTOM_PALETTE_HEIGHT * GTK_CUSTOM_PALETTE_WIDTH);
 
+  default_change_palette_func (screen, pal);
+
+  g_free (pal);
   g_free (current_colors);
 }
 
 /* Changes the view color */
 static void
-palette_set_color (GtkWidget         *drawing_area,
+palette_set_color (GtkWidget          *drawing_area,
 		   MateColorSelection *colorsel,
-		   gdouble           *color)
+		   gdouble            *color)
 {
   gpointer pointer;
   gdouble *new_color = g_new (double, 4);
@@ -2073,8 +2048,8 @@ make_label_spinbutton (MateColorSelection *colorsel,
 static void
 make_palette_frame (MateColorSelection *colorsel,
 		    GtkWidget         *grid,
-		    gint               i,
-		    gint               j)
+		    gint               row,
+		    gint               col)
 {
   GtkWidget *frame;
   MateColorSelectionPrivate *priv;
@@ -2082,20 +2057,20 @@ make_palette_frame (MateColorSelection *colorsel,
   priv = colorsel->private_data;
   frame = gtk_frame_new (NULL);
   gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_IN);
-  priv->custom_palette[i][j] = palette_new (colorsel);
-  gtk_widget_set_size_request (priv->custom_palette[i][j], CUSTOM_PALETTE_ENTRY_WIDTH, CUSTOM_PALETTE_ENTRY_HEIGHT);
-  gtk_container_add (GTK_CONTAINER (frame), priv->custom_palette[i][j]);
+  priv->custom_palette[row][col] = palette_new (colorsel);
+  gtk_widget_set_size_request (priv->custom_palette[row][col], CUSTOM_PALETTE_ENTRY_WIDTH, CUSTOM_PALETTE_ENTRY_HEIGHT);
+  gtk_container_add (GTK_CONTAINER (frame), priv->custom_palette[row][col]);
   gtk_widget_set_hexpand (frame, TRUE);
-  gtk_grid_attach (GTK_GRID (grid), frame, i, j, 1, 1);
+  gtk_grid_attach (GTK_GRID (grid), frame, col, row, 1, 1);  // reversed!
 }
 
 /* Set the palette entry [x][y] to be the currently selected one. */
 static void
-set_selected_palette (MateColorSelection *colorsel, int x, int y)
+set_selected_palette (MateColorSelection *colorsel, int row, int col)
 {
   MateColorSelectionPrivate *priv = colorsel->private_data;
 
-  gtk_widget_grab_focus (priv->custom_palette[x][y]);
+  gtk_widget_grab_focus (priv->custom_palette[row][col]);
 }
 
 static double
@@ -2176,25 +2151,13 @@ update_color (MateColorSelection *colorsel)
 static void
 update_palette (MateColorSelection *colorsel)
 {
-  GdkRGBA *current_colors;
-  gint i, j;
+  GdkRGBA *current_colors = get_current_colors (colorsel);
 
-  current_colors = get_current_colors (colorsel);
-
-  for (i = 0; i < GTK_CUSTOM_PALETTE_HEIGHT; i++)
-    {
-      for (j = 0; j < GTK_CUSTOM_PALETTE_WIDTH; j++)
-	{
-          gint index;
-
-          index = i * GTK_CUSTOM_PALETTE_WIDTH + j;
-
-          mate_color_selection_set_palette_color (colorsel,
-                                                 index,
-                                                 &current_colors[index]);
-	}
-    }
-
+  for (int i=0; i < GTK_CUSTOM_PALETTE_HEIGHT; ++i)
+    for (int j=0; j < GTK_CUSTOM_PALETTE_WIDTH; ++j)
+      mate_color_selection_set_palette_color (colorsel,
+                                              i * GTK_CUSTOM_PALETTE_WIDTH + j,
+                                              &current_colors[i * GTK_CUSTOM_PALETTE_WIDTH + j]);
   g_free (current_colors);
 }
 
@@ -2207,33 +2170,15 @@ palette_change_notify_instance (GObject    *object,
 }
 
 static void
-default_noscreen_change_palette_func (const GdkRGBA *colors,
-				      gint            n_colors)
+default_change_palette_func (GdkScreen *screen,
+                             gchar     *pal)
 {
-  default_change_palette_func (gdk_screen_get_default (), colors, n_colors);
-}
-
-static void
-default_change_palette_func (GdkScreen	    *screen,
-                             const GdkRGBA  *colors,
-                             gint            n_colors)
-{
-  GSettings *settings;
-  gchar *str;
-
-  str = mate_color_selection_palette_to_string (colors, n_colors);
-
-  g_strlcpy(color_palette, str, SIZE_OF_COLOR_PALETTE);
-  settings = g_settings_new ("org.mate.interface");
-  g_settings_set_string (settings, "gtk-color-palette", str);
+  g_strlcpy(color_palette, pal, SIZE_OF_COLOR_PALETTE);
 
   g_object_set (G_OBJECT (gtk_settings_get_for_screen (screen)),
                 "gtk-color-palette",
-                str,
+                pal,
                 NULL);
-
-  g_free (str);
-  g_object_unref (settings);
 }
 
 /**
@@ -2651,21 +2596,20 @@ mate_color_selection_set_palette_color (MateColorSelection   *colorsel,
 				       GdkRGBA            *color)
 {
   MateColorSelectionPrivate *priv;
-  gint x, y;
-  gdouble col[3];
+  gdouble new[3];
 
   g_return_if_fail (MATE_IS_COLOR_SELECTION (colorsel));
-  g_return_if_fail (index >= 0  && index < GTK_CUSTOM_PALETTE_WIDTH*GTK_CUSTOM_PALETTE_HEIGHT);
+  g_return_if_fail (index >= 0  && index < GTK_CUSTOM_PALETTE_WIDTH * GTK_CUSTOM_PALETTE_HEIGHT);
 
-  x = index % GTK_CUSTOM_PALETTE_WIDTH;
-  y = index / GTK_CUSTOM_PALETTE_WIDTH;
+  gint row = index / GTK_CUSTOM_PALETTE_WIDTH;
+  gint col = index % GTK_CUSTOM_PALETTE_WIDTH;
 
   priv = colorsel->private_data;
-  col[0] = color->red;
-  col[1] = color->green;
-  col[2] = color->blue;
+  new[0] = color->red;
+  new[1] = color->green;
+  new[2] = color->blue;
 
-  palette_set_color (priv->custom_palette[x][y], colorsel, col);
+  palette_set_color (priv->custom_palette[row][col], colorsel, new);
 }
 
 /**
@@ -2823,56 +2767,46 @@ mate_color_selection_palette_to_string (const GdkRGBA *colors,
   return retval;
 }
 
-/**
- * mate_color_selection_set_change_palette_hook:
- * @func: a function to call when the custom palette needs saving.
- *
- * Installs a global function to be called whenever the user tries to
- * modify the palette in a color selection. This function should save
- * the new palette contents, and update the GtkSettings property
- * "gtk-color-palette" so all MateColorSelection widgets will be modified.
- *
- * Return value: the previous change palette hook (that was replaced).
- *
- * Deprecated: 2.4: This function does not work in multihead environments.
- *     Use mate_color_selection_set_change_palette_with_screen_hook() instead.
- *
- **/
-MateColorSelectionChangePaletteFunc
-mate_color_selection_set_change_palette_hook (MateColorSelectionChangePaletteFunc func)
+void
+mate_color_selection_palette_save ()
 {
-  MateColorSelectionChangePaletteFunc old;
+  GSettings *settings;
 
-  old = noscreen_change_palette_hook;
+  settings = g_settings_new ("org.mate.applications-colors");
+  g_settings_set_string (settings, "color-select", color_palette);
 
-  noscreen_change_palette_hook = func;
-
-  return old;
+  g_object_unref (settings);
 }
 
-/**
- * mate_color_selection_set_change_palette_with_screen_hook:
- * @func: a function to call when the custom palette needs saving.
- *
- * Installs a global function to be called whenever the user tries to
- * modify the palette in a color selection. This function should save
- * the new palette contents, and update the GtkSettings property
- * "gtk-color-palette" so all MateColorSelection widgets will be modified.
- *
- * Return value: the previous change palette hook (that was replaced).
- *
- * Since: 1.9.1
- **/
-MateColorSelectionChangePaletteWithScreenFunc
-mate_color_selection_set_change_palette_with_screen_hook (MateColorSelectionChangePaletteWithScreenFunc func)
+void
+mate_color_selection_palette_load (MateColorSelection *colorsel)
 {
-  MateColorSelectionChangePaletteWithScreenFunc old;
+  GSettings *settings;
+  gchar *str;
 
-  old = change_palette_hook;
+  settings = g_settings_new ("org.mate.applications-colors");
+  str = g_settings_get_string (settings, "color-select");
 
-  change_palette_hook = func;
+  mate_color_selection_palette_set (colorsel, str);
 
-  return old;
+  g_free (str);
+  g_object_unref (settings);
+}
+
+void
+mate_color_selection_palette_set (MateColorSelection *colorsel, gchar *pal)
+{
+  GdkScreen *screen = gtk_widget_get_screen (GTK_WIDGET (colorsel));
+  MateColorSelectionPrivate *priv = colorsel->private_data;
+
+  if (!pal)
+    pal = DEFAULT_COLOR_PALETTE;
+
+  default_change_palette_func (screen, pal);
+
+  for (int i=0; i < GTK_CUSTOM_PALETTE_HEIGHT; ++i)
+    for (int j=0; j < GTK_CUSTOM_PALETTE_WIDTH; ++j)
+      gtk_widget_queue_draw (GTK_WIDGET (priv->custom_palette[i][j]));
 }
 
 static void
