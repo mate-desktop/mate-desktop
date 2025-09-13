@@ -35,8 +35,6 @@
 enum {
   PROP_0,
   PROP_COLOR_SELECTION,
-  PROP_OK_BUTTON,
-  PROP_CANCEL_BUTTON,
   PROP_HELP_BUTTON
 };
 
@@ -71,12 +69,6 @@ mate_color_selection_dialog_get_property (GObject         *object,
     case PROP_COLOR_SELECTION:
       g_value_set_object (value, colorsel->colorsel);
       break;
-    case PROP_OK_BUTTON:
-      g_value_set_object (value, colorsel->ok_button);
-      break;
-    case PROP_CANCEL_BUTTON:
-      g_value_set_object (value, colorsel->cancel_button);
-      break;
     case PROP_HELP_BUTTON:
       g_value_set_object (value, colorsel->help_button);
       break;
@@ -97,20 +89,6 @@ mate_color_selection_dialog_class_init (MateColorSelectionDialogClass *klass)
 				   g_param_spec_object ("color-selection",
 						     _("Color Selection"),
 						     _("The color selection embedded in the dialog."),
-						     GTK_TYPE_WIDGET,
-						     G_PARAM_READABLE));
-  g_object_class_install_property (gobject_class,
-				   PROP_OK_BUTTON,
-				   g_param_spec_object ("ok-button",
-						     _("OK Button"),
-						     _("The OK button of the dialog."),
-						     GTK_TYPE_WIDGET,
-						     G_PARAM_READABLE));
-  g_object_class_install_property (gobject_class,
-				   PROP_CANCEL_BUTTON,
-				   g_param_spec_object ("cancel-button",
-						     _("Cancel Button"),
-						     _("The cancel button of the dialog."),
 						     GTK_TYPE_WIDGET,
 						     G_PARAM_READABLE));
   g_object_class_install_property (gobject_class,
@@ -146,42 +124,26 @@ mate_color_selection_dialog_init (MateColorSelectionDialog *colorseldiag)
 
   _mate_desktop_init_i18n ();
 
-  gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+  gtk_container_set_border_width (GTK_CONTAINER (dialog), 4);
   gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (dialog)), 6);
 
   colorseldiag->colorsel = mate_color_selection_new ();
-  gtk_container_set_border_width (GTK_CONTAINER (colorseldiag->colorsel), 5);
+  gtk_container_set_border_width (GTK_CONTAINER (colorseldiag->colorsel), 2);
   mate_color_selection_set_has_palette (MATE_COLOR_SELECTION(colorseldiag->colorsel), FALSE);
   mate_color_selection_set_has_opacity_control (MATE_COLOR_SELECTION(colorseldiag->colorsel), FALSE);
-  gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (colorseldiag))), colorseldiag->colorsel);
+  gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (dialog)), colorseldiag->colorsel);
+  gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (dialog)), gtk_separator_new (GTK_ORIENTATION_HORIZONTAL));
   gtk_widget_show (colorseldiag->colorsel);
 
-  colorseldiag->cancel_button = mate_add_dialog_button (GTK_DIALOG (colorseldiag),
-                                                        _("_Cancel"),
-                                                        "gtk-cancel",
-                                                        GTK_RESPONSE_CANCEL);
-
-  colorseldiag->ok_button = mate_add_dialog_button (GTK_DIALOG (colorseldiag),
-                                                    _("_OK"),
-                                                    "gtk-ok",
-                                                    GTK_RESPONSE_OK);
-
-  gtk_widget_set_can_default (colorseldiag->ok_button, TRUE);
-  gtk_widget_grab_default (colorseldiag->ok_button);
-
   colorseldiag->help_button = mate_add_dialog_button (GTK_DIALOG (colorseldiag),
-                                                      _("Help"),
-                                                      "help-browser",
+                                                      _("_About"),
+                                                      "mate-desktop",
                                                       GTK_RESPONSE_HELP);
 
   gtk_widget_hide (colorseldiag->help_button);
-  gtk_widget_show (colorseldiag->cancel_button);
-  gtk_widget_show (colorseldiag->ok_button);
 
   gtk_window_set_title (GTK_WINDOW (colorseldiag),
                         _("Color Selection"));
-
-  //_gtk_dialog_set_ignore_separator (dialog, TRUE);
 }
 
 GtkWidget*
@@ -229,11 +191,7 @@ mate_color_selection_dialog_buildable_get_internal_child (GtkBuildable *buildabl
 							 GtkBuilder   *builder,
 							 const gchar  *childname)
 {
-    if (strcmp(childname, "ok_button") == 0)
-	return G_OBJECT (MATE_COLOR_SELECTION_DIALOG (buildable)->ok_button);
-    else if (strcmp(childname, "cancel_button") == 0)
-	return G_OBJECT (MATE_COLOR_SELECTION_DIALOG (buildable)->cancel_button);
-    else if (strcmp(childname, "help_button") == 0)
+    if (strcmp(childname, "help_button") == 0)
 	return G_OBJECT (MATE_COLOR_SELECTION_DIALOG(buildable)->help_button);
     else if (strcmp(childname, "color_selection") == 0)
 	return G_OBJECT (MATE_COLOR_SELECTION_DIALOG(buildable)->colorsel);

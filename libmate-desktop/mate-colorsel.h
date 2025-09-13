@@ -104,14 +104,10 @@ gboolean mate_color_selection_palette_from_string (const gchar       *str,
                                                   gint              *n_colors);
 gchar*   mate_color_selection_palette_to_string   (const GdkRGBA    *colors,
                                                   gint               n_colors);
-
-#ifndef GTK_DISABLE_DEPRECATED
-#ifndef GDK_MULTIHEAD_SAFE
-MateColorSelectionChangePaletteFunc           mate_color_selection_set_change_palette_hook             (MateColorSelectionChangePaletteFunc           func);
-#endif
-#endif
-
-MateColorSelectionChangePaletteWithScreenFunc mate_color_selection_set_change_palette_with_screen_hook (MateColorSelectionChangePaletteWithScreenFunc func);
+void    mate_color_selection_palette_save         (void);
+void    mate_color_selection_palette_load         (MateColorSelection *colorsel);
+void    mate_color_selection_palette_set          (MateColorSelection *colorsel,
+                                                  gchar* newpal);
 
 #ifndef GTK_DISABLE_DEPRECATED
 /* Deprecated calls: */

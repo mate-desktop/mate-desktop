@@ -2,7 +2,7 @@
  * mate-color.c: MATE color selection tool
  *
  * Copyright (C) 2014 Stefano Karapetsas
- * Copyright (C) 2014-2021 MATE Developers
+ * Copyright (C) 2014-2025 MATE Developers
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -30,18 +30,105 @@
 #include <libmate-desktop/mate-colorsel.h>
 
 static gboolean
-copy_color (GtkWidget *widget, GdkEvent  *event, MateColorSelectionDialog *color_dialog)
+is_enter (GdkEvent *event)
 {
-    GdkRGBA color;
-    gchar *color_string;
+  switch (event->type)
+    {
+    case GDK_BUTTON_RELEASE:
+      return TRUE;
 
-    mate_color_selection_get_current_rgba (MATE_COLOR_SELECTION (color_dialog->colorsel), &color);
-    g_object_get (color_dialog->colorsel, "hex-string", &color_string, NULL);
+    case GDK_KEY_RELEASE:
+      switch (event->key.keyval)
+        {
+        case GDK_KEY_space:
+        case GDK_KEY_Return:
+        case GDK_KEY_ISO_Enter:
+        case GDK_KEY_KP_Enter:
+        case GDK_KEY_KP_Space:
+          return TRUE;
+        }
 
-    gtk_clipboard_set_text (gtk_clipboard_get (GDK_SELECTION_CLIPBOARD), color_string, -1);
+    default:
+      return FALSE;
+    }
+}
 
-    g_free (color_string);
-    return 0;
+static gboolean
+save (GtkWidget          *widget,
+      GdkEvent           *event,
+      MateColorSelection *color_selection)
+{
+  if (is_enter(event))
+    mate_color_selection_palette_save ();
+
+  return FALSE;
+}
+
+static gboolean
+load (GtkWidget          *widget,
+      GdkEvent           *event,
+      MateColorSelection *color_selection)
+{
+  if (is_enter(event))
+    mate_color_selection_palette_load (color_selection);
+
+  return FALSE;
+}
+
+static gboolean
+reset (GtkWidget          *widget,
+       GdkEvent           *event,
+       MateColorSelection *color_selection)
+{
+  if (is_enter(event))
+    mate_color_selection_palette_set (color_selection, NULL);
+
+  return FALSE;
+}
+
+static gboolean
+copy (GtkWidget          *widget,
+      GdkEvent           *event,
+      MateColorSelection *color_selection)
+{
+  gchar *color_string;
+
+  if (is_enter(event))
+    {
+      g_object_get (color_selection, "hex-string", &color_string, NULL);
+      gtk_clipboard_set_text (gtk_clipboard_get (GDK_SELECTION_CLIPBOARD), color_string, -1);
+
+      g_free (color_string);
+    }
+  return FALSE;
+}
+
+static void
+close2 (GtkWidget          *widget,
+        GdkEvent           *event,
+        MateColorSelection *color_selection)
+{
+  if (is_enter(event))
+    gtk_main_quit();
+}
+
+static void
+build_button (GtkDialog          *gtk_dialog,
+              MateColorSelection *color_selection,
+              const char         *button_name,
+              const char         *icon_name,
+              gpointer            callback)
+{
+  GtkWidget *widget;
+  GtkWidget *image;
+
+  widget = gtk_button_new_with_mnemonic (button_name);
+  image = gtk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_BUTTON);
+  gtk_button_set_image (GTK_BUTTON (widget), image);
+
+  gtk_dialog_add_action_widget (gtk_dialog, widget, GTK_RESPONSE_ACCEPT);
+  g_signal_connect (widget, "button-release-event", G_CALLBACK (callback), color_selection);
+  g_signal_connect (widget, "key-release-event",    G_CALLBACK (callback), color_selection);
 }
 
 int
@@ -49,8 +136,6 @@ main (int argc, char **argv)
 {
     GtkWidget *color_dialog = NULL;
     GtkWidget *color_selection;
-    GtkWidget *widget;
-    GtkWidget *image;
 
     bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
     bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
@@ -67,22 +152,13 @@ main (int argc, char **argv)
     /* quit signal */
     g_signal_connect (color_dialog, "destroy", gtk_main_quit, NULL);
 
-    widget = gtk_button_new_with_mnemonic (_("_Copy"));
-    image = gtk_image_new_from_icon_name ("edit-copy", GTK_ICON_SIZE_BUTTON);
-    gtk_button_set_image (GTK_BUTTON (widget), image);
-    gtk_dialog_add_action_widget (GTK_DIALOG (color_dialog), widget, GTK_RESPONSE_ACCEPT);
-    g_signal_connect (widget, "button-release-event", G_CALLBACK (copy_color), color_dialog);
-
-    widget = gtk_button_new_with_mnemonic (_("_Close"));
-    image = gtk_image_new_from_icon_name ("window-close", GTK_ICON_SIZE_BUTTON);
-    gtk_button_set_image (GTK_BUTTON (widget), image);
-    gtk_dialog_add_action_widget (GTK_DIALOG (color_dialog), widget, GTK_RESPONSE_CLOSE);
-    g_signal_connect (widget, "button-release-event", gtk_main_quit, NULL);
+    build_button (GTK_DIALOG (color_dialog), MATE_COLOR_SELECTION (color_selection), "Save",  "go-up",        (gpointer) save);
+    build_button (GTK_DIALOG (color_dialog), MATE_COLOR_SELECTION (color_selection), "Load",  "go-down",      (gpointer) load);
+    build_button (GTK_DIALOG (color_dialog), MATE_COLOR_SELECTION (color_selection), "Reset", "go-jump",      (gpointer) reset);
+    build_button (GTK_DIALOG (color_dialog), MATE_COLOR_SELECTION (color_selection), "Copy",  "edit-copy",    (gpointer) copy);
+    build_button (GTK_DIALOG (color_dialog), MATE_COLOR_SELECTION (color_selection), "Close", "window-close", (gpointer) close2);
 
     gtk_widget_show_all (color_dialog);
-    gtk_widget_hide (MATE_COLOR_SELECTION_DIALOG (color_dialog)->ok_button);
-    gtk_widget_hide (MATE_COLOR_SELECTION_DIALOG (color_dialog)->cancel_button);
-    gtk_widget_hide (MATE_COLOR_SELECTION_DIALOG (color_dialog)->help_button);
 
     /* start application */
     gtk_main ();

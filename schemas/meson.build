@@ -22,6 +22,7 @@ schemas += [
   'org.mate.applications-at-visual.gschema.xml',
   'org.mate.applications-browser.gschema.xml',
   'org.mate.applications-calculator.gschema.xml',
+  'org.mate.applications-colors.gschema.xml',
   'org.mate.applications-messenger.gschema.xml',
   'org.mate.applications-office.gschema.xml',
   'org.mate.applications-terminal.gschema.xml',
