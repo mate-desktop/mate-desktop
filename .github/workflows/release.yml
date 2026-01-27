@@ -1,0 +1,30 @@
+name: Release Version
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  release:
+    name: Release New Version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository checkout
+        uses: actions/checkout@v5
+
+      - name: Install dependency packages
+        run: sudo .github/workflows/ubuntu.sh
+
+      - name: Build the source code
+        run: .github/workflows/builds.sh autotools
+
+      - name: Install GH CLI
+        uses: dev-hanz-ops/install-gh-cli-action@v0.2.1
+        with:
+          gh-cli-version: 2.72.0
+
+      - name: Create github release
+        run: |
+          gh release create ${{ github.ref_name }} --title ${{ github.ref_name }} --generate-notes mate-desktop-*.tar.xz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
