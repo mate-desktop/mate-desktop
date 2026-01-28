@@ -14,6 +14,7 @@ requires=(
 	meson  # Used for meson build
 )
 
+# https://git.launchpad.net/ubuntu/+source/mate-desktop/tree/debian/control
 requires+=(
 	autopoint
 	git

@@ -14,6 +14,7 @@ requires=(
 	meson  # Used for meson build
 )
 
+# https://salsa.debian.org/debian-mate-team/mate-desktop
 requires+=(
 	autopoint
 	git
