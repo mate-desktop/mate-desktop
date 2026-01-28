@@ -21,9 +21,12 @@ requires+=(
 	gcc
 	git
 	gobject-introspection
+	gtk3
 	intltool
+	iso-codes
 	make
 	mate-common
+	startup-notification
 	which
 )
 
