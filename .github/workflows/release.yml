@@ -1,0 +1,35 @@
+name: Release Version
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+env:
+  CACHE_PATH: /tmp/.cache
+
+jobs:
+  release:
+    name: Release New Version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: "true"
+
+      - name: Install dependency packages
+        run: sudo .github/workflows/ubuntu.sh
+
+      - name: Build the source code
+        run: .github/workflows/builds.sh meson
+
+      - name: Install GH CLI
+        uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
+        with:
+          gh-cli-version: 2.39.1
+
+      - name: Create github release
+        run: |
+          gh release create ${{ github.ref_name }} --title ${{ github.ref_name }} --generate-notes _build/meson-dist/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
