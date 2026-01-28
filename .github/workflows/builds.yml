@@ -71,7 +71,7 @@ jobs:
           pacman --noconfirm -Sy git || true
           echo "::endgroup::"
       - name: Repository checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: "true"
       - name: Install dependency packages
