@@ -21,7 +21,7 @@ jobs:
         run: sudo .github/workflows/ubuntu.sh
 
       - name: Build the source code
-        run: .github/workflows/builds.sh meson
+        run: .github/workflows/builds.sh autotools
 
       - name: Install GH CLI
         uses: dev-hanz-ops/install-gh-cli-action@v0.2.1
@@ -30,6 +30,6 @@ jobs:
 
       - name: Create github release
         run: |
-          gh release create ${{ github.ref_name }} --title ${{ github.ref_name }} --generate-notes _build/meson-dist/*
+          gh release create ${{ github.ref_name }} --title ${{ github.ref_name }} --generate-notes mate-desktop*.tar.xz
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
