@@ -1366,6 +1366,7 @@ do_percent_subst (const MateDesktopItem  *item,
 			g_string_append (str, "--miniicon=");
 			esc = escape_single_quotes (cs, in_single_quotes, in_double_quotes);
 			g_string_append (str, esc);
+			g_free (esc);
 		}
 		break;
 	case 'i':
@@ -1375,6 +1376,7 @@ do_percent_subst (const MateDesktopItem  *item,
 			g_string_append (str, "--icon=");
 			esc = escape_single_quotes (cs, in_single_quotes, in_double_quotes);
 			g_string_append (str, esc);
+			g_free (esc);
 		}
 		break;
 	case 'c':
