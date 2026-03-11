@@ -1892,8 +1892,8 @@ hex_changed (GtkWidget *hex_entry,
   text = gtk_editable_get_chars (GTK_EDITABLE (priv->hex_entry), 0, -1);
   if (!g_str_has_prefix (text, "#"))
     {
-      g_free (text);
       gchar *tmp = g_strconcat ("#", text, NULL);
+      g_free (text);
       text = tmp;
     }
 
