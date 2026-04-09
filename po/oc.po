@@ -7,7 +7,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Cédric Valmary <cvalmary@yahoo.fr>, 2021
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2021
-# Quentin PAGÈS, 2023
+# Quentin PAGÈS, 2025
 # 
 msgid ""
 msgstr ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2023-09-02 16:57+0200\n"
 "PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Quentin PAGÈS, 2023\n"
+"Last-Translator: Quentin PAGÈS, 2025\n"
 "Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,8 +28,8 @@ msgstr ""
 #: mate-about/mate-about.c:68
 msgid "translator-credits"
 msgstr ""
-"Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, Cédric Valmary "
-"(totenoc.eu) <cvalmary@yahoo.fr>, Quentin Pagès"
+"Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>,\n"
+"Quentin Pagès"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -37,7 +37,7 @@ msgstr "A prepaus de MATE"
 
 #: mate-about/mate-about.desktop.in:4
 msgid "Learn more about MATE"
-msgstr "Aprene mai de MATE"
+msgstr "Ne saber mai tocant MATE"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
@@ -104,6 +104,9 @@ msgid ""
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
+"Lo nom « MATE » ven de yerba maté, una espècia de grífol originària del sud "
+"d'America subtropicala. Sas fuèlhas contenon de cafeïna e son utilizadas per"
+" far d'infusions e una beguda nomenada mate."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -119,7 +122,7 @@ msgstr "Utilizar la transparéncia"
 
 #: libmate-desktop/mate-colorbutton.c:152
 msgid "Whether or not to give the color an alpha value"
-msgstr ""
+msgstr "Indica se cal o pas donar a la color una valor alfa"
 
 #: libmate-desktop/mate-colorbutton.c:166
 msgid "Title"
@@ -188,7 +191,7 @@ msgstr "Cadena HEX"
 
 #: libmate-desktop/mate-colorsel.c:296
 msgid "The hexadecimal string of current color"
-msgstr ""
+msgstr "La cadena de tèxt exadecimala de la color actuala"
 
 #: libmate-desktop/mate-colorsel.c:341
 msgid ""
@@ -271,8 +274,8 @@ msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
-"Dins aquesta zòna de tèxte, podètz picar un còde de color exadecimal (coma "
-"los còdes de color HTML), o alara un nom de color (coma « irange »)."
+"Dins aquesta zòna de tèxte, podètz picar un còdi de color exadecimal (coma "
+"los còdis de color HTML), o alara un nom de color (coma « irange »)."
 
 #: libmate-desktop/mate-colorsel.c:457
 msgid "_Palette:"
@@ -288,18 +291,26 @@ msgid ""
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr ""
+"La color seleccionada anteriorament, per comparar amb la color que "
+"seleccionatz ara. Podètz depausar aquesta color cap a una entrada de paleta,"
+" o seleccionar aquesta color coma actuala en la depausant cap a un autre "
+"nuancièr a costat."
 
 #: libmate-desktop/mate-colorsel.c:945
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr ""
+"La color qu’avètz causida. Podètz depausar aquesta color dins una entrada de"
+" la paleta per la salvar per un usatge futur."
 
 #: libmate-desktop/mate-colorsel.c:950
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr ""
+"La color seleccionada anteriorament, per comparar amb la color que "
+"seleccionatz ara."
 
 #: libmate-desktop/mate-colorsel.c:953
 msgid "The color you've chosen."
@@ -307,7 +318,7 @@ msgstr "La color qu’avètz causida."
 
 #: libmate-desktop/mate-colorsel.c:1359
 msgid "gtk-color-sel"
-msgstr ""
+msgstr "gtk-color-sel"
 
 #: libmate-desktop/mate-colorsel.c:1364
 msgid "_Save color here"
@@ -319,8 +330,8 @@ msgid ""
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
 "Clicatz aquesta entrada de paleta per ne far la color actuala. Per modificar"
-" aquesta entrada, lissatz un escandalhatge de color o fasètz un clic dreit "
-"dessús e seleccionatz « Enregistrar la color aicí »."
+" aquesta entrada, lissatz un escandalhatge de color o fasètz un clic drech "
+"dessús e seleccionatz « Enregistrar la color aicí »"
 
 #: libmate-desktop/mate-colorseldialog.c:98
 #: libmate-desktop/mate-colorseldialog.c:184
@@ -441,23 +452,25 @@ msgstr "Pas especificat"
 #: libmate-desktop/mate-rr.c:457
 msgid "could not get the screen resources (CRTCs, outputs, modes)"
 msgstr ""
+"impossible d'obténer las ressorsas de l'ecran (CRTCs, sortidas, mòdes)"
 
 #: libmate-desktop/mate-rr.c:478
 msgid "unhandled X error while getting the range of screen sizes"
 msgstr ""
+"error X non gerida pendent la recuperacion de la plaja de las talhas d'ecran"
 
 #: libmate-desktop/mate-rr.c:484
 msgid "could not get the range of screen sizes"
-msgstr ""
+msgstr "impossible d'obténer la plage de talhas d’ecran"
 
 #: libmate-desktop/mate-rr.c:703
 msgid "RANDR extension is not present"
-msgstr ""
+msgstr "extension RANDR absenta"
 
 #: libmate-desktop/mate-rr.c:1264
 #, c-format
 msgid "could not get information about output %d"
-msgstr ""
+msgstr "obtencion impossibla d’informacion a prepaus de la sortida %d"
 
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
@@ -468,16 +481,18 @@ msgid ""
 "requested position/size for CRTC %d is outside the allowed limit: "
 "position=(%d, %d), size=(%d, %d), maximum=(%d, %d)"
 msgstr ""
+"la posicion/talha demandada per CRTC %d es fòra del limit autorizat : "
+"posicion=(%d, %d), talha=(%d, %d), maximum=(%d, %d)"
 
 #: libmate-desktop/mate-rr.c:1784
 #, c-format
 msgid "could not set the configuration for CRTC %d"
-msgstr ""
+msgstr "definicion impossibla de la configuracion per CRTC %d"
 
 #: libmate-desktop/mate-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
-msgstr ""
+msgstr "obtencion impossibla de la configuracion per CRTC %d"
 
 #: libmate-desktop/mate-rr-config.c:555
 msgid "Laptop"
@@ -487,6 +502,8 @@ msgstr "Ordenador portable"
 msgid ""
 "none of the saved display configurations matched the active configuration"
 msgstr ""
+"cap de las configuracions d'afichatge enregistradas correspondiá pas a la "
+"configuracion activa"
 
 #: libmate-desktop/mate-rr-config.c:1485
 #, c-format
@@ -501,7 +518,7 @@ msgstr "la sortida %s pren pas en carga lo mòde %dx%d@%dHz"
 #: libmate-desktop/mate-rr-config.c:1503
 #, c-format
 msgid "CRTC %d does not support rotation=%s"
-msgstr ""
+msgstr "CRTC %d pren pas en carga la rotacion = %s"
 
 #: libmate-desktop/mate-rr-config.c:1517
 #, c-format
@@ -511,6 +528,10 @@ msgid ""
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
 msgstr ""
+"la sortida %s a pas los meteisses paramètres qu'una autra sortida clonada :\n"
+"mòde existent = %d, mòde novèl = %d\n"
+"coordenadas existentas = (%d, %d), coordenadas novèlas = (%d, %d)\n"
+"rotacion existenta = %s, rotacion novèla = %s"
 
 #: libmate-desktop/mate-rr-config.c:1532
 #, c-format
@@ -575,6 +596,8 @@ msgstr "interval minimum en milisegondas"
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:26
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
 msgstr ""
+"Ignorar las pressadas multiplas de la _meteissa_ tòca dins un interval de "
+"@delay millisegondas."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:36
 msgid "Pixels per seconds"
@@ -613,16 +636,20 @@ msgstr "Interval minimum en millisegondas"
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
 msgstr ""
+"Acceptetz pas una tòca coma quichada levat se la mantenètz pendent @delay "
+"millisegondas."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:71
 msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Activar los modificadors quand son quichats dos còps de seguida, fins a çò "
+"que lo meteis modificador siá quichat tornarmai."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:75
 msgid "Disable if two keys are pressed at the same time."
-msgstr ""
+msgstr "Desactivar se doas tòcas son quichadas e l’encòp."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:79
 msgid "Beep when a modifier is pressed."
@@ -631,50 +658,64 @@ msgstr "Emetre un bip quand una tòca modificatritz es quichada."
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:86
 msgid "Beep when a key is pressed while CapsLock is active."
 msgstr ""
+"Emetre un bip quand una tòca es quichada alara que lo verrolhatge majuscula "
+"es actiu."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:91
 msgid "Beep count when enabling a modifier"
-msgstr ""
+msgstr "Comptador de bip en activant una tòca modificadoira"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:92
 msgid ""
 "Number of beeps to emit when enabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Nombre de bips d'emetre a l'activacion d'un modificador quand las tòcas de "
+"basculament son activadas. Fonciona pas qu'amb lo backend « intèrne »."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:97
 msgid "Delay between beeps when enabling a modifier"
-msgstr ""
+msgstr "Relambi entre bips pendent l’activacion d’una tòca modificadoira"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:98
 msgid ""
 "Delay in milliseconds between two beeps when enabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Espaci de temps en millisegondas entre dos bips quand un modificador es "
+"activat e que las tòcas de basculament o son tanben. Fonciona unicament amb "
+"lo backend « intèrne »."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:103
 msgid "Beep count when disabling a modifier"
-msgstr ""
+msgstr "Comptador de bip en desactivant una tòca modificadoira"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:104
 msgid ""
 "Number of beeps to emit when disabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Nombre de bips d'emetre al moment de la desactivacion d'un modificador quand"
+" las tòcas de basculament son activadas. Fonciona pas qu'amb lo backend « "
+"intèrne »."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:109
 msgid "Delay between beeps when disabling a modifier"
-msgstr ""
+msgstr "Relambi entre los bips a la desactivacion d'un modificador"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:110
 msgid ""
 "Delay in milliseconds between two beeps when disabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Delai en milisegondas entre dos bips al moment de la desactivacion d'un "
+"modificador quand las tòcas de basculament son activadas. Fonciona pas "
+"qu'amb lo backend « intèrne »."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:114
 msgid "Implementation to use when togglekeys are enabled"
 msgstr ""
+"Implementacion d'utilizar quand las tòcas de basculament son activadas"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:115
 msgid ""
@@ -682,64 +723,79 @@ msgid ""
 "include 'xkb' (the stock X implementation) and 'internal' (a MATE-specific "
 "and more configurable implementation)."
 msgstr ""
+"Selecciona lo servici de rèireplan d'utilizar per provesir la foncionalitat "
+"de las tòcas de basculament. Las valors valablas incluson « xkb » "
+"(l'implementacion X estandarda) e « internal » (una implementacion "
+"especifica a MATE e mai configurabla)."
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"
-msgstr ""
+msgstr "Aviar las aplicacions de tecnologia d'assisténcia"
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
 msgstr ""
+"Lista de las aplicacions de tecnologia d'assisténcia d'aviar al moment de la"
+" connexion al burèu MATE."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Aplicacion de tecnologia d'assisténcia a la mobilitat preferida"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:6
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
+"Aplicacion de tecnologia d'assisténcia a la mobilitat preferida d’utilizar "
+"per la connexion, lo menú o la linha de comanda."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:10
 msgid "Start preferred Mobility assistive technology application"
 msgstr ""
+"Aviar l'aplicacion preferida de tecnologia d'assisténcia a la mobilitat"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
+"MATE lançarà l’aplicacion preferida de tecnologia d’assisténcia a la "
+"mobilitat pendent la connexion."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "Aplicacion preferida de tecnologia d'assisténcia visuala"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:6
 msgid ""
 "Preferred Visual assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
+"Aplicacion de tecnologia d'assisténcia visuala preferida d’utilizar per la "
+"connexion, lo menú o la linha de comanda."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:10
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "Aviar l'aplicacion preferida de tecnologia d'assisténcia visuala"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
+"MATE lançarà l’aplicacion preferida de tecnologia d’assisténcia visuala "
+"pendent la connexion."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
 msgid "Default browser"
-msgstr "Navegador per defaut"
+msgstr "Navigador per defaut"
 
 #: schemas/org.mate.applications-browser.gschema.xml:6
 msgid "Default browser for all URLs."
-msgstr "Navegador per defaut per totas las URL."
+msgstr "Navigador per defaut per totas las URL."
 
 #: schemas/org.mate.applications-browser.gschema.xml:10
 msgid "Browser needs terminal"
@@ -747,15 +803,17 @@ msgstr "Lo navigador deu aver un terminal"
 
 #: schemas/org.mate.applications-browser.gschema.xml:11
 msgid "Whether the default browser needs a terminal to run."
-msgstr ""
+msgstr "Indica se lo navegador per defaut requerís l’execucion d’un terminal"
 
 #: schemas/org.mate.applications-browser.gschema.xml:15
 msgid "Browser understands remote"
-msgstr "Lo navegador pren en carga las sessions alonhadas"
+msgstr "Lo navigador pren en carga las sessions alonhadas"
 
 #: schemas/org.mate.applications-browser.gschema.xml:16
 msgid "Whether the default browser understands netscape remote."
 msgstr ""
+"Indica se lo navegador per defaut compren lo protocòl de contraròtle a "
+"distància de Netscape."
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
@@ -774,6 +832,8 @@ msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
 msgstr ""
+"Logicial de messatjariá instantanèa d'utilizar al moment de l'aviada "
+"d'aplicacions que ne requerisson un"
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -828,6 +888,8 @@ msgstr "Arguments d'execucion"
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
 msgstr ""
+"Paramètre emplegat per aviar de programas dins lo terminal definit per la "
+"clau 'exec'."
 
 #: schemas/org.mate.background.gschema.xml.in:18
 msgid "Draw Desktop Background"
@@ -856,6 +918,8 @@ msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
 msgstr ""
+"Se definit a « true », MATE cambiarà lo fons d'ecran amb un efièch de "
+"transicion en fondut."
 
 #: schemas/org.mate.background.gschema.xml.in:33
 msgid "Picture Options"
@@ -867,6 +931,9 @@ msgid ""
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
 msgstr ""
+"Determina cossí l’imatge definit per wallpaper_filename es rendut. Las "
+"valors possiblas son « wallpaper », « centered », « scaled », « stretched »,"
+" « zoom » e « spanned »."
 
 #: schemas/org.mate.background.gschema.xml.in:38
 msgid "Picture Filename"
@@ -913,6 +980,8 @@ msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr ""
+"De quina manièra ombrar la color del rèireplan. Las valors que se pòdon "
+"utilizar son « horizontal-gradient », « vertical-gradient », e « solid »."
 
 #: schemas/org.mate.file-views.gschema.xml:5
 msgid "File Icon Theme"
@@ -929,7 +998,7 @@ msgstr "Activar l'accessibilitat"
 #: schemas/org.mate.interface.gschema.xml:6
 msgid "Whether Applications should have accessibility support."
 msgstr ""
-"Indica se las aplicacions devon aver la presa en carga de l’accessibilitat"
+"Indica se las aplicacions devon aver la presa en carga de l’accessibilitat."
 
 #: schemas/org.mate.interface.gschema.xml:10
 msgid "Enable Animations"
@@ -970,6 +1039,7 @@ msgstr "Los menús an d'icònas"
 #: schemas/org.mate.interface.gschema.xml:26
 msgid "Whether menus may display an icon next to a menu entry."
 msgstr ""
+"Indica se lo menú pòt afichar una icòna a costat de l’entrada de menú."
 
 #: schemas/org.mate.interface.gschema.xml:30
 msgid "Buttons Have Icons"
@@ -978,6 +1048,7 @@ msgstr "Los botons an d’icònas"
 #: schemas/org.mate.interface.gschema.xml:31
 msgid "Whether buttons may display an icon in addition to the button text."
 msgstr ""
+"Indica se los botons pòdon afichar una icòna en mai del tèxte del boton."
 
 #: schemas/org.mate.interface.gschema.xml:35
 msgid "Menubar Detachable"
@@ -1004,6 +1075,8 @@ msgstr "Talha de las icònas de las barras d'espleches"
 #: schemas/org.mate.interface.gschema.xml:46
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
+"Talha de las icònas de la barra de menú, siá « small-toolbar » o « large-"
+"toolbar »."
 
 #: schemas/org.mate.interface.gschema.xml:50
 msgid "Cursor Blink"
@@ -1095,20 +1168,29 @@ msgid ""
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
 msgstr ""
+"Indica se las bòstias de dialòg integradas a GTK+, talas coma lo selector de"
+" fichièrs, lo selector de colors o lo selector de polissas, utilizaràn una "
+"barra d'entèsta en naut per afichar los widgets d'accion, o una zòna "
+"d'accion en bas. Aqueste reglatge afècta pas las bòstias de dialòg "
+"personalizadas qu'utilizan dirèctament GtkDialog, ni las bòstias de dialòg "
+"de messatge."
 
 #: schemas/org.mate.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
-msgstr ""
+msgstr "Utilizar lo defilament superpausat de GTK3"
 
 #: schemas/org.mate.interface.gschema.xml:106
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
+"Indica se las fenèstras de defilament integradas a GTK+ utilizaràn lo "
+"defilament superpausat. Lo defilament superpausat amaga e redusís la talha "
+"de la barra de defilament fins que recep lo fòcus."
 
 #: schemas/org.mate.interface.gschema.xml:110
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "Activar las animacions per tot lo jòc d'aisinas Gtk"
 
 #: schemas/org.mate.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
@@ -1139,15 +1221,15 @@ msgstr "Utilizar una polissa personalizada"
 
 #: schemas/org.mate.interface.gschema.xml:126
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr ""
+msgstr "Utilizar una polissa personalizada dins las aplicacions gtk+."
 
 #: schemas/org.mate.interface.gschema.xml:130
 msgid "Status Bar on Right"
-msgstr ""
+msgstr "Barra d'estat de drecha"
 
 #: schemas/org.mate.interface.gschema.xml:131
 msgid "Whether to display a status bar meter on the right."
-msgstr ""
+msgstr "Se cal afichar un indicador dins la barra d'estat a drecha."
 
 #: schemas/org.mate.interface.gschema.xml:135
 msgid "Module for GtkFileChooser"
@@ -1158,6 +1240,8 @@ msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
 msgstr ""
+"Modul d'utilizar coma modèl de sistèma de fichièrs pel widget "
+"GtkFileChooser. Las valors possiblas son « gio » e « gtk+ »."
 
 #: schemas/org.mate.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1176,20 +1260,26 @@ msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr ""
+"Indica se los menús contextuals de las dintradas e de las vistas de tèxt "
+"devon prepausar de cambiar lo metòde de dintrada."
 
 #: schemas/org.mate.interface.gschema.xml:150
 msgid "Show the 'Unicode Control Character' menu"
-msgstr ""
+msgstr "Afichar lo menú « Caractèr de contraròtle Unicode »"
 
 #: schemas/org.mate.interface.gschema.xml:151
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr ""
+"Se los menús contextuals de las entradas e de las vistas de tèxt devon "
+"prepausar d'inserir de caractèrs de contraròtle."
 
 #: schemas/org.mate.interface.gschema.xml:155
 msgid "Titlebar layout of GTK3 client-side decorated windows"
 msgstr ""
+"Disposicion de la barra de títol de las fenèstras GTK3 decoradas del costat "
+"client"
 
 #: schemas/org.mate.interface.gschema.xml:156
 msgid ""
@@ -1199,10 +1289,16 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
 msgstr ""
+"Aqueste paramètre determina quins botons devon èsser plaçats dins la barra "
+"de títol de las fenèstras decoradas del costat client, e se devon èsser "
+"plaçats a esquèrra o a drecha. Consultatz "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"decoration-layout."
 
 #: schemas/org.mate.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
 msgstr ""
+"Utilizar una barra de menús globala per afichar los menús de las aplicacions"
 
 #: schemas/org.mate.interface.gschema.xml:161
 msgid ""
@@ -1211,10 +1307,16 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
 msgstr ""
+"Aqueste reglatge determina ont lo menú de l'aplicacion serà afichat - dins "
+"una fenèstra o sus un panèl amb lo protocòl MenuModel. Vejatz "
+"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
+"shell-shows-app-menu."
 
 #: schemas/org.mate.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
 msgstr ""
+"Utilizar una barra de menús globala per afichar las barras de menuts de las "
+"fenèstras"
 
 #: schemas/org.mate.interface.gschema.xml:166
 msgid ""
@@ -1223,16 +1325,22 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-menubar."
 msgstr ""
+"Aqueste reglatge determina ont las barras de menús de las fenèstras seràn "
+"afichadas - dins una fenèstra o sus un panèl amb lo protocòl MenuModel. "
+"Vejatz https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings"
+"--gtk-shell-shows-menubar."
 
 #: schemas/org.mate.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "Afichar los mnemotecnics solament quand la tòca Alt es mantenguda"
 
 #: schemas/org.mate.interface.gschema.xml:171
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
 msgstr ""
+"Se los mnemotecnics se devon afichar e amagar automaticament quand "
+"l'utilizaire quicha la tòca Alt."
 
 #: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
@@ -1245,10 +1353,15 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Contraròtla lo factor d'escala GTK que fa la correspondéncia entre las "
+"coordenadas de la fenèstra e los pixèls reals del periferic. Suls sistèmas "
+"tradicionals, es de 1, mas suls ecrans de fòrça nauta densitat (per ex. "
+"HiDPI, Retina) pòt èsser una valor mai elevada (sovent 2). Metre a 0 per "
+"l'autodeteccion."
 
 #: schemas/org.mate.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "Factor de mesa a l'escala per las aplicacions QT"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
@@ -1257,16 +1370,22 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Aqueste paramètre definís se MATE contraròtla lo factor d'escala per las "
+"aplicacions QT. Activar per sincronizar amb lo factor d'escala de GTK a "
+"l'aviada de la session, desactivar per contrarotlar aquesta valor endacòm "
+"mai. Un reaviada de vòstra session es necessària."
 
 #: schemas/org.mate.interface.gschema.xml:186
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "Activar la seleccion primària de pegar"
 
 #: schemas/org.mate.interface.gschema.xml:187
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
+"Se es verai, gtk+ utiliza la seleccion primària per pegar, generalament "
+"aviada per un clic sul boton de la rodeta de la mirga."
 
 #: schemas/org.mate.lockdown.gschema.xml:5
 msgid "Disable command line"
@@ -1366,19 +1485,23 @@ msgstr "Empacha l'utilizaire de se desconnectar."
 
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
-msgstr ""
+msgstr "Periferic mesclador per defaut"
 
 #: schemas/org.mate.sound.gschema.xml:6
 msgid "The default mixer device used by the multimedia key bindings."
 msgstr ""
+"Lo periferic mesclador per defaut utilizat per las combinasons de tòcas "
+"multimèdia."
 
 #: schemas/org.mate.sound.gschema.xml:10
 msgid "Default mixer tracks"
-msgstr ""
+msgstr "Pistas de mesclador per defaut"
 
 #: schemas/org.mate.sound.gschema.xml:11
 msgid "The default mixer tracks used by the multimedia key bindings."
 msgstr ""
+"Las pistas de mesclador per defaut utilizadas per las combinasons de tòcas "
+"multimèdia."
 
 #: schemas/org.mate.sound.gschema.xml:15
 msgid "Enable ESD"
@@ -1386,7 +1509,7 @@ msgstr "Activar ESD"
 
 #: schemas/org.mate.sound.gschema.xml:16
 msgid "Enable sound server startup."
-msgstr ""
+msgstr "Activar l'aviada del servidor de son."
 
 #: schemas/org.mate.sound.gschema.xml:20
 msgid "Sounds for events"
@@ -1414,7 +1537,7 @@ msgstr "Indica se cal jogar de sons suls eveniments d'entrada."
 
 #: schemas/org.mate.sound.gschema.xml:35
 msgid "Permit the output volume to exceed 100%"
-msgstr ""
+msgstr "Permetre a la sortida son d'excedir 100 %"
 
 #: schemas/org.mate.sound.gschema.xml:36
 msgid ""
@@ -1425,6 +1548,13 @@ msgid ""
 "to extremely quiet audio recordings, where the recording would otherwise be "
 "completely useless."
 msgstr ""
+"Se definit a « true », l'utilizaire serà autorizat a reglar lo volum de "
+"sortida / dels nautparlaires en dessús de 100 %. En reglant lo volum de "
+"sortida en dessús de 100 %, lo servidor de son amplificarà l'àudio en delà "
+"de çò que lo material àudio pòt far netament. Aquò pòt menar a una "
+"degradacion de la qualitat de l'àudio, mas pòt èsser util per escotar "
+"d'enregistraments àudio extrèmament febles, que serián autrament "
+"complètament inutilizables."
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:6
 msgid ""
@@ -1471,11 +1601,11 @@ msgstr ""
 
 #: schemas/org.mate.typing-break.gschema.xml:5
 msgid "Type time"
-msgstr ""
+msgstr "Temps de picada"
 
 #: schemas/org.mate.typing-break.gschema.xml:6
 msgid "Number of minutes of typing time before break mode starts."
-msgstr ""
+msgstr "Nombre de minutas de picada abans que la pausa comence."
 
 #: schemas/org.mate.typing-break.gschema.xml:10
 msgid "Break time"
