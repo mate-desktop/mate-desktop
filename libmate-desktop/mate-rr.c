@@ -90,6 +90,7 @@ struct MateRROutput
     guint8 *		edid_data;
     int         edid_size;
     char *              connector_type;
+    gboolean            hotplug_mode_update;
 };
 
 struct MateRROutputWrap
@@ -667,6 +668,7 @@ mate_rr_screen_initable_init (GInitable *initable, GCancellable *canc, GError **
     int ignore;
 
     priv->connector_type_atom = XInternAtom (dpy, "ConnectorType", FALSE);
+    priv->hotplug_mode_update_atom = XInternAtom (dpy, "hotplug_mode_update", FALSE);
 
 #ifdef HAVE_RANDR
     if (XRRQueryExtension (dpy, &event_base, &ignore))
@@ -1243,6 +1245,31 @@ out:
 #endif
 }
 
+static gboolean
+get_hotplug_mode_update (MateRROutput *output)
+{
+#ifdef HAVE_RANDR
+    XRRPropertyInfo *info;
+    GdkDisplay *display;
+
+    display = gdk_display_get_default ();
+    gdk_x11_display_error_trap_push (display);
+    info = XRRQueryOutputProperty (DISPLAY (output), output->id,
+                                   output->info->screen->priv->hotplug_mode_update_atom);
+    gdk_display_flush (display);
+    if (gdk_x11_display_error_trap_pop (display))
+        return FALSE;
+
+    if (info)
+    {
+        XFree (info);
+        return TRUE;
+    }
+#endif
+
+    return FALSE;
+}
+
 #ifdef HAVE_RANDR
 static gboolean
 output_initialize (MateRROutput *output, XRRScreenResources *res, GError **error)
@@ -1272,6 +1299,7 @@ output_initialize (MateRROutput *output, XRRScreenResources *res, GError **error
     output->height_mm = info->mm_height;
     output->connected = (info->connection == RR_Connected);
     output->connector_type = get_connector_type_string (output);
+    output->hotplug_mode_update = get_hotplug_mode_update (output);
 
     /* Possible crtcs */
     a = g_ptr_array_new ();
@@ -1339,6 +1367,7 @@ output_copy (const MateRROutput *from)
     output->connected = from->connected;
     output->n_preferred = from->n_preferred;
     output->connector_type = g_strdup (from->connector_type);
+    output->hotplug_mode_update = from->hotplug_mode_update;
 
     array = g_ptr_array_new ();
     for (p_crtc = from->possible_crtcs; *p_crtc != NULL; p_crtc++)
@@ -1456,6 +1485,24 @@ mate_rr_output_get_connector_type (MateRROutput *output)
     g_return_val_if_fail (output != NULL, NULL);
 
     return output->connector_type;
+}
+
+/**
+ * mate_rr_output_get_hotplug_mode_update:
+ * @output: a #MateRROutput
+ *
+ * Returns whether the output has the hotplug_mode_update property,
+ * which indicates that the display should apply a new preferred mode
+ * on hotplug events to handle dynamic guest resizing in virtual machines.
+ *
+ * Returns: %TRUE if the output has hotplug_mode_update
+ */
+gboolean
+mate_rr_output_get_hotplug_mode_update (MateRROutput *output)
+{
+    g_return_val_if_fail (output != NULL, FALSE);
+
+    return output->hotplug_mode_update;
 }
 
 gboolean

@@ -47,6 +47,7 @@ struct MateRRScreenPrivate
     int				rr_minor_version;
 
     Atom                        connector_type_atom;
+    Atom                        hotplug_mode_update_atom;
 };
 
 struct MateRROutputInfoPrivate

@@ -136,6 +136,7 @@ MateRRMode *   mate_rr_output_get_current_mode   (MateRROutput         *output);
 MateRRCrtc *   mate_rr_output_get_crtc           (MateRROutput         *output);
 const char *    mate_rr_output_get_connector_type (MateRROutput         *output);
 gboolean        mate_rr_output_is_laptop          (MateRROutput         *output);
+gboolean        mate_rr_output_get_hotplug_mode_update (MateRROutput    *output);
 void            mate_rr_output_get_position       (MateRROutput         *output,
 						    int                   *x,
 						    int                   *y);
