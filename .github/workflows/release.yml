@@ -24,7 +24,7 @@ jobs:
         run: .github/workflows/builds.sh autotools
 
       - name: Install GH CLI
-        uses: dev-hanz-ops/install-gh-cli-action@v0.2.1
+        uses: dev-hanz-ops/install-gh-cli-action@v0.3.0
         with:
           gh-cli-version: 2.39.1
 
