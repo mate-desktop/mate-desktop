@@ -1,9 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Developers
 # This file is distributed under the same license as the mate-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Alexander <alex.grushetskiy@gmail.com>, 2018
 # павел назаров (pavel nazarov) <nazar12101@gmail.com>, 2018
 # Pavel Zuev, 2018
@@ -27,20 +24,27 @@
 # Павел Коваленко, 2021
 # Sergej A. <Ser82-png@yandex.ru>, 2022
 # Andrei Stepanov, 2023
-# 
+# "Sergey A." <Ser82-png@yandex.ru>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.27.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2023-09-02 16:57+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Andrei Stepanov, 2023\n"
-"Language-Team: Russian (https://app.transifex.com/mate/teams/13566/ru/)\n"
+"PO-Revision-Date: 2026-06-20 10:12+0000\n"
+"Last-Translator: \"Sergey A.\" <Ser82-png@yandex.ru>\n"
+"Language-Team: Russian <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/mate-desktop/ru/>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
@@ -64,6 +68,7 @@ msgstr ""
 "Влад Орлов <monsta@inbox.ru>\n"
 "Глеб Мехренин <mehrenin@gmail.com>\n"
 "Денис Арефьев <arefevdns@mail.ru>\n"
+"Дмитрий Астанков <mornie@basealt.ru>\n"
 "Дмитрий Мандрык <dmandryk@gmail.com>\n"
 "Дмитрий Мастрюков <dmitry@taurussoft.org>\n"
 "Дмитрий Михирев <mikhirev@gmail.com>\n"
@@ -78,7 +83,7 @@ msgstr ""
 "Сергей Яковлев\n"
 "Юрий Козлов <yuray@komyakino.ru>\n"
 "Evolve32 <evolve32@ya.ru>\n"
-"Павел Коваленко <kovalenkopavel@mail.ru>"
+"Артём Котлубай <artemkotlubai@yandex.ru>"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -115,9 +120,9 @@ msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
-"MATE включает большую часть того, что Вы видите на своём компьютере, включая"
-" файловый менеджер, обозреватели документов и изображений, меню и многие "
-"другие приложения"
+"MATE включает большую часть того, что Вы видите на своём компьютере, включая "
+"файловый менеджер, обозреватели документов и изображений, меню и многие "
+"другие приложения."
 
 #: mate-about/mate-about.h:48
 msgid ""
@@ -170,7 +175,7 @@ msgstr "Использовать альфа-канал"
 
 #: libmate-desktop/mate-colorbutton.c:152
 msgid "Whether or not to give the color an alpha value"
-msgstr "Использовать прозрачность цвета или нет."
+msgstr "Использовать прозрачность цвета или нет"
 
 #: libmate-desktop/mate-colorbutton.c:166
 msgid "Title"
@@ -259,7 +264,7 @@ msgstr ""
 
 #: libmate-desktop/mate-colorsel.c:374
 msgid "_Hue:"
-msgstr "_Оттенок"
+msgstr "_Оттенок:"
 
 #: libmate-desktop/mate-colorsel.c:375
 msgid "Position on the color wheel."
@@ -271,7 +276,7 @@ msgstr "_Насыщенность:"
 
 #: libmate-desktop/mate-colorsel.c:378
 msgid "\"Deepness\" of the color."
-msgstr "\"Глубина\" цвета"
+msgstr "«Глубина» цвета."
 
 #: libmate-desktop/mate-colorsel.c:379
 msgid "_Value:"
@@ -287,7 +292,7 @@ msgstr "_Красный:"
 
 #: libmate-desktop/mate-colorsel.c:382
 msgid "Amount of red light in the color."
-msgstr "Красная составляющая цвета"
+msgstr "Красная составляющая цвета."
 
 #: libmate-desktop/mate-colorsel.c:383
 msgid "_Green:"
@@ -375,8 +380,8 @@ msgid ""
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
 "Нажмите на этот элемент палитры чтобы сделать его текущим цветом. Чтобы "
-"изменить эту ячейку, перетащите в нее образец цвета или нажмите ПКМ на ней и"
-" выберите \"Сохранить цвет здесь\"."
+"изменить эту ячейку, перетащите в нее образец цвета или нажмите ПКМ на ней и "
+"выберите «Сохранить цвет здесь»."
 
 #: libmate-desktop/mate-colorseldialog.c:98
 #: libmate-desktop/mate-colorseldialog.c:184
@@ -405,7 +410,7 @@ msgstr "Кнопка диалога \"Отмена\"."
 
 #: libmate-desktop/mate-colorseldialog.c:119
 msgid "Help Button"
-msgstr "Кнопка «Справка»."
+msgstr "Кнопка «Справка»"
 
 #: libmate-desktop/mate-colorseldialog.c:120
 msgid "The help button of the dialog."
@@ -882,7 +887,7 @@ msgstr "Календарю нужен терминал"
 
 #: schemas/org.mate.applications-office.gschema.xml:15
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr "Нуждается ли приложение календаря по умолчанию в терминале."
+msgstr "Нуждается ли приложение календаря по умолчанию в терминале"
 
 #: schemas/org.mate.applications-office.gschema.xml:21
 msgid "Default tasks"
@@ -898,7 +903,7 @@ msgstr "Задачам нужен терминал"
 
 #: schemas/org.mate.applications-office.gschema.xml:27
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr "Нуждается ли приложение задач по умолчанию в терминале."
+msgstr "Нуждается ли приложение задач по умолчанию в терминале"
 
 #: schemas/org.mate.applications-terminal.gschema.xml:5
 msgid "Terminal application"
@@ -1136,7 +1141,7 @@ msgstr "Базовое имя темы по умолчанию, использу
 
 #: schemas/org.mate.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
-msgstr "Список символических имён и эквивалентов цветов."
+msgstr "Список символических имён и эквивалентов цветов"
 
 #: schemas/org.mate.interface.gschema.xml:76
 msgid ""
@@ -1172,11 +1177,11 @@ msgstr "Имя стиля состояния метода ввода GTK+."
 
 #: schemas/org.mate.interface.gschema.xml:95
 msgid "GTK IM Module"
-msgstr "Модуль GTK IM "
+msgstr "Модуль GTK IM"
 
 #: schemas/org.mate.interface.gschema.xml:96
 msgid "Name of the input method module used by GTK+."
-msgstr "Название модуля метода ввода, используемого GTK+"
+msgstr "Название модуля метода ввода, используемого GTK+."
 
 #: schemas/org.mate.interface.gschema.xml:100
 msgid "Use GTK3 header bar"
@@ -1469,7 +1474,7 @@ msgstr "Отключить блокировку экрана"
 
 #: schemas/org.mate.lockdown.gschema.xml:31
 msgid "Prevent the user from locking the screen."
-msgstr "Не давать пользователю блокировать экран"
+msgstr "Не давать пользователю блокировать экран."
 
 #: schemas/org.mate.lockdown.gschema.xml:35
 msgid "Disable URL and MIME type handlers"
@@ -1632,7 +1637,7 @@ msgstr "Разрешить откладывание перерыва"
 
 #: schemas/org.mate.typing-break.gschema.xml:16
 msgid "Whether or not the typing break screen can be postponed."
-msgstr "Можно ли отложить появление на экране сообщения о перерыве"
+msgstr "Можно ли отложить появление на экране сообщения о перерыве."
 
 #: schemas/org.mate.typing-break.gschema.xml:20
 msgid "Whether or not keyboard locking is enabled"
@@ -1666,4 +1671,4 @@ msgstr "Выберите цвет из палитры цветов или с э�
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
-msgstr "MATE;color;chooser;pick;palette;screen;selection;"
+msgstr "MATE;color;chooser;pick;palette;screen;selection;цвет;палитра;экран;"
