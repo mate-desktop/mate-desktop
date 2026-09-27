@@ -1,35 +1,37 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Developers
 # This file is distributed under the same license as the mate-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Cédric Valmary <cvalmary@yahoo.fr>, 2021
 # 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2021
 # Quentin PAGÈS, 2025
-# 
+# Quentin PAGÈS <quentinantonin@free.fr>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.27.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2023-09-02 16:57+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Quentin PAGÈS, 2025\n"
-"Language-Team: Occitan (post 1500) (https://app.transifex.com/mate/teams/13566/oc/)\n"
+"PO-Revision-Date: 2026-06-18 15:10+0000\n"
+"Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
+"Language-Team: Occitan <https://translate.fedoraproject.org/projects/mate-"
+"desktop/mate-desktop/oc/>\n"
+"Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: oc\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
 #: mate-about/mate-about.c:68
 msgid "translator-credits"
 msgstr ""
-"Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>,\n"
-"Quentin Pagès"
+"Yannig Marchegay (Kokoyaya) <yannig@marchegay.org> & Cédric Valmary "
+"(totenoc.eu) <cvalmary@yahoo.fr>, Quentin PAGÈS"
 
 #: mate-about/mate-about.desktop.in:3
 msgid "About MATE"
@@ -803,7 +805,7 @@ msgstr "Lo navigador deu aver un terminal"
 
 #: schemas/org.mate.applications-browser.gschema.xml:11
 msgid "Whether the default browser needs a terminal to run."
-msgstr "Indica se lo navegador per defaut requerís l’execucion d’un terminal"
+msgstr "Indica se lo navegador per defaut requerís l’execucion d’un terminal."
 
 #: schemas/org.mate.applications-browser.gschema.xml:15
 msgid "Browser understands remote"
@@ -833,7 +835,7 @@ msgid ""
 "one."
 msgstr ""
 "Logicial de messatjariá instantanèa d'utilizar al moment de l'aviada "
-"d'aplicacions que ne requerisson un"
+"d'aplicacions que ne requerisson un."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -1105,12 +1107,12 @@ msgstr "Tèma d’icònas d’utilizar pel panèl, Caja, etc."
 #: schemas/org.mate.interface.gschema.xml:65
 #: schemas/org.mate.interface.gschema.xml:70
 msgid "Gtk+ Theme"
-msgstr "Tèma GTK+"
+msgstr "Tèma Gtk+"
 
 #: schemas/org.mate.interface.gschema.xml:66
 #: schemas/org.mate.interface.gschema.xml:71
 msgid "Basename of the default theme used by gtk+."
-msgstr "Nom de base del tèma per defaut utilizat per GTK+."
+msgstr "Nom de base del tèma per defaut utilizat per Gtk+."
 
 #: schemas/org.mate.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
@@ -1130,7 +1132,7 @@ msgstr "Polissa per defaut"
 
 #: schemas/org.mate.interface.gschema.xml:81
 msgid "Name of the default font used by gtk+."
-msgstr "Nom de la polissa per defaut utilizada per GTK+."
+msgstr "Nom de la polissa per defaut utilizada per Gtk+."
 
 #: schemas/org.mate.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
@@ -1561,7 +1563,7 @@ msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
 msgstr ""
-"Edat maximum en jorns per las vinhetas dins lo cache. Definissètz a -1 per "
+"Edat maximum en jorns per las miniaturas dins lo cache. Definissètz a -1 per "
 "desactivar lo netejatge."
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:10
@@ -1574,30 +1576,30 @@ msgstr ""
 
 #: schemas/org.mate.thumbnailers.gschema.xml:5
 msgid "Disable all external thumbnailers"
-msgstr "Desactivar totes los programas de vinhetatge extèrnes"
+msgstr "Desactivar totes los programas extèrnes de creacion de miniaturas"
 
 #: schemas/org.mate.thumbnailers.gschema.xml:6
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
 msgstr ""
-"Definir a verai per desactivar totes los programas de vinhetatge extèrnes, "
-"que sián indepentament activats o desactivats."
+"Definir a « true » per desactivar totes los programas extèrnes de creacion "
+"de miniaturas, que sián independentament activats o desactivats."
 
 #: schemas/org.mate.thumbnailers.gschema.xml:10
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
 msgstr ""
-"Lista de tipes MIME pels quals los programas extèrnes de thumbnailer son "
-"desactivats"
+"Lista de tipes MIME pels quals los programas extèrnes de creacion de "
+"miniaturas son desactivats"
 
 #: schemas/org.mate.thumbnailers.gschema.xml:11
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
 msgstr ""
-"Las vinhetas son pas creadas pels fichièrs que lo tipe MIME es contengut "
-"dins la lista."
+"Las miniaturas son pas creadas pels fichièrs que se lo tipe MIME es "
+"contengut dins la lista."
 
 #: schemas/org.mate.typing-break.gschema.xml:5
 msgid "Type time"
