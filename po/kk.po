@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Developers
 # This file is distributed under the same license as the mate-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2021
-# 
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2021, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.27.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2023-09-02 16:57+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2021\n"
-"Language-Team: Kazakh (https://app.transifex.com/mate/teams/13566/kk/)\n"
+"PO-Revision-Date: 2026-07-30 15:11+0000\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/mate-desktop/kk/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: kk\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.1\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
@@ -37,7 +38,7 @@ msgstr "MATE туралы көбірек біліңіз"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr ""
+msgstr "MATE жұмыс үстелі ортасы"
 
 #: mate-about/mate-about.h:34
 msgid ""
@@ -45,6 +46,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2023 MATE developers"
 msgstr ""
+"Copyright © 1997-2011 GNOME әзірлеушілері\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2023 MATE әзірлеушілері"
 
 #: mate-about/mate-about.h:42
 msgid ""
@@ -111,11 +115,11 @@ msgstr "Белгісіз"
 
 #: libmate-desktop/mate-colorbutton.c:151
 msgid "Use alpha"
-msgstr ""
+msgstr "Альфаны пайдалану"
 
 #: libmate-desktop/mate-colorbutton.c:152
 msgid "Whether or not to give the color an alpha value"
-msgstr ""
+msgstr "Түске альфа мәнін беру керек пе"
 
 #: libmate-desktop/mate-colorbutton.c:166
 msgid "Title"
@@ -140,11 +144,13 @@ msgstr "Таңдалған түс"
 
 #: libmate-desktop/mate-colorbutton.c:196 libmate-desktop/mate-colorsel.c:288
 msgid "Current Alpha"
-msgstr ""
+msgstr "Ағымдағы альфа"
 
 #: libmate-desktop/mate-colorbutton.c:197
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
+"Таңдалған мөлдір еместік мәні (0 толығымен мөлдір, 65535 толығымен мөлдір "
+"емес)"
 
 #: libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
@@ -152,11 +158,11 @@ msgstr "Алынған түс мәні қате\n"
 
 #: libmate-desktop/mate-colorsel.c:267
 msgid "Has Opacity Control"
-msgstr ""
+msgstr "Мөлдір еместікті басқару элементі бар"
 
 #: libmate-desktop/mate-colorsel.c:268
 msgid "Whether the color selector should allow setting opacity"
-msgstr ""
+msgstr "Түсті таңдағыш мөлдір еместікті орнатуға рұқсат беруі керек пе"
 
 #: libmate-desktop/mate-colorsel.c:274
 msgid "Has palette"
@@ -164,23 +170,25 @@ msgstr "Палитрасы бар"
 
 #: libmate-desktop/mate-colorsel.c:275
 msgid "Whether a palette should be used"
-msgstr ""
+msgstr "Палитра пайдаланылуы керек пе"
 
 #: libmate-desktop/mate-colorsel.c:282
 msgid "The current color"
-msgstr ""
+msgstr "Ағымдағы түс"
 
 #: libmate-desktop/mate-colorsel.c:289
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
+"Ағымдағы мөлдір еместік мәні (0 толығымен мөлдір, 65535 толығымен мөлдір "
+"емес)"
 
 #: libmate-desktop/mate-colorsel.c:295
 msgid "HEX String"
-msgstr ""
+msgstr "HEX жолы"
 
 #: libmate-desktop/mate-colorsel.c:296
 msgid "The hexadecimal string of current color"
-msgstr ""
+msgstr "Ағымдағы түстің оналтылық жолы"
 
 #: libmate-desktop/mate-colorsel.c:341
 msgid ""
@@ -208,11 +216,11 @@ msgstr "Түс шеңберіндегі орны."
 
 #: libmate-desktop/mate-colorsel.c:377
 msgid "_Saturation:"
-msgstr ""
+msgstr "Қа_нықтық:"
 
 #: libmate-desktop/mate-colorsel.c:378
 msgid "\"Deepness\" of the color."
-msgstr ""
+msgstr "Түстің «тереңдігі»."
 
 #: libmate-desktop/mate-colorsel.c:379
 msgid "_Value:"
@@ -263,6 +271,8 @@ msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
+"Бұл жазбаға HTML стиліндегі оналтылық түс мәнін немесе «orange» сияқты жай "
+"түс атын енгізуге болады."
 
 #: libmate-desktop/mate-colorsel.c:457
 msgid "_Palette:"
@@ -278,26 +288,32 @@ msgid ""
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr ""
+"Бұрын таңдалған түс, оны қазір таңдалып жатқан түспен салыстыруға болады. "
+"Бұл түсті палитра жазбасына сүйреуге немесе оны жанындағы басқа түс үлгісіне "
+"сүйреу арқылы ағымдағы түс ретінде таңдауға болады."
 
 #: libmate-desktop/mate-colorsel.c:945
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr ""
+"Сіз таңдаған түс. Болашақта пайдалану үшін оны сақтау мақсатында палитра "
+"жазбасына сүйреуге болады."
 
 #: libmate-desktop/mate-colorsel.c:950
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
 msgstr ""
+"Бұрын таңдалған түс, оны қазір таңдалып жатқан түспен салыстыруға болады."
 
 #: libmate-desktop/mate-colorsel.c:953
 msgid "The color you've chosen."
-msgstr ""
+msgstr "Сіз таңдаған түс."
 
 #: libmate-desktop/mate-colorsel.c:1359
 msgid "gtk-color-sel"
-msgstr ""
+msgstr "gtk-color-sel"
 
 #: libmate-desktop/mate-colorsel.c:1364
 msgid "_Save color here"
@@ -308,6 +324,9 @@ msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
+"Бұл палитра жазбасын ағымдағы түс ретінде орнату үшін оны шертіңіз. Бұл "
+"жазбаны өзгерту үшін түс үлгісін осында сүйреңіз немесе оны оң жақпен "
+"шертіп, «Түсті осында сақтау» пәрменін таңдаңыз."
 
 #: libmate-desktop/mate-colorseldialog.c:98
 #: libmate-desktop/mate-colorseldialog.c:184
@@ -316,31 +335,31 @@ msgstr "Түсті таңдау"
 
 #: libmate-desktop/mate-colorseldialog.c:99
 msgid "The color selection embedded in the dialog."
-msgstr ""
+msgstr "Сұхбат терезесіне ендірілген түс таңдауы."
 
 #: libmate-desktop/mate-colorseldialog.c:105
 msgid "OK Button"
-msgstr ""
+msgstr "OK батырмасы"
 
 #: libmate-desktop/mate-colorseldialog.c:106
 msgid "The OK button of the dialog."
-msgstr ""
+msgstr "Сұхбат терезесінің OK батырмасы."
 
 #: libmate-desktop/mate-colorseldialog.c:112
 msgid "Cancel Button"
-msgstr ""
+msgstr "Бас тарту батырмасы"
 
 #: libmate-desktop/mate-colorseldialog.c:113
 msgid "The cancel button of the dialog."
-msgstr ""
+msgstr "Сұхбат терезесінің бас тарту батырмасы."
 
 #: libmate-desktop/mate-colorseldialog.c:119
 msgid "Help Button"
-msgstr ""
+msgstr "Көмек батырмасы"
 
 #: libmate-desktop/mate-colorseldialog.c:120
 msgid "The help button of the dialog."
-msgstr ""
+msgstr "Сұхбат терезесінің көмек батырмасы."
 
 #: libmate-desktop/mate-colorseldialog.c:162
 msgid "_Cancel"
@@ -348,7 +367,7 @@ msgstr "Ба_с тарту"
 
 #: libmate-desktop/mate-colorseldialog.c:167
 msgid "_OK"
-msgstr ""
+msgstr "_ОК"
 
 #: libmate-desktop/mate-colorseldialog.c:175
 msgid "Help"
@@ -420,7 +439,7 @@ msgstr "Терминал табылмады, жұмыс істемеу мүмк�
 
 #: libmate-desktop/mate-languages.c:746
 msgid "Unspecified"
-msgstr ""
+msgstr "Анықталмаған"
 
 #. Translators: a CRTC is a CRT Controller (this is X terminology).
 #: libmate-desktop/mate-rr.c:457
@@ -562,11 +581,13 @@ msgstr "Айналы экрандар"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:25
 msgid "minimum interval in milliseconds"
-msgstr ""
+msgstr "миллисекундпен есептелген минимум аралық"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:26
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
 msgstr ""
+"Миллисекундпен көрсетілген @delay аралығында _бір_ перненің бірнеше рет "
+"басылуын елемеу."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:36
 msgid "Pixels per seconds"
@@ -574,15 +595,15 @@ msgstr "Секундына пиксель"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:37
 msgid "How many pixels per second to move at the maximum speed."
-msgstr ""
+msgstr "Максимум жылдамдықпен жылжығанда секундқа неше пиксель келеді."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:41
 msgid "How long to accelerate in milliseconds"
-msgstr ""
+msgstr "Миллисекундпен есептелген үдету ұзақтығы"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:42
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr ""
+msgstr "0-ден максимум жылдамдыққа дейін өту үшін қанша миллисекунд қажет."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:46
 msgid "Initial delay in milliseconds"
@@ -592,6 +613,8 @@ msgstr "Бастапқы кідіріс, мс"
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
 msgstr ""
+"Тышқан қозғалысы пернелері жұмыс істей бастағанға дейін күту керек "
+"миллисекунд саны."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:54
 msgid "Minimum interval in milliseconds"
@@ -601,16 +624,19 @@ msgstr "Минимум аралық, мс"
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
 msgstr ""
+"@delay миллисекунд бойы басылып тұрмаса, пернені басылған деп қабылдамау."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:71
 msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Модификатор қатарынан екі рет басылғанда, сол модификатор қайта басылғанға "
+"дейін оны бекіту."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:75
 msgid "Disable if two keys are pressed at the same time."
-msgstr ""
+msgstr "Екі перне бір уақытта басылса, сөндіру."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:79
 msgid "Beep when a modifier is pressed."
@@ -618,51 +644,64 @@ msgstr "Түрлендіргіш басылған кезде дыбыс беру
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:86
 msgid "Beep when a key is pressed while CapsLock is active."
-msgstr ""
+msgstr "CapsLock белсенді кезде перне басылса, дыбыстық дабыл беру."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:91
 msgid "Beep count when enabling a modifier"
-msgstr ""
+msgstr "Модификаторды іске қосқан кездегі дыбыстық дабылдар саны"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:92
 msgid ""
 "Number of beeps to emit when enabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Ауыстыру пернелері (togglekeys) іске қосылған кезде модификаторды іске "
+"қосқанда берілетін дыбыстық дабылдар саны. Тек «ішкі» (internal) бэкендпен "
+"жұмыс істейді."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:97
 msgid "Delay between beeps when enabling a modifier"
-msgstr ""
+msgstr "Модификаторды іске қосқан кездегі дыбыстық дабылдар арасындағы кідіріс"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:98
 msgid ""
 "Delay in milliseconds between two beeps when enabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Ауыстыру пернелері (togglekeys) іске қосылған кезде модификаторды іске "
+"қосқанда екі дыбыстық дабыл арасындағы миллисекундпен есептелген кідіріс. "
+"Тек «ішкі» (internal) бэкендпен жұмыс істейді."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:103
 msgid "Beep count when disabling a modifier"
-msgstr ""
+msgstr "Модификаторды сөндірген кездегі дыбыстық дабылдар саны"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:104
 msgid ""
 "Number of beeps to emit when disabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Ауыстыру пернелері (togglekeys) іске қосылған кезде модификаторды "
+"сөндіргенде берілетін дыбыстық дабылдар саны. Тек «ішкі» (internal) "
+"бэкендпен жұмыс істейді."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:109
 msgid "Delay between beeps when disabling a modifier"
-msgstr ""
+msgstr "Модификаторды сөндірген кездегі дыбыстық дабылдар арасындағы кідіріс"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:110
 msgid ""
 "Delay in milliseconds between two beeps when disabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Ауыстыру пернелері (togglekeys) іске қосылған кезде модификаторды "
+"сөндіргенде екі дыбыстық дабыл арасындағы миллисекундпен есептелген кідіріс. "
+"Тек «ішкі» (internal) бэкендпен жұмыс істейді."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:114
 msgid "Implementation to use when togglekeys are enabled"
 msgstr ""
+"Ауыстыру пернелері (togglekeys) іске қосылған кезде пайдаланылатын іске асыру"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:115
 msgid ""
@@ -670,98 +709,117 @@ msgid ""
 "include 'xkb' (the stock X implementation) and 'internal' (a MATE-specific "
 "and more configurable implementation)."
 msgstr ""
+"Ауыстыру пернелері (togglekeys) мүмкіндігін қамтамасыз ету үшін "
+"пайдаланылатын бэкендті таңдайды. Жарамды мәндерге «xkb» (стандартты X іске "
+"асырылуы) және «internal» (MATE-ке тән және көбірек баптауға болатын іске "
+"асырылуы) жатады."
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"
-msgstr ""
+msgstr "Іске қосылатын көмекші технология қолданбалары"
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
 msgstr ""
+"MATE жұмыс үстеліне кірген кезде іске қосылатын көмекші технология "
+"қолданбаларының тізімі."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Таңдаулы қозғалыс көмекші технологиясы қолданбасы"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:6
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
+"Кіру, мәзір немесе командалық жол үшін пайдаланылатын таңдаулы қозғалыс "
+"көмекші технологиясы қолданбасы."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:10
 msgid "Start preferred Mobility assistive technology application"
-msgstr ""
+msgstr "Таңдаулы қозғалыс көмекші технологиясы қолданбасын бастау"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
 msgstr ""
+"MATE кіру кезінде таңдаулы қозғалыс көмекші технологиясы қолданбасын бастау "
+"керек пе."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
-msgstr ""
+msgstr "Таңдаулы визуалды көмекші технологиясы қолданбасы"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:6
 msgid ""
 "Preferred Visual assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
+"Кіру, мәзір немесе командалық жол үшін пайдаланылатын таңдаулы визуалды "
+"көмекші технологиясы қолданбасы."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:10
 msgid "Start preferred Visual assistive technology application"
-msgstr ""
+msgstr "Таңдаулы визуалды көмекші технологиясы қолданбасын бастау"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
 msgstr ""
+"MATE кіру кезінде таңдаулы визуалды көмекші технологиясы қолданбасын бастау "
+"керек пе."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
 msgid "Default browser"
-msgstr ""
+msgstr "Үнсіз келісім бойынша браузер"
 
 #: schemas/org.mate.applications-browser.gschema.xml:6
 msgid "Default browser for all URLs."
-msgstr ""
+msgstr "Барлық URL мекенжайлары үшін үнсіз келісім бойынша браузер."
 
 #: schemas/org.mate.applications-browser.gschema.xml:10
 msgid "Browser needs terminal"
-msgstr ""
+msgstr "Браузерге терминал қажет"
 
 #: schemas/org.mate.applications-browser.gschema.xml:11
 msgid "Whether the default browser needs a terminal to run."
-msgstr ""
+msgstr "Үнсіз келісім бойынша браузерді орындау үшін терминал қажет пе."
 
 #: schemas/org.mate.applications-browser.gschema.xml:15
 msgid "Browser understands remote"
-msgstr ""
+msgstr "Браузер қашықтағы байланысты түсінеді"
 
 #: schemas/org.mate.applications-browser.gschema.xml:16
 msgid "Whether the default browser understands netscape remote."
 msgstr ""
+"Үнсіз келісім бойынша браузер Netscape-тің қашықтағы басқаруын түсіне ме."
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
-msgstr ""
+msgstr "Калькулятор қолданбасы"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
 msgstr ""
+"Калькуляторды талап ететін қолданбаларды бастау кезінде пайдаланылатын "
+"калькулятор бағдарламасы."
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr ""
+msgstr "Жедел хабар алмасу қолданбасы"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
 msgstr ""
+"Жедел хабар алмасу бағдарламасын талап ететін қолданбаларды бастау кезінде "
+"пайдаланылатын бағдарлама."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -769,7 +827,7 @@ msgstr "Негізгі күнтізбе"
 
 #: schemas/org.mate.applications-office.gschema.xml:10
 msgid "Default calendar application"
-msgstr ""
+msgstr "Үнсіз келісім бойынша күнтізбе қолданбасы"
 
 #: schemas/org.mate.applications-office.gschema.xml:14
 msgid "Calendar needs terminal"
@@ -778,6 +836,7 @@ msgstr "Күнтізбе терминалды талап етеді"
 #: schemas/org.mate.applications-office.gschema.xml:15
 msgid "Whether the default calendar application needs a terminal to run"
 msgstr ""
+"Үнсіз келісім бойынша күнтізбе қолданбасын орындау үшін терминал қажет пе"
 
 #: schemas/org.mate.applications-office.gschema.xml:21
 msgid "Default tasks"
@@ -785,7 +844,7 @@ msgstr "Негізгі тапсырмалар"
 
 #: schemas/org.mate.applications-office.gschema.xml:22
 msgid "Default tasks application"
-msgstr ""
+msgstr "Үнсіз келісім бойынша тапсырмалар қолданбасы"
 
 #: schemas/org.mate.applications-office.gschema.xml:26
 msgid "Tasks needs terminal"
@@ -794,6 +853,7 @@ msgstr "Тапсырмалар қолданбасы терминалды тал�
 #: schemas/org.mate.applications-office.gschema.xml:27
 msgid "Whether the default tasks application needs a terminal to run"
 msgstr ""
+"Үнсіз келісім бойынша тапсырмалар қолданбасын орындау үшін терминал қажет пе"
 
 #: schemas/org.mate.applications-terminal.gschema.xml:5
 msgid "Terminal application"
@@ -802,6 +862,8 @@ msgstr "Терминал қолданбасы"
 #: schemas/org.mate.applications-terminal.gschema.xml:6
 msgid "Terminal program to use when starting applications that require one."
 msgstr ""
+"Терминалды талап ететін қолданбаларды бастау кезінде пайдаланылатын терминал "
+"бағдарламасы."
 
 #: schemas/org.mate.applications-terminal.gschema.xml:10
 msgid "Exec Arguments"
@@ -811,14 +873,16 @@ msgstr "Орындалу аргументтері"
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
 msgstr ""
+"«exec» кілтімен анықталған терминалда бағдарламаларды орындау үшін "
+"пайдаланылатын аргумент."
 
 #: schemas/org.mate.background.gschema.xml.in:18
 msgid "Draw Desktop Background"
-msgstr ""
+msgstr "Жұмыс үстелі фонын салу"
 
 #: schemas/org.mate.background.gschema.xml.in:19
 msgid "Have MATE draw the desktop background."
-msgstr ""
+msgstr "MATE жұмыс үстелі фонын салуы керек пе."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
@@ -826,7 +890,7 @@ msgstr "Жұмыс үстел таңбашаларын көрсету"
 
 #: schemas/org.mate.background.gschema.xml.in:24
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr ""
+msgstr "MATE файл басқарушысы (Caja) жұмыс үстелі таңбашаларын салуы керек пе."
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
@@ -837,6 +901,8 @@ msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
 msgstr ""
+"Егер ақиқат деп орнатылса, онда MATE жұмыс үстелі фонын баяу жоғалу "
+"эффектісімен өзгертеді."
 
 #: schemas/org.mate.background.gschema.xml.in:33
 msgid "Picture Options"
@@ -848,14 +914,18 @@ msgid ""
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
 msgstr ""
+"wallpaper_filename арқылы орнатылған суреттің қалай рендерленетінін "
+"анықтайды. Мүмкін мәндер: «wallpaper» (тұсқағаз), «centered» (орталанған), «"
+"scaled» (масштабталған), «stretched» (созылған), «zoom» (масштаб), «spanned» "
+"(созылған)."
 
 #: schemas/org.mate.background.gschema.xml.in:38
 msgid "Picture Filename"
-msgstr ""
+msgstr "Сурет файлының аты"
 
 #: schemas/org.mate.background.gschema.xml.in:39
 msgid "File to use for the background image."
-msgstr ""
+msgstr "Фондық сурет үшін пайдаланылатын файл."
 
 #: schemas/org.mate.background.gschema.xml.in:43
 msgid "Picture Opacity"
@@ -863,7 +933,7 @@ msgstr "Сурет мөлдірлілігі"
 
 #: schemas/org.mate.background.gschema.xml.in:44
 msgid "Opacity with which to draw the background picture."
-msgstr ""
+msgstr "Фондық суретті салу кезіндегі мөлдір еместік."
 
 #: schemas/org.mate.background.gschema.xml.in:48
 msgid "Primary Color"
@@ -872,6 +942,8 @@ msgstr "Біріншілік түс"
 #: schemas/org.mate.background.gschema.xml.in:49
 msgid "Left or Top color when drawing gradients, or the solid color."
 msgstr ""
+"Градиенттерді салу кезіндегі сол жақтағы немесе жоғарғы түс, немесе тұтас "
+"түс."
 
 #: schemas/org.mate.background.gschema.xml.in:53
 msgid "Secondary Color"
@@ -881,6 +953,8 @@ msgstr "Екіншілік түс"
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
+"Градиенттерді салу кезіндегі оң жақтағы немесе төменгі түс; тұтас түс үшін "
+"пайдаланылмайды."
 
 #: schemas/org.mate.background.gschema.xml.in:58
 msgid "Color Shading Type"
@@ -891,22 +965,25 @@ msgid ""
 "How to shade the background color. Possible values are \"horizontal-"
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr ""
+"Фондық түсті қалай көлеңкелеу керек. Мүмкін мәндер: «horizontal-gradient» "
+"(горизонталды градиент), «vertical-gradient» (вертикалды градиент) және «"
+"solid» (тұтас)."
 
 #: schemas/org.mate.file-views.gschema.xml:5
 msgid "File Icon Theme"
-msgstr ""
+msgstr "Файл таңбашаларының темасы"
 
 #: schemas/org.mate.file-views.gschema.xml:6
 msgid "Theme used for displaying file icons."
-msgstr ""
+msgstr "Файл таңбашаларын көрсету үшін пайдаланылатын тема."
 
 #: schemas/org.mate.interface.gschema.xml:5
 msgid "Enable Accessibility"
-msgstr ""
+msgstr "Арнайы мүмкіндіктерді іске қосу"
 
 #: schemas/org.mate.interface.gschema.xml:6
 msgid "Whether Applications should have accessibility support."
-msgstr ""
+msgstr "Қолданбаларда арнайы мүмкіндіктер қолдауы болуы керек пе."
 
 #: schemas/org.mate.interface.gschema.xml:10
 msgid "Enable Animations"
@@ -917,14 +994,16 @@ msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
 msgstr ""
+"Анимациялар көрсетілуі керек пе. Ескертпе: Бұл глобалды кілт, ол терезе "
+"басқарушысының, панельдің және т.б. жұмыс істеуін өзгертеді."
 
 #: schemas/org.mate.interface.gschema.xml:15
 msgid "Menus Have Tearoff"
-msgstr ""
+msgstr "Мәзірлерде ажырату мүмкіндігі бар"
 
 #: schemas/org.mate.interface.gschema.xml:16
 msgid "Whether menus should have a tearoff."
-msgstr ""
+msgstr "Мәзірлерде ажырату мүмкіндігі болуы керек пе."
 
 #: schemas/org.mate.interface.gschema.xml:20
 msgid "Toolbar Style"
@@ -933,22 +1012,24 @@ msgstr "Панельдер стилі"
 #: schemas/org.mate.interface.gschema.xml:21
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
 msgstr ""
+"Саймандар панелінің стилі. Жарамды мәндер: «both» (екеуі де), «both-horiz» "
+"(екеуі де, горизонталды), «icons» (таңбашалар) және «text» (мәтін)."
 
 #: schemas/org.mate.interface.gschema.xml:25
 msgid "Menus Have Icons"
-msgstr ""
+msgstr "Мәзірлерде таңбашалар бар"
 
 #: schemas/org.mate.interface.gschema.xml:26
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr ""
+msgstr "Мәзірлер мәзір жазбасының жанында таңбашаны көрсете ала ма."
 
 #: schemas/org.mate.interface.gschema.xml:30
 msgid "Buttons Have Icons"
-msgstr ""
+msgstr "Батырмаларда таңбашалар бар"
 
 #: schemas/org.mate.interface.gschema.xml:31
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr ""
+msgstr "Батырмалар батырма мәтініне қоса таңбашаны көрсете ала ма."
 
 #: schemas/org.mate.interface.gschema.xml:35
 msgid "Menubar Detachable"
@@ -956,7 +1037,7 @@ msgstr "Мәзір жолағы бөлінеді"
 
 #: schemas/org.mate.interface.gschema.xml:36
 msgid "Whether the user can detach menubars and move them around."
-msgstr ""
+msgstr "Пайдаланушы мәзір жолақтарын бөліп, оларды жылжыта алатын-алмайтыны."
 
 #: schemas/org.mate.interface.gschema.xml:40
 msgid "Toolbar Detachable"
@@ -965,6 +1046,7 @@ msgstr "Саймандар панелі бөлінеді"
 #: schemas/org.mate.interface.gschema.xml:41
 msgid "Whether the user can detach toolbars and move them around."
 msgstr ""
+"Пайдаланушы саймандар панельдерін бөліп, оларды жылжыта алатын-алмайтыны."
 
 #: schemas/org.mate.interface.gschema.xml:45
 msgid "Toolbar Icon Size"
@@ -973,6 +1055,8 @@ msgstr "Саймандар панелінің таңбашалар өлшемі"
 #: schemas/org.mate.interface.gschema.xml:46
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
 msgstr ""
+"Саймандар панеліндегі таңбашалардың өлшемі: \"small-toolbar\" (кіші) немесе "
+"\"large-toolbar\" (үлкен)."
 
 #: schemas/org.mate.interface.gschema.xml:50
 msgid "Cursor Blink"
@@ -988,7 +1072,7 @@ msgstr "Курсор жыпылықтауының темасы"
 
 #: schemas/org.mate.interface.gschema.xml:56
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr ""
+msgstr "Курсордың жыпылықтау циклінің ұзындығы, миллисекундпен."
 
 #: schemas/org.mate.interface.gschema.xml:60
 msgid "Icon Theme"
@@ -996,7 +1080,7 @@ msgstr "Таңбашалар темасы"
 
 #: schemas/org.mate.interface.gschema.xml:61
 msgid "Icon theme to use for the panel, Caja etc."
-msgstr ""
+msgstr "Панель, Caja және т.б. үшін пайдаланылатын таңбашалар темасы."
 
 #: schemas/org.mate.interface.gschema.xml:65
 #: schemas/org.mate.interface.gschema.xml:70
@@ -1006,17 +1090,19 @@ msgstr "GTK+ темасы"
 #: schemas/org.mate.interface.gschema.xml:66
 #: schemas/org.mate.interface.gschema.xml:71
 msgid "Basename of the default theme used by gtk+."
-msgstr ""
+msgstr "gtk+ пайдаланатын үнсіз келісім бойынша теманың негізгі аты."
 
 #: schemas/org.mate.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
-msgstr ""
+msgstr "Символдық аттар мен түс эквиваленттерінің тізімі"
 
 #: schemas/org.mate.interface.gschema.xml:76
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
 msgstr ""
+"'gtk-color-scheme' баптауында анықталғандай, «\\n» арқылы бөлінген «ат:түс» "
+"тізімі"
 
 #: schemas/org.mate.interface.gschema.xml:80
 msgid "Default font"
@@ -1024,23 +1110,23 @@ msgstr "Негізгі қаріп"
 
 #: schemas/org.mate.interface.gschema.xml:81
 msgid "Name of the default font used by gtk+."
-msgstr ""
+msgstr "gtk+ пайдаланатын үнсіз келісім бойынша қаріптің аты."
 
 #: schemas/org.mate.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
-msgstr ""
+msgstr "GTK IM алдын ала түзету стилі"
 
 #: schemas/org.mate.interface.gschema.xml:86
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr ""
+msgstr "gtk+ пайдаланатын GTK+ кіріс әдісінің алдын ала түзету стилінің аты."
 
 #: schemas/org.mate.interface.gschema.xml:90
 msgid "GTK IM Status Style"
-msgstr ""
+msgstr "GTK IM қалып-күй стилі"
 
 #: schemas/org.mate.interface.gschema.xml:91
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr ""
+msgstr "gtk+ пайдаланатын GTK+ кіріс әдісінің қалып-күй стилінің аты."
 
 #: schemas/org.mate.interface.gschema.xml:95
 msgid "GTK IM Module"
@@ -1048,11 +1134,11 @@ msgstr "GTK IM модулі"
 
 #: schemas/org.mate.interface.gschema.xml:96
 msgid "Name of the input method module used by GTK+."
-msgstr ""
+msgstr "GTK+ пайдаланатын кіріс әдісі модулінің аты."
 
 #: schemas/org.mate.interface.gschema.xml:100
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "GTK3 тақырыптама панелін пайдалану"
 
 #: schemas/org.mate.interface.gschema.xml:101
 msgid ""
@@ -1061,24 +1147,32 @@ msgid ""
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
 msgstr ""
+"Файлды таңдау, түсті таңдау немесе қаріпті таңдау сияқты кірістірілген GTK+ "
+"сұхбат терезелері әрекет виджеттерін көрсету үшін жоғарғы жағында "
+"тақырыптама панелін немесе төменгі жағында әрекет аймағын пайдаланатын-"
+"алмайтыны. Бұл баптау GtkDialog-ты тікелей пайдаланатын пайдаланушылық "
+"сұхбат терезелеріне немесе хабарлама сұхбат терезелеріне әсер етпейді."
 
 #: schemas/org.mate.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
-msgstr ""
+msgstr "GTK3 қабаттастыру айналдыруын пайдалану"
 
 #: schemas/org.mate.interface.gschema.xml:106
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
+"Кірістірілген GTK+ айналдырылатын терезелері қабаттастыру айналдыруын "
+"пайдаланатын-алмайтыны. Қабаттастыру айналдыруы фокус алғанға дейін "
+"айналдыру жолағын жасырады және оның өлшемін кішірейтеді."
 
 #: schemas/org.mate.interface.gschema.xml:110
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "Gtk-тың бүкіл тулкиті бойынша анимацияларды іске қосу"
 
 #: schemas/org.mate.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "Бүкіл тулкит бойынша анимацияларды іске қосу керек пе."
 
 #: schemas/org.mate.interface.gschema.xml:115
 msgid "Document font"
@@ -1086,7 +1180,7 @@ msgstr "Құжат қарібі"
 
 #: schemas/org.mate.interface.gschema.xml:116
 msgid "Name of the default font used for reading documents."
-msgstr ""
+msgstr "Құжаттарды оқу үшін пайдаланылатын үнсіз келісім бойынша қаріптің аты."
 
 #: schemas/org.mate.interface.gschema.xml:120
 msgid "Monospace font"
@@ -1096,6 +1190,7 @@ msgstr "Ені біркелкі қаріп"
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
 msgstr ""
+"Терминалдар сияқты жерлерде пайдалануға арналған ені бекітілген қаріптің аты."
 
 #: schemas/org.mate.interface.gschema.xml:125
 msgid "Use Custom Font"
@@ -1103,25 +1198,27 @@ msgstr "Таңдауыңызша қаріпті қолдану"
 
 #: schemas/org.mate.interface.gschema.xml:126
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr ""
+msgstr "gtk+ қолданбаларында пайдаланушылық қаріпті пайдалану керек пе."
 
 #: schemas/org.mate.interface.gschema.xml:130
 msgid "Status Bar on Right"
-msgstr ""
+msgstr "Қалып-күй панелі оң жақта"
 
 #: schemas/org.mate.interface.gschema.xml:131
 msgid "Whether to display a status bar meter on the right."
-msgstr ""
+msgstr "Оң жақта қалып-күй панелінің өлшегішін көрсету керек пе."
 
 #: schemas/org.mate.interface.gschema.xml:135
 msgid "Module for GtkFileChooser"
-msgstr ""
+msgstr "GtkFileChooser үшін модуль"
 
 #: schemas/org.mate.interface.gschema.xml:136
 msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
 msgstr ""
+"GtkFileChooser виджеті үшін файлдық жүйе моделі ретінде пайдаланылатын "
+"модуль. Мүмкін мәндер — «gio» және «gtk+»."
 
 #: schemas/org.mate.interface.gschema.xml:140
 msgid "Menubar accelerator"
@@ -1133,27 +1230,32 @@ msgstr "Мәзірді ашу үшін пернетақта жарлығы."
 
 #: schemas/org.mate.interface.gschema.xml:145
 msgid "Show the 'Input Methods' menu"
-msgstr ""
+msgstr "«Кіріс әдістері» мәзірін көрсету"
 
 #: schemas/org.mate.interface.gschema.xml:146
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr ""
+"Жазбалар мен мәтіндік көріністердің контексттік мәзірлері кіріс әдісін "
+"өзгертуді ұсынуы керек пе."
 
 #: schemas/org.mate.interface.gschema.xml:150
 msgid "Show the 'Unicode Control Character' menu"
-msgstr ""
+msgstr "«Unicode басқару таңбасы» мәзірін көрсету"
 
 #: schemas/org.mate.interface.gschema.xml:151
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr ""
+"Жазбалар мен мәтіндік көріністердің контексттік мәзірлері басқару таңбаларын "
+"кірістіруді ұсынуы керек пе."
 
 #: schemas/org.mate.interface.gschema.xml:155
 msgid "Titlebar layout of GTK3 client-side decorated windows"
 msgstr ""
+"GTK3 терезелерінің терезе жағында безендірілген тақырып жолағының жаймасы"
 
 #: schemas/org.mate.interface.gschema.xml:156
 msgid ""
@@ -1163,10 +1265,14 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
 msgstr ""
+"Бұл баптау терезе жағында безендірілген терезелердің тақырып жолағына қай "
+"батырмалар қойылуы керектігін және олардың сол немесе оң жаққа "
+"орналастырылуын анықтайды. https://developer.gnome.org/gtk3/stable/"
+"GtkSettings.html#GtkSettings--gtk-decoration-layout сілтемесін қараңыз."
 
 #: schemas/org.mate.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
-msgstr ""
+msgstr "Қолданба мәзірлерін көрсету үшін глобалды мәзір жолағын пайдалану"
 
 #: schemas/org.mate.interface.gschema.xml:161
 msgid ""
@@ -1175,10 +1281,14 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
 msgstr ""
+"Бұл баптау қолданба мәзірінің қайда көрсетілетінін анықтайды — терезеде "
+"немесе MenuModel хаттамасы бар панельде. https://developer.gnome.org/gtk3/"
+"stable/GtkSettings.html#GtkSettings--gtk-shell-shows-app-menu сілтемесін "
+"қараңыз."
 
 #: schemas/org.mate.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
-msgstr ""
+msgstr "Терезе мәзір жолақтарын көрсету үшін глобалды мәзір жолағын пайдалану"
 
 #: schemas/org.mate.interface.gschema.xml:166
 msgid ""
@@ -1187,20 +1297,26 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-menubar."
 msgstr ""
+"Бұл баптау терезе мәзір жолақтарының қайда көрсетілетінін анықтайды — "
+"терезеде немесе MenuModel хаттамасы бар панельде. https://"
+"developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-shell-"
+"shows-menubar сілтемесін қараңыз."
 
 #: schemas/org.mate.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "Мнемониканы тек Alt пернесі басылғанда ғана көрсету"
 
 #: schemas/org.mate.interface.gschema.xml:171
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
 msgstr ""
+"Пайдаланушы Alt пернесін басқанда мнемоника автоматты түрде көрсетілуі және "
+"жасырылуы керек пе."
 
 #: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
-msgstr ""
+msgstr "Терезені масштабтау коэффициенті"
 
 #: schemas/org.mate.interface.gschema.xml:177
 msgid ""
@@ -1209,10 +1325,15 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Бұл терезе координаталарын нақты құрылғы пиксельдеріне сәйкестендіретін GTK "
+"масштабтау коэффициентін басқарады. Дәстүрлі жүйелерде бұл мән 1-ге тең, "
+"бірақ өте жоғары тығыздықты экрандарда (мысалы, HiDPI, Retina) бұл мән "
+"жоғарырақ (көбіне 2) болуы мүмкін. Автоматты түрде анықтау үшін 0-ге "
+"орнатыңыз."
 
 #: schemas/org.mate.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "QT қолданбалары үшін масштабтау коэффициенті"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
@@ -1221,16 +1342,22 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Бұл баптау MATE-нің QT қолданбалары үшін масштабтау коэффициентін басқаратын-"
+"басқармайтынын анықтайды. Сеансты бастау кезінде GTK масштабтау "
+"коэффициентімен синхрондау үшін іске қосыңыз, бұл мәнді басқа жерде басқару "
+"үшін сөндіріңіз. Сеансты қайта іске қосуды талап етеді."
 
 #: schemas/org.mate.interface.gschema.xml:186
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "Негізгі кірістіру таңдауын іске қосу"
 
 #: schemas/org.mate.interface.gschema.xml:187
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
+"Егер ақиқат болса, gtk+ әдетте тышқанның ортаңғы батырмасын шерту арқылы "
+"іске қосылатын негізгі кірістіру таңдауын пайдаланады."
 
 #: schemas/org.mate.lockdown.gschema.xml:5
 msgid "Disable command line"
@@ -1242,6 +1369,9 @@ msgid ""
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
+"Пайдаланушының терминалға қол жеткізуіне немесе орындалуы тиіс командалық "
+"жолды көрсетуіне жол бермеу. Мысалы, бұл панельдің «Қолданбаны орындау» "
+"сұхбат терезесіне рұқсатты сөндіреді."
 
 #: schemas/org.mate.lockdown.gschema.xml:10
 msgid "Disable saving files to disk"
@@ -1252,6 +1382,8 @@ msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
 msgstr ""
+"Пайдаланушының файлдарды дискіге сақтауына жол бермеу. Мысалы, бұл барлық "
+"қолданбалардың «Қалайша сақтау» сұхбат терезелеріне рұқсатты сөндіреді."
 
 #: schemas/org.mate.lockdown.gschema.xml:15
 msgid "Disable printing"
@@ -1262,6 +1394,8 @@ msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
 msgstr ""
+"Пайдаланушының басып шығаруына жол бермеу. Мысалы, бұл барлық қолданбалардың "
+"«Басып шығару» сұхбат терезелеріне рұқсатты сөндіреді."
 
 #: schemas/org.mate.lockdown.gschema.xml:20
 msgid "Disable print setup"
@@ -1272,6 +1406,9 @@ msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
 msgstr ""
+"Пайдаланушының басып шығару баптауларын өзгертуіне жол бермеу. Мысалы, бұл "
+"барлық қолданбалардың «Басып шығаруды орнату» сұхбат терезелеріне рұқсатты "
+"сөндіреді."
 
 #: schemas/org.mate.lockdown.gschema.xml:25
 msgid "Disable user switching"
@@ -1282,6 +1419,8 @@ msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
 msgstr ""
+"Пайдаланушының сеансы белсенді болған кезде басқа тіркелгіге ауысуына жол "
+"бермеу."
 
 #: schemas/org.mate.lockdown.gschema.xml:30
 msgid "Disable lock screen"
@@ -1289,23 +1428,25 @@ msgstr "Экранды блоктауды сөндіру"
 
 #: schemas/org.mate.lockdown.gschema.xml:31
 msgid "Prevent the user from locking the screen."
-msgstr ""
+msgstr "Пайдаланушының экранды құлыптауына жол бермеу."
 
 #: schemas/org.mate.lockdown.gschema.xml:35
 msgid "Disable URL and MIME type handlers"
-msgstr ""
+msgstr "URL және MIME түрін өңдеушілерді сөндіру"
 
 #: schemas/org.mate.lockdown.gschema.xml:36
 msgid "Prevent running any URL or MIME type handler applications."
 msgstr ""
+"Кез келген URL немесе MIME түрін өңдеуші қолданбалардың орындалуына жол "
+"бермеу."
 
 #: schemas/org.mate.lockdown.gschema.xml:40
 msgid "Disable theme settings"
-msgstr ""
+msgstr "Тема баптауларын сөндіру"
 
 #: schemas/org.mate.lockdown.gschema.xml:41
 msgid "Prevent the user from changing theme settings."
-msgstr ""
+msgstr "Пайдаланушының тема баптауларын өзгертуіне жол бермеу."
 
 #: schemas/org.mate.lockdown.gschema.xml:45
 msgid "Disable log out"
@@ -1313,31 +1454,35 @@ msgstr "Жүйеден шығу мүмкіндігін сөндіру"
 
 #: schemas/org.mate.lockdown.gschema.xml:46
 msgid "Prevent the user from logging out."
-msgstr ""
+msgstr "Пайдаланушының сеанстан шығуына жол бермеу."
 
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
-msgstr ""
+msgstr "Үнсіз келісім бойынша микшер құрылғысы"
 
 #: schemas/org.mate.sound.gschema.xml:6
 msgid "The default mixer device used by the multimedia key bindings."
 msgstr ""
+"Мультимедиа пернелерінің түптеулері пайдаланатын үнсіз келісім бойынша "
+"микшер құрылғысы."
 
 #: schemas/org.mate.sound.gschema.xml:10
 msgid "Default mixer tracks"
-msgstr ""
+msgstr "Үнсіз келісім бойынша микшер тректері"
 
 #: schemas/org.mate.sound.gschema.xml:11
 msgid "The default mixer tracks used by the multimedia key bindings."
 msgstr ""
+"Мультимедиа пернелерінің түптеулері пайдаланатын үнсіз келісім бойынша "
+"микшер тректері."
 
 #: schemas/org.mate.sound.gschema.xml:15
 msgid "Enable ESD"
-msgstr ""
+msgstr "ESD-ні іске қосу"
 
 #: schemas/org.mate.sound.gschema.xml:16
 msgid "Enable sound server startup."
-msgstr ""
+msgstr "Дыбыс серверінің іске қосылуын іске қосу."
 
 #: schemas/org.mate.sound.gschema.xml:20
 msgid "Sounds for events"
@@ -1345,7 +1490,7 @@ msgstr "Оқиғалар үшін дыбыстар"
 
 #: schemas/org.mate.sound.gschema.xml:21
 msgid "Whether to play sounds on user events."
-msgstr ""
+msgstr "Пайдаланушы оқиғалары кезінде дыбыстарды ойнату керек пе."
 
 #: schemas/org.mate.sound.gschema.xml:25
 msgid "Sound theme name"
@@ -1353,19 +1498,19 @@ msgstr "Дыбыс темасының аты"
 
 #: schemas/org.mate.sound.gschema.xml:26
 msgid "The XDG sound theme to use for event sounds."
-msgstr ""
+msgstr "Оқиға дыбыстары үшін пайдаланылатын XDG дыбыс темасы."
 
 #: schemas/org.mate.sound.gschema.xml:30
 msgid "Input feedback sounds"
-msgstr ""
+msgstr "Кіріс кері байланыс дыбыстары"
 
 #: schemas/org.mate.sound.gschema.xml:31
 msgid "Whether to play sounds on input events."
-msgstr ""
+msgstr "Кіріс оқиғалары кезінде дыбыстарды ойнату керек пе."
 
 #: schemas/org.mate.sound.gschema.xml:35
 msgid "Permit the output volume to exceed 100%"
-msgstr ""
+msgstr "Шығыс дыбыс деңгейінің 100%-дан асуына рұқсат ету"
 
 #: schemas/org.mate.sound.gschema.xml:36
 msgid ""
@@ -1376,71 +1521,83 @@ msgid ""
 "to extremely quiet audio recordings, where the recording would otherwise be "
 "completely useless."
 msgstr ""
+"Егер бұл АҚИҚАТ деп орнатылса, пайдаланушыға шығыс / динамик дыбыс деңгейін "
+"100%-дан жоғары орнатуға рұқсат беріледі. Шығыс дыбыс деңгейін 100%-дан "
+"жоғары орнату арқылы дыбыс сервері аудионы аудио аппараттық құралдың таза "
+"орындай алатын мүмкіндігінен жоғары күшейтеді. Бұл аудио сапасының "
+"нашарлауына әкелуі мүмкін, бірақ дыбыс жазу толығымен пайдасыз болатын өте "
+"тыныш аудио жазбаларды тыңдау үшін пайдалы болуы мүмкін."
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:6
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
 msgstr ""
+"Кэштегі нобайлардың сақталуының күнмен есептелген максимум мерзімі. "
+"Тазалауды сөндіру үшін -1 мәнін орнатыңыз."
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:10
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
 msgstr ""
+"Нобайлар кэшінің мегабайтпен есептелген максимум өлшемі. Тазалауды сөндіру "
+"үшін -1 мәнін орнатыңыз."
 
 #: schemas/org.mate.thumbnailers.gschema.xml:5
 msgid "Disable all external thumbnailers"
-msgstr ""
+msgstr "Барлық сыртқы нобай жасаушыларды сөндіру"
 
 #: schemas/org.mate.thumbnailers.gschema.xml:6
 msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
 msgstr ""
+"Барлық сыртқы нобай жасаушы бағдарламаларды, олардың жекелей сөндірілгеніне/"
+"іске қосылғанына қарамастан, сөндіру үшін ақиқат мәнін орнатыңыз."
 
 #: schemas/org.mate.thumbnailers.gschema.xml:10
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
-msgstr ""
+msgstr "Сыртқы нобай жасаушы бағдарламалар сөндірілетін MIME түрлерінің тізімі"
 
 #: schemas/org.mate.thumbnailers.gschema.xml:11
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr ""
+msgstr "MIME түрі тізімде бар файлдар үшін нобайлар жасалмайды."
 
 #: schemas/org.mate.typing-break.gschema.xml:5
 msgid "Type time"
-msgstr ""
+msgstr "Теру уақыты"
 
 #: schemas/org.mate.typing-break.gschema.xml:6
 msgid "Number of minutes of typing time before break mode starts."
-msgstr ""
+msgstr "Үзіліс режимі басталғанға дейінгі теру уақытының минут саны."
 
 #: schemas/org.mate.typing-break.gschema.xml:10
 msgid "Break time"
-msgstr ""
+msgstr "Үзіліс уақыты"
 
 #: schemas/org.mate.typing-break.gschema.xml:11
 msgid "Number of minutes that the typing break should last."
-msgstr ""
+msgstr "Теру үзілісі созылуы тиіс минут саны."
 
 #: schemas/org.mate.typing-break.gschema.xml:15
 msgid "Allow postponing of breaks"
-msgstr ""
+msgstr "Үзілістерді кейінге қалдыруға рұқсат ету"
 
 #: schemas/org.mate.typing-break.gschema.xml:16
 msgid "Whether or not the typing break screen can be postponed."
-msgstr ""
+msgstr "Теру үзілісі экранын кейінге қалдыруға болатын-болмайтыны."
 
 #: schemas/org.mate.typing-break.gschema.xml:20
 msgid "Whether or not keyboard locking is enabled"
-msgstr ""
+msgstr "Пернетақтаны құлыптау іске қосылған-қосылмағаны"
 
 #: schemas/org.mate.typing-break.gschema.xml:21
 msgid "Whether or not keyboard locking is enabled."
-msgstr ""
+msgstr "Пернетақтаны құлыптау іске қосылған-қосылмағаны."
 
 #: tools/mate-color-select.c:63 tools/mate-color-select.desktop.in:3
 msgid "MATE Color Selection"
@@ -1460,10 +1617,10 @@ msgstr "Түсті таңдау сұхбаты"
 
 #: tools/mate-color-select.desktop.in:5
 msgid "Choose colors from the palette or the screen"
-msgstr ""
+msgstr "Түстерді палитрадан немесе экраннан таңдау"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
-msgstr ""
+msgstr "MATE;түс;таңдағыш;таңдау;палитра;экран;таңдау;"
