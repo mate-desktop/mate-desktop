@@ -190,6 +190,7 @@ mate_rr_output_get_crtc
 mate_rr_output_get_current_mode
 mate_rr_output_get_edid_data
 mate_rr_output_get_height_mm
+mate_rr_output_get_hotplug_mode_update
 mate_rr_output_get_id
 mate_rr_output_get_is_primary
 mate_rr_output_get_name
@@ -236,3 +237,5 @@ mate_rr_screen_new
 mate_rr_screen_refresh
 mate_rr_screen_set_primary_output
 mate_rr_screen_set_size
+mate_start_systemd_scope
+mate_start_systemd_scope_finish

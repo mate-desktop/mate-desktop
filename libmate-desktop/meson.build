@@ -29,6 +29,7 @@ headers = [
   'mate-colorsel.h',
   'mate-hsv.h',
   'mate-colorseldialog.h',
+  'mate-systemd.h',
 ]
 
 install_headers(
@@ -55,6 +56,7 @@ sources = files(
   'mate-hsv.c',
   'mate-colorseldialog.c',
   'edid-parse.c',
+  'mate-systemd.c',
 )
 
 deps = [
@@ -63,6 +65,7 @@ deps = [
   m_dep,
   libmdt_dep,
   dconf_dep,
+  libsystemd_dep,
 ]
 
 if get_option('pnp-ids-path') == 'internal'

@@ -10,6 +10,9 @@
 /* Building with startup notification support */
 #mesondefine HAVE_STARTUP_NOTIFICATION
 
+/* Define if libsystemd is available */
+#mesondefine HAVE_SYSTEMD
+
 /* Enable additional debugging at the expense of performance and size */
 #mesondefine MATE_ENABLE_DEBUG
 

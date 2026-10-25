@@ -22,6 +22,12 @@ option('startup-notification',
   description: 'startup notification support'
 )
 
+option('systemd',
+  type: 'feature',
+  value: 'auto',
+  description: 'systemd integration support'
+)
+
 option('pnp-ids-path',
   type: 'string',
   value: 'internal',

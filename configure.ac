@@ -154,6 +154,36 @@ fi
 
 AC_SUBST(STARTUP_NOTIFICATION_PACKAGE)
 
+dnl ----------------------------------------------------------------------------
+dnl systemd
+dnl ----------------------------------------------------------------------------
+AC_ARG_ENABLE([systemd],
+    [AS_HELP_STRING([--enable-systemd@<:@=auto/yes/no@:>@],
+                    [Enable systemd integration @<:@default=auto@:>@])],
+    [],
+    [enable_systemd=auto])
+
+AS_IF([test "x$enable_systemd" != xno], [
+    PKG_CHECK_MODULES([SYSTEMD], [libsystemd],
+        [have_systemd=yes],
+        [have_systemd=no])
+
+    AS_IF([test "x$enable_systemd" = xyes &&
+           test "x$have_systemd" = xno], [
+        AC_MSG_ERROR([systemd support requested but libsystemd was not found])
+    ])
+], [
+    have_systemd=no
+])
+
+AS_IF([test "x$have_systemd" = xyes], [
+    AC_DEFINE([HAVE_SYSTEMD], [1],
+              [Define if libsystemd is available])
+])
+
+AM_CONDITIONAL([HAVE_SYSTEMD], [test "x$have_systemd" = xyes])
+
+
 GOBJECT_INTROSPECTION_CHECK([0.9.7])
 
 dnl we need x11 for MateBG
@@ -285,6 +315,7 @@ mate-desktop $VERSION
     Build mate-about:             ${enable_mate_about}
     Use external pnp.ids:         ${EXTERNAL_PNP_IDS}
     Startup notification support: ${have_startup_notification}
+    systemd support:              ${have_systemd}
     XRandr support:               ${have_randr}
     Build introspection support:  ${found_introspection}
     Build gtk-doc documentation:  ${enable_gtk_doc}

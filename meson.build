@@ -37,6 +37,7 @@ matedt_pkgdatadir = join_paths(matedt_datadir, 'libmate-desktop')
 enable_gir = get_option('introspection')
 enable_gtk_doc = get_option('gtk-doc')
 enable_startup_notification = get_option('startup-notification')
+enable_systemd = get_option('systemd')
 
 # Before making a release, the LT_VERSION string should be modified.
 # The string is of the form C:R:A.
@@ -78,6 +79,7 @@ iso_codes = dependency('iso-codes')
 iso_codes_prefix = iso_codes.get_pkgconfig_variable('prefix')
 libstartup_dep = dependency('libstartup-notification-1.0', version: '>= 0.5',
     required: enable_startup_notification )
+libsystemd_dep = dependency('libsystemd', required: enable_systemd )
 libmdt_dep = [
   dependency('gdk-pixbuf-2.0'),
   dependency('gobject-2.0'),
@@ -89,6 +91,7 @@ libmdt_dep = [
 ]
 
 config_h.set('HAVE_STARTUP_NOTIFICATION', libstartup_dep.found())
+config_h.set('HAVE_SYSTEMD', libsystemd_dep.found())
 gnome = import('gnome')
 i18n = import('i18n')
 pkg = import('pkgconfig')

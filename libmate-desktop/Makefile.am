@@ -15,7 +15,8 @@ libmate_desktop_HEADERS = \
 	mate-colorsel.h \
 	mate-hsv.h \
 	mate-colorseldialog.h \
-	mate-image-menu-item.h
+	mate-image-menu-item.h \
+	mate-systemd.h
 
 lib_LTLIBRARIES = libmate-desktop-2.la
 
@@ -52,7 +53,8 @@ introspection_sources = \
 	mate-hsv.c \
 	mate-colorseldialog.c \
 	edid-parse.c \
-	mate-image-menu-item.c
+	mate-image-menu-item.c \
+	mate-systemd.c
 
 libmate_desktop_2_la_SOURCES =		\
 	$(introspection_sources)	\
@@ -109,6 +111,11 @@ pnpdatadir = $(datadir)/libmate-desktop
 pnpdata_DATA = pnp.ids
 endif
 pnpdata_DATA_dist = pnp.ids
+
+if HAVE_SYSTEMD
+AM_CPPFLAGS += $(SYSTEMD_CFLAGS)
+libmate_desktop_2_la_LIBADD += $(SYSTEMD_LIBS)
+endif
 
 check:
 	test -s $(top_srcdir)/libmate-desktop/pnp.ids
