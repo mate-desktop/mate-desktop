@@ -1,9 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Developers
 # This file is distributed under the same license as the mate-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Henrik Mattsson-Mårn <h@reglage.net>, 2018
 # efef6ec5b435a041fce803c7f8af77d2_2341d43, 2018
 # Kristoffer Grundström <lovaren@gmail.com>, 2018
@@ -14,20 +11,25 @@
 # Philip Andersen <renegadevi@codeofmagi.net>, 2021
 # Luna Jernberg <droidbittin@gmail.com>, 2024
 # Tobias Lekare <lekare@linux.com>, 2025
-# 
+# Daniel Nylander <po@danielnylander.se>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mate-desktop 1.27.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2023-09-02 16:57+0200\n"
-"PO-Revision-Date: 2018-03-11 16:44+0000\n"
-"Last-Translator: Tobias Lekare <lekare@linux.com>, 2025\n"
-"Language-Team: Swedish (https://app.transifex.com/mate/teams/13566/sv/)\n"
+"PO-Revision-Date: 2026-10-11 10:44+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/mate-desktop/sv/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sv\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.10.1\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
@@ -97,9 +99,8 @@ msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr ""
-"GNOME 2 var den populäraste skrivbordsmiljön för Linux men det är inte "
-"längre tillgängligt... MATE finns till för att tillhandahålla precis den "
-"skrivbordsmiljön!"
+"GNOME 2 var den populäraste skrivbordsmiljön för Linux, men är inte längre "
+"tillgänglig… MATE finns här för att ge dig samma skrivbordsmiljö!"
 
 #: mate-about/mate-about.h:58
 msgid ""
@@ -214,19 +215,19 @@ msgstr ""
 
 #: libmate-desktop/mate-colorsel.c:374
 msgid "_Hue:"
-msgstr "Nyans"
+msgstr "N_yans:"
 
 #: libmate-desktop/mate-colorsel.c:375
 msgid "Position on the color wheel."
-msgstr "Position på färghjulet"
+msgstr "Position på färghjulet."
 
 #: libmate-desktop/mate-colorsel.c:377
 msgid "_Saturation:"
-msgstr "Mättnad"
+msgstr "Mät_tnad:"
 
 #: libmate-desktop/mate-colorsel.c:378
 msgid "\"Deepness\" of the color."
-msgstr "\"Djup\" av färgen"
+msgstr "Färgens ”djup”."
 
 #: libmate-desktop/mate-colorsel.c:379
 msgid "_Value:"
@@ -262,7 +263,7 @@ msgstr "Mängd blått ljus i färgen."
 
 #: libmate-desktop/mate-colorsel.c:389
 msgid "Op_acity:"
-msgstr "Opacitet"
+msgstr "Op_acitet:"
 
 #: libmate-desktop/mate-colorsel.c:396 libmate-desktop/mate-colorsel.c:406
 msgid "Transparency of the color."
@@ -277,8 +278,8 @@ msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
-"Du kan använda en HTML-stil hexdecimal färgkod, eller skriva in färgens namn"
-" som exempelvis 'orange' i detta fält"
+"Du kan ange ett hexadecimalt färgvärde i HTML-format eller bara ett "
+"färgnamn, till exempel ”orange”, i fältet."
 
 #: libmate-desktop/mate-colorsel.c:457
 msgid "_Palette:"
@@ -329,9 +330,9 @@ msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
-"Klicka här på palett posten för att göra det till den aktuella färgen . Om "
-"du vill ändra den här posten, dra en färgruta hit eller högerklicka på den "
-"och välj \" Spara färg här. \""
+"Klicka på den här palettposten för att göra den till aktuell färg. Om du "
+"vill ändra posten drar du en färgruta hit eller högerklickar på den och "
+"väljer ”Spara färg här”."
 
 #: libmate-desktop/mate-colorseldialog.c:98
 #: libmate-desktop/mate-colorseldialog.c:184
@@ -340,7 +341,7 @@ msgstr "Färgval"
 
 #: libmate-desktop/mate-colorseldialog.c:99
 msgid "The color selection embedded in the dialog."
-msgstr "Färgvalet inbäddad i dialogrutan."
+msgstr "Färgvalet är inbäddat i dialogrutan."
 
 #: libmate-desktop/mate-colorseldialog.c:105
 msgid "OK Button"
@@ -372,7 +373,7 @@ msgstr "_Avbryt"
 
 #: libmate-desktop/mate-colorseldialog.c:167
 msgid "_OK"
-msgstr "Ok"
+msgstr "_OK"
 
 #: libmate-desktop/mate-colorseldialog.c:175
 msgid "Help"
@@ -1084,7 +1085,7 @@ msgstr "Basnamn för standardtemat som används av gtk+."
 
 #: schemas/org.mate.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
-msgstr "Lista över symboliska namn och färg ekvivalenter"
+msgstr "Lista över symboliska namn och färgekivalenter"
 
 #: schemas/org.mate.interface.gschema.xml:76
 msgid ""
@@ -1264,7 +1265,7 @@ msgstr ""
 
 #: schemas/org.mate.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
-msgstr "Använd en global menyrad för att visa programmenyer."
+msgstr "Använd en global menyrad för att visa programmenyer"
 
 #: schemas/org.mate.interface.gschema.xml:161
 msgid ""
@@ -1273,10 +1274,9 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
 msgstr ""
-"Denna inställning avgör var programmenyn kommer visas - i ett fönster eller "
-"i en panel med MenuModel-protokoll. Se "
-"https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
-"shell-shows-app-menu."
+"Den här inställningen avgör var programmenyn visas, i ett fönster eller på "
+"en panel med MenuModel-protokollet. Se https://developer.gnome.org/gtk3/"
+"stable/GtkSettings.html#GtkSettings--gtk-shell-shows-app-menu."
 
 #: schemas/org.mate.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
@@ -1505,12 +1505,11 @@ msgid ""
 "to extremely quiet audio recordings, where the recording would otherwise be "
 "completely useless."
 msgstr ""
-"Om detta är inställt på TRUE (SANN) kommer användaren att tillåtas att "
-"ställa in volymen för ut-/högtalaren till över 100%. Genom att ställa in "
-"volymen över 100% kommer ljudservern att förstärka ljudet över vad "
-"ljudmaskinvaran kan göra på ett rent sätt. Detta kan leda till försämrad "
-"ljudkvalitet men kan vara användbart för att kunna lyssna på väldigt tysta "
-"ljudinspelningar där inspelningen annars skulle vara helt oanvändbar."
+"Om detta ställs in på TRUE kan användaren ställa in utgående volym eller "
+"högtalarvolym över 100 %. Om den utgående volymen ställs över 100 % "
+"förstärker ljudservern ljudet mer än ljudmaskinvaran klarar utan "
+"kvalitetsförlust. Det kan försämra ljudkvaliteten, men kan vara användbart "
+"för mycket tysta ljudinspelningar som annars skulle vara helt oanvändbara."
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:6
 msgid ""
@@ -1544,8 +1543,7 @@ msgstr ""
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
 msgstr ""
-"Lista på mime-typer för vilka externa miniatyrbildsprogram kommer att "
-"inaktiveras."
+"Lista över MIME-typer där externa program för miniatyrbilder inaktiveras"
 
 #: schemas/org.mate.thumbnailers.gschema.xml:11
 msgid ""
