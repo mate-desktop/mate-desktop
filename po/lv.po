@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: mate-desktop 1.27.2\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/mate-desktop/\n"
 "POT-Creation-Date: 2023-09-02 16:57+0200\n"
-"PO-Revision-Date: 2026-10-25 15:18+0000\n"
+"PO-Revision-Date: 2026-11-12 15:18+0000\n"
 "Last-Translator: Rihards Prieditis <rprieditis@gmail.com>\n"
 "Language-Team: Latvian <https://translate.fedoraproject.org/projects/mate-"
 "desktop/applications/mate-desktop/lv/>\n"
@@ -23,13 +23,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lv\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
-"X-Generator: Weblate 2026.10.1\n"
+"X-Generator: Weblate 2026.11.1\n"
 
 #. Translators should localize the following string which will be
 #. * displayed in the about box to give credit to the translator(s).
 #: mate-about/mate-about.c:68
 msgid "translator-credits"
 msgstr ""
+"Rihards Priedītis <rprieditis@gmail.com>\n"
+"\n"
 "Launchpad Contributions:\n"
 " Kristaps https://launchpad.net/~retail"
 
@@ -43,7 +45,7 @@ msgstr "Uzziniet vairāk par MATE"
 
 #: mate-about/mate-about.h:29
 msgid "MATE Desktop Environment"
-msgstr ""
+msgstr "MATE darbvirsmas vide"
 
 #: mate-about/mate-about.h:34
 msgid ""
@@ -51,24 +53,34 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2023 MATE developers"
 msgstr ""
+"Autortiesības © 1997-2011 GNOME izstrādātāji\n"
+"Autortiesības © 2011 Perberos\n"
+"Autortiesības © 2012-2023 MATE izstrādātāji"
 
 #: mate-about/mate-about.h:42
 msgid ""
 "MATE provides an intuitive and attractive desktop to Linux users using "
 "traditional metaphors."
 msgstr ""
+"MATE sniedz Linux lietotājiem intuitīvu un pievilcīgu darbvirsmu, kas "
+"balstās uz tradicionālām metaforām."
 
 #: mate-about/mate-about.h:45
 msgid ""
 "MATE includes most of what you see on your computer, including the file "
 "manager, document viewer, image viewer, menus, and many applications."
 msgstr ""
+"MATE ietver lielāko daļu no tā, ko redzat savā datorā, tostarp failu "
+"pārvaldnieku, dokumentu skatītāju, attēlu skatītāju, izvēlnes un daudzas "
+"lietotnes."
 
 #: mate-about/mate-about.h:48
 msgid ""
 "MATE is a Free, usable, stable, accessible desktop environment for the Unix-"
 "like family of operating systems."
 msgstr ""
+"MATE ir brīva, lietojama, stabila un pieejama darbvirsmas vide Unix līdzīgo "
+"operētājsistēmu saimei."
 
 #: mate-about/mate-about.h:51
 msgid ""
@@ -77,12 +89,17 @@ msgid ""
 "other important ways, including translations, documentation, and quality "
 "assurance."
 msgstr ""
+"MATE ir GNOME 2 turpinājums. Kopš GNOME izveides 1997. gadā tā kodā ir "
+"ieguldījuši simtiem cilvēku; vēl daudzi citi ir palīdzējuši citos svarīgos "
+"veidos, tostarp ar tulkojumiem, dokumentāciju un kvalitātes nodrošināšanu."
 
 #: mate-about/mate-about.h:55
 msgid ""
 "GNOME 2 was the most popular Linux desktop but it’s no longer available... "
 "MATE is here to provide that same desktop to you!"
 msgstr ""
+"GNOME 2 bija populārākā Linux darbvirsma, taču tā vairs nav pieejama... MATE "
+"ir šeit, lai sniegtu jums tieši tādu pašu darbvirsmu!"
 
 #: mate-about/mate-about.h:58
 msgid ""
@@ -90,6 +107,9 @@ msgid ""
 "subtropical South America. Its leaves contain caffeine and are used to make "
 "infusions and a beverage called mate."
 msgstr ""
+"Nosaukums „MATE” cēlies no yerba maté — Dienvidamerikas subtropos augošas "
+"ileksu sugas. Tās lapas satur kofeīnu, un no tām gatavo uzlējumus un "
+"dzērienu, ko sauc par mate."
 
 #. Translators: "Unknown" here is used to identify a monitor for which
 #. * we don't know the vendor. When a vendor is known, the name of the
@@ -101,11 +121,11 @@ msgstr "Nezināms"
 
 #: libmate-desktop/mate-colorbutton.c:151
 msgid "Use alpha"
-msgstr ""
+msgstr "Izmantot alfa kanālu"
 
 #: libmate-desktop/mate-colorbutton.c:152
 msgid "Whether or not to give the color an alpha value"
-msgstr ""
+msgstr "Vai krāsai piešķirt alfa vērtību"
 
 #: libmate-desktop/mate-colorbutton.c:166
 msgid "Title"
@@ -113,7 +133,7 @@ msgstr "Virsraksts"
 
 #: libmate-desktop/mate-colorbutton.c:167
 msgid "The title of the color selection dialog"
-msgstr "Krāsu izvēles loga virsraksts"
+msgstr "Krāsas atlases dialoglodziņa virsraksts"
 
 #: libmate-desktop/mate-colorbutton.c:168
 #: libmate-desktop/mate-colorbutton.c:439
@@ -126,15 +146,17 @@ msgstr "Pašreizējā krāsa"
 
 #: libmate-desktop/mate-colorbutton.c:182
 msgid "The selected color"
-msgstr "Izvēlētā krāsa"
+msgstr "Atlasītā krāsa"
 
 #: libmate-desktop/mate-colorbutton.c:196 libmate-desktop/mate-colorsel.c:288
 msgid "Current Alpha"
-msgstr ""
+msgstr "Pašreizējā alfa vērtība"
 
 #: libmate-desktop/mate-colorbutton.c:197
 msgid "The selected opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
+"Atlasītā necaurredzamības vērtība (0 — pilnīgi caurspīdīgs, 65535 — pilnīgi "
+"necaurredzams)"
 
 #: libmate-desktop/mate-colorbutton.c:335
 msgid "Received invalid color data\n"
@@ -142,63 +164,69 @@ msgstr "Saņemti nederīgi krāsas dati\n"
 
 #: libmate-desktop/mate-colorsel.c:267
 msgid "Has Opacity Control"
-msgstr ""
+msgstr "Ir necaurredzamības regulēšana"
 
 #: libmate-desktop/mate-colorsel.c:268
 msgid "Whether the color selector should allow setting opacity"
-msgstr ""
+msgstr "Vai krāsu atlasītājam jāļauj iestatīt necaurredzamību"
 
 #: libmate-desktop/mate-colorsel.c:274
 msgid "Has palette"
-msgstr ""
+msgstr "Ir palete"
 
 #: libmate-desktop/mate-colorsel.c:275
 msgid "Whether a palette should be used"
-msgstr ""
+msgstr "Vai jāizmanto palete"
 
 #: libmate-desktop/mate-colorsel.c:282
 msgid "The current color"
-msgstr ""
+msgstr "Pašreizējā krāsa"
 
 #: libmate-desktop/mate-colorsel.c:289
 msgid "The current opacity value (0 fully transparent, 65535 fully opaque)"
 msgstr ""
+"Pašreizējā necaurredzamības vērtība (0 — pilnīgi caurspīdīgs, 65535 — "
+"pilnīgi necaurredzams)"
 
 #: libmate-desktop/mate-colorsel.c:295
 msgid "HEX String"
-msgstr ""
+msgstr "HEX virkne"
 
 #: libmate-desktop/mate-colorsel.c:296
 msgid "The hexadecimal string of current color"
-msgstr ""
+msgstr "Pašreizējās krāsas heksadecimālā virkne"
 
 #: libmate-desktop/mate-colorsel.c:341
 msgid ""
 "Select the color you want from the outer ring. Select the darkness or "
 "lightness of that color using the inner triangle."
 msgstr ""
+"Ārējā gredzenā atlasiet vajadzīgo krāsu. Iekšējā trijstūrī atlasiet, cik "
+"tumšai vai gaišai jābūt šai krāsai."
 
 #: libmate-desktop/mate-colorsel.c:365
 msgid ""
 "Click the eyedropper, then click a color anywhere on your screen to select "
 "that color."
 msgstr ""
+"Noklikšķiniet uz pipetes, tad noklikšķiniet uz jebkuras krāsas ekrānā, lai "
+"to atlasītu."
 
 #: libmate-desktop/mate-colorsel.c:374
 msgid "_Hue:"
-msgstr ""
+msgstr "_Nokrāsa:"
 
 #: libmate-desktop/mate-colorsel.c:375
 msgid "Position on the color wheel."
-msgstr ""
+msgstr "Vieta krāsu ritenī."
 
 #: libmate-desktop/mate-colorsel.c:377
 msgid "_Saturation:"
-msgstr ""
+msgstr "_Piesātinājums:"
 
 #: libmate-desktop/mate-colorsel.c:378
 msgid "\"Deepness\" of the color."
-msgstr ""
+msgstr "Krāsas „dziļums”."
 
 #: libmate-desktop/mate-colorsel.c:379
 msgid "_Value:"
@@ -206,57 +234,59 @@ msgstr "_Vērtība:"
 
 #: libmate-desktop/mate-colorsel.c:380
 msgid "Brightness of the color."
-msgstr ""
+msgstr "Krāsas spilgtums."
 
 #: libmate-desktop/mate-colorsel.c:381
 msgid "_Red:"
-msgstr ""
+msgstr "_Sarkans:"
 
 #: libmate-desktop/mate-colorsel.c:382
 msgid "Amount of red light in the color."
-msgstr ""
+msgstr "Sarkanās gaismas daudzums krāsā."
 
 #: libmate-desktop/mate-colorsel.c:383
 msgid "_Green:"
-msgstr ""
+msgstr "_Zaļš:"
 
 #: libmate-desktop/mate-colorsel.c:384
 msgid "Amount of green light in the color."
-msgstr ""
+msgstr "Zaļās gaismas daudzums krāsā."
 
 #: libmate-desktop/mate-colorsel.c:385
 msgid "_Blue:"
-msgstr ""
+msgstr "Z_ils:"
 
 #: libmate-desktop/mate-colorsel.c:386
 msgid "Amount of blue light in the color."
-msgstr ""
+msgstr "Zilās gaismas daudzums krāsā."
 
 #: libmate-desktop/mate-colorsel.c:389
 msgid "Op_acity:"
-msgstr ""
+msgstr "Ne_caurredzamība:"
 
 #: libmate-desktop/mate-colorsel.c:396 libmate-desktop/mate-colorsel.c:406
 msgid "Transparency of the color."
-msgstr ""
+msgstr "Krāsas caurspīdīgums."
 
 #: libmate-desktop/mate-colorsel.c:413
 msgid "Color _name:"
-msgstr "Krāsas no_saukums:"
+msgstr "Krāsas nos_aukums:"
 
 #: libmate-desktop/mate-colorsel.c:427
 msgid ""
 "You can enter an HTML-style hexadecimal color value, or simply a color name "
 "such as 'orange' in this entry."
 msgstr ""
+"Šajā laukā varat ievadīt HTML stila heksadecimālu krāsas vērtību vai "
+"vienkārši krāsas nosaukumu, piemēram, 'orange'."
 
 #: libmate-desktop/mate-colorsel.c:457
 msgid "_Palette:"
-msgstr "_Palete:"
+msgstr "Pa_lete:"
 
 #: libmate-desktop/mate-colorsel.c:487
 msgid "Color Wheel"
-msgstr ""
+msgstr "Krāsu ritenis"
 
 #: libmate-desktop/mate-colorsel.c:942
 msgid ""
@@ -264,69 +294,77 @@ msgid ""
 "now. You can drag this color to a palette entry, or select this color as "
 "current by dragging it to the other color swatch alongside."
 msgstr ""
+"Iepriekš atlasītā krāsa salīdzināšanai ar krāsu, ko atlasāt tagad. Šo krāsu "
+"var vilkt uz paletes ierakstu vai padarīt par pašreizējo, velkot to uz "
+"blakus esošo krāsas paraugu."
 
 #: libmate-desktop/mate-colorsel.c:945
 msgid ""
 "The color you've chosen. You can drag this color to a palette entry to save "
 "it for use in the future."
 msgstr ""
+"Jūsu izvēlētā krāsa. Šo krāsu var vilkt uz paletes ierakstu, lai to "
+"saglabātu turpmākai lietošanai."
 
 #: libmate-desktop/mate-colorsel.c:950
 msgid ""
 "The previously-selected color, for comparison to the color you're selecting "
 "now."
-msgstr ""
+msgstr "Iepriekš atlasītā krāsa salīdzināšanai ar krāsu, ko atlasāt tagad."
 
 #: libmate-desktop/mate-colorsel.c:953
 msgid "The color you've chosen."
-msgstr ""
+msgstr "Jūsu izvēlētā krāsa."
 
 #: libmate-desktop/mate-colorsel.c:1359
 msgid "gtk-color-sel"
-msgstr ""
+msgstr "gtk-color-sel"
 
 #: libmate-desktop/mate-colorsel.c:1364
 msgid "_Save color here"
-msgstr ""
+msgstr "_Saglabāt krāsu šeit"
 
 #: libmate-desktop/mate-colorsel.c:1584
 msgid ""
 "Click this palette entry to make it the current color. To change this entry,"
 " drag a color swatch here or right-click it and select \"Save color here.\""
 msgstr ""
+"Noklikšķiniet uz šī paletes ieraksta, lai to padarītu par pašreizējo krāsu. "
+"Lai šo ierakstu mainītu, velciet šurp krāsas paraugu vai noklikšķiniet uz tā "
+"ar labo peles pogu un izvēlieties „Saglabāt krāsu šeit”."
 
 #: libmate-desktop/mate-colorseldialog.c:98
 #: libmate-desktop/mate-colorseldialog.c:184
 msgid "Color Selection"
-msgstr ""
+msgstr "Krāsas atlase"
 
 #: libmate-desktop/mate-colorseldialog.c:99
 msgid "The color selection embedded in the dialog."
-msgstr ""
+msgstr "Dialoglodziņā iegultā krāsas atlase."
 
 #: libmate-desktop/mate-colorseldialog.c:105
 msgid "OK Button"
-msgstr ""
+msgstr "Poga „Labi”"
 
 #: libmate-desktop/mate-colorseldialog.c:106
 msgid "The OK button of the dialog."
-msgstr ""
+msgstr "Dialoglodziņa poga „Labi”."
 
 #: libmate-desktop/mate-colorseldialog.c:112
 msgid "Cancel Button"
-msgstr ""
+msgstr "Poga „Atcelt”"
 
 #: libmate-desktop/mate-colorseldialog.c:113
 msgid "The cancel button of the dialog."
-msgstr ""
+msgstr "Dialoglodziņa poga „Atcelt”."
 
 #: libmate-desktop/mate-colorseldialog.c:119
 msgid "Help Button"
-msgstr ""
+msgstr "Poga „Palīdzība”"
 
 #: libmate-desktop/mate-colorseldialog.c:120
 msgid "The help button of the dialog."
-msgstr ""
+msgstr "Dialoglodziņa poga „Palīdzība”."
 
 #: libmate-desktop/mate-colorseldialog.c:162
 msgid "_Cancel"
@@ -334,7 +372,7 @@ msgstr "At_celt"
 
 #: libmate-desktop/mate-colorseldialog.c:167
 msgid "_OK"
-msgstr ""
+msgstr "_Labi"
 
 #: libmate-desktop/mate-colorseldialog.c:175
 msgid "Help"
@@ -348,7 +386,7 @@ msgstr "Kļūda, lasot failu '%s': %s"
 #: libmate-desktop/mate-desktop-item.c:286
 #, c-format
 msgid "Error rewinding file '%s': %s"
-msgstr "Kļūda, atgriežot failu '%s': %s"
+msgstr "Kļūda, pārtinot failu '%s' uz sākumu: %s"
 
 #. Translators: the "name" mentioned
 #. * here is the name of an application or
@@ -368,7 +406,7 @@ msgstr "Fails '%s' nav parasts fails vai mape."
 #: libmate-desktop/mate-desktop-item.c:787
 #, c-format
 msgid "Cannot find file '%s'"
-msgstr "Nevar atrast failu '%s'"
+msgstr "Neizdevās atrast failu '%s'"
 
 #: libmate-desktop/mate-desktop-item.c:833
 msgid "No filename to save to"
@@ -377,23 +415,23 @@ msgstr "Nav faila nosaukuma, kurā saglabāt"
 #: libmate-desktop/mate-desktop-item.c:1854
 #, c-format
 msgid "Starting %s"
-msgstr "Startē %s"
+msgstr "Palaiž %s"
 
 #: libmate-desktop/mate-desktop-item.c:2090
 msgid "No URL to launch"
-msgstr "Nav URL, ko palaist"
+msgstr "Nav palaižama URL"
 
 #: libmate-desktop/mate-desktop-item.c:2106
 msgid "Not a launchable item"
-msgstr "Nepalaižama vienība"
+msgstr "Šo vienumu nevar palaist"
 
 #: libmate-desktop/mate-desktop-item.c:2115
 msgid "No command (Exec) to launch"
-msgstr "Nav komandas (Exec), ko palaist"
+msgstr "Nav palaižamas komandas (Exec)"
 
 #: libmate-desktop/mate-desktop-item.c:2127
 msgid "Bad command (Exec) to launch"
-msgstr "Slikta komanda (Exec), ko palaist"
+msgstr "Nederīga palaižamā komanda (Exec)"
 
 #: libmate-desktop/mate-desktop-item.c:3600
 #, c-format
@@ -402,7 +440,9 @@ msgstr "Nezināms kodējums: %s"
 
 #: libmate-desktop/mate-desktop-utils.c:150
 msgid "Cannot find a terminal, using xterm, even if it may not work"
-msgstr "Nevaru atrast termināli, lietoju xterm, pat ja tas varētu nestrādāt"
+msgstr ""
+"Neizdevās atrast termināli; tiks izmantots xterm, kaut gan tas var "
+"nedarboties"
 
 #: libmate-desktop/mate-languages.c:746
 msgid "Unspecified"
@@ -428,7 +468,7 @@ msgstr "RANDR paplašinājums nav pieejams"
 #: libmate-desktop/mate-rr.c:1264
 #, c-format
 msgid "could not get information about output %d"
-msgstr "neizdevās atrast informāciju par izvadu %d"
+msgstr "neizdevās iegūt informāciju par izvadu %d"
 
 #. Translators: the "position", "size", and "maximum"
 #. * words here are not keywords; please translate them
@@ -450,7 +490,7 @@ msgstr "neizdevās iestatīt CRTC %d konfigurāciju"
 #: libmate-desktop/mate-rr.c:1948
 #, c-format
 msgid "could not get information about CRTC %d"
-msgstr "neizdevās atrast informāciju par CRTC %d"
+msgstr "neizdevās iegūt informāciju par CRTC %d"
 
 #: libmate-desktop/mate-rr-config.c:555
 msgid "Laptop"
@@ -466,7 +506,7 @@ msgstr ""
 #: libmate-desktop/mate-rr-config.c:1485
 #, c-format
 msgid "CRTC %d cannot drive output %s"
-msgstr ""
+msgstr "CRTC %d nevar vadīt izvadu %s"
 
 #: libmate-desktop/mate-rr-config.c:1492
 #, c-format
@@ -486,11 +526,15 @@ msgid ""
 "existing coordinates = (%d, %d), new coordinates = (%d, %d)\n"
 "existing rotation = %s, new rotation = %s"
 msgstr ""
+"izvadam %s nav tādu pašu parametru kā citam klonētam izvadam:\n"
+"esošais režīms = %d, jaunais režīms = %d\n"
+"esošās koordinātas = (%d, %d), jaunās koordinātas = (%d, %d)\n"
+"esošā pagriešana = %s, jaunā pagriešana = %s"
 
 #: libmate-desktop/mate-rr-config.c:1532
 #, c-format
 msgid "cannot clone to output %s"
-msgstr ""
+msgstr "nevar klonēt uz izvadu %s"
 
 #: libmate-desktop/mate-rr-config.c:1701
 #, c-format
@@ -501,6 +545,7 @@ msgstr "Izmēģina CRTC %d režīmus\n"
 #, c-format
 msgid "CRTC %d: trying mode %dx%d@%dHz with output at %dx%d@%dHz (pass %d)\n"
 msgstr ""
+"CRTC %d: izmēģina režīmu %dx%d@%dHz ar izvadu pie %dx%d@%dHz (gājiens %d)\n"
 
 #: libmate-desktop/mate-rr-config.c:1772
 #, c-format
@@ -508,6 +553,8 @@ msgid ""
 "could not assign CRTCs to outputs:\n"
 "%s"
 msgstr ""
+"neizdevās piešķirt CRTC izvadiem:\n"
+"%s"
 
 #: libmate-desktop/mate-rr-config.c:1776
 #, c-format
@@ -515,6 +562,8 @@ msgid ""
 "none of the selected modes were compatible with the possible modes:\n"
 "%s"
 msgstr ""
+"neviens no izvēlētajiem režīmiem nebija saderīgs ar iespējamajiem režīmiem:\n"
+"%s"
 
 #. Translators: the "requested", "minimum", and
 #. * "maximum" words here are not keywords; please
@@ -536,7 +585,7 @@ msgstr ""
 #. * translation could be "Pantallas en Espejo", *not* "Espejar Pantallas".
 #: libmate-desktop/mate-rr-labeler.c:406
 msgid "Mirror Screens"
-msgstr "Spoguļekrāni"
+msgstr "Spoguļoti ekrāni"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:25
 msgid "minimum interval in milliseconds"
@@ -545,8 +594,7 @@ msgstr "minimālais intervāls milisekundēs"
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:26
 msgid "Ignore multiple presses of the _same_ key within @delay milliseconds."
 msgstr ""
-"Ignorēt _tā paša_ taustiņa spiedienus, ja tie atkārtojas intervālā, mazāka "
-"par @delay milisekundēm."
+"Ignorēt _tā paša_ taustiņa atkārtotus spiedienus @delay milisekunžu laikā."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:36
 msgid "Pixels per seconds"
@@ -554,15 +602,15 @@ msgstr "Pikseļi sekundē"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:37
 msgid "How many pixels per second to move at the maximum speed."
-msgstr "Cik pikseļus sekundē pārvietot pie maksimālā ātruma."
+msgstr "Cik pikseļus sekundē pārvietoties ar maksimālo ātrumu."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:41
 msgid "How long to accelerate in milliseconds"
-msgstr "Paātrinājuma ilgums milisekundēs"
+msgstr "Paātrināšanās ilgums milisekundēs"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:42
 msgid "How many milliseconds it takes to go from 0 to maximum speed."
-msgstr "Cik milisekundēs jāuzņem ātrums no 0 līdz maksimālajam."
+msgstr "Cik milisekundēs ātrums pieaug no 0 līdz maksimālajam."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:46
 msgid "Initial delay in milliseconds"
@@ -571,7 +619,7 @@ msgstr "Sākotnējā aizture milisekundēs"
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:47
 msgid ""
 "How many milliseconds to wait before mouse movement keys start to operate."
-msgstr "Cik milisekundes gaidīt pirms peles kustības taustiņi sāk darboties."
+msgstr "Cik milisekundes gaidīt, pirms peles kustības taustiņi sāk darboties."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:54
 msgid "Minimum interval in milliseconds"
@@ -581,69 +629,83 @@ msgstr "Minimālais intervāls milisekundēs"
 msgid ""
 "Do not accept a key as being pressed unless held for @delay milliseconds."
 msgstr ""
-"Uztvert taustiņa spiedienu tikai, ja tas paturēts @delay milisekundes."
+"Uztvert taustiņa spiedienu tikai tad, ja taustiņš turēts nospiests @delay "
+"milisekundes."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:71
 msgid ""
 "Latch modifiers when pressed twice in a row until the same modifier is "
 "pressed again."
 msgstr ""
+"Fiksēt modificētājtaustiņus, ja tie nospiesti divreiz pēc kārtas, līdz tas "
+"pats modificētājtaustiņš tiek nospiests vēlreiz."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:75
 msgid "Disable if two keys are pressed at the same time."
-msgstr "Atslēgt, ja divi taustiņi tiek nospiesti vienlaicīgi."
+msgstr "Atslēgt, ja divi taustiņi tiek nospiesti vienlaikus."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:79
 msgid "Beep when a modifier is pressed."
-msgstr "Nopīkstēties, kad nospiests modifikatora taustiņš."
+msgstr "Atskaņot skaņas signālu, kad nospiests modificētājtaustiņš."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:86
 msgid "Beep when a key is pressed while CapsLock is active."
 msgstr ""
+"Atskaņot skaņas signālu, ja taustiņš nospiests, kamēr ir ieslēgts CapsLock."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:91
 msgid "Beep count when enabling a modifier"
-msgstr ""
+msgstr "Skaņas signālu skaits, ieslēdzot modificētājtaustiņu"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:92
 msgid ""
 "Number of beeps to emit when enabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Cik skaņas signālu atskaņot, ieslēdzot modificētājtaustiņu, kad ir ieslēgti "
+"pārslēgšanas taustiņi. Darbojas tikai ar 'internal' aizmugursistēmu."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:97
 msgid "Delay between beeps when enabling a modifier"
-msgstr ""
+msgstr "Pauze starp skaņas signāliem, ieslēdzot modificētājtaustiņu"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:98
 msgid ""
 "Delay in milliseconds between two beeps when enabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Pauze milisekundēs starp diviem skaņas signāliem, ieslēdzot "
+"modificētājtaustiņu, kad ir ieslēgti pārslēgšanas taustiņi. Darbojas tikai "
+"ar 'internal' aizmugursistēmu."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:103
 msgid "Beep count when disabling a modifier"
-msgstr ""
+msgstr "Skaņas signālu skaits, izslēdzot modificētājtaustiņu"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:104
 msgid ""
 "Number of beeps to emit when disabling a modifier while togglekeys are "
 "enabled. Only works with the 'internal' backend."
 msgstr ""
+"Cik skaņas signālu atskaņot, izslēdzot modificētājtaustiņu, kad ir ieslēgti "
+"pārslēgšanas taustiņi. Darbojas tikai ar 'internal' aizmugursistēmu."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:109
 msgid "Delay between beeps when disabling a modifier"
-msgstr ""
+msgstr "Pauze starp skaņas signāliem, izslēdzot modificētājtaustiņu"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:110
 msgid ""
 "Delay in milliseconds between two beeps when disabling a modifier while "
 "togglekeys are enabled. Only works with the 'internal' backend."
 msgstr ""
+"Pauze milisekundēs starp diviem skaņas signāliem, izslēdzot "
+"modificētājtaustiņu, kad ir ieslēgti pārslēgšanas taustiņi. Darbojas tikai "
+"ar 'internal' aizmugursistēmu."
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:114
 msgid "Implementation to use when togglekeys are enabled"
-msgstr ""
+msgstr "Izmantojamā realizācija, kad ir ieslēgti pārslēgšanas taustiņi"
 
 #: schemas/org.mate.accessibility-keyboard.gschema.xml:115
 msgid ""
@@ -651,60 +713,67 @@ msgid ""
 "include 'xkb' (the stock X implementation) and 'internal' (a MATE-specific "
 "and more configurable implementation)."
 msgstr ""
+"Izvēlas aizmugursistēmu, kas nodrošina pārslēgšanas taustiņu funkciju. "
+"Derīgās vērtības ir 'xkb' (standarta X realizācija) un 'internal' (MATE "
+"specifiska realizācija ar plašākām konfigurēšanas iespējām)."
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:5
 msgid "Startup Assistive Technology Applications"
-msgstr "Palaišanās palīgtehnoloģiju lietotnes"
+msgstr "Palīgtehnoloģiju lietotnes, ko palaist sesijas sākumā"
 
 #: schemas/org.mate.accessibility-startup.gschema.xml:6
 msgid ""
 "List of assistive technology applications to start when logging into the "
 "MATE desktop."
 msgstr ""
-"Saraksts ar palīdzošajām lietotnēm, ko būtu jāpalaiž piesakoties MATE "
-"darbvirsmai."
+"Palīgtehnoloģiju lietotņu saraksts, ko palaist, piesakoties MATE darbvirsmā."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:5
 msgid "Preferred Mobility assistive technology application"
-msgstr "Izvēlēta mobilitātes palīdzības lietotne"
+msgstr "Vēlamā mobilitātes palīgtehnoloģijas lietotne"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:6
 msgid ""
 "Preferred Mobility assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
-"Vēlamā mobilitātes palīgtehnoloģijas lietotne, ko izmantot piesakoties, "
-"izvēlnē vai komandrindā."
+"Vēlamā mobilitātes palīgtehnoloģijas lietotne, ko izmantot pieteikšanās "
+"ekrānā, izvēlnē vai komandrindā."
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:10
 msgid "Start preferred Mobility assistive technology application"
-msgstr "Palaist izvēlēto mobilitātes palīdzības lietotni"
+msgstr "Palaist vēlamo mobilitātes palīgtehnoloģijas lietotni"
 
 #: schemas/org.mate.applications-at-mobility.gschema.xml:11
 msgid ""
 "MATE to start preferred Mobility assistive technology application during "
 "login."
-msgstr "MATE ielādes laikā palaižamās izvēlētās mobilitātes programmas."
+msgstr ""
+"Vai MATE, piesakoties, jāpalaiž vēlamā mobilitātes palīgtehnoloģijas "
+"lietotne."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:5
 msgid "Preferred Visual assistive technology application"
-msgstr "Vēlamā vizuālās palīdzības lietotne"
+msgstr "Vēlamā vizuālās palīgtehnoloģijas lietotne"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:6
 msgid ""
 "Preferred Visual assistive technology application to be used for login, "
 "menu, or command line."
 msgstr ""
+"Vēlamā vizuālās palīgtehnoloģijas lietotne, ko izmantot pieteikšanās ekrānā, "
+"izvēlnē vai komandrindā."
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:10
 msgid "Start preferred Visual assistive technology application"
-msgstr "Palaist vēlamo vizuālās palīdzības lietotni"
+msgstr "Palaist vēlamo vizuālās palīgtehnoloģijas lietotni"
 
 #: schemas/org.mate.applications-at-visual.gschema.xml:11
 msgid ""
 "MATE to start preferred Visual assistive technology application during "
 "login."
-msgstr "MATE palaidīs vēlamās vizuālās palīgtehnoloģiju lietones piesakoties."
+msgstr ""
+"Vai MATE, piesakoties, jāpalaiž vēlamā vizuālās palīgtehnoloģijas lietotne."
 
 #: schemas/org.mate.applications-browser.gschema.xml:5
 msgid "Default browser"
@@ -712,7 +781,7 @@ msgstr "Noklusētais pārlūks"
 
 #: schemas/org.mate.applications-browser.gschema.xml:6
 msgid "Default browser for all URLs."
-msgstr "Noklusētais pārlūks visām adresēm."
+msgstr "Noklusētais pārlūks visiem URL."
 
 #: schemas/org.mate.applications-browser.gschema.xml:10
 msgid "Browser needs terminal"
@@ -720,33 +789,37 @@ msgstr "Pārlūkam nepieciešams terminālis"
 
 #: schemas/org.mate.applications-browser.gschema.xml:11
 msgid "Whether the default browser needs a terminal to run."
-msgstr "Vai noklusētajam pārlūkam ir nepieciešama komandrinda, lai darbotos."
+msgstr "Vai noklusētajam pārlūkam darbībai nepieciešams terminālis."
 
 #: schemas/org.mate.applications-browser.gschema.xml:15
 msgid "Browser understands remote"
-msgstr "Pārlūks saprot attālināti"
+msgstr "Pārlūks atbalsta tālvadību"
 
 #: schemas/org.mate.applications-browser.gschema.xml:16
 msgid "Whether the default browser understands netscape remote."
-msgstr "Vai noklusētais pārlūks saprot netscape tālvadību."
+msgstr "Vai noklusētais pārlūks atbalsta netscape remote tālvadību."
 
 #: schemas/org.mate.applications-calculator.gschema.xml:5
 msgid "Calculator application"
-msgstr ""
+msgstr "Kalkulatora lietotne"
 
 #: schemas/org.mate.applications-calculator.gschema.xml:6
 msgid "Calculator program to use when starting applications that require one."
 msgstr ""
+"Kalkulatora programma, ko izmantot, palaižot lietotnes, kurām tā "
+"nepieciešama."
 
 #: schemas/org.mate.applications-messenger.gschema.xml:5
 msgid "Instant Messaging application"
-msgstr ""
+msgstr "Tūlītējās ziņojumapmaiņas lietotne"
 
 #: schemas/org.mate.applications-messenger.gschema.xml:6
 msgid ""
 "Instant Messaging program to use when starting applications that require "
 "one."
 msgstr ""
+"Tūlītējās ziņojumapmaiņas programma, ko izmantot, palaižot lietotnes, kurām "
+"tā nepieciešama."
 
 #: schemas/org.mate.applications-office.gschema.xml:9
 msgid "Default calendar"
@@ -758,13 +831,11 @@ msgstr "Noklusētā kalendāra lietotne"
 
 #: schemas/org.mate.applications-office.gschema.xml:14
 msgid "Calendar needs terminal"
-msgstr "Kalendāram nepieciešama komandrinda"
+msgstr "Kalendāram nepieciešams terminālis"
 
 #: schemas/org.mate.applications-office.gschema.xml:15
 msgid "Whether the default calendar application needs a terminal to run"
-msgstr ""
-"Vai noklusētajai kalendāra lietotnei ir nepieciešama komandrinda, lai "
-"darbotos"
+msgstr "Vai noklusētajai kalendāra lietotnei darbībai nepieciešams terminālis"
 
 #: schemas/org.mate.applications-office.gschema.xml:21
 msgid "Default tasks"
@@ -776,13 +847,11 @@ msgstr "Noklusētā uzdevumu lietotne"
 
 #: schemas/org.mate.applications-office.gschema.xml:26
 msgid "Tasks needs terminal"
-msgstr "Uzdevumam nepieciešama komandrinda"
+msgstr "Uzdevumu lietotnei nepieciešams terminālis"
 
 #: schemas/org.mate.applications-office.gschema.xml:27
 msgid "Whether the default tasks application needs a terminal to run"
-msgstr ""
-"Vai noklusētajai uzdevumu lietotnei ir nepieciešama komandrinda, lai "
-"darbotos"
+msgstr "Vai noklusētajai uzdevumu lietotnei darbībai nepieciešams terminālis"
 
 #: schemas/org.mate.applications-terminal.gschema.xml:5
 msgid "Terminal application"
@@ -791,19 +860,18 @@ msgstr "Termināļa lietotne"
 #: schemas/org.mate.applications-terminal.gschema.xml:6
 msgid "Terminal program to use when starting applications that require one."
 msgstr ""
-"Termināļa programma, kuru izmantot, kad tiek palaista lietotne, kurai tas ir"
-" vajadzīgs."
+"Termināļa programma, ko izmantot, palaižot lietotnes, kurām tā nepieciešama."
 
 #: schemas/org.mate.applications-terminal.gschema.xml:10
 msgid "Exec Arguments"
-msgstr "Exec parametri"
+msgstr "Exec argumenti"
 
 #: schemas/org.mate.applications-terminal.gschema.xml:11
 msgid ""
 "Argument used to execute programs in the terminal defined by the 'exec' key."
 msgstr ""
-"Parametri, kas izmantoti, lai izpildītu programmas terminālī, definētā ar "
-"'exec' atslēgu."
+"Arguments, ar kuru izpilda programmas terminālī, kas norādīts ar 'exec' "
+"atslēgu."
 
 #: schemas/org.mate.background.gschema.xml.in:18
 msgid "Draw Desktop Background"
@@ -815,21 +883,23 @@ msgstr "Likt MATE zīmēt darbvirsmas fonu."
 
 #: schemas/org.mate.background.gschema.xml.in:23
 msgid "Show Desktop Icons"
-msgstr "Rādīt Darbvirsmas Ikonas"
+msgstr "Rādīt darbvirsmas ikonas"
 
 #: schemas/org.mate.background.gschema.xml.in:24
 msgid "Have MATE file manager (Caja) draw the desktop icons."
-msgstr ""
+msgstr "Likt MATE failu pārvaldniekam (Caja) zīmēt darbvirsmas ikonas."
 
 #: schemas/org.mate.background.gschema.xml.in:28
 msgid "Fade the background on change"
-msgstr ""
+msgstr "Mainīt fonu ar izgaišanas efektu"
 
 #: schemas/org.mate.background.gschema.xml.in:29
 msgid ""
 "If set to true, then MATE will change the desktop background with a fading "
 "effect."
 msgstr ""
+"Ja iestatīts uz \"true\" (patiess), MATE mainīs darbvirsmas fonu ar "
+"izgaišanas efektu."
 
 #: schemas/org.mate.background.gschema.xml.in:33
 msgid "Picture Options"
@@ -841,6 +911,9 @@ msgid ""
 "values are \"wallpaper\", \"centered\", \"scaled\", \"stretched\", \"zoom\","
 " \"spanned\"."
 msgstr ""
+"Nosaka, kā tiek attēlots attēls, kas iestatīts ar wallpaper_filename. "
+"Iespējamās vērtības ir \"wallpaper\", \"centered\", \"scaled\", "
+"\"stretched\", \"zoom\", \"spanned\"."
 
 #: schemas/org.mate.background.gschema.xml.in:38
 msgid "Picture Filename"
@@ -848,15 +921,15 @@ msgstr "Attēla faila nosaukums"
 
 #: schemas/org.mate.background.gschema.xml.in:39
 msgid "File to use for the background image."
-msgstr "Fails, kuru izmantot kā fona attēlu."
+msgstr "Fails, ko izmantot kā fona attēlu."
 
 #: schemas/org.mate.background.gschema.xml.in:43
 msgid "Picture Opacity"
-msgstr "Attēla necaurspīdīgums"
+msgstr "Attēla necaurredzamība"
 
 #: schemas/org.mate.background.gschema.xml.in:44
 msgid "Opacity with which to draw the background picture."
-msgstr "Necaurspīdīgums, ar ko zīmēt fona attēlu."
+msgstr "Necaurredzamība, ar kādu zīmēt fona attēlu."
 
 #: schemas/org.mate.background.gschema.xml.in:48
 msgid "Primary Color"
@@ -864,8 +937,7 @@ msgstr "Primārā krāsa"
 
 #: schemas/org.mate.background.gschema.xml.in:49
 msgid "Left or Top color when drawing gradients, or the solid color."
-msgstr ""
-"Kreisā vai augšējā krāsa (kad tiek izmantota pāreja), vai viendabīga krāsa."
+msgstr "Kreisā vai augšējā krāsa, zīmējot krāsu pārejas, vai viendabīgā krāsa."
 
 #: schemas/org.mate.background.gschema.xml.in:53
 msgid "Secondary Color"
@@ -875,11 +947,12 @@ msgstr "Sekundārā krāsa"
 msgid ""
 "Right or Bottom color when drawing gradients, not used for solid color."
 msgstr ""
-"Labā vai apakšas krāsa, kad zīmē pārejas. Netiek lietota viendabīgai krāsai."
+"Labā vai apakšējā krāsa, zīmējot krāsu pārejas; viendabīgai krāsai netiek "
+"izmantota."
 
 #: schemas/org.mate.background.gschema.xml.in:58
 msgid "Color Shading Type"
-msgstr "Krāsas ēnošanas tips"
+msgstr "Krāsas ēnojuma veids"
 
 #: schemas/org.mate.background.gschema.xml.in:59
 msgid ""
@@ -887,15 +960,15 @@ msgid ""
 "gradient\", \"vertical-gradient\", and \"solid\"."
 msgstr ""
 "Kā ēnot fona krāsu. Iespējamās vērtības ir \"horizontal-gradient\", "
-"\"vertical-gradient\", un \"solid\"."
+"\"vertical-gradient\" un \"solid\"."
 
 #: schemas/org.mate.file-views.gschema.xml:5
 msgid "File Icon Theme"
-msgstr "Faila ikonas tēma"
+msgstr "Failu ikonu motīvs"
 
 #: schemas/org.mate.file-views.gschema.xml:6
 msgid "Theme used for displaying file icons."
-msgstr "Tēma, kuru izmantot faila ikonu attēlošanai."
+msgstr "Motīvs, ko izmantot failu ikonu attēlošanai."
 
 #: schemas/org.mate.interface.gschema.xml:5
 msgid "Enable Accessibility"
@@ -903,7 +976,7 @@ msgstr "Ieslēgt pieejamību"
 
 #: schemas/org.mate.interface.gschema.xml:6
 msgid "Whether Applications should have accessibility support."
-msgstr "Vai lietotnēm vajadzētu būt pieejamības atbalstam."
+msgstr "Vai lietotnēm jābūt pieejamības atbalstam."
 
 #: schemas/org.mate.interface.gschema.xml:10
 msgid "Enable Animations"
@@ -914,16 +987,16 @@ msgid ""
 "Whether animations should be displayed. Note: This is a global key, it "
 "changes the behaviour of the window manager, the panel etc."
 msgstr ""
-"Vai būtu jāattēlo animācijas. Piezīme: šī ir globāla atslēga, tā izmaina "
-"logu pārvaldnieka, paneļu u.c. uzvedību."
+"Vai rādīt animācijas. Piezīme: šī ir globāla atslēga, tā maina logu "
+"pārvaldnieka, paneļa u. c. uzvedību."
 
 #: schemas/org.mate.interface.gschema.xml:15
 msgid "Menus Have Tearoff"
-msgstr "Izvēlnes ir pārceļamas"
+msgstr "Izvēlnes ir atplēšamas"
 
 #: schemas/org.mate.interface.gschema.xml:16
 msgid "Whether menus should have a tearoff."
-msgstr "Vai izvēlnēm ir jābūt pārceļamām."
+msgstr "Vai izvēlnēm jābūt atplēšamām."
 
 #: schemas/org.mate.interface.gschema.xml:20
 msgid "Toolbar Style"
@@ -932,8 +1005,8 @@ msgstr "Rīkjoslas stils"
 #: schemas/org.mate.interface.gschema.xml:21
 msgid "Toolbar Style. Valid values are \"both\", \"both-horiz\", \"icons\", and \"text\"."
 msgstr ""
-"Rīkjoslas stils. Derīgās vērtības ir \"both\", \"both-horiz\", \"icons\", un"
-" \"text\"."
+"Rīkjoslas stils. Derīgās vērtības ir \"both\", \"both-horiz\", \"icons\" un "
+"\"text\"."
 
 #: schemas/org.mate.interface.gschema.xml:25
 msgid "Menus Have Icons"
@@ -941,7 +1014,7 @@ msgstr "Izvēlnēm ir ikonas"
 
 #: schemas/org.mate.interface.gschema.xml:26
 msgid "Whether menus may display an icon next to a menu entry."
-msgstr "Vai izvēlnē var rādīt ikonas pie izvēlnes ierakstiem."
+msgstr "Vai izvēlnēs drīkst rādīt ikonu blakus izvēlnes ierakstam."
 
 #: schemas/org.mate.interface.gschema.xml:30
 msgid "Buttons Have Icons"
@@ -949,7 +1022,7 @@ msgstr "Pogām ir ikonas"
 
 #: schemas/org.mate.interface.gschema.xml:31
 msgid "Whether buttons may display an icon in addition to the button text."
-msgstr "Vai uz pogām var rādīt ikonas blakus tekstiem."
+msgstr "Vai pogās drīkst rādīt ikonu papildus pogas tekstam."
 
 #: schemas/org.mate.interface.gschema.xml:35
 msgid "Menubar Detachable"
@@ -957,15 +1030,15 @@ msgstr "Atdalāma izvēlnes josla"
 
 #: schemas/org.mate.interface.gschema.xml:36
 msgid "Whether the user can detach menubars and move them around."
-msgstr "Vai lietotājs var atvienot izvēlņu joslas un pārvietot tās apkārt."
+msgstr "Vai lietotājs var atvienot izvēlņu joslas un pārvietot tās."
 
 #: schemas/org.mate.interface.gschema.xml:40
 msgid "Toolbar Detachable"
-msgstr "Atdalāmas rīkjoslas"
+msgstr "Atdalāma rīkjosla"
 
 #: schemas/org.mate.interface.gschema.xml:41
 msgid "Whether the user can detach toolbars and move them around."
-msgstr "Vai lietotājs var atvienot rīku joslas un pārvietot tās apkārt."
+msgstr "Vai lietotājs var atvienot rīkjoslas un pārvietot tās."
 
 #: schemas/org.mate.interface.gschema.xml:45
 msgid "Toolbar Icon Size"
@@ -973,7 +1046,7 @@ msgstr "Rīkjoslas ikonu izmērs"
 
 #: schemas/org.mate.interface.gschema.xml:46
 msgid "Size of icons in toolbars, either \"small-toolbar\" or \"large-toolbar\"."
-msgstr "Rīkjoslas ikonu izmērs, vai nu \"small-toolbar\" vai arī \"large-toolbar\"."
+msgstr "Ikonu izmērs rīkjoslās: \"small-toolbar\" vai \"large-toolbar\"."
 
 #: schemas/org.mate.interface.gschema.xml:50
 msgid "Cursor Blink"
@@ -989,35 +1062,37 @@ msgstr "Kursora mirgošanas laiks"
 
 #: schemas/org.mate.interface.gschema.xml:56
 msgid "Length of the cursor blink cycle, in milliseconds."
-msgstr "Kursora mirgošanas cikla garums, milisekundēs."
+msgstr "Kursora mirgošanas cikla ilgums milisekundēs."
 
 #: schemas/org.mate.interface.gschema.xml:60
 msgid "Icon Theme"
-msgstr "Ikonu tēma"
+msgstr "Ikonu motīvs"
 
 #: schemas/org.mate.interface.gschema.xml:61
 msgid "Icon theme to use for the panel, Caja etc."
-msgstr ""
+msgstr "Ikonu motīvs, ko izmantot panelim, Caja u. c."
 
 #: schemas/org.mate.interface.gschema.xml:65
 #: schemas/org.mate.interface.gschema.xml:70
 msgid "Gtk+ Theme"
-msgstr "Gtk+ tēma"
+msgstr "Gtk+ motīvs"
 
 #: schemas/org.mate.interface.gschema.xml:66
 #: schemas/org.mate.interface.gschema.xml:71
 msgid "Basename of the default theme used by gtk+."
-msgstr "Bāzes nosaukums noklusētajai tēmai, ko lieto gtk+."
+msgstr "Noklusētā motīva bāzes nosaukums, ko izmanto gtk+."
 
 #: schemas/org.mate.interface.gschema.xml:75
 msgid "List of symbolic names and color equivalents"
-msgstr ""
+msgstr "Simbolisko nosaukumu un atbilstošo krāsu saraksts"
 
 #: schemas/org.mate.interface.gschema.xml:76
 msgid ""
 "A '\\n' separated list of \"name:color\" as defined by the 'gtk-color-"
 "scheme' setting"
 msgstr ""
+"Ar '\\n' atdalīts \"nosaukums:krāsa\" saraksts, kā noteikts iestatījumā 'gtk-"
+"color-scheme'"
 
 #: schemas/org.mate.interface.gschema.xml:80
 msgid "Default font"
@@ -1025,28 +1100,27 @@ msgstr "Noklusētais fonts"
 
 #: schemas/org.mate.interface.gschema.xml:81
 msgid "Name of the default font used by gtk+."
-msgstr "Noklusētā fonta nosaukums, ko lieto gtk+."
+msgstr "Noklusētā fonta nosaukums, ko izmanto gtk+."
 
 #: schemas/org.mate.interface.gschema.xml:85
 msgid "GTK IM Preedit Style"
-msgstr "GTK TZ pirms rediģēšanas stils"
+msgstr "GTK ievades metodes pirmsrediģēšanas stils"
 
 #: schemas/org.mate.interface.gschema.xml:86
 msgid "Name of the GTK+ input method Preedit Style used by gtk+."
-msgstr ""
-"GTK+ ievades metodes pirms rediģēšanas stila nosaukums, ko lieto gtk+."
+msgstr "GTK+ ievades metodes pirmsrediģēšanas stila nosaukums, ko izmanto gtk+."
 
 #: schemas/org.mate.interface.gschema.xml:90
 msgid "GTK IM Status Style"
-msgstr "GTK TZ statusa stils"
+msgstr "GTK ievades metodes statusa stils"
 
 #: schemas/org.mate.interface.gschema.xml:91
 msgid "Name of the GTK+ input method Status Style used by gtk+."
-msgstr "GTK+ ievades metodes statusa stila nosaukums, ko lieto gtk+."
+msgstr "GTK+ ievades metodes statusa stila nosaukums, ko izmanto gtk+."
 
 #: schemas/org.mate.interface.gschema.xml:95
 msgid "GTK IM Module"
-msgstr "GTK TZ modulis"
+msgstr "GTK ievades metodes modulis"
 
 #: schemas/org.mate.interface.gschema.xml:96
 msgid "Name of the input method module used by GTK+."
@@ -1054,7 +1128,7 @@ msgstr "GTK+ izmantotā ievades metodes moduļa nosaukums."
 
 #: schemas/org.mate.interface.gschema.xml:100
 msgid "Use GTK3 header bar"
-msgstr ""
+msgstr "Izmantot GTK3 galvenes joslu"
 
 #: schemas/org.mate.interface.gschema.xml:101
 msgid ""
@@ -1063,24 +1137,31 @@ msgid ""
 " an action area at the bottom. This setting does not affect custom dialogs "
 "using GtkDialog directly, or message dialogs."
 msgstr ""
+"Vai iebūvētie GTK+ dialoglodziņi, piemēram, failu, krāsu vai fontu izvēles "
+"dialoglodziņš, izmantos augšā galvenes joslu darbību logrīku rādīšanai vai "
+"darbību apgabalu apakšā. Šis iestatījums neietekmē pielāgotus "
+"dialoglodziņus, kas tieši izmanto GtkDialog, un ziņojumu dialoglodziņus."
 
 #: schemas/org.mate.interface.gschema.xml:105
 msgid "Use GTK3 overlay scrolling"
-msgstr ""
+msgstr "Izmantot GTK3 pārklājuma ritināšanu"
 
 #: schemas/org.mate.interface.gschema.xml:106
 msgid ""
 "Whether built-in GTK+ scrolled windows will use overlay scrolling. Overlay "
 "scrolling hides and reduces the size of the scrollbar until it gets focus."
 msgstr ""
+"Vai iebūvētajos GTK+ ritināmajos logos izmantot pārklājuma ritināšanu. "
+"Pārklājuma ritināšana paslēpj ritjoslu un samazina tās izmēru, līdz tā "
+"iegūst fokusu."
 
 #: schemas/org.mate.interface.gschema.xml:110
 msgid "Enable Gtk toolkit-wide animations"
-msgstr ""
+msgstr "Ieslēgt Gtk rīkkopas animācijas"
 
 #: schemas/org.mate.interface.gschema.xml:111
 msgid "Whether to enable toolkit-wide animations."
-msgstr ""
+msgstr "Vai ieslēgt animācijas visā rīkkopā."
 
 #: schemas/org.mate.interface.gschema.xml:115
 msgid "Document font"
@@ -1097,8 +1178,7 @@ msgstr "Fiksēta platuma fonts"
 #: schemas/org.mate.interface.gschema.xml:121
 msgid ""
 "Name of a monospaced (fixed-width) font for use in locations like terminals."
-msgstr ""
-"Tādās vietās kā terminālis izmantojamā fiksētā platuma fonta nosaukums."
+msgstr "Fiksēta platuma fonta nosaukums izmantošanai, piemēram, terminālī."
 
 #: schemas/org.mate.interface.gschema.xml:125
 msgid "Use Custom Font"
@@ -1106,7 +1186,7 @@ msgstr "Lietot pielāgotu fontu"
 
 #: schemas/org.mate.interface.gschema.xml:126
 msgid "Whether to use a custom font in gtk+ applications."
-msgstr "Vai lietot lietotāja izvēlētu fontu gtk+ lietotnēs."
+msgstr "Vai gtk+ lietotnēs lietot pielāgotu fontu."
 
 #: schemas/org.mate.interface.gschema.xml:130
 msgid "Status Bar on Right"
@@ -1114,7 +1194,7 @@ msgstr "Statusa josla pa labi"
 
 #: schemas/org.mate.interface.gschema.xml:131
 msgid "Whether to display a status bar meter on the right."
-msgstr "Vai rādīt statusa joslas mērītāju labajā malā."
+msgstr "Vai rādīt statusa joslas mērītāju labajā pusē."
 
 #: schemas/org.mate.interface.gschema.xml:135
 msgid "Module for GtkFileChooser"
@@ -1125,42 +1205,44 @@ msgid ""
 "Module to use as the filesystem model for the GtkFileChooser widget. "
 "Possible values are \"gio\" and \"gtk+\"."
 msgstr ""
+"Modulis, ko izmantot kā failu sistēmas modeli GtkFileChooser logrīkam. "
+"Iespējamās vērtības ir \"gio\" un \"gtk+\"."
 
 #: schemas/org.mate.interface.gschema.xml:140
 msgid "Menubar accelerator"
-msgstr "Izvēlnes joslas paātrinātājs"
+msgstr "Izvēlņu joslas īsinājumtaustiņš"
 
 #: schemas/org.mate.interface.gschema.xml:141
 msgid "Keyboard shortcut to open the menu bars."
-msgstr "Izvēlnes joslas atvēršanai izmantojamās taustiņu kombinācijas."
+msgstr "Īsinājumtaustiņš izvēlņu joslu atvēršanai."
 
 #: schemas/org.mate.interface.gschema.xml:145
 msgid "Show the 'Input Methods' menu"
-msgstr "Rādīt izvēlni 'Ievades metodes'"
+msgstr "Rādīt izvēlni „Ievades metodes”"
 
 #: schemas/org.mate.interface.gschema.xml:146
 msgid ""
 "Whether the context menus of entries and text views should offer to change "
 "the input method."
 msgstr ""
-"Vai ierakstu konteksta izvēlnēm un tekstu skatiem vajadzētu piedāvāt mainīt "
-"ievades metodi."
+"Vai ievades lauku un teksta skatu konteksta izvēlnēs piedāvāt mainīt ievades "
+"metodi."
 
 #: schemas/org.mate.interface.gschema.xml:150
 msgid "Show the 'Unicode Control Character' menu"
-msgstr "Rādīt izvēlni 'Unikoda kontroles rakstzīme'"
+msgstr "Rādīt izvēlni „Unikoda vadības rakstzīme”"
 
 #: schemas/org.mate.interface.gschema.xml:151
 msgid ""
 "Whether the context menus of entries and text views should offer to insert "
 "control characters."
 msgstr ""
-"Vai ierakstu konteksta izvēlnēm un tekstu skatiem vajadzētu piedāvāt "
-"ievietot kontroles rakstzīmes."
+"Vai ievades lauku un teksta skatu konteksta izvēlnēs piedāvāt ievietot "
+"vadības rakstzīmes."
 
 #: schemas/org.mate.interface.gschema.xml:155
 msgid "Titlebar layout of GTK3 client-side decorated windows"
-msgstr ""
+msgstr "GTK3 klienta pusē dekorētu logu virsrakstjoslas izkārtojums"
 
 #: schemas/org.mate.interface.gschema.xml:156
 msgid ""
@@ -1170,10 +1252,14 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "decoration-layout."
 msgstr ""
+"Šis iestatījums nosaka, kuras pogas likt klienta pusē dekorētu logu "
+"virsrakstjoslā un vai tās novietot pa kreisi vai pa labi. Skatiet https://"
+"developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-decoration-"
+"layout."
 
 #: schemas/org.mate.interface.gschema.xml:160
 msgid "Use a global menubar for displaying application menus"
-msgstr ""
+msgstr "Izmantot globālu izvēlņu joslu lietotņu izvēlņu rādīšanai"
 
 #: schemas/org.mate.interface.gschema.xml:161
 msgid ""
@@ -1182,10 +1268,13 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-app-menu."
 msgstr ""
+"Šis iestatījums nosaka, kur tiks rādīta lietotnes izvēlne — logā vai panelī "
+"ar MenuModel protokolu. Skatiet https://developer.gnome.org/gtk3/stable/"
+"GtkSettings.html#GtkSettings--gtk-shell-shows-app-menu."
 
 #: schemas/org.mate.interface.gschema.xml:165
 msgid "Use a global menubar for displaying window menubars"
-msgstr ""
+msgstr "Izmantot globālu izvēlņu joslu logu izvēlņu joslu rādīšanai"
 
 #: schemas/org.mate.interface.gschema.xml:166
 msgid ""
@@ -1194,20 +1283,25 @@ msgid ""
 "https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-"
 "shell-shows-menubar."
 msgstr ""
+"Šis iestatījums nosaka, kur tiks rādītas logu izvēlņu joslas — logā vai "
+"panelī ar MenuModel protokolu. Skatiet https://developer.gnome.org/gtk3/"
+"stable/GtkSettings.html#GtkSettings--gtk-shell-shows-menubar."
 
 #: schemas/org.mate.interface.gschema.xml:170
 msgid "Only show mnemonics on when the Alt key is pressed"
-msgstr ""
+msgstr "Rādīt piekļuves taustiņus tikai tad, kad nospiests taustiņš Alt"
 
 #: schemas/org.mate.interface.gschema.xml:171
 msgid ""
 "Whether mnemonics should be automatically shown and hidden when the user "
 "presses the Alt key."
 msgstr ""
+"Vai piekļuves taustiņi jārāda un jāpaslēpj automātiski, kad lietotājs "
+"nospiež taustiņu Alt."
 
 #: schemas/org.mate.interface.gschema.xml:176
 msgid "Window Scaling Factor"
-msgstr ""
+msgstr "Logu mērogošanas koeficients"
 
 #: schemas/org.mate.interface.gschema.xml:177
 msgid ""
@@ -1216,10 +1310,14 @@ msgid ""
 "density displays (e.g. HiDPI, Retina) this can be a higher value (often 2). "
 "Set to 0 to auto-detect."
 msgstr ""
+"Šis iestatījums nosaka GTK mērogošanas koeficientu, ar ko logu koordinātas "
+"tiek pārvērstas faktiskajos ierīces pikseļos. Parastās sistēmās tas ir 1, "
+"bet ļoti augstas izšķirtspējas displejos (piem., HiDPI, Retina) tas var būt "
+"lielāks (bieži 2). Iestatiet uz 0, lai noteiktu automātiski."
 
 #: schemas/org.mate.interface.gschema.xml:181
 msgid "Scaling Factor for QT appllications"
-msgstr ""
+msgstr "QT lietotņu mērogošanas koeficients"
 
 #: schemas/org.mate.interface.gschema.xml:182
 msgid ""
@@ -1228,16 +1326,22 @@ msgid ""
 "initializing the session, disable to control this value elsewhere. Requires "
 "restarting your session."
 msgstr ""
+"Šis iestatījums nosaka, vai MATE pārvalda QT lietotņu mērogošanas "
+"koeficientu. Ieslēdziet, lai sesijas sākumā to sinhronizētu ar GTK "
+"mērogošanas koeficientu; izslēdziet, ja šo vērtību pārvaldāt citur. "
+"Nepieciešams pārstartēt sesiju."
 
 #: schemas/org.mate.interface.gschema.xml:186
 msgid "Enable the primary paste selection"
-msgstr ""
+msgstr "Ieslēgt primārās atlases ielīmēšanu"
 
 #: schemas/org.mate.interface.gschema.xml:187
 msgid ""
 "If true, gtk+ uses the primary paste selection, usually triggered by a "
 "middle mouse button click."
 msgstr ""
+"Ja iestatīts uz \"true\" (patiess), gtk+ izmanto primārās atlases "
+"ielīmēšanu, ko parasti izsauc ar peles vidējās pogas klikšķi."
 
 #: schemas/org.mate.lockdown.gschema.xml:5
 msgid "Disable command line"
@@ -1249,8 +1353,8 @@ msgid ""
 " be executed. For example, this would disable access to the panel's \"Run "
 "Application\" dialog."
 msgstr ""
-"Neļauj lietotājam piekļūt terminālim vai likt izpildīt komandrindu. "
-"Piemēram, tas atslēgtu pieeju paneļa dialogam \"Palaist lietotni\"."
+"Neļaut lietotājam piekļūt terminālim vai norādīt izpildāmu komandrindu. "
+"Piemēram, tas liegtu piekļuvi paneļa dialoglodziņam „Palaist lietotni”."
 
 #: schemas/org.mate.lockdown.gschema.xml:10
 msgid "Disable saving files to disk"
@@ -1261,8 +1365,8 @@ msgid ""
 "Prevent the user from saving files to disk. For example, this would disable "
 "access to all applications' \"Save as\" dialogs."
 msgstr ""
-"Neļauj lietotājam saglabāt failus diskā. Piemēram, tiks atslēgta pieeja "
-"\"Saglabāt kā\" dialogiem visās lietotnēs."
+"Neļaut lietotājam saglabāt failus diskā. Piemēram, tas liegtu piekļuvi visu "
+"lietotņu dialoglodziņiem „Saglabāt kā”."
 
 #: schemas/org.mate.lockdown.gschema.xml:15
 msgid "Disable printing"
@@ -1273,8 +1377,8 @@ msgid ""
 "Prevent the user from printing. For example, this would disable access to "
 "all applications' \"Print\" dialogs."
 msgstr ""
-"Neļauj lietotājam drukāt. Piemēram, tiks atslēgta pieeja visu lietotņu "
-"\"Drukāt\" dialogam."
+"Neļaut lietotājam drukāt. Piemēram, tas liegtu piekļuvi visu lietotņu "
+"dialoglodziņiem „Drukāt”."
 
 #: schemas/org.mate.lockdown.gschema.xml:20
 msgid "Disable print setup"
@@ -1285,8 +1389,8 @@ msgid ""
 "Prevent the user from modifying print settings. For example, this would "
 "disable access to all applications' \"Print Setup\" dialogs."
 msgstr ""
-"Neļauj lietotājam izmainīt drukāšanas iestatījumus. Piemēram, tiks atslēgta "
-"\"Drukāšanas iestatīšana\" visos aplikāciju logos."
+"Neļaut lietotājam mainīt drukāšanas iestatījumus. Piemēram, tas liegtu "
+"piekļuvi visu lietotņu dialoglodziņiem „Drukāšanas iestatīšana”."
 
 #: schemas/org.mate.lockdown.gschema.xml:25
 msgid "Disable user switching"
@@ -1297,16 +1401,15 @@ msgid ""
 "Prevent the user from switching to another account while his session is "
 "active."
 msgstr ""
-"Neļaut lietotājam pārslēgties uz cita lietotāja kontu, kamēr viņa paša "
-"sesija ir aktīva."
+"Neļaut lietotājam pārslēgties uz citu kontu, kamēr viņa sesija ir aktīva."
 
 #: schemas/org.mate.lockdown.gschema.xml:30
 msgid "Disable lock screen"
-msgstr "Atslēgt ekrāna noslēgšanu"
+msgstr "Atslēgt ekrāna bloķēšanu"
 
 #: schemas/org.mate.lockdown.gschema.xml:31
 msgid "Prevent the user from locking the screen."
-msgstr ""
+msgstr "Neļaut lietotājam bloķēt ekrānu."
 
 #: schemas/org.mate.lockdown.gschema.xml:35
 msgid "Disable URL and MIME type handlers"
@@ -1314,23 +1417,23 @@ msgstr "Atslēgt URL un MIME tipa apstrādātājus"
 
 #: schemas/org.mate.lockdown.gschema.xml:36
 msgid "Prevent running any URL or MIME type handler applications."
-msgstr "Novērst jebkuru URL vai MIME tipa apstrādātājošu lietotņu palaišanu."
+msgstr "Neļaut palaist URL vai MIME tipu apstrādātāju lietotnes."
 
 #: schemas/org.mate.lockdown.gschema.xml:40
 msgid "Disable theme settings"
-msgstr ""
+msgstr "Atslēgt motīvu iestatījumus"
 
 #: schemas/org.mate.lockdown.gschema.xml:41
 msgid "Prevent the user from changing theme settings."
-msgstr ""
+msgstr "Neļaut lietotājam mainīt motīvu iestatījumus."
 
 #: schemas/org.mate.lockdown.gschema.xml:45
 msgid "Disable log out"
-msgstr ""
+msgstr "Atslēgt atteikšanos"
 
 #: schemas/org.mate.lockdown.gschema.xml:46
 msgid "Prevent the user from logging out."
-msgstr ""
+msgstr "Neļaut lietotājam atteikties."
 
 #: schemas/org.mate.sound.gschema.xml:5
 msgid "Default mixer device"
@@ -1383,7 +1486,7 @@ msgstr "Vai atskaņot skaņas ievades notikumiem."
 
 #: schemas/org.mate.sound.gschema.xml:35
 msgid "Permit the output volume to exceed 100%"
-msgstr ""
+msgstr "Ļaut izvades skaļumam pārsniegt 100%"
 
 #: schemas/org.mate.sound.gschema.xml:36
 msgid ""
@@ -1394,22 +1497,28 @@ msgid ""
 "to extremely quiet audio recordings, where the recording would otherwise be "
 "completely useless."
 msgstr ""
+"Ja iestatīts uz \"TRUE\" (patiess), lietotājs varēs iestatīt izvades/"
+"skaļruņu skaļumu virs 100%. Iestatot izvades skaļumu virs 100%, skaņas "
+"serveris pastiprinās audio vairāk, nekā audio aparatūra spēj bez "
+"kropļojumiem. Tas var pasliktināt skaņas kvalitāti, taču var noderēt ļoti "
+"klusu audio ierakstu klausīšanai, ja citādi ieraksts būtu pilnīgi "
+"nelietojams."
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:6
 msgid ""
 "Maximum age for thumbnails in the cache, in days. Set to -1 to disable "
 "cleaning."
 msgstr ""
-"Maksimālais sīktēlu, kas ir kešatmiņā, vecums dienās. Iestatiet uz -1, lai "
-"atslēgtu tīrīšanu."
+"Maksimālais sīktēlu vecums kešatmiņā, dienās. Iestatiet uz -1, lai atslēgtu "
+"tīrīšanu."
 
 #: schemas/org.mate.thumbnail-cache.gschema.xml:10
 msgid ""
 "Maximum size of the thumbnail cache, in megabytes. Set to -1 to disable "
 "cleaning."
 msgstr ""
-"Maksimālais sīktēlu, kas ir kešatmiņā, izmērs megabaitos. Iestatiet uz -1, "
-"lai atslēgtu tīrīšanu."
+"Maksimālais sīktēlu kešatmiņas izmērs, megabaitos. Iestatiet uz -1, lai "
+"atslēgtu tīrīšanu."
 
 #: schemas/org.mate.thumbnailers.gschema.xml:5
 msgid "Disable all external thumbnailers"
@@ -1420,19 +1529,20 @@ msgid ""
 "Set to true to disable all external thumbnailer programs, independent on "
 "whether they are independently disabled/enabled."
 msgstr ""
-"Iestatiet uz patiess, lai atslēgtu visas ārējās sīktēlu veidošanas "
-"programmas, neatkarīgi no tā, vai tās ir atsevišķi ieslēgtas/izslēgtas."
+"Iestatiet uz \"true\" (patiess), lai atslēgtu visas ārējās sīktēlu veidotāju "
+"programmas neatkarīgi no tā, vai tās ir atsevišķi ieslēgtas vai izslēgtas."
 
 #: schemas/org.mate.thumbnailers.gschema.xml:10
 msgid ""
 "List of mime-types for which external thumbnailer programs will be disabled"
 msgstr ""
+"MIME tipu saraksts, kuriem ārējās sīktēlu veidotāju programmas tiks atslēgtas"
 
 #: schemas/org.mate.thumbnailers.gschema.xml:11
 msgid ""
 "Thumbnails will not be created for files whose mime-type is contained in the"
 " list."
-msgstr ""
+msgstr "Sīktēli netiks veidoti failiem, kuru MIME tips ir šajā sarakstā."
 
 #: schemas/org.mate.typing-break.gschema.xml:5
 msgid "Type time"
@@ -1440,7 +1550,7 @@ msgstr "Rakstīšanas laiks"
 
 #: schemas/org.mate.typing-break.gschema.xml:6
 msgid "Number of minutes of typing time before break mode starts."
-msgstr "Pēc cik ilga rakstīšanas laika minūtēs sāksies pārtraukuma režīms."
+msgstr "Rakstīšanas laiks minūtēs, pēc kura sākas pārtraukuma režīms."
 
 #: schemas/org.mate.typing-break.gschema.xml:10
 msgid "Break time"
@@ -1448,15 +1558,15 @@ msgstr "Pārtraukuma laiks"
 
 #: schemas/org.mate.typing-break.gschema.xml:11
 msgid "Number of minutes that the typing break should last."
-msgstr "Cik garai būtu jābūt rakstīšanas pauzei (minūtēs)."
+msgstr "Cik minūtes ilgst rakstīšanas pārtraukums."
 
 #: schemas/org.mate.typing-break.gschema.xml:15
 msgid "Allow postponing of breaks"
-msgstr "Ļaut pārcelt rakstīšanas pārtraukumus"
+msgstr "Ļaut atlikt pārtraukumus"
 
 #: schemas/org.mate.typing-break.gschema.xml:16
 msgid "Whether or not the typing break screen can be postponed."
-msgstr "Vai rakstīšanas pauzes ekrānu var pārcelt uz vēlāku laiku."
+msgstr "Vai rakstīšanas pārtraukuma ekrānu var atlikt."
 
 #: schemas/org.mate.typing-break.gschema.xml:20
 msgid "Whether or not keyboard locking is enabled"
@@ -1468,7 +1578,7 @@ msgstr "Vai tastatūras noslēgšana ir ieslēgta."
 
 #: tools/mate-color-select.c:63 tools/mate-color-select.desktop.in:3
 msgid "MATE Color Selection"
-msgstr ""
+msgstr "MATE krāsas atlase"
 
 #: tools/mate-color-select.c:70
 msgid "_Copy"
@@ -1480,14 +1590,15 @@ msgstr "_Aizvērt"
 
 #: tools/mate-color-select.desktop.in:4
 msgid "Color selection dialog"
-msgstr ""
+msgstr "Krāsas atlases dialoglodziņš"
 
 #: tools/mate-color-select.desktop.in:5
 msgid "Choose colors from the palette or the screen"
-msgstr ""
+msgstr "Izvēlieties krāsas no paletes vai ekrāna"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: tools/mate-color-select.desktop.in:13
 msgid "MATE;color;chooser;pick;palette;screen;selection;"
 msgstr ""
+"MATE;color;chooser;pick;palette;screen;selection;krāsa;atlasītājs;izvēle;palete;ekrāns;atlase;"
