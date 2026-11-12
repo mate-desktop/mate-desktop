@@ -1252,6 +1252,16 @@ get_hotplug_mode_update (MateRROutput *output)
     XRRPropertyInfo *info;
     GdkDisplay *display;
 
+    /* The modesetting DDX does not forward the KMS hotplug_mode_update
+     * connector property to RandR.  It names outputs of type
+     * DRM_MODE_CONNECTOR_VIRTUAL (virtio-gpu, qxl, vmwgfx, ...) "Virtual-N",
+     * and those are exactly the paravirtual displays whose preferred mode
+     * follows the host window, so treat them the same way.  Check this
+     * first: querying a property the output lacks raises BadName.
+     */
+    if (output->name && g_str_has_prefix (output->name, "Virtual-"))
+        return TRUE;
+
     display = gdk_display_get_default ();
     gdk_x11_display_error_trap_push (display);
     info = XRRQueryOutputProperty (DISPLAY (output), output->id,
