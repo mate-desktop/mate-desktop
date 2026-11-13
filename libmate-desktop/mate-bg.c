@@ -260,6 +260,151 @@ queue_transitioned (MateBG *bg)
 						  NULL);
 }
 
+static void
+append_monitor_id_part (GString    *id,
+			const char *text)
+{
+	const char *c;
+
+	for (c = text; c != NULL && *c != '\0'; c++) {
+		if (g_ascii_isalnum (*c) || *c == '_' || *c == '.' || *c == '-')
+			g_string_append_c (id, *c);
+		else
+			g_string_append_c (id, '_');
+	}
+}
+
+static gchar *
+monitor_base_id (GdkMonitor *monitor)
+{
+	const char *manufacturer = gdk_monitor_get_manufacturer (monitor);
+	const char *model = gdk_monitor_get_model (monitor);
+	GString *id = g_string_new (NULL);
+
+	append_monitor_id_part (id, manufacturer);
+	if (manufacturer != NULL && *manufacturer != '\0' && model != NULL && *model != '\0')
+		g_string_append_c (id, '-');
+	append_monitor_id_part (id, model);
+
+	if (id->len == 0)
+		g_string_assign (id, "monitor");
+
+	return g_string_free (id, FALSE);
+}
+
+static gint
+compare_monitors_by_position (GdkMonitor *a,
+			      gint        index_a,
+			      GdkMonitor *b,
+			      gint        index_b)
+{
+	GdkRectangle ra, rb;
+
+	gdk_monitor_get_geometry (a, &ra);
+	gdk_monitor_get_geometry (b, &rb);
+
+	if (ra.x != rb.x)
+		return ra.x < rb.x ? -1 : 1;
+	if (ra.y != rb.y)
+		return ra.y < rb.y ? -1 : 1;
+	if (ra.width != rb.width)
+		return ra.width < rb.width ? -1 : 1;
+	if (ra.height != rb.height)
+		return ra.height < rb.height ? -1 : 1;
+	if (index_a != index_b)
+		return index_a < index_b ? -1 : 1;
+
+	return 0;
+}
+
+gchar *
+mate_bg_get_monitor_id (GdkMonitor *monitor)
+{
+	GdkDisplay *display;
+	gchar *base;
+	int i, n, own_index = -1, duplicates = 0;
+
+	g_return_val_if_fail (GDK_IS_MONITOR (monitor), NULL);
+
+	display = gdk_monitor_get_display (monitor);
+	base = monitor_base_id (monitor);
+	n = gdk_display_get_n_monitors (display);
+
+	for (i = 0; i < n; i++) {
+		if (gdk_display_get_monitor (display, i) == monitor) {
+			own_index = i;
+			break;
+		}
+	}
+
+	for (i = 0; i < n && own_index >= 0; i++) {
+		GdkMonitor *other = gdk_display_get_monitor (display, i);
+		gchar *other_base;
+
+		if (other == monitor)
+			continue;
+
+		other_base = monitor_base_id (other);
+		if (g_strcmp0 (base, other_base) == 0 &&
+		    compare_monitors_by_position (other, i, monitor, own_index) < 0)
+			duplicates++;
+		g_free (other_base);
+	}
+
+	if (duplicates > 0) {
+		gchar *id = g_strdup_printf ("%s+%d", base, duplicates);
+
+		g_free (base);
+		return id;
+	}
+
+	return base;
+}
+
+GSettings *
+mate_bg_get_monitor_settings (GdkMonitor *monitor)
+{
+	GSettingsSchemaSource *source;
+	GSettingsSchema *schema;
+	GSettings *settings;
+	gchar *id, *path;
+
+	g_return_val_if_fail (GDK_IS_MONITOR (monitor), NULL);
+
+	source = g_settings_schema_source_get_default ();
+	schema = source != NULL ?
+		 g_settings_schema_source_lookup (source, MATE_BG_MONITOR_SCHEMA, TRUE) : NULL;
+	if (schema == NULL)
+		return NULL;
+
+	id = mate_bg_get_monitor_id (monitor);
+	path = g_strdup_printf (MATE_BG_MONITOR_PATH_PREFIX "%s/", id);
+	settings = g_settings_new_full (schema, NULL, path);
+
+	g_free (path);
+	g_free (id);
+	g_settings_schema_unref (schema);
+
+	return settings;
+}
+
+GSettings *
+mate_bg_get_settings_for_monitor (GdkMonitor *monitor)
+{
+	GSettings *settings;
+
+	if (monitor != NULL) {
+		settings = mate_bg_get_monitor_settings (monitor);
+		if (settings != NULL) {
+			if (!g_settings_get_boolean (settings, MATE_BG_KEY_USE_SHARED))
+				return settings;
+			g_object_unref (settings);
+		}
+	}
+
+	return g_settings_new (MATE_BG_SCHEMA);
+}
+
 /* This function loads the user's preferences */
 void
 mate_bg_load_from_preferences (MateBG *bg)
