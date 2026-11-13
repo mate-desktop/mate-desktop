@@ -48,6 +48,9 @@ G_BEGIN_DECLS
 #define MATE_BG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  MATE_TYPE_BG, MateBGClass))
 
 #define MATE_BG_SCHEMA "org.mate.background"
+#define MATE_BG_MONITOR_SCHEMA "org.mate.background.monitor"
+#define MATE_BG_MONITOR_PATH_PREFIX "/org/mate/desktop/background/monitors/"
+#define MATE_BG_KEY_USE_SHARED "use-shared"
 
 /* whether to draw the desktop bg */
 #define MATE_BG_KEY_DRAW_BACKGROUND	"draw-background"
@@ -84,6 +87,9 @@ typedef enum {
 } MateBGPlacement;
 
 GType            mate_bg_get_type              (void);
+gchar *          mate_bg_get_monitor_id        (GdkMonitor          *monitor);
+GSettings *      mate_bg_get_monitor_settings  (GdkMonitor          *monitor);
+GSettings *      mate_bg_get_settings_for_monitor (GdkMonitor        *monitor);
 MateBG *         mate_bg_new                   (void);
 void             mate_bg_load_from_preferences (MateBG               *bg);
 void             mate_bg_load_from_system_preferences  (MateBG       *bg);
