@@ -149,6 +149,7 @@ endif
 EXTRA_DIST = \
 	meson.build \
 	mate-desktop.map \
+	mate-desktop.abi \
 	mate-desktop-2.0.pc.in \
 	mate-desktop-2.0-uninstalled.pc.in \
 	$(pnpdata_DATA_dist)
