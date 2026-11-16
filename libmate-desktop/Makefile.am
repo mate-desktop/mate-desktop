@@ -33,7 +33,7 @@ AM_CPPFLAGS =							\
 
 AM_CFLAGS = $(WARN_CFLAGS)
 
-noinst_PROGRAMS = test-desktop-thumbnail test-ditem test-languages test-image-menu-item test-monitor-info
+noinst_PROGRAMS = test-desktop-thumbnail test-ditem test-languages test-image-menu-item test-monitor-info test-monitor-migrate
 
 CLEANFILES =
 
@@ -120,6 +120,12 @@ libmate_desktop_2_la_LIBADD += $(SYSTEMD_LIBS)
 endif
 
 test_monitor_info_SOURCES = test-monitor-info.c
+
+test_monitor_migrate_SOURCES = test-monitor-migrate.c
+
+test_monitor_migrate_LDADD = \
+	libmate-desktop-2.la		\
+	$(MATE_DESKTOP_LIBS)
 
 test_monitor_info_LDADD = \
 	libmate-desktop-2.la		\

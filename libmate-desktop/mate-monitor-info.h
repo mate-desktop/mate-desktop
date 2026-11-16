@@ -85,6 +85,13 @@ void                 mate_monitor_info_get_workarea        (MateMonitorInfo     
 MateBackgroundOwner  mate_monitor_info_get_background_owner (MateMonitorInfo      *info,
                                                             GdkMonitor            *monitor);
 
+gchar               *mate_monitor_info_get_fallback_id     (MateMonitorInfo       *info,
+                                                            GdkMonitor            *monitor);
+void                 mate_monitor_info_migrate_settings    (MateMonitorInfo       *info,
+                                                            GdkMonitor            *monitor,
+                                                            const gchar           *schema_id,
+                                                            const gchar           *path_prefix);
+
 G_END_DECLS
 
 #endif

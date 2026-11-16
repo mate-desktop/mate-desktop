@@ -671,3 +671,109 @@ mate_monitor_info_get_background_owner (MateMonitorInfo *info,
 	entry = entry_of (info, monitor);
 	return entry ? entry->owner : MATE_BACKGROUND_OWNER_UNKNOWN;
 }
+
+/**
+ * mate_monitor_info_get_fallback_id:
+ * @info: a #MateMonitorInfo
+ * @monitor: a #GdkMonitor
+ *
+ * The id @monitor gets without mate_output_manager_v1: its make and
+ * model, numbered "+1", "+2" by position for duplicates. Settings written
+ * before the compositor offered the protocol live under this id.
+ *
+ * Returns: (transfer full): the fallback id
+ */
+gchar *
+mate_monitor_info_get_fallback_id (MateMonitorInfo *info, GdkMonitor *monitor)
+{
+	g_return_val_if_fail (MATE_IS_MONITOR_INFO (info), NULL);
+	g_return_val_if_fail (GDK_IS_MONITOR (monitor), NULL);
+	return fallback_id (monitor);
+}
+
+static GSettings *
+settings_at (GSettingsSchema *schema, const gchar *prefix, const gchar *id)
+{
+	gchar *path = g_strdup_printf ("%s%s/", prefix, id);
+	GSettings *settings = g_settings_new_full (schema, NULL, path);
+
+	g_free (path);
+	return settings;
+}
+
+static gboolean
+has_user_values (GSettings *settings, gchar **keys)
+{
+	for (gchar **key = keys; *key; key++) {
+		GVariant *value = g_settings_get_user_value (settings, *key);
+
+		if (value) {
+			g_variant_unref (value);
+			return TRUE;
+		}
+	}
+	return FALSE;
+}
+
+/**
+ * mate_monitor_info_migrate_settings:
+ * @info: a #MateMonitorInfo
+ * @monitor: a #GdkMonitor
+ * @schema_id: a relocatable schema, such as "org.mate.background.monitor"
+ * @path_prefix: where its per-monitor copies live, ending in "/", such as
+ *   "/org/mate/desktop/background/monitors/"
+ *
+ * Copies @monitor's settings from its fallback id to its id, once: only
+ * when the two ids differ, the fallback path holds values and the new path
+ * holds none. The fallback path is never changed, so going back to a
+ * session without the protocol finds the old settings.
+ */
+void
+mate_monitor_info_migrate_settings (MateMonitorInfo *info,
+                                    GdkMonitor      *monitor,
+                                    const gchar     *schema_id,
+                                    const gchar     *path_prefix)
+{
+	GSettingsSchemaSource *source;
+	GSettingsSchema *schema;
+	GSettings *from, *to;
+	gchar *id, *old_id;
+	gchar **keys;
+
+	g_return_if_fail (MATE_IS_MONITOR_INFO (info));
+	g_return_if_fail (GDK_IS_MONITOR (monitor));
+	g_return_if_fail (schema_id != NULL && path_prefix != NULL);
+
+	id = mate_monitor_info_get_id (info, monitor);
+	old_id = fallback_id (monitor);
+	source = g_settings_schema_source_get_default ();
+	schema = g_strcmp0 (id, old_id) != 0 && source
+	         ? g_settings_schema_source_lookup (source, schema_id, TRUE)
+	         : NULL;
+	if (!schema) {
+		g_free (id);
+		g_free (old_id);
+		return;
+	}
+	keys = g_settings_schema_list_keys (schema);
+	from = settings_at (schema, path_prefix, old_id);
+	to = settings_at (schema, path_prefix, id);
+	if (has_user_values (from, keys) && !has_user_values (to, keys)) {
+		g_settings_delay (to);
+		for (gchar **key = keys; *key; key++) {
+			GVariant *value = g_settings_get_user_value (from, *key);
+
+			if (value) {
+				g_settings_set_value (to, *key, value);
+				g_variant_unref (value);
+			}
+		}
+		g_settings_apply (to);
+	}
+	g_object_unref (from);
+	g_object_unref (to);
+	g_strfreev (keys);
+	g_settings_schema_unref (schema);
+	g_free (id);
+	g_free (old_id);
+}
