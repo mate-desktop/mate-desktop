@@ -142,8 +142,9 @@ static void       pixbuf_draw_gradient (GdkPixbuf    *pixbuf,
 					GdkRGBA     *c2,
 					GdkRectangle *rect);
 
-static void       pixbuf_tile          (GdkPixbuf  *src,
-					GdkPixbuf  *dest);
+static void       pixbuf_tile          (GdkPixbuf    *src,
+					GdkPixbuf    *dest,
+					GdkRectangle *area);
 static void       pixbuf_blend         (GdkPixbuf  *src,
 					GdkPixbuf  *dest,
 					int         src_x,
@@ -997,14 +998,16 @@ draw_image_area (MateBG        *bg,
 	int x, y, w, h;
 	GdkPixbuf *scaled;
 
-	if (!pixbuf)
+	if (!pixbuf || dest_width <= 0 || dest_height <= 0)
 		return;
 
 	scaled = get_scaled_pixbuf (bg->placement, pixbuf, dest_width, dest_height, &x, &y, &w, &h);
+	if (!scaled)
+		return;
 
 	switch (bg->placement) {
 	case MATE_BG_PLACEMENT_TILED:
-		pixbuf_tile (scaled, dest);
+		pixbuf_tile (scaled, dest, area);
 		break;
 	case MATE_BG_PLACEMENT_ZOOMED:
 	case MATE_BG_PLACEMENT_CENTERED:
@@ -2771,20 +2774,26 @@ pixbuf_blend (GdkPixbuf *src,
 }
 
 static void
-pixbuf_tile (GdkPixbuf *src, GdkPixbuf *dest)
+pixbuf_tile (GdkPixbuf *src, GdkPixbuf *dest, GdkRectangle *area)
 {
 	int x, y;
 	int tile_width, tile_height;
-	int dest_width = gdk_pixbuf_get_width (dest);
-	int dest_height = gdk_pixbuf_get_height (dest);
+	int x1 = MAX (area->x, 0);
+	int y1 = MAX (area->y, 0);
+	int x2 = MIN (area->x + area->width, gdk_pixbuf_get_width (dest));
+	int y2 = MIN (area->y + area->height, gdk_pixbuf_get_height (dest));
 
 	tile_width = gdk_pixbuf_get_width (src);
 	tile_height = gdk_pixbuf_get_height (src);
+	if (tile_width <= 0 || tile_height <= 0)
+		return;
 
-	for (y = 0; y < dest_height; y += tile_height) {
-		for (x = 0; x < dest_width; x += tile_width) {
+	for (y = y1; y < y2; y += tile_height) {
+		for (x = x1; x < x2; x += tile_width) {
 			pixbuf_blend (src, dest, 0, 0,
-				      tile_width, tile_height, x, y, 1.0);
+				      MIN (tile_width, x2 - x),
+				      MIN (tile_height, y2 - y),
+				      x, y, 1.0);
 		}
 	}
 }
