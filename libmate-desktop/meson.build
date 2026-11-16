@@ -182,6 +182,12 @@ if enable_gir
   )
 endif
 
+test_monitor_migrate = executable('test-monitor-migrate',
+  sources : 'test-monitor-migrate.c',
+  dependencies : libmate_desktop_dep,
+  install : false,
+)
+
 test_monitor_info = executable('test-monitor-info',
   sources : 'test-monitor-info.c',
   dependencies : libmate_desktop_dep,
