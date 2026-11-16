@@ -11,5 +11,6 @@ pkgconfig_DATA = mate-wayland-protocols.pc
 
 EXTRA_DIST = \
 	meson.build \
+	external/wlr-output-management-unstable-v1.xml \
 	mate-wayland-protocols.pc.in \
 	$(NULL)

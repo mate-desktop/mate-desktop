@@ -30,6 +30,7 @@ headers = [
   'mate-hsv.h',
   'mate-colorseldialog.h',
   'mate-systemd.h',
+  'mate-monitor-info.h',
 ]
 
 install_headers(
@@ -57,6 +58,7 @@ sources = files(
   'mate-colorseldialog.c',
   'edid-parse.c',
   'mate-systemd.c',
+  'mate-monitor-info.c',
 )
 
 deps = [
@@ -67,6 +69,28 @@ deps = [
   dconf_dep,
   libsystemd_dep,
 ]
+
+wayland_sources = []
+if have_wayland
+  wayland_scanner = find_program(wayland_scanner_dep.get_variable(pkgconfig: 'wayland_scanner'))
+  mate_output_xml = join_paths(meson.project_source_root(), 'protocols', 'mate-output-v1.xml')
+  wayland_sources += custom_target('mate-output-v1-client-protocol.h',
+    input: mate_output_xml,
+    output: 'mate-output-v1-client-protocol.h',
+    command: [wayland_scanner, 'client-header', '@INPUT@', '@OUTPUT@'],
+  )
+  wayland_sources += custom_target('mate-output-v1-protocol.c',
+    input: mate_output_xml,
+    output: 'mate-output-v1-protocol.c',
+    command: [wayland_scanner, 'private-code', '@INPUT@', '@OUTPUT@'],
+  )
+  wayland_sources += custom_target('wlr-output-management-unstable-v1-protocol.c',
+    input: join_paths(meson.project_source_root(), 'protocols', 'external', 'wlr-output-management-unstable-v1.xml'),
+    output: 'wlr-output-management-unstable-v1-protocol.c',
+    command: [wayland_scanner, 'private-code', '@INPUT@', '@OUTPUT@'],
+  )
+  deps += [gtk_wayland_dep, wayland_client_dep]
+endif
 
 if get_option('pnp-ids-path') == 'internal'
   pnp_ids_path = join_paths(matedt_pkgdatadir, 'pnp.ids')
@@ -93,7 +117,7 @@ endif
 
 libmate_desktop = library(
   'mate-desktop-2',
-  sources: sources,
+  sources: sources + wayland_sources,
   version: libversion,
   include_directories: top_inc,
   dependencies: deps,
@@ -157,6 +181,12 @@ if enable_gir
     install_dir_typelib: typelib_dir,
   )
 endif
+
+test_monitor_info = executable('test-monitor-info',
+  sources : 'test-monitor-info.c',
+  dependencies : libmate_desktop_dep,
+  install : false,
+)
 
 test_ditem = executable('test-ditem',
   sources : 'test-ditem.c',
