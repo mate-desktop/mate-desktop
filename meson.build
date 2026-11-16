@@ -107,6 +107,7 @@ if enable_gtk_doc
   subdir('docs/reference/mate-desktop')
 endif
 subdir('po')
+subdir('protocols')
 subdir('tools')
 subdir('schemas')
 subdir('xdg-portal')

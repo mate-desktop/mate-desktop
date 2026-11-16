@@ -279,6 +279,8 @@ docs/Makefile
 docs/reference/Makefile
 docs/reference/mate-desktop/Makefile
 po/Makefile.in
+protocols/Makefile
+protocols/mate-wayland-protocols.pc
 schemas/Makefile
 schemas/org.mate.background.gschema.xml
 man/Makefile
