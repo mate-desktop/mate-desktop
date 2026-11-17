@@ -16,7 +16,7 @@
     <key name="draw-background" type="b">
       <default>true</default>
       <summary>Draw Desktop Background</summary>
-      <description>Have MATE draw the desktop background. If false, the desktop is not painted by MATE: on X11 something else must draw it, and on Wayland Caja shows only the icons on a transparent surface, so the compositor must draw the wallpaper behind them, otherwise the desktop is black.</description>
+      <description>Have MATE draw the desktop background. If false, MATE leaves it to something else: on X11 another program must draw it; on Wayland the desktop shows only its icons, on a transparent surface, when the compositor reports that it draws the wallpaper, and draws the background itself otherwise.</description>
     </key>
     <key name="show-desktop-icons" type="b">
       <default>true</default>
@@ -68,7 +68,7 @@
     <key name="draw-background" type="b">
       <default>true</default>
       <summary>Draw Desktop Background</summary>
-      <description>Have MATE draw the desktop background. If false, the desktop is not painted by MATE: on X11 something else must draw it, and on Wayland Caja shows only the icons on a transparent surface, so the compositor must draw the wallpaper behind them, otherwise the desktop is black.</description>
+      <description>Have MATE draw the desktop background. If false, MATE leaves it to something else: on X11 another program must draw it; on Wayland the desktop shows only its icons, on a transparent surface, when the compositor reports that it draws the wallpaper, and draws the background itself otherwise.</description>
     </key>
     <key name="show-desktop-icons" type="b">
       <default>true</default>
