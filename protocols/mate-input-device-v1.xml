@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol name="mate_input_device_v1">
+  <copyright>
+    Copyright © 2026 Kerem Soke
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice (including the next
+    paragraph) shall be included in all copies or substantial portions of the
+    Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
+  </copyright>
+
+  <description summary="the input devices the compositor manages">
+    A read-only list of the input devices the compositor manages, with what
+    each one can be configured to do, for MATE's input preferences, which
+    cannot see devices on Wayland. Device settings stay where MATE keeps
+    them (GSettings); the compositor applies them. This protocol only
+    describes the devices.
+
+    It identifies the user's hardware, so a compositor should offer the
+    global only to trusted MATE components, and never to clients in a
+    sandbox.
+
+    Versioning. This protocol follows the usual Wayland rules: a later
+    version only adds requests, events and enum values, and a client must
+    ignore enum and bitfield values it does not know.
+  </description>
+
+  <interface name="mate_input_device_manager_v1" version="1">
+    <description summary="the device list">
+      After binding, the compositor sends a device event for every device,
+      then done. Later it sends device for each new device, followed by
+      done, and removed on the device object when one goes.
+    </description>
+
+    <event name="device">
+      <description summary="a device">
+        Its properties follow on the new object, ending with its own done.
+      </description>
+      <arg name="device" type="new_id" interface="mate_input_device_v1"/>
+    </event>
+
+    <event name="done">
+      <description summary="the list is complete">
+        Sent after the initial devices, and after each batch of new ones.
+      </description>
+    </event>
+
+    <request name="stop">
+      <description summary="stop sending events">
+        The compositor sends finished and no further events on this object.
+        Device objects stay valid.
+      </description>
+    </request>
+
+    <event name="finished">
+      <description summary="the compositor sends no more events">
+        After this event the client should destroy the object.
+      </description>
+    </event>
+
+    <request name="destroy" type="destructor">
+      <description summary="destroy the manager">
+        Device objects stay valid.
+      </description>
+    </request>
+  </interface>
+
+  <interface name="mate_input_device_v1" version="1">
+    <description summary="one input device">
+      Every event below except removed belongs to a group that ends with
+      done. The full state is sent after creation; later, only what
+      changed is sent, followed by done.
+    </description>
+
+    <enum name="kind">
+      <entry name="other" value="0"/>
+      <entry name="keyboard" value="1"/>
+      <entry name="mouse" value="2"/>
+      <entry name="touchpad" value="3"/>
+      <entry name="pointing_stick" value="4"/>
+      <entry name="trackball" value="5"/>
+      <entry name="touchscreen" value="6"/>
+      <entry name="tablet" value="7"/>
+      <entry name="tablet_pad" value="8"/>
+      <entry name="switch" value="9"/>
+    </enum>
+
+    <enum name="capability" bitfield="true">
+      <entry name="keyboard" value="1"/>
+      <entry name="pointer" value="2"/>
+      <entry name="touch" value="4"/>
+      <entry name="tablet_tool" value="8"/>
+      <entry name="tablet_pad" value="16"/>
+      <entry name="gesture" value="32"/>
+      <entry name="switch" value="64"/>
+    </enum>
+
+    <enum name="button" bitfield="true">
+      <entry name="left" value="1"/>
+      <entry name="right" value="2"/>
+      <entry name="middle" value="4"/>
+      <entry name="side" value="8"/>
+      <entry name="extra" value="16"/>
+    </enum>
+
+    <enum name="config" bitfield="true">
+      <description summary="settings the device supports">
+        As libinput reports them for the device.
+      </description>
+      <entry name="tap" value="1" summary="tap to click"/>
+      <entry name="tap_drag" value="2" summary="tap and drag"/>
+      <entry name="tap_drag_lock" value="4" summary="drag lock"/>
+      <entry name="dwt" value="8" summary="disable while typing"/>
+      <entry name="dwtp" value="16" summary="disable while using the pointing stick"/>
+      <entry name="natural_scroll" value="32"/>
+      <entry name="left_handed" value="64"/>
+      <entry name="middle_emulation" value="128"/>
+      <entry name="accel_speed" value="256" summary="pointer speed"/>
+      <entry name="calibration" value="512" summary="a calibration matrix"/>
+      <entry name="rotation" value="1024"/>
+      <entry name="scroll_button" value="2048" summary="scrolling while a button is held"/>
+    </enum>
+
+    <enum name="accel_profile" bitfield="true">
+      <entry name="flat" value="1"/>
+      <entry name="adaptive" value="2"/>
+      <entry name="custom" value="4"/>
+    </enum>
+
+    <enum name="scroll_method" bitfield="true">
+      <entry name="two_finger" value="1"/>
+      <entry name="edge" value="2"/>
+      <entry name="on_button_down" value="4"/>
+    </enum>
+
+    <enum name="click_method" bitfield="true">
+      <entry name="button_areas" value="1"/>
+      <entry name="clickfinger" value="2"/>
+    </enum>
+
+    <enum name="send_events_mode" bitfield="true">
+      <entry name="disabled" value="1" summary="the device can be turned off"/>
+      <entry name="disabled_on_external_mouse" value="2"
+             summary="the device can turn off while a mouse is plugged in"/>
+    </enum>
+
+    <event name="name">
+      <description summary="the device's name"/>
+      <arg name="name" type="string"/>
+    </event>
+
+    <event name="id">
+      <description summary="a stable id for the device">
+        At most 255 bytes of ASCII letters, digits and "_", ".", "-", ":"
+        and "@". The same device gets the same id across reconnections and
+        sessions. Clients that keep per-device settings store them under it
+        and treat it as opaque.
+      </description>
+      <arg name="id" type="string"/>
+    </event>
+
+    <event name="usb_ids">
+      <description summary="the vendor and product ids">
+        0 when unknown.
+      </description>
+      <arg name="vendor" type="uint"/>
+      <arg name="product" type="uint"/>
+    </event>
+
+    <event name="kind">
+      <description summary="what the device is">
+        How preferences should list it. A touchpad is a pointer with tap
+        fingers or a touchpad udev tag; a pointing stick and a trackball
+        are told apart from a mouse by their udev tags.
+      </description>
+      <arg name="kind" type="uint" enum="kind"/>
+    </event>
+
+    <event name="capabilities">
+      <description summary="the kinds of events the device sends"/>
+      <arg name="capabilities" type="uint" enum="capability"/>
+    </event>
+
+    <event name="buttons">
+      <description summary="the pointer buttons the device has">
+        A clickpad has a left button (pressing it clicks); a touchpad that
+        can only tap has none.
+      </description>
+      <arg name="buttons" type="uint" enum="button"/>
+    </event>
+
+    <event name="config">
+      <description summary="the settings the device supports"/>
+      <arg name="config" type="uint" enum="config"/>
+    </event>
+
+    <event name="tap_fingers">
+      <description summary="the number of fingers that can tap">
+        0 when the device cannot tap.
+      </description>
+      <arg name="fingers" type="uint"/>
+    </event>
+
+    <event name="accel_profiles">
+      <description summary="the acceleration profiles the device supports"/>
+      <arg name="profiles" type="uint" enum="accel_profile"/>
+    </event>
+
+    <event name="scroll_methods">
+      <description summary="the scroll methods the device supports"/>
+      <arg name="methods" type="uint" enum="scroll_method"/>
+    </event>
+
+    <event name="click_methods">
+      <description summary="the click methods the device supports"/>
+      <arg name="methods" type="uint" enum="click_method"/>
+    </event>
+
+    <event name="send_events">
+      <description summary="the ways the device can be turned off"/>
+      <arg name="modes" type="uint" enum="send_events_mode"/>
+    </event>
+
+    <event name="output">
+      <description summary="the monitor the device is mapped to">
+        For a touchscreen or tablet, the mate_output_v1 id of the monitor
+        it is mapped to (see mate-output-v1); empty when it is not mapped
+        or is not such a device.
+      </description>
+      <arg name="output" type="string"/>
+    </event>
+
+    <event name="done">
+      <description summary="end of a group of changes"/>
+    </event>
+
+    <event name="removed">
+      <description summary="the device went away">
+        The object then sends no more events, and the client should
+        destroy it.
+      </description>
+    </event>
+
+    <request name="destroy" type="destructor">
+      <description summary="destroy the object"/>
+    </request>
+  </interface>
+</protocol>

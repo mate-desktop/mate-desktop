@@ -80,6 +80,10 @@ iso_codes_prefix = iso_codes.get_pkgconfig_variable('prefix')
 libstartup_dep = dependency('libstartup-notification-1.0', version: '>= 0.5',
     required: enable_startup_notification )
 libsystemd_dep = dependency('libsystemd', required: enable_systemd )
+gtk_wayland_dep = dependency('gtk+-wayland-3.0', required: get_option('wayland'))
+wayland_client_dep = dependency('wayland-client', required: get_option('wayland'))
+wayland_scanner_dep = dependency('wayland-scanner', native: true, required: get_option('wayland'))
+have_wayland = gtk_wayland_dep.found() and wayland_client_dep.found() and wayland_scanner_dep.found()
 libmdt_dep = [
   dependency('gdk-pixbuf-2.0'),
   dependency('gobject-2.0'),
@@ -92,6 +96,7 @@ libmdt_dep = [
 
 config_h.set('HAVE_STARTUP_NOTIFICATION', libstartup_dep.found())
 config_h.set('HAVE_SYSTEMD', libsystemd_dep.found())
+config_h.set('HAVE_WAYLAND', have_wayland)
 gnome = import('gnome')
 i18n = import('i18n')
 pkg = import('pkgconfig')
@@ -107,6 +112,7 @@ if enable_gtk_doc
   subdir('docs/reference/mate-desktop')
 endif
 subdir('po')
+subdir('protocols')
 subdir('tools')
 subdir('schemas')
 subdir('xdg-portal')

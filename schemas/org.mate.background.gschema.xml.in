@@ -16,7 +16,59 @@
     <key name="draw-background" type="b">
       <default>true</default>
       <summary>Draw Desktop Background</summary>
-      <description>Have MATE draw the desktop background.</description>
+      <description>Have MATE draw the desktop background. If false, MATE leaves it to something else: on X11 another program must draw it; on Wayland the desktop shows only its icons, on a transparent surface, when the compositor reports that it draws the wallpaper, and draws the background itself otherwise.</description>
+    </key>
+    <key name="show-desktop-icons" type="b">
+      <default>true</default>
+      <summary>Show Desktop Icons</summary>
+      <description>Have MATE file manager (Caja) draw the desktop icons.</description>
+    </key>
+    <key name="background-fade" type="b">
+      <default>true</default>
+      <summary>Fade the background on change</summary>
+      <description>If set to true, then MATE will change the desktop background with a fading effect.</description>
+    </key>
+    <key name="picture-options" enum="org.mate.background.picture-options-enum">
+      <default>'zoom'</default>
+      <summary>Picture Options</summary>
+      <description>Determines how the image set by wallpaper_filename is rendered.  Possible values are "wallpaper", "centered", "scaled", "stretched", "zoom", "spanned".</description>
+    </key>
+    <key name="picture-filename" type="s">
+      <default>'@datadir@/backgrounds/mate/desktop/Stripes.png'</default>
+      <summary>Picture Filename</summary>
+      <description>File to use for the background image.</description>
+    </key>
+    <key name="picture-opacity" type="i">
+      <default>100</default>
+      <summary>Picture Opacity</summary>
+      <description>Opacity with which to draw the background picture.</description>
+    </key>
+    <key name="primary-color" type="s">
+      <default>'#5891BC'</default>
+      <summary>Primary Color</summary>
+      <description>Left or Top color when drawing gradients, or the solid color.</description>
+    </key>
+    <key name="secondary-color" type="s">
+      <default>'#3C8F25'</default>
+      <summary>Secondary Color</summary>
+      <description>Right or Bottom color when drawing gradients, not used for solid color.</description>
+    </key>
+    <key name="color-shading-type" enum="org.mate.background.color-shading-type-enum">
+      <default>'vertical-gradient'</default>
+      <summary>Color Shading Type</summary>
+      <description>How to shade the background color. Possible values are "horizontal-gradient", "vertical-gradient", and "solid".</description>
+    </key>
+  </schema>
+  <schema id="org.mate.background.monitor">
+    <key name="use-shared" type="b">
+      <default>true</default>
+      <summary>Use the shared background settings</summary>
+      <description>If true, this monitor uses the settings of org.mate.background and every other key in this schema is ignored. This schema is relocatable: it lives at /org/mate/desktop/background/monitors/ID/, where ID is the monitor id. The id is the one mate_monitor_info_get_id() returns. On a compositor that offers the mate_output_manager_v1 Wayland protocol it is the compositor's monitor id (see mate-output-v1.xml); otherwise it is the monitor manufacturer and model joined with a hyphen, with every character other than letters, digits, underscore, period and hyphen replaced by an underscore, and "+N" appended for the Nth further monitor with the same manufacturer and model, counted by logical position: left to right, then top to bottom, then by size. A monitor with neither is "monitor". The two agree for every monitor whose manufacturer and model are unique; settings stored under the second form are copied to the first once.</description>
+    </key>
+    <key name="draw-background" type="b">
+      <default>true</default>
+      <summary>Draw Desktop Background</summary>
+      <description>Have MATE draw the desktop background. If false, MATE leaves it to something else: on X11 another program must draw it; on Wayland the desktop shows only its icons, on a transparent surface, when the compositor reports that it draws the wallpaper, and draws the background itself otherwise.</description>
     </key>
     <key name="show-desktop-icons" type="b">
       <default>true</default>

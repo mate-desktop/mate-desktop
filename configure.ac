@@ -183,6 +183,39 @@ AS_IF([test "x$have_systemd" = xyes], [
 
 AM_CONDITIONAL([HAVE_SYSTEMD], [test "x$have_systemd" = xyes])
 
+dnl ----------------------------------------------------------------------------
+dnl Wayland (the MATE output protocol for MateMonitorInfo)
+dnl ----------------------------------------------------------------------------
+AC_ARG_ENABLE([wayland],
+    [AS_HELP_STRING([--enable-wayland@<:@=auto/yes/no@:>@],
+                    [Enable Wayland support @<:@default=auto@:>@])],
+    [],
+    [enable_wayland=auto])
+
+AS_IF([test "x$enable_wayland" != xno], [
+    PKG_CHECK_MODULES([WAYLAND], [gtk+-wayland-3.0 wayland-client],
+        [have_wayland=yes],
+        [have_wayland=no])
+    AS_IF([test "x$have_wayland" = xyes], [
+        PKG_CHECK_VAR([WAYLAND_SCANNER], [wayland-scanner], [wayland_scanner])
+        AS_IF([test "x$WAYLAND_SCANNER" = x], [have_wayland=no])
+    ])
+
+    AS_IF([test "x$enable_wayland" = xyes &&
+           test "x$have_wayland" = xno], [
+        AC_MSG_ERROR([Wayland support requested but gtk+-wayland-3.0, wayland-client or wayland-scanner was not found])
+    ])
+], [
+    have_wayland=no
+])
+
+AS_IF([test "x$have_wayland" = xyes], [
+    AC_DEFINE([HAVE_WAYLAND], [1],
+              [Define if Wayland support is enabled])
+])
+
+AM_CONDITIONAL([HAVE_WAYLAND], [test "x$have_wayland" = xyes])
+
 
 GOBJECT_INTROSPECTION_CHECK([0.9.7])
 
@@ -279,6 +312,8 @@ docs/Makefile
 docs/reference/Makefile
 docs/reference/mate-desktop/Makefile
 po/Makefile.in
+protocols/Makefile
+protocols/mate-wayland-protocols.pc
 schemas/Makefile
 schemas/org.mate.background.gschema.xml
 man/Makefile

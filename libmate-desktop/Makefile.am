@@ -16,7 +16,8 @@ libmate_desktop_HEADERS = \
 	mate-hsv.h \
 	mate-colorseldialog.h \
 	mate-image-menu-item.h \
-	mate-systemd.h
+	mate-systemd.h \
+	mate-monitor-info.h
 
 lib_LTLIBRARIES = libmate-desktop-2.la
 
@@ -32,7 +33,7 @@ AM_CPPFLAGS =							\
 
 AM_CFLAGS = $(WARN_CFLAGS)
 
-noinst_PROGRAMS = test-desktop-thumbnail test-ditem test-languages test-image-menu-item
+noinst_PROGRAMS = test-desktop-thumbnail test-ditem test-languages test-image-menu-item test-monitor-info test-monitor-migrate
 
 CLEANFILES =
 
@@ -54,7 +55,8 @@ introspection_sources = \
 	mate-colorseldialog.c \
 	edid-parse.c \
 	mate-image-menu-item.c \
-	mate-systemd.c
+	mate-systemd.c \
+	mate-monitor-info.c
 
 libmate_desktop_2_la_SOURCES =		\
 	$(introspection_sources)	\
@@ -115,6 +117,40 @@ pnpdata_DATA_dist = pnp.ids
 if HAVE_SYSTEMD
 AM_CPPFLAGS += $(SYSTEMD_CFLAGS)
 libmate_desktop_2_la_LIBADD += $(SYSTEMD_LIBS)
+endif
+
+test_monitor_info_SOURCES = test-monitor-info.c
+
+test_monitor_migrate_SOURCES = test-monitor-migrate.c
+
+test_monitor_migrate_LDADD = \
+	libmate-desktop-2.la		\
+	$(MATE_DESKTOP_LIBS)
+
+test_monitor_info_LDADD = \
+	libmate-desktop-2.la		\
+	$(MATE_DESKTOP_LIBS)
+
+if HAVE_WAYLAND
+wayland_generated = \
+	mate-output-v1-client-protocol.h \
+	mate-output-v1-protocol.c \
+	wlr-output-management-unstable-v1-protocol.c
+
+nodist_libmate_desktop_2_la_SOURCES = $(wayland_generated)
+BUILT_SOURCES = $(wayland_generated)
+CLEANFILES += $(wayland_generated)
+AM_CPPFLAGS += $(WAYLAND_CFLAGS)
+libmate_desktop_2_la_LIBADD += $(WAYLAND_LIBS)
+
+mate-output-v1-client-protocol.h: $(top_srcdir)/protocols/mate-output-v1.xml
+	$(AM_V_GEN)$(WAYLAND_SCANNER) client-header $< $@
+
+mate-output-v1-protocol.c: $(top_srcdir)/protocols/mate-output-v1.xml
+	$(AM_V_GEN)$(WAYLAND_SCANNER) private-code $< $@
+
+wlr-output-management-unstable-v1-protocol.c: $(top_srcdir)/protocols/external/wlr-output-management-unstable-v1.xml
+	$(AM_V_GEN)$(WAYLAND_SCANNER) private-code $< $@
 endif
 
 check:

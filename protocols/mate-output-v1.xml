@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol name="mate_output_v1">
+  <copyright>
+    Copyright © 2026 Kerem Soke
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice (including the next
+    paragraph) shall be included in all copies or substantial portions of the
+    Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
+  </copyright>
+
+  <description summary="monitor identity and MATE display semantics">
+    This protocol gives MATE's desktop components (display and appearance
+    preferences, the file manager's desktop, the panel) what they need to
+    know about monitors beyond wl_output and wlr-output-management: a stable
+    monitor id, the monitor's EDID identity, the primary monitor, mirroring,
+    the work area, and who draws the desktop background.
+
+    It extends two existing protocols instead of replacing them. Modes,
+    positions, scale, transform and applying a layout stay in
+    wlr-output-management-unstable-v1 (zwlr_output_manager_v1, version 4 or
+    later); this protocol adds to its heads and configurations. For the file
+    manager's desktop and the panel, which only see wl_output objects, it
+    extends wl_output.
+
+    The protocol exposes information that can identify the user's hardware
+    and lets the client change the primary monitor. A compositor should
+    offer the global only to trusted MATE components, and never to clients
+    in a sandbox.
+
+    Monitor ids. Every head and every enabled output has an id: a string of
+    at most 255 bytes, made only of ASCII letters, digits and the characters
+    "_", ".", "-", "@" and "+". Clients store settings under it, for example
+    in GSettings paths, and must treat it as opaque. A compositor builds it
+    as follows, so that ids agree across compositors and with clients that
+    derive the id themselves when this protocol is missing:
+
+    1. Take the head's make and model (the strings wl_output.geometry and
+       zwlr_output_head_v1.make and .model report), replace every byte that
+       is not an ASCII letter or digit, "_", "." or "-" with "_", and join
+       them with "-". Leave out a part that is empty, and the "-" with it.
+       If both are empty, use "monitor". Call the result the base.
+    2. If no other connected head has the same base, the id is the base.
+    3. Otherwise, if the head has an EDID serial (the numeric serial written
+       as 8 lowercase hexadecimal digits when it is not zero, else the
+       serial number descriptor with the same character replacement) and no
+       other connected head with the same base has the same serial, the id
+       is the base, "-s" and the serial.
+    4. Otherwise the id is the base, "@" and the connector name (the
+       zwlr_output_head_v1.name, with the same character replacement).
+
+    The id of a head is computed over the heads connected at the time. A
+    monitor's id therefore only changes when a monitor with the same base
+    is connected or disconnected, and never because a monitor moved. Rule
+    4 ids follow the connector.
+
+    Primary. Whenever at least one head is enabled, exactly one enabled head
+    is primary. When the primary head is disabled or disconnected, the
+    compositor chooses another one.
+
+    Mirroring. Enabled heads at the same position with the same logical
+    size show the same picture: they mirror each other. The compositor
+    reports which of them the picture is made for with mirror_of.
+
+    Layout. The compositor accepts a configuration in which enabled heads do
+    not overlap, or overlap exactly as mirrors. It may refuse other
+    overlaps, and gaps between heads, with
+    zwlr_output_configuration_v1.failed; clients should close gaps before
+    applying.
+
+    Versioning. This protocol follows the usual Wayland rules: a later
+    version only adds requests, events and enum values, and a client must
+    ignore enum and bitfield values it does not know.
+  </description>
+
+  <interface name="mate_output_manager_v1" version="1">
+    <description summary="MATE monitor information">
+      The global. After binding, the compositor sends the capabilities
+      event before any other event.
+    </description>
+
+    <enum name="error">
+      <entry name="already_constructed" value="1"
+             summary="the wlr configuration already has a mate configuration"/>
+      <entry name="already_used" value="2"
+             summary="the wlr configuration was already applied or tested"/>
+    </enum>
+
+    <enum name="capability" bitfield="true">
+      <description summary="what the compositor can draw">
+        Background drawing the compositor offers. When it offers wallpaper,
+        it draws the desktop background on every output that no client
+        covers with a desktop background of its own, following the
+        org.mate.background settings: the shared ones, or an output's own
+        org.mate.background.monitor settings at the path of its id when
+        their use-shared key is false. A client such as a file manager
+        desktop may then draw only its icons on a transparent surface.
+        Without wallpaper, a client must not do that, or the desktop shows
+        black.
+      </description>
+      <entry name="wallpaper" value="1" summary="draws org.mate.background"/>
+      <entry name="per_output_wallpaper" value="2"
+             summary="draws an output's own org.mate.background.monitor settings"/>
+      <entry name="spanned_wallpaper" value="4"
+             summary="spans pictures over the outputs that share the settings"/>
+    </enum>
+
+    <event name="capabilities">
+      <description summary="the compositor's capabilities">
+        Sent right after binding, and again whenever the capabilities
+        change.
+      </description>
+      <arg name="capabilities" type="uint" enum="capability"/>
+    </event>
+
+    <request name="get_head">
+      <description summary="MATE information for a wlr-output-management head">
+        Creates a mate_output_head_v1 for the given head, which must belong
+        to the same client. If the head has already finished, the new
+        object sends finished at once.
+      </description>
+      <arg name="id" type="new_id" interface="mate_output_head_v1"/>
+      <arg name="head" type="object" interface="zwlr_output_head_v1"/>
+    </request>
+
+    <request name="get_output">
+      <description summary="MATE information for a wl_output">
+        Creates a mate_output_v1 for the given output. If the output's
+        global has gone, the object sends nothing.
+      </description>
+      <arg name="id" type="new_id" interface="mate_output_v1"/>
+      <arg name="output" type="object" interface="wl_output"/>
+    </request>
+
+    <request name="get_configuration">
+      <description summary="MATE options for a wlr-output-management configuration">
+        Creates a mate_output_configuration_v1 that adds options to the
+        given configuration. It must be created before the configuration is
+        applied or tested, and at most once per configuration.
+      </description>
+      <arg name="id" type="new_id" interface="mate_output_configuration_v1"/>
+      <arg name="configuration" type="object"
+           interface="zwlr_output_configuration_v1"/>
+    </request>
+
+    <request name="stop">
+      <description summary="stop sending events">
+        The compositor sends finished and no further events on this object.
+        Objects created from it stay valid.
+      </description>
+    </request>
+
+    <event name="finished">
+      <description summary="the compositor sends no more events">
+        After this event the client should destroy the object.
+      </description>
+    </event>
+
+    <request name="destroy" type="destructor">
+      <description summary="destroy the manager">
+        Objects created from it stay valid.
+      </description>
+    </request>
+  </interface>
+
+  <interface name="mate_output_head_v1" version="1">
+    <description summary="MATE information for one head">
+      Every event below belongs to a group that ends with done. The full
+      state is sent after creation; later, only what changed is sent,
+      followed by done.
+    </description>
+
+    <event name="id">
+      <description summary="the monitor id">
+        See the protocol description for the rules.
+      </description>
+      <arg name="id" type="string"/>
+    </event>
+
+    <event name="edid_identity">
+      <description summary="the monitor's EDID identity">
+        The EDID's three-letter PNP vendor code, product code, numeric
+        serial, and the serial number descriptor. A vendor and serial
+        string that are unknown are empty; a product and serial that are
+        unknown are 0. Sent once, before the first done.
+      </description>
+      <arg name="vendor" type="string"/>
+      <arg name="product" type="uint"/>
+      <arg name="serial" type="uint"/>
+      <arg name="serial_string" type="string"/>
+    </event>
+
+    <event name="edid">
+      <description summary="the raw EDID">
+        A read-only file descriptor the client may map, with the size of the
+        EDID. Sent once, before the first done, and only when there is one.
+      </description>
+      <arg name="fd" type="fd"/>
+      <arg name="size" type="uint"/>
+    </event>
+
+    <event name="display_name">
+      <description summary="a name to show the user">
+        A human-readable, possibly translated name, such as the EDID's
+        monitor name, or the vendor and diagonal size.
+      </description>
+      <arg name="name" type="string"/>
+    </event>
+
+    <event name="internal">
+      <description summary="whether this is a built-in panel"/>
+      <arg name="internal" type="uint" summary="1 for a built-in panel, else 0"/>
+    </event>
+
+    <event name="primary">
+      <description summary="whether this head is the primary monitor">
+        Always 0 while the head is disabled.
+      </description>
+      <arg name="primary" type="uint" summary="1 if primary, else 0"/>
+    </event>
+
+    <event name="mirror_of">
+      <description summary="the head whose picture this one shows">
+        For mirroring heads, the id of the head the picture is made for;
+        the same for every head of the group, that head included. Empty for
+        a head that mirrors nothing, or is disabled.
+      </description>
+      <arg name="id" type="string"/>
+    </event>
+
+    <event name="done">
+      <description summary="end of a group of changes"/>
+    </event>
+
+    <event name="finished">
+      <description summary="the head went away">
+        Sent when the zwlr_output_head_v1 finishes. The object then sends
+        no more events, and the client should destroy it.
+      </description>
+    </event>
+
+    <request name="destroy" type="destructor">
+      <description summary="destroy the object"/>
+    </request>
+  </interface>
+
+  <interface name="mate_output_v1" version="1">
+    <description summary="MATE information for one wl_output">
+      The same identity as mate_output_head_v1, plus what desktop clients
+      need. Every event below belongs to a group that ends with done. The
+      full state is sent after creation; later, only what changed is sent,
+      followed by done.
+    </description>
+
+    <enum name="background_owner">
+      <entry name="none" value="0" summary="nobody draws a background"/>
+      <entry name="client" value="1"
+             summary="a client's desktop surface draws it"/>
+      <entry name="compositor" value="2" summary="the compositor draws it"/>
+    </enum>
+
+    <event name="id">
+      <description summary="the monitor id"/>
+      <arg name="id" type="string"/>
+    </event>
+
+    <event name="edid_identity">
+      <description summary="the monitor's EDID identity">
+        As mate_output_head_v1.edid_identity.
+      </description>
+      <arg name="vendor" type="string"/>
+      <arg name="product" type="uint"/>
+      <arg name="serial" type="uint"/>
+      <arg name="serial_string" type="string"/>
+    </event>
+
+    <event name="edid">
+      <description summary="the raw EDID">
+        As mate_output_head_v1.edid.
+      </description>
+      <arg name="fd" type="fd"/>
+      <arg name="size" type="uint"/>
+    </event>
+
+    <event name="display_name">
+      <description summary="a name to show the user"/>
+      <arg name="name" type="string"/>
+    </event>
+
+    <event name="internal">
+      <description summary="whether this is a built-in panel"/>
+      <arg name="internal" type="uint" summary="1 for a built-in panel, else 0"/>
+    </event>
+
+    <event name="primary">
+      <description summary="whether this output is the primary monitor"/>
+      <arg name="primary" type="uint" summary="1 if primary, else 0"/>
+    </event>
+
+    <event name="mirror_of">
+      <description summary="the output whose picture this one shows">
+        As mate_output_head_v1.mirror_of.
+      </description>
+      <arg name="id" type="string"/>
+    </event>
+
+    <event name="workarea">
+      <description summary="the area panels leave free">
+        The part of the output where ordinary windows go, without the
+        space panels and docks reserve, in output-relative logical
+        coordinates (see xdg_output_v1.logical_size), with (0, 0) at the
+        top-left corner. The whole output when nothing is reserved.
+      </description>
+      <arg name="x" type="int"/>
+      <arg name="y" type="int"/>
+      <arg name="width" type="uint"/>
+      <arg name="height" type="uint"/>
+    </event>
+
+    <event name="background_owner">
+      <description summary="who draws this output's desktop background now">
+        client while a client's desktop surface covers the output and draws
+        its background; compositor while the compositor draws it,
+        including under a client's transparent desktop surface; none
+        otherwise.
+      </description>
+      <arg name="owner" type="uint" enum="background_owner"/>
+    </event>
+
+    <event name="done">
+      <description summary="end of a group of changes"/>
+    </event>
+
+    <request name="destroy" type="destructor">
+      <description summary="destroy the object"/>
+    </request>
+  </interface>
+
+  <interface name="mate_output_configuration_v1" version="1">
+    <description summary="MATE options for one configuration">
+      Options applied together with its zwlr_output_configuration_v1, all or
+      nothing. Once that configuration has been applied, tested or
+      destroyed, requests other than destroy raise already_used.
+    </description>
+
+    <enum name="error">
+      <entry name="already_set" value="1" summary="the option was already set"/>
+      <entry name="invalid_head" value="2"
+             summary="the head belongs to another configuration"/>
+      <entry name="already_used" value="3"
+             summary="the configuration was already applied, tested or destroyed"/>
+    </enum>
+
+    <request name="set_primary">
+      <description summary="make a head primary">
+        Makes the head of this configuration_head primary when the
+        configuration applies. The configuration_head must come from the
+        same zwlr_output_configuration_v1. Without this request the
+        compositor keeps the current primary while it stays enabled, and
+        chooses one otherwise.
+      </description>
+      <arg name="head" type="object" interface="zwlr_output_configuration_head_v1"/>
+    </request>
+
+    <request name="set_temporary">
+      <description summary="do not keep the configuration">
+        The configuration applies as usual but is not saved: it lasts until
+        another configuration applies, a monitor is connected or
+        disconnected, or the session ends. A client that asks the user
+        whether to keep a layout applies it as temporary first, and applies
+        it again without this request when the user keeps it.
+      </description>
+    </request>
+
+    <request name="destroy" type="destructor">
+      <description summary="destroy the object">
+        Destroying it before the configuration is applied drops its
+        options.
+      </description>
+    </request>
+  </interface>
+</protocol>

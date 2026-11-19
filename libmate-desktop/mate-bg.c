@@ -47,6 +47,7 @@ Authors: Soren Sandmann <sandmann@redhat.com>
 #define MATE_DESKTOP_USE_UNSTABLE_API
 #include <mate-bg.h>
 #include <mate-bg-crossfade.h>
+#include "mate-monitor-info.h"
 
 # include <cairo-xlib.h>
 
@@ -141,8 +142,9 @@ static void       pixbuf_draw_gradient (GdkPixbuf    *pixbuf,
 					GdkRGBA     *c2,
 					GdkRectangle *rect);
 
-static void       pixbuf_tile          (GdkPixbuf  *src,
-					GdkPixbuf  *dest);
+static void       pixbuf_tile          (GdkPixbuf    *src,
+					GdkPixbuf    *dest,
+					GdkRectangle *area);
 static void       pixbuf_blend         (GdkPixbuf  *src,
 					GdkPixbuf  *dest,
 					int         src_x,
@@ -258,6 +260,61 @@ queue_transitioned (MateBG *bg)
 						  (GSourceFunc)do_transitioned,
 						  bg,
 						  NULL);
+}
+
+gchar *
+mate_bg_get_monitor_id (GdkMonitor *monitor)
+{
+	g_return_val_if_fail (GDK_IS_MONITOR (monitor), NULL);
+
+	return mate_monitor_info_get_id (mate_monitor_info_get_for_display (gdk_monitor_get_display (monitor)),
+					 monitor);
+}
+
+GSettings *
+mate_bg_get_monitor_settings (GdkMonitor *monitor)
+{
+	GSettingsSchemaSource *source;
+	GSettingsSchema *schema;
+	GSettings *settings;
+	gchar *id, *path;
+
+	g_return_val_if_fail (GDK_IS_MONITOR (monitor), NULL);
+
+	source = g_settings_schema_source_get_default ();
+	schema = source != NULL ?
+		 g_settings_schema_source_lookup (source, MATE_BG_MONITOR_SCHEMA, TRUE) : NULL;
+	if (schema == NULL)
+		return NULL;
+
+	mate_monitor_info_migrate_settings (mate_monitor_info_get_for_display (gdk_monitor_get_display (monitor)),
+					    monitor, MATE_BG_MONITOR_SCHEMA, MATE_BG_MONITOR_PATH_PREFIX);
+	id = mate_bg_get_monitor_id (monitor);
+	path = g_strdup_printf (MATE_BG_MONITOR_PATH_PREFIX "%s/", id);
+	settings = g_settings_new_full (schema, NULL, path);
+
+	g_free (path);
+	g_free (id);
+	g_settings_schema_unref (schema);
+
+	return settings;
+}
+
+GSettings *
+mate_bg_get_settings_for_monitor (GdkMonitor *monitor)
+{
+	GSettings *settings;
+
+	if (monitor != NULL) {
+		settings = mate_bg_get_monitor_settings (monitor);
+		if (settings != NULL) {
+			if (!g_settings_get_boolean (settings, MATE_BG_KEY_USE_SHARED))
+				return settings;
+			g_object_unref (settings);
+		}
+	}
+
+	return g_settings_new (MATE_BG_SCHEMA);
 }
 
 /* This function loads the user's preferences */
@@ -941,14 +998,16 @@ draw_image_area (MateBG        *bg,
 	int x, y, w, h;
 	GdkPixbuf *scaled;
 
-	if (!pixbuf)
+	if (!pixbuf || dest_width <= 0 || dest_height <= 0)
 		return;
 
 	scaled = get_scaled_pixbuf (bg->placement, pixbuf, dest_width, dest_height, &x, &y, &w, &h);
+	if (!scaled)
+		return;
 
 	switch (bg->placement) {
 	case MATE_BG_PLACEMENT_TILED:
-		pixbuf_tile (scaled, dest);
+		pixbuf_tile (scaled, dest, area);
 		break;
 	case MATE_BG_PLACEMENT_ZOOMED:
 	case MATE_BG_PLACEMENT_CENTERED:
@@ -2715,20 +2774,26 @@ pixbuf_blend (GdkPixbuf *src,
 }
 
 static void
-pixbuf_tile (GdkPixbuf *src, GdkPixbuf *dest)
+pixbuf_tile (GdkPixbuf *src, GdkPixbuf *dest, GdkRectangle *area)
 {
 	int x, y;
 	int tile_width, tile_height;
-	int dest_width = gdk_pixbuf_get_width (dest);
-	int dest_height = gdk_pixbuf_get_height (dest);
+	int x1 = MAX (area->x, 0);
+	int y1 = MAX (area->y, 0);
+	int x2 = MIN (area->x + area->width, gdk_pixbuf_get_width (dest));
+	int y2 = MIN (area->y + area->height, gdk_pixbuf_get_height (dest));
 
 	tile_width = gdk_pixbuf_get_width (src);
 	tile_height = gdk_pixbuf_get_height (src);
+	if (tile_width <= 0 || tile_height <= 0)
+		return;
 
-	for (y = 0; y < dest_height; y += tile_height) {
-		for (x = 0; x < dest_width; x += tile_width) {
+	for (y = y1; y < y2; y += tile_height) {
+		for (x = x1; x < x2; x += tile_width) {
 			pixbuf_blend (src, dest, 0, 0,
-				      tile_width, tile_height, x, y, 1.0);
+				      MIN (tile_width, x2 - x),
+				      MIN (tile_height, y2 - y),
+				      x, y, 1.0);
 		}
 	}
 }
