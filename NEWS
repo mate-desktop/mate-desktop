@@ -1,21 +1,3 @@
-### mate-desktop 1.29.3
-
-  * Translations update from Fedora Weblate
-  * schemas: describe draw-background as it works on Wayland now
-  * mate-bg: tile only each monitor's own area, and skip empty areas
-  * libmate-desktop: list the per-monitor background functions in the ABI file
-  * mate-bg: take monitor ids from MateMonitorInfo and migrate old settings
-  * schemas: document draw-background for compositor-drawn wallpapers
-  * mate-bg: add monitor id and per-monitor settings helpers
-  * schemas: add org.mate.background.monitor for per-monitor backgrounds
-  * libmate-desktop: list MateMonitorInfo in the ABI file
-  * libmate-desktop: add MateMonitorInfo
-  * build: add an optional Wayland dependency
-  * build: install the Wayland protocols with a pkg-config file
-  * protocols: add MATE output and input device Wayland protocols
-  * mate-rr: treat Virtual-* outputs as hotplug_mode_update
-  * Add markdown extension to README
-
 ### mate-desktop 1.29.2
 
   * mate-desktop.abi: add mate-desktop.abi to EXTRA_DIST
